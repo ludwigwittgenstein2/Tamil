@@ -4,8 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+This website is maintained by **[Rick Rejeleene](https://http://rickrejeleene.me/)** [^1].
 
 
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+[^1]: writing blog is separate from home page.
