@@ -4,21 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Title | Rick Rejeleene</title>
+<title>One Hot Vector - Tutorial | Rick Rejeleene</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="One Hot Vector - Tutorial" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Writings" />
-<meta property="og:description" content="Writings" />
-<link rel="canonical" href="https://ludwigwittgenstein2.github.io/Tamil/2022/01/12/NLP-Vector.html" />
-<meta property="og:url" content="https://ludwigwittgenstein2.github.io/Tamil/2022/01/12/NLP-Vector.html" />
+<meta name="description" content="by Rick Rejeleene" />
+<meta property="og:description" content="by Rick Rejeleene" />
+<link rel="canonical" href="https://ludwigwittgenstein2.github.io/Tamil/jupyter/2022/01/12/NLP-Vector.html" />
+<meta property="og:url" content="https://ludwigwittgenstein2.github.io/Tamil/jupyter/2022/01/12/NLP-Vector.html" />
 <meta property="og:site_name" content="Rick Rejeleene" />
+<meta property="og:image" content="https://ludwigwittgenstein2.github.io/Tamil/images/chart-preview.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-01-12T00:00:00-06:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Title" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ludwigwittgenstein2.github.io/Tamil/images/chart-preview.png" />
+<meta property="twitter:title" content="One Hot Vector - Tutorial" />
 <script type="application/ld+json">
-{"headline":"Title","dateModified":"2022-01-12T00:00:00-06:00","url":"https://ludwigwittgenstein2.github.io/Tamil/2022/01/12/NLP-Vector.html","datePublished":"2022-01-12T00:00:00-06:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ludwigwittgenstein2.github.io/Tamil/2022/01/12/NLP-Vector.html"},"description":"Writings","@context":"https://schema.org"}</script>
+{"headline":"One Hot Vector - Tutorial","dateModified":"2022-01-12T00:00:00-06:00","url":"https://ludwigwittgenstein2.github.io/Tamil/jupyter/2022/01/12/NLP-Vector.html","datePublished":"2022-01-12T00:00:00-06:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://ludwigwittgenstein2.github.io/Tamil/jupyter/2022/01/12/NLP-Vector.html"},"image":"https://ludwigwittgenstein2.github.io/Tamil/images/chart-preview.png","description":"by Rick Rejeleene","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Tamil/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ludwigwittgenstein2.github.io/Tamil/feed.xml" title="Rick Rejeleene" /><link rel="shortcut icon" type="image/x-icon" href="/Tamil/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,7 +75,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-12T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">One Hot Vector - Tutorial</h1><p class="page-description">by Rick Rejeleene</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-12T00:00:00-06:00" itemprop="datePublished">
         Jan 12, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -83,6 +85,13 @@ window.onload = wrap_img;
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Tamil/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
     
 
     
@@ -116,7 +125,14 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Import-Libraries">Import Libraries </a></li>
+<li class="toc-entry toc-h2"><a href="#Categorical-Variable">Categorical Variable </a></li>
+<li class="toc-entry toc-h2"><a href="#Convert-to-Tokens">Convert to Tokens </a></li>
+<li class="toc-entry toc-h2"><a href="#Convert-to-One-Hot-Vectors">Convert to One Hot Vectors </a></li>
+<li class="toc-entry toc-h2"><a href="#Output-Dataframe">Output Dataframe </a></li>
+<li class="toc-entry toc-h1"><a href="#Sources:">Sources: </a></li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -125,29 +141,20 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://colab.research.google.com/github/ludwigwittgenstein2/Tamil/blob/master/_notebooks/2022-01-12-NLP-Vector.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-to-convert-text-to-One-Hot-Vector?">How to convert text to One Hot Vector?<a class="anchor-link" href="#How-to-convert-text-to-One-Hot-Vector?"> </a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We are converting categorical variables into binary Vectors</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Import-Libraries">Import Libraries<a class="anchor-link" href="#Import-Libraries"> </a></h2>
+<h2 id="Import-Libraries">
+<a class="anchor" href="#Import-Libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import Libraries<a class="anchor-link" href="#Import-Libraries"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -168,9 +175,12 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Categorical-Variable">Categorical Variable<a class="anchor-link" href="#Categorical-Variable"> </a></h2>
+<h2 id="Categorical-Variable">
+<a class="anchor" href="#Categorical-Variable" aria-hidden="true"><span class="octicon octicon-link"></span></a>Categorical Variable<a class="anchor-link" href="#Categorical-Variable"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -181,8 +191,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Thomas Jefferson began building Monticello at the</span>
-<span class="s2">...   age of 26.&quot;&quot;&quot;</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">"""Thomas Jefferson began building Monticello at the</span>
+<span class="s2">...   age of 26."""</span>
 </pre></div>
 
     </div>
@@ -192,9 +202,12 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Convert-to-Tokens">Convert to Tokens<a class="anchor-link" href="#Convert-to-Tokens"> </a></h2>
+<h2 id="Convert-to-Tokens">
+<a class="anchor" href="#Convert-to-Tokens" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convert to Tokens<a class="anchor-link" href="#Convert-to-Tokens"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -239,7 +252,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vocab</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vocab</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -254,7 +267,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;26., Jefferson, Monticello, Thomas, age, at, began, building, of, the&#39;</pre>
+<pre>'26., Jefferson, Monticello, Thomas, age, at, began, building, of, the'</pre>
 </div>
 
 </div>
@@ -299,9 +312,12 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Convert-to-One-Hot-Vectors">Convert to One Hot Vectors<a class="anchor-link" href="#Convert-to-One-Hot-Vectors"> </a></h2>
+<h2 id="Convert-to-One-Hot-Vectors">
+<a class="anchor" href="#Convert-to-One-Hot-Vectors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convert to One Hot Vectors<a class="anchor-link" href="#Convert-to-One-Hot-Vectors"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -399,9 +415,12 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Output-Dataframe">Output Dataframe<a class="anchor-link" href="#Output-Dataframe"> </a></h2>
+<h2 id="Output-Dataframe">
+<a class="anchor" href="#Output-Dataframe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Output Dataframe<a class="anchor-link" href="#Output-Dataframe"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -600,9 +619,13 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Sources:">Sources:<a class="anchor-link" href="#Sources:"> </a></h1><p>Jason's Machine Learning Blog</p>
+<h1 id="Sources:">
+<a class="anchor" href="#Sources:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sources:<a class="anchor-link" href="#Sources:"> </a>
+</h1>
+<p>Jason's Machine Learning Blog</p>
 <p><a href="https://machinelearningmastery.com/how-to-one-hot-encode-sequence-data-in-python/">https://machinelearningmastery.com/how-to-one-hot-encode-sequence-data-in-python/</a></p>
 
 </div>
@@ -612,7 +635,15 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/Tamil/2022/01/12/NLP-Vector.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="ludwigwittgenstein2/Tamil"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Tamil/jupyter/2022/01/12/NLP-Vector.html" hidden></a>
 </article>
 
       </div>
