@@ -82,9 +82,6 @@
   
 
   
-  
-
-  
 
   
   
@@ -95,13 +92,18 @@
   
 
   
+
+  
+  
+
+  
   
 
   
   
 
   
-      ,"page9": {
+      ,"page10": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://ludwigwittgenstein2.github.io/Tamil/robots.txt",
