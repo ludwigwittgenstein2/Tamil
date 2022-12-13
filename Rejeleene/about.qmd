@@ -1,0 +1,15 @@
+---
+title: "Home" 
+image: profile.jpeg
+about:
+  template: jolla
+  links:
+    - icon: facebook
+      text: Facebook
+      href: https://facebook.com/whitekangaroo
+    - icon: browser-safari
+      text: Website
+      href: http://rickrejeleene.me/
+---
+
+Those who do not read History are doomed to repeat it

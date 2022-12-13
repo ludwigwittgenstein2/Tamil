@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Today"
+  navbar:
+    right:
+      - icon: house-door-fill
+        href: http://rickrejeleene.me/
+      - icon: facebook
+        href: https://facebook.com/whitekangaroo
+      - icon: linkedin
+        href: https://www.linkedin.com/in/rick1776/
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+
+
+
