@@ -1,6 +1,6 @@
 ---
 title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+author: "Rick Rejeleene"
 date: "2022-12-09"
 categories: [news]
 ---

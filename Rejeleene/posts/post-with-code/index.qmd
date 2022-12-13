@@ -1,6 +1,6 @@
 ---
 title: "Post With Code"
-author: "Harlow Malloc"
+author: "Rick Rejeleene"
 date: "2022-12-12"
 categories: [news, code, analysis]
 image: "image.jpg"
