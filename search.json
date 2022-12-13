@@ -11,14 +11,56 @@
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "This document demonstrates the use of a number of these page layout features to produce an attractive and usable document inspired by the Tufte handout style and the use of Tufte’s styles in RMarkdown documents [@xie2018]. The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. Quarto1 supports most of the layout techniques that are used in the Tufte handout style for both HTML and LaTeX/PDF output.\n---\ntitle: \"An Example Using the Tufte Style\"\nauthor: \"John Smith\"\nformat:\n  html: default\n  pdf: default\n  \n# places footnotes and cited sources in the margin\n# other layout options (for example placing a \n# figure in the margin)  will be set on per element\n# in examples below\nreference-location: margin\n---\nThese layout features are designed with two important goals in mind:\n\nTo produce both PDF and HTML output with similar styles from the same Quarto document;\nTo provide simple syntax to write elements of the Tufte style such as side notes and margin figures. If you’d like a figure placed in the margin, just set the option fig-column: margin for your code chunk, and we will take care of the details for you2.\n\nIf you have any feature requests or find bugs in this capabilities, please do not hesitate to file them to https://github.com/quarto-dev/quarto-cli/issues."
+  },
+  {
+    "objectID": "posts/welcome/index.html#margin-figures",
+    "href": "posts/welcome/index.html#margin-figures",
+    "title": "Welcome To My Blog",
+    "section": "Margin Figures",
+    "text": "Margin Figures\nImages and graphics play an integral role in Tufte’s work. To place figures in the margin you can use the Quarto chunk option column: margin. For example:\n\nlibrary(ggplot2)\nmtcars2 <- mtcars\nmtcars2$am <- factor(\n  mtcars$am, labels = c('automatic', 'manual')\n)\nggplot(mtcars2, aes(hp, mpg, color = am)) +\n  geom_point() + geom_smooth() +\n  theme(legend.position = 'bottom')\n\n\n\n\n\nFigure 1: MPG vs horsepower, colored by transmission.\n\n\n\nNote the use of the fig-cap chunk option to provide a figure caption. You can adjust the proportions of figures using the fig-width and fig-height chunk options. These are specified in inches, and will be automatically scaled down to fit within the handout margin."
+  },
+  {
+    "objectID": "posts/welcome/index.html#arbitrary-margin-content",
+    "href": "posts/welcome/index.html#arbitrary-margin-content",
+    "title": "Welcome To My Blog",
+    "section": "Arbitrary Margin Content",
+    "text": "Arbitrary Margin Content\nYou can include anything in the margin by places the class .column-margin on the element. See an example on the right about the first fundamental theorem of calculus.\n\n\nWe know from the first fundamental theorem of calculus that for \\(x\\) in \\([a, b]\\):\n\\[\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).\\]"
+  },
+  {
+    "objectID": "posts/welcome/index.html#full-width-figures",
+    "href": "posts/welcome/index.html#full-width-figures",
+    "title": "Welcome To My Blog",
+    "section": "Full Width Figures",
+    "text": "Full Width Figures\nYou can arrange for figures to span across the entire page by using the chunk option fig-column: page-right.\n\nggplot(diamonds, aes(carat, price)) + geom_smooth() +\n  facet_grid(~ cut)\n\n\n\n\nFigure 2: A full width figure.\n\n\n\n\nOther chunk options related to figures can still be used, such as fig-width, fig-cap, and so on. For full width figures, usually fig-width is large and fig-height is small. In the above example, the plot size is \\(11 \\times 3\\)."
+  },
+  {
+    "objectID": "posts/welcome/index.html#arbitrary-full-width-content",
+    "href": "posts/welcome/index.html#arbitrary-full-width-content",
+    "title": "Welcome To My Blog",
+    "section": "Arbitrary Full Width Content",
+    "text": "Arbitrary Full Width Content\nAny content can span to the full width of the page, simply place the element in a div and add the class column-page-right. For example, the following code will display its contents as full width.\n::: {.fullwidth}\nAny _full width_ content here.\n:::\nBelow is an example:\n\nR is free software and comes with ABSOLUTELY NO WARRANTY. You are welcome to redistribute it under the terms of the GNU General Public License versions 2 or 3. For more information about these matters see https://www.gnu.org/licenses/."
+  },
+  {
+    "objectID": "posts/welcome/index.html#main-column-figures",
+    "href": "posts/welcome/index.html#main-column-figures",
+    "title": "Welcome To My Blog",
+    "section": "Main Column Figures",
+    "text": "Main Column Figures\nBesides margin and full width figures, you can of course also include figures constrained to the main column. This is the default type of figures in the LaTeX/HTML output.\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\nFigure 3: A figure in the main column."
+  },
+  {
+    "objectID": "posts/welcome/index.html#margin-captions",
+    "href": "posts/welcome/index.html#margin-captions",
+    "title": "Welcome To My Blog",
+    "section": "Margin Captions",
+    "text": "Margin Captions\nWhen you include a figure constrained to the main column, you can choose to place the figure’s caption in the margin by using the cap-location chunk option. For example:\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\nFigure 4: A figure with a longer caption. The figure appears in the main column, but the caption is placed in the margin. Caption can even contain elements like a citation such as @xie2018."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Rejeleene",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 12, 2022\n\n\nRick Rejeleene\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
+    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 12, 2022\n\n\nRick Rejeleene\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2022\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
