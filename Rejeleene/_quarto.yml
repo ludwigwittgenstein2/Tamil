@@ -5,11 +5,12 @@ website:
   title: "Today"
   navbar:
     right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+      - icon: house-door-fill
+        href: http://rickrejeleene.me/
+      - icon: facebook
+        href: https://facebook.com/whitekangaroo
+      - icon: linkedin
+        href: https://www.linkedin.com/in/rick1776/
 format:
   html:
     theme: cosmo
