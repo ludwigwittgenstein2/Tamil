@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -165,18 +165,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news,code,analysis" data-listing-date-sort="1670824800000" data-listing-file-modified-sort="1670911747322" data-listing-reading-time-sort="0.035">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html"> <img src="./posts/post-with-code/image.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/post-with-code/index.html">
-<h3 class="no-anchor listing-title">
-Post With Code
-</h3>
-<div class="listing-subtitle">
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 
 <table class="quarto-listing-table table">
 <thead>
@@ -193,7 +182,7 @@ Author
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="news,code,analysis" data-listing-date-sort="1670911200000" data-listing-file-modified-sort="1670966474864" data-listing-reading-time-sort="0.08" data-listing-title-sort="Presentation" data-listing-filename-sort="index.qmd">
+<tr data-index="0" data-categories="news,code,analysis" data-listing-date-sort="1670911200000" data-listing-file-modified-sort="1670969745638" data-listing-reading-time-sort="0.08" data-listing-title-sort="Presentation" data-listing-filename-sort="index.qmd">
 <td class="listing-date">
 Dec 13, 2022
 </td>
@@ -204,15 +193,18 @@ Dec 13, 2022
 Rick Rejeleene
 </td>
 </tr>
-<tr data-index="1" data-categories="news,code,analysis" data-listing-date-sort="1670824800000" data-listing-file-modified-sort="1670911747322" data-listing-reading-time-sort="0.035" data-listing-title-sort="Post With Code" data-listing-filename-sort="index.qmd">
+<tr data-index="1" data-categories="news,code,analysis" data-listing-date-sort="1670824800000" data-listing-file-modified-sort="1670969745629" data-listing-reading-time-sort="0.035" data-listing-title-sort="Post With Code" data-listing-filename-sort="index.qmd">
 <td class="listing-date">
 Dec 12, 2022
-</div>
-<div class="listing-author">
+</td>
+<td class="listing-title">
+<a href="./posts/post-with-code/index.html" class="title">Post With Code</a>
+</td>
+<td class="listing-author">
 Rick Rejeleene
 </td>
 </tr>
-<tr data-index="2" data-categories="news" data-listing-date-sort="1670565600000" data-listing-file-modified-sort="1670912134216" data-listing-reading-time-sort="6.76" data-listing-title-sort="Welcome To My Blog" data-listing-filename-sort="index.qmd">
+<tr data-index="2" data-categories="news" data-listing-date-sort="1670565600000" data-listing-file-modified-sort="1670969745641" data-listing-reading-time-sort="6.76" data-listing-title-sort="Welcome To My Blog" data-listing-filename-sort="index.qmd">
 <td class="listing-date">
 Dec 9, 2022
 </td>
@@ -225,41 +217,7 @@ Rick Rejeleene
 </tr>
 </tbody>
 
-</div>
-</a><p><a href="./posts/welcome/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/welcome/index.html">
-<h3 class="no-anchor listing-title">
-Welcome To My Blog
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<a href="./posts/welcome/index.html">
-<div class="listing-description">
-This document demonstrates the use…<span class="citation" data-cites="xie2018"></span><sup></sup>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html">
-<div class="listing-date">
-Dec 9, 2022
-</div>
-<div class="listing-author">
-Rick Rejeleene
-</div>
-</a>
-</div>
-</div>
-</div>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
