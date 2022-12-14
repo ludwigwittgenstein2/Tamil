@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/post-with-code/index.html</loc>
-    <lastmod>2022-12-14T00:06:48.292Z</lastmod>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book1/index.html</loc>
+    <lastmod>2022-12-14T23:26:21.995Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/welcome/index.html</loc>
-    <lastmod>2022-12-14T00:06:49.049Z</lastmod>
+    <lastmod>2022-12-14T23:26:22.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book2/index.html</loc>
+    <lastmod>2022-12-14T23:26:25.348Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/index.html</loc>
-    <lastmod>2022-12-14T00:06:51.678Z</lastmod>
+    <lastmod>2022-12-14T23:26:25.679Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/about.html</loc>
-    <lastmod>2022-12-14T00:06:51.967Z</lastmod>
+    <lastmod>2022-12-14T23:26:25.951Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/hello.html</loc>
-    <lastmod>2022-12-14T00:06:52.276Z</lastmod>
+    <lastmod>2022-12-14T23:26:26.244Z</lastmod>
   </url>
 </urlset>

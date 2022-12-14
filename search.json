@@ -1,66 +1,136 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/book1/index.html",
+    "href": "posts/book1/index.html",
+    "title": "Book Summary: Nadars of Tamil Nadu, India",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "Who are Nadars?\nWho are they?\nWhy care about this?\nWhat did they do?\nSummary"
+  },
+  {
+    "objectID": "posts/book1/index.html#who-are-nadars",
+    "href": "posts/book1/index.html#who-are-nadars",
+    "title": "Book Summary: Nadars of Tamil Nadu, India",
+    "section": "1.Who are Nadars? ",
+    "text": "1.Who are Nadars? \nNadars are a social-group located in Southern India. They are predominantly in Southern Tamil Nadu.\nOccupationally as toddy-tappers.\nhuh, what is that?\nToddy is local alcoholic drink. So, Toddy tapping is making alcohol from sap of palm trees."
+  },
+  {
+    "objectID": "posts/book1/index.html#tell-me-more",
+    "href": "posts/book1/index.html#tell-me-more",
+    "title": "Book Summary: Nadars of Tamil Nadu, India",
+    "section": "2. Tell me more? ",
+    "text": "2. Tell me more? \nA While ago, in Tamil Society, Nadars were ostracized, ignored, shamed, due to their ignobleness.\nHardgrave says the following,\n“Nadars were lowest of the highest, and highest of the lowest castes in Tamil Nadu.”"
+  },
+  {
+    "objectID": "posts/book1/index.html#so-why-care-about-this-work",
+    "href": "posts/book1/index.html#so-why-care-about-this-work",
+    "title": "Book Summary: Nadars of Tamil Nadu, India",
+    "section": "3. So, Why care about this work? ",
+    "text": "3. So, Why care about this work? \nAmong social-groups of Tamil Nadu, Nadars have made significant socio-economic progress in Tamil Society.\nStarting their journey from landless toddy tapping community, No Land, Rented Palm Trees for a living.\nToday – Most of them are land owning socio-economic class.\nThey form contemporary Tamil Society’s Socio-Business & Educational Class."
+  },
+  {
+    "objectID": "posts/book1/index.html#so-how-did-they-do-this",
+    "href": "posts/book1/index.html#so-how-did-they-do-this",
+    "title": "Book Summary: Nadars of Tamil Nadu, India",
+    "section": "4. So How did they do this? ",
+    "text": "4. So How did they do this? \n\nHindu Nadars - Business or Tholil {tamil} with sole focus of their entire life\nChristian Nadars - Education or White collar Professionals due to influence of Christianity"
+  },
+  {
+    "objectID": "posts/book1/index.html#what-is-your-own-summary-on-this-work",
+    "href": "posts/book1/index.html#what-is-your-own-summary-on-this-work",
+    "title": "Book Summary: Nadars of Tamil Nadu, India",
+    "section": "5. What is your own summary on this work? ",
+    "text": "5. What is your own summary on this work? \nNadars were socio-economic low-rungs in Tamil society. Through business & education, raised themselves socio-economically. Christianity gave the tool of education for Tinnevelly Nadars. Business {tholil} gave Sivakasi, Virudhunagar Nadars, the tool to lift themselves.\nI came across this book to understand Tirunelveli society. I found, compelling sources. The 1899 Sivakasi riots caught my attention. I felt as if I was reading alarming war history. Overall –An excellent scholarly work on Nadars. I would recommend this book to anyone who is interested in Caste, Tamil-Nadu, Christianity.\n\n1 References2 Tholil, means livelihood in Tamil language"
   },
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Introduction to Tufte Style",
     "section": "",
     "text": "This document demonstrates the use of a number of these page layout features to produce an attractive and usable document inspired by the Tufte handout style and the use of Tufte’s styles in RMarkdown documents [@xie2018]. The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. Quarto1 supports most of the layout techniques that are used in the Tufte handout style for both HTML and LaTeX/PDF output.\n---\ntitle: \"An Example Using the Tufte Style\"\nauthor: \"John Smith\"\nformat:\n  html: default\n  pdf: default\n  \n# places footnotes and cited sources in the margin\n# other layout options (for example placing a \n# figure in the margin)  will be set on per element\n# in examples below\nreference-location: margin\n---\nThese layout features are designed with two important goals in mind:\n\nTo produce both PDF and HTML output with similar styles from the same Quarto document;\nTo provide simple syntax to write elements of the Tufte style such as side notes and margin figures. If you’d like a figure placed in the margin, just set the option fig-column: margin for your code chunk, and we will take care of the details for you2.\n\nIf you have any feature requests or find bugs in this capabilities, please do not hesitate to file them to https://github.com/quarto-dev/quarto-cli/issues."
   },
   {
     "objectID": "posts/welcome/index.html#margin-figures",
     "href": "posts/welcome/index.html#margin-figures",
-    "title": "Welcome To My Blog",
+    "title": "Introduction to Tufte Style",
     "section": "Margin Figures",
-    "text": "Margin Figures\nImages and graphics play an integral role in Tufte’s work. To place figures in the margin you can use the Quarto chunk option column: margin. For example:\n\nlibrary(ggplot2)\nmtcars2 <- mtcars\nmtcars2$am <- factor(\n  mtcars$am, labels = c('automatic', 'manual')\n)\nggplot(mtcars2, aes(hp, mpg, color = am)) +\n  geom_point() + geom_smooth() +\n  theme(legend.position = 'bottom')\n\n\n\n\n\nFigure 1: MPG vs horsepower, colored by transmission.\n\n\n\nNote the use of the fig-cap chunk option to provide a figure caption. You can adjust the proportions of figures using the fig-width and fig-height chunk options. These are specified in inches, and will be automatically scaled down to fit within the handout margin."
+    "text": "Margin Figures\nImages and graphics play an integral role in Tufte’s work. To place figures in the margin you can use the Quarto chunk option column: margin. For example:\n\n#| label: fig-margin\n#| fig-cap: \"MPG vs horsepower, colored by transmission.\"\n#| column: margin\n#| message: false\nlibrary(ggplot2)\nmtcars2 <- mtcars\nmtcars2$am <- factor(\n  mtcars$am, labels = c('automatic', 'manual')\n)\nggplot(mtcars2, aes(hp, mpg, color = am)) +\n  geom_point() + geom_smooth() +\n  theme(legend.position = 'bottom')\n\n\n\n\nNote the use of the fig-cap chunk option to provide a figure caption. You can adjust the proportions of figures using the fig-width and fig-height chunk options. These are specified in inches, and will be automatically scaled down to fit within the handout margin."
   },
   {
     "objectID": "posts/welcome/index.html#arbitrary-margin-content",
     "href": "posts/welcome/index.html#arbitrary-margin-content",
-    "title": "Welcome To My Blog",
+    "title": "Introduction to Tufte Style",
     "section": "Arbitrary Margin Content",
     "text": "Arbitrary Margin Content\nYou can include anything in the margin by places the class .column-margin on the element. See an example on the right about the first fundamental theorem of calculus.\n\n\nWe know from the first fundamental theorem of calculus that for \\(x\\) in \\([a, b]\\):\n\\[\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).\\]"
   },
   {
     "objectID": "posts/welcome/index.html#full-width-figures",
     "href": "posts/welcome/index.html#full-width-figures",
-    "title": "Welcome To My Blog",
+    "title": "Introduction to Tufte Style",
     "section": "Full Width Figures",
-    "text": "Full Width Figures\nYou can arrange for figures to span across the entire page by using the chunk option fig-column: page-right.\n\nggplot(diamonds, aes(carat, price)) + geom_smooth() +\n  facet_grid(~ cut)\n\n\n\n\nFigure 2: A full width figure.\n\n\n\n\nOther chunk options related to figures can still be used, such as fig-width, fig-cap, and so on. For full width figures, usually fig-width is large and fig-height is small. In the above example, the plot size is \\(11 \\times 3\\)."
+    "text": "Full Width Figures\nYou can arrange for figures to span across the entire page by using the chunk option fig-column: page-right.\n\nggplot(diamonds, aes(carat, price)) + geom_smooth() +\n  facet_grid(~ cut)\n\n\n\n\nFigure 1: A full width figure.\n\n\n\n\nOther chunk options related to figures can still be used, such as fig-width, fig-cap, and so on. For full width figures, usually fig-width is large and fig-height is small. In the above example, the plot size is \\(11 \\times 3\\)."
   },
   {
     "objectID": "posts/welcome/index.html#arbitrary-full-width-content",
     "href": "posts/welcome/index.html#arbitrary-full-width-content",
-    "title": "Welcome To My Blog",
+    "title": "Introduction to Tufte Style",
     "section": "Arbitrary Full Width Content",
     "text": "Arbitrary Full Width Content\nAny content can span to the full width of the page, simply place the element in a div and add the class column-page-right. For example, the following code will display its contents as full width.\n::: {.fullwidth}\nAny _full width_ content here.\n:::\nBelow is an example:\n\nR is free software and comes with ABSOLUTELY NO WARRANTY. You are welcome to redistribute it under the terms of the GNU General Public License versions 2 or 3. For more information about these matters see https://www.gnu.org/licenses/."
   },
   {
     "objectID": "posts/welcome/index.html#main-column-figures",
     "href": "posts/welcome/index.html#main-column-figures",
-    "title": "Welcome To My Blog",
+    "title": "Introduction to Tufte Style",
     "section": "Main Column Figures",
-    "text": "Main Column Figures\nBesides margin and full width figures, you can of course also include figures constrained to the main column. This is the default type of figures in the LaTeX/HTML output.\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\nFigure 3: A figure in the main column."
+    "text": "Main Column Figures\nBesides margin and full width figures, you can of course also include figures constrained to the main column. This is the default type of figures in the LaTeX/HTML output.\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\nFigure 2: A figure in the main column."
   },
   {
     "objectID": "posts/welcome/index.html#margin-captions",
     "href": "posts/welcome/index.html#margin-captions",
-    "title": "Welcome To My Blog",
+    "title": "Introduction to Tufte Style",
     "section": "Margin Captions",
-    "text": "Margin Captions\nWhen you include a figure constrained to the main column, you can choose to place the figure’s caption in the margin by using the cap-location chunk option. For example:\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\nFigure 4: A figure with a longer caption. The figure appears in the main column, but the caption is placed in the margin. Caption can even contain elements like a citation such as @xie2018."
+    "text": "Margin Captions\nWhen you include a figure constrained to the main column, you can choose to place the figure’s caption in the margin by using the cap-location chunk option. For example:\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\nFigure 3: A figure with a longer caption. The figure appears in the main column, but the caption is placed in the margin. Caption can even contain elements like a citation such as @xie2018."
+  },
+  {
+    "objectID": "posts/book2/index.html#introduction",
+    "href": "posts/book2/index.html#introduction",
+    "title": "Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar",
+    "section": "Introduction",
+    "text": "Introduction\nIn 1957, intense caste violence broke out in south-eastern Tamil Nadu between the regionally dominant caste of Thevars, and Devendrakula Vellalars (Pallars), a Dalit community. The violence was triggered by the legislative assembly by-election, following U. Muthuramalinga Thevar’s resignation. In the peace conference organized by the local administration, Muthuramalinga Thevar objected to the presence of Immanuel Sekaran as a Dalit representative.\nThis is a long review. You may gain new perspective. Read it completely. Book is clear, well-researched, easy to follow."
+  },
+  {
+    "objectID": "posts/book2/index.html#why-should-you-read-this-book",
+    "href": "posts/book2/index.html#why-should-you-read-this-book",
+    "title": "Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar",
+    "section": "1. Why should you read this Book?",
+    "text": "1. Why should you read this Book?\nIf you are interested in Tamil Nadu, Caste, Social Justice, Politics."
+  },
+  {
+    "objectID": "posts/book2/index.html#why-did-i-read-this-book",
+    "href": "posts/book2/index.html#why-did-i-read-this-book",
+    "title": "Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar",
+    "section": "2. Why did I read this book?",
+    "text": "2. Why did I read this book?\nI took this book to expand my understanding of caste-conflict, history of caste in Tamil Nadu."
+  },
+  {
+    "objectID": "posts/book2/index.html#what-is-my-own-view-on-this",
+    "href": "posts/book2/index.html#what-is-my-own-view-on-this",
+    "title": "Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar",
+    "section": "3. What is my own view on this?",
+    "text": "3. What is my own view on this?\nI want to bring better insight in this. My own insight is the following.\nEntire narrative of Tamil Society is to gain:\n\n\nHonor (Munju)\nand not to lose, Face (kaevalam)**\n\n\nTo lose face (kaevalam), is to lose your identity.\nWhen someone loses face, they lose their life or standing in society. Japanese soldiers in WW2, would kill themselves instead of being defeated –Why? Because, they lose face and they bring shame to their community. Therefore, killing themselves is more honorable.\nI would cite anthropologist, Ruth Benedict in The Chrysanthemum and the Sword, for bringing this perspective. She wrote about Japanese culture. This view is not present in any of the discussions in understanding culture.\nBasic unit of Tamil Culture is family, mother-father’s face (munju) or family name. Next, you are part of a community (caste) or (religion). There is fierce competition to gain face among relatives, caste or religious community through socio-economic ways in Tamil Nadu.\nOne might object that caste ought to be removed. Yes — What would replace that vacuum of social hierarchy of relationship?\nHow would communities represent themselves politically?\n\nAdvantages of honor/shame:\n\n\nBehaviors can be controlled by shame\nCompetition among people\nFamilies are close-knit\nLoyalty to clan\nNot wanting shame motivates people\nStrict hierarchy: Person knows their role in society\n\n\n\n\nDrawbacks of honor/shame:\n\n\nPeople are not honest\nPeople would cover up their short-comings during conversation\nIt is actually not a lie when they cover up, it’s just they don’t want to lose face\nBut real relationship starts with vulnerability\nTrust comes through by accepting vulnerability.\n\n\nTruth is less important when it comes with face. To hold face is more important. How did you change your view on criminal tribes and caste?\nThis is related to the book. Most people in Tamil Nadu, hold the view, “some people in a community are born criminals, some have innate nature to do so.” Many years ago — I was on a road trip with an American friend.\nI remember constantly telling him, i.e some castes are violent or bad, their character is bad, their character is to do evil. He stopped the car, and told me, wait, “You are calling someone bad or violent or murderer before they even commit such act.” How can you say it? I could not understand what I was thinking. Apparently, I had labeled people. Before, even they are born, to malign their character. This is clearly wrong. People can change, characters can be changed innately by emulating desirable traits.\nIn Tamil Nadu, even older people, would say, “It’s like it, this community is as such.” Within the narrative of religious tradition it says:\n\n\nPeople are created in the image of their Creator\nHis Creator has reason, dignity, love along with other attributes\nPeople are bestowed with these attributes\nTherefore, people are to be respected, loved with dignity\n\n\nYou might contest the above narrative. Good luck forming a secular origin of human dignity. It took me so much time to realize, I was wrong. We can’t label an entire community. Later, I spent more time to figure out, what was happening. Most of the time, people grow up in a family, and then stay within their community. Now, people hear about other community through the lens of that community. Would we look into our own family, community through the lens of others, and improve ourselves?\nThis might be because, the value of the community picks up specific aspects of other community, and labels them. It could be confirmation bias."
+  },
+  {
+    "objectID": "posts/book2/index.html#whats-the-meat-of-the-book",
+    "href": "posts/book2/index.html#whats-the-meat-of-the-book",
+    "title": "Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar",
+    "section": "4. What’s the meat of the book?",
+    "text": "4. What’s the meat of the book?\nIn this book, author Mani Kumar talks about the riots of Mudukulathur, located close to Ramanathapuram in Southern Tamil Nadu. It’s about two communities — Pallars and Thevars. Mani Kumar gives an account on political history, social justice, caste-conflict among the two communities. In Tamil Nadu political history, caste plays a crucial role. Each community aligns with a political party. There’s gruesome killings on each side of caste. When I was reading through account of it. Few questions came to my mind. A question - one person gets killed for an issue from a caste. And then, the other community kills or retaliates back. But it goes back and forth, where does it stop?\n\nWhat is the point of doing it?\nIn the book or even applying to Tamil society, insight from anthropologists. Apply honor-shame, we can answer, “to gain face.” (Munju) to get, “honor.” or “respect” among others within their community.\nHow can they change?\nAuthor says Education can change people.\nWhat other work would you recommend?\nThere has been no contemporary account of caste that matches up Edgar Thurston. Thurston’s work is outdated, because it is filled with racial denigration.\nSociologists have written about Caste. If you want to know about Caste in Tamil Nadu. I suggest reading, Edgar Thurston. His work is outdated, but some parts of it, might be relevant. Apparently, in 2019, I discovered Edgar was the first to hold Librarian title— Connemara Public Library.\nFeel free to write a rebuttal to my perspective.\n\n1 References2 Caste, plays core role in Politcs in Tamil Nadu, India"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Rejeleene",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 13, 2022\n\n\nPresentation\n\n\nRick Rejeleene\n\n\n\n\nDec 12, 2022\n\n\nPost With Code\n\n\nRick Rejeleene\n\n\n\n\nDec 9, 2022\n\n\nWelcome To My Blog\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Nadars of Tamil Nadu, India\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar\n\n\nRick Rejeleene\n\n\n\n\nDec 13, 2022\n\n\nPresentation\n\n\nRick Rejeleene\n\n\n\n\nDec 9, 2022\n\n\nIntroduction to Tufte Style\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
