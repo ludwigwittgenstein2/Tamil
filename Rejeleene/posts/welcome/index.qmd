@@ -1,5 +1,5 @@
 ---
-title: "Welcome To My Blog"
+title: "Introduction to Tufte Style"
 author: "Rick Rejeleene"
 date: "2022-12-09"
 categories: [news]
@@ -42,7 +42,12 @@ If you have any feature requests or find bugs in this capabilities, please do no
 
 Images and graphics play an integral role in Tufte's work. To place figures in the margin you can use the **Quarto** chunk option `column: margin`. For example:
 
+```{r include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
+
 ```{r}
+
 #| label: fig-margin
 #| fig-cap: "MPG vs horsepower, colored by transmission."
 #| column: margin

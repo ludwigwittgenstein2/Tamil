@@ -1,0 +1,93 @@
+---
+title: "Book Summary: Nadars of Tamil Nadu, India"
+description: "Caste of Tamil Nadu, India"
+author: "Rick Rejeleene"
+date: "12/20/2022"
+categories: [books, sociology, tamil-nadu]
+echo: false
+---
+
+# Table of Contents
+
+1. [Who are Nadars?](#paragraph1)
+2. [Who are they?](#paragraph1)
+3. [Why care about this?](#paragraph3)
+4. [What did they do?](#paragraph4)
+5. [Summary](#paragraph5)
+
+
+
+```{python}
+
+
+from IPython.display import Image
+from IPython.core.display import HTML 
+
+
+Image(url= "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1467119499i/30782303.jpg")
+
+```
+
+# Introduction 
+
+A Short summary of The Nadars of Tamilnad: The Political Culture of a Community in Change.
+
+The Nadars have had a turbulent and colourful history. Their efforts to rise above their depressed condition assumed dramatic form in the series of escalating confrontations between the caste and its antagonists. 
+
+From the breast-cloth controversy the sack of Sivakasi to the Nadar Mahajana Sangam, the Nadars rise, encapsulating the processes of social mobility in Indian sopciety, has given rich texture to the analysis of a community in change.
+
+## 1.Who are Nadars? <a name="paragraph1"></a>
+
+Nadars are a social-group located in Southern India.
+They are predominantly in Southern Tamil Nadu.
+
+Occupationally as toddy-tappers.
+
+huh, what is that?
+
+Toddy is local alcoholic drink.
+So, Toddy tapping is making alcohol from sap of palm trees.
+
+
+## 2. Tell me more? <a name="paragraph2"></a>
+
+A While ago, in Tamil Society, Nadars were ostracized, ignored, shamed, due to their ignobleness.
+
+Hardgrave says the following,
+
+"Nadars were lowest of the highest, and highest of the lowest castes in Tamil Nadu."
+
+## 3. So, Why care about this work? <a name="paragraph3"></a>
+
+Among social-groups of Tamil Nadu,
+Nadars have made significant socio-economic progress in Tamil Society.
+
+Starting their journey from landless toddy tapping community, No Land, Rented Palm Trees for a living.
+
+Today -- Most of them are land owning socio-economic class.
+
+They form contemporary Tamil Society's Socio-Business & Educational Class.
+
+
+## 4. So How did they do this? <a name="paragraph4"></a>
+
+1. Hindu Nadars - Business or Tholil **{tamil}** with sole focus of their entire life
+
+2. Christian Nadars - Education or White collar Professionals due to influence of Christianity
+
+## 5. What is your own summary on this work? <a name="paragraph5"></a>
+
+Nadars were socio-economic low-rungs in Tamil society.
+Through business & education, raised themselves socio-economically.
+Christianity gave the tool of education for Tinnevelly Nadars.
+Business  **{tholil}** gave Sivakasi, Virudhunagar Nadars, the tool to lift themselves.
+
+I came across this book to understand Tirunelveli society.
+I found, compelling sources. The 1899 Sivakasi riots caught my attention. I felt as if I was reading alarming war history. Overall --An excellent scholarly work on Nadars.
+I would recommend this book to anyone who is interested in Caste, Tamil-Nadu, Christianity.
+
+---
+[^1] References[^2] Tholil, means livelihood in Tamil language
+
+[^1]: [Goodreads](https://www.goodreads.com/book/show/30782303-nadars-of-tamilnadu)Goodreads
+[^2]: [Wikipedia](https://wwww.wikipedia.org/wiki/Nadar_(caste)) Wikipedia

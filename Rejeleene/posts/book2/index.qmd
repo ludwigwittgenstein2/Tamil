@@ -1,0 +1,144 @@
+---
+title: "Book Summary: Caste and Electoral Politics in Tamil Nadu
+by K.A. Manikumar"
+description: "Caste of Tamil Nadu, India"
+author: "Rick Rejeleene"
+date: "12/20/2022"
+categories: [books, sociology, tamil-nadu]
+echo: false
+---
+
+```{python}
+
+
+from IPython.display import Image
+from IPython.core.display import HTML 
+
+
+Image(url= "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1510678594i/36594589.jpg")
+
+```
+
+
+## Introduction 
+
+In 1957, intense caste violence broke out in south-eastern Tamil Nadu between the regionally dominant caste of Thevars, and Devendrakula Vellalars (Pallars), a Dalit community. The violence was triggered by the legislative assembly by-election, following U. Muthuramalinga Thevar’s resignation. In the peace conference organized by the local administration, Muthuramalinga Thevar objected to the presence of Immanuel Sekaran as a Dalit representative.
+
+
+This is a long review. You may gain new perspective. Read it completely. Book is clear, well-researched, easy to follow.
+
+## 1. Why should you read this Book?
+
+If you are interested in Tamil Nadu, Caste, Social Justice, Politics.
+
+## 2. Why did I read this book?
+
+I took this book to expand my understanding of caste-conflict, history of caste in Tamil Nadu.
+
+## 3. What is my own view on this?
+
+I want to bring better insight in this. My own insight is the following.
+
+Entire narrative of Tamil Society is to gain:
+
+> a) Honor (Munju)
+  b) and not to lose, Face (kaevalam)**
+
+To lose face (kaevalam), is to lose your identity.
+
+When someone loses face, they lose their life or standing in society.
+Japanese soldiers in WW2, would kill themselves instead of being defeated --Why? Because, they lose face and they bring shame to their community. Therefore, killing themselves is more honorable.
+
+I would cite anthropologist, Ruth Benedict in The Chrysanthemum and the Sword, for bringing this perspective. She wrote about Japanese culture.
+This view is not present in any of the discussions in understanding culture.
+
+Basic unit of Tamil Culture is family, mother-father’s face (munju) or family name. Next, you are part of a community (caste) or (religion).
+There is fierce competition to gain face among relatives, caste or religious community through socio-economic ways in Tamil Nadu.
+
+One might object that caste ought to be removed.
+Yes — What would replace that vacuum of social hierarchy of relationship?
+
+How would communities represent themselves politically?
+
+### Advantages of honor/shame:
+
+> a) Behaviors can be controlled by shame
+b) Competition among people
+c) Families are close-knit
+d) Loyalty to clan
+e) Not wanting shame motivates people
+f) Strict hierarchy: Person knows their role in society
+
+### Drawbacks of honor/shame:
+
+> a) People are not honest
+b) People would cover up their short-comings during conversation
+c) It is actually not a lie when they cover up, it's just they don't want to lose face
+d) But real relationship starts with vulnerability
+e) Trust comes through by accepting vulnerability.
+
+Truth is less important when it comes with face.
+To hold face is more important.
+How did you change your view on criminal tribes and caste?
+
+This is related to the book.
+Most people in Tamil Nadu, hold the view, “some people in a community are born criminals, some have innate nature to do so.”
+Many years ago — I was on a road trip with an American friend.
+
+I remember constantly telling him, i.e some castes are violent or bad, their character is bad, their character is to do evil.
+He stopped the car, and told me, wait, “You are calling someone bad or violent or murderer before they even commit such act.” How can you say it?
+I could not understand what I was thinking. Apparently, I had labeled people. Before, even they are born, to malign their character. This is clearly
+wrong. People can change, characters can be changed innately by emulating desirable traits.
+
+In Tamil Nadu, even older people, would say, “It’s like it, this community is as such.”
+Within the narrative of religious tradition it says:
+
+> i) People are created in the image of their Creator
+ii) His Creator has reason, dignity, love along with other attributes
+iii) People are bestowed with these attributes
+iv) Therefore, people are to be respected, loved with dignity
+
+You might contest the above narrative. Good luck forming a secular origin of human dignity.
+It took me so much time to realize, I was wrong. We can’t label an entire community.
+Later, I spent more time to figure out, what was happening.
+Most of the time, people grow up in a family, and then stay within their community. Now, people hear about other community through the lens of that community.
+Would we look into our own family, community through the lens of others, and improve ourselves?
+
+This might be because, the value of the community picks up specific aspects of other community, and labels them. It could be confirmation bias.
+
+## 4. What’s the meat of the book?
+
+In this book, author Mani Kumar talks about the riots of Mudukulathur, located close to Ramanathapuram in Southern Tamil Nadu.
+It’s about two communities — Pallars and Thevars.
+Mani Kumar gives an account on political history, social justice, caste-conflict among the two communities.
+In Tamil Nadu political history, caste plays a crucial role. Each community aligns with a political party.
+There’s gruesome killings on each side of caste.
+When I was reading through account of it. Few questions came to my mind.
+A question - one person gets killed for an issue from a caste. And then, the other community kills or retaliates back.
+But it goes back and forth, where does it stop?
+
+### What is the point of doing it?
+
+In the book or even applying to Tamil society, insight from anthropologists.
+Apply honor-shame, we can answer, “to gain face.” (Munju) to get, “honor.” or “respect” among others within their community.
+
+How can they change?
+
+Author says Education can change people.
+
+What other work would you recommend?
+
+There has been no contemporary account of caste that matches up Edgar Thurston.
+Thurston's work is outdated, because it is filled with racial denigration.
+
+Sociologists have written about Caste.
+If you want to know about Caste in Tamil Nadu.
+I suggest reading, Edgar Thurston. His work is outdated, but some parts of it, might be relevant.
+Apparently, in 2019, I discovered Edgar was the first to hold Librarian title— Connemara Public Library.
+
+Feel free to write a rebuttal to my perspective.
+---
+[^1] References[^2] Caste, plays core role in Politcs in Tamil Nadu, India
+
+[^1]: [Goodreads](https://www.goodreads.com/review/show/3566094304)Goodreads
+[^2]: [Wikipedia](https://en.wikipedia.org/wiki/Mudukulathur) Wikipedia
