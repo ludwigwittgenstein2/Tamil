@@ -2,10 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/book3/index.html",
       "/posts/book1/index.html",
       "/posts/book2/index.html",
       "/posts/presentation/index.pdf",
-      "/posts/welcome/index.html"
+      "/posts/welcome/index.html",
+      "/posts/quarto_how_to_setup/index.html"
     ]
   }
 ]
