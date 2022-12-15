@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/Kodai_MS_Thesis/index.html</loc>
+    <lastmod>2022-12-15T02:05:27.868Z</lastmod>
+  </url>
+  <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book1/index.html</loc>
-    <lastmod>2022-12-15T00:18:25.845Z</lastmod>
+    <lastmod>2022-12-15T02:05:28.515Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/welcome/index.html</loc>
-    <lastmod>2022-12-15T00:18:26.626Z</lastmod>
+    <lastmod>2022-12-15T02:05:29.182Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/quarto_how_to_setup/index.html</loc>
-    <lastmod>2022-12-15T00:18:27.677Z</lastmod>
+    <lastmod>2022-12-15T02:05:30.133Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/BarCode/index.html</loc>
+    <lastmod>2022-12-15T02:05:30.437Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book2/index.html</loc>
-    <lastmod>2022-12-15T00:18:30.851Z</lastmod>
+    <lastmod>2022-12-15T02:05:33.309Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/index.html</loc>
-    <lastmod>2022-12-15T00:18:31.192Z</lastmod>
+    <lastmod>2022-12-15T02:05:33.645Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/about.html</loc>
-    <lastmod>2022-12-15T00:18:31.469Z</lastmod>
+    <lastmod>2022-12-15T02:05:33.925Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/hello.html</loc>
-    <lastmod>2022-12-15T00:18:31.771Z</lastmod>
+    <lastmod>2022-12-15T02:05:34.209Z</lastmod>
   </url>
 </urlset>

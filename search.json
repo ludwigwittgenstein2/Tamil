@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts/Kodai_MS_Thesis/index.html",
+    "href": "posts/Kodai_MS_Thesis/index.html",
+    "title": "Kodai: A Software Architecture and Implementation for Segmentation",
+    "section": "",
+    "text": "The purpose of this thesis is to design and implement a software architecture for segmentation models to improve revenues for a supermarket. This tool supports analysis of supermarket products and generates results to interpret consumer behavior, to give businesses deeper insights into targeted consumer markets. The software design developed is named as Kodai. Kodai is horizontally reusable and can be adapted across various industries. This software framework allows testing a hypothesis to address the problem of increasing revenues in supermarkets. Kodai has several advantages, such as analyzing and visualizing data, and as a result, businesses can make better decisions. In addition to these advantages, Kodai is open-source, which means any developer can access the code, and develop into client requirements. With the described features, it is better than other similar tools such as Gephi, a free visualization and manipulation tool.\nThe retail industry has grown exponentially, resulting in increasing demand for software tools to analyze consumer behavior. The analysis of consumer behavior helps businesses to stay at the forefront of market competition and provide excellent service. By focusing on consumer purchase behavior, Kodai can perform analyses, meaning it can classify consumers based on variables that capture their behavior. An example is identifying consumers who spend the most amount of money in a supermarket.\nSegmentation models provide qualitative and quantitative methods to improve service for the customer and revenues for the company. These models can be used in different fields such as finance, education and healthcare. Another important feature of Gephi is its interactive and visual modeling capabilities to help understand consumer behavior. Additionally, the software is reusable and supports the integration of future tools, following key extensibility concepts of software design.\nThis thesis explains the implementation of Kodai as a software architecture through segmentation models using a web-based application that implements software engineering methodology to improve revenues and consumer experience. This tool is developed to facilitate segmentation of consumer data based on purchase behavior with the goal of allowing the user to test a hypothesis to address the problem of increasing revenues in supermarkets. Most importantly, the software is reusable and can be adapted horizontally across various industries.\n\n\n Download \n\n\nOur work in this thesis helps to show that Kodai is a software architecture for segmentation models to improve revenues for a supermarket. It can test a hypothesis to address the problem of increasing revenues in supermarkets.\nWe achieved this by allowing the user to upload supermarket data within the software framework, using a webbased application that implements software engineering methodology to improve revenues, allowing the developer to complete business requirements to be built into the software."
+  },
+  {
     "objectID": "posts/book1/index.html",
     "href": "posts/book1/index.html",
     "title": "Book Summary: Nadars of Tamil Nadu, India",
@@ -154,6 +161,13 @@
     "text": "Conclusion\nIt is easy to create great looking documents using quarto, whether that be with code in python or R. Quarto supports most of the features in RMarkdown with some fancy new ones. My personal favourite is the floating table of contents. I have also found that rendering a Quarto blog is a much smoother experience than rendering a blogdown blog."
   },
   {
+    "objectID": "posts/BarCode/index.html#conclusion",
+    "href": "posts/BarCode/index.html#conclusion",
+    "title": "YouTube Video Categorization Using Moviebarcode",
+    "section": "Conclusion",
+    "text": "Conclusion\nIn this paper, we introduced the use of moviebarcode for video categorization and summarization and showed that video processing is easier with moviebarcode for social computing researchers, especially if they deal with YouTube which is the most popular video sharing platform.\nTraditional techniques for video categorization are resource intensive and time consuming. Moviebarcode is a great methodology to extract insightful features to describe narratives in a video, capturing visual patterns in a video without watching, and grouping/categorizing similar/same videos together in fast and efficient manner. Results show that using individual channels of a moviebarcode image helps video categorization by differentiating one video from another or grouping them. Each channel carries different features about an image. The idea of splitting channels of an image increased the performance of video categorization"
+  },
+  {
     "objectID": "posts/book2/index.html#introduction",
     "href": "posts/book2/index.html#introduction",
     "title": "Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar",
@@ -193,7 +207,7 @@
     "href": "index.html",
     "title": "Rejeleene",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Nadars of Tamil Nadu, India\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar\n\n\nRick Rejeleene\n\n\n\n\nDec 13, 2022\n\n\nPresentation\n\n\nRick Rejeleene\n\n\n\n\nDec 9, 2022\n\n\nIntroduction to Tufte Style\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2022\n\n\nQuarto: How to setup your Blog\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Nadars of Tamil Nadu, India\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar\n\n\nRick Rejeleene\n\n\n\n\nDec 13, 2022\n\n\nPresentation\n\n\nRick Rejeleene\n\n\n\n\nDec 9, 2022\n\n\nIntroduction to Tufte Style\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2022\n\n\nQuarto: How to setup your Blog\n\n\nRick Rejeleene\n\n\n\n\nDec 1, 2020\n\n\nYouTube Video Categorization Using Moviebarcode\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2017\n\n\nKodai: A Software Architecture and Implementation for Segmentation\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
