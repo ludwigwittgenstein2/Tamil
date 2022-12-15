@@ -1,0 +1,117 @@
+---
+title: 'Book Summary: How Asia Works by Joe Studwell'
+author: Rick Rejeleene
+date: '2022-12-01'
+categories:
+  - Economics 
+  - Tamil Nadu
+  - Asia
+draft: false
+description: 'How Free-Market is not the way to go for Developing Countries'
+image: ""
+archives:
+  - 2022/12
+toc: true
+toc-depth: 2
+toc-location: left
+toc-title: Contents
+echo: false 
+  
+format: 
+  html: 
+    code-fold: show
+    code-tools: false
+    code-link: false
+---
+
+
+```{python}
+
+
+from IPython.display import Image
+from IPython.core.display import HTML 
+
+
+Image(url= "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1369869888i/16144575.jpg")
+
+```
+
+
+## How Asia Works by Joe Studwell?
+
+
+A Superb work to further my understanding on Political Economy. 
+I came to this book, seeking answers for questions in, How can Tamil Nadu modernize itself?
+
+Ask an average Tamil, he might give answers like, wearing western clothes, jeans, speaking english, buying toys [iPhones, Cars, T.V, Laptop, Internet] is considered to be modern.
+
+Perhaps, I am one of the few Tamils around the Globe, and within Tamil Nadu to have taken serious interest in the question, 
+
+**"How can Tamil Nadu move towards High-Income State?""**
+
+Joe (author) introduced me to new writers. The parts which were most interesting to me were Fredrich List & Story of Japan. Fredrich List was a Prussian-American Economic writer, journalist is to be read alongside with Adam Smith. List's writing and work put a serious blow on my earlier assumptions of Adam Smith. 
+
+List developed national theory of economy. He disagrees with Adam Smith, who says private interest of individuals would lead to highest goods in society. Politicians have two goals, one is to present society and future generation, so this brings up to consider productive powers of a nation in the future, rather than immediate value. He says, a nations true wealth lies in productive power.
+Being familiar with Japanese history, I was surprised to notice, Meiji Era was strongly influenced by List's National System. 
+
+Recall, Meiji Era lead towards fast paced modernization of Japan. During process of Modernization, Japan pummeled two victories, one over China and another with Russia in wars. Once, Japan pummeled Russia in Russo-Japanese War. India's perspective shifted on how an Eastern power is able to rise up to the West [Congress Party]
+
+This work filled few own gaps of my understanding in Political History. English East India Company followed economic policy of mercantilism, meaning maximize exports, minimize imports. This had serious consequences such as introducing poppy into China and imperialism, where England could maintain more exports.
+Although, Many Writers have stated, Mercantilism lead British to Global Superpower at one point in History. It is not clear to me, exactly what happened? Britain only embraced, Free Trade around late 1800s, started promoting Free-trade to other nations.
+
+Majority of Economic Historians have agreed that it was due to EIC and British in India, India lost their wealth. Even though majority might state this view, I tried to look into alternative views and evidence. A minority of Economic Historians state, India was already on the path of poverty, the British happen to accelerate it. From this work -- it seems Historically, Nations have protected their industries, it is not clear, what combination or how much it is to be protected?
+
+## What is the meat of this work?
+
+Joe shares how Asian Economics pursued policies leading the path towards becoming Rich. 
+
+Answer lies in On Page 189:
+
+Joe lays out as one, two, three steps based on Historical Review of Asia.
+
+> a. Household Farming — land redistribution (small farmers work on small plots, increasing productivity)
+  b. Export Discipline — focusing on leading exports at global scale, giving subsidies contingent upon future
+  c. Finance which supports the above two, Household farming and Export Discipline 
+
+ Bouke van der Bijl says the following, Studwell distills his extensive research into the economies of nine countries—Japan, South Korea, Taiwan, Indonesia, Malaysia, Thailand, the Philippines, Vietnam, and China—into an accessible, readable narrative that debunks Western misconceptions, shows what really happened in Asia and why, and for once makes clear why some countries have boomed while others have languished.
+
+If Studwell is right, much of the debate over free markets vs. govt. intervention, or mercantilism vs. free trade, or financial discipline vs. profligacy, is a useless distraction for poor countries. The winning strategy is something that economists don't even have a name for.
+
+## Here's How: 
+
+1. Agricultural development -- When a country is underdeveloped and labor is cheap, it should redistribute farmland to small household farms, and make sure that this is done in a sound way such that the land can’t just be accumulated under one landlord again. 
+
+The reason is that ‘gardening’-style farming as done on such farms, while labor-intensive is much more productive per hectare than large-scale mechanized farming. This will lead to a surplus in yields, which will lead to profits for the families, which they can then re-invest in their farms or use to improve their own living conditions. 
+
+This policy should also be supported with subsidized fertilizer, education, etc. whatever support the government can give to improve the yield of small farmers. The problem in the Philippines is that, while they tried to do land reform, in the end the big families just regained their land through backdoor policies, and to this day are farming them like plantations, which are profitable but don’t provide the biggest amount of welfare for the nation.
+
+2. Industrial policy. The country should nurture an infant manufacturing sector through protectionism and export discipline. The author points out that basically every industrialized country did so through protectionism, including Germany, USA, and the UK. 
+
+The developing country should build up their own expertise, for example by doing technology transfers with foreign firms (while maintaining control) until they can innovate on their own. This should be stimulated by the government. An example from the book, is that during the Korean junta they rounded up all the business leaders and forced them to sign a statement that they agreed to listen to the junta, otherwise all of their possessions would be taken from them. 
+They then coerced them into starting manufacturing businesses like cables etc. The other key factor is that the manufacturing businesses should be forced to compete on a global level through ‘export discipline’, which is policy that incentives businesses to export their products, for example by guaranteeing loans based on purchase orders from abroad (like Korea did).
+
+3. Keep a tight leash on the financial system. The hire part is that the government should rightly control the finance system and ensure it works to their interests, instead of being captured by profiteers. 
+
+An example was that in the Philippines, where the banks were privatized, the big family businesses all had their own banks which would loan money to the family business, which they would just not pay back, leading to the government picking up the cheque. In Malaysia they liberalized the financial system and IPOd companies prematurely, leading to huge stock market bubbles on unproductive companies. Only after industrialization should the banking sector be liberalized bit by bit.
+
+
+## To the question, How can Tamil Nadu modernize itself?
+
+As of now, I do not have enough understanding to give a fully formed answer. 
+My own thoughts after reading this work:
+
+> a. List work puts sharp questions to my own refuge into abstract theories
+  b. I am reminded of Edmund Burke
+  c. Burke stated politics was concrete policies managing interest groups desires and not resorting to abstract theories
+
+
+---
+
+[^1] Introduction to Macroeconomics [^2] Check, out for more sources
+
+[^1]: [Goodreads](https://www.goodreads.com/review/show/5030858679) Macroeconomics: An Introduction by Alex M. Thomas
+[^2]: [Wikipedia](https://en.wikipedia.org/wiki/Macroeconomics) Introduction to Macroeconomics
+
+
+
+
