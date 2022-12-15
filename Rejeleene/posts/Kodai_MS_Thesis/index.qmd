@@ -1,0 +1,35 @@
+---
+title: 'Kodai: A Software Architecture and Implementation for Segmentation'
+author: Rick Rejeleene
+date: '2017-08-01'
+categories:
+  - Research 
+  - Software
+  - Python
+draft: false
+description: Master's in Computer Science - Thesis 
+---
+
+# Abstract
+
+The purpose of this thesis is to design and implement a software architecture for segmentation models to improve revenues for a supermarket. This tool supports analysis of supermarket products and generates results to interpret consumer behavior, to give businesses deeper insights into targeted consumer markets. The software design developed is named as Kodai. Kodai is horizontally reusable and can be adapted across various industries. This software framework allows testing a hypothesis to address the problem of increasing revenues in supermarkets. Kodai has several advantages, such as analyzing and visualizing data, and as a result, businesses can make better decisions. In addition to these advantages, Kodai is open-source, which means any developer can access the code, and develop into client requirements. With the described features, it is better than other similar tools such as Gephi, a free visualization and manipulation tool.
+
+The retail industry has grown exponentially, resulting in increasing demand for software tools to analyze consumer behavior. The analysis of consumer behavior helps businesses to stay at the forefront of market competition and provide excellent service. By focusing on consumer purchase behavior, Kodai can perform analyses, meaning it can classify consumers based on variables that capture their behavior. An example is identifying consumers who spend the most amount of money in a supermarket.
+
+Segmentation models provide qualitative and quantitative methods to improve service for the customer and revenues for the company. These models can be used in different fields such as finance, education and healthcare. Another important feature of Gephi is its interactive and visual modeling capabilities to help understand consumer behavior. Additionally, the software is reusable and supports the integration of future tools, following key extensibility concepts of software design.
+
+This thesis explains the implementation of Kodai as a software architecture through segmentation models using a web-based application that implements software engineering methodology to improve revenues and consumer experience. This tool is developed to facilitate segmentation of consumer data based on purchase behavior with the goal of allowing the user to test a hypothesis to address the problem of increasing revenues in supermarkets. Most importantly, the software is reusable and can be adapted horizontally across various industries.
+
+<iframe src="https://digitalcommons.uri.edu/cgi/viewcontent.cgi?article=2114&context=theses" title="foo" width="960" height="500"></iframe>
+
+<a href="https://doi.org/10.23860/thesis-rejeleene-rick-2017"> Download </a> 
+
+
+## Conclusion
+
+Our work in this thesis helps to show that `Kodai` is a software architecture for `segmentation models` to improve revenues for a supermarket. It can test a hypothesis to address the `problem of increasing revenues` in supermarkets. 
+
+We achieved this by allowing the user to upload supermarket data within the software framework, using a webbased application that implements software engineering methodology to improve revenues, allowing the developer to complete business requirements to be built into the software.
+
+---
+

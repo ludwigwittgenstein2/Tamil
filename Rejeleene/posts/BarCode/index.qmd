@@ -1,0 +1,40 @@
+---
+title: 'YouTube Video Categorization Using Moviebarcode '
+author: Rick Rejeleene
+date: '2020-12-01'
+categories:
+  - Research 
+  - Software
+  - Python
+  - Computer Vision
+  - Machine Learning
+draft: false
+description: A Machine Learning Approach to Video Summarization
+---
+
+<img src="http://rickrejeleene.me/img/blog/others/moviebarcode.png" alt="MovieBarCode" width="800" height="300">
+
+###### Contributions from : Rick Rejeleene, Recep Erol, Richard Young, Thomas Marcoux, Muhammad Nihal Hussain, and Nitin Agarwal
+
+
+# Abstract
+
+Every minute more than five-hundred hours of video content is uploaded to YouTube, and we can only expect this number to increase. Although YouTube is the most popular video sharing website, studies conducted on this platform are sparse. The lack of effective video analysis techniques presents a tedious challenge for researchers and has hindered overall research on this platform. Due to this, research conducted on YouTube primarily focuses on analyzing text-based content or video metadata. With recent advancements in the development of Moviebarcode, a technique that shrinks a movie or video into a barcode, we have developed a tool designed to extend the capabilities of Moviebarcode as a forensic technique for system- atically categorizing YouTube videos. We use moviebarcode to summarize an entire YouTube video into a single image to help users understand a video without even watching it.
+
+Index Terms: Moviebarcode, Video Categorization, YouTube, Social Computing Tool
+
+
+<a href="https://github.com/ludwigwittgenstein2/ludwigwittgenstein2.github.io/blob/master/pdf/barcode2.pdf" title="BarCode" width="960" height="500"> Presentation </a> 
+
+<a href="https://github.com/ludwigwittgenstein2/ludwigwittgenstein2.github.io/blob/master/pdf/barcode.pdf"> Paper </a> 
+
+
+
+## Conclusion
+
+In this paper, we introduced the use of moviebarcode for video categorization and summarization and showed that video processing is easier with moviebarcode for social computing researchers, especially if they deal with YouTube which is the most popular video sharing platform. 
+
+Traditional techniques for video categorization are resource intensive and time consuming. Moviebarcode is a great methodology to extract insightful features to describe narratives in a video, capturing visual patterns in a video without watching, and grouping/categorizing similar/same videos together in fast and efficient manner. Results show that using individual channels of a moviebarcode image helps video categorization by differentiating one video from another or grouping them. Each channel carries different features about an image. The idea of splitting channels of an image increased the performance of video categorization
+
+---
+
