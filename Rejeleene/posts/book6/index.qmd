@@ -1,0 +1,89 @@
+---
+title: 'Book Summary: Limits of State Action by Von Humbolt'
+author: Rick Rejeleene
+date: '2017-2-4'
+categories:
+  - Books 
+  - Philosophy
+draft: false
+description: 'A Work on Political Philosophy'
+image: ""
+archives:
+  - 2022/08
+toc: true
+toc-depth: 2
+toc-location: left
+toc-title: Contents
+  
+format: 
+  html: 
+    code-fold: show
+    code-tools: false
+    code-link: false
+bibliography: references.bib
+link-citations: true
+---
+
+
+<img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1512248640i/356731.jpg"/>
+
+
+# 1. Why care about this?
+
+This is one of my best read books.
+
+> 0. Depth
+ 1. Quality
+ 2. Cognition required to understand
+
+Also, a Foundation for Classical Liberalism,
+While reading Humboldt's dense writings,
+I inferred, Perhaps? 
+
+
+> In 17-18th century, quality of education was admirable
+
+This work would help, anyone raise their level of thoughts.
+To raise one's quality of thought - What should we do?
+
+We must read writers, engage with, who are better than us. 
+For that - one requires persistence, curiosity, and herculean effort.
+
+# 2. What is this about?
+
+Von Humboldt was a Prussian Writer, Civil Servant, contributed for Classical Liberalism. Von Humboldt's ideas were influential for Higher Education.
+Humboldt asks, "To what end, state institutions; should be set to their activity?"
+
+To respond to this, He writes this entire book.
+I'd suggest reading it.
+To make it relevant to contemporary Tamil Nadu, India.
+
+## Could we apply this to Politics in Tamil Nadu?
+
+My hunch is, We are forcing western concepts work into local Tamil Politics.
+
+# 3. What did I learn in this?
+
+I learnt about Freedom, Principles for Classical Liberalism.
+
+How in Tamil Nadu - we do not have, foundational works in Political thought?
+
+My own vague response, perhaps from Sangam Literature?
+Maybe, someone could re-construct or advance knowledge in Tamil Political thought?
+
+My favorite part from the book,
+
+Humboldt says,
+
+**"Men who love labor for its own sake, improve it by their plastic genius and inventive skill, cultivate intellect and refine their pleasures."**
+
+Political theorist, lay foundation, upon which, political parties stand upon. From there, Politicians formulate positions on issues.
+
+I would recommend this book to everyone.
+
+
+> "Thoughts without content are empty, intuitions without concepts are blind" - Kant
+
+----
+
+<a href="https://www.goodreads.com/review/show/1902989059"> Goodreads </a>

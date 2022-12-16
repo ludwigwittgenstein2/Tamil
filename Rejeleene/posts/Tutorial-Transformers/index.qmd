@@ -1,0 +1,364 @@
+---
+title: 'Transformers: Easy Tutorial'
+author: Rick Rejeleene
+date: '2022-12-15'
+categories:
+  - Tutorial 
+  - Machine Learning
+  - Easy
+draft: true
+description: 'A summary of Transformer, successor to RNN Seq2Seq'
+image: ""
+archives:
+  - 2022/08
+toc: true
+toc-depth: 2
+toc-location: left
+toc-title: Contents
+  
+format: 
+  html: 
+    code-fold: show
+    code-tools: true
+    code-link: true
+bibliography: references.bib
+link-citations: true
+---
+
+# Primer on Transformer:
+
+
+Anyone who has conversation about Machine Learning or AI, or is interested, can read it to understand.
+Transformers are a type of Machine learning model, based on variant of self-attention mechanism. 
+
+
+1. Transformers replaced using, "attention" mechanism
+2. No convolutional layer or recurrent layer used in Transformer
+3. As of now -- Transformers are used in state of art technology
+
+
+> Pre-requisite for Transformers: Engineering Math
+
+Well, Did we think we could skip Mathematics? 
+Do we recall our high school teacher, who stressed importance of mathematics? 
+Many components in Machine learning are built from mathematical tools.
+
+
+## So - What are attention mechanisms in baby steps?
+
+1. We can think of them as vector of relevance in a sequence
+2. Attention Mechanisms creates a score at the end
+3. These scores, are generated dynamically at each time step, t
+4. With this, Transformers has the power to understand bi-directionality in sentence
+
+
+## What is the meat of transformer? 
+
+The Core part of Transformers is Attention Mechanism:
+
+Previously, before transformers were introduced circa 2016-2017.
+For Sequence to Sequence tasks, meaning, convert [Tamil] to [English] task
+eg:"Na Veetuku Porae" [Tamil], "I house go" [English]
+
+This is literal translation of a sentence.
+
+The actual translation is, "I am going to house"
+
+So, we want our translation to be as accurate as possible - right?
+Encoder-Decoder Architectures were primarily the leading architecture in Sequence to Sequence tasks.
+
+In Encoder-Decoder, we had fixed vector. This limited to understand context of the sentences.
+So in attention, we have a context vector, in-between Encoder-Decoder
+What is context vector? [yellow in image]
+
+Basically, previously we had a fixed size vector representation of encoder
+
+Issue of this approach:
+
+1. That doesn't give me information about entire sentence
+2. Each step, different information from sentence is relevant
+So, Solution: "Attention Mechanism"
+1. At each step, attention mechanism allows model to focus on different parts
+
+At each decoder step,
+1) Receive input, decoder state h(t) and all encoder states s(1), s(2)... s(m)
+2) Compute a score for Attention,
+3) At each encoder state, s(k), compute relevance for decoder state h(t)
+4) Apply attention function, meaning, (receive one decoder state, and one encoder state)
+5) Return a scalar value, score(h[t], s[k])
+6) Compute Attention Weight, which is a probability distribution
+7) Compute Attention Output, weighted sum of encoder state with attention weight
+
+
+## Engineering Attention Mechanism [know-how]:
+
+## How to generate attention mechanism?
+
+Baby Steps in order:
+1. Attention Input: [All Encoder State, S1.... Sm] and One Decoder State, H(t)
+2. Attention Score: Score(h[t], s[k]), k=1....m
+3. Softmax
+4. Attention Weights, a subscript (k) superscript (t)
+= exp( score(h[t], s[k])) / Summation of i=1 to m exp(score(h[t], s[i])), k=1...m
+5. Context Vector c (t) = a1 s1 + a2 s2 + .... + a(m)[t] S(m)
+Summation of k = 1 to m, a (k)[t] to s(k)
+All steps is differentiable.
+Intuition: Neural Network learns, which input parts are important at each step.
+
+
+So, that was building block steps.
+
+How to compute scores in Attention Mechanism?
+In papers, there's Bahdanau, Luong and others.
+There's variants in Attention Function scores
+1. dot-product
+2. bilinear function
+3. multi-layer perceptron [bahdanau]
+
+Variants in Attention Mechanism:
+
+Bahdanau:
+
+1. Encoder - Bidirectional RNN
+There's two RNN's
+
+Forward
+Backward
+
+2. Attention Score: Multi-layer perceptron
+Apply MLP between encoder and decoder to get attention score
+
+3. Attention Applied between Decoder Steps
+Attention, between decoder steps, state h(t-1), compute attention, output c(t)
+
+4. Both h(t-1) and c(t) is passed to decoder at step (t)
+
+
+## Luong Model:
+
+1. Encoder: unidirectional
+2. Attention Score: Bilinear function
+3. Attention Applied between decoder RNN State t and prediction for this step
+Attention is used after RNN decoder step (t), before prediction
+State h(t) used to compute attention, and output c(t)
+H(t) combined with c(t) to get updated representation h(t)
+
+
+While -- this is frequently used in papers.
+What is this?
+1. Scores of relevance at each time step
+2. Dynamically generated
+
+
+## Describing in plain english:
+
+1. Encoder is containing, with all source tokens
+2. And, what are they doing?
+3. Look at each other, update representations
+4. Decoder is doing, look at target token at current time step (t)
+5. Look at previous target token, look at source representation
+6. Update representation
+
+
+## Self-attention:
+
+Self-attention is a key-building block
+What's the diff between self-attention vs attention?
+Huh, Well - self-attention operates between representation of same nature
+
+
+
+Decoder-encoder attention is looking
+From: one current decoder state
+At: all encoder states
+Self-attention is looking
+From: each state from a set of states
+At: All other states in same set
+
+
+Query, Key and Value in Self-Attention:
+QKV, is how we implement attention.
+Each input token, in self-attention receives three representation
+So- what do Q, K, V do?
+1. Query : I Ask for an information
+2. Key: I have some information
+3. Value: I give you the information
+Query -- Tokens look at each other
+Key -- Respond to Query's request
+Value -- Compute Attention Output
+
+
+Key idea to remember,
+"Compare Query with Keys" to get, "Scores/Weights" for, "Values"
+1. Each Score/Weight is relevance between query, key
+2. Reweigh values with scores/weights
+3. Take summation of reweighed values
+Multi-head Attention
+
+
+## Multi-Head Attention:
+The Building Block of Transformer Model:
+In order to understand a word in a sentence,
+It requires understanding, how is this word related in a sentence
+eg: "Na Veetuku Porae" [Tamil] to I am going to my house [English]
+Requires knowing, "Veetuku" word, on how is it related to other words in a sentence.
+So, Each word has relations
+So Intuitively, Multi-head attention, lets the model focus on many things.
+
+
+So, we split queries, keys, values of single-head attention into several parts.
+In this way -- model with one attention head or several of them, have same size.
+
+Now for Transformer Model:
+Source: Lena Voita's Blog
+
+
+# So, What does it do?
+
+1. Encoder -- token communicates with each other
+2. Update Representation
+3. Decoder, target token look at previously generate target token
+4. Update Representation
+5. We have 6 layers
+Feed Forward Layer:
+The Model uses FFL to update new information
+
+### Residual Connections:
+
+First time, I saw this - it was in Object detection papers.
+Why use it?
+Similar to skip-connection
+Stabilize the network
+Recall, when we have deeper neural networks, issues start ebbing out
+"Vanishing Gradient" - suddenly, the training drops to, "Zero"
+Imagine, you are in your house, lights are on, suddenly it becomes dark.
+That's why, similar to Skip-connection, Residual connection
+
+
+In Transformer:
+
+Residuals used after Attention and Feed Forward Neural Network block
+Layer Normalization:
+Norm in Transformer "Add & Norm" is Layer Normalization
+
+# What does it do?
+
+Well, it normalizes, vector representation in batches
+
+So what?
+Well, We want to manage flow to next layer
+Layer normalization improves convergence stability and quality
+
+
+1. Normalize each vector representation of each token
+2. LayerNorm, has parameters - scale and bias
+
+
+## Positional Encoding:
+
+Recall, we want some sort of representation for positions of tokens
+Convolutional Layers or Recurrence Layers
+They help to know position of tokens
+But, in Transformer, we do not have either, So, we need something for positional representation.
+
+
+Two embedding are required:
+
+Embedding, a way to translate words into magic vector form, so computers can understand
+1) Tokens
+2) Positions
+So, input representation of token is sum of two embeddings:
+Token and Positional
+
+
+Pos is position.
+i is vector dimension.
+If you recall, trigonometry from your math teacher in high-school.
+Trigonometric functions are helpful to represent angles, position.
+How cool is it?
+Positional Encoding, represents wavelengths in geometric progression from 2∏ to 1000. 2∏.
+Think this way - a way to represent positions through angles
+So what?
+eg: "Room la fan poddu" [Tamil] translates, Switch on Fan [English]
+"poddu" can be break or to turn on.
+Positional Encoding, would help represent and retain both meanings.
+
+
+# Tokenization:
+
+# What is it?
+
+A way to divide sequence of words into small pieces
+Many types are there
+So, "Poddu" [Tamil] word has both turn on, and to break meaning
+1. Word Level
+2. Sub-word Level
+Word Level can only process fixed number of words, limited
+Subword level can process open vocabulary, and unknown words
+
+
+Baby step High-level differences between Encoder-Decoder in Transformer:
+Encoder:
+1. Multi-head Attention
+Decoder:
+1. Masked Multi-head Attention
+2. Scaled Dot-Product Attention
+Recall, Masked Self-attention means, future tokens are masked out.
+
+
+Another way to explain, more picture focused (Attention Layer):
+GRU:
+
+1. Recall, GRU is specialized form of RNN
+2. GRU has two gates [reset, update]
+3. LSTM has three gates [input, output, forget]
+GRU, less complex than LSTM
+4. GRU, doesn't have memory unit compared with LSTM
+
+So in the picture,
+Encoder-Decoder, dominant form of architecture in Seq2Seq task, cool right?
+BiGRU, Bidirectional GRU, takes input in forward and other in backward direction
+Green Dots -- Encoder Hidden State
+Red Dots -- Decoder Hidden State
+Why do we need Hidden State?
+Squashing function, perform non-linear function in neural network
+Blue dots -- Score
+Softmax -- Sum of probability distribution equal to 1
+Use Softmax only when in classifier, classes are mutually exclusive
+Alignment Vector -- input at position j, and outputs at position i match
+Context Vector -- Attention Score
+Source: [Teksands]
+
+
+Scaled Dot Product Attention
+Score = (1/√n) (decoder state) (encoder state)
+Dot Product Attention:
+Score = (decoder state) (encoder state)
+Additive based Attention
+Score = (decoder state) (encoder state) = trainable weights
+Cosine Similarity based Attention:
+Score = (decoder state) (encoder state) / norm [(decoder state) (encoder state)]
+Source: [Teksands]
+
+
+# BERT
+
+1. Pre-trained Language Model from Google 
+2. Most easy to use among all language models
+BERT lead into developments in 
+1. GPT (Decoder Block)
+2. GPT-2 (Decoder Block)
+3. GPT-3 (Decoder Block)
+Where to start? 
+"Attention is all you need"
+Paper: 📎https://arxiv.org/pdf/1706.03762.pdf
+Tutorial: 
+https://nlp.seas.harvard.edu/2018/04/03/attention.html
+ Harvard NLP Professor Stuart Shieber's Blog 🧵
+
+
+
+
+# Conclusion
+
+It is easy to create great looking documents using `quarto`, whether that be with code in `python` or `R`. `Quarto` supports most of the features in `RMarkdown` with some fancy new ones. My personal favourite is the floating table of contents. I have also found that rendering a `Quarto` blog is a much smoother experience than rendering a `blogdown` blog.

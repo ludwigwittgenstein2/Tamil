@@ -1,0 +1,64 @@
+---
+title: 'Book Summary: Immanuel Kant: Critique of Reason'
+author: Rick Rejeleene
+date: '2015-8-15'
+categories:
+  - Books 
+  - Philosophy
+draft: false
+description: 'Immanuel Kant & Tamil Nadu'
+image: ""
+archives:
+  - 2022/08
+toc: true
+toc-depth: 2
+toc-location: left
+toc-title: Contents
+  
+format: 
+  html: 
+    code-fold: show
+    code-tools: true
+    code-link: true
+bibliography: references.bib
+link-citations: true
+---
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Kant_gemaelde_3.jpg"/>
+
+#### Immanuel Kant
+
+
+I read this book, my time in --Tirunelveli -- India, during my vacation.
+It was taxing time, dealing with people, emotionally exhaustive relationship, as people would not entertain, contrary thought or opinion.
+Apparently, there's less than 100 people in Tirunelveli out of 1 million, who read Kant or have heard of him.
+
+## 1. Who reads Kant in Tirunelveli, India?
+
+Tirunelveli is a smaller city of 1 million people in India, with strands of, extreme social conservatism, parochial, traditionalist, Tamil way of life - no questioning of older people, or challenging of ideas, regurgitate older people's opinion, route learning. Imagine, Kant being introduced to this way of life among the people.
+
+## 2. How did Kant come across to me?
+
+Kant is structured, methodological, orderly, systematic in his approach.
+I like his way writing. He is consuming, intense, and dense.
+One of the reason, is because of his turgid concepts and definitions. However, I do not think he is the most difficult writer or thinker to be read in Western thought. Brilliant, intense, profound, deepest thinker, so far I know is -- Jonathan Edwards. Reading Edwards requires more intensity, attention, concentration.
+
+Kant is crucial and key for understanding, Western Modern Philosophy. He's definitely worth reading. Engaging his work, your thoughts or way of expressing would raise, why?
+Because, we engage with people who are better than us.
+
+## 3. What did I learn from Kant?
+
+The important things I learnt from this book, his approach to Knowledge. He says, Knowledge we gain is systematized through our senses. Yes, our knowledge starts from experience, but Kant does not claim that all knowledge must be from experience alone or through reason alone. He calls his system, transcendental knowledge, which does not mean beyond our experience but it means knowledge which both synthetical and a priori. Imagine, you are wearing blue glasses, And look at the world. The world you perceive, will be blue through your eyes, which you will never get to find out, Why?
+
+Therefore, Kant says, we are unable to completely understand the world. He classifies these as Noumena and Phenomena. Noumena is the reality, the thing itself. Phenomena is the appearance of the thing. Space and time constitute as a foundation for everything. In the blue color perception, the color blue is the Noumena, and Glasses are Phenomena.
+
+Kant's writings on cosmological, ontological arguments were imposing, majestic and stirs my thought. If you're interested more in Philosophy of Religion, do check out Graham Oppy's work.
+
+
+
+> "Thoughts without content are empty, intuitions without concepts are blind" - Kant
+
+----
+
+<a href="https://www.goodreads.com/review/show/1395291093"> Goodreads </a>
