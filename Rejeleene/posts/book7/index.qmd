@@ -1,0 +1,139 @@
+---
+title: 'Book Summary: Macroeconomics: An Introduction by Alex M. Thomas'
+author: Rick Rejeleene
+date: '2022-10-7'
+categories:
+  - Books 
+  - Economics
+draft: false
+description: 'A Work on Macroeconomics'
+image: ""
+archives:
+  - 2022/08
+toc: true
+toc-depth: 2
+toc-location: left
+toc-title: Contents
+  
+format: 
+  html: 
+    code-fold: show
+    code-tools: false
+    code-link: false
+bibliography: references.bib
+link-citations: true
+---
+
+
+<img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1623589204i/57248368.jpg"/>
+
+---
+
+# 1. Why read this work?
+
+a. To get an introduction to Economics
+b. To understand Indian Macro-Economics
+c. To weave together different economic school of thought
+d. To understand how caste system affects broader Indian Society
+
+# 2. What does Alex say in this work?
+
+Outline:
+
+1. What is economics
+2. Conceptualizing the macroeconomy
+3. Money and interest rates
+4. Output and employment levels
+5. Economic growth
+6. Why economic theory matters
+7. The policy objective of full employment
+8. The policy objective of low inflation
+9. Towards good economics
+
+
+Let me try to summarize my highlights
+
+So, Alex wants you to understand economics is not a settled science. I recall, he mentioned it is ongoing discussion among economists. In many of the college textbooks, they might present it as settled. He asks students, learners to inquiry, ask questions.
+
+I liked the quote from Keynes,
+
+
+"He must be mathematician, historian, statesman, philosopher—in some degree. He must understand symbols and speak in words. He must contemplate the particular in terms of the general, and touch abstract and concrete in the same flight of thought. He must study the present in the light of the past for the purposes of the future. No part of man's nature or his institution lie entirely outside of his regard"
+
+While reading this quote, I thought of earlier history of India. Many might recall, Colonialism, many have to be understood in contextual clue. At that time, it seems to me that Mercantilism was the school of thought, which says a country has to export more than imports.
+
+I want the reader to ask, "How did economic school of thought impact EIC in India?"
+
+Alex furthermore shares briefly about History of Economics:
+
+a. EIC
+b. Mercantilism
+c. Political Economists
+d. Marginalist
+e. Classical Economists
+f. Keynesian Economics
+g. 20th Century [Monetarism, Institutionalism, Sraffa's Economics, Samuel's Textbook]
+
+Adam Smith was interested in finding nature of wealth, causes of wealth in nations
+
+Adam Smith says,
+
+Political economy, considered as a branch of the science of a statesman or legislator, proposes two distinct objects: first, to provide a plentiful revenue or subsistence for the people, or more properly to enable them to provide such a revenue or subsistence for themselves; and secondly, to supply the state or commonwealth with a revenue sufficient for the public services. It proposes to enrich people and sovereign.
+
+Ricardo says, "the Principal Problem [remaining] in Political Economy is to determine, laws which to regulate, distribution of rent, profit and wages."
+
+In later chapter, Alex says, Economics these days are redefining the field as, "Science of Choice"
+
+Alex has communicated basics of Macro-Economics coherently. His analysis or focus is on Indian Economy, which is not same as developed economies in West. Economists have conceptualized sectors such as Primary, Secondary, Tertiary. These are ways to understand sectors, growth for Economists. I recall, Alex stating, Service sector is growing, which means more jobs in the field.
+
+Primary Sector includes agriculture, here is where Caste comes in play. Due to less manufacturing jobs available in India; Imagine being an Adivasi's child, without any skillset or training. What would you work as? Servant of a Billionaire? When reading this, I felt sad.
+
+My own understanding is well-being of people of all social strata is to be considered. So, I understood if Construction sector is growing, it affects well-being of construction worker. It makes sense. Recall, what matters is growth of a sector, which is what you belong. This would contribute to your well-being and family.
+
+He also mentions how Caste system is rigid, where most of the time, mobility is restricted. Even in Indian Society, Patriarchy limits women with careers. So, something that I thought about, Economists have theories on how to understand, predict or formulate policies. Theories give proper framework, and in one of the chapters. Alex mentions, "There is nothing as practical as a good theory"
+This seems counter-intuitive to layman, although it is actual truth and reality.
+
+In Chapter of Financial Architect, I gained further understanding. I was able to weave my understanding of financial instruments, Depending on liquidity. From LIC Policy, Mutual Fund, Bank Deposit, Currency. This made sense, Economists classify money using their own jargon, M1, M2, M3, M4. Depending on school of thought, economists give answer to employment & output. From what I recall, Keynesian's work recommends government implication to raise output & employment levels. Marginalist theory tends to state the opposite.
+
+Alex weaved stories of Families. A Muslim family, without any education. A Bother has to get her sister married, take care of other's in family [parents]. So, he leaves abroad, sends remittance, such is the pithy of Muslim families. He asks, does Muslims have Agriculture land? Do they have reservation?
+
+While reading this, it helped me to gain further depth understanding in Caste-System. Of course, I do desire for people to gain decent living, so they can provide for their families. In return, families are happy, neighborhoods are happier. There are theories of growth, depending on supply side or demand side. This was interesting for me, mostly one side says, increase in technology. Increase in technology would cause higher growth of economy. In Capitalistic economics, Marx said, there will be a recurrent crisis. This is due to underconsumption & disproportional between sectors.
+
+Another question that is in my mind, "So Why is Mercantilism Wrong?" I'm afraid one of the popular CEO's of Tamil Nadu subscribes to Mercantilism. I could be wrong, not sure. He states, "Exports must be greater than imports" This seems to be obvious as layman, more exports means more wealth correct?
+
+Brief understanding of Mercantilism. During 1600-1857, Recall, EIC and others were competing for dominance - How? They believed, having more gold [bullion], in exchange of trade, would enable them to raise armies. Recall, this was during time of Slave trade. This was dominant economic school of thought. Smith says, Mercantalism was wrong - Why?
+
+a. Protectionism policies of Business Interests [British Navigation Act of 1651]
+b. Wealth was not Gold of Nation - so what is it?
+c. Wealth was productivity of Nations
+d. This lead to Comparative Advantage
+e. Comparative Advantage lead to specialization
+f. Creating more efficiency
+g. Industrial Revolution thrived due to free trade
+h. Policies favoring Big Business, ruling elites would decrease standard of living
+i. Additionally, would create higher inequalities
+
+In the Chapter of Economic Theory, Alex is stating the necessity of good theory. A Good theory enables towards understanding behavior, data, and formulating right policies. Earlier, I shared how good theory is as practical as you can imagine. The Figure which caught my attention was Income level. Furthermore, Caste makes a big role in people's lives, it seems to debar opportunities, access to mobility. In the Chapter of Inflation: Alex mentions about Wholesale Price Index. So price of basic commodities increases - Why? Depending on your school of thought, you'd give a response.
+Either Too much money chasing too few goods or A shock to a sector which produces effect, if you are Keynesian.
+
+
+
+# 3. Excerpts from this work
+
+Adivasi Rights
+
+> I am not your data, nor am I your vote bank,
+ I am not your project, or any exotic museum object,
+ ...Nor am I the lab, where your theories are tested
+ ...I am not your field, your crowd, your history,
+ ...I refuse, reject, resist your labels,
+ ...Because they deny me my existence, my vision, my space, ...So I draw my own picture, and invent my own grammar,
+
+
+
+
+
+----
+
+<a href="https://www.goodreads.com/review/show/5030858679"> Goodreads </a>
+
