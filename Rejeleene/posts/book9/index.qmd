@@ -1,0 +1,141 @@
+---
+title: "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work"
+description: "Western view of Marriage"
+author: "Rick Rejeleene"
+date: "1/12/2023"
+categories: [books, pyschology,sociology]
+echo: false
+---
+
+# Table of Contents
+
+1. [How is at odds?](#paragraph1)
+2. [Who would you recommend this work?](#paragraph2)
+3. [So, Would this be relevant to Tamil People?](#paragraph3)
+4. [What are my own thoughts on this work?](#paragraph4)
+5. [I don't have much time, but what is the meat of this work?](#paragraph5)
+6. [What are the things, that I see lacking in this work?](#paragraph6)
+
+```{python}
+
+
+from IPython.display import Image
+from IPython.core.display import HTML 
+
+
+Image(url= "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1495120059i/34001660.jpg")
+
+```
+
+# Introduction 
+
+Contrary to most readers, I write with an atypical view.
+
+I grew up in Tamil Nadu, India.
+
+Often, I compare Tamil Nadu and West, seeking evidences to come up with insights, conclusions.
+
+My narrative of Marriage comes from Tamil Nadu, India which is at odds with Western World.
+
+## 1.How is at odds? <a name="paragraph1"></a>
+
+From One of the many points,
+
+Marriage is a display of family honor [Tamil-Nadu]
+Marriage is a personal choice or private matter [West]
+
+Therefore, I took a journey to discover differences.
+
+
+## 2. Who would you recommend this work? <a name="paragraph2"></a>
+
+Mostly to casual readers, anyone who want to know mainstream culture of America.
+
+Does not apply to non-Western Culture,
+
+Majority of World's population.
+
+## 3. So, Would this be relevant to Tamil People? <a name="paragraph3"></a>
+
+No
+
+
+## 4. What are my own thoughts on this work? <a name="paragraph4"></a>
+
+Before you read this work, ask the following questions
+
+**{Western Culture:}**
+1. What is the goal of your life?
+2. How would you define success?
+3. What does a meaningful life look for you?
+
+
+**{Tamil Culture:}**
+1. What is the goal of your family?
+2. How does your family define success?
+3. How does a meaningful life look for your family?
+
+While back, a Stanford B.S in Computer Science Educated CEO from Bangalore, said, his goal in life is to optimize everything, tweak his entire life for maximum output = Money
+
+**{Would you agree with him?}**
+
+For him, marriage is a way to optimize his life, like an algorithm.
+
+So, I'd label his view of marriage as, "Business theory of Performance based Marriage" devoid of meta-narratives.
+
+Growing up in Tirunelveli, Tamil Nadu, India;
+
+The narrative of Marriage choice depended on
+
+1) caste
+2) religion
+3) socio-economic background
+
+Tamil Nadu’s Institution of marriage is forged by customs, traditions & religion, safe-guarded by older generation. Within Tamil Marriages - Personal choice is part of family’s broader decision in marriage.
+
+Post-marriage in Tamil Nadu is "adjust pani vaalanum" , [Tamil] adjust with each other, live life. [English]
+
+
+## 5. I don't have much time, but what is the meat of this work? <a name="paragraph5"></a>
+
+Well, turn to page 162 in this work.
+
+He says,
+
+"At its core, the all-or-nothing theory of marriage is a supply-and-demand model:
+
+Are, two of us investing enough resources—and the right kinds of resources —to meet the needs we’re seeking to fulfill through the marriage?
+
+This analysis offers three types of strategies for improving marriage.
+
+We can,
+
+(1) try to get more mileage out of our available resources,
+
+(2) invest additional resources in pursuit of large rewards at the summit,
+
+or (3) recalibrate expectations to stave off disappointment.
+
+The first two of these strategies focus on the supply side (either by enhancing efficiency or increasing investment),
+
+whereas the third focuses on the demand side (by descending Mount Maslow or otherwise asking less of the marriage)."
+
+**{My thoughts: Good luck in applying marriage as an optimization problem}**
+
+## 6. What are the things, that I see lacking in this work? <a name="paragraph6"></a>
+
+The Author missed a core crucial important assumption, “Worldview”
+
+The Author before fleshing out his research, experiments, data points, might wanted to have written his, “First-Principles”
+
+The Author, albeit not fleshing out his Worldview;
+
+--I as a reader, would infer his data, experiments and work fitting into Worldview called, "Business theory of Performance based Marriage"
+
+The Author’s goal of marriage is success, defined subjectively.
+
+This book is incomplete, because it does not including religious traditions.
+
+Anyone who has read history, could bring up points saying, it has shaped marriage.
+
+---
