@@ -22,9 +22,7 @@ echo: false
 from IPython.display import Image
 from IPython.core.display import HTML 
 
-
-Image(url= "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1495120059i/34001660.jpg")
-
+Image(url= "https://m.media-amazon.com/images/P/1101984341.01._SCLZZZZZZZ_SX500_.jpg")
 ```
 
 # Introduction 
@@ -65,15 +63,15 @@ No
 Before you read this work, ask the following questions
 
 **{Western Culture:}**
-1. What is the goal of your life?
-2. How would you define success?
-3. What does a meaningful life look for you?
+1. What is the goal of your life? <br> 
+2. How would you define success? <br> 
+3. What does a meaningful life look for you? <br> 
 
 
 **{Tamil Culture:}**
-1. What is the goal of your family?
-2. How does your family define success?
-3. How does a meaningful life look for your family?
+1. What is the goal of your family? <br> 
+2. How does your family define success? <br> 
+3. How does a meaningful life look for your family? <br> 
 
 While back, a Stanford B.S in Computer Science Educated CEO from Bangalore, said, his goal in life is to optimize everything, tweak his entire life for maximum output = Money
 
