@@ -7,6 +7,55 @@
     "text": "The purpose of this thesis is to design and implement a software architecture for segmentation models to improve revenues for a supermarket. This tool supports analysis of supermarket products and generates results to interpret consumer behavior, to give businesses deeper insights into targeted consumer markets. The software design developed is named as Kodai. Kodai is horizontally reusable and can be adapted across various industries. This software framework allows testing a hypothesis to address the problem of increasing revenues in supermarkets. Kodai has several advantages, such as analyzing and visualizing data, and as a result, businesses can make better decisions. In addition to these advantages, Kodai is open-source, which means any developer can access the code, and develop into client requirements. With the described features, it is better than other similar tools such as Gephi, a free visualization and manipulation tool.\nThe retail industry has grown exponentially, resulting in increasing demand for software tools to analyze consumer behavior. The analysis of consumer behavior helps businesses to stay at the forefront of market competition and provide excellent service. By focusing on consumer purchase behavior, Kodai can perform analyses, meaning it can classify consumers based on variables that capture their behavior. An example is identifying consumers who spend the most amount of money in a supermarket.\nSegmentation models provide qualitative and quantitative methods to improve service for the customer and revenues for the company. These models can be used in different fields such as finance, education and healthcare. Another important feature of Gephi is its interactive and visual modeling capabilities to help understand consumer behavior. Additionally, the software is reusable and supports the integration of future tools, following key extensibility concepts of software design.\nThis thesis explains the implementation of Kodai as a software architecture through segmentation models using a web-based application that implements software engineering methodology to improve revenues and consumer experience. This tool is developed to facilitate segmentation of consumer data based on purchase behavior with the goal of allowing the user to test a hypothesis to address the problem of increasing revenues in supermarkets. Most importantly, the software is reusable and can be adapted horizontally across various industries.\n\n\n Download \n\n\nOur work in this thesis helps to show that Kodai is a software architecture for segmentation models to improve revenues for a supermarket. It can test a hypothesis to address the problem of increasing revenues in supermarkets.\nWe achieved this by allowing the user to upload supermarket data within the software framework, using a webbased application that implements software engineering methodology to improve revenues, allowing the developer to complete business requirements to be built into the software."
   },
   {
+    "objectID": "posts/book9/index.html",
+    "href": "posts/book9/index.html",
+    "title": "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work",
+    "section": "",
+    "text": "How is at odds?\nWho would you recommend this work?\nSo, Would this be relevant to Tamil People?\nWhat are my own thoughts on this work?\nI don’t have much time, but what is the meat of this work?\nWhat are the things, that I see lacking in this work?"
+  },
+  {
+    "objectID": "posts/book9/index.html#how-is-at-odds",
+    "href": "posts/book9/index.html#how-is-at-odds",
+    "title": "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work",
+    "section": "1.How is at odds? ",
+    "text": "1.How is at odds? \nFrom One of the many points,\nMarriage is a display of family honor [Tamil-Nadu] Marriage is a personal choice or private matter [West]\nTherefore, I took a journey to discover differences."
+  },
+  {
+    "objectID": "posts/book9/index.html#who-would-you-recommend-this-work",
+    "href": "posts/book9/index.html#who-would-you-recommend-this-work",
+    "title": "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work",
+    "section": "2. Who would you recommend this work? ",
+    "text": "2. Who would you recommend this work? \nMostly to casual readers, anyone who want to know mainstream culture of America.\nDoes not apply to non-Western Culture,\nMajority of World’s population."
+  },
+  {
+    "objectID": "posts/book9/index.html#so-would-this-be-relevant-to-tamil-people",
+    "href": "posts/book9/index.html#so-would-this-be-relevant-to-tamil-people",
+    "title": "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work",
+    "section": "3. So, Would this be relevant to Tamil People? ",
+    "text": "3. So, Would this be relevant to Tamil People? \nNo"
+  },
+  {
+    "objectID": "posts/book9/index.html#what-are-my-own-thoughts-on-this-work",
+    "href": "posts/book9/index.html#what-are-my-own-thoughts-on-this-work",
+    "title": "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work",
+    "section": "4. What are my own thoughts on this work? ",
+    "text": "4. What are my own thoughts on this work? \nBefore you read this work, ask the following questions\n{Western Culture:} 1. What is the goal of your life? 2. How would you define success? 3. What does a meaningful life look for you?\n{Tamil Culture:} 1. What is the goal of your family? 2. How does your family define success? 3. How does a meaningful life look for your family?\nWhile back, a Stanford B.S in Computer Science Educated CEO from Bangalore, said, his goal in life is to optimize everything, tweak his entire life for maximum output = Money\n{Would you agree with him?}\nFor him, marriage is a way to optimize his life, like an algorithm.\nSo, I’d label his view of marriage as, “Business theory of Performance based Marriage” devoid of meta-narratives.\nGrowing up in Tirunelveli, Tamil Nadu, India;\nThe narrative of Marriage choice depended on\n\ncaste\nreligion\nsocio-economic background\n\nTamil Nadu’s Institution of marriage is forged by customs, traditions & religion, safe-guarded by older generation. Within Tamil Marriages - Personal choice is part of family’s broader decision in marriage.\nPost-marriage in Tamil Nadu is “adjust pani vaalanum” , [Tamil] adjust with each other, live life. [English]"
+  },
+  {
+    "objectID": "posts/book9/index.html#i-dont-have-much-time-but-what-is-the-meat-of-this-work",
+    "href": "posts/book9/index.html#i-dont-have-much-time-but-what-is-the-meat-of-this-work",
+    "title": "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work",
+    "section": "5. I don’t have much time, but what is the meat of this work? ",
+    "text": "5. I don’t have much time, but what is the meat of this work? \nWell, turn to page 162 in this work.\nHe says,\n“At its core, the all-or-nothing theory of marriage is a supply-and-demand model:\nAre, two of us investing enough resources—and the right kinds of resources —to meet the needs we’re seeking to fulfill through the marriage?\nThis analysis offers three types of strategies for improving marriage.\nWe can,\n\ntry to get more mileage out of our available resources,\ninvest additional resources in pursuit of large rewards at the summit,\n\nor (3) recalibrate expectations to stave off disappointment.\nThe first two of these strategies focus on the supply side (either by enhancing efficiency or increasing investment),\nwhereas the third focuses on the demand side (by descending Mount Maslow or otherwise asking less of the marriage).”\n{My thoughts: Good luck in applying marriage as an optimization problem}"
+  },
+  {
+    "objectID": "posts/book9/index.html#what-are-the-things-that-i-see-lacking-in-this-work",
+    "href": "posts/book9/index.html#what-are-the-things-that-i-see-lacking-in-this-work",
+    "title": "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work",
+    "section": "6. What are the things, that I see lacking in this work? ",
+    "text": "6. What are the things, that I see lacking in this work? \nThe Author missed a core crucial important assumption, “Worldview”\nThe Author before fleshing out his research, experiments, data points, might wanted to have written his, “First-Principles”\nThe Author, albeit not fleshing out his Worldview;\n–I as a reader, would infer his data, experiments and work fitting into Worldview called, “Business theory of Performance based Marriage”\nThe Author’s goal of marriage is success, defined subjectively.\nThis book is incomplete, because it does not including religious traditions.\nAnyone who has read history, could bring up points saying, it has shaped marriage."
+  },
+  {
     "objectID": "posts/book7/index.html",
     "href": "posts/book7/index.html",
     "title": "Book Summary: Macroeconomics: An Introduction by Alex M. Thomas",
@@ -312,7 +361,7 @@
     "href": "index.html",
     "title": "Rejeleene",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJan 12, 2023\n\n\nBook Summary: The All-Or-Nothing Marriage: How the Best Marriages Work\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Nadars of Tamil Nadu, India\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar\n\n\nRick Rejeleene\n\n\n\n\nDec 13, 2022\n\n\nPresentation\n\n\nRick Rejeleene\n\n\n\n\nDec 9, 2022\n\n\nIntroduction to Tufte Style\n\n\nRick Rejeleene\n\n\n\n\nDec 1, 2022\n\n\nBook Summary: How Asia Works by Joe Studwell\n\n\nRick Rejeleene\n\n\n\n\nOct 7, 2022\n\n\nBook Summary: Macroeconomics: An Introduction by Alex M. Thomas\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2022\n\n\nQuarto: How to setup your Blog\n\n\nRick Rejeleene\n\n\n\n\nDec 1, 2020\n\n\nYouTube Video Categorization Using Moviebarcode\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2017\n\n\nKodai: A Software Architecture and Implementation for Segmentation\n\n\nRick Rejeleene\n\n\n\n\nFeb 4, 2017\n\n\nBook Summary: Limits of State Action by Von Humbolt\n\n\nRick Rejeleene\n\n\n\n\nAug 15, 2015\n\n\nBook Summary: Immanuel Kant: Critique of Reason\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJan 12, 2023\n\n\nBook Summary: The All-Or-Nothing Marriage: How the Best Marriages Work\n\n\nRick Rejeleene\n\n\n\n\nJan 12, 2023\n\n\nBook Summary: The All-Or-Nothing Marriage: How the Best Marriages Work\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Nadars of Tamil Nadu, India\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar\n\n\nRick Rejeleene\n\n\n\n\nDec 13, 2022\n\n\nPresentation\n\n\nRick Rejeleene\n\n\n\n\nDec 9, 2022\n\n\nIntroduction to Tufte Style\n\n\nRick Rejeleene\n\n\n\n\nDec 1, 2022\n\n\nBook Summary: How Asia Works by Joe Studwell\n\n\nRick Rejeleene\n\n\n\n\nOct 7, 2022\n\n\nBook Summary: Macroeconomics: An Introduction by Alex M. Thomas\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2022\n\n\nQuarto: How to setup your Blog\n\n\nRick Rejeleene\n\n\n\n\nDec 1, 2020\n\n\nYouTube Video Categorization Using Moviebarcode\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2017\n\n\nKodai: A Software Architecture and Implementation for Segmentation\n\n\nRick Rejeleene\n\n\n\n\nFeb 4, 2017\n\n\nBook Summary: Limits of State Action by Von Humbolt\n\n\nRick Rejeleene\n\n\n\n\nAug 15, 2015\n\n\nBook Summary: Immanuel Kant: Critique of Reason\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
