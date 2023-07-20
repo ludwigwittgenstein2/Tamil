@@ -22,7 +22,7 @@ echo: false
 from IPython.display import Image
 from IPython.core.display import HTML 
 
-Image(url= "https://m.media-amazon.com/images/P/1101984341.01._SCLZZZZZZZ_SX500_.jpg")
+Image(url= "https://m.media-amazon.com/images/P/1101984341.01._SCLZZZZZZZ_SX500_.jpg", width=400)
 ```
 
 # Introduction 
