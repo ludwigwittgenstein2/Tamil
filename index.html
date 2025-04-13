@@ -9,175 +9,142 @@
 
 <title>Today - Rejeleene</title>
 <style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
+/* Base styles */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #2c3e50;  /* Dark blue background like your homepage */
+    color: #ffffff;  /* White text */
 }
 
-/* Reset navbar styling to match about-me page */
+/* Navbar styling */
 .navbar {
-    background-color: #ffffff !important;  /* Pure white background */
-    border-bottom: 1px solid #e8e8e8 !important;
-    margin-bottom: 20px;
+    background-color: #2c3e50 !important;  /* Dark blue background */
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: 60px !important;
+}
+
+.navbar-brand, .nav-link, .navbar-nav > li > a {
+    color: #ffffff !important;  /* White text */
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 16px !important;
+    padding: 20px 15px !important;
+}
+
+.navbar-nav {
+    float: right !important;
+    margin-left: auto !important;
+}
+
+.navbar-collapse {
+    border-color: transparent !important;
+}
+
+.navbar-toggle {
+    border-color: #ffffff !important;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #ffffff !important;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+    background-color: #2c3e50 !important;
+    border: none !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
 }
 
-/* Brand and link styling */
-.navbar-brand {
-    color: #828282 !important;  /* Gray text color */
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: normal;
-}
-
-.nav-link, .navbar-nav > li > a {
-    color: #828282 !important;  /* Gray text color */
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: normal;
-}
-
-.nav-link:hover, .navbar-nav > li > a:hover {
-    color: #2a7ae2 !important; /* Blue hover color */
-    text-decoration: none;
-}
-
-/* Dropdown menu styling */
-.dropdown-menu {
-    background-color: #ffffff !important;
-    border: 1px solid #e8e8e8;
-    box-shadow: none;
-}
-
 .dropdown-item {
-    color: #828282 !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
 }
 
 .dropdown-item:hover {
-    color: #2a7ae2 !important;
-    background-color: transparent !important;
+    background-color: #34495e !important;
+    color: #ffffff !important;
 }
 
-/* Main content styling */
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #333333;
-    background-color: #ffffff;
+/* Active state */
+.nav-link:hover, .navbar-nav > li > a:hover {
+    background-color: #34495e !important;
+    color: #ffffff !important;
+}
+
+/* Container styling */
+.container-fluid {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
 }
 
 /* Table styling */
 .quarto-listing-table {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #333333;
+    background-color: #34495e;  /* Slightly lighter blue for table */
+    color: #ffffff;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.quarto-listing-table thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    border-bottom: 2px solid #3498db;
+    padding: 12px;
+}
+
+.quarto-listing-table td {
+    padding: 12px;
+    border-bottom: 1px solid #3498db;
 }
 
 .quarto-listing-table a {
-    color: #2a7ae2;
+    color: #3498db;  /* Light blue links */
     text-decoration: none;
 }
 
 .quarto-listing-table a:hover {
+    color: #2980b9;  /* Darker blue on hover */
     text-decoration: underline;
 }
 
 /* Category sidebar styling */
 #quarto-margin-sidebar {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #828282;
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.quarto-listing-category-title {
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .category {
-    color: #828282;
+    color: #3498db;
 }
 
-/* Title styling */
+/* Container styling */
+.quarto-container {
+    background-color: #2c3e50;
+}
+
 .quarto-title {
-    color: #333333;
-    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
 }
 
-/* Fix navigation alignment */
-.navbar-nav {
-    margin-left: auto !important;
+/* Search styling */
+#quarto-search {
+    color: #ffffff;
 }
 
-/* Container width */
-.container-fluid {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Table container styling */
-.quarto-listing-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Table styling */
-.quarto-listing-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2em;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-/* Table header styling */
-.quarto-listing-table thead th {
-    background-color: #f8f8f8;
-    color: #333333;
-    padding: 12px;
-    border-bottom: 2px solid #ddd;
-    text-align: left;
-    font-weight: 600;
-}
-
-/* Table cell styling */
-.quarto-listing-table td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-    color: #333333;
-}
-
-/* Link styling in table */
-.quarto-listing-table a {
-    color: #2a7ae2;
-    text-decoration: none;
-}
-
-.quarto-listing-table a:hover {
-    text-decoration: underline;
-}
-
-/* Date column width */
-.listing-date {
-    width: 120px;
-}
-
-/* Author column width */
-.listing-author {
-    width: 150px;
-}
-
-/* Title column - take remaining space */
-.listing-title {
-    min-width: 300px;
-}
-
-/* Zebra striping for rows */
+/* Zebra striping for table rows */
 .quarto-listing-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #2c3e50;
 }
 
-/* Hover effect on rows */
 .quarto-listing-table tbody tr:hover {
-    background-color: #f5f5f5;
+    background-color: #34495e;
 }
 </style>
 
