@@ -20,6 +20,165 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+
+/* Reset navbar styling to match about-me page */
+.navbar {
+    background-color: #ffffff !important;  /* Pure white background */
+    border-bottom: 1px solid #e8e8e8 !important;
+    margin-bottom: 20px;
+    box-shadow: none !important;
+}
+
+/* Brand and link styling */
+.navbar-brand {
+    color: #828282 !important;  /* Gray text color */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+}
+
+.nav-link, .navbar-nav > li > a {
+    color: #828282 !important;  /* Gray text color */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+}
+
+.nav-link:hover, .navbar-nav > li > a:hover {
+    color: #2a7ae2 !important; /* Blue hover color */
+    text-decoration: none;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: #ffffff !important;
+    border: 1px solid #e8e8e8;
+    box-shadow: none;
+}
+
+.dropdown-item {
+    color: #828282 !important;
+}
+
+.dropdown-item:hover {
+    color: #2a7ae2 !important;
+    background-color: transparent !important;
+}
+
+/* Main content styling */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+/* Table styling */
+.quarto-listing-table {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333333;
+}
+
+.quarto-listing-table a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+.quarto-listing-table a:hover {
+    text-decoration: underline;
+}
+
+/* Category sidebar styling */
+#quarto-margin-sidebar {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #828282;
+}
+
+.category {
+    color: #828282;
+}
+
+/* Title styling */
+.quarto-title {
+    color: #333333;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Fix navigation alignment */
+.navbar-nav {
+    margin-left: auto !important;
+}
+
+/* Container width */
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Table container styling */
+.quarto-listing-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Table styling */
+.quarto-listing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Table header styling */
+.quarto-listing-table thead th {
+    background-color: #f8f8f8;
+    color: #333333;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Table cell styling */
+.quarto-listing-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #333333;
+}
+
+/* Link styling in table */
+.quarto-listing-table a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+.quarto-listing-table a:hover {
+    text-decoration: underline;
+}
+
+/* Date column width */
+.listing-date {
+    width: 120px;
+}
+
+/* Author column width */
+.listing-author {
+    width: 150px;
+}
+
+/* Title column - take remaining space */
+.listing-title {
+    min-width: 300px;
+}
+
+/* Zebra striping for rows */
+.quarto-listing-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect on rows */
+.quarto-listing-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
 </style>
 
 
@@ -101,66 +260,95 @@ ul.task-list li input[type="checkbox"] {
 
 <!-- Add custom CSS to match your main site's theme -->
 <style>
-/* Navbar styling to match homepage */
+/* Reset navbar styling to match about-me page */
 .navbar {
-    background-color: #f8f8f8 !important;  /* Light gray background like your homepage */
-    border-color: #e7e7e7 !important;
+    background-color: #ffffff !important;  /* Pure white background */
+    border-bottom: 1px solid #e8e8e8 !important;
     margin-bottom: 20px;
+    box-shadow: none !important;
 }
 
+/* Brand and link styling */
 .navbar-brand {
-    color: #333 !important;  /* Dark gray text */
+    color: #828282 !important;  /* Gray text color */
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
 }
 
 .nav-link, .navbar-nav > li > a {
-    color: #333 !important;  /* Dark gray text */
+    color: #828282 !important;  /* Gray text color */
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
 }
 
+.nav-link:hover, .navbar-nav > li > a:hover {
+    color: #2a7ae2 !important; /* Blue hover color */
+    text-decoration: none;
+}
+
+/* Dropdown menu styling */
 .dropdown-menu {
-    background-color: #f8f8f8 !important;
-    border: 1px solid #e7e7e7;
+    background-color: #ffffff !important;
+    border: 1px solid #e8e8e8;
+    box-shadow: none;
 }
 
 .dropdown-item {
-    color: #333 !important;
+    color: #828282 !important;
 }
 
-/* Fix navigation alignment */
-.navbar-nav {
-    margin-left: auto !important;  /* Push nav items to the right */
+.dropdown-item:hover {
+    color: #2a7ae2 !important;
+    background-color: transparent !important;
 }
 
-/* Content styling */
-.quarto-title-banner {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+/* Main content styling */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333333;
+    background-color: #ffffff;
 }
 
 /* Table styling */
 .quarto-listing-table {
     font-family: 'Source Sans Pro', sans-serif;
-    width: 100%;
+    color: #333333;
+}
+
+.quarto-listing-table a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+.quarto-listing-table a:hover {
+    text-decoration: underline;
 }
 
 /* Category sidebar styling */
 #quarto-margin-sidebar {
     font-family: 'Source Sans Pro', sans-serif;
+    color: #828282;
 }
 
-/* Fix content width */
-.column-page-left {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.category {
+    color: #828282;
+}
+
+/* Title styling */
+.quarto-title {
+    color: #333333;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Fix navigation alignment */
+.navbar-nav {
+    margin-left: auto !important;
+}
+
+/* Container width */
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 </style>
 </head>
@@ -199,7 +387,6 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Rejeleene</h1>
                       </div>
   </div>
     
