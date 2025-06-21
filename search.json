@@ -1,10 +1,157 @@
 [
   {
+    "objectID": "hello.html",
+    "href": "hello.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "hello.html#polar-axis",
+    "href": "hello.html#polar-axis",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Rejeleene",
+    "section": "",
+    "text": "Date\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nJun 20, 2025\n\n\nQuarto Basics\n\n\n \n\n\n\n\n\n\nJan 12, 2023\n\n\nBook Summary: The All-Or-Nothing Marriage: How the Best Marriages Work\n\n\nRick Rejeleene\n\n\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Nadars of Tamil Nadu, India\n\n\nRick Rejeleene\n\n\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar\n\n\nRick Rejeleene\n\n\n\n\n\n\nDec 13, 2022\n\n\nPresentation\n\n\nRick Rejeleene\n\n\n\n\n\n\nDec 9, 2022\n\n\nIntroduction to Tufte Style\n\n\nRick Rejeleene\n\n\n\n\n\n\nDec 1, 2022\n\n\nBook Summary: How Asia Works by Joe Studwell\n\n\nRick Rejeleene\n\n\n\n\n\n\nOct 7, 2022\n\n\nBook Summary: Macroeconomics: An Introduction by Alex M. Thomas\n\n\nRick Rejeleene\n\n\n\n\n\n\nAug 1, 2022\n\n\nQuarto: How to setup your Blog\n\n\nRick Rejeleene\n\n\n\n\n\n\nDec 1, 2020\n\n\nYouTube Video Categorization Using Moviebarcode\n\n\nRick Rejeleene\n\n\n\n\n\n\nAug 1, 2017\n\n\nKodai: A Software Architecture and Implementation for Segmentation\n\n\nRick Rejeleene\n\n\n\n\n\n\nFeb 4, 2017\n\n\nBook Summary: Limits of State Action by Von Humbolt\n\n\nRick Rejeleene\n\n\n\n\n\n\nAug 15, 2015\n\n\nBook Summary: Immanuel Kant: Critique of Reason\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/book5/index.html#who-reads-kant-in-tirunelveli-india",
+    "href": "posts/book5/index.html#who-reads-kant-in-tirunelveli-india",
+    "title": "Book Summary: Immanuel Kant: Critique of Reason",
+    "section": "1. Who reads Kant in Tirunelveli, India?",
+    "text": "1. Who reads Kant in Tirunelveli, India?\nTirunelveli is a smaller city of 1 million people in India, with strands of, extreme social conservatism, parochial, traditionalist, Tamil way of life - no questioning of older people, or challenging of ideas, regurgitate older people’s opinion, route learning. Imagine, Kant being introduced to this way of life among the people."
+  },
+  {
+    "objectID": "posts/book5/index.html#how-did-kant-come-across-to-me",
+    "href": "posts/book5/index.html#how-did-kant-come-across-to-me",
+    "title": "Book Summary: Immanuel Kant: Critique of Reason",
+    "section": "2. How did Kant come across to me?",
+    "text": "2. How did Kant come across to me?\nKant is structured, methodological, orderly, systematic in his approach. I like his way writing. He is consuming, intense, and dense. One of the reason, is because of his turgid concepts and definitions. However, I do not think he is the most difficult writer or thinker to be read in Western thought. Brilliant, intense, profound, deepest thinker, so far I know is – Jonathan Edwards. Reading Edwards requires more intensity, attention, concentration.\nKant is crucial and key for understanding, Western Modern Philosophy. He’s definitely worth reading. Engaging his work, your thoughts or way of expressing would raise, why? Because, we engage with people who are better than us."
+  },
+  {
+    "objectID": "posts/book5/index.html#what-did-i-learn-from-kant",
+    "href": "posts/book5/index.html#what-did-i-learn-from-kant",
+    "title": "Book Summary: Immanuel Kant: Critique of Reason",
+    "section": "3. What did I learn from Kant?",
+    "text": "3. What did I learn from Kant?\nThe important things I learnt from this book, his approach to Knowledge. He says, Knowledge we gain is systematized through our senses. Yes, our knowledge starts from experience, but Kant does not claim that all knowledge must be from experience alone or through reason alone. He calls his system, transcendental knowledge, which does not mean beyond our experience but it means knowledge which both synthetical and a priori. Imagine, you are wearing blue glasses, And look at the world. The world you perceive, will be blue through your eyes, which you will never get to find out, Why?\nTherefore, Kant says, we are unable to completely understand the world. He classifies these as Noumena and Phenomena. Noumena is the reality, the thing itself. Phenomena is the appearance of the thing. Space and time constitute as a foundation for everything. In the blue color perception, the color blue is the Noumena, and Glasses are Phenomena.\nKant’s writings on cosmological, ontological arguments were imposing, majestic and stirs my thought. If you’re interested more in Philosophy of Religion, do check out Graham Oppy’s work.\n\n“Thoughts without content are empty, intuitions without concepts are blind” - Kant\n\n\n Goodreads"
+  },
+  {
+    "objectID": "posts/book3/index.html",
+    "href": "posts/book3/index.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see ?@fig-polar.\n#| label: fig-polar #| fig-cap: “A line plot on a polar axis”\nimport numpy as np import matplotlib.pyplot as plt\nr = np.arange(0, 2, 0.01) theta = 4 * np.pi * r fig, ax = plt.subplots( subplot_kw = {‘projection’: ‘polar’} ) ax.plot(theta, r) ax.set_rticks([0.5, 1, 1.5, 2]) ax.grid(True) plt.show()"
+  },
+  {
+    "objectID": "posts/BarCode/index.html#conclusion",
+    "href": "posts/BarCode/index.html#conclusion",
+    "title": "YouTube Video Categorization Using Moviebarcode",
+    "section": "Conclusion",
+    "text": "Conclusion\nIn this paper, we introduced the use of moviebarcode for video categorization and summarization and showed that video processing is easier with moviebarcode for social computing researchers, especially if they deal with YouTube which is the most popular video sharing platform.\nTraditional techniques for video categorization are resource intensive and time consuming. Moviebarcode is a great methodology to extract insightful features to describe narratives in a video, capturing visual patterns in a video without watching, and grouping/categorizing similar/same videos together in fast and efficient manner. Results show that using individual channels of a moviebarcode image helps video categorization by differentiating one video from another or grouping them. Each channel carries different features about an image. The idea of splitting channels of an image increased the performance of video categorization"
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html",
+    "href": "posts/quarto_how_to_setup/index.html",
+    "title": "Quarto: How to setup your Blog",
+    "section": "",
+    "text": "RMarkdown has been a staple for any Data Scientist that programs in R. Quarto builds on that, with multiple language support and additional features. Because of its language independent design, Quarto requires an independent installation. (“Quarto,” n.d.)\nI have spent the past week moving my blog from blogdown to quarto. There have been some challenges, but I am pretty happy with the new look. Let’s start with the setup, it’s a little more work than a regular package or module."
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#introduction",
+    "href": "posts/quarto_how_to_setup/index.html#introduction",
+    "title": "Quarto: How to setup your Blog",
+    "section": "",
+    "text": "RMarkdown has been a staple for any Data Scientist that programs in R. Quarto builds on that, with multiple language support and additional features. Because of its language independent design, Quarto requires an independent installation. (“Quarto,” n.d.)\nI have spent the past week moving my blog from blogdown to quarto. There have been some challenges, but I am pretty happy with the new look. Let’s start with the setup, it’s a little more work than a regular package or module."
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#setup",
+    "href": "posts/quarto_how_to_setup/index.html#setup",
+    "title": "Quarto: How to setup your Blog",
+    "section": "Setup",
+    "text": "Setup\nThe setup for Quarto is pretty simple. You will need to visit the quarto website to download the Quarto Command Line Interface (CLI). There are step-by-step instructions for your selected text editor. I am most familiar with RStudio for R and VSCode for Python.\nFor Rstudio, it’s pretty much just plug and play now. I did install the Quarto package, but all the commands can be done by the command line interface. Switching from RMarkdown is as simple as saving them as qmd file. The process for Quarto for RStudio can be described by the following process flow:\n\n\n\nRender qmd in RStudio\n\n\nIt is not much more difficult for VSCode, all you need to do is download the Quarto extension. The process flow is similar to RStudio but uses Jupyter instead of knitr.\n\n\n\nRender qmd for VSCode\n\n\nWith the setup complete, there should be no differences between text editors."
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#code-chunk-options",
+    "href": "posts/quarto_how_to_setup/index.html#code-chunk-options",
+    "title": "Quarto: How to setup your Blog",
+    "section": "Code Chunk Options",
+    "text": "Code Chunk Options\nThe first new feature to explore the support for code chuck options within the code chunks. These options would usually live within the code chunk title line. Any supported option can be added with the #| tag. This feature is useful for situations with many options, as it does increase readability.\n```{r}\n#| label: load\n#| include: true\n#| warning: false\n\nlibrary(tidyverse)\ndata(\"msleep\")\n```"
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#code-folding",
+    "href": "posts/quarto_how_to_setup/index.html#code-folding",
+    "title": "Quarto: How to setup your Blog",
+    "section": "Code-folding",
+    "text": "Code-folding\nOne of the neat new features is code-folding. When this feature is enabled in the qmd YAML, the person viewing the document can hide/unhide code chunks. This can make it easier for them to read the document. Only the code will be hidden, and not the results.\n\n\nCode\nglimpse(msleep)\n\n\nThis feature is enabled by making the following addition to the YAML. You would change the format from HTML to your required format, such as PDF.\n\n\nCode\nformat: \n  html: \n    code-fold: true\n    code-tools: true\n\n\nWith the addition of the code-tools: true parameter, the reader can decide to hide all code chunks from the top of the document."
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#figures",
+    "href": "posts/quarto_how_to_setup/index.html#figures",
+    "title": "Quarto: How to setup your Blog",
+    "section": "Figures",
+    "text": "Figures\nQuarto provides a bunch of additional tools for displaying figures. You can assign values for captions, sub-captions, width and height. You can even create a figure with multiple plots with separate sub-captions.\n```{r}\n#| label: fig-sleep\n#| fig-cap: \"Sleeping habits of animals\"\n#| fig-subcap:\n#|   - \"Scatter plot of body weight by total sleep\"\n#|   - \"Violin plot of REM sleep by vore\"\n#| layout-ncol: 2\n\nmsleep %&gt;%\n  drop_na(sleep_total, bodywt) %&gt;%\n  ggplot(aes(y= sleep_total, x = bodywt)) +\n  geom_point(color = \"blue\") +\n  theme_minimal()\n\nmsleep %&gt;%\n  group_by(vore) %&gt;%\n  drop_na(sleep_rem, vore) %&gt;%\n  ggplot(aes(y= sleep_rem, x = vore)) +\n  geom_violin(aes(fill = vore)) +\n  theme_minimal()\n```\n\n\n\n\n\n\n\n\n\n\n\n(a) Scatter plot of body weight by total sleep\n\n\n\n\n\n\n\n\n\n\n\n(b) Violin plot of REM sleep by vore\n\n\n\n\n\n\n\nFigure 1: Sleeping habits of animals\n\n\n\nYou can now use cross-referencing for the figure by referencing the figure. This means that in your text, you can refer to the figure number and link to the figure. This will automatically update your figure numbers and is achieved by typing the ‘@’ symbol followed by the figure label. As an example, ‘@fig-sleep’ turns into Figure 1.\nThere is an additional option to let the figures take up the width of the entire page, but I would not recommend using it as it extends beyond the width of the body of your page. It requires the following code:\n```{r}\n#| column: page\n```"
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#code-linking",
+    "href": "posts/quarto_how_to_setup/index.html#code-linking",
+    "title": "Quarto: How to setup your Blog",
+    "section": "Code Linking",
+    "text": "Code Linking\nA reader may not be familiar with all the functions that you use in your document, so it may be useful to enable code linking. With code linking, a function in a code chunk will have a hyperlink to the documentation for that function. To work in R, this feature requires the xml2 and downlit packages.\n\n\nCode\nlm(as.factor(order) ~ sleep_total, data = msleep[complete.cases(msleep),] )"
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#table-of-contents",
+    "href": "posts/quarto_how_to_setup/index.html#table-of-contents",
+    "title": "Quarto: How to setup your Blog",
+    "section": "Table of contents",
+    "text": "Table of contents\nI think the best feature for Quarto is the floating table of contents. I can’t describe how much time and effort I’ve spent trying to get a floating table of contents in a Blogdown blog. It didn’t work for me, it would require getting deep into the weeds changing the CSS layout for my HUGO theme. It was not worth the effort.\nAdding a floating table of contents in Quarto is simple. Just use the following code in the document YAML:\n\n\nCode\ntoc: TRUE\n\n\nOne simple line of code in the YAML and your document has a floating table of contents. There is some additional customization such as the level of headers, location and title.\n\n\nCode\ntoc: true\ntoc-depth: 2\ntoc-location: left\ntoc-title: Contents"
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#quarto-vs-blogdown",
+    "href": "posts/quarto_how_to_setup/index.html#quarto-vs-blogdown",
+    "title": "Quarto: How to setup your Blog",
+    "section": "Quarto vs Blogdown",
+    "text": "Quarto vs Blogdown\nWith my experimentation with Quarto, I decided to move my blogdown blog to Quarto. In theory, this should be a simple switch, with just copying all post from folder to another. Quarto can use rmd files, but they can easily be changed over to qmd files. I decided to switch all my post to the qmd format and include some additional features. The Quarto site has extensive reference information for creating a blog. (“Quarto,” n.d.-)\nI did have an issue with one of my post not rendering correctly. This maybe an issue with compatibility with the stargazer package. In the end, I decided to just remove the post altogether as I could get it to render correctly, and I prefer the gt over the stargazer package for creating good-looking tables."
+  },
+  {
+    "objectID": "posts/quarto_how_to_setup/index.html#conclusion",
+    "href": "posts/quarto_how_to_setup/index.html#conclusion",
+    "title": "Quarto: How to setup your Blog",
+    "section": "Conclusion",
+    "text": "Conclusion\nIt is easy to create great looking documents using quarto, whether that be with code in python or R. Quarto supports most of the features in RMarkdown with some fancy new ones. My personal favourite is the floating table of contents. I have also found that rendering a Quarto blog is a much smoother experience than rendering a blogdown blog."
+  },
+  {
+    "objectID": "posts/book6/index.html#could-we-apply-this-to-politics-in-tamil-nadu",
+    "href": "posts/book6/index.html#could-we-apply-this-to-politics-in-tamil-nadu",
+    "title": "Book Summary: Limits of State Action by Von Humbolt",
+    "section": "Could we apply this to Politics in Tamil Nadu?",
+    "text": "Could we apply this to Politics in Tamil Nadu?\nMy hunch is, We are forcing western concepts work into local Tamil Politics."
+  },
+  {
+    "objectID": "posts/book7/index.html",
+    "href": "posts/book7/index.html",
+    "title": "Book Summary: Macroeconomics: An Introduction by Alex M. Thomas",
+    "section": "",
+    "text": "1. Why read this work?\n\nTo get an introduction to Economics\nTo understand Indian Macro-Economics\nTo weave together different economic school of thought\nTo understand how caste system affects broader Indian Society\n\n\n\n2. What does Alex say in this work?\nOutline:\n\nWhat is economics\nConceptualizing the macroeconomy\nMoney and interest rates\nOutput and employment levels\nEconomic growth\nWhy economic theory matters\nThe policy objective of full employment\nThe policy objective of low inflation\nTowards good economics\n\nLet me try to summarize my highlights\nSo, Alex wants you to understand economics is not a settled science. I recall, he mentioned it is ongoing discussion among economists. In many of the college textbooks, they might present it as settled. He asks students, learners to inquiry, ask questions.\nI liked the quote from Keynes,\n“He must be mathematician, historian, statesman, philosopher—in some degree. He must understand symbols and speak in words. He must contemplate the particular in terms of the general, and touch abstract and concrete in the same flight of thought. He must study the present in the light of the past for the purposes of the future. No part of man’s nature or his institution lie entirely outside of his regard”\nWhile reading this quote, I thought of earlier history of India. Many might recall, Colonialism, many have to be understood in contextual clue. At that time, it seems to me that Mercantilism was the school of thought, which says a country has to export more than imports.\nI want the reader to ask, “How did economic school of thought impact EIC in India?”\nAlex furthermore shares briefly about History of Economics:\n\nEIC\nMercantilism\nPolitical Economists\nMarginalist\nClassical Economists\nKeynesian Economics\n20th Century [Monetarism, Institutionalism, Sraffa’s Economics, Samuel’s Textbook]\n\nAdam Smith was interested in finding nature of wealth, causes of wealth in nations\nAdam Smith says,\nPolitical economy, considered as a branch of the science of a statesman or legislator, proposes two distinct objects: first, to provide a plentiful revenue or subsistence for the people, or more properly to enable them to provide such a revenue or subsistence for themselves; and secondly, to supply the state or commonwealth with a revenue sufficient for the public services. It proposes to enrich people and sovereign.\nRicardo says, “the Principal Problem [remaining] in Political Economy is to determine, laws which to regulate, distribution of rent, profit and wages.”\nIn later chapter, Alex says, Economics these days are redefining the field as, “Science of Choice”\nAlex has communicated basics of Macro-Economics coherently. His analysis or focus is on Indian Economy, which is not same as developed economies in West. Economists have conceptualized sectors such as Primary, Secondary, Tertiary. These are ways to understand sectors, growth for Economists. I recall, Alex stating, Service sector is growing, which means more jobs in the field.\nPrimary Sector includes agriculture, here is where Caste comes in play. Due to less manufacturing jobs available in India; Imagine being an Adivasi’s child, without any skillset or training. What would you work as? Servant of a Billionaire? When reading this, I felt sad.\nMy own understanding is well-being of people of all social strata is to be considered. So, I understood if Construction sector is growing, it affects well-being of construction worker. It makes sense. Recall, what matters is growth of a sector, which is what you belong. This would contribute to your well-being and family.\nHe also mentions how Caste system is rigid, where most of the time, mobility is restricted. Even in Indian Society, Patriarchy limits women with careers. So, something that I thought about, Economists have theories on how to understand, predict or formulate policies. Theories give proper framework, and in one of the chapters. Alex mentions, “There is nothing as practical as a good theory” This seems counter-intuitive to layman, although it is actual truth and reality.\nIn Chapter of Financial Architect, I gained further understanding. I was able to weave my understanding of financial instruments, Depending on liquidity. From LIC Policy, Mutual Fund, Bank Deposit, Currency. This made sense, Economists classify money using their own jargon, M1, M2, M3, M4. Depending on school of thought, economists give answer to employment & output. From what I recall, Keynesian’s work recommends government implication to raise output & employment levels. Marginalist theory tends to state the opposite.\nAlex weaved stories of Families. A Muslim family, without any education. A Bother has to get her sister married, take care of other’s in family [parents]. So, he leaves abroad, sends remittance, such is the pithy of Muslim families. He asks, does Muslims have Agriculture land? Do they have reservation?\nWhile reading this, it helped me to gain further depth understanding in Caste-System. Of course, I do desire for people to gain decent living, so they can provide for their families. In return, families are happy, neighborhoods are happier. There are theories of growth, depending on supply side or demand side. This was interesting for me, mostly one side says, increase in technology. Increase in technology would cause higher growth of economy. In Capitalistic economics, Marx said, there will be a recurrent crisis. This is due to underconsumption & disproportional between sectors.\nAnother question that is in my mind, “So Why is Mercantilism Wrong?” I’m afraid one of the popular CEO’s of Tamil Nadu subscribes to Mercantilism. I could be wrong, not sure. He states, “Exports must be greater than imports” This seems to be obvious as layman, more exports means more wealth correct?\nBrief understanding of Mercantilism. During 1600-1857, Recall, EIC and others were competing for dominance - How? They believed, having more gold [bullion], in exchange of trade, would enable them to raise armies. Recall, this was during time of Slave trade. This was dominant economic school of thought. Smith says, Mercantalism was wrong - Why?\n\nProtectionism policies of Business Interests [British Navigation Act of 1651]\nWealth was not Gold of Nation - so what is it?\nWealth was productivity of Nations\nThis lead to Comparative Advantage\nComparative Advantage lead to specialization\nCreating more efficiency\nIndustrial Revolution thrived due to free trade\nPolicies favoring Big Business, ruling elites would decrease standard of living\nAdditionally, would create higher inequalities\n\nIn the Chapter of Economic Theory, Alex is stating the necessity of good theory. A Good theory enables towards understanding behavior, data, and formulating right policies. Earlier, I shared how good theory is as practical as you can imagine. The Figure which caught my attention was Income level. Furthermore, Caste makes a big role in people’s lives, it seems to debar opportunities, access to mobility. In the Chapter of Inflation: Alex mentions about Wholesale Price Index. So price of basic commodities increases - Why? Depending on your school of thought, you’d give a response. Either Too much money chasing too few goods or A shock to a sector which produces effect, if you are Keynesian.\n\n\n3. Excerpts from this work\nAdivasi Rights\n\nI am not your data, nor am I your vote bank, I am not your project, or any exotic museum object, …Nor am I the lab, where your theories are tested …I am not your field, your crowd, your history, …I refuse, reject, resist your labels, …Because they deny me my existence, my vision, my space, …So I draw my own picture, and invent my own grammar,\n\n\n Goodreads"
+  },
+  {
     "objectID": "posts/Kodai_MS_Thesis/index.html",
     "href": "posts/Kodai_MS_Thesis/index.html",
     "title": "Kodai: A Software Architecture and Implementation for Segmentation",
     "section": "",
     "text": "The purpose of this thesis is to design and implement a software architecture for segmentation models to improve revenues for a supermarket. This tool supports analysis of supermarket products and generates results to interpret consumer behavior, to give businesses deeper insights into targeted consumer markets. The software design developed is named as Kodai. Kodai is horizontally reusable and can be adapted across various industries. This software framework allows testing a hypothesis to address the problem of increasing revenues in supermarkets. Kodai has several advantages, such as analyzing and visualizing data, and as a result, businesses can make better decisions. In addition to these advantages, Kodai is open-source, which means any developer can access the code, and develop into client requirements. With the described features, it is better than other similar tools such as Gephi, a free visualization and manipulation tool.\nThe retail industry has grown exponentially, resulting in increasing demand for software tools to analyze consumer behavior. The analysis of consumer behavior helps businesses to stay at the forefront of market competition and provide excellent service. By focusing on consumer purchase behavior, Kodai can perform analyses, meaning it can classify consumers based on variables that capture their behavior. An example is identifying consumers who spend the most amount of money in a supermarket.\nSegmentation models provide qualitative and quantitative methods to improve service for the customer and revenues for the company. These models can be used in different fields such as finance, education and healthcare. Another important feature of Gephi is its interactive and visual modeling capabilities to help understand consumer behavior. Additionally, the software is reusable and supports the integration of future tools, following key extensibility concepts of software design.\nThis thesis explains the implementation of Kodai as a software architecture through segmentation models using a web-based application that implements software engineering methodology to improve revenues and consumer experience. This tool is developed to facilitate segmentation of consumer data based on purchase behavior with the goal of allowing the user to test a hypothesis to address the problem of increasing revenues in supermarkets. Most importantly, the software is reusable and can be adapted horizontally across various industries.\n\n\n Download \n\n\nOur work in this thesis helps to show that Kodai is a software architecture for segmentation models to improve revenues for a supermarket. It can test a hypothesis to address the problem of increasing revenues in supermarkets.\nWe achieved this by allowing the user to upload supermarket data within the software framework, using a webbased application that implements software engineering methodology to improve revenues, allowing the developer to complete business requirements to be built into the software."
+  },
+  {
+    "objectID": "posts/Kodai_MS_Thesis/index.html#conclusion",
+    "href": "posts/Kodai_MS_Thesis/index.html#conclusion",
+    "title": "Kodai: A Software Architecture and Implementation for Segmentation",
+    "section": "",
+    "text": "Our work in this thesis helps to show that Kodai is a software architecture for segmentation models to improve revenues for a supermarket. It can test a hypothesis to address the problem of increasing revenues in supermarkets.\nWe achieved this by allowing the user to upload supermarket data within the software framework, using a webbased application that implements software engineering methodology to improve revenues, allowing the developer to complete business requirements to be built into the software."
   },
   {
     "objectID": "posts/book9/index.html",
@@ -56,13 +203,6 @@
     "text": "6. What are the things, that I see lacking in this work? \nThe Author missed a core crucial important assumption, “Worldview”\nThe Author before fleshing out his research, experiments, data points, might wanted to have written his, “First-Principles”\nThe Author, albeit not fleshing out his Worldview;\n–I as a reader, would infer his data, experiments and work fitting into Worldview called, “Business theory of Performance based Marriage”\nThe Author’s goal of marriage is success, defined subjectively.\nThis book is incomplete, because it does not including religious traditions.\nAnyone who has read history, could bring up points saying, it has shaped marriage."
   },
   {
-    "objectID": "posts/book7/index.html",
-    "href": "posts/book7/index.html",
-    "title": "Book Summary: Macroeconomics: An Introduction by Alex M. Thomas",
-    "section": "",
-    "text": "1. Why read this work?\n\nTo get an introduction to Economics\nTo understand Indian Macro-Economics\nTo weave together different economic school of thought\nTo understand how caste system affects broader Indian Society\n\n\n\n2. What does Alex say in this work?\nOutline:\n\nWhat is economics\nConceptualizing the macroeconomy\nMoney and interest rates\nOutput and employment levels\nEconomic growth\nWhy economic theory matters\nThe policy objective of full employment\nThe policy objective of low inflation\nTowards good economics\n\nLet me try to summarize my highlights\nSo, Alex wants you to understand economics is not a settled science. I recall, he mentioned it is ongoing discussion among economists. In many of the college textbooks, they might present it as settled. He asks students, learners to inquiry, ask questions.\nI liked the quote from Keynes,\n“He must be mathematician, historian, statesman, philosopher—in some degree. He must understand symbols and speak in words. He must contemplate the particular in terms of the general, and touch abstract and concrete in the same flight of thought. He must study the present in the light of the past for the purposes of the future. No part of man’s nature or his institution lie entirely outside of his regard”\nWhile reading this quote, I thought of earlier history of India. Many might recall, Colonialism, many have to be understood in contextual clue. At that time, it seems to me that Mercantilism was the school of thought, which says a country has to export more than imports.\nI want the reader to ask, “How did economic school of thought impact EIC in India?”\nAlex furthermore shares briefly about History of Economics:\n\nEIC\nMercantilism\nPolitical Economists\nMarginalist\nClassical Economists\nKeynesian Economics\n20th Century [Monetarism, Institutionalism, Sraffa’s Economics, Samuel’s Textbook]\n\nAdam Smith was interested in finding nature of wealth, causes of wealth in nations\nAdam Smith says,\nPolitical economy, considered as a branch of the science of a statesman or legislator, proposes two distinct objects: first, to provide a plentiful revenue or subsistence for the people, or more properly to enable them to provide such a revenue or subsistence for themselves; and secondly, to supply the state or commonwealth with a revenue sufficient for the public services. It proposes to enrich people and sovereign.\nRicardo says, “the Principal Problem [remaining] in Political Economy is to determine, laws which to regulate, distribution of rent, profit and wages.”\nIn later chapter, Alex says, Economics these days are redefining the field as, “Science of Choice”\nAlex has communicated basics of Macro-Economics coherently. His analysis or focus is on Indian Economy, which is not same as developed economies in West. Economists have conceptualized sectors such as Primary, Secondary, Tertiary. These are ways to understand sectors, growth for Economists. I recall, Alex stating, Service sector is growing, which means more jobs in the field.\nPrimary Sector includes agriculture, here is where Caste comes in play. Due to less manufacturing jobs available in India; Imagine being an Adivasi’s child, without any skillset or training. What would you work as? Servant of a Billionaire? When reading this, I felt sad.\nMy own understanding is well-being of people of all social strata is to be considered. So, I understood if Construction sector is growing, it affects well-being of construction worker. It makes sense. Recall, what matters is growth of a sector, which is what you belong. This would contribute to your well-being and family.\nHe also mentions how Caste system is rigid, where most of the time, mobility is restricted. Even in Indian Society, Patriarchy limits women with careers. So, something that I thought about, Economists have theories on how to understand, predict or formulate policies. Theories give proper framework, and in one of the chapters. Alex mentions, “There is nothing as practical as a good theory” This seems counter-intuitive to layman, although it is actual truth and reality.\nIn Chapter of Financial Architect, I gained further understanding. I was able to weave my understanding of financial instruments, Depending on liquidity. From LIC Policy, Mutual Fund, Bank Deposit, Currency. This made sense, Economists classify money using their own jargon, M1, M2, M3, M4. Depending on school of thought, economists give answer to employment & output. From what I recall, Keynesian’s work recommends government implication to raise output & employment levels. Marginalist theory tends to state the opposite.\nAlex weaved stories of Families. A Muslim family, without any education. A Bother has to get her sister married, take care of other’s in family [parents]. So, he leaves abroad, sends remittance, such is the pithy of Muslim families. He asks, does Muslims have Agriculture land? Do they have reservation?\nWhile reading this, it helped me to gain further depth understanding in Caste-System. Of course, I do desire for people to gain decent living, so they can provide for their families. In return, families are happy, neighborhoods are happier. There are theories of growth, depending on supply side or demand side. This was interesting for me, mostly one side says, increase in technology. Increase in technology would cause higher growth of economy. In Capitalistic economics, Marx said, there will be a recurrent crisis. This is due to underconsumption & disproportional between sectors.\nAnother question that is in my mind, “So Why is Mercantilism Wrong?” I’m afraid one of the popular CEO’s of Tamil Nadu subscribes to Mercantilism. I could be wrong, not sure. He states, “Exports must be greater than imports” This seems to be obvious as layman, more exports means more wealth correct?\nBrief understanding of Mercantilism. During 1600-1857, Recall, EIC and others were competing for dominance - How? They believed, having more gold [bullion], in exchange of trade, would enable them to raise armies. Recall, this was during time of Slave trade. This was dominant economic school of thought. Smith says, Mercantalism was wrong - Why?\n\nProtectionism policies of Business Interests [British Navigation Act of 1651]\nWealth was not Gold of Nation - so what is it?\nWealth was productivity of Nations\nThis lead to Comparative Advantage\nComparative Advantage lead to specialization\nCreating more efficiency\nIndustrial Revolution thrived due to free trade\nPolicies favoring Big Business, ruling elites would decrease standard of living\nAdditionally, would create higher inequalities\n\nIn the Chapter of Economic Theory, Alex is stating the necessity of good theory. A Good theory enables towards understanding behavior, data, and formulating right policies. Earlier, I shared how good theory is as practical as you can imagine. The Figure which caught my attention was Income level. Furthermore, Caste makes a big role in people’s lives, it seems to debar opportunities, access to mobility. In the Chapter of Inflation: Alex mentions about Wholesale Price Index. So price of basic commodities increases - Why? Depending on your school of thought, you’d give a response. Either Too much money chasing too few goods or A shock to a sector which produces effect, if you are Keynesian.\n\n\n3. Excerpts from this work\nAdivasi Rights\n\nI am not your data, nor am I your vote bank, I am not your project, or any exotic museum object, …Nor am I the lab, where your theories are tested …I am not your field, your crowd, your history, …I refuse, reject, resist your labels, …Because they deny me my existence, my vision, my space, …So I draw my own picture, and invent my own grammar,\n\n\n Goodreads"
-  },
-  {
     "objectID": "posts/book1/index.html",
     "href": "posts/book1/index.html",
     "title": "Book Summary: Nadars of Tamil Nadu, India",
@@ -105,11 +245,11 @@
     "text": "5. What is your own summary on this work? \nNadars were socio-economic low-rungs in Tamil society. Through business & education, raised themselves socio-economically. Christianity gave the tool of education for Tinnevelly Nadars. Business {tholil} gave Sivakasi, Virudhunagar Nadars, the tool to lift themselves.\nI came across this book to understand Tirunelveli society. I found, compelling sources. The 1899 Sivakasi riots caught my attention. I felt as if I was reading alarming war history. Overall –An excellent scholarly work on Nadars. I would recommend this book to anyone who is interested in Caste, Tamil-Nadu, Christianity.\n\n1 References2 Tholil, means livelihood in Tamil language"
   },
   {
-    "objectID": "posts/book6/index.html#could-we-apply-this-to-politics-in-tamil-nadu",
-    "href": "posts/book6/index.html#could-we-apply-this-to-politics-in-tamil-nadu",
-    "title": "Book Summary: Limits of State Action by Von Humbolt",
-    "section": "Could we apply this to Politics in Tamil Nadu?",
-    "text": "Could we apply this to Politics in Tamil Nadu?\nMy hunch is, We are forcing western concepts work into local Tamil Politics."
+    "objectID": "posts/book1/index.html#footnotes",
+    "href": "posts/book1/index.html#footnotes",
+    "title": "Book Summary: Nadars of Tamil Nadu, India",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGoodreadsGoodreads↩︎\nWikipedia Wikipedia↩︎"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -123,7 +263,7 @@
     "href": "posts/welcome/index.html#margin-figures",
     "title": "Introduction to Tufte Style",
     "section": "Margin Figures",
-    "text": "Margin Figures\nImages and graphics play an integral role in Tufte’s work. To place figures in the margin you can use the Quarto chunk option column: margin. For example:\n\n#| label: fig-margin\n#| fig-cap: \"MPG vs horsepower, colored by transmission.\"\n#| column: margin\n#| message: false\nlibrary(ggplot2)\nmtcars2 <- mtcars\nmtcars2$am <- factor(\n  mtcars$am, labels = c('automatic', 'manual')\n)\nggplot(mtcars2, aes(hp, mpg, color = am)) +\n  geom_point() + geom_smooth() +\n  theme(legend.position = 'bottom')\n\n\n\n\nNote the use of the fig-cap chunk option to provide a figure caption. You can adjust the proportions of figures using the fig-width and fig-height chunk options. These are specified in inches, and will be automatically scaled down to fit within the handout margin."
+    "text": "Margin Figures\nImages and graphics play an integral role in Tufte’s work. To place figures in the margin you can use the Quarto chunk option column: margin. For example:\n\n#| label: fig-margin\n#| fig-cap: \"MPG vs horsepower, colored by transmission.\"\n#| column: margin\n#| message: false\nlibrary(ggplot2)\nmtcars2 &lt;- mtcars\nmtcars2$am &lt;- factor(\n  mtcars$am, labels = c('automatic', 'manual')\n)\nggplot(mtcars2, aes(hp, mpg, color = am)) +\n  geom_point() + geom_smooth() +\n  theme(legend.position = 'bottom')\n\n\n\n\n\n\n\n\nNote the use of the fig-cap chunk option to provide a figure caption. You can adjust the proportions of figures using the fig-width and fig-height chunk options. These are specified in inches, and will be automatically scaled down to fit within the handout margin."
   },
   {
     "objectID": "posts/welcome/index.html#arbitrary-margin-content",
@@ -137,7 +277,7 @@
     "href": "posts/welcome/index.html#full-width-figures",
     "title": "Introduction to Tufte Style",
     "section": "Full Width Figures",
-    "text": "Full Width Figures\nYou can arrange for figures to span across the entire page by using the chunk option fig-column: page-right.\n\nggplot(diamonds, aes(carat, price)) + geom_smooth() +\n  facet_grid(~ cut)\n\n\n\n\nFigure 1: A full width figure.\n\n\n\n\nOther chunk options related to figures can still be used, such as fig-width, fig-cap, and so on. For full width figures, usually fig-width is large and fig-height is small. In the above example, the plot size is \\(11 \\times 3\\)."
+    "text": "Full Width Figures\nYou can arrange for figures to span across the entire page by using the chunk option fig-column: page-right.\n\nggplot(diamonds, aes(carat, price)) + geom_smooth() +\n  facet_grid(~ cut)\n\n\n\n\n\n\n\nFigure 1: A full width figure.\n\n\n\n\n\nOther chunk options related to figures can still be used, such as fig-width, fig-cap, and so on. For full width figures, usually fig-width is large and fig-height is small. In the above example, the plot size is \\(11 \\times 3\\)."
   },
   {
     "objectID": "posts/welcome/index.html#arbitrary-full-width-content",
@@ -151,84 +291,21 @@
     "href": "posts/welcome/index.html#main-column-figures",
     "title": "Introduction to Tufte Style",
     "section": "Main Column Figures",
-    "text": "Main Column Figures\nBesides margin and full width figures, you can of course also include figures constrained to the main column. This is the default type of figures in the LaTeX/HTML output.\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\nFigure 2: A figure in the main column."
+    "text": "Main Column Figures\nBesides margin and full width figures, you can of course also include figures constrained to the main column. This is the default type of figures in the LaTeX/HTML output.\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\n\n\n\nFigure 2: A figure in the main column."
   },
   {
     "objectID": "posts/welcome/index.html#margin-captions",
     "href": "posts/welcome/index.html#margin-captions",
     "title": "Introduction to Tufte Style",
     "section": "Margin Captions",
-    "text": "Margin Captions\nWhen you include a figure constrained to the main column, you can choose to place the figure’s caption in the margin by using the cap-location chunk option. For example:\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\nFigure 3: A figure with a longer caption. The figure appears in the main column, but the caption is placed in the margin. Caption can even contain elements like a citation such as @xie2018."
+    "text": "Margin Captions\nWhen you include a figure constrained to the main column, you can choose to place the figure’s caption in the margin by using the cap-location chunk option. For example:\n\nggplot(diamonds, aes(cut, price)) + geom_boxplot()\n\n\n\n\n\n\n\nFigure 3: A figure with a longer caption. The figure appears in the main column, but the caption is placed in the margin. Caption can even contain elements like a citation such as @xie2018."
   },
   {
-    "objectID": "posts/quarto_how_to_setup/index.html",
-    "href": "posts/quarto_how_to_setup/index.html",
-    "title": "Quarto: How to setup your Blog",
-    "section": "",
-    "text": "RMarkdown has been a staple for any Data Scientist that programs in R. Quarto builds on that, with multiple language support and additional features. Because of its language independent design, Quarto requires an independent installation. (“Quarto,” n.d.)\nI have spent the past week moving my blog from blogdown to quarto. There have been some challenges, but I am pretty happy with the new look. Let’s start with the setup, it’s a little more work than a regular package or module."
-  },
-  {
-    "objectID": "posts/quarto_how_to_setup/index.html#setup",
-    "href": "posts/quarto_how_to_setup/index.html#setup",
-    "title": "Quarto: How to setup your Blog",
-    "section": "Setup",
-    "text": "Setup\nThe setup for Quarto is pretty simple. You will need to visit the quarto website to download the Quarto Command Line Interface (CLI). There are step-by-step instructions for your selected text editor. I am most familiar with RStudio for R and VSCode for Python.\nFor Rstudio, it’s pretty much just plug and play now. I did install the Quarto package, but all the commands can be done by the command line interface. Switching from RMarkdown is as simple as saving them as qmd file. The process for Quarto for RStudio can be described by the following process flow:\n\n\n\nRender qmd in RStudio\n\n\nIt is not much more difficult for VSCode, all you need to do is download the Quarto extension. The process flow is similar to RStudio but uses Jupyter instead of knitr.\n\n\n\nRender qmd for VSCode\n\n\nWith the setup complete, there should be no differences between text editors."
-  },
-  {
-    "objectID": "posts/quarto_how_to_setup/index.html#code-chunk-options",
-    "href": "posts/quarto_how_to_setup/index.html#code-chunk-options",
-    "title": "Quarto: How to setup your Blog",
-    "section": "Code Chunk Options",
-    "text": "Code Chunk Options\nThe first new feature to explore the support for code chuck options within the code chunks. These options would usually live within the code chunk title line. Any supported option can be added with the #| tag. This feature is useful for situations with many options, as it does increase readability.\n```{r}\n#| label: load\n#| include: true\n#| warning: false\n\nlibrary(tidyverse)\ndata(\"msleep\")\n```"
-  },
-  {
-    "objectID": "posts/quarto_how_to_setup/index.html#code-folding",
-    "href": "posts/quarto_how_to_setup/index.html#code-folding",
-    "title": "Quarto: How to setup your Blog",
-    "section": "Code-folding",
-    "text": "Code-folding\nOne of the neat new features is code-folding. When this feature is enabled in the qmd YAML, the person viewing the document can hide/unhide code chunks. This can make it easier for them to read the document. Only the code will be hidden, and not the results.\n\n\nCode\nglimpse(msleep)\n\n\nThis feature is enabled by making the following addition to the YAML. You would change the format from HTML to your required format, such as PDF.\n\n\nCode\nformat: \n  html: \n    code-fold: true\n    code-tools: true\n\n\nWith the addition of the code-tools: true parameter, the reader can decide to hide all code chunks from the top of the document."
-  },
-  {
-    "objectID": "posts/quarto_how_to_setup/index.html#figures",
-    "href": "posts/quarto_how_to_setup/index.html#figures",
-    "title": "Quarto: How to setup your Blog",
-    "section": "Figures",
-    "text": "Figures\nQuarto provides a bunch of additional tools for displaying figures. You can assign values for captions, sub-captions, width and height. You can even create a figure with multiple plots with separate sub-captions.\n```{r}\n#| label: fig-sleep\n#| fig-cap: \"Sleeping habits of animals\"\n#| fig-subcap:\n#|   - \"Scatter plot of body weight by total sleep\"\n#|   - \"Violin plot of REM sleep by vore\"\n#| layout-ncol: 2\n\nmsleep %>%\n  drop_na(sleep_total, bodywt) %>%\n  ggplot(aes(y= sleep_total, x = bodywt)) +\n  geom_point(color = \"blue\") +\n  theme_minimal()\n\nmsleep %>%\n  group_by(vore) %>%\n  drop_na(sleep_rem, vore) %>%\n  ggplot(aes(y= sleep_rem, x = vore)) +\n  geom_violin(aes(fill = vore)) +\n  theme_minimal()\n```\n\n\n\n\n\n\n\n(a) Scatter plot of body weight by total sleep\n\n\n\n\n\n\n\n(b) Violin plot of REM sleep by vore\n\n\n\n\nFigure 1: Sleeping habits of animals\n\n\nYou can now use cross-referencing for the figure by referencing the figure. This means that in your text, you can refer to the figure number and link to the figure. This will automatically update your figure numbers and is achieved by typing the ‘@’ symbol followed by the figure label. As an example, ‘@fig-sleep’ turns into Figure 1.\nThere is an additional option to let the figures take up the width of the entire page, but I would not recommend using it as it extends beyond the width of the body of your page. It requires the following code:\n```{r}\n#| column: page\n```"
-  },
-  {
-    "objectID": "posts/quarto_how_to_setup/index.html#code-linking",
-    "href": "posts/quarto_how_to_setup/index.html#code-linking",
-    "title": "Quarto: How to setup your Blog",
-    "section": "Code Linking",
-    "text": "Code Linking\nA reader may not be familiar with all the functions that you use in your document, so it may be useful to enable code linking. With code linking, a function in a code chunk will have a hyperlink to the documentation for that function. To work in R, this feature requires the xml2 and downlit packages.\n\n\nCode\nlm(as.factor(order) ~ sleep_total, data = msleep[complete.cases(msleep),] )"
-  },
-  {
-    "objectID": "posts/quarto_how_to_setup/index.html#table-of-contents",
-    "href": "posts/quarto_how_to_setup/index.html#table-of-contents",
-    "title": "Quarto: How to setup your Blog",
-    "section": "Table of contents",
-    "text": "Table of contents\nI think the best feature for Quarto is the floating table of contents. I can’t describe how much time and effort I’ve spent trying to get a floating table of contents in a Blogdown blog. It didn’t work for me, it would require getting deep into the weeds changing the CSS layout for my HUGO theme. It was not worth the effort.\nAdding a floating table of contents in Quarto is simple. Just use the following code in the document YAML:\n\n\nCode\ntoc: TRUE\n\n\nOne simple line of code in the YAML and your document has a floating table of contents. There is some additional customization such as the level of headers, location and title.\n\n\nCode\ntoc: true\ntoc-depth: 2\ntoc-location: left\ntoc-title: Contents"
-  },
-  {
-    "objectID": "posts/quarto_how_to_setup/index.html#quarto-vs-blogdown",
-    "href": "posts/quarto_how_to_setup/index.html#quarto-vs-blogdown",
-    "title": "Quarto: How to setup your Blog",
-    "section": "Quarto vs Blogdown",
-    "text": "Quarto vs Blogdown\nWith my experimentation with Quarto, I decided to move my blogdown blog to Quarto. In theory, this should be a simple switch, with just copying all post from folder to another. Quarto can use rmd files, but they can easily be changed over to qmd files. I decided to switch all my post to the qmd format and include some additional features. The Quarto site has extensive reference information for creating a blog. (“Quarto,” n.d.-)\nI did have an issue with one of my post not rendering correctly. This maybe an issue with compatibility with the stargazer package. In the end, I decided to just remove the post altogether as I could get it to render correctly, and I prefer the gt over the stargazer package for creating good-looking tables."
-  },
-  {
-    "objectID": "posts/quarto_how_to_setup/index.html#conclusion",
-    "href": "posts/quarto_how_to_setup/index.html#conclusion",
-    "title": "Quarto: How to setup your Blog",
-    "section": "Conclusion",
-    "text": "Conclusion\nIt is easy to create great looking documents using quarto, whether that be with code in python or R. Quarto supports most of the features in RMarkdown with some fancy new ones. My personal favourite is the floating table of contents. I have also found that rendering a Quarto blog is a much smoother experience than rendering a blogdown blog."
-  },
-  {
-    "objectID": "posts/BarCode/index.html#conclusion",
-    "href": "posts/BarCode/index.html#conclusion",
-    "title": "YouTube Video Categorization Using Moviebarcode",
-    "section": "Conclusion",
-    "text": "Conclusion\nIn this paper, we introduced the use of moviebarcode for video categorization and summarization and showed that video processing is easier with moviebarcode for social computing researchers, especially if they deal with YouTube which is the most popular video sharing platform.\nTraditional techniques for video categorization are resource intensive and time consuming. Moviebarcode is a great methodology to extract insightful features to describe narratives in a video, capturing visual patterns in a video without watching, and grouping/categorizing similar/same videos together in fast and efficient manner. Results show that using individual channels of a moviebarcode image helps video categorization by differentiating one video from another or grouping them. Each channel carries different features about an image. The idea of splitting channels of an image increased the performance of video categorization"
+    "objectID": "posts/welcome/index.html#footnotes",
+    "href": "posts/welcome/index.html#footnotes",
+    "title": "Introduction to Tufte Style",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nTo learn more, you can read more about Quarto or visit Quarto’s Github repository.↩︎\nYou never need to think about \\begin{marginfigure} or &lt;span class=\"marginfigure\"&gt;; the LaTeX and HTML code under the hood may be complicated, but you never need to learn or write such code.↩︎"
   },
   {
     "objectID": "posts/book4/index.html#how-asia-works-by-joe-studwell",
@@ -259,25 +336,11 @@
     "text": "To the question, How can Tamil Nadu modernize itself?\nAs of now, I do not have enough understanding to give a fully formed answer. My own thoughts after reading this work:\n\n\nList work puts sharp questions to my own refuge into abstract theories\nI am reminded of Edmund Burke\nBurke stated politics was concrete policies managing interest groups desires and not resorting to abstract theories\n\n\n\n1 Introduction to Macroeconomics 2 Check, out for more sources"
   },
   {
-    "objectID": "posts/book5/index.html#who-reads-kant-in-tirunelveli-india",
-    "href": "posts/book5/index.html#who-reads-kant-in-tirunelveli-india",
-    "title": "Book Summary: Immanuel Kant: Critique of Reason",
-    "section": "1. Who reads Kant in Tirunelveli, India?",
-    "text": "1. Who reads Kant in Tirunelveli, India?\nTirunelveli is a smaller city of 1 million people in India, with strands of, extreme social conservatism, parochial, traditionalist, Tamil way of life - no questioning of older people, or challenging of ideas, regurgitate older people’s opinion, route learning. Imagine, Kant being introduced to this way of life among the people."
-  },
-  {
-    "objectID": "posts/book5/index.html#how-did-kant-come-across-to-me",
-    "href": "posts/book5/index.html#how-did-kant-come-across-to-me",
-    "title": "Book Summary: Immanuel Kant: Critique of Reason",
-    "section": "2. How did Kant come across to me?",
-    "text": "2. How did Kant come across to me?\nKant is structured, methodological, orderly, systematic in his approach. I like his way writing. He is consuming, intense, and dense. One of the reason, is because of his turgid concepts and definitions. However, I do not think he is the most difficult writer or thinker to be read in Western thought. Brilliant, intense, profound, deepest thinker, so far I know is – Jonathan Edwards. Reading Edwards requires more intensity, attention, concentration.\nKant is crucial and key for understanding, Western Modern Philosophy. He’s definitely worth reading. Engaging his work, your thoughts or way of expressing would raise, why? Because, we engage with people who are better than us."
-  },
-  {
-    "objectID": "posts/book5/index.html#what-did-i-learn-from-kant",
-    "href": "posts/book5/index.html#what-did-i-learn-from-kant",
-    "title": "Book Summary: Immanuel Kant: Critique of Reason",
-    "section": "3. What did I learn from Kant?",
-    "text": "3. What did I learn from Kant?\nThe important things I learnt from this book, his approach to Knowledge. He says, Knowledge we gain is systematized through our senses. Yes, our knowledge starts from experience, but Kant does not claim that all knowledge must be from experience alone or through reason alone. He calls his system, transcendental knowledge, which does not mean beyond our experience but it means knowledge which both synthetical and a priori. Imagine, you are wearing blue glasses, And look at the world. The world you perceive, will be blue through your eyes, which you will never get to find out, Why?\nTherefore, Kant says, we are unable to completely understand the world. He classifies these as Noumena and Phenomena. Noumena is the reality, the thing itself. Phenomena is the appearance of the thing. Space and time constitute as a foundation for everything. In the blue color perception, the color blue is the Noumena, and Glasses are Phenomena.\nKant’s writings on cosmological, ontological arguments were imposing, majestic and stirs my thought. If you’re interested more in Philosophy of Religion, do check out Graham Oppy’s work.\n\n“Thoughts without content are empty, intuitions without concepts are blind” - Kant\n\n\n Goodreads"
+    "objectID": "posts/book4/index.html#footnotes",
+    "href": "posts/book4/index.html#footnotes",
+    "title": "Book Summary: How Asia Works by Joe Studwell",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGoodreads Macroeconomics: An Introduction by Alex M. Thomas↩︎\nWikipedia Introduction to Macroeconomics↩︎"
   },
   {
     "objectID": "posts/book2/index.html#introduction",
@@ -315,11 +378,11 @@
     "text": "4. What’s the meat of the book?\nIn this book, author Mani Kumar talks about the riots of Mudukulathur, located close to Ramanathapuram in Southern Tamil Nadu. It’s about two communities — Pallars and Thevars. Mani Kumar gives an account on political history, social justice, caste-conflict among the two communities. In Tamil Nadu political history, caste plays a crucial role. Each community aligns with a political party. There’s gruesome killings on each side of caste. When I was reading through account of it. Few questions came to my mind. A question - one person gets killed for an issue from a caste. And then, the other community kills or retaliates back. But it goes back and forth, where does it stop?\n\nWhat is the point of doing it?\nIn the book or even applying to Tamil society, insight from anthropologists. Apply honor-shame, we can answer, “to gain face.” (Munju) to get, “honor.” or “respect” among others within their community.\nHow can they change?\nAuthor says Education can change people.\nWhat other work would you recommend?\nThere has been no contemporary account of caste that matches up Edgar Thurston. Thurston’s work is outdated, because it is filled with racial denigration.\nSociologists have written about Caste. If you want to know about Caste in Tamil Nadu. I suggest reading, Edgar Thurston. His work is outdated, but some parts of it, might be relevant. Apparently, in 2019, I discovered Edgar was the first to hold Librarian title— Connemara Public Library.\nFeel free to write a rebuttal to my perspective.\n\n1 References2 Caste, plays core role in Politcs in Tamil Nadu, India"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Rejeleene",
-    "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJan 12, 2023\n\n\nBook Summary: The All-Or-Nothing Marriage: How the Best Marriages Work\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Nadars of Tamil Nadu, India\n\n\nRick Rejeleene\n\n\n\n\nDec 20, 2022\n\n\nBook Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar\n\n\nRick Rejeleene\n\n\n\n\nDec 13, 2022\n\n\nPresentation\n\n\nRick Rejeleene\n\n\n\n\nDec 9, 2022\n\n\nIntroduction to Tufte Style\n\n\nRick Rejeleene\n\n\n\n\nDec 1, 2022\n\n\nBook Summary: How Asia Works by Joe Studwell\n\n\nRick Rejeleene\n\n\n\n\nOct 7, 2022\n\n\nBook Summary: Macroeconomics: An Introduction by Alex M. Thomas\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2022\n\n\nQuarto: How to setup your Blog\n\n\nRick Rejeleene\n\n\n\n\nDec 1, 2020\n\n\nYouTube Video Categorization Using Moviebarcode\n\n\nRick Rejeleene\n\n\n\n\nAug 1, 2017\n\n\nKodai: A Software Architecture and Implementation for Segmentation\n\n\nRick Rejeleene\n\n\n\n\nFeb 4, 2017\n\n\nBook Summary: Limits of State Action by Von Humbolt\n\n\nRick Rejeleene\n\n\n\n\nAug 15, 2015\n\n\nBook Summary: Immanuel Kant: Critique of Reason\n\n\nRick Rejeleene\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/book2/index.html#footnotes",
+    "href": "posts/book2/index.html#footnotes",
+    "title": "Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGoodreadsGoodreads↩︎\nWikipedia Wikipedia↩︎"
   },
   {
     "objectID": "about.html",
@@ -327,12 +390,5 @@
     "title": "Home",
     "section": "",
     "text": "Those who do not read History are doomed to repeat it"
-  },
-  {
-    "objectID": "hello.html",
-    "href": "hello.html",
-    "title": "Quarto Basics",
-    "section": "",
-    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   }
 ]

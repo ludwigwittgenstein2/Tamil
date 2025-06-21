@@ -1,59 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/Kodai_MS_Thesis/index.html</loc>
-    <lastmod>2023-02-18T21:08:39.464Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book9/index.html</loc>
-    <lastmod>2023-02-18T21:08:40.261Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book7/index.html</loc>
-    <lastmod>2023-02-18T21:08:40.694Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book1/index.html</loc>
-    <lastmod>2023-02-18T21:08:41.170Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book6/index.html</loc>
-    <lastmod>2023-02-18T21:08:41.529Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/welcome/index.html</loc>
-    <lastmod>2023-02-18T21:08:42.297Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/quarto_how_to_setup/index.html</loc>
-    <lastmod>2023-02-18T21:08:43.375Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/BarCode/index.html</loc>
-    <lastmod>2023-02-18T21:08:44.539Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book4/index.html</loc>
-    <lastmod>2023-02-18T21:08:47.804Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book5/index.html</loc>
-    <lastmod>2023-02-18T21:08:48.244Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book2/index.html</loc>
-    <lastmod>2023-02-18T21:08:48.771Z</lastmod>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/hello.html</loc>
+    <lastmod>2025-06-21T02:48:52.177Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/index.html</loc>
-    <lastmod>2023-02-18T21:08:49.150Z</lastmod>
+    <lastmod>2025-06-21T02:59:40.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book5/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book3/index.html</loc>
+    <lastmod>2025-06-21T03:33:36.765Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/BarCode/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.178Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/quarto_how_to_setup/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.191Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book6/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book7/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/Kodai_MS_Thesis/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.178Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book9/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.183Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book1/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.179Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/welcome/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book4/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.180Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ludwigwittgenstein2.github.io/Tamil/posts/book2/index.html</loc>
+    <lastmod>2025-06-21T02:48:52.180Z</lastmod>
   </url>
   <url>
     <loc>https://ludwigwittgenstein2.github.io/Tamil/about.html</loc>
-    <lastmod>2023-02-18T21:08:49.454Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ludwigwittgenstein2.github.io/Tamil/hello.html</loc>
-    <lastmod>2023-02-18T21:08:49.839Z</lastmod>
+    <lastmod>2025-06-21T02:48:52.177Z</lastmod>
   </url>
 </urlset>
