@@ -7,8 +7,6 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
-page-layout: full
-title-block-banner: true
+# page-layout: full        # Comment out or remove
+# title-block-banner: true # Comment out or remove
 ---
-
-
