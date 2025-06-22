@@ -1,1 +1,3 @@
-Sitemap: https://ludwigwittgenstein2.github.io/Tamil/sitemap.xml
+User-agent: *
+Allow: /
+Sitemap: https://rickrejeleene.me/sitemap.xml
