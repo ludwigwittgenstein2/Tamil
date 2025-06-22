@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Rick Rejeleene">
 
-<title>Rejeleene – Today</title>
+<title>index – Today</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,67 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -139,7 +80,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Today</span>
     </a>
   </div>
@@ -256,19 +197,24 @@ window.Quarto = {
 
 </div></div>
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(14)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QXNpYQ==">Asia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Qm9va3M=">Books <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Ym9va3M=">books <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcHV0ZXIlMjBWaXNpb24=">Computer Vision <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWNvbm9taWNz">Economics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SGlzdG9yaW9ncmFwaHk=">Historiography <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGlzdG9yeQ==">History <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SG93LXRv">How-to <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UGhpbG9zb3BoeQ==">Philosophy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHlzY2hvbG9neQ==">pyschology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzZWFyY2g=">Research <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Um1hcmtkb3du">Rmarkdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c29jaW9sb2d5">sociology <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U29mdHdhcmU=">Software <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VGFtaWwlMjBOYWR1">Tamil Nadu <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGFtaWwtbmFkdQ==">tamil-nadu <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VHV0b3JpYWw=">Tutorial <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rejeleene</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rick Rejeleene </p>
+          </div>
+  </div>
     
   
     
@@ -282,214 +228,7 @@ window.Quarto = {
 
 
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-Date
-</th>
-
-<th>
-Title
-</th>
-
-<th>
-Author
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-date-sort="1750478400000" data-listing-file-modified-sort="1750536188231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="193" data-listing-title-sort="Quarto HTML Basics" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Jun 21, 2025</span>
-</td>
-<td>
-<a href="./posts/book3/index.html" class="title listing-title">Quarto HTML Basics</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="Qm9va3MlMkNIaXN0b3J5JTJDSGlzdG9yaW9ncmFwaHk=" data-listing-date-sort="1750478400000" data-listing-file-modified-sort="1750557264353" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="385" data-listing-title-sort="R. C. Majumdar’s Historiography in Modern India" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Jun 21, 2025</span>
-</td>
-<td>
-<a href="./posts/2025-06-21-book10/index.html" class="title listing-title">R. C. Majumdar’s Historiography in Modern India</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="Ym9va3MlMkNweXNjaG9sb2d5JTJDc29jaW9sb2d5" data-listing-date-sort="1673499600000" data-listing-file-modified-sort="1750533736579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="612" data-listing-title-sort="Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Jan 12, 2023</span>
-</td>
-<td>
-<a href="./posts/book9/index.html" class="title listing-title">Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="Ym9va3MlMkNzb2Npb2xvZ3klMkN0YW1pbC1uYWR1" data-listing-date-sort="1671512400000" data-listing-file-modified-sort="1750533736575" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="372" data-listing-title-sort="Book Summary: Nadars of Tamil Nadu, India" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Dec 20, 2022</span>
-</td>
-<td>
-<a href="./posts/book1/index.html" class="title listing-title">Book Summary: Nadars of Tamil Nadu, India</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-categories="Ym9va3MlMkNzb2Npb2xvZ3klMkN0YW1pbC1uYWR1" data-listing-date-sort="1671512400000" data-listing-file-modified-sort="1750557056899" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="946" data-listing-title-sort="Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Dec 20, 2022</span>
-</td>
-<td>
-<a href="./posts/book2/index.html" class="title listing-title">Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1670907600000" data-listing-file-modified-sort="1750533736585" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Presentation" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Dec 13, 2022</span>
-</td>
-<td>
-<a href="./posts/presentation/index.pdf" class="title listing-title">Presentation</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-categories="bmV3cw==" data-listing-date-sort="1670562000000" data-listing-file-modified-sort="1750533736589" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1354" data-listing-title-sort="Introduction to Tufte Style" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Dec 9, 2022</span>
-</td>
-<td>
-<a href="./posts/welcome/index.html" class="title listing-title">Introduction to Tufte Style</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-categories="RWNvbm9taWNzJTJDVGFtaWwlMjBOYWR1JTJDQXNpYQ==" data-listing-date-sort="1669870800000" data-listing-file-modified-sort="1750533736576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1166" data-listing-title-sort="Book Summary: How Asia Works by Joe Studwell" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Dec 1, 2022</span>
-</td>
-<td>
-<a href="./posts/book4/index.html" class="title listing-title">Book Summary: How Asia Works by Joe Studwell</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-categories="Qm9va3MlMkNFY29ub21pY3M=" data-listing-date-sort="1665115200000" data-listing-file-modified-sort="1750533736579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1190" data-listing-title-sort="Book Summary: Macroeconomics: An Introduction by Alex M. Thomas" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Oct 7, 2022</span>
-</td>
-<td>
-<a href="./posts/book7/index.html" class="title listing-title">Book Summary: Macroeconomics: An Introduction by Alex M. Thomas</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-categories="VHV0b3JpYWwlMkNIb3ctdG8lMkNSJTJDUm1hcmtkb3duJTJDUHl0aG9uJTJDUXVhcnRv" data-listing-date-sort="1659326400000" data-listing-file-modified-sort="1750533736588" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1058" data-listing-title-sort="Quarto: How to setup your Blog" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Aug 1, 2022</span>
-</td>
-<td>
-<a href="./posts/quarto_how_to_setup/index.html" class="title listing-title">Quarto: How to setup your Blog</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-categories="UmVzZWFyY2glMkNTb2Z0d2FyZSUyQ1B5dGhvbiUyQ0NvbXB1dGVyJTIwVmlzaW9uJTJDTWFjaGluZSUyMExlYXJuaW5n" data-listing-date-sort="1606798800000" data-listing-file-modified-sort="1750533736574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="292" data-listing-title-sort="YouTube Video Categorization Using Moviebarcode" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Dec 1, 2020</span>
-</td>
-<td>
-<a href="./posts/BarCode/index.html" class="title listing-title">YouTube Video Categorization Using Moviebarcode</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-categories="UmVzZWFyY2glMkNTb2Z0d2FyZSUyQ1B5dGhvbg==" data-listing-date-sort="1501560000000" data-listing-file-modified-sort="1750533736574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="440" data-listing-title-sort="Kodai: A Software Architecture and Implementation for Segmentation" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Aug 1, 2017</span>
-</td>
-<td>
-<a href="./posts/Kodai_MS_Thesis/index.html" class="title listing-title">Kodai: A Software Architecture and Implementation for Segmentation</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-categories="Qm9va3MlMkNQaGlsb3NvcGh5" data-listing-date-sort="1486184400000" data-listing-file-modified-sort="1750533736578" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="262" data-listing-title-sort="Book Summary: Limits of State Action by Von Humbolt" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Feb 4, 2017</span>
-</td>
-<td>
-<a href="./posts/book6/index.html" class="title listing-title">Book Summary: Limits of State Action by Von Humbolt</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-categories="Qm9va3MlMkNQaGlsb3NvcGh5" data-listing-date-sort="1439611200000" data-listing-file-modified-sort="1750554139159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="418" data-listing-title-sort="Book Summary: Immanuel Kant: Critique of Reason" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Aug 15, 2015</span>
-</td>
-<td>
-<a href="./posts/book5/index.html" class="title listing-title">Book Summary: Immanuel Kant: Critique of Reason</a>
-</td>
-<td>
-<span class="listing-author">Rick Rejeleene</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -562,7 +301,7 @@ Author
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ludwigwittgenstein2\.github\.io\/Tamil\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
