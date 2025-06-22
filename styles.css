@@ -10,3 +10,6 @@
   color: #343a40 !important;
 }
 .refferal_badge { display: none !important; }
+figcaption {
+  text-align: center;
+}
