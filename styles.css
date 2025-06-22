@@ -1,6 +1,11 @@
-/* css styles */
-.quarto-title-banner {
-  background: linear-gradient(135deg, #007bff, #0056b3);
-  color: white;
-  padding: 2rem 0;
+/* remove gradient */
+.listing-banner {
+  background: none !important;
+  /* or use a single color: */
+  /* background-color: #f8f9fa !important; */
+}
+
+/* then style the text if you need contrast */
+.listing-banner h1 {
+  color: #343a40 !important;
 }
