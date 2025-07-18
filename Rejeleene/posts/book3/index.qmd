@@ -2,6 +2,10 @@
 title: "Quarto HTML Basics"
 author: "Rick Rejeleene"
 date: "2025-06-21"
+date-format: "MMMM D, YYYY"
+categories:
+  - Tutorial 
+  - Web Development
 toc: true
 format:
   html:

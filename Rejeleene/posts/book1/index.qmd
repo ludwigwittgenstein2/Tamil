@@ -3,7 +3,8 @@ title: "Book Summary: Nadars of Tamil Nadu, India"
 description: "Caste of Tamil Nadu, India"
 author: "Rick Rejeleene"
 date: "12/20/2022"
-categories: [books, sociology, tamil-nadu]
+date-format: "MMMM D, YYYY"
+categories: [Book Review, Sociology, Caste, History, Tamil Nadu]
 echo: false
 ---
 

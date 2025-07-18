@@ -1,9 +1,12 @@
+# _quarto.yml (at the root of your Tamil/ folder)
 project:
   type: website
 
 website:
-  title: "Today"
+  title: "Research"
+  description: "AI, economics, history, and machine-learning insights by Rick Rejeleene."
   navbar:
+    search: true
     right:
       - icon: house-door-fill
         href: http://rickrejeleene.me/
@@ -11,14 +14,11 @@ website:
         href: https://facebook.com/whitekangaroo
       - icon: linkedin
         href: https://www.linkedin.com/in/rick1776/
+margin-header: subscribe.html
 format:
   html:
     theme: cosmo
+    title-block-banner: false
     css: styles.css
     toc: true
     toc-depth: 2
-
-
-
-
-

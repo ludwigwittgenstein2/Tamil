@@ -1,0 +1,44 @@
+---
+title: "The Modern Caste System in Tamil Nadu"
+subtitle: |
+  Exploration of experiencing caste through traditions, customs in Tirunelveli
+author: "Rick Rejeleene"
+date: "2015-08-10"
+date-format: "MMMM D, YYYY"
+slug: "castes-in-india-tirunelveli"
+categories: [Sociology, History, Anthropology, Caste, Tamil Nadu]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+  pdf:               # <-- NEW
+    toc: true        # headings automatically become PDF bookmarks
+    toc-depth: 3
+    documentclass: article   # or report/book, as you prefer
+    keep-tex: true           # helpful for troubleshooting
+---
+
+## About this work {#about}
+
+This essay explores the historical roots, lived experiences, and proposed remedies for caste‑based discrimination in modern Tamil Nadu from Tirunelveli.  It can be part of Sociology, Anthropology work on social mobility, hierarchy in South India. 
+
+
+## Document: 
+
+
+> *Originally written **August 10, 2015** &nbsp;·&nbsp; Major rewrite **December 2018** &nbsp;·&nbsp; To be rewritten **June 24, 2025***
+
+::: {.callout-note}
+This page embeds the original PDF and will be progressively migrated to native markdown. For optimal readability you can also use the download link below.
+:::
+
+[Download the full article ⇩](Caste-System-Rick.pdf){.btn .btn-primary}
+
+```{=html}
+<iframe src="Caste-System-Rick.pdf" width="100%" height="1200px" style="border: none;"></iframe>
+```
+## References: 
+
+B.R. Ambedkar's *Annihilation of Caste* remains a critical text for understanding caste in India and Tamil Nadu. Originally written in 1936 as a speech and later self-published, it critiques the caste system and advocates for its abolition.^[B.R. Ambedkar, *Annihilation of Caste*, 1936. Available: https://ia601009.us.archive.org/20/items/AnnihilationOfCasteDr.B.r.ambedkar/Annihilation%20of%20caste%20Dr.B.r.ambedkar.pdf]
+
+---

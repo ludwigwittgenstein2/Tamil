@@ -1,0 +1,87 @@
+---
+title: "Limits of Scientific Method: Philosophical and Qualitative Approaches"
+date: "2025-03-31"
+author: "Rick Rejeleene"
+date-format: "MMMM D, YYYY"
+slug: "Limits of Scientific Methods, Exploring Philosophical and Methodological alternatives"
+categories: [Philosophy, methodology, Research, History of Science]
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Scientific method has had long history and development. It’s evolution starts from Aristotle’s logical reasoning, through insights of powerful islamic scholars like Ibn Al-Haytham, Al-Kindi, Avicenna to more structured approaches of modern thinkers like Francis Bacon, Galileo, Rene Descartes, Isaac Newton and Robert Hooke.
+
+Brief approaches of Scientific Method:
+
+**Francis Bacon:**
+Bacon emphasized inductive reasoning—starting from observations and experiments, then deriving general principles. For example, studying the boiling point of various liquids under different pressures to discover the relationship between pressure and boiling temperature.
+
+**Cartesian Method (René Descartes):**
+Descartes advocated for deductive reasoning from self-evident truths or axioms. Starting with the certainty of thought (“I think, therefore I am”), he worked downward using logic. This is similar to how mathematicians start from axioms to derive theorems.
+
+**Newtonian Method (Isaac Newton):**
+Newton combined induction and mathematical reasoning. He observed falling apples and celestial motions, then formulated universal laws of gravity and motion through experimentation and mathematical modeling.
+
+Together, these approaches underpin the modern science:
+
+a. Hypothesis  
+b. Evidence  
+c. Conclusion
+
+This model has been enormously successful in explaining natural phenomena—from engineering, planetary motion to electricity and genetics.
+
+## 2. Limits of the Scientific Method
+
+However, problems arise when people attempt to apply this framework outside its proper domain—particularly to theology, human experience, aesthetics, or ethics, philosophy.
+For instance, I frequently encounter engineers insisting on applying hypo-deductive logic to questions like, “What is the purpose of life? or applying at religion, theology."  
+Even late physicist like Stephen Hawking insist on using this particular method for such questions.
+This clash arises from philosophical assumptions—especially positivism, the belief that true knowledge can only be derived from sensory experience and empirical verification.
+
+## 3. Broader Philosophical Perspectives
+
+Let’s contrast positivism with other major epistemological approaches:
+
+**Positivism:**
+Assumes reality is objective and can be measured. Knowledge = what we can observe, measure, and test. Works well in physics and chemistry.  
+*Example:* Measuring how many hours students study and correlating it with exam scores.
+
+**Interpretivism:**
+Assumes reality is subjective, shaped by human experience and context. Truth emerges from meaning, not measurement.  
+*Example:* Understanding how a student feels during an exam, and how their background or family pressure influences performance.
+
+**Constructivism:**
+Proposes that reality is socially constructed. What we call "truth" is built through shared language, culture, and historical context.  
+*Example:* The idea of "success" differs radically between Tamil Middle Class, Wealthy Tamil families, rural, urban India, and corporate America—constructed by each culture, for Tamil middle class, doctor or engineer is highest success, for few Tamils, living a happy life is success, for some having a family.
+
+## 4. Why This Matters: The Case of Human Pain
+
+Let’s take something from our lives - real—pain. The hypothetico-deductive model can measure neural pathways, signal transmission, and identify pain thresholds, it can give you descriptions of human pain from physical, chemical and all layers.  
+But it cannot capture what it feels like to go through grief after losing a loved one, or the spiritual suffering of despair, loneliness we experience in our lives, purpose and meaning we yearn in our lives.  
+So we need qualitative methods, which is primarily applied in social science research.
+
+## 5. Qualitative Methods:
+
+Mixed-Methods: Combines both qualitative and quantitative methods, How do customer perceptions of our new product (qualitative) relate to actual usage patterns (quantitative)?
+Ethnography: Long-term immersion in a culture. E.g., A researcher lives in a tribal community to understand their healing rituals.
+Phenomenology: Exploring lived experiences. E.g., Interviewing cancer survivors about how they experienced hope and fear.
+Grounded Theory: Developing theories directly from data. E.g., Analyzing interviews of ICU nurses to build a theory about burnout.
+Case Study: In-depth analysis using multiple data sources. E.g., Studying how a rural school improved literacy rates over 5 years.
+Narrative Inquiry: Analyzing personal stories. E.g., Exploring immigrant migrant experiences through autobiographical interviews.
+Heuristic Inquiry: Self-reflective exploration. E.g., A therapist reflecting on their own trauma while helping others.
+Participatory Action Research: Involving participants as co-researchers. E.g., A slum community designs and implements their own sanitation project.
+Developmental Evaluation:Used in innovation-heavy projects. E.g., Evaluating a new AI-based health intervention that evolves as it’s deployed.
+Utilization-Focused Evaluation:Tailored to stakeholders' needs. E.g., A nonprofit uses feedback to refine its program for youth education.
+Appreciative Inquiry:Focuses on strengths. E.g., Exploring what makes an effective teacher by identifying best practices, not just problems.
+
+The Scientific method is not one size all approach, it is powerful, with boundaries and limitations. But the deepest questions—about love, meaning, identity, purpose—are not always measurable. They require other ways of looking at life.
+
+![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388185121i/236023.jpg){fig-alt="Qualitative Research & Evaluation Methods by Michael Quinn Patton" fig-width="50%"}
+
+
+Sources:
+
+- [Goodreads review](https://www.goodreads.com/review/show/7418083635)
+- [Amazon Patton's book](https://www.amazon.com/Qualitative-Research.../dp/0761919716)
+- [Online copy of Qualitative methods by Patton](https://aulasvirtuales.wordpress.com/.../qualitative...)

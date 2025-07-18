@@ -1,5 +1,5 @@
 ---
-title: "Rejeleene"
+title: "Writings"
 listing:
   contents: posts
   sort: "date desc"
@@ -7,6 +7,7 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
+  page-size: 10
 # page-layout: full        # Comment out or remove
 # title-block-banner: true # Comment out or remove
 ---

@@ -3,7 +3,7 @@ title: "Book Summary: The All-Or-Nothing Marriage: How the Best Marriages Work"
 description: "Western view of Marriage"
 author: "Rick Rejeleene"
 date: "1/12/2023"
-categories: [books, pyschology,sociology]
+categories: [Book Review, Pyschology, Sociology]
 echo: false
 ---
 

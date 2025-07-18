@@ -1,10 +1,9 @@
 ---
-title: "Book Summary: Caste and Electoral Politics in Tamil Nadu
-by K.A. Manikumar"
+title: "Book Summary: Caste and Electoral Politics in Tamil Nadu by K.A. Manikumar"
 description: "Caste of Tamil Nadu, India"
 author: "Rick Rejeleene"
-date: "12/20/2022"
-categories: [books, sociology, tamil-nadu]
+date: 2022-12-20
+categories: [Book Review, Sociology, Tamil Nadu]
 echo: false
 ---
 

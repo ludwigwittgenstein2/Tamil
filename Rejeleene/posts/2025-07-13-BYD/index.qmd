@@ -1,0 +1,78 @@
+---
+title: "What Can We Learn from Wang Chuanfu 王传福, the Orphan Who Built BYD?"
+author: "Rick Rejeleene"
+date: 2025-07-13
+date-format: "MMMM D, YYYY"
+description: |
+  Reflections on the entrepreneurial journey of Wang Chuanfu, founder of BYD, and what his story can teach Tamil families about education, ambition, and career choices.
+categories: [Entrepreneurship, Industries, China, Tamil Nadu, Manufacturing]
+---
+
+## Introduction
+
+Tamils of today are reasonably educated and have made remarkable progress in literacy. Certainly, the majority of Tamil families value education and desire to provide opportunities for their children.  At the same time, I have been wondering if we could reflect and shift the focus away from social status, traditional career paths (doctor, IAS officer), or grandiose weddings. This might be limiting the true potential of families, holding back career opportunities that could come from encouraging hands-on skills, designing better towns, or repairing and maintaining global technology products.
+
+Social expectations around marriage and appearances have overshadowed deeper questions as, What creates happiness and a meaningful life?
+
+## Learning from Visionaries
+
+Recently, I finished reading [Mokshagundam Visvesvaraya’s *Reconstruction of India*](https://rickrejeleene.me/Tamil/posts/2025-06-28-Visvesvaraya/index.html)
+
+He was writing in the 1920s and 1930s, Visvesvaraya described a vision and path for India’s industrialization. He traveled to America, the UK, and Japan, learning the know-how, which resulted in the creation of institutions like Mysore Soap Factory, Mysore Iron & Steel Works, State Bank of Mysore, Government Engineering College Mysore, The Bangalore Press, and Mysore Chamber of Commerce.
+
+Let me tell you a story from China about Wang Chuanfu.
+
+## Wang Chuanfu: The BYD Playbook
+
+Wang Chuanfu 王传福 is an example of adopting a playbook similar to Visvesvaraya’s. Wang, the founder of BYD, started by reverse engineering batteries, eventually building phone components, cars, sky-trains, and creating nearly a million jobs.
+
+Tamil weddings are lavish, with expenses running up to 50 lakh to 5 crores. How many families ask: how do we allocate this capital more wisely? In Wang’s case, he used funds to reverse engineer batteries, turning them into productive capital, creating jobs and wealth. Both Visvesvaraya and Wang displayed engineering mastery—whether inventing irrigation systems or breaking down complex manufacturing processes for batteries, cars, and trains—all with a commitment to public good.
+
+## Wang’s Early Life and Family
+
+- Born in 1966 in WuWei 无为 (“town of no achievement”)
+- One of eight children; father was a carpenter, mother a homemaker
+- Father died when Wang was 13; mother died as he finished junior high
+- Family faced severe financial hardship; older brother dropped out to support the family, sisters married off, youngest sister given to foster care
+- Wang planned to enter vocational school for a job, but after his mother's death, ended up in regular high school, paving the way to university thanks to his brother's support
+
+## Education and Independence
+
+Wang had no guidance from parents or mentors, so he became an independent thinker, reading extensively. He attended Central South University of Technology as a chemistry major, almost by accident, as his first choice (wireless technology) did not admit him. After university, Wang pursued a master’s at Beijing General Research Institute of Nonferrous Metals, quickly rising to lead a research lab.
+
+## Founding BYD: Learning by Doing
+
+In 1992, following Deng Xiaoping’s push for reform, Wang was sent to Shenzhen as general manager of a joint-venture battery company. He named his new company BYD (比亚迪)—three random Chinese characters.
+
+Wang aspired to beat Japanese battery giants by reverse engineering their manufacturing processes, breaking them into small steps, and leveraging China’s cheap labor to build batteries by hand. This literal “human as a cog in a machine” strategy worked, sales soared.
+
+## Growth, Innovation, and Investment
+
+Wang’s cost-efficiency and chemistry expertise allowed BYD to catch up with Japanese competitors in nickel-cadmium, nickel-metal hydride, and lithium batteries. Early investment in lithium batteries and a penchant for reverse engineering set the stage for BYD’s later move into electric vehicles.
+
+Notably, Charlie Munger and Himalaya Capital invested in Wang, recognizing his genius, engineering aptitude, and relentless work ethic.
+
+## From Batteries to Cars
+
+With no experience making cars, Wang bought Qichuan Motors (which only had a license) and, despite opposition, decided to build cars. He bought 50 second-hand foreign cars, dismantled them, and learned how to make them—using the same reverse engineering playbook as with batteries.
+
+Wang’s ultimate goal: build electric vehicles of all types. Making cars, even basic ones, was a necessary step to learn and innovate.
+
+## Reflections for Tamil Families
+
+This is a reminder for Tamil families to look beyond traditional bubbles and status-based choices. The next “Tamil Wang Chuanfu” is likely to emerge from families that encourage hands-on learning, repairing, and maintaining technology, rather than those who only prioritize marks, grand weddings, or conventional professions.
+
+---
+
+*Let us reflect on what truly creates happiness and meaning—and how we can foster the next generation of builders, innovators, and problem-solvers.*
+
+## References
+
+1. Credits to Kevin Xu's writing on Wang Chuanfu.  
+   [Wang Chuanfu: A Name Everyone in the West Should Know](https://interconnect.substack.com/p/wang-chuanfu-a-name-everyone-in-the)
+2. BYD Company background.  
+   [BYD Company - Wikipedia](https://en.wikipedia.org/wiki/BYD_Company)
+3. Grand weddings of Tirunelveli  
+   [Tirunelveli Iruttukadai halwa shop heiress alleges dowry harassment – The News Minute](https://www.thenewsminute.com/tamil-nadu/tirunelveli-iruttukadai-halwa-shop-heiress-alleges-dowry-harassment)
+
+   [TN DMK Minister’s royal style wedding – Organiser](https://organiser.org/2022/09/19/94359/bharat/tn-dmk-ministers-royal-style-wedding-costing-over-300-cr-serving-4500-goats-24000-chicken-raises-many-eyebrows/)

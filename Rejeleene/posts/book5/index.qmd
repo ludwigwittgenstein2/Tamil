@@ -3,7 +3,7 @@ title: 'Book Summary: Immanuel Kant: Critique of Reason'
 author: Rick Rejeleene
 date: '2015-8-15'
 categories:
-  - Books 
+  - Book Review 
   - Philosophy
 draft: false
 description: 'Immanuel Kant & Tamil Nadu'
@@ -25,7 +25,7 @@ link-citations: true
 ---
 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Kant_gemaelde_3.jpg"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Immanuel_Kant_-_Gemaelde_1.jpg"/>
 
 #### Immanuel Kant
 

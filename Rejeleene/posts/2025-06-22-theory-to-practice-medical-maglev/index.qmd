@@ -1,0 +1,131 @@
+---
+title: "How Theory Informs Practical Application: Medical Devices and Maglev Trains"
+author: "Rick Rejeleene"
+categories: [Physics, Engineering, Technology, Innovation, Medical Devices, Transportation, History of Science]
+date: 2025-05-29
+date-format: "MMMM D, YYYY"
+format: html
+description: "Basic Guide to Maglev."
+---
+
+## What do MRI Machines and Maglev Trains Have in Common?
+
+Surprisingly: **Maxwell's Four Equations**.
+
+> Thanks to Dr. Kathir Krishnamurthi, who posed the timeless question:  
+> _அதை எப்படி வேலை செய்கிறது என்று அவர்கள் கேட்பார்களா? ஆர்வம் ஏற்படுமா?_  
+> (_How does it work? Do you get curious?_)
+
+To answer, let's explore applications using examples of medical devices that allow us to peek inside the human body without a scratch—**MRI, X-Ray, CT Scan, ECG**—and propulsion systems such as the **Maglev Train** that carry people without touching the ground.
+
+---
+
+## Part 1: Theory Informing Practice
+
+At the heart of medical devices like MRI and maglev trains are four elegant equations that unify electricity and magnetism:
+
+$$
+\begin{aligned}
+\text{a.} \quad & \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0} \quad \text{[Gauss's law for electricity]} \\
+\text{b.} \quad & \nabla \cdot \mathbf{B} = 0 \quad \text{[Gauss's law for magnetism]} \\
+\text{c.} \quad & \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \quad \text{[Faraday's law of induction]} \\
+\text{d.} \quad & \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t} \quad \text{[Ampere-Maxwell Law]}
+\end{aligned}
+$$
+
+- **Gauss's law for electricity:** How spread out the electric flux is from a point.
+- **Gauss's law for magnetism:** Magnetic field lines are closed.
+- **Faraday's law of induction:** Changing magnetic fields induce electric currents.
+- **Ampere-Maxwell Law:** Electric currents & changing electric fields both create magnetic fields.
+
+---
+
+## Part 2: Medical Devices
+
+### A. MRI (Magnetic Resonance Imaging)
+
+**Objective:** Create non-invasive images of the body using radio-waves and magnetic fields.
+
+**How does MRI work?**
+- Medical devices take advantage of our body's natural bio-electric signals.
+- Both magnetic and radio waves are passed through the body, exploiting hydrogen atoms, and the returning signals are used to create images.
+
+### B. X-Ray
+
+**Objective:** Create non-invasive images of the body using electromagnetic radiation.
+
+**How does X-Ray work?**
+- Electromagnetic waves are accelerated through a metal target and decelerate abruptly, producing x-ray photons.
+- These x-rays pass through the body to form images on a detector.
+
+### C. CT-Scan
+
+**Objective:** Create non-invasive images of the body to detect internal injuries using x-rays.
+
+**How does CT-Scan work?**
+- The CT scan machine uses an x-ray tube and detectors, rotates the patient, takes multiple x-ray projections at various angles, and reconstructs them to create computerized images.
+
+### D. ECG
+
+**Objective:** Non-invasive measurement of heart activity.
+
+**How does ECG work?**
+- Uses 10 electrodes (sensors) to create 12 leads.
+- Generates different views of electrical activity.
+- Electrodes pick up nuanced signals from the heart.
+- Signals are amplified and displayed as waveforms or printed.
+
+---
+
+## Part 3: Propulsion System – Maglev Train
+
+**Objective:** Engineer a magnetic propulsion system to transport loads from point A to point B.
+
+### How does a Maglev train work?
+
+Maglev = Electromagnetism + Levitation + Propulsion + Guidance + Control & Sensing + Diagnosis and Integration
+
+- **Core technology:** Principles of electromagnetism.
+- **Two types:** Electromagnetic attraction (EMS) & electrodynamic repulsion (EDS).
+
+#### Levitation
+
+- **Faraday's Law of Induction:** Changing magnetic fields induce currents, generating magnetic fields that allow the train to levitate.
+- Two main methods: **EMS** and **EDS**.
+
+#### Propulsion
+
+- **Linear Induction Motors:** Create linear motion from electricity using a primary and secondary track of coils and a moving plate with a three-phase motor.
+
+#### Guidance
+
+- **PID Control:** Keeps the train centered and stable.
+    - PID = Proportional (Kp), Integral (Ki), Derivative (Kd) gains.
+    - Used for precise levitation, stability, and smooth ride.
+    - Example: PID is also used in coffee makers for precise temperature control.
+
+#### Sensing and Diagnosis
+
+- **Sensor Redundancy:** Critical for safety.
+- **Central Onboard Controller:** Handles real-time control tasks.
+- **Real-time Operating System (RTOS):** For precise, high-speed, critical software operations.
+- **Fiber-Optic Communication:** For data transmission across the maglev system.
+
+---
+
+## From Theory to Practice
+![Shanghai Maglev Train](https://www.reuters.com/resizer/v2/NIWM24QBPJIFJJSDZEX3QRBKVU.jpg?auth=d7071dc9cdf7a80683f44a2a2083a6fb37cfa0e84733f62ca8cabae89c7a0268&width=1920&quality=80)
+
+The journey from Maxwell's electromagnetic papers to real-world applications in medical devices and maglev trains is a testament to scientific progress—**theory underpins application**.
+
+---
+
+## Sources
+
+1. [RTOS: Real-time operating system](https://www.geeksforgeeks.org/real-time-operating-system-rtos/)
+2. [Simple 1 page description of Maglev](https://physics.anu.edu.au/engage/outreach/_files/MAGLEV.pdf)
+3. [Origins of Maglev](https://www.depts.ttu.edu/phas/News_and_Events/Quark/TheQuarkFebruary2022.pdf)
+4. [Maglev Trains: Springer Tracts – Zhigang Liu](http://ndl.ethernet.edu.et/bitstream/123456789/66984/1/11.pdf)
+5. [MRI: Basics](https://www.desy.de/~garutti/LECTURES/BioMedical/Lecture12_MRI.pdf)
+6. [X-ray: how it works](https://www.gpmanesar.ac.in/GPContent/X-RAY%20MACHINE-converted.pdf)
+7. [Shanghai Maglev](https://en.wikipedia.org/wiki/Shanghai_maglev_train)

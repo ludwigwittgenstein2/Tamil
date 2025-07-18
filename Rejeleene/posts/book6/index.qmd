@@ -3,7 +3,7 @@ title: 'Book Summary: Limits of State Action by Von Humbolt'
 author: Rick Rejeleene
 date: '2017-2-4'
 categories:
-  - Books 
+  - Book Review 
   - Philosophy
 draft: false
 description: 'A Work on Political Philosophy'
