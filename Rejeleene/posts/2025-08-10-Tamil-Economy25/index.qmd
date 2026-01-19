@@ -1,0 +1,319 @@
+---
+title: "Tamil Nadu's Economy is growing & Who is benefitting?"
+author: "Rick Rejeleene"
+date: "2025-08-08"
+date-format: "MMMM D, YYYY"
+bibliography: references.bib
+csl: https://www.zotero.org/styles/ieee
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+---
+
+## Tamil Nadu's Economy is growing & Who is benefitting?
+
+Tamil Nadu posted a real GSDP growth of **11.19%** in 2024–25, the highest among Indian states and the first double-digit performance in 14 years, surpassing its budget projection (9%) by about 2.2 percentage points.
+
+On the surface, this figure is undeniably impressive. These numbers warrant a closer examination.
+These statistics are often weaponized as symbols of success in discourse of Tamil political parties. 
+Let’s encourage to form our own critical-independent assessment for a well-rounded perspective.
+
+
+## A Statistical Visualization of Tamil Nadu's Growth
+
+```{python}
+#| echo: false
+#| fig-cap: "Tamil Nadu Economic Growth Analysis Charts"
+#| fig-width: 7
+#| fig-height: 15
+
+
+import matplotlib.pyplot as plt
+
+# -------- Data --------
+sectorData = [
+    {'name': 'Services', 'value': 54, 'color': '#2563eb'},
+    {'name': 'Manufacturing', 'value': 33, 'color': '#dc2626'},
+    {'name': 'Agriculture', 'value': 13, 'color': '#16a34a'}
+]
+
+growthData = [
+    {'year': '2014-15', 'growth': 4.92},
+    {'year': '2015-16', 'growth': 5.8},
+    {'year': '2016-17', 'growth': 6.2},
+    {'year': '2017-18', 'growth': 6.8},
+    {'year': '2018-19', 'growth': 7.1},
+    {'year': '2019-20', 'growth': 5.9},
+    {'year': '2020-21', 'growth': -3.2},
+    {'year': '2021-22', 'growth': 8.5},
+    {'year': '2022-23', 'growth': 8.9},
+    {'year': '2023-24', 'growth': 9.69},
+    {'year': '2024-25', 'growth': 11.19}
+]
+
+investmentData = [
+    {'source': 'Government', 'percentage': 52, 'color': '#7c3aed'},
+    {'source': 'Private Indian', 'percentage': 29.9, 'color': '#ea580c'},
+    {'source': 'Foreign Private', 'percentage': 14.9, 'color': '#0891b2'},
+    {'source': 'Others', 'percentage': 3.2, 'color': '#64748b'}
+]
+
+stateComparisonData = [
+    {'state': 'Tamil Nadu', 'growth': 11.19},
+    {'state': 'Karnataka', 'growth': 8.2},
+    {'state': 'Gujarat', 'growth': 7.8},
+    {'state': 'Maharashtra', 'growth': 7.5},
+    {'state': 'Telangana', 'growth': 9.1},
+    {'state': 'West Bengal', 'growth': 6.9}
+]
+
+summary_stats = [
+    ("GSDP Growth 2024-25", "11.19%", "#2563eb"),
+    ("Services Sector Share", "54%", "#2563eb"),
+    ("FDI Inflows", "$2.9B", "#dc2626"),
+    ("First double-digit growth since", "14 years", "#7c3aed")
+]
+
+# Extract values for plots
+sector_names = [d['name'] for d in sectorData]
+sector_values = [d['value'] for d in sectorData]
+sector_colors = [d['color'] for d in sectorData]
+
+growth_years = [d['year'] for d in growthData]
+growth_values = [d['growth'] for d in growthData]
+
+inv_sources = [d['source'] for d in investmentData]
+inv_percentages = [d['percentage'] for d in investmentData]
+inv_colors = [d['color'] for d in investmentData]
+
+states = [d['state'] for d in stateComparisonData]
+state_growth = [d['growth'] for d in stateComparisonData]
+
+# Create figure and axes with constrained layout to avoid overlap warnings
+fig, axs = plt.subplots(6, 1, figsize=(10, 22), layout="constrained")
+fig.suptitle('Tamil Nadu Economic Growth Analysis', fontsize=18, fontweight='bold', y=0.98)
+
+# 1. Pie Chart: GDP by Sector
+wedges, texts, autotexts = axs[0].pie(
+    sector_values, labels=None, colors=sector_colors,
+    autopct='%1.0f%%', startangle=90, textprops={'fontsize': 10}
+)
+axs[0].set_title('Tamil Nadu GDP by Sector (2024-25)', fontsize=14, fontweight='bold', pad=10)
+axs[0].legend(wedges, [f"{name}: {value}%" for name, value in zip(sector_names, sector_values)],
+              loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=3, fontsize=10, frameon=False)
+
+# 2. Line Chart: GSDP Growth Over Time
+axs[1].plot(growth_years, growth_values, color='#2563eb', marker='o', linewidth=2, markersize=6)
+axs[1].set_title('Tamil Nadu GSDP Growth Rate Trend', fontsize=14, fontweight='bold', pad=10)
+axs[1].set_ylabel('Growth Rate (%)', fontsize=11)
+axs[1].set_xticks(range(len(growth_years)))  # Explicitly set tick positions
+axs[1].set_xticklabels(growth_years, rotation=40, fontsize=9)
+axs[1].grid(True, linestyle='--', alpha=0.4)
+axs[1].axhline(0, color='grey', linestyle='--', linewidth=1, alpha=0.5)
+axs[1].scatter(len(growth_years)-1, growth_values[-1], s=100, color='#2563eb')
+# Place annotation left aligned, inside the axes to avoid clipping
+axs[1].text(0.02, -0.25, '11.19% in 2024-25 (highest in 14 years)',
+            transform=axs[1].transAxes, ha='left', fontsize=9, style='italic')
+
+# 3. Horizontal Bar Chart: Investment Sources
+bars = axs[2].barh(inv_sources, inv_percentages, color=inv_colors, height=0.6)
+axs[2].set_title('Investment Sources in Tamil Nadu', fontsize=14, fontweight='bold', pad=10)
+axs[2].set_xlabel('Percentage (%)', fontsize=11)
+axs[2].set_xlim(0, 60)
+for bar, pct in zip(bars, inv_percentages):
+    axs[2].text(bar.get_width() + 1, bar.get_y() + bar.get_height()/2, f'{pct}%', va='center', fontsize=10)
+
+# 4. Bar Chart: State Comparison GSDP Growth
+bars = axs[3].bar(states, state_growth, color='#16a34a', width=0.6)
+axs[3].set_title('GSDP Growth: Tamil Nadu vs Other Major States (2024-25)', fontsize=14, fontweight='bold', pad=10)
+axs[3].set_ylabel('Growth Rate (%)', fontsize=11)
+axs[3].grid(True, axis='y', linestyle='--', alpha=0.3)
+axs[3].set_ylim(0, 13)
+for bar, val in zip(bars, state_growth):
+    axs[3].text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.25, f'{val}%',
+                ha='center', va='bottom', fontsize=10)
+
+# 5. Summary Key Statistics as colored text blocks
+axs[4].axis('off')
+axs[4].set_title('Key Statistics Summary', fontsize=14, fontweight='bold', pad=10)
+x_start = 0.05
+y_start = 0.8
+x_spacing = 0.23
+for i, (title, value, color) in enumerate(summary_stats):
+    axs[4].text(x_start + i*x_spacing, y_start, value,
+                fontsize=22, fontweight='bold', color=color, ha='center')
+    axs[4].text(x_start + i*x_spacing, y_start - 0.14, title,
+                fontsize=11, ha='center')
+
+# 6. Additional Economic Notes (as a textbox)
+summary_text = (
+    "- Government investment leads, but significant private sector participation drives growth.\n"
+    "- Note the COVID impact in 2020-21 and strong recovery in recent years.\n"
+    "- Services sector dominates with 54% share, spurring overall growth.\n"
+    "- Tamil Nadu leads major states with 11.19% growth in 2024-25."
+)
+axs[5].axis('off')
+axs[5].set_title('Additional Economic Notes', fontsize=14, fontweight='bold', pad=10)
+axs[5].text(0.02, 0.95, summary_text, fontsize=11, va='top',
+            bbox=dict(boxstyle="round,pad=0.6", facecolor='#dbeafe', alpha=0.4))
+
+# Note: No calls to subplots_adjust or tight_layout here,
+# since layout="constrained" manages layout automatically.
+
+plt.show()
+
+```
+
+## Shift to Manufacturing and Services is inevitable
+
+
+Many Tamils romanticize agriculture with even politicians speaking highly of Agriculture.  Nothing wrong with appreciating Agriculture, 
+however lot of Tamils are not aware that the trend of agriculture jobs is declining, due to industrial revolution.  There's many factors for decline of agriculture jobs, primarily due to use of mechanization, equipment, better inputs, seeds, fertilizers. With such improvement and surplus production, We do not need more people back into agriculture. For example, Drip irrigation and improved crop planning increased 138%, a variety of Banana in yield, which corresponds to a 2.5 tons per hectare increase [@manikandan2014].
+
+Agriculture is important, We'd go deeper into this sector for another time. Many times the farmers or laborers in Agriculture are attracted into manufacturing. 
+This is due to higher salary offered due to market conditions. We might have more economic disparities in rural-urban divide in Tamil Nadu. 
+This is a phenomenon across economies of the world; College educated professionals perform better economically than rural counter-parts with no education. 
+Therefore, I urge readers to gain highly in demand college degrees.  
+
+---
+### Some of the job titles that are available within these sectors:
+
+::: columns
+::: column
+#### Agricultural Jobs
+- Farmers
+- Farm supervisor
+- Farm Owner
+- Laborer
+- Livestock & Poultry management
+- Agri-Sales
+- Fruits and Marketing
+- Agriculture engineers
+- Agriculture Lecturers and Professors
+:::
+
+::: column
+#### Manufacturing Jobs
+- Production Supervisor
+- Plant Manager
+- Quality Controller (QC)
+- Assembly and Machine Operator
+- Manufacturing Engineer and Manufacturing Engineering Lead
+- Mechanical Engineer
+- Senior Executive Quality Assurance (Supplier Management)
+- Operations Manager
+- Operations Engineer
+- Production Head
+- Manager - Operations
+- Assembly Operator
+- Pharma Manufacturing Coordinator
+- Production Planning Engineer
+- Executive
+- Design Engineer (mechanical/electrical)
+- Maintenance Engineer
+- CEO, CFO, CTO
+:::
+
+::: column
+#### Service Sector Jobs
+- IT and Software Development roles
+- Healthcare and HealthTech
+- Finance roles in Banking
+- Automobile Sector roles
+- Retail and E-commerce roles
+- Media and Creative Services
+- SaaS software roles
+- Delivery and Logistics roles
+- Doctors 
+- Nurses 
+- Healthcare roles 
+- Teachers and Lecturers
+- Education Sector roles 
+- BPO roles 
+- Customer Service Representatives 
+:::
+:::
+
+There's also strong rural-urban migration which has been taking place since industrial revolution. 
+Since 2000s, Tamil Nadu has gained close to $13.84 billion in Investments [@investindia2025]. 
+For 2024-2025, Tamil Nadu gained close to  US $2.903 billion [@tamilnaduFDI2025]. 
+
+
+## What does 11.19% growth actually mean for Tamil Nadu?
+
+This means more goods and services are being produced
+
+This can come from either:
+
+- **Aggregate demand** (increased consumption/investment)  
+- **Aggregate supply** (increased productive capacity — new factories, more labor pool entering, infrastructure, population growth)
+
+
+## Where’s this growth coming from?
+
+- **FDI inflows**: $2.9 billion equity
+- **Manufacturing expansion**: 33.37%
+- **Service sector growth**: 53%
+
+**Sectors growing**: IT, ITes, Software services, financial tech support, healthcare, tourism, logistics tech, edtech, retail
+
+**Within IT**:
+- SaaS: ~35,000 employees, generating over $3 billion in revenue, higher value per employee vs. traditional ITes.
+- Traditional IT: help desk, business process outsourcing, call centers, data processing, data services, web development, mobile app development.
+
+## Who is really benefitting from this economic growth?
+
+Growth is **unevenly distributed**, driven by capital inflows and demand.
+
+For **Example: VinFast factory in Tuticorin**:  
+If one factory produces 100,000 cars with 5,000 employees, and a second identical factory is added → 200,000 cars with 10,000 employees.  
+
+**Productivity hasn’t changed** — to create long-term prosperity, Tamil Nadu should aim for **productivity-driven growth** (200,000 cars with 5,000 employees).
+
+**Inference**:
+- Chennai & Coimbatore are leading growth hubs
+- Real estate in smaller towns will grow slower
+- Service and manufacturing workers benefit most
+- Agriculture and clerical workers benefit less
+- A college degree is often required to enter service sectors
+
+**Growth does not guarantee**:
+- Significant rise in per capita income (averages skewed by low-paying sectors)
+- Productivity increases (if growth is demand-driven)
+- Higher living standards for the majority
+
+**Technology transfer limits**:  
+Data-centers and tech offices in Chennai/Coimbatore bring skills, but **main IP stays in the West**.
+
+
+## Which groups are specifically benefitting?
+
+- Wealth concentration is rising among a **selected few**, notably Tamil politicians
+- **Evidence**: 42% asset growth among re-contesting TN MLAs (2016→2021), possibly much higher (150–400%)
+- Business owners close to politicians benefit most
+- Governance quality and legislative policy shape who wins from growth
+
+
+## What is the path forward for all Tamils?
+
+1. **Demand accountability** from Tamil Nadu's State Legislature and institutions
+2. **Inclusive policies** — track distribution of growth benefits
+3. Replace unqualified legislators with **professionals** able to manage the economy
+4. Focus on **quality of life and equal opportunities** — not just headline GSDP growth
+
+
+## Sources
+
+1. [The Hindu report by T. Ramakrishnan](https://www.thehindu.com/.../after-14.../article69897160.ece)  
+2. [Economy of Tamil Nadu - Wikipedia](https://en.wikipedia.org/wiki/Economy_of_Tamil_Nadu)  
+3. [Invest India: Five Indian states with highest FDI in FY 2024-25](https://www.investindia.gov.in/.../five-indian-states...)  
+4. [NITI Ayog Economic Report 2025](https://www.niti.gov.in/.../Macro-and-Fiscal-Landscape-of...)  
+5. [TNPSC economy data](http://www.tnpscthervupettagam.com/.../March_15...)  
+6. [Economic Times: New Data Center in Chennai](https://economictimes.indiatimes.com/.../106782450.cms)  
+7. [SaaS Report from SaaSBoomi](https://saasboomi.org/.../indias-100b-domestic-software.../)  
+8. [VinFast in Tuticorin - AP News](https://apnews.com/.../india-vinfast-ev-auto-vietnam...)  
+9. [ADR: Analysis of Assets in TN Assembly Election 2021](https://adrindia.org/.../Analysis_of_asset_comparison_of...)  
+10. [New Indian Express: TN posts 11.19% GSDP growth](https://www.newindianexpress.com/.../tamil-nadu-posts...)  
+11. [MOSPI: GSVA/NSVA by economic activities, Tamil Nadu](https://mospi.gov.in/GSVA-NSVA)

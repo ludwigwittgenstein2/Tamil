@@ -1,0 +1,88 @@
+---
+title: "Caste in Tamil Nadu by Anthropologist Diane P. Mines"
+author: "Rick Rejeleene"
+date: 2025-08-14
+date-format: "MMMM D, YYYY"
+description: |
+  Anthropologist Diane P. Mines documents Caste in Tirunelveli, Tamil Nadu 
+categories: [India, Caste, Tamil Nadu, Anthropology, Book Review]
+---
+
+<style>
+.quarto-title h1.title {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+</style>
+
+A Great work by Anthropologist Diane P. Mines.
+
+<div style="float: left; margin-right: 15px;">
+  <img src="https://m.media-amazon.com/images/I/71ehSO20JML._SY522_.jpg" alt="Caste in India - Book Cover" width="200"/>
+</div>
+
+---
+## Why Endogamy has persisted in Tamil Nadu? 
+### A Comparative Reflections, with ponderings from Russian Society.
+
+It's a short work, which is easy to cover and digest.  
+I would recommend this work to everyone, who is curious about Caste in India.  
+I've been interested in Caste for a while. I wrote an Essay on Caste sometime-ago, with no conclusions.
+
+As I slowed to read more broadly, I'd say the wait has slowly paid off, breadth of covering more is helping me to notice nuances given by scholars.
+
+I want to add findings from Russian Society, who experienced great social engineering from 1861's abolishment of peasantry to Russian revolution World War I, World War II. No longer, you had identity fixed as peasants in Russian society, many moved to Urban spaces in St. Petersburg, Moscow, Vladivostok.  
+I am inclined to ask -- Why none of the Indian writers took deeper understanding of other societies to give more pragmatic approach to the problem of Endogamy?  
+B.R Ambedkar's works are popular in Caste.
+
+I want to find out Hindu responses. I'd like to find how they view, understand from their own perspective. This might allow me to conclude findings, discoveries or have enough material to publish.
+
+In Tamil Nadu, politically, castes are essential for social-organization. The Rhetoric, might not validate, be accurate from history, yet popularly caste is used to manage social-groups. Tamil Political parties are social organizations for castes votes. The Member of Legislative Assembly are picked based on popularity, caste and votes in a specific district. For Political votes, Tamil politicians might describe caste in their own way to advance political interests. For example, I was surprised to find a famous Tamil Politician, inaccurate describe beliefs of Hindus.
+
+My key question, It's been a Century after Ambedkar has written on Caste. He describes, the problem of India's Caste as, "Origins of Mechanisms for Endogamy" He clearly identified, went great in detail, gave lengthy prescriptive solutions. Yet endogamy remains, did not change much in Tamil Nadu, Why?  
+This book describes Castes around villages in Tirunelveli.  
+The descriptions are from early 2000s, in rural setting.
+
+I validate all the findings in this work. It reminds me of a brilliant work. *Caste, Class, and Power in Tanjore Village* by André Béteille.
+
+## Outline of this work
+
+1. Caste and Cultivation I: Mutuality Caste and Cultivation  
+2. Caste and Cultivation II: Centrality  
+3. Personhood and Rank  
+4. Caste and Colonialism  
+5. Caste and Indian Nationalism  
+6. Untouchability  
+7. Some Other Things to Know about Caste  
+8. Conclusion
+
+
+## Excerpts from the Book:
+
+### Chapter 3: Personhood and Ranking of Castes:
+From Villages around Tirunelveli, Tamil Nadu.
+
+Streets are named for the caste groups that predominate.  
+What is more, the ordering of the streets from north to south, follows the generally recognized rankings of these castes.
+
+That is, the northernmost street is the Agraharam, historically the neighborhood of vegetarian Brahmans. The next street is Pillaimar, home to high-ranking, vegetarian cultivators. Muppanar street is next, followed by Thevarmar. 
+
+Members of both of these castes eat meat, and, while the Muppanars are considered farmers and merchants, villagers associate Thevars with violence, partly as a result of their historical involvement with politics, rebellion, and military service and partly as a result of British designations of this caste as “criminal.”  
+While there was some debate about the relative ranking of these two meat-eating castes, many did agree that Thevars, being more associated with violence, ranked lower despite the fact that Thevars were the most politically and economically powerful caste in the village. *(Power and purity, as we shall see, are different scales of value. Brahmans have purity but little power; Thevars have power but little purity.)*
+
+> "Untouchables were considered so impure, that they ought not to live in the village at all. And even to this day some families from the higher castes,  
+> balk at allowing Untouchables to enter their houses."
+
+I would say the social reality of in these village are Semi-feudal.  
+Customs, practices, beliefs are Semi-feudal, due to occupation.  
+If you are struck by the highlighted passage, explore news on consequences of inter-caste marriages in these villages.
+
+**Source:**  
+
+[1](#) * Goodreads: Caste in India (Key Issues in Asian Studies)* by Diane P. Mines  
+<https://www.goodreads.com/review/show/4776905584>

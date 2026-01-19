@@ -1,0 +1,607 @@
+---
+title: "Economic Transitions, From Feudalism to Economic Prosperity"
+subtitle: "From French Revolution, Farms to San Francisco baristas and Tamil Nadu's factories"
+author: "Rick Rejeleene"
+date: 2025-08-22
+date-format: "MMMM D, YYYY"
+categories: [Economics, History, Tamil Nadu, Industries]
+description: | 
+  Synthesis of Socio-Economic History. An applied path towards generating wealth for Tamil-town. 
+  A theory towards prosperity of Tirunelveli as an example
+toc: true
+execute:
+  echo: false
+  warning: true
+  error: true
+jupyter: python3
+number-sections: true
+format:
+  html:
+    theme: cosmo
+    toc-location: left
+---
+
+## Outline
+1. Historical Shifts
+2. From Feudalism to Industry
+3. Agriculture and Services
+4. Current Economic Conditions of Tamil Nadu: The Chief Minister of Tamil Nadu's Economic Dreams
+5. Learning from American counties: Service Sector and Advanced Manufacturing Hubs
+6. Economic Productivity: How can the town of Tirunelveli, transition into greater wealth? 
+7. A Theory towards prosperity of Tirunelveli
+8. Conclusion
+
+## Historical Shifts
+
+> "Does working as a San Francisco barista in 2024 make you richer than a Michigan auto assembly worker in 1950?"
+>
+> — A thought experiment on wages, productivity, and transitions
+
+A Starbucks Barista makes from $34,395 to $56,077 in 2025[^1]. In comparison, a Michigan auto assembly worker in 1950 earned approximately $1.40-$2.00 per hour, which equals roughly $17.50/hour or $52,500 annually in 2024 dollars[^2]. The barista is richer. The goal of this comparison is to communicate, the changing dynamics of the economy and jobs. 
+
+Recently, policy-makers, industrialists in Tamil Nadu, Gujarat are drumming about manufacturing jobs. 
+It is so loud, that it reached a reader, across continents in America. 
+This made me wonder about manufacturing, service sector jobs? 
+
+Moreover capital, is flowing effortlessly into Gujarat[^3], Tamil Nadu, India crossing cultures, languages, customs and borders. 
+For example, Swiggy, famous food delivery app, which many Indians happily are using to push a button for feeling happy, satisfy their hunger feelings. 
+Swiggy was primarily built using South African capital, planted in corners of street of Bangalore[^4].
+
+In this work, I provide **five** contributions
+
+a. **Historical perspective:** Giving the reader, historical picture of economic transitions
+b. **State level analysis:** Analyzing Economic conditions of Tamil Nadu 
+c. **Local Contextualization:** Localising what it means for state of Tamil Nadu, Tirunelveli
+d. **Prosperity path:** A theory towards prosperity of Tirunelveli
+e. **Policies:** Steps towards reform and prosperity 
+
+
+### From Feudalism to Industry
+
+Historically, the nature of jobs and economic activity, has been changing since the end of feudalism, gradually starting before, the 1789 French Revolution and accelerating into Industrial Revolution until 1900s [^5]. During the Industrial revolution, farmers began taking industry jobs, because it paid higher wages in France, England, Germany and Russia. Russians endured hardships socially and politically, culminating [^6] into Russian revolution tearing social fabric of Russia. 
+
+Even with the recent explosion of the Chinese city, Shenzhen, the trend is same: Farmers were drawn into manufacturing jobs, due to higher wages. Shenzhen was a small fishing hub and became a global powerhouse of manufacturing and technology echoing similar story, which is why, I implore you to read History. I leave detail story of French Revolution for another time.
+
+The transition from feudalism to capitalism fundamentally transformed society, social property relations and economic structures[^7]. Handicrafts and artisanship, the powers of the urban-based regulatory guilds, and the traditional networks of masters, apprentices, and journeymen were all eclipsed as industrial capitalism emerged[^8].
+
+### From Industry to Services
+
+We can notice a trend in decline of manufacturing jobs worldview due to increase of technology and automation, not due to political party or policies. Even in China, human labor is becoming more expensive for repetitive factory jobs, there is decline of manufacturing jobs. 
+
+In advanced economies, structural shifts have occurred from agriculture to manufacturing, and later to services. 
+This raises questions about the wages, wealth, labor, and whether these changes are positive?[^9]
+
+Largely it has been fairly positive. In American economic history, productivity of farms have increased with fewer farmers, laborers requiring to maintain acres, acres of farmland [^10]. My recent visit to a rice farm in England, Arkansas, confirmed these observations. 
+I found three agricultural workers, seamlessly managing arable 300 acres of land. 
+Out of the 300 acres, 200 is arable and cultivated for rice. 
+They managed it using Semi-automated John Deere equipment, hybrid input seeds. 
+This is observed even Globally. Consider the case of China, the productivity in agriculture has been increasing due to mechanization[^16].
+
+### Agriculture and Services
+
+Take another example of my town — Tirunelveli, India, the small town of million people. 
+
+We can observe number of farmers, and farm-helpers are decreasing, many leaving towards service or manufacturing sector jobs, while productivity has increased. 
+However, the value added in non-agricultural sector is higher than agriculture resulting in agricultural productivity gap[^11]. In America, the data inferring from statistics is indicating outstanding advances,[^15]From 1961 to 2000, agricultural output nearly quadrupled, mostly achieved by increases in productivity as new resources were brought into the production process, the use of inputs intensified, and the efficiency with which resources were used improved [^10].
+
+For Tamil Society, particularly in Tiruneveli, job transitions is not fully linear. 
+This might look like former farmers, farm owners becoming as small business owners. 
+Ranging occupations are tea-shop owners, sweet-shop owners, restaurant shop-owners, rice mill owners or even entering as politicians. 
+One famous recent example is Tamil Actor Karunas, who owns ten to fifteen acres of farmland in Sivagangai, Tamil Nadu, having few people to manage his farm [^12].
+
+We can notice similar shift in manufacturing, more automation and technology, the productivity is increasing, with higher output. Compared to 150 years ago, we now have surplus food, goods, and services, and our standard of living has increased, lifting us into greater comforts[^13]. 
+
+The Richest counties in America are examples to bolster this, becoming hubs occupying high-value service sector jobs. Counties such as Loudon, Los Alamos, Santa Clara, Nassau, Tarrant are occupying top brackets of ranking in income, which forces us to ask, Why and How? Parallels exist outside of America, For example, São Paulo, Brazil is an economic powerhouse building aerospace giants such as Embraer and other lucrative service sector jobs. 
+
+
+#### The Chief Minister of Tamil Nadu's Economic Dreams
+
+The Chief Minister of Tamil Nadu, M.K Stalin has been pushing towards growing the economy towards $1 trillion. 
+We can understand from few reports, direction, state of the economic conditions about direction of Tamil Nadu's Economy. 
+
+
+#### Deloitte report for Tamil Nadu FICCI: 
+
+<object data="https://www.thehindu.com/news/national/tamil-nadu/66792686-TN-FICCI-Report.pdf" 
+        type="application/pdf" width="100%" height="600px">
+  <p>Your browser cannot display the PDF. 
+     <a href="https://www.thehindu.com/news/national/tamil-nadu/66792686-TN-FICCI-Report.pdf">Download it here</a>.
+  </p>
+</object>
+
+**Beyond the reports, politicians promises**
+
+> Unrealistic assumptions misses ground-reality
+
+The report assumes high optimism with 16% Gross State Domestic Product growth, which is unlikely. 
+With that assumption, the economy would grow into $1 trillion by 2031. This level is highly unlikely. 
+For incredible high levels, you'd need investment pouring for capital accumulation, at unprecedented levels. 
+Structurally the institutions, policy and justice system need to be supportive to facilitate this growth. 
+Tamil Nadu's Justice System or broader India's justice system is radically slow, might need more reform, improvements. 
+
+Secondly, Labor productivity is still low in Tamil Nadu, which I have described, shared in many discussions. 
+To increase this, the quality of education needs to go up at mass scale, might mean training teachers/professors both in pedagogy, upgrading curriculum, skills requried for industry. 
+
+Additionally the healthcare system needs to work for all, including the poor without wait times, for entire state. 
+At present, the state does have good healthcare facilities, yet there is a rural-urban access gap, poor infrastructure and cost disparities plaguing people.   
+
+Aravind eye hospital present in Tamil Nadu, is a pioneer of socialistic healthcare model, where there's affordable healthcare for all, regardless of socio-economic status. Another key area is to consider research as part of education and industry. The outcomes of research are improvement in productivity, newer tools, newer processes. At present, the levels for research in all government, private, non-profits are abysmally low. 
+
+Manufacturing sector is facing newer competition from South-East Asia, as Textile industry has faced competition from Bangladesh. 
+The sector has capacity constraints, which means, less likely to grow at 18%. 
+In my own analysis, the manufacturing sector of Tamil Nadu is around Hosur, Coimbatore, Tirrupur.
+These firms are mostly owned by rurally raised entrepreneurs. The children of Middle-Upper class shun jobs in manufacturing or creating them, due to cultural stigma.
+They are perceived as lower prestige jobs and firms. Therefore, many of the manufacturing units are owned by rurally raised men. 
+These rural entrepreneurs lack the urban exposure and cosmopolitan outlook needed to raise their firms to globally competitive levels.
+In Tirunelveli, the second, third, fourth generation industrialists are reluctant to culturally adapt to global levels. 
+In this case, it means, implementing best practices, supporting improvement in processes, investing in technology, equipment.  
+
+There's much more, power sector's capacity to facilitate manufacturing, requiring higher quality engineers, managers to maintain, operate, create newer power plants. 
+At times, Tamil Nadu has faced severe crisis in power, in such a case, one must let go of dream with high economic growth. 
+And there's sub-levels problems within these, which we'll leave for another day.
+In increasing labor productivity, Women are at lowest levels to join the workforce. 
+The reports do not cover, cultural barriers, issues for women to join the workforce. 
+Supporting woment to participate in the workforce will help entire economy. 
+In terms of access to financial credit, the state can do better. 
+
+For more detailed perspective of entire India, consider India's official Economic survey.  
+A broader economic report for entire India, with details of all states, is published in Economic Survey[^14]. 
+
+
+#### Madras School of Economics on Tamil Nadu by K.R. Shanmugam, C. Rangarajan
+
+Professor Rangarajan is former Governor of RBI and Indian Economist. 
+He surveys the economic condition of the state, deftly for the economy to reach $1 trillion. 
+
+He says, the primary and secondary sector are subjected to more volatility, than services.  
+The high volatility in both primary and secondary sectors implies that
+the risk-adjusted returns from them are low, so they may find it difficult to attract private investments
+
+*Tamil Nadu tops in the production of banana, coconut, and clove in India. It is also one among the leading producers of sugarcane, cotton, turmeric, kambu, maize, rye, groundnut and oil seeds. Tamil Nadu is India's 4th largest producer of rice behind West Bengal, Uttar Pradesh, and Punjab. Tamil Nadu’s Primary sector (consisting of agriculture crops, livestock, forestry and logging, fishing and aquaculture, and mining and quarrying) grew at an average rate of 4.95 percent from 2012-13 to 202223. This rate is also relatively low, as compared to its average growth of 6.05 percent during 2005-06 to 2011-12. Within the primary sector, during 2012-13 to 2022-23, the average growth of agriculture (crop) and fishing declined while that of livestock, forestry and mining increased*
+
+*the government finances are under stress. According to the recent budget, the total outstanding debt of Tamil Nadu state will reach ₹ 6.53 lakh crore at the end of fiscal year 2022-23, i.e., the debt-GSDP ratio will reach 26.3%, as against the 20% ceiling suggested by the Fiscal Responsibility and Budget Management (FRBM) Review Committee.This high debt-GSDP rate may be a hindrance to growth*
+
+This might also affect the level of growth. 
+Because, the interest payments will take up revenue, might impact less money for roads, hospitals, schools. 
+We can think this way, if a Family's EMI is extremely high, they what will happen? 
+Spending on future investment will be less. 
+Rangarajan suggest 18-20% is the healthy level of debts. 
+
+In terms of achieving the $1 trillion, best likely might be around 2033-36. 
+
+<!-- MSE Working Paper PDF -->
+<iframe src="https://www.mse.ac.in/wp-content/uploads/2024/07/Working-Paper-260.pdf" 
+        width="100%" height="600px" style="border:none;">
+</iframe>
+
+
+His reports are realistic. He's given professional recommendations for three sectors. 
+I'd say, I'd add there's sociological aspect, institutions need to perform healthy in synergically. 
+This was one of the theories of growth, from Daron Acemoglu's. His theory of growth emphasizes, inclusiveness of economic, political institutions are the fundamental drivers of sustained economic growth. One major component is extractive institions, or say a small elite extracts resources and wealth for their benefit. 
+Can we ask the question, Do we find such elite that extracts within Tamil Nadu? 
+
+
+<!-- IPPR Journal PDF -->
+<iframe src="https://ippr.in/index.php/ippr/article/view/163/76" 
+        width="100%" height="600px" style="border:none;">
+</iframe>
+
+This reminds of History of Portugal, Brazil both of these countries couldn't perform, develop their country in competing with other European powers. 
+The ruling elite fell towards extracting resources for their own benefit, rather than promoting socio-economic development of their entire people. 
+Meanwhile, the other powers channeled wealth into commerce, shipbuilding, manufacturing, industrialization that lead towards creating broader middle class. 
+Now, I wonder about Tamil Nadu as a State? 
+
+In Professor Rangarajan's analysis and reports;
+From my perspective, instititonal reform is essential for Tamil Nadu, which can be added in the economic reports. 
+Another important factor is creating jobs, and what type of jobs are being created and why? 
+This is a crucial question which needs to be included in Economic health of Tamil Nadu. 
+The survey at the moment describes quantitatively, the recommendations can include how to on instition, social, political levels. 
+
+
+#### Richest U.S. Counties: Service Sector and Advanced Manufacturing Hubs
+
+In terms of wealth, per capita, higher standard of living. 
+There are numerous examples throughout the world, for now, Let's focus on American counties. 
+One incredible accomplishment is the counties all have website, present detail activities of finances, jobs and report to the people. 
+This can be emulated as a best practice from the counties in America. 
+
+In comparison of the wealthiest counties in America, let's ask why and how they became wealthy?
+
+The Reasons for their wealth, higher per capita is due to incredible productivity. And, majority of the workers in these counties are employed in Service-sector[^8].
+There's also advanced manufacturing, like technology, hardware,  electronics, computers, data centers. In short, higher value adding activties generate the higher median income in these counties. 
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| 
+import pandas as pd
+
+data = {
+    "Rank": list(range(1,16)),
+    "County / Location": [
+        "Loudoun County, VA", "Falls Church (ind. city), VA", "Santa Clara County, CA",
+        "San Mateo County, CA", "Fairfax County, VA", "Marin County, CA",
+        "Howard County, MD", "Arlington County, VA", "Douglas County, CO",
+        "Nassau County, NY", "Los Alamos County, NM", "San Francisco County, CA",
+        "Hunterdon County, NJ", "Morris County, NJ", "Somerset County, NJ"
+    ],
+    "Median Household Income (2023)": [
+        156821, 155071, 140258, 136837, 133974, 131008, 129549,
+        128145,127443,126576,119266,119136,117858,117298,116510
+    ],
+}
+
+df = pd.DataFrame(data)
+
+def tier_color(val):
+    if val >= 140000: return "background-color: #2e7d32; color: white;"    # Green
+    if val >= 125000: return "background-color: #f9a825; color: black;"    # Yellow
+    return "background-color: #c62828; color: white;"                      # Red
+
+styles = pd.DataFrame(
+    [[""]*len(df.columns)] * len(df),
+    index=df.index,
+    columns=df.columns,
+)
+for i, val in enumerate(df["Median Household Income (2023)"]):
+    styles.iat[i, df.columns.get_loc("Median Household Income (2023)")] = tier_color(val)
+
+styled = (
+    df.style
+      .apply(lambda _: styles, axis=None)
+      .set_table_styles([{
+          "selector": "th",
+          "props": [("background-color", "#0d47a1"), ("color", "white"), ("border", "1px solid #000")]
+      }])
+      .hide(axis="index")
+      .format({"Median Household Income (2023)": "${:,.0f}"})
+)
+
+styled
+```
+
+One can apply reductionism to draw conclusions from the data. 
+Wealthier counties are clustered around high economic clusters.
+Wealthier counties are most likely to be knowledge hubs. 
+Wealthier counties have higher levels of education, which also translate into higher productivity and human capita. 
+Los Alamos has specialized concentration of Scientists and Engineers, not to mention the most amount of PhDs per capita. 
+
+While this is a minuscule of population, we can clearly notice most of the higher per capita is among service and advance manufacturing workers. 
+Tamil Nadu is a developing state in developing country, India. The market, people, infrastructure is developing, so there's long ways to go. 
+The Market depth is lower in Tamil Nadu. This means amount of deep buyers and deep sellers, i.e few industrialists, politicians have large amounts of capital. 
+In terms of economic definition, it means ability of a market to absorb relatively large orders (buying or selling) without causing large movements in price.
+A deep market means, many buyers with many sellers and high liquidity, shallow is few buyers, sellers and low liquidity. 
+
+However, I argue that the policy makers, politicians, leaders need create the path towards reaching the goals. 
+Actively work on a public working document that captures the steps towards the Goal and growth. 
+In this way, feedback from public can be iterated faster and everyone is aware of where the state is moving economically. 
+At present, such dynamic, iterative documentation does not exist but could be created for public benefit.
+
+## Lessons for town of Tirunelveli
+
+```{=html}
+<style>
+  .map-embed {
+    width: 100%;
+    height: 80vh;   /* adjust height: e.g. 900px or 90vh */
+  }
+</style>
+
+<div class="map-embed">
+  <iframe
+    width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=77.6567%2C8.6139%2C77.8567%2C8.8139&layer=mapnik&marker=8.7139%2C77.7567">
+  </iframe>
+</div>
+<small>
+  <a href="https://www.openstreetmap.org/?mlat=8.7139&mlon=77.7567#map=11/8.7139/77.7567">View larger map</a>
+</small>
+```
+::: {.callout-tip}
+
+Geographically, the town is near a river - thamirabharani.
+This helps the local agriculture. There's transport infrastructure, railways, roads and airport about 30-40 minutes from the town. 
+Connectivity will allow movement of goods and services, producing good economy for the town. 
+
+
+### Economic Productivity
+#### For town of Tirunelveli, What would enable higher economic growth and greater wealth? 
+:::
+
+At its core, based on my understanding, economic prosperity depends on productivity growth [^9].
+Higher productivity enables, higher output and in return wages to rise, thus wealth to rise. 
+There might be bottlenecks such as labor structure, instititonal management, policy that prevents from shared increased wages for all. 
+
+:::{.callout-important}
+Concisely, Our theory of economic growth for Tirunelveli. The town of Tirunelveli can increase inclusive prosperity through productivity advances, creating agro-industrial output, moving into higher value manufacturing and integrating into global services, economy, through increased investment in human capital, reforming institutions and expanding capital-networks. 
+:::
+
+At present, the service sector of Tirunelveli is missing adding higher value activities. 
+Majority of the educated white-collar children are leaving the town, due to lack of opportunities given to them. 
+Structurally, this is creating an economic gap in the town, as many are employed in the service sector elsewhere.
+Service sector can absorb lot of mentally labor intensive tasks employing higher-value added tasks decision making, such as conducting market analysis to identify new opportunities, new products. 
+
+A Manufacturing sector also can soak lot of labor doing low-value added tasks such as repetitive tasks, or smaller labor doing high value added tasks such design and engineering, or even amplify each worker's output using robotic automation technology. Ultimately, Labor cannot capture more compensation, wages than the value they are adding from their economic output. 
+
+For example, Open AI and many big tech companies are paying wages close to $1 million USD, due to demand of their employee's labor, product's consumption and demand in the market. The products and services are generating billions in revenues, which justifies higher wages. So if we want to be wealthier, wages must go up for children of middle class in Tirunelveli. For wages to go up, we need to shift from low value mass employment in manufacturing to mix of high-value advanced manufacturing employment, which includes large service sector.
+
+An example to explain this, can be used from manufacturing sector, Cars. It used to take incredible human labor, such as welding, assembly, painting without automation and technological support in 1940s. So cars were more resource intensive in 1940s. However, In 2023, using robotic automation, We are much better and efficient at making cars, so productivity has increased, and that is correlated with higher wages. As wages have risen, so we are become wealthier.
+
+This means in the town of Tirunelveli or urban city of Chennai, Tamil Nadu, economic transitions need to take roots. 
+The towns need to add most value to their capital by putting it to use in high value service sector jobs, as professional services, legal, accounting, consulting, engineering & scientific research, financial sector, banking, private capital with economic links to urban cities of the world. 
+At present, many of the private capital is wasted by opening one or more textile stores, two more restaurants, three more hotels. This is oversupply and waste of resourcess. For the future, as machine learning is rapidly progressing, many of the service sector's low value tasks are going to be automated, this might decrease in demand of the jobs, however it might also lead towards newer type of jobs or more specialized sector, Which we'd have to wait to discover.
+
+#### Economic Picture of Tirunelveli
+
+Tirunelveli is Semi-Agriculture Economy[^17]. 
+
+*Tirunelveli is a town located in Southern Tamil Nadu. Agriculture occupies the town's economy, with about 12.35% of the workforce employed cultivating cotton, paddy, millets, pulses, cash crops like bananas and oilseeds. Secondary sector as manufacturing occupies about 7-8% of the job creation, with small scale industries employing roughly 37,500 workers. Tertiary sector consists of healthcare, education, financial service, hospitality and logistics, contributing 74.6% and contributing majority of the town's economy. Even-though large number of service sector enterprise 21,000 are present in the town; it does not translate into higher per capita. This is due to lower profit margin, majority as micro, small business and family owned, which have low productivity. This translates into lower wages resulting in low per capita. Structurally, the service sector consists of grocery stores, coaching centers, food/beverages, IT/ITES, hospitality, hospitals, education, micro finance are low value added with high competition having low margins. The town averages per capita of approximately $1300 despite consisting of large number of service sector enterprises.*
+
+For data, We'd rely on the official district's statistical handbook. 
+
+<iframe src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://cdn.s3waas.gov.in/s36a9aeddfc689c1d0e3b9ccc3ab651bc5/uploads/2025/03/2025030314-1.pdf" 
+        width="100%" height="600px" style="border:none;">
+</iframe>
+
+**How can the town of Tirunelveli, transition into greater wealth?**
+
+In terms of increasing per capita, generating wealth, At present, it's about US$2,800 for year 2022-2023.
+The town requires capital investment in infrastructure, increase in human capital and creation of newer sectors. 
+This is possible through establishing newer trader networks with cities of the World. 
+Traditionally, towns of Tamil Nadu are trading among themselves or nearby state, consuming within. 
+In this case, the town of Tirunelveli has to figure out to create goods and services to these markets. 
+
+Firstly, Increasing productivity is possibly the most important goal. 
+Secondly, Transitioning to higher value adding activities might be the second most direction. 
+Thirdly, Increasing human capital & credit can enable the first two possibility. 
+
+Establishing newer trading partners, can help the town surpass intra-town boundaries.
+This means, the town of Tirunelveli has to trade with Sydney, London, New York City, Dallas, Los Angeles, Tokyo. 
+There might be other cities, around the globe, this is an example to consider. This is a possibility on the path, it could take for creating newer goods and services, increasing jobs. One theory of economic growth is when goods, services are pushed into globally competitive markets, labor's skills, product's quality increases. 
+This is for the product to be globally competitive, in return the town will absorb the benefits called as spillover effects. 
+
+**Agriculture:** There's already rich agriculture crops all around the District, there's less food processing units. 
+However, the challenge is to find the market for the processed food. In general, there's more value added in Food Processing Industry. 
+This means, smaller factories around crops like rice, lime, translating them into processed food might increase per capita. 
+In managing a Food processing unit or related type unit, one needs skills of finding market, operations, managing capital equipment, training labor to setup units. 
+What might help the people of Tirunelveli is to consider, the entire World as their market and push towards exporting, finding customers. 
+
+**Manufacturing:** The town has small industries, clusters of manufacturing unit like Tata's Solar-factory. 
+There's higher value added in advance manufacturing, in this case, developing the expertise locally is the challenge. 
+In the town, there are pipeline programs for diploma, ITI institutions. From my understanding, the skillsets and training do require to include life-long learning. 
+As per my understanding, take the local Cement factory, not much improvements came after sometime, the factory missed digitization advances. 
+The local workforce also has no training, coursework to gain knowledge, skillset to help the Cement factory to reach global standards. 
+In Tata's Solar factory, creating pipeline program from local engineering program to do both engineering and research, will benefit both. 
+This requires faculty to get hands-on skills, moving back and forth between industry and academia. 
+
+**Services:** This is the strength of Tamil Nadu, Chennai leads in exporting services. 
+At present, the town has lower value added services, many small businesses have been established. 
+We also have healthcare, hospitality, retail in the town. SaaS company Zoho is the most important higher value added Software Product company. 
+Similiar industry and academia partnership will benefit, although the technology is not created in Tirunelveli. 
+For this, fundamental research, venture capital, government funding and industry would have to work together in intersecting sectors. 
+
+The town has incredible renewable energy capacity through Wind-turbines. 
+However the value added activities of design, research and development of Wind-turbines are not part of the town.  
+India's largest nuclear reactor is located in Kudakankulam. 
+The Nuclear reactor remains central government owned business. The town could posssibly do bidirectional activity, train Physicists, establish a research arm alongside the Nuclear reactor. In terms of Engineering, Operations, Design of Nuclear reactor could create higher value for the town. 
+At present, the town is missing to take advantage of the opportunitiy within the district. 
+The Engineers being graduated in the town could be trained for these purpose. 
+
+There are many industrialist who are second, third or even fourth generation businessmen. 
+None of them have taken up the task of raising the standard of living for the town across social classes.
+A Great economic development roadmap for the town, will include existing sectors, occupation of all people living in the town. 
+From there, aiming at a concrete pathways, delivering path towards higher capita will allow everyone in the town to benefit. 
+While this is one possible way, for increasing the per capita income of people living in Tirunelveli;
+There are alternative paths to achieve the same goal.
+
+```{mermaid}
+%%| fig-width: 8
+%%| fig-height: 4
+
+%% Employment share by sectors
+
+pie title Tirunelveli — Employment by Sector
+    "Agriculture related" : 29.86
+    "Manufacturing & Construction" : 15.02
+    "Services & Trade" : 43.65
+    "Government & Public Admin" : 10.03
+    "Unorganized workers":11.49
+```
+
+**Total number of people employed:** 1,436,454 (according to 2011 census)
+
+**Total Sector workers:** ~1.436 million
+
+**Agriculture related:** 429,026
+
+**Manufacturing & Construction:** 215,667
+
+**Services & Trade:** 626,714
+
+**Government & Public Administrators**: 144,045
+
+**Unorganized sector Workers:** 165,047
+
+Sector wise, We'd have to introduce socio-economic policies that benefits everyone in the town. 
+In my economic readings, haven't noticed anything to help the unorganized workers or the marginal workers. 
+It's extremely important that majority of the population is part of the workforce, so the economic activities continues. 
+
+#### Economic-Visual Picture of Tirunelveli 
+
+```{mermaid}
+%%| fig-width: 30
+%%| fig-height: 26
+
+mindmap
+  root((Tirunelveli Economy $2,800 per capita))
+    Agriculture 40%
+      Rice Farming
+        ₹50k-80k/year
+        Raw Export Only
+        No Processing
+        Seasonal Income
+      Coconut Cultivation
+        ₹60k-90k/year
+        Traditional Methods
+        Local Markets
+        Weather Dependent
+      Sugarcane Growing
+        ₹70k-100k/year
+        Sold to Mills
+        No Value Addition
+        Limited Profits
+      Livestock & Dairy
+        ₹40k-60k/year
+        Small Scale
+        Local Consumption
+        Basic Technology
+    Small Manufacturing 15%
+      Brick kilns
+        ₹15 lakhs to ₹5 crores revenue
+        Mostly regional focus
+        Limited export due to product type
+        Traditional and semi-mechanized technology
+      Textile Mills
+        ₹120k-180k/year
+        Regional Focus
+        Limited Export
+        Old Technology
+      Rice Mills
+        ₹100k-150k/year
+        Basic Processing
+        Local Supply
+        Seasonal Work
+      Small Industries
+        ₹80k-120k/year
+        Family Business
+        Traditional Products
+        Limited Growth
+      Tata Solar Factory
+        ₹200k-400k/year
+        Modern Facility
+        Export Oriented
+        Limited Local Impact
+    Services & Trade 25%
+      Retail Trading
+        ₹100k-200k/year
+        Local Markets
+        Traditional Methods
+        Limited Scale
+      Healthcare Services
+        ₹150k-300k/year
+        Basic Facilities
+        Local Patients
+        Limited Specialization
+      Education Sector
+        ₹120k-250k/year
+        Traditional Teaching
+        Local Students
+        Limited Research
+      Transport & Logistics
+        ₹80k-150k/year
+        Local Routes
+        Small Vehicles
+        Informal Sector
+    Government Jobs 10%
+      Public Employees
+        ₹300k-600k/year
+        Stable Income
+        Limited Innovation
+        Bureaucratic
+      Banking & Finance
+        ₹250k-500k/year
+        Traditional Banking
+        Risk Averse
+        Limited Investment
+    Wealth Constraints
+      Low Capital Access
+        Poor Credit System
+        Limited Banking
+        High Interest Rates
+        Risk Aversion
+        Requires more Credit
+      Intra-Regional Trading
+        Tamil Nadu Focus
+        Missing Global Markets
+        Language Barriers
+        Limited Networks
+      Technology Gap
+        Traditional Methods
+        Poor Infrastructure
+        Skills Shortage
+      Social issues
+        Casteism 
+        Endogamy
+        No working-together for common goal
+        Caste enclaves 
+        Low female labor participation
+      Education Limitations
+        Basic Schooling
+        Limited Higher Education
+        No Fundamental Research
+        No Research Culture
+        Brain Drain
+```
+
+This visualization helps capture the town’s economic activities comprehensively. 
+In this processes, we notice limitations and income levels across sectors. 
+Moreover, it provides a foundation for building a concrete developmental roadmap.
+
+My recommendation has been, following similiar best practices laid by India's Father of Civil Engineer, Mokshagundam Visvesvaraya.
+My suggestion is to absorb processes, institutional level-reforms learning from Japan, German, French and America. 
+At town levels, similiar best practices from these countries can be absorbed, improvised to benefit socio-economically. 
+
+
+## Conclusion
+
+We have come a long way in History from Feudalism to Advanced Economies, the depth of structural shifts have been massive historically. 
+In France, Old-Social order with First Estate, Second State, Third estate disappeared due to modernization. 
+In Japan during Meiji restoration, process of modernization abolished Samurai class and old feudalism. These allowed prosperity to be inclusive for all, by creation of schools, modern army, industries. Likewise Tamil Nadu requires massive modernization, shedding old-conservatism practices, as economic clusters are still centered around caste-lines in Tamil Nadu. 
+
+For Tamil Nadu, specifically the ancient town of Tirunelveli that has 2000 years of history, the lessons are clear. 
+The town might be at risk being locked in middle age mindset, unable to accept realities of modern advanced economies.  
+
+Spatially- the town is organized along caste-lines, which I've argued is creating gaps to embrace opportunities to learn from all social-groups. 
+Capital networks, web of people, families through which knowlege, money is important for inclusive economic growth of the town. 
+At present, certain castes are excluded to be part of these networks. Along with caste-lines, the town suffers from lack of inclusive socio-economic development
+
+For prosperity, the town has to shed its older feudal practices socially, implement newer processes, administrative units, structurally align towards joining global markets, expand inclusive capital networks. Agriculture is not going to generate the inclusive wealth, prosperity for all. At present, the town has been pushed into middle ages through rising casteism, endogamy, violence for inter-caste marriage. In global outlook, these are not an issue, reminders of feudalistic outlook. The examples of São Paulo in Brazil, Shenzen in China highlights how towns, cities can transform itself. The town can prosper through joint collaboration of labor and capital, moving toward higher productivity and creating new products and services. This requires a substantial, concrete roadmap and phased planning. 
+
+
+## References
+
+[^1]: [Starbucks Barista Salaries in San Francisco, CA - Indeed](https://www.indeed.com/cmp/Starbucks/salaries/Barista/San-Francisco-CA?period=yearly)
+
+[^2]: [Historical Wage Data and Inflation Calculator - Bureau of Labor Statistics](https://www.bls.gov/data/inflation_calculator.htm)
+
+[^3]: [Prosus from South African, Naspers ](https://bsmedia.business-standard.com/_media/bs/data/market-reports/equity-brokertips/2025-04/17454890730.63073500.pdf)
+
+[^4]: [India Injects $15 Billion Into Semiconductors - IEEE Spectrum](https://spectrum.ieee.org/indian-semiconductor-manufacturing)
+
+[^5]: [The Sociology of Work: Continuity and Change in Paid and Unpaid by Stephen Edgell, Edward Granter: Chapter 1](https://us.sagepub.com/sites/default/files/upm-binaries/66895_The_Historical_Transformation_of_Work.pdf)
+
+[^6]: [Russian Revolution of 1905](https://en.wikipedia.org/wiki/Russian_Revolution_of_1905)
+
+[^7]: [Europe in Transition: From Feudalism to Industrialization by Arvind Sinha: Chapter 6](https://books.google.com/books/about/Europe_in_Transition.html?id=TbbzSAAACAAJ)
+
+[^8]: [Faster, Better, Cheaper in the History of Manufacturing by Christoph Roser ](https://www.goodreads.com/review/show/7176994547)
+
+[^9]: [Understanding the Historic Divergence Between Productivity and a Typical Worker's Pay - Economic Policy Institute](https://www.epi.org/publication/understanding-the-historic-divergence-between-productivity-and-a-typical-workers-pay-why-it-matters-and-why-its-real)
+
+
+[^10]:[Agricultural Productivity in the United States -the level of U.S. farm output in 2021 was 190 percent more than in 1948, growing at an average annual rate of 1.46 percent](https://www.ers.usda.gov/data-products/agricultural-productivity-in-the-united-states/summary-of-recent-findings)
+
+[^11]: [The Agricultural Productivity Gap by Gollin, Lagakos, and Waugh, The Quarterly Journal of Economics](https://academic.oup.com/qje/article/129/2/939/1853140)
+
+[^12]: [Tamil Actor Karunas Farm Tour| Pasumai Vikatan. YouTube, uploaded by Pasumai Vikatan, 6 Nov. 2021](https://www.youtube.com/watch?v=t8SWxS42eJ)
+
+[^13]: [World Economy: A Millennial Perspective by Angus Maddison](https://www.stat.berkeley.edu/~aldous/157/Papers/world_economy.pdf)
+
+[^14]:[India's Economic Survey](https://www.indiabudget.gov.in/economicsurvey/doc/echapter.pdf)
+
+[^15]: [Global Changes in Agricultural Production, Productivity, and Resource Use Over Six Decades - USDA ERS](https://www.ers.usda.gov/amber-waves/2024/september/global-changes-in-agricultural-production-productivity-and-resource-use-over-six-decades)
+
+[^16]:[China's Increase of Mechanization in Agriculture, increases output](https://www.frontiersin.org/articles/10.3389/fenvs.2022.838686/full)
+
+[^17]:[Tamil Nadu District Level GDDP Data](https://data.opencity.in/dataset/tamil-nadu-district-level-gddp-data)

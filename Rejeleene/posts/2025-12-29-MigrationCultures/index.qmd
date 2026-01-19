@@ -1,0 +1,74 @@
+---
+title: "Migrations and Cultures: A World View by Thomas Sowell"
+subtitle: "Notes on Thomas Sowell's book about migration patterns and human capital"
+author: "Rick Rejeleene"
+date: 2025-12-29
+date-format: "MMMM D, YYYY"
+categories: 
+  - Economics
+  - Book Review
+  - Sociology
+  - History
+description: "Notes linking Sowell's migrant patterns to South Indian castes, economies"
+toc: true
+toc-title: "Table of Contents"
+toc-location: right
+number-sections: false
+number-depth: 2
+---
+
+<p align="left">
+  <img src="https://m.media-amazon.com/images/I/516qLIw1n3L._SL1360_.jpg" width="400px" alt="Migrations and Cultures book cover" />
+</p>
+
+## Outline of this book
+
+1. Migration patterns  
+2. Germans around the world  
+3. Japanese around the world  
+4. Italians around the world  
+5. The Overseas Chinese  
+6. Jews of the diaspora  
+7. The Overseas Indians  
+8. History and cultures  
+
+Thomas Sowell speaks highly of Human Capital contributing towards people-groups and their economic success.
+Human Capital includes habits, socio economic values, discipline, preferance for education, and entrepreneurial values.
+He emphasizes, cultural transmission of human capital explains group differences in outcomes more than racism or genetics, urging focus on internal development over redistribution.
+
+## Human Capital in Migrants
+
+Migration has been a fact of Human history, it's movement of cultural and human capital across regions. Sowell says, migration is fundamentally a transfer of **"cultural capital"**, the specific skills, work habits, and knowledge that groups carry with them.
+
+**German emigrants** were highly sought after, which led to Catherine the Great inviting them to settle near the Volga River, as the Russians noticed German farmers had more advanced agriculture. Baltic Germans formed the leading scientists at the University of Dorpat, now called Tartu, Estonia. German immigrants dominated fields such as science and technology, brewing, optics, and piano manufacturing in countries as diverse as the United States, Australia, and Brazil. 
+
+**Japanese immigrants**, many began as manual laborers on sugar plantations in Hawaii or coffee *fazendas* in Brazil. Slowly they succeeded through frugality, intense discipline, and a high regard for education.
+
+In **Italy**, Northern Italians were wealthier than Southern Italians. The migrants from Southern Italy functioned as "sojourners" who intended to save money and return home. Many did return building fancy houses and made sure to send their children to the best universities in Italy.
+
+**Overseas Chinese** were the "middleman minority", where they became the majority in Singapore's population. Many also settled in Thailand, Indonesia, and in the US and Canada where they faced significant discrimination. Despite such challenges, in Indonesia and Malaysia they remained the wealthiest group compared to the local population. A few decades ago, all the top 5 wealthiest Indonesians were of Chinese descent.
+
+The **Jews' migration** and their story is one of a lot of persecution, exiled from countries, kicked out of lands from kingdoms, discrimination. Despite centuries of profound persecution and relentless struggle, as a culture, they prized literacy, urban financial skills, and education that allowed them to succeed.
+
+**Overseas Indians** were spread across many countries such as Guyana, Singapore, Malaysia, Fiji, Trinidad, Uganda, Kenya, Burma, South Africa, with recent migrations to Australia, Canada, and the USA.  
+
+In **Guyana**, they came as indentured laborers. Now, they occupy the majority population as Indo-Guyanese.  
+In **East Africa**, they were middle-man minorities, largely arriving to help build the East Africa Railways. In some countries, Indians were not organized politically, and once they became a wealthy visible minority, they were a target of popular resentment and political demagoguery from the indigenous populations.  
+
+In **Ceylon (Sri Lanka)**, the Indian Tamils migrated to work in plantations, while the local Ceylon Tamils occupied a disproportionate share of professional jobs relative to their population. Immense tragedy and sufferings fell on Indian Tamils, they were asked to go back to India, and when they returned, they weren't admitted completely as Indians.  
+
+In **1964**, about 500,000 Indian Tamils were repatriated to India, where they faced marginalization, poverty, and incomplete integration as "repatriates" without full land rights or social acceptance. In Mainland India, Hindu Tamils, Christian and Muslim Tamils remained aloof from them, ostracizing them due to casteism and classism. The repatriated Tamils remained in stateless limbo.
+
+Post-1948 independence, Sinhalese policies like the **1956 Sinhala Only Act** marginalized Tamils, sparking riots and disenfranchising Indian Tamils. Many Ceylon Tamils fled, immigrating to Toronto (Canada), London (UK), and other parts of Europe and Australia. In the 1970s, Tamil militancy (LTTE) led to the 1983 Black July riots and the 1983–2009 civil war for Eelam. This war ended in 2009 with LTTE defeat.
+
+This work helped me to contextualize migrant groups. 
+
+ **South India**
+
+ In Tamil Nadu, there's caste-groups, where people perceive each castes with their own culture. Unfortunately, the caste groups do not mix equally, draw social boundaries against each other, especially in marriage. This I believe has been one of the primary reason why South India's progress was hindered, for example, learing and knowledge were mostly with Brahmins, finance was with Nagarathar Chettiars.
+
+In this case, knowledge was silo'd not transmitted, developed further. Until the British Era, this was the norm in South India. However, migrants from Tamil Nadu are found in many parts of the world, especially in Silicon Valley, many Tamil Brahmins have leveraged their human capital to develop, successful careers as CEOs, CTOs, Venture Capitalists. In Coimbatore, Tiruppur majority of Textile manufacturing is owned by Kongu Goundar caste, In Sowell's terms, strong human capital within the group. However, in my earlier essays, I have highlighted how Caste System has limited inclusive progress of all in South India. 
+
+Even when destitute, these social groups re-built their lives and became wealthier. So what explains this?
+
+The migration of large-scale White farmers evicted from Zimbabwe by President Robert Mugabe validates this further. Once evicted, Zambia offered them agricultural land to start again. The White farmers rebuilt, operated, and managed large agro-businesses covering about 53,000 acres in Zambia. This became Zimbabwe’s loss due to poor political policies, losing valuable human capital.
