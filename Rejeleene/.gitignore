@@ -1,2 +1,5 @@
 /.quarto/
-/_site/
+/_site/*.DS_Store # Prevent future tracking
+.DS_Store
+_site/
+__pycache__/
