@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rick Rejeleene">
+<meta name="dcterms.date" content="2025-11-14">
+<meta name="description" content="A structured introduction to production functions, capital accumulation, growth models, and productivity, written as working notes while studying Barro &amp; Sala-i-Martin">
+
+<title>Notes from Economics – Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Research</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="http://rickrejeleene.me/"> <i class="bi bi-house-door-fill" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://facebook.com/whitekangaroo"> <i class="bi bi-facebook" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/rick1776/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- subscribe.html -->
+<!-- Mailchimp CSS for styling -->
+<link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+  #mc_embed_signup {
+    background: #fff;
+    font: 14px Helvetica, Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+</style>
+
+<div id="mc_embed_signup">
+  <form action="https://gmail.us12.list-manage.com/subscribe/post?u=1f588641ad0b06cbeecabd12b&amp;id=ca6e7ad445&amp;f_id=0028c0e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+      <h2>Subscribe</h2>
+      <div class="indicates-required">
+        <span class="asterisk">*</span> indicates required
+      </div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">
+          Email Address <span class="asterisk">*</span>
+        </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+      </div>
+
+      <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+
+      <!-- honeypot field (bot protection) -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_1f588641ad0b06cbeecabd12b_ca6e7ad445" tabindex="-1" value="">
+      </div>
+
+      <div class="clear foot">
+        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Required Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+  (function ($) {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0] = "EMAIL";
+    ftypes[0] = "email";
+    fnames[1] = "FNAME";
+    ftypes[1] = "text";
+    fnames[2] = "LNAME";
+    ftypes[2] = "text";
+    fnames[3] = "ADDRESS";
+    ftypes[3] = "address";
+    fnames[4] = "PHONE";
+    ftypes[4] = "phone";
+    fnames[5] = "BIRTHDAY";
+    ftypes[5] = "birthday";
+    fnames[6] = "COMPANY";
+    ftypes[6] = "text";
+  })(jQuery);
+  var $mcj = jQuery.noConflict(true);
+</script>
+
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#a-primer-and-notes-from-economics" id="toc-a-primer-and-notes-from-economics" class="nav-link active" data-scroll-target="#a-primer-and-notes-from-economics"><span class="header-section-number">1</span> A Primer and Notes from Economics</a>
+  <ul class="collapse">
+  <li><a href="#clarifying-terms" id="toc-clarifying-terms" class="nav-link" data-scroll-target="#clarifying-terms"><span class="header-section-number">1.1</span> Clarifying terms</a></li>
+  <li><a href="#economic-growth" id="toc-economic-growth" class="nav-link" data-scroll-target="#economic-growth"><span class="header-section-number">1.2</span> Economic Growth</a></li>
+  <li><a href="#capital-and-productivity" id="toc-capital-and-productivity" class="nav-link" data-scroll-target="#capital-and-productivity"><span class="header-section-number">1.3</span> Capital and Productivity</a></li>
+  <li><a href="#capital-accumulation" id="toc-capital-accumulation" class="nav-link" data-scroll-target="#capital-accumulation"><span class="header-section-number">1.4</span> Capital Accumulation</a></li>
+  <li><a href="#production-function" id="toc-production-function" class="nav-link" data-scroll-target="#production-function"><span class="header-section-number">1.5</span> Production Function</a></li>
+  <li><a href="#law-of-diminishing-returns" id="toc-law-of-diminishing-returns" class="nav-link" data-scroll-target="#law-of-diminishing-returns"><span class="header-section-number">1.6</span> Law of Diminishing Returns</a></li>
+  <li><a href="#cobbdouglas-production-function" id="toc-cobbdouglas-production-function" class="nav-link" data-scroll-target="#cobbdouglas-production-function"><span class="header-section-number">1.7</span> Cobb–Douglas Production function</a></li>
+  <li><a href="#outline-of-economic-growth-by-robert-barro-xavier-martin" id="toc-outline-of-economic-growth-by-robert-barro-xavier-martin" class="nav-link" data-scroll-target="#outline-of-economic-growth-by-robert-barro-xavier-martin"><span class="header-section-number">1.8</span> Outline of Economic Growth by Robert Barro, Xavier Martin</a></li>
+  <li><a href="#indias-economic-growth-from-1947" id="toc-indias-economic-growth-from-1947" class="nav-link" data-scroll-target="#indias-economic-growth-from-1947"><span class="header-section-number">1.9</span> India’s Economic Growth from 1947</a></li>
+  <li><a href="#harroddomar-growth-model" id="toc-harroddomar-growth-model" class="nav-link" data-scroll-target="#harroddomar-growth-model"><span class="header-section-number">1.10</span> Harrod–Domar Growth model</a>
+  <ul class="collapse">
+  <li><a href="#sector-definitions" id="toc-sector-definitions" class="nav-link" data-scroll-target="#sector-definitions">Sector Definitions</a></li>
+  <li><a href="#mahalanobis-model" id="toc-mahalanobis-model" class="nav-link" data-scroll-target="#mahalanobis-model">Mahalanobis Model</a></li>
+  </ul></li>
+  <li><a href="#solowswan-model" id="toc-solowswan-model" class="nav-link" data-scroll-target="#solowswan-model"><span class="header-section-number">1.11</span> Solow–Swan Model</a></li>
+  <li><a href="#growth-accounting" id="toc-growth-accounting" class="nav-link" data-scroll-target="#growth-accounting"><span class="header-section-number">1.12</span> Growth Accounting</a></li>
+  <li><a href="#productivity" id="toc-productivity" class="nav-link" data-scroll-target="#productivity"><span class="header-section-number">1.13</span> Productivity</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Notes from Economics</h1>
+<p class="subtitle lead">Working notes on exploring economic growth models and functions</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Mathematics</div>
+    <div class="quarto-category">Economics</div>
+    <div class="quarto-category">Notes</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A structured introduction to production functions, capital accumulation, growth models, and productivity, written as working notes while studying Barro &amp; Sala-i-Martin
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rick Rejeleene </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 14, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+<nav id="TOC-body" role="doc-toc">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#a-primer-and-notes-from-economics" id="toc-a-primer-and-notes-from-economics"><span class="header-section-number">1</span> A Primer and Notes from Economics</a>
+  <ul>
+  <li><a href="#clarifying-terms" id="toc-clarifying-terms"><span class="header-section-number">1.1</span> Clarifying terms</a></li>
+  <li><a href="#economic-growth" id="toc-economic-growth"><span class="header-section-number">1.2</span> Economic Growth</a></li>
+  <li><a href="#capital-and-productivity" id="toc-capital-and-productivity"><span class="header-section-number">1.3</span> Capital and Productivity</a></li>
+  <li><a href="#capital-accumulation" id="toc-capital-accumulation"><span class="header-section-number">1.4</span> Capital Accumulation</a></li>
+  <li><a href="#production-function" id="toc-production-function"><span class="header-section-number">1.5</span> Production Function</a></li>
+  <li><a href="#law-of-diminishing-returns" id="toc-law-of-diminishing-returns"><span class="header-section-number">1.6</span> Law of Diminishing Returns</a></li>
+  <li><a href="#cobbdouglas-production-function" id="toc-cobbdouglas-production-function"><span class="header-section-number">1.7</span> Cobb–Douglas Production function</a></li>
+  <li><a href="#outline-of-economic-growth-by-robert-barro-xavier-martin" id="toc-outline-of-economic-growth-by-robert-barro-xavier-martin"><span class="header-section-number">1.8</span> Outline of Economic Growth by Robert Barro, Xavier Martin</a></li>
+  <li><a href="#indias-economic-growth-from-1947" id="toc-indias-economic-growth-from-1947"><span class="header-section-number">1.9</span> India’s Economic Growth from 1947</a></li>
+  <li><a href="#harroddomar-growth-model" id="toc-harroddomar-growth-model"><span class="header-section-number">1.10</span> Harrod–Domar Growth model</a>
+  <ul>
+  <li><a href="#sector-definitions" id="toc-sector-definitions">Sector Definitions</a></li>
+  <li><a href="#mahalanobis-model" id="toc-mahalanobis-model">Mahalanobis Model</a></li>
+  </ul></li>
+  <li><a href="#solowswan-model" id="toc-solowswan-model"><span class="header-section-number">1.11</span> Solow–Swan Model</a></li>
+  <li><a href="#growth-accounting" id="toc-growth-accounting"><span class="header-section-number">1.12</span> Growth Accounting</a></li>
+  <li><a href="#productivity" id="toc-productivity"><span class="header-section-number">1.13</span> Productivity</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references">References</a></li>
+  </ul>
+</nav>
+<section id="a-primer-and-notes-from-economics" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> A Primer and Notes from Economics</h1>
+<p>Economics is a large field with a lot of sub-fields. Economists use models to describe data, make predictions about the future. Models are abstractions, that are reasonably enough to capture economic data.</p>
+<p>I’ve been slowly covering graduate level textbook, Economic Growth by Robert J. Barro, Xavier Sala-i-Martin. My primary motivation is to understand and formalize with the terms economists describe about towns, countries. In this, I am hoping to cover the basics to fill the gaps of my understanding, required to contribute on economic questions that I have been trying to answer.</p>
+<p>The book goes through economic growth theories, emphasizing on empirical models. In this, I am covering only what I need for my understanding.</p>
+<p>It’s hard to conduct experiments in macro-economics, so we have to rely on formal modeling. The models can describe abstractly the economy with parameters and it is a simple way to understand them. One important economic activity is production, which employed workers all engage majority of the time throughout their life. Production is inputs which can be labor time, raw materials et cetera, is turned into output. Economic activity can be described as production of goods and services for sale.</p>
+<p>Steps towards conducting economic modeling:</p>
+<ol type="a">
+<li>Mathematical Model (formal model)</li>
+<li>Mathematical solution</li>
+<li>Explanation for that particular phenomenon</li>
+<li>Phenomenon that we aim to explain</li>
+</ol>
+<p>Typically, in most of the macroeconomics courses, you’d have a model for economy. It would consist of households, firms, markets involving factors of production, with flow of input and output. These again are communicated mathematically as it is easier to describe them.</p>
+<p><img src="../../images/economics/household.png" style="width:69.0%;height:70.0%"></p>
+<p>An example is firms produce goods (Y) with capital (K) and labor (L) as inputs (production function). Households buy these goods, sell some of their time as labor in the market, invest their savings in capital markets. Market forces makes sure prices of goods (p), capital (interest rate, r) and labor (wages w) adjust.</p>
+<section id="clarifying-terms" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="clarifying-terms"><span class="header-section-number">1.1</span> Clarifying terms</h2>
+<p>When I was going through the economics textbook, I got confused by the term, <strong>capital</strong> In everyday parlance, the term capital usually means, extra money or additional savings that you have. Businesses often use this to speak of, we need initial capital to start a business. In Tamil Nadu, people say, initial investment.</p>
+<p>However, capital in economics textbook is referred as a broad term. In general it is referred to <strong>assets</strong> that are used to produce goods and services. When we are reading economics technical works from National Bureau of Economic Research, American Economic Association, We’d come across these terms repeatedly.</p>
+<p>In Adam Smith’s Wealth of Nations, Smith describes, wages, profit, and rent are sources of revenue, which maps to capital, labor, land. In this case, he is saying capital is not money, it’s fixed and circulating.</p>
+<p>When you come across economic growth, we would ask, where is this growth coming from? For that, We use Growth accounting, where economic growth is broken down relative factors that are contributing. In my perception for even looking at companies, this can be used or even towns. So, Growth accounting breaks down economic growth.</p>
+<p>In Growth accounting, Capital means machinery, equipment, buildings, infrastructure, technology used in production. So, We hope this is not confused when we are exploring and contributing on works of Economics.</p>
+</section>
+<section id="economic-growth" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="economic-growth"><span class="header-section-number">1.2</span> Economic Growth</h2>
+<p>We can say economic growth is the increase in market value of goods and services produced by an economy in a time period. Economic growth happens due to many factors, and one factor that I think is occuring in India, state of Tamil Nadu is due to population increase. So, when it occurs due to population growth, it’s called extensive growth.</p>
+<p>We frequently hear about economic growth in terms of percentage rate of increase in real gross domestic product (GDP) GDP is compared to population, which gets us per capita income. And when, per capita income is growing, we have intensive growth.</p>
+<p>Growth in productivity, which is ration of output to input can help in economic growth. When productivity is increasing, cost of goods decreases causing increase in per capita GDP. Demographically, many economists have stated lack of participation of women in Indian workforce, which could impact economic growth.</p>
+<p>Another factor is human capital, I first encountered human capital in Agricultural Economist and Nobel Prize Winner (1979) Theodore Shultz’s work. Theodore personally observed farmers engaged in agriculture, helped them. He came to the conclusion that human capital contributed to economic growth. Thomas Sowell uses human capital in his works to describe wealth disparities among different ethnicities.</p>
+<p>Depending on economic school of thought, there are various explanations given towards Growth theories. This ranges from Classical, Adam Smith, Thomas Malthus to Neoclassical like Solow-Swan, Endogenous Growth theory.</p>
+<p>Each school has their assumptions and their own apporach.</p>
+</section>
+<section id="capital-and-productivity" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="capital-and-productivity"><span class="header-section-number">1.3</span> Capital and Productivity</h2>
+<p>So Capital expands capacity of a society, individual, businesses to increase standard of living. And what creates increase in standard of living? Accumulation of capital goods, increasing in quality of human capital.</p>
+<p>When workers have more capital goods to use in their jobs, their productivity will increase. In general, more capital goods per worker, more output per worker.</p>
+</section>
+<section id="capital-accumulation" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="capital-accumulation"><span class="header-section-number">1.4</span> Capital Accumulation</h2>
+<p>In literature, many use the term Capital formation instead of accumulation. Economists means net addition to capital stock, which is gross investment minus depreciation. In simple terms, Capital accumulation is process of acquiring additional capital stock used for production. Accumulation helps in increasing productivity capacity of an economy, drives growth by means of production.</p>
+<p>Fundamentally we express capital accumulation mathematically,</p>
+<p><span class="math display">\[ K_t+1=I_t+(1-δ)K_t \]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+K_t &amp;\text{ is the capital stock at time } t, \\
+I_t &amp;\text{ is the investment (or gross capital formation) during period } t, \\
+\delta &amp;\text{ is the depreciation rate of capital,} \\
+K_{t+1} &amp;\text{ is the capital stock at time } t+1.
+\end{aligned}
+\]</span></p>
+<p>In short, what the mathematical expression is communicating capital stock next period, equals existing capital stock, after accounting for depreciation plus, new investment added. So, We can look at how an economy is moving over time through capital accumulation or capital formation.</p>
+</section>
+<section id="production-function" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="production-function"><span class="header-section-number">1.5</span> Production Function</h2>
+<p>Production function is frequently used which describes maximum number of output one can gain, given a number of inputs. Usually, the inputs are labor, price of capital.</p>
+<p>Formal definition, production function gives technological relationship, between quantities of physical inputs, labor (L) and capital (C), quantities of output produced.</p>
+<p><span class="math display">\[
+Q = f(L,K)
+\]</span></p>
+<p>Here, Q is the output, L is labor, K is capital. These forms can be extended more to include land, materials, technology.</p>
+</section>
+<section id="law-of-diminishing-returns" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="law-of-diminishing-returns"><span class="header-section-number">1.6</span> Law of Diminishing Returns</h2>
+<p>It is great to hear about growth, We all want to grow maximum our firms, industries, towns, regions or country. However, the law of diminising returns states as we add more variables to the inputs, at certain point, the output will start to decrease.</p>
+<p>An easiest example to explain this, Say you own a barren farm land in Tirunelveli, Tamil Nadu. When you hire your first worker, the productivity is going to spike up. and then, the next worker, certainly, you can divide up the tasks, delegate. And then, by 50th worker, you probably have some idle in the barren farm land.</p>
+<p>In Mathematical terms, if output is given by production function, Y = F(K, L), law of diminishing returns to labor.</p>
+<p><span class="math display">\[\
+\frac{\partial Y}{\partial L} &gt; 0 \quad \text{but} \quad \frac{\partial^2 Y}{\partial L^2} &lt; 0
+\]</span></p>
+<blockquote class="blockquote">
+<p>We describe Marginal product of labor as: <span class="math display">\[\
+\frac{\partial Y}{\partial L}
+\]</span></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Second derivative is telling us that marginal product of labor is falling, when labor is increased: <span class="math display">\[
+\quad \frac{\partial^2 Y}{\partial L^2} &lt; 0
+\]</span></p>
+</blockquote>
+<p>Partial derivative of output Y with respect to L is positive. In Tirunelveli’s barren land terms, when we add little bit more labor while keeping other inputs fixed, output is going up.</p>
+</section>
+<section id="cobbdouglas-production-function" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="cobbdouglas-production-function"><span class="header-section-number">1.7</span> Cobb–Douglas Production function</h2>
+<p>In economics, you need to quantitatively communicate various relationships. Economists, policy makers frequently ask questions around labor, economic growth, unemployment, inflation.</p>
+<p>So, Cobb Douglas Production is an aggregate function that represents technological relationship, between amount of two or three, inputs and amount of output that can be produced by the inputs. It’s used to describe production and utility</p>
+<p>The most standard form for production of a single good with two factors is given by,</p>
+<p><span class="math display">\[{\displaystyle Y(L,K)=AL^{\beta }K^{\alpha }}\]</span></p>
+<p>So, Y is the total value of all goods produced in entire year. L is the labor input, K is the capital input, here if you recall earlier, capital will include machinery, equipment, know-how. A is total factor productivity, TFP measures efficiency of labor, capital, and other inputs given. TFP gives us how much can be produced, without adding more inputs.</p>
+<p>α is capital elasticity of output, β is labor elasticity of output. In short, what they are communicating is how much is the output changing with respect to 1% or any percentage change in labor, capital?</p>
+</section>
+<section id="outline-of-economic-growth-by-robert-barro-xavier-martin" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="outline-of-economic-growth-by-robert-barro-xavier-martin"><span class="header-section-number">1.8</span> Outline of Economic Growth by Robert Barro, Xavier Martin</h2>
+<p><img src="../../images/economics/book1.png" class="img-fluid" style="width:125.0%"></p>
+<p><img src="../../images/economics/book2.png" class="img-fluid" style="width:125.0%"></p>
+<p><img src="../../images/economics/book3.png" class="img-fluid" style="width:125.0%"></p>
+<p><img src="../../images/economics/book4.png" class="img-fluid" style="width:135.0%"></p>
+<p><img src="../../images/economics/book5.png" class="img-fluid" style="width:125.0%"></p>
+<p>So, this is the outline of topics to cover in order to understand Economic growth, describe, formulate solutions in this domain.</p>
+</section>
+<section id="indias-economic-growth-from-1947" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="indias-economic-growth-from-1947"><span class="header-section-number">1.9</span> India’s Economic Growth from 1947</h2>
+<p>Indian history, including economic history is a frequent topic. The reason why I am including it in the notes is because some of the earlier economical developmental models are relevant. We will gain a context for economic growth models.</p>
+</section>
+<section id="harroddomar-growth-model" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="harroddomar-growth-model"><span class="header-section-number">1.10</span> Harrod–Domar Growth model</h2>
+<p>In Keynesian economics, the belief is that economy’s total spending (aggregate demand), controls output and jobs. In short, if there’s recession, there’s less demand, so the government should step in and start spending or cut taxes, and why is that? To boost demand and persuade spending.</p>
+<p>So now, Harrod–Domar model is an keynesian economic growth model which is used to explain how growth rate of an economy depends on savings and capital productivity. Growth is driven by investments (savings), that creates new productive capacity (capital) and generates income, increasing demand.</p>
+<p><span class="math display">\[
+Y = f(K)
+\]</span></p>
+<p>We have an output Y, which is the production function, this is depended on only capital (K).</p>
+<p>Let ( Y ) represent output, ( K ) capital stock, ( S ) total savings, ( s ) the savings rate, ( I ) investment, and ( ) the depreciation rate of capital.</p>
+<p><span class="math display">\[
+\frac{dY}{dK} = c \Rightarrow \frac{Y}{K} = c
+\]</span></p>
+<p>The marginal product of capital is constant. In simple terms, adding more capital increases output at a constant rate, however we know this is not true.</p>
+<p><span class="math display">\[
+f(0) = 0
+\]</span></p>
+<p>Capital is necessary for production, so zero capital means zero returns. Well, this is true.</p>
+<p><span class="math display">\[
+sY = S = I
+\]</span></p>
+<p>Total savings is a constant fraction of output, and all savings are invested.</p>
+<p><span class="math display">\[
+\Delta K = I - \delta K
+\]</span> Capital accumulation equals investment minus depreciation.</p>
+<p>Anyway, Mahalanobis implemented India’s economy into two sectors:</p>
+<section id="sector-definitions" class="level3">
+<h3 class="anchored" data-anchor-id="sector-definitions">Sector Definitions</h3>
+<ol type="1">
+<li>Sector 1 consists of capital goods</li>
+<li>Sector 2 consists of consumer goods</li>
+</ol>
+<p>The goal was to allocate more investment to sector 1, that will drive up future productivity of the economy</p>
+</section>
+<section id="mahalanobis-model" class="level3">
+<h3 class="anchored" data-anchor-id="mahalanobis-model">Mahalanobis Model</h3>
+<p><span class="math display">\[
+Y = Y_K + Y_C
+\]</span></p>
+<p>So K is output from capital goods, C is output from consumer goods.</p>
+<p><span class="math display">\[
+\lambda_K = \text{Investment Share}
+\]</span></p>
+<p>The aim was to reallocate investment share into capital goods, rather than consumer goods.</p>
+<p><span class="math display">\[
+\begin{aligned}
+g &amp;= s \cdot \left[ \beta_K \lambda_K + \beta_C (1 - \lambda_K) \right] \\[1em]
+\text{where:} \\[0.5em]
+g &amp;= \text{Overall growth rate of the economy} \\
+s &amp;= \text{Savings rate} \\
+\lambda_K &amp;= \text{Investment share in capital goods sector} \\
+\beta_K &amp;= \text{Output per unit investment in capital goods} \\
+\beta_C &amp;= \text{Output per unit investment in consumer goods}
+\end{aligned}
+\]</span></p>
+<p>The dynamic output in the Mahalanobis model is given by</p>
+<p><span class="math display">\[
+Y_{t} = Y_{0} \left\{ 1 + \alpha_{0}
+\frac{\lambda_{k} \beta_{k} + \lambda_{c} \beta_{c}}{\lambda_{k} \beta_{k}}
+\left[ (1 + \lambda_{k} \beta_{k})^{t} - 1 \right]
+\right\}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(Y_{t}\)</span> is the output at time <span class="math inline">\(t\)</span><br>
+</li>
+<li><span class="math inline">\(Y_{0}\)</span> is the initial output<br>
+</li>
+<li><span class="math inline">\(\alpha_{0}\)</span> is the initial capital–output coefficient<br>
+</li>
+<li><span class="math inline">\(\lambda_{k}\)</span> is the investment share in the capital goods sector<br>
+</li>
+<li><span class="math inline">\(\lambda_{c} = 1 - \lambda_{k}\)</span> is the investment share in the consumer goods sector<br>
+</li>
+<li><span class="math inline">\(\beta_{k}\)</span> and <span class="math inline">\(\beta_{c}\)</span> are the output per unit of investment in each sector</li>
+</ul>
+<p>Mahalanobis worked on developing two sector model from one sector of Harrod-Domar Growth model. The growth model is internally consistent. However there were issues.</p>
+<p>So the issue with this growth model was that it neglected Agriculture and basic needs for Indians. The emphasis was with heavy industry, so you have common issues as unemployment, poverty, and under-utilization of available manpower. Overall, India applied Harrod-Domar model from 1951-1955, then Mahalanobis’s model until 1966, as there was a food crisis. However the model’s influence lasted until 1991.</p>
+</section>
+</section>
+<section id="solowswan-model" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="solowswan-model"><span class="header-section-number">1.11</span> Solow–Swan Model</h2>
+<p>Solow got awarded Nobel Prize of Economics in 1987 for his Solow Swan model. The key distinction between Harrod-Domar model and Solow is that Harrod model assumed, growth comes from capital accumulation as long as there is enough labor. However, Solow updated this to include three factors of growth, capital, labor and technological growth.</p>
+<p>Solow model looks at how an economy grows by adding capital (recall my earlier explanation of capital), laborers, improvements in technology. The model predicts that there will be a steady state, where capital per worker and output per worker grow at a stable rate determined primarily by technological progress.</p>
+<p>Most of the textbooks will explain Solow-Swan model for economic growth. It also says, outcomes on total factor productivity can continuously increase standards of living. The reason is because capital and labor have diminishing returns, however, technology progress TFP can allow to continuously increase living standards.</p>
+<p><span class="math display">\[
+Y=AK^αL^1−α
+\]</span></p>
+<p>The textbook variant comes in continuous time form</p>
+<p><span class="math display">\[
+Y(t) = K(t)^{\alpha} \left( A(t) \cdot L(t) \right)^{1 - \alpha}
+\]</span></p>
+<p>where, <strong>Y(t)</strong> is total output at time <em>t</em>, <strong>K(t)</strong> is the capital stock at time <em>t</em>, <strong>L(t)</strong> is the labor force at time <em>t</em>, <strong>A(t)</strong> is the level of technology at time <em>t</em>, which improves the productivity of labor, <strong>α</strong> is the capital share of output, where 0 &lt; α &lt; 1</p>
+<p>What we need to remember is that the equation is communicating to us at any point in t, how much output the economy is producing. So, that is depended on how much capital, how much labor, how productive the labor through technology or experience/know-how.</p>
+<p>Now, Gregory Mankiw, Romer, Weil included human capital as part of the Solow-Swan Model,</p>
+<p><span class="math display">\[
+Y(t) = K(t)^{\alpha} \, H(t)^{\beta} \, \left( A(t) \, L(t) \right)^{\,1 - \alpha - \beta}
+\]</span></p>
+<p>Don’t forget Mankiw, it’s the standard textbook in Economics.</p>
+</section>
+<section id="growth-accounting" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="growth-accounting"><span class="header-section-number">1.12</span> Growth Accounting</h2>
+<p>Growth accounting is frequently used to decompose economic growth. So the economic growth might come from sources as increased capital, labor, technology. It only shows what happened, and it can’t answer, Why it happened?</p>
+<p>And so how do we find out the economic growth? We use a production function, most frequently, Cobb-Douglas function. We break down the output growth by sum of growth rates of the inputs weighted by share of incomes. Growth Accounting decomposes Output per Worker into three factors: Productivity, Capital, and Labor.</p>
+<p>On practical level, We’d hear something like this, Tirunelveli or say Chennai’s economy is growing. And it grew by 5% or even 11%, earlier, there was a news about Tamil Nadu’s economy growing at 11% That is a high number, so we want to find out, where that growth is coming from?</p>
+<p>So, growth might be coming from having more workers in a sector. It could be we have more capital being introduced, so workers are being more productive.</p>
+<p>So, we are back to cobb-douglas function. Primary reason, why we use it because Cobb-Douglas production has been empirically validated using manufacturing data, from 1899-1922.</p>
+<p><span class="math display">\[Y_t = A_t K_t^{\alpha} L_t^{1-\alpha}\]</span></p>
+<p>When we take logarithms of this function, it becomes additive. And therefore, it is easier to decompose from seperate contributions.</p>
+<p>Here we have decomposed form, we want to know output per worker, so we divide by number of workers (N).</p>
+<p><span class="math display">\[\frac{Y_t}{N_t} = (A_t)^{\frac{1}{1-\alpha}} \left(\frac{K_t}{Y_t}\right)^{\frac{\alpha}{1-\alpha}} \frac{L_t}{N_t}\]</span></p>
+<p>Total Factor Productivity (TFP), we derive from Cobb douglas function. Here we need only <span class="math display">\[ A_t \]</span>. We can measure technology or efficiency of inputs being used through this. It’s rearranged algebrically.</p>
+<p><span class="math display">\[A_t = \frac{Y_t}{K_t^{\alpha} L_t^{1-\alpha}}\]</span></p>
+<p><img src="../../images/economics/growthaccounting.png" class="img-fluid" style="width:125.0%"> <em>Credits:</em> Chapter 10, Economic Growth by Robert J. Barro, Xavier Sala-i-Martin.</p>
+</section>
+<section id="productivity" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="productivity"><span class="header-section-number">1.13</span> Productivity</h2>
+<p>After looking at farm operations around the Globe. I looked at the Dutch, Canadians, I often wondered about productivity of farms in the Semi-arid town of Tirunelveli? How do we compare few farms objectively in an economic way?</p>
+<p>Think of a 50–100 acre farm in semi-arid Tirunelveli. Given that fixed land area, the key question is, how can we raise output per acre as much as possible, using better combinations of water, machinery, seeds, and labor? That is the heart of a productivity problem.</p>
+<p>So productivity is expressed through production function in a variety of ways.</p>
+<p>Cobb Douglas Production Form, Leontief Production Function, We use Leontief production function only inputs must be used in fixed, non-substitutable proportions. So, take making Cars, you need fixed 1 steering wheel and 4 tires. The ratio is 4:1.</p>
+<p>As Functional form, productivity can be expressed as <span class="math display">\[Q=f(X_1,X_2, X_3, .... X_n)\]</span></p>
+<p>We can express productivity also in Linear form, <span class="math display">\[Q=(aX_1+bX_2+cX_3+ ...+dX_n)\]</span></p>
+</section>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<ol type="1">
+<li>Barro, Robert J., and Xavier Sala-i-Martin. <em>Economic Growth</em>. 2nd ed., MIT Press, 2003.<br>
+<a href="https://mitpress.mit.edu/9780262025539/economic-growth/">https://mitpress.mit.edu/9780262025539/economic-growth/</a></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ludwigwittgenstein2\.github\.io\/Tamil\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
