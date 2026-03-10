@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rick Rejeleene">
+<meta name="dcterms.date" content="2026-02-19">
+
+<title>How to build a Microcontroller Relay control with Temperature Sensor? – Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Research</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="http://rickrejeleene.me/"> <i class="bi bi-house-door-fill" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://facebook.com/whitekangaroo"> <i class="bi bi-facebook" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/rick1776/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- subscribe.html -->
+<!-- Mailchimp CSS for styling -->
+<link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+  #mc_embed_signup {
+    background: #fff;
+    font: 14px Helvetica, Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+</style>
+
+<div id="mc_embed_signup">
+  <form action="https://gmail.us12.list-manage.com/subscribe/post?u=1f588641ad0b06cbeecabd12b&amp;id=ca6e7ad445&amp;f_id=0028c0e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+      <h2>Subscribe</h2>
+      <div class="indicates-required">
+        <span class="asterisk">*</span> indicates required
+      </div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">
+          Email Address <span class="asterisk">*</span>
+        </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+      </div>
+
+      <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+
+      <!-- honeypot field (bot protection) -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_1f588641ad0b06cbeecabd12b_ca6e7ad445" tabindex="-1" value="">
+      </div>
+
+      <div class="clear foot">
+        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Required Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+  (function ($) {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0] = "EMAIL";
+    ftypes[0] = "email";
+    fnames[1] = "FNAME";
+    ftypes[1] = "text";
+    fnames[2] = "LNAME";
+    ftypes[2] = "text";
+    fnames[3] = "ADDRESS";
+    ftypes[3] = "address";
+    fnames[4] = "PHONE";
+    ftypes[4] = "phone";
+    fnames[5] = "BIRTHDAY";
+    ftypes[5] = "birthday";
+    fnames[6] = "COMPANY";
+    ftypes[6] = "text";
+  })(jQuery);
+  var $mcj = jQuery.noConflict(true);
+</script>
+
+</div></div>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How to build a Microcontroller Relay control with Temperature Sensor?</h1>
+<p class="subtitle lead">A Practical Tutorial for ESP32-C with BME680 Integration</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Engineering</div>
+    <div class="quarto-category">Tutorial</div>
+    <div class="quarto-category">Electrical Engineering</div>
+    <div class="quarto-category">Electronics</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rick Rejeleene </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 19, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this tutorial, I share how to build a Microcontroller Relay and Temperature Sensor. For Hardware and Software, you will need the pre-requiste components. Most of these can be bought online or local electronics store.</p>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective</h2>
+<ol type="1">
+<li>To show how to control a relay</li>
+<li>How to read temperature using an ESP32 and BME680 sensor</li>
+</ol>
+</section>
+<section id="components-required" class="level2">
+<h2 class="anchored" data-anchor-id="components-required">Components required</h2>
+<ol type="1">
+<li>ESP32-C Dev-Board</li>
+<li>Breadboard</li>
+<li>Jumper Cables</li>
+<li>USB-C Cable</li>
+<li>Songle Relay 5V (Inland)</li>
+<li>BME680</li>
+<li>Arduino IDE (Software)</li>
+<li>Install dependency libraries in IDE</li>
+</ol>
+<p>In implementing this project, I am reminded of Professor Poovammal who taught Computer Architecture class for my undergrad-engineering. The class was most engaging and allowed me to understand Computer Architecture. Few years later, Code written by Charles Petzold book allowed me to understand from bottom-up method from zero to one to web browsers on how computers work.</p>
+<p>My recommendation is to always use technical textbook or original patent work for defining and understanding. There are many blogs which has easier ways to understand and describing. It’s best to understand from original works. The reason is you will become comfortable in understanding technical domain. It’s highly important as an Engineer or Scientist, you’d need to become familiar with newer domains.</p>
+</section>
+<section id="conceptual-background" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-background">Conceptual background</h2>
+<section id="micro-controller" class="level3">
+<h3 class="anchored" data-anchor-id="micro-controller">Micro-controller</h3>
+<p>A microcontroller is a complete computer on a single chip.</p>
+<p>For defintion, We refer Paul Scherz and Simon Monk’s <em>Practical Electronics for Inventors</em>. In Chapter 13, Micro-controllers, the authors state:</p>
+<blockquote class="blockquote">
+<p>The microcontroller is essentially a computer on a chip. It contains a processing unit, ROM, RAM, serial communications ports, ADCs, and so on. In essence, a microcontroller is a computer, but without the monitor, keyboard, and mouse. These devices are called microcontrollers.</p>
+</blockquote>
+<p>For this Tutorial, We use ESP32, dev-kit with Type-C. ESP32 is an accessible micro-controller with Wifi, Bluetooth features.</p>
+<p><img src="../../images/tutorials/esp32bme680/esp32.png" alt="ESP32" style="width:300px; height:200px;"></p>
+</section>
+<section id="relay" class="level3">
+<h3 class="anchored" data-anchor-id="relay">Relay</h3>
+<p>Relays are like switches, which we can use for remote control. We use Inland Single 5V Relay Module for Arduino available from local electronics store as Micro-Center. Our module uses SONGLE 5v high-quality relay. It can also be used to control lighting, electrical and other equipment. The modular design makes it easy to expand with the ESP32. The relay output is by a light-emitting diode.</p>
+<p><img src="../../images/tutorials/esp32bme680/Relay.png" alt="ESP32 Relay" width="300" height="200"></p>
+</section>
+<section id="breadboard" class="level3">
+<h3 class="anchored" data-anchor-id="breadboard">Breadboard</h3>
+<p><code>US Patent D228136 (1971) by Ronald J. Portugal (E&amp;L Instruments)</code> The founding patent of the modern solderless breadboard. Definition: A reusable construction base for prototyping electronic circuits without soldering.</p>
+<p>Our breadboard connected on a Type-C with ESP32 along with Dupont wires.</p>
+<figure class="figure">
+<img src="../../images/tutorials/esp32bme680/Breadboard.png" alt="ESP32 Breadboard" width="400" height="300" class="figure-img">
+<figcaption>
+Breadboard wiring for ESP32 + BME680 sensor and relay setup.
+</figcaption>
+</figure>
+</section>
+<section id="jumper-cables" class="level3">
+<h3 class="anchored" data-anchor-id="jumper-cables">Jumper Cables</h3>
+<p>Definition (IEEE/Technical): An electrical wire with a connector or pin at each end used to interconnect components on a breadboard or prototype circuit, without soldering. Also called DuPont wires.</p>
+<p>Variants: Male-to-Male, Male-to-Female, Female-to-Female — differentiated by solid (breadboard) or socket (header) tips.</p>
+</section>
+<section id="usb-c-cable" class="level3">
+<h3 class="anchored" data-anchor-id="usb-c-cable">USB-C Cable</h3>
+<p>Standard: USB-IF Type-C Specification 1.0 (August 2014), adopted as IEC 62680-1-3 in 2016. Definition: A 24-pin, fully reversible connector and cable assembly specification covering electromechanical performance, device detection, interface configuration, and USB Power Delivery (USB PD). USB-C is a connector standard, not a protocol.</p>
+</section>
+<section id="adafruit-bme680" class="level3">
+<h3 class="anchored" data-anchor-id="adafruit-bme680">AdaFruit BME680</h3>
+<p>Definition: A 4-in-1 MEMS environmental sensor measuring gas (VOCs), humidity, pressure, and temperature. Housed in a 3.0 × 3.0 × 1.0 mm LGA package.</p>
+<p>Adafruit BME680 connected to ESP32 on a breadboard with Dupont wires.</p>
+<figure class="figure">
+<img src="../../images/tutorials/esp32bme680/BME680.png" alt="BME680 Sensor" width="400" height="300" class="figure-img">
+<figcaption>
+BME680 environmental sensor module wiring for ESP32 (I²C: VCC-3.3V, GND, SDA-GPIO21, SCL-GPIO22).
+</figcaption>
+</figure>
+</section>
+<section id="arduino-ide" class="level3">
+<h3 class="anchored" data-anchor-id="arduino-ide">Arduino IDE</h3>
+<p>Definition: A cross-platform Integrated Development Environment (Windows/macOS/Linux) built on the Processing IDE in Java. Features a code editor with syntax highlighting, one-click compile/upload, and a software library derived from the Wiring project supporting C and C++. Programs are called sketches (<code>.ino</code> extension).</p>
+<p>Source: Arduino Official Documentation</p>
+<figure class="figure">
+<img src="../../images/tutorials/esp32bme680/IDE.png" alt="Arduino IDE ESP32" width="500" height="400" class="figure-img">
+<figcaption>
+Arduino IDE with code, libraries installed (Adafruit BME680, Adafruit Sensor), and sketch ready for BME680 I²C wiring.
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="wiring-the-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="wiring-the-circuit">Wiring the Circuit</h2>
+<ol type="1">
+<li>Setup the Breadboard</li>
+<li>Fix the ESP32 dev board to communication lane of Breadboard</li>
+<li>Connect the ESP32 USB-C to your laptop</li>
+<li>Install Arduino IDE</li>
+<li>Use Jumper pins to connect the Relay Module with Breadboard</li>
+</ol>
+<p>Once you have this setup, this should be enough to test On/Off of Relay.</p>
+</section>
+<section id="uploading-the-test-code" class="level2">
+<h2 class="anchored" data-anchor-id="uploading-the-test-code">Uploading the Test Code</h2>
+<p>In the IDE setup this code to check if both works:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">115200</span><span class="op">);</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">500</span><span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Hello ESP32"</span><span class="op">);</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"tick"</span><span class="op">);</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">1000</span><span class="op">);</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>After <span class="kw">this</span> step<span class="op">,</span> Execute <span class="kw">this</span> code in IDE</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="er">```</span>cpp</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="pp">#define RELAY_PIN </span><span class="dv">25</span><span class="pp">  </span><span class="co">// Change if using different GPIO</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">115200</span><span class="op">);</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(!</span>Serial<span class="op">);</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Relay Sound Test - Listen for clicks!"</span><span class="op">);</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  pinMode<span class="op">(</span>RELAY_PIN<span class="op">,</span> OUTPUT<span class="op">);</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  digitalWrite<span class="op">(</span>RELAY_PIN<span class="op">,</span> HIGH<span class="op">);</span>  <span class="co">// Relay off initially (no click yet)</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Relay initialized. Toggling every 1 second..."</span><span class="op">);</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  digitalWrite<span class="op">(</span>RELAY_PIN<span class="op">,</span> LOW<span class="op">);</span>   <span class="co">// Turn relay ON (click)</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Relay ON"</span><span class="op">);</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">1000</span><span class="op">);</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  digitalWrite<span class="op">(</span>RELAY_PIN<span class="op">,</span> HIGH<span class="op">);</span>  <span class="co">// Turn relay OFF (click)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Relay OFF"</span><span class="op">);</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">1000</span><span class="op">);</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will give output On/OFF and show if your relay works.</p>
+</section>
+<section id="integrating-the-bme680-sensor" class="level1">
+<h1>Integrating the BME680 Sensor</h1>
+<p>Install the required dependent libraries in the Arduino IDE.<br>
+We use the <strong>Adafruit_BME680</strong> library and <strong>Adafruit_Sensor.h</strong> (part of Adafruit Unified Sensor library). [web:1]</p>
+<section id="library-installation" class="level2">
+<h2 class="anchored" data-anchor-id="library-installation">Library Installation</h2>
+<p>To interface with the BME680 sensor on ESP32, first install the necessary libraries via the Arduino IDE Library Manager:</p>
+<ul>
+<li>Open <strong>Sketch &gt; Include Library &gt; Manage Libraries</strong>.</li>
+<li>Search for <strong>“Adafruit BME680”</strong> and install the library by Adafruit.</li>
+<li>Search for <strong>“Adafruit Unified Sensor”</strong> and install it (provides <code>Adafruit_Sensor.h</code>).</li>
+<li>Restart the Arduino IDE after installation. [web:1][web:3]</li>
+</ul>
+<p>These libraries handle I²C communication and sensor data parsing for temperature, humidity, pressure, and gas readings.</p>
+</section>
+<section id="hardware-connections" class="level2">
+<h2 class="anchored" data-anchor-id="hardware-connections">Hardware Connections</h2>
+<p>Connect the BME680 sensor to the ESP32 using custom I²C pins.<br>
+Power the sensor with 3.3V (not 5V, as BME680 is 3.3V compatible). [web:1]</p>
+<section id="pin-assignments" class="level3">
+<h3 class="anchored" data-anchor-id="pin-assignments">Pin Assignments</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>BME680 Pin</th>
+<th>ESP32 Pin</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>VCC</td>
+<td>3.3V</td>
+<td>Power supply</td>
+</tr>
+<tr class="even">
+<td>GND</td>
+<td>GND</td>
+<td>Ground</td>
+</tr>
+<tr class="odd">
+<td>SDA</td>
+<td>GPIO 33</td>
+<td>I²C Data (SDA_PIN)</td>
+</tr>
+<tr class="even">
+<td>SCL</td>
+<td>GPIO 32</td>
+<td>I²C Clock (SCL_PIN)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="wiring-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="wiring-diagram">Wiring Diagram</h3>
+<p>This setup uses I²C protocol on custom pins with 100 kHz speed and address <code>0x77</code>.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    BME_VCC[BME: VCC] --&gt; ESP_3V3[ESP32: 3.3V]
+    BME_GND[BME: GND] --&gt; ESP_GND[ESP32: GND]
+    BME_SDA[BME: SDA] --&gt; ESP_SDA[ESP32: GPIO33 SDA_PIN]
+    BME_SCL[BME: SCL] --&gt; ESP_SCL[ESP32: GPIO32 SCL_PIN]
+
+    style BME_VCC fill:#e1f5fe
+    style BME_GND fill:#e1f5fe
+    style BME_SDA fill:#e1f5fe
+    style BME_SCL fill:#e1f5fe
+    style ESP_3V3 fill:#f3e5f5
+    style ESP_GND fill:#f3e5f5
+    style ESP_SDA fill:#f3e5f5
+    style ESP_SCL fill:#f3e5f5
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="pin-map" class="level3">
+<h3 class="anchored" data-anchor-id="pin-map">Pin Map</h3>
+<p>Connect the BME680 sensor to ESP32 using these pin assignments for reliable I²C communication.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>ESP32 Pin</th>
+<th>BME680 Pin</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3V3</td>
+<td>VIN / VCC</td>
+<td>Power supply</td>
+</tr>
+<tr class="even">
+<td>GND</td>
+<td>GND</td>
+<td>Ground</td>
+</tr>
+<tr class="odd">
+<td>GPIO33 (SDA)</td>
+<td>SDA</td>
+<td>I²C Data line</td>
+</tr>
+<tr class="even">
+<td>GPIO32 (SCL)</td>
+<td>SCL</td>
+<td>I²C Clock line</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Use 3.3V only - BME680 is not 5V tolerant.</p>
+</section>
+<section id="ascii-schematic" class="level3">
+<h3 class="anchored" data-anchor-id="ascii-schematic">ASCII Schematic</h3>
+<pre><code>ESP32 (Dev Board) BME680 Breakout (I²C)
+3V3 -------------------------------&gt; VIN / VCC
+GND -------------------------------&gt; GND
+GPIO33 (SDA) -----------------------&gt; SDA
+GPIO32 (SCL) -----------------------&gt; SCL</code></pre>
+</section>
+<section id="expected-output" class="level3">
+<h3 class="anchored" data-anchor-id="expected-output">Expected Output</h3>
+<p>After successful initialization, the BME680 sensor provides comprehensive environmental readings:</p>
+<pre><code>BME680 Sensor Readings
+Sensor initialized successfully!
+========== BME680 Readings ==========
+Temperature : 23.45 C
+Humidity    : 45.67 %
+Pressure    : 1013.25 hPa
+Altitude    : 150.23 m
+Gas (VOC)   : 25.67 KOhm</code></pre>
+<p><strong>Typical parameter ranges:</strong></p>
+<ul>
+<li><strong>Temperature</strong>: -40°C to 85°C</li>
+<li><strong>Humidity</strong>: 0–100% RH</li>
+<li><strong>Pressure</strong>: 300–1100 hPa</li>
+<li><strong>Altitude</strong>: Derived from pressure (sea level reference)</li>
+<li><strong>Gas (VOC)</strong>: Volatile Organic Compounds resistance in kΩ (lower = higher pollution)</li>
+</ul>
+<p>This output confirms proper wiring and library operation on your custom I²C pins (GPIO33/32).</p>
+<p>We test few more cycles and notice the results from Adafruit BME680.</p>
+<figure class="figure">
+<img src="../../images/tutorials/esp32bme680/ML.png" alt="Arduino IDE ESP32" width="500" height="650" class="figure-img">
+<figcaption>
+The figure illustrates real-time BME680 sensor data captured in the Arduino IDE Serial Monitor during evaluation of an elementary machine learning capability
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The BME680 readings confirm the sensor is wired and functioning correctly on the ESP32’s custom I²C pins (GPIO33/GPIO32). The temperature of 23.45°C and humidity of 45.67% RH fall comfortably within normal indoor ranges, while the pressure reading of 1013.25 hPa places the setup near sea level, consistent with the derived altitude of 150.23 m.</p>
+<p>The gas resistance reading of 25.67 kΩ indicates moderate VOC levels in the ambient air. It’s worth noting that the BME680’s gas sensor requires a warm-up period before readings stabilize, expect some drift in the first few minutes after powering on, particularly on first use.</p>
+<p>Overall, this project demonstrates a clean I²C integration between the ESP32 and BME680, delivering reliable multi-parameter environmental data over a single two-wire bus. From here, the natural next steps are logging readings over time, adding thresholds for alerts, or feeding the data into a dashboard for visualization.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ludwigwittgenstein2\.github\.io\/Tamil\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
