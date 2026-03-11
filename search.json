@@ -606,7 +606,7 @@
     "href": "posts/2026-02-19-TutorialBreadboard/index.html#wiring-the-circuit",
     "title": "How to build a Microcontroller Relay control with Temperature Sensor?",
     "section": "Wiring the Circuit",
-    "text": "Wiring the Circuit\n\nSetup the Breadboard\nFix the ESP32 dev board to communication lane of Breadboard\nConnect the ESP32 USB-C to your laptop\nInstall Arduino IDE\nUse Jumper pins to connect the Relay Module with Breadboard\n\nOnce you have this setup, this should be enough to test On/Off of Relay."
+    "text": "Wiring the Circuit\n\nSetup the Breadboard\nFix the ESP32 dev board to communication lane of Breadboard\nConnect the ESP32 USB-C to your laptop\nInstall Arduino IDE\nUse Jumper pins to connect the Relay Module with Breadboard\n\nOnce you have this setup, this should be enough to test On/Off of Relay.\n\n\n\n\n\n\nAn ESP32 dev board Type-C connected with jumper wires and USB\n\n\n\n\nFigure 1"
   },
   {
     "objectID": "posts/2026-02-19-TutorialBreadboard/index.html#uploading-the-test-code",
