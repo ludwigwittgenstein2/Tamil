@@ -66,7 +66,7 @@ Relays are like switches, which we can use for remote control. We use Inland Sin
 Our breadboard connected on a Type-C with ESP32 along with Dupont wires.
 
 <figure>
-<img src="../../images/tutorials/esp32bme680/Breadboard.png" alt="ESP32 Breadboard" width="500" height="490">
+<img src="../../images/tutorials/esp32bme680/breadboard.png" alt="ESP32 Breadboard" width="500" height="490">
 <figcaption>Breadboard wiring for ESP32 + BME680 sensor and relay setup.</figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ Source: Arduino Official Documentation
 
 
 <figure>
-<img src="../../images/tutorials/esp32bme680/IDE.png" alt="Arduino IDE ESP32" width="400" height="500">
+<img src="../../images/tutorials/esp32bme680/IDE.png" alt="Arduino IDE ESP32" width="500" height="450">
 <figcaption>Arduino IDE with code, libraries installed (Adafruit BME680, Adafruit Sensor), and sketch ready for BME680 I²C wiring.</figcaption>
 </figure>
 
