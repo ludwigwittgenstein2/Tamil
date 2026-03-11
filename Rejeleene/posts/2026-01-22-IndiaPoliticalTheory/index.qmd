@@ -1,0 +1,110 @@
+---
+title: "Why India Needs a New Political Theory for the Modern World"
+subtitle: "India needs modern equality and rights"
+author: "Rick Rejeleene"
+date: 2026-01-22
+date-format: "MMMM D, YYYY"
+categories:
+  - Political Philosophy
+  - Indian History
+  - Indian Philosophy
+  - Hinduism
+  - Islam
+  - Enlightenment
+  - Political Theory
+  - Theology
+bibliography: references.bib
+---
+
+## Reflection
+
+In this Reflection, I explore political theory of India by noticing changes in India's old social order with Enlightment writers. 
+
+My key point is this: India lacks a native political theory, grounded in modern equality and rights. And that reviving older ancient social orders under new names cannot fill gap.
+
+This post made me reflect on the difference between Brahmins and Brahminism.
+I have been reading extensively on the caste system. Though I still have many gaps in my understanding. I'd like to extend my understanding further.
+
+In modern usage, Brahminism refer not to Brahmins as people, but to a specific social and political order historically embedded in Hindu society (often loosely called Vedic society). Scholars such as Patrick Olivelle, Johannes Bronkhorst have used the term. 
+
+By Brahmin, we usually mean a particular caste group, priests, ritual specialists, scholars, just one community among many.
+By Brahmanism, I increasingly understand something different in light of Indian historical reading, an older social-political order of Indian-society, where birth based status are morally justified through karma and dharma (or) social hierarchy based on purity/impurity. 
+
+## The Older Indian Social Order
+
+In this older Indian-social order: Indian Society was divided into fixed varnas (theoretical social order). The Rig Veda is one of the sacred canonical Hindu text. This was from Rig Veda's Purusha Sukta (10.90) serving as a cosmic explanation for social structure and divine manifestation.[^1]
+
+Brahmin, Kshatriya, Vaishya, Shudra, with Dalits (avarnas) outside the system entirely. Privileges were hereditary. Mobility was not merely socially discouraged but morally condemned as a violation of cosmic order.
+
+In this older social order, Indian law was unequal by design, the Manusmriti prescribes drastically different punishments by caste; in some verses, a Shudra who verbally insults a higher-caste person faces severe bodily punishment, while the reverse is treated lightly.[^2] Certain castes were tied to specific landlords and villages for generations. They were forbidden to own land. Payment was often in grain, not money. Leaving could result in confiscation of huts, seizure of cattle, or forced return by violence. These were pre-democratic economic and legal systems, before the introduction of enlightenment influenced political theory ideas into entire Indian society.
+
+## Modern Rupture for India
+
+Mahatma Gandhi famously argued that one should preserve the "best" elements of tradition while discarding what is morally unacceptable in the modern world.[^3] That position itself recognizes that this older order is incompatible with modern ethics.
+
+Modern political thought, shaped by Enlightenment ideas, rests on a radically different foundation:
+
+- All individuals are equal by birth.
+- Rights do not depend on caste, lineage, or ritual status.
+- Law applies uniformly.
+
+India's Constitution reflects this rupture of social order:[^12]
+
+- **Article 15** prohibits caste discrimination.
+- **Article 17** abolishes untouchability altogether.
+
+[^12]: Constitution of India, 1950, Articles 15 and 17, Ministry of Law and Justice, Government of India.
+
+## India's Social-Political Intellectual Problem
+
+This raises a deeper thought provoking social-political intellectual problem for me.
+
+Majority of Hindu texts prioritize rita (cosmic order), dharma (duty), and karma (moral causation). Even reformers like Vivekananda or Aurobindo spoke mainly of spiritual unity, not of political equality, individual rights, or constitutional citizenship.
+
+While there were reformers from Arya Samaj, Brahmo Samaj requiring to answer Modern political thought, Unfortunately not much coming for modern world.
+
+For example, Dayanand Saraswati, founder of Arya Samaj rejected untouchability and Brahmin monopoly on Vedas, but retained merit-based varna, not full equality.[^4] Merit-based varna says, all castes have innate in-born guna (traits), character and intelligence. All these influenced Vinayak Damodar Savarkar.
+Dayanand Saraswati, believed in the infallible authority of the Vedas, Dayananda advocated the doctrines of karma and reincarnation. He emphasized the Vedic ideals of brahmacharya, including celibacy and devotion to God.
+
+I notice a similar limitation in Islamic thought, rich moral theology, but relatively little systematic political theory compatible with modern pluralistic democracy.
+
+For example, *The Reconstruction of Religious Thought in Islam*, which was a work from Islamic philosopher Muhammad Iqbal.[^5] He speaks of independent reasoning. Quran as a living, evolving force with the principle. This enables adaptation to contemporary challenges like science and democracy. However, in this political thought, it advocates a republican theocracy where ulema guide legislation alongside public will.
+
+Al-Farabi, founder of Islamic Political Philosophy, considered to be Second Teacher. In his book, *Alfarabi, the political writings*, he contributed a political theory of islamic form.[^6] In this he advocates envisioning a virtuous city ruled by a philosopher-imam who unites religion and state for human happiness. Unfortunately, this doesn't work, as there's no such thing as infallible ruler.
+
+## How Enlightenment Writers Reconstructed Political Theory?
+
+By contrast, Judaism and Christianity, through centuries of reinterpretation, generated extensive political philosophy about law, sovereignty, rights, limits of power, and human dignity.
+
+Baruch Spinoza's *Tractatus Theologico-Politicus* (1670), reinterpreted Pentateuch (Torah), promoting democracy, freedom of thought (libertas philosophandi), limiting ecclesiastical interference in governance.[^7]
+
+John Locke was a Physician and philosopher. He is one of the most remarkable writers, who contributed to political philosophy. John Locke's *Two Treatises of Government* (1689) reinterprets Genesis covenant as consent-based authority, justifying revolution against tyrants and property rights as human dignity's extension, influencing the U.S. Constitution's checks and balances.[^8]
+
+Roger Williams, a Christian theologian published, *The Bloudy-Tenent of Persecution*, where he championed and establish liberty of conscience advocated for freedom of conscience to follow any religion or irreligion, by reinterpreting the New Testament using Parable of the Tares described in Matthew 13:24–30, 36–43.[^9]
+
+**For India (and for Muslim societies too), the real task is not reviving ancient social hierarchies under new names, but developing serious modern political theory grounded in equality, constitutionalism, and human rights.**
+
+## Why Hindutva Fails
+
+Many might speak of Kautilya's *Arthashastra*, it primarily addresses statecraft, espionage, taxation, and coercive governance (danda) to ensure ruler prosperity, unlike Locke's *Two Treatises* or Rousseau's *Social Contract* emphasizing individual liberty, consent of the governed, and equality, rejecting absolutism.[^10]
+
+While some might even be reminded of Amartya Sen's, *The Argumentative Indian*, it was one of the most poorly written books that I have ever read.[^11]
+
+Hindutva, in my view, does the opposite, it selectively romanticizes an unequal past, while operating inside a modern constitutional state, making it internally contradictory.
+
+Revival attempts for Indian Knowledge Systems, particularly Vastu Shastra (Hindu science of architecture) and Ayurveda, are nascent and misguided. These outdated traditions, long surpassed by modern science, ought to be retired to embrace evidence-based global Advancements. Yet in my view, highly unlikely to succeed, as none of the writers seem to value the enlightenment contributions, absorb, synthesize the ideas nor follow the Japanese Meiji Era's playbook, who became extremely successful.
+
+If anything, the challenge before Hindu and Islamic thinkers today is not civilizational pride as advocated by Hindutva, but intellectual reconstruction to articulate ethical and political frameworks that genuinely belong to the modern world, which requires rigorous efforts.
+
+[^1]: The Purusha Sukta appears in Rigveda 10.90. For a translation and commentary, see Wendy Doniger, *The Rigveda: An Anthology* (Penguin Classics, 1981).
+[^2]: Patrick Olivelle, trans., *Manu's Code of Law: A Critical Edition and Translation of the Mānava-Dharmaśāstra* (Oxford University Press, 2005).
+[^3]: M. K. Gandhi, *Hind Swaraj and Other Writings*, ed. Anthony Parel (Cambridge University Press, 1997).
+[^4]: Kenneth W. Jones, *Arya Dharm: Hindu Consciousness in 19th-Century Punjab* (University of California Press, 1976).
+[^5]: Muhammad Iqbal, *The Reconstruction of Religious Thought in Islam* (Oxford University Press, 1934).
+[^6]: Al-Farabi, *Alfarabi: The Political Writings*, trans. Charles E. Butterworth (Cornell University Press, 2001).
+[^7]: Baruch Spinoza, *Tractatus Theologico-Politicus*, trans. Samuel Shirley (Hackett, 2001 [1670]).
+[^8]: John Locke, *Two Treatises of Government*, ed. Peter Laslett (Cambridge University Press, 1988 [1689]).
+[^9]: Roger Williams, *The Bloudy Tenent of Persecution* (1644), reprinted in *The Complete Writings of Roger Williams*, vol. 3 (Russell & Russell, 1963).
+[^10]: Kautilya, *The Arthashastra*, trans. L. N. Rangarajan (Penguin Books, 1992); Jean-Jacques Rousseau, *The Social Contract*, trans. Maurice Cranston (Penguin Classics, 1968).
+[^11]: Amartya Sen, *The Argumentative Indian: Writings on Indian History, Culture and Identity* (Farrar, Straus and Giroux, 2005). For my own assessment, see Rick Sam, review, Goodreads, July 27, 2017, https://www.goodreads.com/review/show/2073899644.
+[^12]: Constitution of India, 1950, Articles 15 and 17, Ministry of Law and Justice, Government of India.
