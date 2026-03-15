@@ -1,0 +1,19 @@
+/* remove gradient */
+.listing-banner {
+  background: none !important;
+  /* or use a single color: */
+  /* background-color: #f8f9fa !important; */
+}
+
+/* then style the text if you need contrast */
+.listing-banner h1 {
+  color: #343a40 !important;
+}
+.refferal_badge { display: none !important; }
+figcaption {
+  text-align: center;
+}
+
+.math-left .math.display {
+  text-align: left !important;
+}
