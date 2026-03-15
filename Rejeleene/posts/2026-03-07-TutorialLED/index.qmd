@@ -10,6 +10,7 @@ categories:
   - Electrical Engineering
   - Electronics
   - Embedded Systems
+  - Computer Science
 format:
   html:
     toc: true

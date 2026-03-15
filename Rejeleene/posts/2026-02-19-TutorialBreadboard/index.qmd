@@ -8,6 +8,7 @@ categories:
   - Tutorial
   - Electrical Engineering
   - Electronics
+  - Computer Science
 format:
   html:
     date-format: "MMMM D, YYYY"
