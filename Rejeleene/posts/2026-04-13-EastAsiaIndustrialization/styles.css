@@ -1,0 +1,39 @@
+.image-row {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+.image-row img {
+  flex: 1 1 45%;
+  max-width: 45%;
+}
+
+#toc {
+  text-align: center;
+}
+
+#toc ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.quarto-figure-left {
+  margin-left: 0 !important;
+  text-align: left !important;
+}
+
+.quarto-figure-left figure {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.quarto-figure-left img {
+  display: block;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.quarto-figure-left figcaption {
+  text-align: left !important;
+}
