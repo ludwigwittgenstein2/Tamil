@@ -1,0 +1,532 @@
+---
+title: "India Needs a Professional Political Class (Slides)"
+subtitle: "How East Asia Industrialized: Developmental States and the Political Capacity India Needs"
+categories:
+  - Economics
+  - Industrialization
+  - India
+  - Tamil Nadu
+  - Budgets
+  - Legislature 
+  - Governance
+  - Political Economy
+  - Politics
+author: "Rick Rejeleene"
+date: 2026-04-19
+date-format: "MMMM D, YYYY"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    progress: true
+    transition: slide
+    background-transition: fade
+    chalkboard: true
+    controls: true
+    center: false
+    footer: "East Asia's Industrialization"
+---
+
+## The Central Question
+
+India has:
+
+- democracy
+- engineers and scientists
+- digital public infrastructure
+- entrepreneurial energy
+- a large domestic market
+
+Yet the central question remains:
+
+## Why is India still not a developed country?
+
+::: notes
+Begin with respect for India's strengths. The purpose is not criticism for its own sake, but institutional diagnosis.
+:::
+
+## Why Study East Asia?
+
+Japan, Taiwan, and South Korea transformed their economies within one generation.
+
+They moved from:
+
+## agriculture → manufacturing → advanced industry
+
+This transformation was not accidental.
+
+It was organized.
+
+## The Core Argument
+
+Robert Wade's *Governing the Market* shows that East Asia did not become rich through free markets alone.
+
+They built:
+
+## Governed Markets
+
+Markets existed.  
+Private firms existed.  
+Competition existed.
+
+But the state shaped their direction.
+
+## What Is a Governed Market?
+
+A governed market means:
+
+- investment direction matters
+- industrial sequencing matters
+- export discipline matters
+- technology upgrading matters
+- institutional coordination matters
+
+Development is not passive growth.
+
+## It is structured transformation
+
+## Transfer State vs Developmental State
+
+::: columns
+::: {.column width="48%"}
+### Transfer State
+
+Focuses on:
+
+- salaries
+- pensions
+- subsidies
+- welfare
+- redistribution
+- debt servicing
+:::
+
+::: {.column width="48%"}
+### Developmental State
+
+Focuses on:
+
+- investment
+- industry
+- exports
+- productivity
+- technological upgrading
+- structural transformation
+:::
+:::
+
+East Asia built developmental states.
+
+India largely operates as a democratic transfer state.
+
+## Three Explanations of East Asia
+
+There are three broad interpretations:
+
+- **Free Market Explanation**
+- **Simulated Market Explanation**
+- **Governed Market Explanation**
+
+Wade argues that the third best fits the evidence.
+
+## What East Asia Actually Did
+
+East Asian states used:
+
+- land reform
+- directed credit
+- selective protection
+- export incentives
+- public research institutions
+- industrial targeting
+- managed foreign trade and investment
+
+Markets were not abolished.
+
+## Markets were governed
+
+## Land Reform Built the Foundation
+
+Taiwan's industrialization began with restructuring the countryside.
+
+Land reform:
+
+- reduced inequality
+- improved rural productivity
+- expanded domestic demand
+- stabilized the social order
+- created a base for industrialization
+
+Agriculture helped finance early industrial growth.
+
+## Investment Was Directed
+
+Taiwan did not rely on neutral capital markets.
+
+Instead, it built a system that moved:
+
+## household savings → banks → strategic industries
+
+Supported sectors included:
+
+- machinery
+- electronics
+- petrochemicals
+- auto components
+
+The central question was not just how much capital existed.
+
+## It was who controlled its direction
+
+## Trade Was Strategically Managed
+
+Taiwan combined:
+
+- selective protection
+- export incentives
+- duty rebates
+- exchange-rate support
+- export processing zones
+- administrative guidance
+
+Trade openness was not automatic.
+
+## Openness was engineered
+
+## Technology Upgrading Was Institutionalized
+
+Taiwan created institutions such as:
+
+- ITRI
+- Hsinchu Science Park
+- public R&D organizations
+- state-backed technology transfer systems
+
+This enabled movement from:
+
+consumer goods → intermediate goods → electronics → advanced manufacturing
+
+Industrial learning was organized.
+
+## Bureaucracy Made Strategy Possible
+
+Developmental states require capable institutions.
+
+Taiwan built agencies that could:
+
+- coordinate investment
+- guide industry
+- shape trade strategy
+- support technological learning
+- negotiate with firms from a position of strength
+
+Economic transformation requires administrative capacity.
+
+## Politics Made Coordination Possible
+
+Taiwan's leadership could sustain:
+
+- industrial priorities
+- export discipline
+- long-horizon planning
+- institutional coordination
+
+Development required political continuity, not just economic theory.
+
+## The State Got There First
+
+One of the deepest lessons from East Asia is sequencing.
+
+The state shaped markets before private interests shaped the state.
+
+That gave it the power to:
+
+- guide investment
+- discipline firms
+- coordinate upgrading
+- build institutions before elite capture hardened
+
+This sequencing mattered enormously.
+
+## The Real Lesson from East Asia
+
+East Asia did not succeed through:
+
+- pure laissez-faire
+- or complete state ownership
+
+It succeeded through:
+
+## state-guided markets
+
+That meant:
+
+- private firms were real
+- exports were real
+- competition was real
+- but the state shaped the structure of accumulation
+
+## Why This Matters for India
+
+India has:
+
+- scientific talent
+- engineers
+- entrepreneurs
+- digital infrastructure
+- administrative institutions
+
+But transformation requires more than talent.
+
+## It requires long-horizon political coordination
+
+## The Missing Ingredient
+
+Developmental states require:
+
+- strategic leadership
+- institutional continuity
+- policy discipline
+- administrative follow-through
+- long-term decision making
+
+Economic transformation is ultimately a political achievement.
+
+## Why the Political Class Matters
+
+MLAs, MPs, mayors, ministers, and party leaders:
+
+- make laws
+- allocate resources
+- oversee bureaucracy
+- influence institutional priorities
+- shape public appointments
+- determine policy continuity
+
+## Why the Political Class Matters
+
+They shape the future of millions.
+India cannot build a developmental state without a stronger political class. 
+
+## India Has Standards for Everyone Except Rulers
+
+India requires qualification systems for:
+
+- engineers
+- doctors
+- judges
+- civil servants
+- professors
+
+But not for those who govern, rule, control them - Why?
+
+This creates a structural weakness inside democracy. 
+
+## Reform 1 — Transform Political class into a Profession
+
+Anyone contesting major public office should pass a basic political competency.
+
+Applies to:
+
+- MLA
+- MP
+- mayor
+- major local executive positions
+
+The exam should cover:
+
+- Constitution and rights
+- public finance and budgets
+- legal responsibility
+- local government powers
+- education, health, and infrastructure basics
+- ethics and corruption law
+- administrative process and public problem-solving
+
+This is preparation, not exclusion. 
+
+## Reform 1b — Training After Election
+
+After passing and entering office, candidates should undergo structured training in:
+
+- budgeting
+- administrative coordination
+- policy implementation
+- institutional design
+- development strategy
+- Their specific role and responsibilities
+
+Politics should become a profession with minimum standards.
+
+Leaders should understand how the state works before they begin directing it. 
+
+## Reform 2 — Performance Accountability
+
+Every elected politician should have a Political performance accountability mechanism.
+
+This should track:
+- Job description
+- Tasks
+- attendance
+- funds received
+- funds spent
+- promises made
+- works completed
+- criminal cases
+- asset growth
+- grievances resolved
+
+Politics should move from speeches and symbolism to measurable delivery. 
+
+## Reform 2b — Citizen Review and Removal
+
+Citizens should have a legal mechanism to initiate review and remove the Politician.
+
+At some levels of government, there should even be a process to remove persistently non performing Politicians.
+
+Outcome:
+
+## politicians know they can be judged and removed for incompetence
+
+That changes incentives. 
+
+## Reform 3 — Internal Party Democracy
+
+Political parties should be required to:
+
+- hold internal elections
+- disclose finances
+- publish transparent candidate selection criteria
+- limit family domination
+- create open career paths
+
+Parties must become institutions, not private empires. 
+
+## Why Internal Democracy Matters
+
+When parties are closed dynastic structures:
+
+- talented people stay out
+- professionals avoid politics
+- loyalty defeats competence
+- reformers remain blocked
+
+With internal democracy:
+
+## more capable people can enter politics without family background or patronage
+
+## Reform 4 — Depoliticize Major Appointments
+
+Leadership of major public institutions should not be handed out through party loyalty.
+
+Transparent, merit-based selection should be used for:
+
+- vice-chancellors
+- regulators
+- utility heads
+- hospital boards
+- public corporation leaders
+
+Institutional quality depends on leadership quality. 
+
+## Why This Reform Matters
+
+If appointments are politicized:
+
+- universities decline
+- boards weaken
+- utilities underperform
+- public corporations decay
+- long-term institutional trust collapses
+
+A developmental state cannot be built on decaying institutions.
+
+## Reform 5 — New Entry Routes into Public Life
+
+India and Tamil Nadu should build structured entry paths into politics through:
+
+- political fellowships
+- municipal leadership academies
+- legislative apprenticeships
+- district public policy programs
+
+These routes should be open to:
+
+- graduates
+- professionals
+- reform-minded citizens
+- diaspora Indians
+- talented people from ordinary backgrounds
+
+Politics must become accessible beyond dynasties and patronage networks. 
+
+## What This Would Change
+
+If these reforms are implemented seriously:
+
+- the average quality of politicians rises
+- parties recruit more capable people
+- governance becomes more measurable
+- politics attracts professionals and problem-solvers
+- institutional leadership improves
+- public life opens beyond dynasties and caste-patronage channels
+
+## Governance slowly shifts from patronage to performance
+
+
+## Why This Belongs in the India Story
+
+India's challenge is not only economic.
+It is institutional.
+
+A developmental state requires:
+
+- capable bureaucracy
+- coordinated institutions
+- disciplined investment
+- long-horizon leadership
+- a political class capable of sustaining national development strategy.
+Without political reform, industrial reform will remain incomplete.
+
+## Why East Asia Could Execute Strategy
+
+Japan, Taiwan, and South Korea could sustain:
+
+- industrial coordination
+- export discipline
+- technology upgrading
+- long-term policy continuity
+
+Because their leadership systems could execute strategy over time.
+
+Developmental states require developmental leadership.
+
+## Final Institutional Insight
+
+Industrial policy fails without:
+
+- capable bureaucracy
+- coordinated institutions
+- informed political leadership
+- systems for accountability
+- high-quality entry into public life
+
+Economic strategy is ultimately political strategy.
+
+## Final Conclusion
+
+East Asia's rise was:
+
+- planned
+- sequenced
+- coordinated
+- institutional
+- political
+
+Development is not only about growth.
+
+## Development is about building a state capable of transforming the economy
+
+## What India needs is not mere GDP growth
+
+## India needs a Professionalized Political class, capable of executing the developmental state requires
