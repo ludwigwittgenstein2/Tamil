@@ -1,0 +1,188 @@
+---
+title: "Modern History of China"
+subtitle: "Jeffrey Wasserstrom's Oxford History of Modern China"
+description: "An accessible view of Modern China from South Indian perspective and lessons"
+author: "Rick Rejeleene"
+date: 2026-04-26
+date-format: "MMMM D, YYYY"
+
+bibliography: references.bib
+csl: ieee.csl
+categories:
+  - History
+  - China
+  - Tamil Nadu
+  - Politics
+  - Economics
+
+format:
+  pdf:
+    documentclass: article
+    classoption:
+      - twocolumn
+      - 10pt
+    toc: true
+    toc-depth: 2
+    toc-title: "Table of Contents"
+    number-sections: true
+    geometry:
+      - top=0.75in
+      - bottom=0.75in
+      - left=0.6in
+      - right=0.6in
+    fontfamily: helvet
+    fontfamilyoptions: scaled=0.92
+    linestretch: 1.1
+    include-in-header:
+      text: |
+        \usepackage{titlesec}
+
+        % Two-column spacing
+        \setlength{\columnsep}{18pt}
+        \setlength{\columnseprule}{0.4pt}
+
+        % Bold headings with rule under sections
+        \titleformat{\section}
+          {\large\bfseries}
+          {\thesection.}{0.5em}{}[\vspace{1pt}\titlerule]
+
+        \titleformat{\subsection}
+          {\normalsize\bfseries}
+          {\thesubsection.}{0.5em}{}
+
+        \titleformat{\subsubsection}
+          {\small\bfseries\itshape}
+          {\thesubsubsection.}{0.5em}{}
+
+        \titlespacing*{\section}{0pt}{10pt}{4pt}
+        \titlespacing*{\subsection}{0pt}{7pt}{3pt}
+        \titlespacing*{\subsubsection}{0pt}{5pt}{2pt}
+
+        % Make TOC title bigger
+        \renewcommand{\contentsname}{\Large\bfseries Table of Contents}
+
+        \setlength{\parindent}{0.15in}
+        \setlength{\parskip}{4pt}
+---
+
+# History of China
+
+## Introduction 
+
+From Tamil Nadu’s perspective or education curriculum, there was not much that I can recall from my high-school curriculum or even middle school, covering History of China. In Early South Indian history, in 1281, a Tamil-Chinese inscription records a Tamil merchant installing a Shiva image, with Tamil text praising the deity and Chinese text referencing local, Mongol-era ruler from Song Yuan dynasties[@francis2021multilingualism]. Around 1409, Chinese Ming dynasty admiral Zheng He honored, Tamil community living in Srilanka[@paranavitana1933tamil].At present, Beijing Tamil Sangam[@thehindu2013tamils] is a cultural organization promoting Tamil culture, language in China. Strategically, Tamil organizations have not yet converted these cultural links into institutional, technological, or economic learning for Tamil Nadu.
+
+These days, for regular folks, China is a symbol of development and one party rule. In the early 2000s, many South Indians, including many Tamils, viewed China largely through the lens of cheap manufactured goods, rather than as a state that had paired industrial policy, skills formation, and centralized long-term planning into a development model.
+
+I selected Jeffrey Wasserstrom’s, Oxford History of Modern China for accessibility[@wasserstrom2022oxford]. In Chinese history, what's most interesting is noticing period of reforms, expansion and decline. While popular discourse might speak of China as 5000 year continuous civilization. It was not the case, there’s been lot of changing borders, expansion, dynastic collapse, internal rebellion. In the introduction, earlier china had different borders, it was mostly inner China only. In writing about Chinese history, I want to introduce Joseph Needham, a British scientist and historian who made significant contributions to study of Chinese history, particularly Chinese Science and Technological developments[@needham1954science]. Needham documented Chinese inventions and discoveries and stated that China was ahead of Europe in many scientific and technological fields for centuries, until 16th century, when Europe caught up and surpassed China. China plateaued from 16th and 17th century, while Europe continued to advance. 
+
+# Ming and Qing China (1368–1750)
+
+Around 1550, China was ruled by the Ming dynasty. It was already one of the most sophisticated societies in the world. Most people were farmers. But agriculture wasn’t primitive. Rice cultivation in southern China supported dense populations, and regional markets linked villages to cities. During early and late ming era 1500-1600s, China experienced something like a commercial boom, where the key feature of its economy was silver payments, instead of grain or labor. Cities like Suzhou, Hangzhou, Nanjing expanded. China was the largest consumer of silver. From 1644, Manchus captured power, and founded Qing dynasty.
+
+## Qing as Outsiders 
+
+The Qing emperors were outsiders, they were not Han. Manchus were, a sedentary farming people from northeast Asia (Manchuria) who were culturally and ethnically distinct from the Han Chinese majority they conquered. Qing dynasty expanded, conquered, Xinjiang, asserted authority in Tibet, controlled Mongolia, and strengthened their rule in Mongolia. Much of China’s territory is shaped during Qing rule. Qing emperors carefully adopted Confucian traditions to gain legitimacy among Han elites, they did not change Chinese political culture. In 1700s, during times of Kangxi Emperor, Yongzheng Emperor, and Qianlong Emperor, China experienced prosperity and stability. It was during this time, population increased dramatically, Agricultural output rose, trade expanded and the empire looked strong and secure.
+
+# Britain, Opium, and Treaty Ports (1750-1860)
+
+This all changed from 1793, Britain sent diplomat George Macartney to negotiate expanded trade access with the Qing court. Britain wanted port access, permanent embassy, equal diplomatic status. The Qing emperor Qianlong Emperor asked the diplomat to kowtow, three kneelings and nine knockings of the head on the ground to recognize, the Emperor as the supreme ruler of the Celestial Empire. Lord Macartney refused, he instead performed instead knelt on one knee.
+
+He presented the Qianlong Emperor with various British goods designed to showcase technological superiority and stimulate trade, including a Herschel telescope, a planetarium, artillery pieces, and textiles from Bolton. He also delivered a letter from King George III requesting open trade ports and a permanent British embassy. The Qianlong Emperor dismissed all of this and said, China possessed all things and had no need for British goods. Qianlong's letter referenced all Europeans as "barbarians", his assumption of all nations of the earth as being subordinate to China. Macartney left disappointed, wrote a long pamphlet on how the Qing dynasty would end.
+
+Britain wanted Chinese tea, silk and porcelain. China only wanted silver, and this became a serious economic concern for Britain. To solve this deficit, Britain begins exporting opium to China. British traders began selling opium illegally into China, suddenly all levels of Chinese social life were addicted to this new substance. By 1830s, The Qing court started debating whether to legalize opium or ban it completely.
+
+## The Opium Wars (1839-1860)
+
+The court decided to ban it and appointed strict Lin Zexu as a commissioner to Guangzhou, which was the main trading port. Lin Zexu took strong action, arrested opium traders, confiscated over 20,000 chests of opium. From the British perspective, this was destruction of private property belonging to British merchants. British Parliament leaders were debating on how China had violated trade rights, British citizens had been mistreated, British property had been destroyed.
+
+British sailors killed a Chinese man, Lin Weix in 1839, Qing authorities demanded that the guilty sailor be handed over for Chinese justice, The British superintendent, Charles Elliot, refused, because Britain did not want its subjects tried under Qing law. British Parliament leaders settled for war and attacking the ports, and so the first opium war began. In this, China was defeated and signed the famous, Treaty of Nanjing. This treaty allowed open Britain to have access to five treaty ports, pay large indemnities, give Britain Hong Kong, allow British merchants expanded rights.
+
+Shortly after, in 1856, Qing emperor faced Second Opium war, where both United Kingdom and France joined to fight over the right to import opium to China, and resulted in a second defeat for the Qing and the forced legalisation of the opium trade. The emperor was forced to sign concessions, where foreign diplomats permanently allowed in Beijing, missionary protection given, and opium trade effectively legalized.
+
+# Rebellion and Failed Reform (1850-1900)
+
+Taiping Rebellion was a long 14 year civil war that took place from 1850-1864, where the leader Hong believed, he was brother of Jesus and wanted a new Heaven on earth, his kingdom established. The goal was to overthrow the Qing dynasty, almost 20 million people died in the rebellion on both sides.
+
+## Modernization efforts 
+
+After 1860 and until 1900, the country tried to modernize, the Qing dynasty survived, however it did not have the strength, it went through a period of restoration as it encountered foreigners through two opium wars. It was a new world of foreign gunboats, treaty ports, missionaries, diplomats, customs offices, steamships, telegraphs, and international law. Qing empire lost in the  Sino-Japanese War (1894–95), this caused a huge blow to China.
+
+Qing introduced the Zongli Yamen, a new institution to handle foreign affairs, it was however more the place for technology transfer, diplomatic communication, translation, and translating foreign expertise to their country. In late 1800s, many were pushing for modernization, reform noticing Meiji Japan, and implemented the short-lived Hundred Days’ Reform (1898), where the emperor tried to rapidly modernize Education, Military, Government, Economy. One of the major figures was Kang Youwei, a Chinese scholar, who was persuading the country to become a constitutional monarchy. Many of the reforms were technological, not institutional. The reforms failed as it was highly fast paced change, and Empress Cixi pushed back.
+
+## Boxer Rebellion 
+
+Soon after the reforms failed, Boxer rebellion took place, which was in 1899, the goal was to eradicate the foreigners, but the rebellion was squashed by foreign power alliance of Japan, Russia, Britain, France, Germany, Austria-Hungary, Italy.
+
+After the defeat, the leaders considered serious reforms and began reforming passing Xinzheng policy reforming institutions, abolishing the 1000 year old imperial exam system (1905) and introducing Beiyang Army. It was too late to save the Qing empire.
+
+# Revolution and Republic (1900-1919)
+
+All this lead to political thinkers like Sun Yat-sen for supporting modernization, who believed China needed independence, democracy, economic fairness.
+
+## Birth of the Republic of China
+
+Later, indirectly the failed reforms, fueled the Chinese 1911 Revolution, leading to the birth, Republic of China. In 1912, the last Qing emperor abdicated, this ended more than two thousand years of imperial rule and started the most important political transition for Chinese history. From 1919-1937, after the collapse of empire, China fragmented, and republic was in name only, power was divided among regional armies, political factions, and competing visions of the future. The central government was not powerful enough to control, stabilize, as widespread corruption, region warlords started to appear, foreign pressure continuing in the country.
+
+This led the educated Chinese to wonder, what they needed to do more for helping their country? Maybe it was China’s political traditions, social structure, education system, and even culture needed transformation.
+
+# Communists, Nationalists, and Japan (1921-1937)
+
+It was in 1921, the Chinese communist party was founded. Initially, it was a small group, who were mostly influenced by Russian Revolution and by Marxist ideas about class struggle and social transformation. Early members included intellectuals, teachers, and activists rather than peasants or soldiers. For them, the weakness was inequality in their social structure, and workers and peasants should play a central role in building a new society.
+
+## Warlord Era 
+
+During this time, China entered a period of war lord era, Sun Yat-sen cooperated with the Chinese communist party, for unifying china. After Sun Yat Sen’s death, Chiang Kai-shek led the Nationalist government established its capital in Nanjing and claimed authority over much of China. However the cooperation between communist party and Nationalist party was short-lived.
+
+Japan was controlling parts of China, and by 1937, full scale war began between China and Japan, with Japan expanding, and city of Nanjing fell, with the horrific Nanjing Massacre. Communists under Mao Zedong developed rural support networks, organized the peasants, carried out land reforms. By the end of World War 2, the communist party had political legitimacy from rural side of China and built political legitimacy among villagers. And by 1949, the communist party defeated nationalist party, and the Chiang Kai-shek’s government retreated to Taiwan.
+
+# Mao, Revolution, and Disaster (1949-1976)
+
+China came under Mao’s rule and during this time of Chinese history from, 1949–1965, the government redistributed land from landlords to peasants, reorganized industry under state control, following Soviet Union model of development. The First Five-Year Plan emphasized heavy industry like steel and machinery, Cities expanded and industrial production increased. However, Mao found dissatisfaction of this model and wanted china to have its own model, which lead towards the policy of Great Leap Forward.
+
+## Great Leap Forward
+
+Mao believed China could accelerate development by mobilizing rural labor on a massive scale, Farmers were encouraged to produce steel in backyard furnaces, result was catastrophic, Agricultural output fell. Food shortages spread. A devastating famine followed. After this, China entered cultural revolution from 1966–1976. Mao believed the Communist Party itself was becoming too bureaucratic and conservative, Students known as Red Guards attacked teachers, officials, and intellectuals accused of being “counter-revolutionary, millions were persecuted. It produced instability across the country. When Mao died in 1976, China was at a crossroads on which path to continue?
+
+# Deng Xiaoping and Reform China (1976–Present)
+
+Deng Xiaoping believed, China needed economic modernization, rather than ideological champions. China launched a reform program that changed its development strategy completely. Rural communes were dismantled. Farmers gained more control over production. Private business slowly returned. Foreign investment entered special economic zones like Shenzhen.
+
+## Reform and Opening
+
+This was reform and opening, the reform started with rural provinces, rather than foreign investment or factories.  What makes it remarkable is that China remained politically Communist while becoming economically more market-oriented. The economic growth also create inequality, social tension, corruption, In 1989, students and citizens gathered in Beijing to demand political reform and accountability. These protests became known worldwide as the Tiananmen Square protest.
+
+The government eventually used military force to end the protests. It continued economic reform but avoided political liberalization. During 1990s, 2000s, Factories multiplied. Cities grew. Millions moved from villages to urban areas. Trade increased rapidly after China joined the World Trade Organization in 2001 and by early 21st century, China had become a central player in the global economy. Earlier reform-era leadership emphasized collective decision-making inside the Communist Party, Under Xi, political authority has become more centralized again, His government launched major anti-corruption campaigns, strengthened party discipline, promoted nationalist messaging, and expanded China’s international initiatives such as the Belt and Road Initiative.
+
+# Tamil Nadu's mirror 
+
+At present, in discussions with many Tamils, lot of Tamils point to Tamil Nadu as a development success story.
+A frequent example is comparing with Bihar and Uttar Pradesh, which are poorest states of India. However, comparing with the poorest states of India sets a low bar. In Tamil schools, a student is not compared with the poorest and failed student, given a prize. He is always compared with the best student, given a prize. Tamil Nadu’s development should be judged against fast‑growing export‑oriented regions like Guangdong or Shenzhen, which have similar human capital, cultural confidence, and historical connections to global trade.
+
+In 1980, Tamil Nadu and Shenzhen had roughly comparable levels of development. Today Shenzhen is a global technology hub with a per capita income many times higher. The question to raise is why Tamil Nadu? With all its human capital and cultural confidence, didn't build anything equivalent. This is a sharper and uncomfortable question to ask, but also a useful for its developmental trajectory. 
+
+## The Question of the Second Act
+
+The Dravidian movement was one of the most sophisticated anti-caste, rationalist, social reform movements in the world[@subramanian1999caste]. The present political situation in Tamil Nadu breaks away from this legacy. Most political parties in Tamil Nadu work on caste lines calculating politically the votes. Cabinet formation has become an exercise in caste arithmetic and factional financing rather than competence or policy vision. The landscape is categorized by caste votes and caste politics. One interpretation is that the Dravidian movement's considerable intellectual and organizational energy was channeled primarily into patronage, reservations, and cultural politics, legitimate and necessary goals in a deeply unequal society, rather than giving highest priority to industrialization. This reading is contested. Others would argue that social redistribution was the prerequisite for development, that a movement which dismantled Brahmin dominance in education and government created the human capital base that Tamil Nadu's IT and manufacturing sectors later drew upon. Both things can be true. The question is not whether the Dravidian project was wrong, but whether its second act, the translation of social power into industrial capacity, ever fully arrived. 
+
+Shenzhen, under Deng[@vogel2011deng], directed its political energy toward production, exports, and economic growth[@deng1992talks]. Shenzhen transformed from a small border town associated with roughly 30,000 people in the late 1970s into a megacity of 17.56 million people by the 2020 census. Its GDP rose to about $389 billion in 2019. Its GDP per capita increased from about 606 yuan, roughly $88, in 1979, to about 203,489 yuan, roughly $29,500–$30,000, in 2019. Shenzhen’s GDP grew at an average annual rate of about 21.6% from 1979 to 2019.
+
+At the province level, Guangdong became China’s leading industrial and export powerhouse, with a population of about 126 million in 2020 and GDP per capita of about 111,146 yuan in 2024, roughly $15,000–$16,000. Shenzhen outperformed even Guangdong, reaching about 205,714 yuan per person in 2024, roughly $28,000–$29,000. Tamil Nadu also grew substantially, but along a slower and more diversified state-level path. Its population rose from roughly 48–50 million around 1981 to 72.1 million in the 2011 census, with recent projections around 77–78 million by the mid-2020s. Tamil Nadu’s 2024–25 nominal GSDP is estimated around $369 billion, with nominal GDP per capita around $4,600. Guangdong and Shenzhen show how export-led manufacturing, SEZ policy, infrastructure, foreign investment, logistics, and supplier ecosystems can create explosive industrial growth.
+
+
+# Conclusion
+
+When Joseph Needham asked why China, once the world's most advanced civilization fell behind Europe? [@needham1954science]. He was really asking a question about institutions, not inventions. 
+
+China had the technology. What it periodically lacked was the willingness to let that technology reshape its political and social order. The Qianlong Emperor's dismissal of Macartney's telescope and artillery was a deliberate choice to preserve a system that had worked for centuries. That choice had consequences that lasted 150 years.
+
+What followed after it, were the Opium Wars, the Taiping Rebellion, the failed Hundred Days' Reform, the collapse of the imperial system, the chaos of the republic, Mao's catastrophic experiments, which can all be read as China paying the price for that moment of closure. And yet none of it destroyed China. China as a country bent, fragmented, and reinvented itself repeatedly. The Manchu Qing were outsiders who became more Chinese than the Han they conquered. The Communists were Marxists who built their revolution on peasants, not the proletariat. Deng was a Communist who dismantled communes. China has always adapted, just rarely on anyone else's timeline.
+
+Deng's reforms are in a sense, the answer to Needham's question, which came at a time when China needed to find a way to let technology reshape its political and social order. 
+
+By opening special economic zones, inviting foreign investment, and joining the World Trade Organization, China did what Qianlong refused to do, it engaged the world on the world's terms, selectively and strategically, without surrendering political control. Whether that balance holds is the central question of the 21st century. This also follows the pattern of state-led development described by political economist Robert Wade, who argued in *Governing the Market* that the most successful late industrializers, particularly in East Asia did not simply follow free market logic, but used an active state to govern markets, direct investment, and build industrial capacity[@wade1990governing]
+
+Growing up in Tamil Nadu, none of this featured in my curriculum. China was background noise, cheap goods, distant headlines. And yet Tamil merchants were inscribing their presence in Chinese ports in 1281. Zheng He was honoring Tamil communities in Srilanka in 1409. The connections were always there, we simply were not taught to see them. The Beijing Tamil Sangam exists today, but as I noted at the start, it remains a cultural outpost rather than a bridge for the kind of institutional and economic learning that could have flowed both ways.
+
+That absence feels more significant now than it did when I started reading. China's development path, flawed, often brutal, but undeniably effective at scale, holds lessons that are directly relevant to Tamil Nadu and to South India more broadly, about industrial policy, skills formation, long term planning, and the relationship between state capacity and economic growth. Whether one admires or fears what China has become, not studying it carefully is no longer an option. 
+
+# References {.unnumbered}
