@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1415" font-family="Georgia, 'Palatino Linotype', Palatino, serif">
+  <defs>
+    <style>
+      .d-title { font-style: italic; font-weight: 400; font-size: 22px; }
+      .d-sub { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }
+      .d-cap { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; }
+      .d-body { font-style: italic; font-size: 14px; }
+      .d-tiny { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; }
+      .d-share { font-style: italic; font-size: 15px; font-weight: 600; }
+      .d-arrow-label { font-style: italic; font-size: 13px; font-weight: 500; }
+      .d-fig { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; }
+      .d-caption { font-style: italic; font-size: 13px; fill: #6a6a6a; }
+      .d-section { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; fill: #888; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b85c00"/>
+    </marker>
+    <marker id="moneyArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1a5490"/>
+    </marker>
+    <marker id="contemptArrow" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,7 L10,3.5 z" fill="#a02020"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1415" fill="#fffff8"/>
+
+  <!-- ========================= TITLE ========================= -->
+  <text x="60" y="48" class="d-fig" fill="#b85c00">Figure 1</text>
+  <text x="60" y="74" class="d-caption">The structure of Tamil political society — three voter worlds, the capital layer that finances them,</text>
+  <text x="60" y="92" class="d-caption">and the contempt that runs between the first two.</text>
+
+  <!-- ========================= TIER 1 · CAPITAL ========================= -->
+  <text x="60" y="140" class="d-section">Tier 1 · The Financier Layer</text>
+  <line x1="60" y1="148" x2="1140" y2="148" stroke="#ddd" stroke-width="1"/>
+
+  <rect x="60" y="165" width="1080" height="170" fill="#1a5490" fill-opacity="0.06" stroke="#1a5490" stroke-width="1.2" stroke-opacity="0.5" stroke-dasharray="5,3" rx="6"/>
+
+  <text x="80" y="195" class="d-sub" fill="#1a5490">Tamil Capitalists</text>
+  <text x="80" y="222" class="d-title" fill="#111">Who pays for politics</text>
+
+  <g>
+    <text x="80" y="262" class="d-cap" fill="#111">Industrial</text>
+    <text x="80" y="284" class="d-tiny" fill="#555">Gounder textiles &amp; engineering</text>
+    <text x="80" y="302" class="d-tiny" fill="#555">(Coimbatore: LMW, KG, Pricol)</text>
+  </g>
+
+  <g>
+    <text x="310" y="262" class="d-cap" fill="#111">Trading &amp; Distribution</text>
+    <text x="310" y="284" class="d-tiny" fill="#555">Nadar &amp; Chettiar networks</text>
+    <text x="310" y="302" class="d-tiny" fill="#555">(Sivakasi, Karaikudi)</text>
+  </g>
+
+  <g>
+    <text x="540" y="262" class="d-cap" fill="#111">Old Industrial Houses</text>
+    <text x="540" y="284" class="d-tiny" fill="#555">Mudaliar &amp; Naidu</text>
+    <text x="540" y="302" class="d-tiny" fill="#555">(TVS, Amalgamations, MRF)</text>
+  </g>
+
+  <g>
+    <text x="770" y="262" class="d-cap" fill="#111">Contractor Capital</text>
+    <text x="770" y="284" class="d-tiny" fill="#555">Real estate, granite, sand,</text>
+    <text x="770" y="302" class="d-tiny" fill="#555">liquor — the new money</text>
+  </g>
+
+  <g>
+    <text x="980" y="262" class="d-cap" fill="#111">Cinema &amp; Diaspora</text>
+    <text x="980" y="284" class="d-tiny" fill="#555">Production houses,</text>
+    <text x="980" y="302" class="d-tiny" fill="#555">Singapore / Gulf / US</text>
+  </g>
+
+  <!-- Money flow arrows -->
+  <line x1="160" y1="335" x2="320" y2="395" stroke="#1a5490" stroke-width="1.6" stroke-opacity="0.7" marker-end="url(#moneyArrow)"/>
+  <line x1="400" y1="335" x2="470" y2="395" stroke="#1a5490" stroke-width="1.6" stroke-opacity="0.7" marker-end="url(#moneyArrow)"/>
+  <line x1="630" y1="335" x2="610" y2="395" stroke="#1a5490" stroke-width="1.6" stroke-opacity="0.7" marker-end="url(#moneyArrow)"/>
+  <line x1="850" y1="335" x2="750" y2="395" stroke="#1a5490" stroke-width="1.6" stroke-opacity="0.7" marker-end="url(#moneyArrow)"/>
+  <line x1="1050" y1="335" x2="890" y2="395" stroke="#1a5490" stroke-width="1.6" stroke-opacity="0.7" marker-end="url(#moneyArrow)"/>
+
+  <text x="600" y="378" class="d-arrow-label" fill="#1a5490" text-anchor="middle">campaign finance · patronage · contracts</text>
+
+  <!-- ========================= TIER 2 · PARTIES ========================= -->
+  <text x="60" y="430" class="d-section">Tier 2 · Mobilization</text>
+  <line x1="60" y1="438" x2="1140" y2="438" stroke="#ddd" stroke-width="1"/>
+
+  <rect x="280" y="455" width="640" height="58" fill="#fff" stroke="#111" stroke-width="1.4" rx="4"/>
+  <text x="600" y="478" class="d-sub" fill="#b85c00" text-anchor="middle">The Parties</text>
+  <text x="600" y="500" class="d-body" fill="#111" text-anchor="middle">DMK · AIADMK · TVK · VCK · MNM · Congress · BJP</text>
+
+  <!-- Mobilization arrows down -->
+  <line x1="380" y1="513" x2="280" y2="780" stroke="#b85c00" stroke-width="1.4" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+  <line x1="820" y1="513" x2="900" y2="780" stroke="#b85c00" stroke-width="1.4" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+  <!-- Central mobilization arrow: drawn in two segments to leave the contempt block visible -->
+  <line x1="600" y1="513" x2="600" y2="618" stroke="#b85c00" stroke-width="1.4" stroke-opacity="0.55"/>
+  <line x1="600" y1="765" x2="600" y2="1215" stroke="#b85c00" stroke-width="1.4" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+
+  <!-- Mobilization arrow labels -->
+  <text x="170" y="595" class="d-arrow-label" fill="#b85c00" text-anchor="middle">English-media,</text>
+  <text x="170" y="615" class="d-arrow-label" fill="#b85c00" text-anchor="middle">credentialist appeals,</text>
+  <text x="170" y="635" class="d-arrow-label" fill="#b85c00" text-anchor="middle">governance reform</text>
+
+  <text x="1030" y="595" class="d-arrow-label" fill="#b85c00" text-anchor="middle">cinema, oratory,</text>
+  <text x="1030" y="615" class="d-arrow-label" fill="#b85c00" text-anchor="middle">welfare schemes,</text>
+  <text x="1030" y="635" class="d-arrow-label" fill="#b85c00" text-anchor="middle">caste association</text>
+
+  <text x="615" y="1005" class="d-arrow-label" fill="#b85c00" text-anchor="start">dignity,</text>
+  <text x="615" y="1025" class="d-arrow-label" fill="#b85c00" text-anchor="start">representation,</text>
+  <text x="615" y="1045" class="d-arrow-label" fill="#b85c00" text-anchor="start">reservation</text>
+
+  <!-- ========================= MUTUAL CONTEMPT — both arrows stacked in the clean corridor above the voter circles ========================= -->
+  <text x="600" y="640" class="d-fig" fill="#a02020" text-anchor="middle">Mutual Contempt — between the first two voter worlds</text>
+
+  <!-- Top arrow: First → Second (label above) -->
+  <text x="600" y="678" class="d-arrow-label" fill="#a02020" text-anchor="middle">First World on Second: "Crude, unsophisticated, naive, irrational"</text>
+  <path d="M 280 695 L 900 695" stroke="#a02020" stroke-width="2" fill="none" marker-end="url(#contemptArrow)" stroke-opacity="0.9"/>
+
+  <!-- Bottom arrow: Second → First (label above) -->
+  <text x="600" y="725" class="d-arrow-label" fill="#a02020" text-anchor="middle">Second World on First: "Elitist, Impractical, Abstract, English-speaking arrogance"</text>
+  <path d="M 900 745 L 280 745" stroke="#a02020" stroke-width="2" fill="none" marker-end="url(#contemptArrow)" stroke-opacity="0.9"/>
+
+  <!-- Author byline — centered, prominent, in editorial style -->
+  <text x="600" y="790" text-anchor="middle" font-family="Georgia, 'Palatino Linotype', Palatino, serif" font-style="italic" font-size="22" font-weight="400" fill="#111" letter-spacing="0.05em">Rick Rejeleene</text>
+
+  <!-- ========================= TIER 3 · VOTER WORLDS ========================= -->
+  <text x="60" y="820" class="d-section">Tier 3 · Voter Worlds</text>
+  <line x1="60" y1="828" x2="1140" y2="828" stroke="#ddd" stroke-width="1"/>
+
+  <!-- FIRST WORLD (left) -->
+  <circle cx="280" cy="985" r="155" fill="#d6cfc0" fill-opacity="0.55" stroke="#b85c00" stroke-width="1.6" stroke-opacity="0.75"/>
+
+  <text x="280" y="855" class="d-sub" fill="#b85c00" text-anchor="middle">First World</text>
+  <text x="280" y="883" class="d-title" fill="#111" text-anchor="middle">Professional Tamil Nadu</text>
+  <text x="280" y="907" class="d-share" fill="#b85c00" text-anchor="middle">~20–25% of electorate</text>
+
+  <text x="280" y="935" class="d-cap" fill="#111" text-anchor="middle">Who</text>
+  <text x="280" y="955" class="d-tiny" fill="#444" text-anchor="middle">IT workers, government &amp; PSU</text>
+  <text x="280" y="973" class="d-tiny" fill="#444" text-anchor="middle">employees, bank staff, teachers,</text>
+  <text x="280" y="991" class="d-tiny" fill="#444" text-anchor="middle">nurses, urban middle class,</text>
+  <text x="280" y="1009" class="d-tiny" fill="#444" text-anchor="middle">Brahmins &amp; forward castes</text>
+
+  <text x="280" y="1041" class="d-cap" fill="#111" text-anchor="middle">Where</text>
+  <text x="280" y="1061" class="d-tiny" fill="#444" text-anchor="middle">Chennai, Coimbatore IT corridors,</text>
+  <text x="280" y="1079" class="d-tiny" fill="#444" text-anchor="middle">Bay Area, Singapore, Gulf</text>
+
+  <text x="280" y="1115" class="d-body" fill="#111" text-anchor="middle">credentials &amp; English</text>
+
+  <!-- SECOND WORLD (right, biggest) -->
+  <circle cx="900" cy="985" r="180" fill="#c9b88f" fill-opacity="0.55" stroke="#b85c00" stroke-width="1.6" stroke-opacity="0.75"/>
+
+  <text x="900" y="845" class="d-sub" fill="#b85c00" text-anchor="middle">Second World</text>
+  <text x="900" y="873" class="d-title" fill="#111" text-anchor="middle">Rural &amp; Intermediate-Caste</text>
+  <text x="900" y="897" class="d-share" fill="#b85c00" text-anchor="middle">~55–60% of electorate</text>
+
+  <text x="900" y="925" class="d-cap" fill="#111" text-anchor="middle">Who</text>
+  <text x="900" y="945" class="d-tiny" fill="#444" text-anchor="middle">Thevars (south), Vanniyars (north),</text>
+  <text x="900" y="963" class="d-tiny" fill="#444" text-anchor="middle">Gounders (Kongu), Nadars (deep south),</text>
+  <text x="900" y="981" class="d-tiny" fill="#444" text-anchor="middle">Reddiars, Mudaliars, Yadavas,</text>
+  <text x="900" y="999" class="d-tiny" fill="#444" text-anchor="middle">small farmers &amp; rural workers</text>
+
+  <text x="900" y="1031" class="d-cap" fill="#111" text-anchor="middle">Where</text>
+  <text x="900" y="1051" class="d-tiny" fill="#444" text-anchor="middle">Madurai, Salem, Tirunelveli,</text>
+  <text x="900" y="1069" class="d-tiny" fill="#444" text-anchor="middle">Erode, Vellore, Coimbatore rural</text>
+
+  <text x="900" y="1115" class="d-body" fill="#111" text-anchor="middle">land, kin, cinema, oratory</text>
+
+  <!-- THIRD WORLD (bottom centre, in its own clear zone) -->
+  <circle cx="600" cy="1295" r="100" fill="#a8a8a8" fill-opacity="0.45" stroke="#b85c00" stroke-width="1.6" stroke-opacity="0.75"/>
+
+  <text x="600" y="1245" class="d-sub" fill="#b85c00" text-anchor="middle">Third World</text>
+  <text x="600" y="1275" class="d-title" fill="#111" text-anchor="middle">Dalit Tamil Nadu</text>
+  <text x="600" y="1297" class="d-share" fill="#b85c00" text-anchor="middle">~20% of electorate</text>
+  <text x="600" y="1319" class="d-tiny" fill="#444" text-anchor="middle">Paraiyar, Pallar, Arundhatiyar</text>
+  <text x="600" y="1337" class="d-tiny" fill="#444" text-anchor="middle">VCK / Liberation Panthers tradition</text>
+  <text x="600" y="1360" class="d-body" fill="#111" text-anchor="middle">dignity &amp; anti-caste assertion</text>
+</svg>

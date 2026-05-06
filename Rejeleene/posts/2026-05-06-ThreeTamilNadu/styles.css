@@ -1,0 +1,339 @@
+/* =========================================================
+   Rick Rejeleene Blog Custom Styles
+   Light professional theme
+   ========================================================= */
+
+
+/* =========================
+   Scholar Table
+   ========================= */
+
+.scholar-table {
+  margin: 2.2rem 0;
+  overflow-x: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+}
+
+.scholar-table table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid #eee7dc;
+}
+
+.scholar-table thead th {
+  background: #f7efe3;
+  border-bottom: 2px solid #c98a45;
+  text-align: left;
+  padding: 14px 16px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4b4b4b;
+}
+
+/* General cell styling */
+.scholar-table tbody td {
+  padding: 16px;
+  vertical-align: top;
+  border-bottom: 1px solid #e8dfd2;
+  line-height: 1.6;
+  color: #30343b;
+}
+
+/* Different soft colors for each row */
+.scholar-table tbody tr:nth-child(1) td {
+  background: #fff8ec !important;
+}
+
+.scholar-table tbody tr:nth-child(2) td {
+  background: #f8fbff !important;
+}
+
+.scholar-table tbody tr:nth-child(3) td {
+  background: #f7fff9 !important;
+}
+
+.scholar-table tbody tr:nth-child(4) td {
+  background: #fbf8ff !important;
+}
+
+.scholar-table tbody tr:nth-child(5) td {
+  background: #fff9fb !important;
+}
+
+.scholar-table tbody tr:nth-child(6) td {
+  background: #f7fbfa !important;
+}
+
+.scholar-table tbody tr:nth-child(7) td {
+  background: #fffdf5 !important;
+}
+
+.scholar-table tbody tr:nth-child(8) td {
+  background: #f8f9ff !important;
+}
+
+/* Hover effect */
+.scholar-table tbody tr:hover td {
+  background: #fff3d9 !important;
+  transition: background 0.2s ease;
+}
+
+/* Scholar name column */
+.scholar-table tbody td:first-child {
+  width: 18%;
+  white-space: nowrap;
+  font-weight: 700;
+  color: #2f343a;
+}
+
+/* Key work column */
+.scholar-table tbody td:nth-child(2) {
+  width: 26%;
+  font-style: italic;
+  color: #565656;
+}
+
+/* Contribution column */
+.scholar-table tbody td:last-child {
+  width: 56%;
+}
+
+/* Links inside table */
+.scholar-table a {
+  color: #7c3aed;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.35);
+}
+
+.scholar-table a:hover {
+  color: #4c1d95;
+  border-bottom-color: #4c1d95;
+}
+
+
+/* =========================
+   Vijay Question Callout
+   Works with:
+   ::: {.callout-important title="The Vijay Question"}
+   ========================= */
+
+.callout-important {
+  margin: 2.4rem 0 !important;
+  border-radius: 14px !important;
+  border-left: 6px solid #c47a2c !important;
+  border-top: 1px solid #f0dcc8 !important;
+  border-right: 1px solid #f0dcc8 !important;
+  border-bottom: 1px solid #f0dcc8 !important;
+  background: #fffaf3 !important;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06) !important;
+  overflow: hidden !important;
+}
+
+/* Callout header */
+.callout-important .callout-header {
+  background: #f4e4d2 !important;
+  color: #6b3412 !important;
+  padding: 0.9rem 1.15rem !important;
+  border-bottom: 1px solid #ead2ba !important;
+}
+
+/* Callout title */
+.callout-important .callout-title-container {
+  color: #6b3412 !important;
+  font-weight: 700 !important;
+  font-size: 1.08rem !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Callout icon */
+.callout-important .callout-icon-container {
+  color: #9a5a1f !important;
+}
+
+/* Callout body */
+.callout-important .callout-body {
+  padding: 1.35rem 1.6rem !important;
+  color: #2c241f !important;
+  font-size: 1.03rem !important;
+  line-height: 1.78 !important;
+}
+
+/* Paragraph spacing */
+.callout-important .callout-body p {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* First, Second, Third */
+.callout-important .callout-body strong {
+  color: #8a4b19 !important;
+  font-weight: 700 !important;
+}
+
+
+/* =========================
+   Takeaway Box
+   Works with:
+   ::: {.takeaway-box}
+   ========================= */
+
+.takeaway-box {
+  background: #faf8ff;
+  border-left: 6px solid #9b7ae5;
+  border-top: 1px solid #e4dcff;
+  border-right: 1px solid #e4dcff;
+  border-bottom: 1px solid #e4dcff;
+  padding: 1.5rem 1.7rem;
+  margin: 2.5rem 0;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+}
+
+.takeaway-box h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #5b3bb5;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.takeaway-box p {
+  font-size: 1.03rem;
+  line-height: 1.78;
+  color: #2f2a3a;
+}
+
+.takeaway-box strong {
+  color: #5b3bb5;
+  font-weight: 700;
+}
+
+/* =========================
+   Value Mismatch Table
+   ========================= */
+
+.value-mismatch-table {
+  margin: 2.2rem 0;
+  overflow-x: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.value-mismatch-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1px solid #e8e4dc;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.value-mismatch-table thead th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  background: #f5f3ef;
+  border-bottom: 2px solid #cfc8bb;
+}
+
+.value-mismatch-table tbody td {
+  padding: 16px;
+  vertical-align: top;
+  border-bottom: 1px solid #ebe6dd;
+  color: #2f2f2f;
+}
+
+/* Column widths */
+.value-mismatch-table tbody td:first-child,
+.value-mismatch-table thead th:first-child {
+  width: 24%;
+  font-weight: 700;
+}
+
+.value-mismatch-table tbody td:nth-child(2),
+.value-mismatch-table thead th:nth-child(2) {
+  width: 38%;
+}
+
+.value-mismatch-table tbody td:nth-child(3),
+.value-mismatch-table thead th:nth-child(3) {
+  width: 38%;
+}
+
+/* Color the two interpretation columns differently */
+.value-mismatch-table tbody td:nth-child(2) {
+  background: #fff8f1;
+}
+
+.value-mismatch-table tbody td:nth-child(3) {
+  background: #f4f8ff;
+}
+
+/* First column slightly neutral */
+.value-mismatch-table tbody td:first-child {
+  background: #faf9f6;
+}
+
+/* Hover effect */
+.value-mismatch-table tbody tr:hover td:first-child {
+  background: #f3f1ec;
+}
+
+.value-mismatch-table tbody tr:hover td:nth-child(2) {
+  background: #fff2e2;
+}
+
+.value-mismatch-table tbody tr:hover td:nth-child(3) {
+  background: #eaf2ff;
+}
+
+/* Strong text inside cells */
+.value-mismatch-table strong {
+  color: #2b2b2b;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .value-mismatch-table table {
+    font-size: 14px;
+  }
+
+  .value-mismatch-table thead th,
+  .value-mismatch-table tbody td {
+    padding: 12px;
+  }
+}
+
+
+/* =========================
+   Mobile Responsiveness
+   ========================= */
+
+@media (max-width: 768px) {
+  .scholar-table table {
+    font-size: 13px;
+  }
+
+  .scholar-table thead th,
+  .scholar-table tbody td {
+    padding: 11px;
+  }
+
+  .scholar-table tbody td:first-child {
+    white-space: normal;
+  }
+
+  .callout-important .callout-body,
+  .takeaway-box {
+    padding: 1.1rem 1.2rem !important;
+  }
+}
