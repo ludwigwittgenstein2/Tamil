@@ -1,0 +1,1182 @@
+---
+title: "How do Mobile Phones Work?"
+subtitle: "Networks, Radio, Embedded Systems"
+description: "A systems-level tutorial explaining how mobile phones work, from cellular networks and voice calls to embedded electronics"
+author: "Rick Rejeleene"
+date: 2026-05-10
+date-format: "MMMM D, YYYY"
+filters:
+  - d2
+categories:
+  - Engineering
+  - Tutorial
+  - Electrical Engineering
+  - Electronics
+  - Embedded Systems
+  - Computer Science
+  
+format:
+  html:
+    css: styles.css
+    toc: true
+    toc-title: "Contents"
+    toc-depth: 3
+---
+
+## Introduction: Nokia 1100 Memory
+
+One of the mobile phones that made a lasting impact on me, my friends, and many people around me was the Nokia 1100.
+
+At that time, I was in middle school. It never occurred to me to ask: *how does a mobile phone work?*
+*What are the components inside it?* *What would it take to build one?*
+
+This tutorial starts with that basic engineering question:
+
+> What is inside a mobile phone?  
+> How does it connect to a tower?  
+> How does voice become radio waves?  
+> What happens at each layer of the phone's system?
+
+The Nokia 1100 became the world's best-selling mobile phone of all time. It reached 250 million units by 2008, holding the record for the best-selling mobile phone of all time. In the early 2000s, this was one of the phones everyone around me appreciated. It was simple, durable, and did the job: it made and received phone calls, and the battery life was long-lasting. While the Nokia 1100 is no longer in production, my goal in this tutorial is to understand how mobile phones work.
+
+## What is a Mobile Phone?
+
+A modern phone is a small, low-power computer that runs an operating system like Android or iOS, runs apps, and has a cellular modem to connect to the mobile network. It is also a radio system that handles cellular calls, Wi-Fi, Bluetooth, GPS, and other wireless communication. All of this is crammed into a thin handheld device that can be used for hours on a single charge.
+
+![Three mini computers in a mobile phone](/images/mobilephone/image1.png){fig-alt="A diagram showing three computers within the mobile phone."}
+
+## How does a Mobile Phone Work?
+
+A mobile phone is essentially a small, two-way radio that connects to a cellular network so you can talk, text, or use data without wires.
+It digitizes your voice or data, sends it as radio waves to the nearest cell tower, and then the network routes it to the other phone or to the internet.
+
+The land is divided into cells, where each cell is served by a tower or base station. 
+Your phone always talks to a nearby tower, and as you move, the network hands over your connection smoothly from one cell to the next. 
+A mobile phone is not only a radio. It is a system made of cooperating subsystems: computing, radio, power, audio, display, memory, software, and network identity.
+
+## System Layer-View
+
+To understand mobile phones properly, we need to understand the system in layers. 
+Each layer explains one part of the phone.
+
+![System View](/images/mobilephone/protocolview.png){fig-alt="System View"}
+
+A mobile phone combines electronics, software, radio, networking, security, manufacturing, and telecom infrastructure compressed into one handheld device.
+
+## The Three Computing Systems Inside a Phone
+
+We cannot fully call a mobile phone only a radio, because a mobile phone has three computers within it.
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Component</th>
+      <th class="voice">Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect"><strong>Application processor</strong></td>
+      <td class="voice">Runs the operating system, draws the screen, handles your taps, and runs apps.</td>
+    </tr>
+    <tr>
+      <td class="aspect"><strong>Baseband processor / modem</strong></td>
+      <td class="voice">Handles cellular communication, talks to cell towers, manages the radio, and controls cellular protocols and timing.</td>
+    </tr>
+    <tr>
+      <td class="aspect"><strong>SIM card</strong></td>
+      <td class="voice">Acts as a tiny secure computer. It holds your network identity and a secret cryptographic key that proves you are a legitimate subscriber.</td>
+    </tr>
+  </tbody>
+</table>
+These three components work together and communicate with each other, yet they are logically separate.
+The application processor handles the user-facing side of the phone. The baseband processor handles cellular communication. 
+The SIM card provides identity and authentication.
+
+## SIM Card 
+
+In simple terms, the SIM card answers one question for the network:
+
+> Is this phone really allowed to use this mobile service?
+
+The SIM does this by proving that it knows a secret key. The secret key is stored inside the SIM and also inside the carrier's authentication system. The key itself is never sent over the air. Instead, the network sends a random challenge. The SIM uses its secret key to compute an answer. The carrier computes the same answer on its side. If the answers match, the network accepts the phone.
+
+So the SIM is not just a memory card. It is a tiny secure computer that stores identity, protects a secret key, and performs cryptographic calculations.
+
+## A Small Code Example: How a SIM Proves Its Identity
+
+The SIM card has one important job: it proves to the mobile network that the phone belongs to a valid subscriber.
+
+The SIM does this using a secret key.
+
+The important rule is:
+
+> The secret key is never sent over the air.
+
+Instead, the network sends the SIM a random challenge. 
+The SIM uses its secret key to calculate an answer.
+The carrier does the same calculation on its side. 
+If both answers match, the network accepts the phone.
+
+This is called **challenge-response authentication**.
+
+A simplified version looks like this:
+
+```{python}
+import os
+import hmac
+import hashlib
+
+# ---------------------------------------------------------
+# 1. The SIM and the carrier both know the same secret key.
+# In a real phone, this key is stored securely inside the SIM.
+# The carrier also stores a copy in its authentication system.
+# ---------------------------------------------------------
+
+sim_secret_key = os.urandom(16)
+
+# ---------------------------------------------------------
+# 2. The network sends a random challenge.
+# This changes every time, so old answers cannot be reused.
+# ---------------------------------------------------------
+
+challenge = os.urandom(16)
+
+# ---------------------------------------------------------
+# 3. The SIM uses the secret key to compute an answer.
+# ---------------------------------------------------------
+
+sim_answer = hmac.new(
+    sim_secret_key,
+    challenge,
+    hashlib.sha256
+).hexdigest()
+
+# ---------------------------------------------------------
+# 4. The carrier computes the expected answer using its copy
+# of the same secret key.
+# ---------------------------------------------------------
+
+carrier_expected_answer = hmac.new(
+    sim_secret_key,
+    challenge,
+    hashlib.sha256
+).hexdigest()
+
+# ---------------------------------------------------------
+# 5. If both answers match, the SIM is accepted.
+# ---------------------------------------------------------
+
+print("Network challenge:", challenge.hex())
+print("SIM answer:", sim_answer)
+print("Carrier expected answer:", carrier_expected_answer)
+
+if hmac.compare_digest(sim_answer, carrier_expected_answer):
+    print("Authentication successful: SIM is accepted.")
+else:
+    print("Authentication failed: SIM is rejected.")
+```
+
+## How the SIM Actually Authenticates
+
+
+The earlier code showed the basic idea: the SIM proves that it knows a secret key without revealing the key.
+
+In GSM, this secret key is called **Ki**. It is stored inside the SIM and also inside the carrier's authentication system. When the phone connects to the network, the network sends a random challenge called **RAND**.
+
+The SIM uses **Ki** and **RAND** to calculate a response called **SRES**. The carrier performs the same calculation on its side. If the SIM's response matches the carrier's expected response, the phone is authenticated.
+
+```text
+SIM side:      Ki + RAND → SRES
+Carrier side:  Ki + RAND → expected SRES
+
+If SRES matches expected SRES:
+    accept the phone
+  ```
+
+### LTE and 5G
+
+Later systems such as LTE and 5G use a stronger method called **AKA**, or **Authentication and Key Agreement**.
+
+One weakness of GSM is that it mainly authenticates the phone to the network. In other words, the network checks whether the SIM is valid. But GSM does not strongly prove to the phone that the network itself is legitimate. This weakness is one reason fake towers can trick phones into connecting.
+
+LTE improves this by adding **mutual authentication**. The phone proves itself to the network, and the network also proves itself to the phone.
+
+```text
+GSM:
+Phone proves itself to the network.
+LTE and 5G:
+Phone proves itself to the network.
+Network also proves itself to the phone.
+```
+
+LTE and 5G also derive stronger temporary session keys. These keys are used to protect communication between the phone and the network. They also include protections against replay attacks, where an attacker records an old authentication message and tries to reuse it later.
+
+5G goes further by protecting the subscriber's long-term identity more carefully. Older systems could expose permanent subscriber identifiers in some situations. 5G reduces this risk by making it harder for attackers to track users based on their permanent identity.
+
+The basic idea remains the same:
+
+```text
+The SIM proves identity.
+The network verifies the SIM.
+Both sides create temporary keys.
+The radio connection becomes protected.
+```
+
+This is why the SIM is not just a memory card. It is a tiny secure computer. It stores identity, protects secret keys, and performs cryptographic calculations that allow the phone to securely join the cellular network.
+
+## Cellular Network
+
+The basic idea of a cellular network is that land is divided into cells. Each cell is served by a tower or base station. Your phone talks to whichever tower has the best signal, usually the nearest, but not always. As you move, the network hands over your connection smoothly from one cell to the next, often without you noticing. This is the fundamental trick that lets a phone work while you are driving down a highway. Even when you are not making a call, the phone is still quietly connected to the network.
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Idle-mode function</th>
+      <th class="voice">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect"><strong>Paging</strong></td>
+      <td class="voice">The phone listens for messages such as: "Hey phone with this ID, someone is calling you."</td>
+    </tr>
+    <tr>
+      <td class="aspect"><strong>Location update</strong></td>
+      <td class="voice">The phone tells the network which tower it is near, so incoming calls can find it.</td>
+    </tr>
+    <tr>
+      <td class="aspect"><strong>Message delivery</strong></td>
+      <td class="voice">The phone receives waiting SMS messages and network notifications.</td>
+    </tr>
+  </tbody>
+</table>
+
+## The Shared-Spectrum Problem
+
+Your phone is sharing the airwaves with millions of others. 
+Every cellular standard, (GSM, UMTS, LTE, 5G) is fundamentally a set of clever techniques to make shared radio communication work.
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Technique</th>
+      <th class="voice">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect"><strong>Frequency division</strong></td>
+      <td class="voice">The spectrum is divided into channels, like highway lanes.</td>
+    </tr>
+    <tr>
+      <td class="aspect"><strong>Time division</strong></td>
+      <td class="voice">Within one channel, time is sliced into tiny slots. Your phone transmits briefly, then waits while other phones take their turn.</td>
+    </tr>
+    <tr>
+      <td class="aspect"><strong>Cell reuse</strong></td>
+      <td class="voice">A tower 20 km away can reuse the same frequencies because radio signals fade with distance.</td>
+    </tr>
+  </tbody>
+</table>
+
+This is what made cellular communication scale to billions of users.
+
+## When We Make a Call
+
+When we make a call, the phone performs a sequence of conversions.
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Step</th>
+      <th class="voice">Process</th>
+      <th class="sms">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect">1</td>
+      <td class="voice">Voice becomes electricity</td>
+      <td class="sms">Your voice hits the phone's microphone, which converts sound into an electrical signal.</td>
+    </tr>
+    <tr>
+      <td class="aspect">2</td>
+      <td class="voice">Electricity becomes bits</td>
+      <td class="sms">An internal chip converts the analog signal into digital bits and packs them into radio-wave signals.</td>
+    </tr>
+    <tr>
+      <td class="aspect">3</td>
+      <td class="voice">Bits become radio waves</td>
+      <td class="sms">The antenna sends the radio signal to the nearest cell tower.</td>
+    </tr>
+    <tr>
+      <td class="aspect">4</td>
+      <td class="voice">The process reverses</td>
+      <td class="sms">The recipient's phone converts the digital signal back into sound through the speaker.</td>
+    </tr>
+  </tbody>
+</table>
+The key components involved include the radio and antenna, microprocessor, operating system, memory, storage, battery, display, sensors, and SIM card.
+
+## A Concrete Example: Dallas to Chennai
+
+Assume you live in Dallas, Texas, and you are going to call your friend in Chennai. 
+Let us say you have international calling enabled on your plan.
+
+- **Your number in Dallas:** `+1 214-555-1234`
+- **Your friend's number in Chennai:** `+91 98765 43210`
+
+Now, we might wonder: what is actually happening when the Dallas number calls the Chennai number?
+
+The answer involves a journey of roughly **13,500 km** that completes in under a second. 
+Once the call connects, your voice makes that same trip in about **150 milliseconds**.
+
+![Path of a call from Dallas to Chennai](/images/mobilephone/DallasChennai.png){fig-alt="A diagram showing the path of a call from Dallas to Chennai."}
+
+### Step 1: Decoding the Number
+
+The moment you tap "call," your phone hands the number `+91 98765 43210` to your carrier. 
+The carrier reads it like an address.
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Part</th>
+      <th class="voice">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect"><code>+91</code></td>
+      <td class="voice">Country code for India</td>
+    </tr>
+    <tr>
+      <td class="aspect"><code>98765</code></td>
+      <td class="voice">Mobile operator prefix, such as Airtel, Jio, or Vi</td>
+    </tr>
+    <tr>
+      <td class="aspect"><code>43210</code></td>
+      <td class="voice">The specific subscriber</td>
+    </tr>
+  </tbody>
+</table>
+
+Your carrier's switching center looks at `+91` and immediately knows that this is not a domestic call. 
+It needs to leave the country.
+
+### Step 2: Handoff to an International Gateway
+
+Your call gets routed to an **international gateway**, typically located in major hub cities such as New York, Miami, or Los Angeles. 
+These gateways are operated by carriers such as Tata Communications, BT, and Orange, which own or lease undersea cable capacity.
+The gateway plans the cheapest and fastest route to India based on existing peering agreements.
+
+### Step 3: Crossing the Planet Through Glass
+
+Your call does not usually go through satellite. Almost all international voice traffic travels through **undersea fiber optic cables** lying on the ocean floor.
+
+From the United States to India, a typical path might look like this:
+
+::: {.route-diagram}
+
+```{.d2}
+direction: right
+
+us: "US East Coast\nAtlantic" {
+  shape: rectangle
+  width: 150
+  height: 58
+  style.fill: "#dbeafe"
+  style.font-size: 13
+  style.bold: true
+}
+
+uk: "UK\nEurope" {
+  shape: rectangle
+  width: 130
+  height: 58
+  style.fill: "#e0e7ff"
+  style.font-size: 13
+  style.bold: true
+}
+
+egypt: "Egypt\nSuez / Red Sea" {
+  shape: rectangle
+  width: 160
+  height: 58
+  style.fill: "#fde68a"
+  style.font-size: 13
+  style.bold: true
+}
+
+ocean: "Indian Ocean\nCables" {
+  shape: rectangle
+  width: 160
+  height: 58
+  style.fill: "#cffafe"
+  style.font-size: 13
+  style.bold: true
+}
+
+india: "Mumbai\nor Chennai" {
+  shape: rectangle
+  width: 140
+  height: 58
+  style.fill: "#dcfce7"
+  style.font-size: 13
+  style.bold: true
+}
+
+us -> uk {
+  style.stroke-width: 2
+}
+
+uk -> egypt {
+  style.stroke-width: 2
+}
+
+egypt -> ocean {
+  style.stroke-width: 2
+}
+
+ocean -> india {
+  style.stroke-width: 2
+}
+```
+
+:::
+
+Inside those cables, your voice is represented as laser pulses flickering on and off billions of times per second through a glass thread thinner than a human hair.
+
+### Step 4: Arriving in India
+
+The call reaches an Indian gateway carrier, which recognizes `98765` as a prefix belonging to a mobile operator, for example Airtel. 
+It then hands the call to Airtel's network.
+
+Airtel's switching center looks up subscriber `+91 98765 43210` in its database and asks:
+
+> Which tower did this phone last check in with?
+
+Every cell phone, when powered on, registers with the nearest tower. 
+So Airtel already knows that your friend's phone is connected to a specific tower, for example in T. Nagar, Chennai.
+
+### Step 5: The Phone Rings
+
+Airtel's network sends a **paging message** to that Chennai tower:
+
+> Phone `98765 43210`, you have an incoming call from `+1 214-555-1234`.
+
+Your friend's phone, which has been quietly listening for paging messages, hears its own ID. 
+The screen lights up. The ringtone plays. Caller ID shows your number.
+
+Meanwhile, in Dallas, you hear a ringback tone. 
+That "ring ring" is not usually the actual sound of his phone ringing. 
+It is a tone generated by the network to tell you that the call is being attempted.
+
+### Step 6: He Picks Up
+
+He taps accept. His phone tells the Chennai tower the call has been accepted. That confirmation flows back across the same path in reverse:
+
+::: {.wide-diagram}
+
+```{.d2}
+direction: right
+
+friend: "Friend\nChennai" {
+  shape: rectangle
+  width: 260
+  height: 130
+  style.fill: "#fef3c7"
+  style.font-size: 28
+  style.bold: true
+}
+
+airtel: "Airtel\nNetwork" {
+  shape: rectangle
+  width: 260
+  height: 130
+  style.fill: "#f8fafc"
+  style.font-size: 28
+  style.bold: true
+}
+
+intl: "Undersea\nFiber" {
+  shape: rectangle
+  width: 260
+  height: 130
+  style.fill: "#e0e7ff"
+  style.font-size: 28
+  style.bold: true
+}
+
+carrier: "Your\nCarrier" {
+  shape: rectangle
+  width: 260
+  height: 130
+  style.fill: "#f8fafc"
+  style.font-size: 28
+  style.bold: true
+}
+
+you: "You\nDallas" {
+  shape: rectangle
+  width: 260
+  height: 130
+  style.fill: "#fef3c7"
+  style.font-size: 28
+  style.bold: true
+}
+
+friend -> airtel -> intl -> carrier -> you: "call accepted" {
+  style.stroke-width: 4
+  style.font-size: 22
+}
+```
+:::
+
+**~200 ms** from his tap to your phone hearing "call connected."
+
+### Step 7: Voice Transmission
+
+Now the conversation flows. Each "Hello" makes the journey through several layers:
+
+1. His microphone captures the sound.
+2. An ADC samples it 8,000 times per second.
+3. A voice codec compresses it to approximately 13 kbps.
+4. The signal is encrypted and error-corrected.
+5. It travels by radio to the Chennai tower.
+6. It travels by fiber to Airtel's core network.
+7. It passes through undersea cables to the United States.
+8. It reaches your carrier and then your Dallas tower.
+9. It travels by radio to your phone.
+10. It is decoded, decrypted, and converted back to sound.
+11. Your speaker plays "Hello."
+
+ADC stands for **Analog-to-Digital Converter**. Kbps means **kilobits per second**.
+The total delay is about **150–250 milliseconds** from his lips to your ear.
+
+### Why Is This So Fast?
+
+There are three main reasons:
+
+1. **Light is incredibly fast.** Even halfway around the planet, light through fiber takes only about 100 ms.
+2. **The route is pre-built.** Cables, towers, and routing tables were established years ago. Your call does not find a path from scratch; it uses an existing path.
+3. **Both phones are already logged in.** The network already knows which tower each phone is near, so connecting the call is a lookup problem, not a search problem.
+
+What was most surprising to me is the infrastructure, especially fiber optic cables under the ocean. 
+Many carriers operate them, and they have peering agreements to route traffic across the world. 
+
+The above discussion gives a system-level and network-level overview of how a mobile phone works.
+Next, we look at the phone from the bottom up, starting with the physical components and building our way up to the network.
+
+## A Bottom-Up View
+
+Now let's flip the view. Let's start at the very bottom, with electrons and transistors, and build our way up.
+This is how engineers actually think about a phone. 
+
+To make this concrete, we'll trace two examples all the way through:
+
+1. **A Voice Call** from Dallas to Chennai.
+2. **A Text Message** to the same person.
+
+### Example 1: Calling Chennai
+
+You're in Dallas, dialing **+91 98765 43210** to reach your friend in Chennai. 
+He picks up. You say "Hello." He hears it. Let's follow this all the way from the atoms to the cell tower, layer by layer.
+
+#### Layer 1: Physics, your voice as pressure waves
+
+You speak the word "Hello." Your vocal cords vibrate at roughly 100–250 Hz, pushing air molecules in tiny waves of pressure. 
+These waves travel about 5 cm to the microphone hole on the bottom of the Nokia 3210.
+
+Inside that hole sits a **MEMS microphone**: a chip the size of a grain of rice with a thin silicon membrane suspended over a backplate. 
+As pressure waves hit the membrane, it flexes inward and outward by a few nanometers. 
+The gap between the membrane and the backplate forms a tiny capacitor whose capacitance changes with the flex.
+There are no bits yet. There's just air, then a wiggling membrane, then a wiggling capacitance.
+
+#### Layer 2: Components, converting wiggle to voltage
+
+The MEMS microphone has a small built-in amplifier that converts the changing capacitance into a changing voltage. 
+The voltage swings between about 0 and 1 volt, mirroring the pressure of the sound wave.
+
+This analog voltage flows along a PCB trace into the Unisoc T107's audio input pin, where it meets an **Analog-to-Digital Converter (ADC)**.
+
+The ADC samples the voltage **8,000 times per second** and assigns each sample a number between 0 and 65,535 (a 16-bit value). 
+This rate — 8 kHz, 16-bit — is the standard for telephone-grade voice. It's enough to capture every vocal sound humans make, and not a hertz more.
+We've crossed the boundary. Sound is now numbers.
+
+#### Layer 3: Digital logic, the audio stream
+
+Eight thousand 16-bit samples per second is **128 kbps** of raw audio data. This is too much to transmit over a cellular channel, so the chip's audio hardware passes the stream into a **DSP** (Digital Signal Processor) inside the same Unisoc T107 chip.
+
+The DSP is a special-purpose CPU built to do math on streams of numbers very fast. 
+It runs the **AMR codec** (Adaptive Multi-Rate, the standard for GSM and early LTE voice). 
+The codec analyzes the audio and:
+
+- Models your vocal tract as a mathematical filter
+- Throws away frequencies you don't produce
+- Encodes the residual as a compact stream of parameters
+
+After compression, the audio stream is down to about **12.2 kbps** — roughly a tenth of its raw size. 
+The shape of "Hello" is now a sequence of numbers describing how to reconstruct it later.
+
+#### Layer 4: CPU and protocol stack
+
+The compressed audio enters the **baseband processor** — the same Unisoc T107, but a different functional block. 
+The baseband runs a real-time operating system whose entire job is to speak the cellular protocol.
+
+The baseband does several things:
+
+1. **Frames** the audio into packets of the size the network expects.
+2. **Adds error-correction codes** — extra bits that let the tower recover the data even if some bits get garbled in transit.
+3. **Encrypts** the packets using the cipher key the SIM negotiated when the phone last authenticated.
+4. **Schedules** the packets for transmission in your phone's assigned time slot on the radio channel.
+
+Each step here is implemented in code running on a tiny CPU inside the modem block. 
+The code was written and certified by Unisoc, locked in firmware, and never updated by the user.
+
+#### Layer 5: Radio, turning bits into electromagnetic waves
+
+The encrypted, error corrected packets head into the radio circuitry.
+
+A **modulator** takes the bit stream and maps it onto a carrier wave — a pure 1,800 MHz oscillation generated by a **frequency synthesizer**. 
+The mapping is done using QAM (Quadrature Amplitude Modulation), where each combination of bits picks a specific amplitude and phase of the carrier.
+
+The modulated signal, still tiny, microvolt-level, passes through:
+
+- A **mixer** that lifts it to the exact frequency of your assigned LTE band
+- A **filter** that cleans out unwanted frequencies
+- A **power amplifier (PA)** that boosts it from microwatts to about 200 milliwatts
+- An **antenna switch** that routes it to the correct antenna for the band
+- The **antenna** itself — a printed metal trace on the PCB, tuned to about 4 cm length for 1,800 MHz
+
+The antenna radiates the signal as electromagnetic waves into the air. 
+About 200 milliwatts of radio power launches into all directions at the speed of light.
+
+#### Layer 6: The cell tower
+
+A few hundred meters to a few kilometers away, a cell tower's antenna receives the wave. The tower's electronics reverse everything your phone just did: amplify, filter, mix down, demodulate, decrypt the outer transport layer. Your audio packets are now sitting inside your carrier's network as digital data. From here, they travel as pure information, never as sound again, until they reach Chennai.
+
+#### Layer 7: The journey through the network
+
+Your packets travel from the Dallas tower through your carrier's fiber to a switching center, then to an international gateway in (say) New York, then onto an undersea fiber optic cable. In the fiber, your "Hello" is now **patterns of laser light** flickering through a glass thread on the ocean floor. The light pulses travel at roughly 200,000 km per second through the glass, hop through repeaters and undersea amplifiers, and arrive in Mumbai about 100–150 milliseconds after they left Dallas.
+
+From Mumbai the data flows on terrestrial fiber to Chennai, into Airtel's switching center, then to the cell tower in T. Nagar that your friend's phone last registered with.
+
+#### Layer 8: His phone, in reverse
+
+The Chennai tower transmits a radio signal to your friend's phone. 
+From here, every layer happens *in reverse*:
+
+- Antenna receives the wave
+- Low-Noise Amplifier (LNA) boosts the tiny signal without adding noise
+- Mixer drops it back to baseband frequency
+- Demodulator turns the wave into bits
+- Modem decrypts and error-corrects
+- DSP runs the AMR codec in **decode** mode, reconstructing audio samples
+- DAC (Digital-to-Analog Converter) turns the samples back into a voltage waveform
+- A small speaker amplifier drives the earpiece speaker
+- The speaker membrane vibrates, pushing air molecules
+- Air pressure waves hit his eardrum
+- He hears "Hello"
+
+![the voice call layer stack](/images/mobilephone/voicelayer.png){fig-alt="The voice call layer stack."}
+
+#### The whole journey
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Layer</th>
+      <th class="voice">What's moving</th>
+      <th class="sms">Form</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect">1. Vocal cords</td>
+      <td class="voice">Air pressure</td>
+      <td class="sms">Sound waves in your room</td>
+    </tr>
+    <tr>
+      <td class="aspect">2. Microphone</td>
+      <td class="voice">Voltage</td>
+      <td class="sms">Analog electrical signal</td>
+    </tr>
+    <tr>
+      <td class="aspect">3. ADC</td>
+      <td class="voice">Numbers</td>
+      <td class="sms">128 kbps digital stream</td>
+    </tr>
+    <tr>
+      <td class="aspect">4. Codec</td>
+      <td class="voice">Compressed numbers</td>
+      <td class="sms">12.2 kbps encoded stream</td>
+    </tr>
+    <tr>
+      <td class="aspect">5. Modem</td>
+      <td class="voice">Packets</td>
+      <td class="sms">Encrypted, framed bits</td>
+    </tr>
+    <tr>
+      <td class="aspect">6. Radio</td>
+      <td class="voice">Electromagnetic waves</td>
+      <td class="sms">1,800 MHz signal in the air</td>
+    </tr>
+    <tr>
+      <td class="aspect">7. Fiber backbone</td>
+      <td class="voice">Photons</td>
+      <td class="sms">Light pulses in glass</td>
+    </tr>
+    <tr>
+      <td class="aspect">8. His phone</td>
+      <td class="voice">All of the above, reversed</td>
+      <td class="sms">Sound in his ear</td>
+    </tr>
+  </tbody>
+</table>
+
+Total elapsed time from your lips to his ear: **about 150–250 milliseconds**.
+
+The remarkable thing is how *real-time* this is. Every layer must keep up with every other layer. 
+If the codec falls behind, the audio buffers underrun and you hear gaps. If the modem misses a transmission slot, packets get lost. If the network adds too much latency, the conversation feels awkward and you start talking over each other. The whole stack runs in lockstep, continuously, for the duration of the call.
+
+### Example 2: Texting Chennai
+
+Now let's do the same trip with a text message: you type **"Hello"** in the Messages app and send it to **+91 98765 43210**. 
+Same destination, same person. But everything below the surface is different.
+
+#### Layer 1: Physics, your finger on a key
+You press the "4" key on the keypad to start typing. 
+This physically closes a contact, allowing electrons to flow through the closed circuit.
+No sound. No microphone. Just a switch closing.
+
+#### Layer 2: Components, keypad matrix scan
+
+The Unisoc T107 is constantly scanning the keypad matrix, driving voltage onto rows and reading columns. When you press "4," the chip detects voltage on the row/column intersection that corresponds to that key. A GPIO interrupt fires. The chip records: *key code for "4" pressed.*
+
+#### Layer 3: Digital logic, input event
+
+The keypad driver writes the keycode (`0x34` for ASCII "4") into a register. An interrupt handler in the firmware picks it up and places it into the kernel's input event queue. In text-mode T9 input, the "4" key represents the letters "g, h, i." Pressing "4" twice means "h." A short keypress sequence (4-3-5-5-5-6) becomes the word "Hello." The keystroke history is buffered. The Messages app maintains a string in RAM. After your final keypress, the string in memory contains the five characters: H, e, l, l, o.
+
+#### Layer 4: CPU and the application
+
+The Messages app runs on top of Series 30+ on the CPU. When you press "Send," the app:
+
+1. Reads the destination number from the input field (`+91 98765 43210`)
+2. Reads the message body from its string buffer (`"Hello"`)
+3. Packages them into an **SMS PDU (Protocol Data Unit)** — a structured byte sequence defined in the GSM standard (3GPP TS 23.040)
+4. Hands the PDU to the modem via an internal API
+
+An SMS PDU has a precise format. 
+For "Hello" sent to +91 98765 43210, the bytes look something like:
+
+```
+07 91 21 43 65 87 09 F2 11 00 0B 91 98 76 54 32 10 F0 00 00 05 48 65 6C 6C 6F
+```
+
+That's the entire message: protocol header, recipient number (in a packed format called *semi-octets*, where digit pairs are nibble-swapped), message length, encoding flag, and the five characters of "Hello" in their ASCII bytes (`48 65 6C 6C 6F`).
+
+The total: 26 bytes. The whole text message is **208 bits**.
+
+#### Layer 5: The modem and the radio path
+
+Here's where the SMS path *diverges* from the voice path in an important way.
+A voice call requires a **dedicated channel** — your phone is allocated a continuous slot of radio time for the duration of the call. SMS, by contrast, hitches a ride on the **signaling channel** — the same low-bandwidth control channel that the network uses for paging messages, registration, and tower handoffs.
+
+The SMS PDU is small enough to fit in a few signaling messages. The modem:
+
+1. Wraps the PDU in a **CP-DATA** message (Control Plane Data, the SMS-specific signaling protocol)
+2. Encrypts it
+3. Transmits it during the next signaling slot
+
+This happens in a single brief radio burst — maybe 100 milliseconds total of radio activity — and then the radio goes back to sleep. 
+There's no continuous stream like voice. SMS is a *fire and forget* burst. This is also why SMS works in places voice doesn't. If signal is so weak that voice would drop out, SMS might still get through, because the signaling channel is more aggressively error-corrected and a single retry is cheap.
+
+#### Layer 6: The SMSC, a fundamental difference from voice
+
+Your text doesn't go directly to your friend's phone. 
+It first goes to a **Short Message Service Center (SMSC)**, a server inside your carrier's network whose job is to *store and forward* SMS messages.
+
+This is the most important difference between SMS and voice:
+
+- **Voice** is a **live circuit**. If your friend's phone is off, the call fails.
+- **SMS** is **store and forward**. If your friend's phone is off, the SMSC holds the message and tries to deliver it later.
+
+The SMSC accepts your "Hello," acknowledges receipt to your phone (this is what triggers the "delivered" confirmation), and queues the message for delivery to Airtel's network in India.
+
+#### Layer 7: The journey across the world
+
+The SMS travels from your carrier's SMSC to Airtel's SMSC via international signaling links. Historically these used a protocol called **SS7** (Signaling System 7), the same system that handles call setup, roaming, and number lookups across the global telephone network. Modern networks increasingly use **Diameter** (the IP-based replacement) and various IP-based interconnects. Either way, the payload is *tiny* compared to a voice stream. A voice call sends ~12 kbps continuously for minutes. An SMS sends 26 bytes once. The infrastructure cost of an SMS is, almost literally, nothing.
+
+The undersea cable journey is the same as before, packets flow through fiber, hop through routers, arrive in Mumbai or Chennai. Total travel time: a few hundred milliseconds.
+
+#### Layer 8: Delivery to your friend's phone
+
+Airtel's SMSC receives the message and looks up subscriber `+91 98765 43210`. 
+
+Two cases:
+
+**If his phone is online:** Airtel's SMSC sends a paging message to the cell tower his phone last registered with. The tower paging message says: *"Phone 98765-43210, you have an SMS waiting."* His phone, listening to the signaling channel during its periodic wake-ups, hears its ID and acknowledges. The SMSC then transmits the actual PDU to the phone over the same signaling channel.
+
+**If his phone is offline:** the SMSC holds the message. When his phone next registers with the network (for example, when he turns it back on), the SMSC delivers the queued messages.
+
+#### Layer 9: His phone reconstructs the text
+
+His Nokia 3210 receives the PDU, decrypts it, and hands it to the SMS subsystem. The SMS subsystem:
+
+1. Parses the PDU header to extract sender, timestamp, and encoding
+2. Decodes the payload bytes (`48 65 6C 6C 6F`) back into the characters H, e, l, l, o
+3. Stores the message in the phone's SMS database (in flash memory)
+4. Triggers a notification — the screen lights up, a tone plays, the inbox icon updates
+5. The Messages app, when opened, fetches the message from the database and renders it on the LCD
+
+He sees "Hello" on his screen.
+
+![Whole journey from Bottom up view](/images/mobilephone/wholejourney.png){fig-alt="The whole journey from bottom up view."}
+
+#### The whole journey
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Layer</th>
+      <th class="voice">What's moving</th>
+      <th class="sms">Form</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect">1. Finger</td>
+      <td class="voice">Mechanical force</td>
+      <td class="sms">Two metal contacts touching</td>
+    </tr>
+    <tr>
+      <td class="aspect">2. Keypad matrix</td>
+      <td class="voice">Voltage</td>
+      <td class="sms">Row/column scan</td>
+    </tr>
+    <tr>
+      <td class="aspect">3. Input event</td>
+      <td class="voice">Bits</td>
+      <td class="sms">Keycode in a register</td>
+    </tr>
+    <tr>
+      <td class="aspect">4. App + OS</td>
+      <td class="voice">String in memory</td>
+      <td class="sms">"Hello" as 5 ASCII bytes</td>
+    </tr>
+    <tr>
+      <td class="aspect">5. Modem</td>
+      <td class="voice">SMS PDU</td>
+      <td class="sms">26 bytes wrapped in signaling protocol</td>
+    </tr>
+    <tr>
+      <td class="aspect">6. Signaling channel</td>
+      <td class="voice">Radio burst</td>
+      <td class="sms">~100 ms of transmission, then silence</td>
+    </tr>
+    <tr>
+      <td class="aspect">7. SMSC</td>
+      <td class="voice">Stored message</td>
+      <td class="sms">Queued in carrier's server</td>
+    </tr>
+    <tr>
+      <td class="aspect">8. Network hop</td>
+      <td class="voice">SS7 / Diameter packets</td>
+      <td class="sms">Light pulses in undersea fiber</td>
+    </tr>
+    <tr>
+      <td class="aspect">9. His phone</td>
+      <td class="voice">All of the above, reversed</td>
+      <td class="sms">Text rendered on LCD</td>
+    </tr>
+  </tbody>
+</table>
+
+Total time from your "send" tap to his screen lighting up: **typically 1–5 seconds**, sometimes longer if the SMSC is busy or his phone is briefly offline.
+
+### Comparing the two journeys
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Aspect</th>
+      <th class="voice">Voice call</th>
+      <th class="sms">SMS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect">Real-time?</td>
+      <td class="voice">Yes, continuous</td>
+      <td class="sms">No, bursty</td>
+    </tr>
+    <tr>
+      <td class="aspect">Bandwidth</td>
+      <td class="voice">~12 kbps continuous</td>
+      <td class="sms">208 bits, once</td>
+    </tr>
+    <tr>
+      <td class="aspect">Radio active</td>
+      <td class="voice">For entire call</td>
+      <td class="sms">~100 ms total</td>
+    </tr>
+    <tr>
+      <td class="aspect">Network resource</td>
+      <td class="voice">Dedicated voice channel</td>
+      <td class="sms">Signaling channel</td>
+    </tr>
+    <tr>
+      <td class="aspect">If recipient is offline</td>
+      <td class="voice">Call fails</td>
+      <td class="sms">Stored and delivered later</td>
+    </tr>
+    <tr>
+      <td class="aspect">Latency tolerance</td>
+      <td class="voice">Must be under ~300 ms</td>
+      <td class="sms">Can take seconds or minutes</td>
+    </tr>
+    <tr>
+      <td class="aspect">Encoding</td>
+      <td class="voice">AMR voice codec</td>
+      <td class="sms">ASCII / GSM 7-bit</td>
+    </tr>
+    <tr>
+      <td class="aspect">Power cost on phone</td>
+      <td class="voice">High — radio at full power</td>
+      <td class="sms">Tiny — one short burst</td>
+    </tr>
+    <tr>
+      <td class="aspect">Per-message cost to carrier</td>
+      <td class="voice">Significant (continuous bandwidth)</td>
+      <td class="sms">Nearly zero</td>
+    </tr>
+  </tbody>
+</table>
+
+## Protocol Stack View
+
+So far, we saw the phone from the bottom up: sound becomes voltage, voltage becomes bits, bits become radio waves, and radio waves enter the cellular network.
+
+Now we need a second view: the **protocol stack view**.
+
+A protocol stack explains the rules followed by each layer. The phone is not simply throwing bits into the air. Every message is formatted, timed, corrected, encrypted, routed, and decoded.
+
+::: {.stack-flow}
+## General Communication Flow
+
+<div class="flow-step"><strong>1. Human action</strong><span>You speak, type, tap, or request something.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>2. Application request</strong><span>The dialer, messages app, or browser creates a request.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>3. Service protocol</strong><span>The phone decides whether this is voice, SMS, or internet data.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>4. Encoding</strong><span>Speech, text, or data is converted into digital form.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>5. Authentication and encryption</strong><span>The SIM and network verify identity and secure the transmission.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>6. Radio control</strong><span>The modem manages tower connection, timing, and channel use.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>7. Reliable bit transfer</strong><span>The data is framed, checked, corrected, and retransmitted if needed.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>8. Physical radio waves</strong><span>The RF hardware turns bits into electromagnetic waves.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>9. Carrier network</strong><span>The tower and carrier core route the information.</span></div>
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step"><strong>10. Destination device or server</strong><span>The other phone or internet server receives and responds.</span></div>
+:::
+
+The same phone can make a voice call, send an SMS, or open a website. These feel different to the user, but all of them pass through layered systems.
+
+::: {.three-card-grid}
+
+::: {.tech-card}
+### Voice Call
+
+**Type:** Real-time stream  
+**Delay tolerance:** Very low  
+**Network behavior:** Live connection  
+**Main network node:** Switching center or IMS  
+**If receiver is offline:** Call fails  
+**Power use:** High during call  
+
+A voice call must keep moving continuously. If packets arrive too late, the conversation feels broken.
+:::
+
+::: {.tech-card}
+### SMS
+
+**Type:** Short stored message  
+**Delay tolerance:** Seconds or minutes are acceptable  
+**Network behavior:** Store and forward  
+**Main network node:** SMSC  
+**If receiver is offline:** Message waits  
+**Power use:** Low, short radio burst  
+
+SMS is not a live conversation. The carrier can store the message and deliver it later.
+:::
+
+::: {.tech-card}
+### Internet Data
+
+**Type:** Packet-based data  
+**Delay tolerance:** Depends on the app  
+**Network behavior:** Request and response  
+**Main network node:** Packet core  
+**If receiver/server is unavailable:** Request fails or retries  
+**Power use:** Variable  
+
+Internet data breaks information into packets. Web pages, apps, and videos all use this packet-based model.
+:::
+
+:::
+
+The important lesson is that the phone is a layered communication machine. The user sees a simple action, but underneath it the device performs encoding, authentication, radio scheduling, error correction, routing, and decoding.
+
+## Engineering Views
+
+We understand the phone as a system: it has hardware, software, radio, protocols, a SIM identity, and a carrier network behind it.
+But to understand a mobile phone more deeply, we need a few more engineering views.
+
+It is a collection of specialized subsystems.
+
+```text
+User interface
+   ↓
+Application processor or phone firmware
+   ↓
+Baseband processor / modem
+   ↓
+RF transceiver
+   ↓
+Power amplifier, filters, antenna switch
+   ↓
+Antenna
+   ↓
+Cell tower
+```
+
+**Signal path:**
+
+Voice / SMS / data → modem → radio → antenna → tower
+
+**Control path:**
+
+SIM identity → authentication → tower selection → timing → power control → handover
+
+**RF Front End View:**
+
+Baseband bits
+   ↓
+RF transceiver
+   ↓
+Filter
+   ↓
+Power amplifier
+   ↓
+Antenna switch
+   ↓
+Antenna
+   ↓
+Radio waves
+
+On the receiving end, the path is reversed:
+
+Radio waves
+   ↓
+Antenna
+   ↓
+Antenna switch
+   ↓
+Low-noise amplifier
+   ↓
+Filter
+   ↓
+RF transceiver
+   ↓
+Baseband processor
+
+
+**Network Generation View:**
+
+
+2G / GSM  → voice and SMS were central
+3G        → better data and mobile internet
+4G / LTE  → packet-based internet architecture
+VoLTE     → voice becomes IP-based voice
+5G        → higher speed, lower latency, more flexible network design
+
+## Frequency Bands and Duplexing
+
+We said the phone transmits at 1,800 MHz, but skipped a real problem: during a call, the phone transmits and receives **simultaneously**. If both used the same frequency, the phone's 200 mW transmitter would drown out the microwatt signal from the tower, like hearing a whisper while shouting.
+
+Two solutions:
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th class="aspect">Method</th>
+      <th class="voice">How it works</th>
+      <th class="sms">Used in</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="aspect"><strong>FDD</strong> (Frequency Division Duplex)</td>
+      <td class="voice">Transmit and receive on different frequencies, simultaneously. Typically 45–95 MHz apart.</td>
+      <td class="sms">GSM, most LTE</td>
+    </tr>
+    <tr>
+      <td class="aspect"><strong>TDD</strong> (Time Division Duplex)</td>
+      <td class="voice">One frequency, taking turns in time slots.</td>
+      <td class="sms">Many 5G bands, Wi-Fi</td>
+    </tr>
+  </tbody>
+</table>
+
+This is why phones list paired frequencies per band. **LTE Band 3** uses 1,710–1,785 MHz uplink and 1,805–1,880 MHz downlink. The 95 MHz gap lets a **duplexer** (a sharp filter) isolate the two directions — and it's why we'll see separate filters per band on the PCB.
+
+## The Clock: TCXO
+
+Cellular networks run on time slots. LTE requires timing accurate to about **0.1 microseconds**. A regular quartz crystal drifts with temperature, a phone in a hot car versus a cold pocket would lose its slot.
+
+The fix is a **TCXO** (Temperature-Compensated Crystal Oscillator): a quartz crystal with a small circuit that measures temperature and corrects frequency in real time, holding accuracy to about **0.5 parts per million**.
+
+On the PCB, the TCXO is a small metal-cased component near the modem. Without it, time-division multiplexing, the mechanism that lets millions of phones share spectrum, falls apart.
+
+## Power Path and the PMIC
+
+A phone runs on one battery cell at **3.7 V**. But the chips inside need many voltages:
+
+- Application processor cores: ~**0.8 V**
+- Modem: ~**1.1 V**
+- Memory: **1.2 V** or **1.8 V**
+- Display backlight: **5–20 V**
+- RF power amplifier: ~**3.4 V** during transmit bursts
+- SIM card: **1.8 V** or **3 V**
+
+Generating all of these efficiently from one battery is the job of the **PMIC** (Power Management Integrated Circuit), typically the second-largest chip on the PCB after the main processor. It contains a dozen or more switching and linear regulators, and handles:
+
+- **Battery charging** managing current and voltage across charge phases
+- **Battery monitoring** tracking voltage, current, and temperature to estimate capacity
+- **Power sequencing** turning rails on and off in the right order at boot and shutdown
+- **Sleep states** shutting down rails the phone doesn't need when idle
+
+Good battery life largely means a well-designed PMIC and software that knows when to tell it to shut things off. 
+
+## Conclusion
+
+A mobile phone looks simple from the outside, but internally it is a layered communication machine. A voice call begins as pressure waves in air, becomes voltage, becomes digital samples, becomes compressed packets, becomes radio waves, becomes light pulses in fiber, and finally becomes sound again in another person’s ear. SMS follows a different path. It is not a live stream, but a short stored message that travels through signaling channels and SMS centers.
+
+The important lesson is that a phone is a combination of computing, radio engineering, signal processing, power management, software, cryptography, and telecom infrastructure.
+
+In the future post, I will move from the system-level explanation to the physical device itself. I will use a Nokia-style feature phone teardown to identify the battery, PCB, processor, modem, PMIC, RF front end, antenna, keypad, display, speaker, microphone, SIM interface, and other subsystems.
