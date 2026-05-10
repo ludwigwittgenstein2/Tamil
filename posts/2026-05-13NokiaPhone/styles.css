@@ -1,30 +1,152 @@
 /* =========================================================
    Mobile Phone Tutorial Styles
    Clean technical layout for Quarto HTML page
+   No opacity, no hidden sections, no dark-mode override
    ========================================================= */
 
 
 /* =========================================================
-   Base readable page improvements
+   Page base
    ========================================================= */
 
+html,
 body {
+  background: #ffffff;
+  color: #111827;
   line-height: 1.65;
+  opacity: 1;
+  visibility: visible;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/* Make Quarto page containers visible */
+#quarto-content,
+main,
+article,
+section,
+.content,
+.page-columns,
+.column-body,
+.column-page {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* General readable text */
+p,
+li,
+blockquote,
+table,
+figure,
+figcaption,
+div,
+span {
+  opacity: 1;
+  visibility: visible;
 }
 
 p {
   line-height: 1.65;
+  margin-bottom: 1rem;
 }
 
+li {
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
+}
+
+
+/* =========================================================
+   Headings
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111827;
+  opacity: 1;
+  visibility: visible;
+  line-height: 1.3;
+}
+
+h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+
+/* =========================================================
+   Images and figures
+   ========================================================= */
+
 img {
+  display: block;
   max-width: 100%;
   height: auto;
+  margin: 1rem auto;
   border-radius: 8px;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
+
+figure {
+  margin: 2rem 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================================================
+   Code blocks
+   ========================================================= */
 
 pre,
 code {
   font-size: 0.92rem;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+pre {
+  padding: 1rem;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  background: #f6f8fa;
+  color: #111827;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+code {
+  color: #111827;
+}
+
+.sourceCode,
+.cell,
+.cell-output,
+.cell-output-display {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 
@@ -44,8 +166,20 @@ code {
   font-size: 0.95rem;
   border: 1px solid #d0d7de;
   border-radius: 8px;
-  overflow: hidden;
   background: #ffffff;
+  color: #111827;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.comparison-table thead,
+.comparison-table tbody,
+.comparison-table tr,
+.comparison-table th,
+.comparison-table td {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .comparison-table thead th {
@@ -92,10 +226,6 @@ code {
   color: #263814;
 }
 
-.comparison-table tbody tr:hover td {
-  filter: brightness(0.98);
-}
-
 
 /* =========================================================
    Protocol stack flow
@@ -108,6 +238,10 @@ code {
   border: 1px solid #d0d7de;
   border-radius: 8px;
   background: #fafafa;
+  color: #111827;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .stack-flow h2 {
@@ -125,6 +259,10 @@ code {
   border-left: 4px solid #374151;
   border-radius: 6px;
   background: #ffffff;
+  color: #111827;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .flow-step strong {
@@ -146,6 +284,8 @@ code {
   font-size: 1.1rem;
   line-height: 1.5;
   color: #6b7280;
+  opacity: 1;
+  visibility: visible;
 }
 
 
@@ -159,6 +299,9 @@ code {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: 1.5rem 0 2rem 0;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .tech-card {
@@ -166,6 +309,10 @@ code {
   border: 1px solid #d0d7de;
   border-radius: 8px;
   background: #ffffff;
+  color: #111827;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .tech-card h3 {
@@ -196,6 +343,9 @@ code {
   grid-template-columns: 1fr;
   gap: 0.75rem;
   margin: 1.5rem 0 2rem 0;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .learning-card {
@@ -204,6 +354,10 @@ code {
   border-left: 4px solid #374151;
   border-radius: 6px;
   background: #ffffff;
+  color: #111827;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .learning-card h3 {
@@ -232,6 +386,10 @@ code {
   border-left: 4px solid #374151;
   border-radius: 6px;
   background: #fafafa;
+  color: #111827;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .note-box p:last-child {
@@ -240,18 +398,80 @@ code {
 
 
 /* =========================================================
-   Image captions / figures
+   D2 and technical diagrams
    ========================================================= */
 
-figure {
+.wide-diagram {
   margin: 2rem 0;
+  width: 100%;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #6b7280;
-  text-align: center;
+.wide-diagram svg,
+.wide-diagram img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.route-diagram {
+  margin: 1.25rem 0;
+  width: 100%;
+  overflow: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.route-diagram svg,
+.route-diagram img {
+  display: block;
+  width: 760px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
+/* =========================================================
+   Blockquotes
+   ========================================================= */
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #374151;
+  background: #fafafa;
+  color: #374151;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   Links
+   ========================================================= */
+
+a {
+  color: #0645ad;
+  text-decoration: underline;
+  opacity: 1;
+  visibility: visible;
+}
+
+a:hover {
+  color: #0b63ce;
 }
 
 
@@ -272,9 +492,23 @@ figcaption {
   .comparison-table tbody td {
     padding: 0.7rem 0.8rem;
   }
+
+  .wide-diagram svg,
+  .wide-diagram img {
+    max-width: 100%;
+  }
+
+  .route-diagram svg,
+  .route-diagram img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
+  body {
+    font-size: 0.96rem;
+  }
+
   .stack-flow,
   .tech-card,
   .learning-card,
@@ -295,127 +529,3 @@ figcaption {
     padding: 0.6rem 0.65rem;
   }
 }
-
-
-/* =========================================================
-   Dark mode support
-   ========================================================= */
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #e5e7eb;
-  }
-
-  img {
-    border: 1px solid #374151;
-  }
-
-  .comparison-table {
-    background: #111827;
-    border-color: #374151;
-  }
-
-  .comparison-table thead th {
-    border-bottom-color: #374151;
-  }
-
-  .comparison-table tbody td {
-    border-bottom-color: #374151;
-  }
-
-  .comparison-table th.aspect,
-  .comparison-table td.aspect {
-    background-color: #1f2937;
-    color: #f3f4f6;
-  }
-
-  .comparison-table th.voice,
-  .comparison-table td.voice {
-    background-color: #2a1410;
-    color: #f5c4b3;
-  }
-
-  .comparison-table th.sms,
-  .comparison-table td.sms {
-    background-color: #0c1f33;
-    color: #b5d4f4;
-  }
-
-  .comparison-table th.data,
-  .comparison-table td.data {
-    background-color: #1d2a15;
-    color: #cfe4b1;
-  }
-
-  .stack-flow,
-  .note-box {
-    background: #111827;
-    border-color: #374151;
-  }
-
-  .stack-flow h2 {
-    color: #f9fafb;
-  }
-
-  .flow-step,
-  .tech-card,
-  .learning-card {
-    background: #1f2937;
-    border-color: #374151;
-  }
-
-  .flow-step,
-  .learning-card,
-  .note-box {
-    border-left-color: #9ca3af;
-  }
-
-  .flow-step strong,
-  .tech-card h3,
-  .tech-card strong,
-  .learning-card h3 {
-    color: #f9fafb;
-  }
-
-  .flow-step span,
-  .tech-card p,
-  .learning-card p,
-  .note-box p {
-    color: #d1d5db;
-  }
-
-  .flow-arrow {
-    color: #9ca3af;
-  }
-
-  figcaption {
-    color: #9ca3af;
-  }
-}
-
-/* Bigger technical diagrams */
-.wide-diagram {
-  margin: 2rem 0;
-  width: 100%;
-}
-
-.wide-diagram svg,
-.wide-diagram img {
-  display: block;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.route-diagram {
-  margin: 1.25rem 0;
-}
-
-.route-diagram svg,
-.route-diagram img {
-  display: block;
-  width: 760px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
