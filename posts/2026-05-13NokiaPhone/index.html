@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rick Rejeleene">
+<meta name="dcterms.date" content="2026-05-10">
+<meta name="description" content="A systems-level tutorial explaining how mobile phones work, from cellular networks and voice calls to embedded electronics">
+
+<title>How do Mobile Phones Work? – Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Research</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="http://rickrejeleene.me/"> <i class="bi bi-house-door-fill" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://facebook.com/whitekangaroo"> <i class="bi bi-facebook" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/rick1776/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- subscribe.html -->
+<!-- Mailchimp CSS for styling -->
+<link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+  #mc_embed_signup {
+    background: #fff;
+    font: 14px Helvetica, Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+</style>
+
+<div id="mc_embed_signup">
+  <form action="https://gmail.us12.list-manage.com/subscribe/post?u=1f588641ad0b06cbeecabd12b&amp;id=ca6e7ad445&amp;f_id=0028c0e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+      <h2>Subscribe</h2>
+      <div class="indicates-required">
+        <span class="asterisk">*</span> indicates required
+      </div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">
+          Email Address <span class="asterisk">*</span>
+        </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+      </div>
+
+      <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+
+      <!-- honeypot field (bot protection) -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_1f588641ad0b06cbeecabd12b_ca6e7ad445" tabindex="-1" value="">
+      </div>
+
+      <div class="clear foot">
+        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Required Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+  (function ($) {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0] = "EMAIL";
+    ftypes[0] = "email";
+    fnames[1] = "FNAME";
+    ftypes[1] = "text";
+    fnames[2] = "LNAME";
+    ftypes[2] = "text";
+    fnames[3] = "ADDRESS";
+    ftypes[3] = "address";
+    fnames[4] = "PHONE";
+    ftypes[4] = "phone";
+    fnames[5] = "BIRTHDAY";
+    ftypes[5] = "birthday";
+    fnames[6] = "COMPANY";
+    ftypes[6] = "text";
+  })(jQuery);
+  var $mcj = jQuery.noConflict(true);
+</script>
+
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction-nokia-1100-memory" id="toc-introduction-nokia-1100-memory" class="nav-link active" data-scroll-target="#introduction-nokia-1100-memory">Introduction: Nokia 1100 Memory</a></li>
+  <li><a href="#what-is-a-mobile-phone" id="toc-what-is-a-mobile-phone" class="nav-link" data-scroll-target="#what-is-a-mobile-phone">What is a Mobile Phone?</a></li>
+  <li><a href="#how-does-a-mobile-phone-work" id="toc-how-does-a-mobile-phone-work" class="nav-link" data-scroll-target="#how-does-a-mobile-phone-work">How does a Mobile Phone Work?</a></li>
+  <li><a href="#system-layer-view" id="toc-system-layer-view" class="nav-link" data-scroll-target="#system-layer-view">System Layer-View</a></li>
+  <li><a href="#the-three-computing-systems-inside-a-phone" id="toc-the-three-computing-systems-inside-a-phone" class="nav-link" data-scroll-target="#the-three-computing-systems-inside-a-phone">The Three Computing Systems Inside a Phone</a></li>
+  <li><a href="#sim-card" id="toc-sim-card" class="nav-link" data-scroll-target="#sim-card">SIM Card</a></li>
+  <li><a href="#a-small-code-example-how-a-sim-proves-its-identity" id="toc-a-small-code-example-how-a-sim-proves-its-identity" class="nav-link" data-scroll-target="#a-small-code-example-how-a-sim-proves-its-identity">A Small Code Example: How a SIM Proves Its Identity</a></li>
+  <li><a href="#how-the-sim-actually-authenticates" id="toc-how-the-sim-actually-authenticates" class="nav-link" data-scroll-target="#how-the-sim-actually-authenticates">How the SIM Actually Authenticates</a>
+  <ul class="collapse">
+  <li><a href="#lte-and-5g" id="toc-lte-and-5g" class="nav-link" data-scroll-target="#lte-and-5g">LTE and 5G</a></li>
+  </ul></li>
+  <li><a href="#cellular-network" id="toc-cellular-network" class="nav-link" data-scroll-target="#cellular-network">Cellular Network</a></li>
+  <li><a href="#the-shared-spectrum-problem" id="toc-the-shared-spectrum-problem" class="nav-link" data-scroll-target="#the-shared-spectrum-problem">The Shared-Spectrum Problem</a></li>
+  <li><a href="#when-we-make-a-call" id="toc-when-we-make-a-call" class="nav-link" data-scroll-target="#when-we-make-a-call">When We Make a Call</a></li>
+  <li><a href="#a-concrete-example-dallas-to-chennai" id="toc-a-concrete-example-dallas-to-chennai" class="nav-link" data-scroll-target="#a-concrete-example-dallas-to-chennai">A Concrete Example: Dallas to Chennai</a>
+  <ul class="collapse">
+  <li><a href="#step-1-decoding-the-number" id="toc-step-1-decoding-the-number" class="nav-link" data-scroll-target="#step-1-decoding-the-number">Step 1: Decoding the Number</a></li>
+  <li><a href="#step-2-handoff-to-an-international-gateway" id="toc-step-2-handoff-to-an-international-gateway" class="nav-link" data-scroll-target="#step-2-handoff-to-an-international-gateway">Step 2: Handoff to an International Gateway</a></li>
+  <li><a href="#step-3-crossing-the-planet-through-glass" id="toc-step-3-crossing-the-planet-through-glass" class="nav-link" data-scroll-target="#step-3-crossing-the-planet-through-glass">Step 3: Crossing the Planet Through Glass</a></li>
+  <li><a href="#step-4-arriving-in-india" id="toc-step-4-arriving-in-india" class="nav-link" data-scroll-target="#step-4-arriving-in-india">Step 4: Arriving in India</a></li>
+  <li><a href="#step-5-the-phone-rings" id="toc-step-5-the-phone-rings" class="nav-link" data-scroll-target="#step-5-the-phone-rings">Step 5: The Phone Rings</a></li>
+  <li><a href="#step-6-he-picks-up" id="toc-step-6-he-picks-up" class="nav-link" data-scroll-target="#step-6-he-picks-up">Step 6: He Picks Up</a></li>
+  <li><a href="#step-7-voice-transmission" id="toc-step-7-voice-transmission" class="nav-link" data-scroll-target="#step-7-voice-transmission">Step 7: Voice Transmission</a></li>
+  <li><a href="#why-is-this-so-fast" id="toc-why-is-this-so-fast" class="nav-link" data-scroll-target="#why-is-this-so-fast">Why Is This So Fast?</a></li>
+  </ul></li>
+  <li><a href="#a-bottom-up-view" id="toc-a-bottom-up-view" class="nav-link" data-scroll-target="#a-bottom-up-view">A Bottom-Up View</a>
+  <ul class="collapse">
+  <li><a href="#example-1-calling-chennai" id="toc-example-1-calling-chennai" class="nav-link" data-scroll-target="#example-1-calling-chennai">Example 1: Calling Chennai</a></li>
+  <li><a href="#example-2-texting-chennai" id="toc-example-2-texting-chennai" class="nav-link" data-scroll-target="#example-2-texting-chennai">Example 2: Texting Chennai</a></li>
+  <li><a href="#comparing-the-two-journeys" id="toc-comparing-the-two-journeys" class="nav-link" data-scroll-target="#comparing-the-two-journeys">Comparing the two journeys</a></li>
+  </ul></li>
+  <li><a href="#protocol-stack-view" id="toc-protocol-stack-view" class="nav-link" data-scroll-target="#protocol-stack-view">Protocol Stack View</a></li>
+  <li><a href="#general-communication-flow" id="toc-general-communication-flow" class="nav-link" data-scroll-target="#general-communication-flow">General Communication Flow</a></li>
+  <li><a href="#viewing-the-phone-as-an-engineering-system" id="toc-viewing-the-phone-as-an-engineering-system" class="nav-link" data-scroll-target="#viewing-the-phone-as-an-engineering-system">Viewing the Phone as an Engineering System</a></li>
+  <li><a href="#frequency-bands-and-duplexing" id="toc-frequency-bands-and-duplexing" class="nav-link" data-scroll-target="#frequency-bands-and-duplexing">Frequency Bands and Duplexing</a></li>
+  <li><a href="#the-clock-tcxo" id="toc-the-clock-tcxo" class="nav-link" data-scroll-target="#the-clock-tcxo">The Clock: TCXO</a></li>
+  <li><a href="#power-path-and-the-pmic" id="toc-power-path-and-the-pmic" class="nav-link" data-scroll-target="#power-path-and-the-pmic">Power Path and the PMIC</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How do Mobile Phones Work?</h1>
+<p class="subtitle lead">Networks, Radio, Embedded Systems</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Engineering</div>
+    <div class="quarto-category">Tutorial</div>
+    <div class="quarto-category">Electrical Engineering</div>
+    <div class="quarto-category">Electronics</div>
+    <div class="quarto-category">Embedded Systems</div>
+    <div class="quarto-category">Computer Science</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A systems-level tutorial explaining how mobile phones work, from cellular networks and voice calls to embedded electronics
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rick Rejeleene </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction-nokia-1100-memory" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-nokia-1100-memory">Introduction: Nokia 1100 Memory</h2>
+<p>One of the mobile phones that made a lasting impact on me, my friends, and many people around me was the Nokia 1100.</p>
+<p>At that time, I was in middle school. It never occurred to me to ask: <em>how does a mobile phone work?</em> <em>What are the components inside it?</em> <em>What would it take to build one?</em></p>
+<p>This tutorial starts with that basic engineering question:</p>
+<blockquote class="blockquote">
+<p>What is inside a mobile phone?<br>
+How does it connect to a tower?<br>
+How does voice become radio waves?<br>
+What happens at each layer of the phone’s system?</p>
+</blockquote>
+<p>The Nokia 1100 became the world’s best-selling mobile phone of all time. It reached 250 million units by 2008, holding the record for the best-selling mobile phone of all time. In the early 2000s, this was one of the phones everyone around me appreciated. It was simple, durable, and did the job: it made and received phone calls, and the battery life was long-lasting. While the Nokia 1100 is no longer in production, my goal in this tutorial is to understand how mobile phones work.</p>
+</section>
+<section id="what-is-a-mobile-phone" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-mobile-phone">What is a Mobile Phone?</h2>
+<p>A modern phone is a small, low-power computer that runs an operating system like Android or iOS, runs apps, and has a cellular modem to connect to the mobile network. It is also a radio system that handles cellular calls, Wi-Fi, Bluetooth, GPS, and other wireless communication. All of this is crammed into a thin handheld device that can be used for hours on a single charge.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/image1.png" class="img-fluid figure-img" alt="A diagram showing three computers within the mobile phone."></p>
+<figcaption>Three mini computers in a mobile phone</figcaption>
+</figure>
+</div>
+</section>
+<section id="how-does-a-mobile-phone-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-a-mobile-phone-work">How does a Mobile Phone Work?</h2>
+<p>A mobile phone is essentially a small, two-way radio that connects to a cellular network so you can talk, text, or use data without wires. It digitizes your voice or data, sends it as radio waves to the nearest cell tower, and then the network routes it to the other phone or to the internet.</p>
+<p>The land is divided into cells, where each cell is served by a tower or base station. Your phone always talks to a nearby tower, and as you move, the network hands over your connection smoothly from one cell to the next. A mobile phone is not only a radio. It is a system made of cooperating subsystems: computing, radio, power, audio, display, memory, software, and network identity.</p>
+</section>
+<section id="system-layer-view" class="level2">
+<h2 class="anchored" data-anchor-id="system-layer-view">System Layer-View</h2>
+<p>To understand mobile phones properly, we need to understand the system in layers. Each layer explains one part of the phone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/protocolview.png" class="img-fluid figure-img" alt="System View"></p>
+<figcaption>System View</figcaption>
+</figure>
+</div>
+<p>A mobile phone combines electronics, software, radio, networking, security, manufacturing, and telecom infrastructure compressed into one handheld device.</p>
+</section>
+<section id="the-three-computing-systems-inside-a-phone" class="level2">
+<h2 class="anchored" data-anchor-id="the-three-computing-systems-inside-a-phone">The Three Computing Systems Inside a Phone</h2>
+<p>We cannot fully call a mobile phone only a radio, because a mobile phone has three computers within it.</p>
+<table class="comparison-table">
+<thead>
+<tr>
+<th class="aspect">
+Component
+</th>
+<th class="voice">
+Function
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="aspect">
+<strong>Application processor</strong>
+</td>
+<td class="voice">
+Runs the operating system, draws the screen, handles your taps, and runs apps.
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<strong>Baseband processor / modem</strong>
+</td>
+<td class="voice">
+Handles cellular communication, talks to cell towers, manages the radio, and controls cellular protocols and timing.
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<strong>SIM card</strong>
+</td>
+<td class="voice">
+Acts as a tiny secure computer. It holds your network identity and a secret cryptographic key that proves you are a legitimate subscriber.
+</td>
+</tr>
+</tbody>
+</table>
+<p>These three components work together and communicate with each other, yet they are logically separate. The application processor handles the user-facing side of the phone. The baseband processor handles cellular communication. The SIM card provides identity and authentication.</p>
+</section>
+<section id="sim-card" class="level2">
+<h2 class="anchored" data-anchor-id="sim-card">SIM Card</h2>
+<p>In simple terms, the SIM card answers one question for the network:</p>
+<blockquote class="blockquote">
+<p>Is this phone really allowed to use this mobile service?</p>
+</blockquote>
+<p>The SIM does this by proving that it knows a secret key. The secret key is stored inside the SIM and also inside the carrier’s authentication system. The key itself is never sent over the air. Instead, the network sends a random challenge. The SIM uses its secret key to compute an answer. The carrier computes the same answer on its side. If the answers match, the network accepts the phone.</p>
+<p>So the SIM is not just a memory card. It is a tiny secure computer that stores identity, protects a secret key, and performs cryptographic calculations.</p>
+</section>
+<section id="a-small-code-example-how-a-sim-proves-its-identity" class="level2">
+<h2 class="anchored" data-anchor-id="a-small-code-example-how-a-sim-proves-its-identity">A Small Code Example: How a SIM Proves Its Identity</h2>
+<p>The SIM card has one important job: it proves to the mobile network that the phone belongs to a valid subscriber.</p>
+<p>The SIM does this using a secret key.</p>
+<p>The important rule is:</p>
+<blockquote class="blockquote">
+<p>The secret key is never sent over the air.</p>
+</blockquote>
+<p>Instead, the network sends the SIM a random challenge. The SIM uses its secret key to calculate an answer. The carrier does the same calculation on its side. If both answers match, the network accepts the phone.</p>
+<p>This is called <strong>challenge-response authentication</strong>.</p>
+<p>A simplified version looks like this:</p>
+<div id="0766e3a9" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hmac</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hashlib</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. The SIM and the carrier both know the same secret key.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># In a real phone, this key is stored securely inside the SIM.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># The carrier also stores a copy in its authentication system.</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>sim_secret_key <span class="op">=</span> os.urandom(<span class="dv">16</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. The network sends a random challenge.</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># This changes every time, so old answers cannot be reused.</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>challenge <span class="op">=</span> os.urandom(<span class="dv">16</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. The SIM uses the secret key to compute an answer.</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>sim_answer <span class="op">=</span> hmac.new(</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    sim_secret_key,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    challenge,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    hashlib.sha256</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>).hexdigest()</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. The carrier computes the expected answer using its copy</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># of the same secret key.</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>carrier_expected_answer <span class="op">=</span> hmac.new(</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    sim_secret_key,</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    challenge,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    hashlib.sha256</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>).hexdigest()</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. If both answers match, the SIM is accepted.</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># ---------------------------------------------------------</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Network challenge:"</span>, challenge.<span class="bu">hex</span>())</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"SIM answer:"</span>, sim_answer)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Carrier expected answer:"</span>, carrier_expected_answer)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> hmac.compare_digest(sim_answer, carrier_expected_answer):</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Authentication successful: SIM is accepted."</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Authentication failed: SIM is rejected."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Network challenge: 33a8dfbf1da7b058c75181cb3f9ab48f
+SIM answer: 0b08fdd0a380299f18da72aed732bd61ba0b0a43d5fddd7184fea781583284ac
+Carrier expected answer: 0b08fdd0a380299f18da72aed732bd61ba0b0a43d5fddd7184fea781583284ac
+Authentication successful: SIM is accepted.</code></pre>
+</div>
+</div>
+</section>
+<section id="how-the-sim-actually-authenticates" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-sim-actually-authenticates">How the SIM Actually Authenticates</h2>
+<p>The earlier code showed the basic idea: the SIM proves that it knows a secret key without revealing the key.</p>
+<p>In GSM, this secret key is called <strong>Ki</strong>. It is stored inside the SIM and also inside the carrier’s authentication system. When the phone connects to the network, the network sends a random challenge called <strong>RAND</strong>.</p>
+<p>The SIM uses <strong>Ki</strong> and <strong>RAND</strong> to calculate a response called <strong>SRES</strong>. The carrier performs the same calculation on its side. If the SIM’s response matches the carrier’s expected response, the phone is authenticated.</p>
+<pre class="text"><code>SIM side:      Ki + RAND → SRES
+Carrier side:  Ki + RAND → expected SRES
+
+If SRES matches expected SRES:
+    accept the phone</code></pre>
+<section id="lte-and-5g" class="level3">
+<h3 class="anchored" data-anchor-id="lte-and-5g">LTE and 5G</h3>
+<p>Later systems such as LTE and 5G use a stronger method called <strong>AKA</strong>, or <strong>Authentication and Key Agreement</strong>.</p>
+<p>One weakness of GSM is that it mainly authenticates the phone to the network. In other words, the network checks whether the SIM is valid. But GSM does not strongly prove to the phone that the network itself is legitimate. This weakness is one reason fake towers can trick phones into connecting.</p>
+<p>LTE improves this by adding <strong>mutual authentication</strong>. The phone proves itself to the network, and the network also proves itself to the phone.</p>
+<pre class="text"><code>GSM:
+Phone proves itself to the network.
+LTE and 5G:
+Phone proves itself to the network.
+Network also proves itself to the phone.</code></pre>
+<p>LTE and 5G also derive stronger temporary session keys. These keys are used to protect communication between the phone and the network. They also include protections against replay attacks, where an attacker records an old authentication message and tries to reuse it later.</p>
+<p>5G goes further by protecting the subscriber’s long-term identity more carefully. Older systems could expose permanent subscriber identifiers in some situations. 5G reduces this risk by making it harder for attackers to track users based on their permanent identity.</p>
+<p>The basic idea remains the same:</p>
+<pre class="text"><code>The SIM proves identity.
+The network verifies the SIM.
+Both sides create temporary keys.
+The radio connection becomes protected.</code></pre>
+<p>This is why the SIM is not just a memory card. It is a tiny secure computer. It stores identity, protects secret keys, and performs cryptographic calculations that allow the phone to securely join the cellular network.</p>
+</section>
+</section>
+<section id="cellular-network" class="level2">
+<h2 class="anchored" data-anchor-id="cellular-network">Cellular Network</h2>
+<p>The basic idea of a cellular network is that land is divided into cells. Each cell is served by a tower or base station. Your phone talks to whichever tower has the best signal, usually the nearest, but not always. As you move, the network hands over your connection smoothly from one cell to the next, often without you noticing. This is the fundamental trick that lets a phone work while you are driving down a highway. Even when you are not making a call, the phone is still quietly connected to the network.</p>
+<table class="comparison-table">
+<thead>
+<tr>
+<th class="aspect">
+Idle-mode function
+</th>
+<th class="voice">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="aspect">
+<strong>Paging</strong>
+</td>
+<td class="voice">
+The phone listens for messages such as: “Hey phone with this ID, someone is calling you.”
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<strong>Location update</strong>
+</td>
+<td class="voice">
+The phone tells the network which tower it is near, so incoming calls can find it.
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<strong>Message delivery</strong>
+</td>
+<td class="voice">
+The phone receives waiting SMS messages and network notifications.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-shared-spectrum-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-shared-spectrum-problem">The Shared-Spectrum Problem</h2>
+<p>Your phone is sharing the airwaves with millions of others. Every cellular standard, (GSM, UMTS, LTE, 5G) is fundamentally a set of clever techniques to make shared radio communication work.</p>
+<table class="comparison-table">
+<thead>
+<tr>
+<th class="aspect">
+Technique
+</th>
+<th class="voice">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="aspect">
+<strong>Frequency division</strong>
+</td>
+<td class="voice">
+The spectrum is divided into channels, like highway lanes.
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<strong>Time division</strong>
+</td>
+<td class="voice">
+Within one channel, time is sliced into tiny slots. Your phone transmits briefly, then waits while other phones take their turn.
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<strong>Cell reuse</strong>
+</td>
+<td class="voice">
+A tower 20 km away can reuse the same frequencies because radio signals fade with distance.
+</td>
+</tr>
+</tbody>
+</table>
+<p>This is what made cellular communication scale to billions of users.</p>
+</section>
+<section id="when-we-make-a-call" class="level2">
+<h2 class="anchored" data-anchor-id="when-we-make-a-call">When We Make a Call</h2>
+<p>When we make a call, the phone performs a sequence of conversions.</p>
+<table class="comparison-table">
+<thead>
+<tr>
+<th class="aspect">
+Step
+</th>
+<th class="voice">
+Process
+</th>
+<th class="sms">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="aspect">
+1
+</td>
+<td class="voice">
+Voice becomes electricity
+</td>
+<td class="sms">
+Your voice hits the phone’s microphone, which converts sound into an electrical signal.
+</td>
+</tr>
+<tr>
+<td class="aspect">
+2
+</td>
+<td class="voice">
+Electricity becomes bits
+</td>
+<td class="sms">
+An internal chip converts the analog signal into digital bits and packs them into radio-wave signals.
+</td>
+</tr>
+<tr>
+<td class="aspect">
+3
+</td>
+<td class="voice">
+Bits become radio waves
+</td>
+<td class="sms">
+The antenna sends the radio signal to the nearest cell tower.
+</td>
+</tr>
+<tr>
+<td class="aspect">
+4
+</td>
+<td class="voice">
+The process reverses
+</td>
+<td class="sms">
+The recipient’s phone converts the digital signal back into sound through the speaker.
+</td>
+</tr>
+</tbody>
+</table>
+<p>The key components involved include the radio and antenna, microprocessor, operating system, memory, storage, battery, display, sensors, and SIM card.</p>
+</section>
+<section id="a-concrete-example-dallas-to-chennai" class="level2">
+<h2 class="anchored" data-anchor-id="a-concrete-example-dallas-to-chennai">A Concrete Example: Dallas to Chennai</h2>
+<p>Assume you live in Dallas, Texas, and you are going to call your friend in Chennai. Let us say you have international calling enabled on your plan.</p>
+<ul>
+<li><strong>Your number in Dallas:</strong> <code>+1 214-555-1234</code></li>
+<li><strong>Your friend’s number in Chennai:</strong> <code>+91 98765 43210</code></li>
+</ul>
+<p>Now, we might wonder: what is actually happening when the Dallas number calls the Chennai number?</p>
+<p>The answer involves a journey of roughly <strong>13,500 km</strong> that completes in under a second. Once the call connects, your voice makes that same trip in about <strong>150 milliseconds</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/DallasChennai.png" class="img-fluid figure-img" alt="A diagram showing the path of a call from Dallas to Chennai."></p>
+<figcaption>Path of a call from Dallas to Chennai</figcaption>
+</figure>
+</div>
+<section id="step-1-decoding-the-number" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-decoding-the-number">Step 1: Decoding the Number</h3>
+<p>The moment you tap “call,” your phone hands the number <code>+91 98765 43210</code> to your carrier. The carrier reads it like an address.</p>
+<table class="comparison-table">
+<thead>
+<tr>
+<th class="aspect">
+Part
+</th>
+<th class="voice">
+Meaning
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="aspect">
+<code>+91</code>
+</td>
+<td class="voice">
+Country code for India
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<code>98765</code>
+</td>
+<td class="voice">
+Mobile operator prefix, such as Airtel, Jio, or Vi
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<code>43210</code>
+</td>
+<td class="voice">
+The specific subscriber
+</td>
+</tr>
+</tbody>
+</table>
+<p>Your carrier’s switching center looks at <code>+91</code> and immediately knows that this is not a domestic call. It needs to leave the country.</p>
+</section>
+<section id="step-2-handoff-to-an-international-gateway" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-handoff-to-an-international-gateway">Step 2: Handoff to an International Gateway</h3>
+<p>Your call gets routed to an <strong>international gateway</strong>, typically located in major hub cities such as New York, Miami, or Los Angeles. These gateways are operated by carriers such as Tata Communications, BT, and Orange, which own or lease undersea cable capacity. The gateway plans the cheapest and fastest route to India based on existing peering agreements.</p>
+</section>
+<section id="step-3-crossing-the-planet-through-glass" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-crossing-the-planet-through-glass">Step 3: Crossing the Planet Through Glass</h3>
+<p>Your call does not usually go through satellite. Almost all international voice traffic travels through <strong>undersea fiber optic cables</strong> lying on the ocean floor.</p>
+<p>From the United States to India, a typical path might look like this:</p>
+<div class="route-diagram">
+<p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGRhdGEtZDItdmVyc2lvbj0iMC43LjEiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAxMzQyIDI2MCI+PHN2ZyBjbGFzcz0iZDItMTAyODExODE2NyBkMi1zdmciIHdpZHRoPSIxMzQyIiBoZWlnaHQ9IjI2MCIgdmlld0JveD0iLTEwMSAtMTAxIDEzNDIgMjYwIj48cmVjdCB4PSItMTAxLjAwMDAwMCIgeT0iLTEwMS4wMDAwMDAiIHdpZHRoPSIxMzQyLjAwMDAwMCIgaGVpZ2h0PSIyNjAuMDAwMDAwIiByeD0iMC4wMDAwMDAiIGZpbGw9IiNGRkZGRkYiIGNsYXNzPSIgZmlsbC1ONyIgc3Ryb2tlLXdpZHRoPSIwIiAvPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbCi5kMi0xMDI4MTE4MTY3IC50ZXh0LWJvbGQgewoJZm9udC1mYW1pbHk6ICJkMi0xMDI4MTE4MTY3LWZvbnQtYm9sZCI7Cn0KQGZvbnQtZmFjZSB7Cglmb250LWZhbWlseTogZDItMTAyODExODE2Ny1mb250LWJvbGQ7CglzcmM6IHVybCgiZGF0YTphcHBsaWNhdGlvbi9mb250LXdvZmY7YmFzZTY0LGQwOUdSZ0FCQUFBQUFBNDBBQW9BQUFBQUZhZ0FBZ3VGQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFCUFV5OHlBQUFBOUFBQUFHQUFBQUJnWHhIWHJtTnRZWEFBQUFGVUFBQUFvd0FBQU9RRVN3UytaMng1WmdBQUFmZ0FBQWVuQUFBS0lGUlBsZFJvWldGa0FBQUpvQUFBQURZQUFBQTJHMzhlMUdob1pXRUFBQW5ZQUFBQUpBQUFBQ1FLZndYaGFHMTBlQUFBQ2Z3QUFBQ0lBQUFBaUVLa0JmOXNiMk5oQUFBS2hBQUFBRVlBQUFCR0xqUXJ0bTFoZUhBQUFBck1BQUFBSUFBQUFDQUFPZ0QzYm1GdFpRQUFDdXdBQUFNb0FBQUlLZ2p3VmtGd2IzTjBBQUFPRkFBQUFCMEFBQUFnLzlFQU1nQURBaW9DdkFBRkFBQUNpZ0pZQUFBQVN3S0tBbGdBQUFGZUFESUJLUUFBQWdzSEF3TUVBd0lDQkdBQUF2Y0FBQUFEQUFBQUFBQUFBQUJCUkVKUEFDQUFJUC8vQXU3L0JnQUFBOWdCRVNBQUFaOEFBQUFBQWZBQ2xBQUFBQ0FBQTNpY2hNMUpLa0FCQUlmeDN4dk16enpQTHhkd0JzbENrcUozQUF0SldVaFpjQjVGN01sUXVJV3RHN2pCWDFrcjMvcXJId3FWQW8zYUo5YTBhcVhXdWcyYnRtemJzV3ZQZ2M2UkUyY3VYQ1g4OGV6ckhEcDI2dHhsa3E5ODV5UHZlY3RyWHZLY3B6em1JZmU1eTIxdWN2MHIvMWRoVmFsUzY5R3JUNzhCZzRZMGhvMFlOV2JjaEVsVHBzMllOV2ZlZ2tWTGxxM3dBd0FBLy84QkFBRC8vNytITE80QWVKeUVWbHRzMjlZWi9zK1JMTVl5ZmFFb2lwSXM2a2FMbEdSYnRrVkw5RVcyN0ZpMlkxc1gyNGtkZC9XdFJ0WTJjZUprc2JPNFhiWThOQW13VnRrd0tBMlNabGd2U0lFTlNERUUyNEMxZ0RlZ3dOWUZ6VU9IdE12VHNnNGJCZ3g1aUZGb3c5cksxRUJTenUybER5SUY0dkRuOTMrWC94eW9na2tBdklJdmdRR3FvUjRzd0FCSWxJOEtTS0xJRTdJa3l6eHJrRVZFRVpQWW9yeDdYUXdaUXlGajJIdkY4L0xTRXNvczRrczdSNS9Ockt6OGQ2bTNWL25aK3g4b0Y5SDZCd0M0L0JVQUhzSjVxQVlLZ0NZa1VSQkUzbVF5MEJMTml6enhyNGJYNm1zYmE0Mms0NnZiTjIvL05QaFJFSTBuRWgxclV1Y3g1VHpPNzJ4Y3V3WUFnQ0JTTHVKMmZBVWFBYXI4Z2hEcmpNZWxxSTBsQklIM20weU0xU1pGNHpKclFndlRyKzZmdVRpZFBPVExPbVMrWmF4NWRsOHdhYzlPaytuWGp4MjlPaVg1RjFrdXVyajMwSWtteC93eUlNZ0FvQWM0RHpWYXY0eVBrUmllOFRFWmRFWDUrdDQ5VkkveloxNzUzdVV6R29ZTUFIeU84MkJRMTBwVXBxQUMxSi9qb3pnUHBQNWNvaVVEelJzSUpsTXdmdmpPSC83OTlwdHBuRmYrZzJxVWtyS0o2RU8vck5UQzcrRThlTFIzYUp1TmxlSnhtWllvWG0xTjVnbUNGMFhlalJrbTgvWmhzOFZzTkZQbUY5NjZRRlFiakxHRnFZVk9vM0VQZ2ZQS1BWZS8yOTN2UXY2ZGpRZmUzS1RuMnBkZlh2Tk01cndQQUxERzJRL3dGYWgvaWpVYll6V1p4R2c4MXFtU3gxaHRhSGJ1L01URStUbjlPcFRORGcxbHMrVDAxU09ycitkeWw0OGN1VHA5ZG1ObFpXMXRaV1ZEcmF0aTM0L3pVQWVzaGw2dlNLaUNNcFNrMStVejk0ZFBwcEt4Uys5K2Z5cmQwOWZYazhiNXdGeDIzd0tyZkgzL1BscnVhRzhYVkI3NGNoR2I4UlVJYXdoRjJXYlRDNGhpQkQ4cE1tTzFzYXlPSFZrSHprWVA4TFBCU0t2VVBPTkxDTDJIVTEwbndoUGVBVkZvN1E0ZjZCM3BXU1BiSTk5MkMzN093MW1hNnRwRzJ1SnpuUzNoQlVlangrVjJVMzc3Z2VINGZCY2dHQ3NYY1E3blZYZFcrWVVZSlZHYWxiUS9KcFE5ZStGU2p5d25mdlFLZWZrNldsUUt5K24wTWpxbXZIUDlNbUFJbDR2b1UxUUNCL0FBckYrbFY5YWdFcUlHbktGNDFldHlOQzdITkkvK0xqVjVyb0Q1a0dlZ0tkYTIyclAwL0tiWjZCbmQ0d2pRMllTSFBKak16dFg3UkR2ekhOZTBkbEw1cCtUaVQ3TDBRWE16WjJkQjVYMndYTVEydkFWVzFUVXFXenpCVXhKRFBDVXE3eWNZbXcwTis0WTRJN2xlTUhJcGYyS3VMYkUwSjhSblcwTFdJT256eHZEV2piU1Q2LzlPZXVhbDVPWkkra0xyeDVZNnplTk41U0xhUWlWd1BwMHpYUUU5WlNia0dENCt1Tys3cWNpb2E1ajN4cExKZG51RTdnbk1rbjJucHZkdjlMblpKUzQ5T0pCaDZwZTlqYUJoRjh0RlZNSmJRSU4zbHl1dHNCaVRIbU5wVitndjVvLzNMbldHdWh5bXdxYlo2QnpCZHRGQ04xdjVlQnY1Mmt0VHAvcGQ5dlF2ZG9ZNm5QeW0xZkd4cFc1b2RHd1lzSWI5NzZnRTlnby9qL3VkOEtuT1VyRWJKTTMyeURONmN1L1EwZDdSaFRZalZ1NmFSenBpOFE1aDhZMWZpUzMrT05tL01UMjFrVXl1cHVoQWRWenlQZU4wbzU1UXJFM3R4UUQrY2lzbVVBbmFvQmZHdFc2RVdLY0tYalZBYlBlenJNVHd1aXE4WDlTNFV5MWhOWmtNanlXUHJxVEZMMmhMdnVoWjdCcWxHNzEyWjZobk1kYmkrMDJPcU82Y2t6bVB4Uithbkg4dWRXYWNFMFdPRThWUWRFQU1TQTRmMmRoM3g5blZrZ2dhYTRPZXhtaUQwWkpxVHVTQzVHcU4zOW85M21TdXQ5R1czaUZwS29KdWhVTmlLQmdNaFpWQ2s0TnRNQmpzRGhlbno5WkJWU0ROVjJxYUszNWlLSjdTVUJMVVlJRndUVVNueGdxYzF4VzA0NjBienppYVZ4ZVUyOGdYRHpwWTVTYVV5eUFEd0YveEhTeW8rZ0lCUG5oVnIxMHVJZ3ZlZ25wZDlkMThxVUw4S2QxYm9LcXJDSk9GREpEUFRtQis1eTVyUWVoWUZhRmpNbkNvQkQ0Tmt6b2NWYmM4Z1l4NGVCOVVjelRTRVJ1a2ZlTWRreE1Gemh0b1Z5OXRhSHZBMDlvYzlIZnN3bTFYYmxadXUzMmpVcVh2eWpjZTczdlRiUFJtSGphT3RwUHUxaWY2MWoybmVlR2JaNnd0ZVR5Vk9wNU1ycVZTYThuV1NLUTEwdHBheVV2Znh2N3BVMzJuTXdPRGFUVTJldGIzWVJzcUFRMXVBUFlST3MxT2dzZ3k5S09vcXppNU1mRmJMeWFXNHQ2RXN5b254R2VidzliZ2IvSFBPNXo4RDlkbk5wT05qdHhQVU5QRG9HdTlveCtqRWxpZTRGZWZ0SHJualdtQmNabnR0WTRHVjU4VmJSK01kbFJWblRVYVExSGxjMERBbEl2b1RWUUNVZFAxMGR3VzlMbjlzSmc2dGQyWXNacnVkTHdnN1BVblBUNDNGM0c2ZTRPSFo3b1Bldlk2TzUzZDNZSzNML1FpS1hqbUhZMHNUZGxvTTluVUhScWVGZTF6VnB0b2Q5VFY4TjJSb1FYZHExUzVpTmJ3aHJyenFQTTZ4c2RrV2RJMjdVZkRDZVp6cVRUMTh1blRQRWM2ekN3dGswZG1ieDB6blR1My9sRTRZREt1bWtpOVZxSmNSUDlEMjZyK1QzaVRxb3lrdjB5TkZkeGVsMkFyYk5ZWVBPUGs2Z0xxVlA0V0N6azV0RTlwR0E2MEFBS3kzSTkyMExhcS9pTWVaTmtnc1pVdFhaWU1kWGpUNXF0M0VwWTlnYUNaK1AybDBScUwyYmlIcWs1Y3ZNRjI1VDQwR1UrZ3FpYk9pZjd4bVg4a3dJL3lueWsxL1ROaEhhTzZTZjRhYlVNMWdCU2orWmlQTVVpTThNbjc2TVFuZDNNb3NwNVYvcnl1cnFzdEw2TTQvcU42Tm1GcHlWQjdhL25XVzRiblMyOVV0SVpQMGZidXVXV3dnTGFWQmtEbDkzQTM3TWQzMUxNUHBVMWszV0NCU0NRUWlFUndkNWpudytvUC9nOEFBUC8vQVFBQS8vK0tTeVNOQUFBQkFBQUFBZ3VGOXB2eWpWOFBQUFVBQVFQb0FBQUFBTmhkb0lRQUFBQUEzV1l2TnY0My9zUUliUVB4QUFFQUF3QUNBQUFBQUFBQUFBRUFBQVBZL3U4QUFBaVkvamYrTndodEFBRUFBQUFBQUFBQUFBQUFBQUFBQUFBaUFySUFVQURJQUFBQ1BmLzZBa1lBTGdJa0FFMEJMUUJOQW1ZQVRRTDZBRTBDckFBdUFtVUFUUUlzQUNNQ21RQkpBZzhBS2dJOUFFRUIwd0FrQWowQUp3SUdBQ1FDRmdBaUFqc0FRUUVVQURjQkhnQkJBMWtBUVFJOEFFRUNLd0FrQWowQVFRR09BRUVCdXdBVkFYOEFFUUk0QUR3Q0NRQU1BY3dBSmdGVEFBMEJGQUJCQUFEL3JRQUFBQ3dBTEFCUUFId0FrZ0NlQUxnQTZnRVdBVHdCZkFHYUFkSUNCQUl3QW1JQ2xnTCtBeUFETEFOSUEzb0RuQVBJQS9nRUdBUlVCSG9FbkFUTUJPQUU3Z1Q2QlJBQUFBQUJBQUFBSWdDUUFBd0FZd0FIQUFFQUFBQUFBQUFBQUFBQUFBQUFCQUFEZUp5Y2xNOXVHMVVVeG45T2JOTUt3UUpGVmJxSjdvSkZrZWpZVkVuVk5pdUgxSXBGRkFlUEMwSkNTQlBQK0k4eW5obDVKZzdoQ1ZqekZyeEZWendFejRGWW8vbDg3TmdGMFNhS2tueDM3dm56blhPK2M0RWQvbWFiU3ZVaDhFYzlNVnhocjM1dWVJc0g5UlBEMjdUclc0YXJQS245YWJoR1dKc2Jydk41cldmNEk5NVdmelA4Z1AzcVQ0WWZzbHR0Ry82WVo5VWR3NTlzTy80eS9Dbjd2RjNnQ3J6Z1Y4TVZkc2tNYjdIRGo0YTNlWVRGckZSNVJOTndqYy9ZTTF4bkQrZ3pvU0JtUXNJSXg1QUpJNjZZRVpIakV6Rmp3cENJRUVlSEZqR0Z2aVlFUW83UmYzNE44Q21ZRVNqaW1BSkhqRTlNUU03WUl2NGlyNVJ6WlJ6cU5MTzdGZ1ZqQWk3a2NVbEFnaU5sUkVwQ3hLWGlGQlJrdktKQmc1eUIrR1lVNUhqa1RJanhTSmt4b2tHWE5xZjBHVE1oeDlGV3BKS1pUOHFRZ21zQzVYZG1VWFptUUVSQ2JxeXVTQWpGMDRsZkpPOE9wemk2WkxKZGozeTZFZUZMSE4vSnUrU1d5dllyUFAyNk5XYWJlWmRzQXVicVo2eXV4THE1MWdUSHVpM3p0dmhXdU9BVjdsNzkyV1R5L2g2RitsOG84Z1ZYbW4rb1NTVmlrdURjTGkxOEtjaDNqM0VjNmR6QlYwZStwME9mRTdxOG9hOXppeDQ5V3B6UnA4TnIrWGJwNGZpYUxtY2N5Nk1qdkxoclN6Rm4vSURqR3pxeUtXTkgxcC9GeENKK0pqTjE1K0k0VXgxVE12VzhaTzZwMWtnVjNuM0M1UTZsRytySTVUUFFIcFdXVHZOTHRHY0JJMU5GSm9aVDlYS3BqZHo2RjVvaXBxcWxuTzN0ZmJrTmM5dTk1UmJma0dxSFM3VXVPSldUV3pCNjMxUzlkelJ6clIrUGdKQ1VDMWtNU0puU29PQkd2TThKdUNMR2NhenVuV2hMQ2xvcm56TFBqVlFTTVJXRERvbml6TWowTnpEZCtNWjlzS0Y3WjI5SktQK1M2ZVdxcXZ0a2NlclY3WXplcUh2TE85KzZISzFOb0dGVFRkZlVOQkRYeExRZmFhZlcrZnZ5emZXNnBUemxpSlNZOEY4dndETThtdXh6d0NGalpSam9abTZ2UTFNdlJKT1hIS3I2U3lKWkRhWG55Q0ljNFBHY0F3NTR5Zk4zK3JoazRveUxXM0ZaejkzaW1DTzZISDVRRlF2N0xrZThYbjM3LzZ5L2kybFR0VGllcms0djdqM0ZKM2RRNnhmYXM5djNzcWVKbFpPWVc3VGJyVGdqWUZweWNidnJOYm5IZVA4QUFBRC8vd0VBQVAvLzlMZFBVWGljWW1CbUFJUC81eGlNR0xBQUFBQUFBUC8vQVFBQS8vOHZBUUlEQUFBQSIpOwp9XV0+PC9zdHlsZT48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWy5zaGFwZSB7CiAgc2hhcGUtcmVuZGVyaW5nOiBnZW9tZXRyaWNQcmVjaXNpb247CiAgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsKfQouY29ubmVjdGlvbiB7CiAgc3Ryb2tlLWxpbmVjYXA6IHJvdW5kOwogIHN0cm9rZS1saW5lam9pbjogcm91bmQ7Cn0KLmJsZW5kIHsKICBtaXgtYmxlbmQtbW9kZTogbXVsdGlwbHk7CiAgb3BhY2l0eTogMC41Owp9CgoJCS5kMi0xMDI4MTE4MTY3IC5maWxsLU4xe2ZpbGw6IzBBMEYyNTt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtTjJ7ZmlsbDojNjc2QzdFO30KCQkuZDItMTAyODExODE2NyAuZmlsbC1OM3tmaWxsOiM5NDk5QUI7fQoJCS5kMi0xMDI4MTE4MTY3IC5maWxsLU40e2ZpbGw6I0NGRDJERDt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtTjV7ZmlsbDojREVFMUVCO30KCQkuZDItMTAyODExODE2NyAuZmlsbC1ONntmaWxsOiNFRUYxRjg7fQoJCS5kMi0xMDI4MTE4MTY3IC5maWxsLU43e2ZpbGw6I0ZGRkZGRjt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtQjF7ZmlsbDojMEQzMkIyO30KCQkuZDItMTAyODExODE2NyAuZmlsbC1CMntmaWxsOiMwRDMyQjI7fQoJCS5kMi0xMDI4MTE4MTY3IC5maWxsLUIze2ZpbGw6I0UzRTlGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtQjR7ZmlsbDojRTNFOUZEO30KCQkuZDItMTAyODExODE2NyAuZmlsbC1CNXtmaWxsOiNFREYwRkQ7fQoJCS5kMi0xMDI4MTE4MTY3IC5maWxsLUI2e2ZpbGw6I0Y3RjhGRTt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtQUEye2ZpbGw6IzRBNkZGMzt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtQUE0e2ZpbGw6I0VERjBGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtQUE1e2ZpbGw6I0Y3RjhGRTt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtQUI0e2ZpbGw6I0VERjBGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLmZpbGwtQUI1e2ZpbGw6I0Y3RjhGRTt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1OMXtzdHJva2U6IzBBMEYyNTt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1OMntzdHJva2U6IzY3NkM3RTt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1OM3tzdHJva2U6Izk0OTlBQjt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1ONHtzdHJva2U6I0NGRDJERDt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1ONXtzdHJva2U6I0RFRTFFQjt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1ONntzdHJva2U6I0VFRjFGODt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1ON3tzdHJva2U6I0ZGRkZGRjt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1CMXtzdHJva2U6IzBEMzJCMjt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1CMntzdHJva2U6IzBEMzJCMjt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1CM3tzdHJva2U6I0UzRTlGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1CNHtzdHJva2U6I0UzRTlGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1CNXtzdHJva2U6I0VERjBGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1CNntzdHJva2U6I0Y3RjhGRTt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1BQTJ7c3Ryb2tlOiM0QTZGRjM7fQoJCS5kMi0xMDI4MTE4MTY3IC5zdHJva2UtQUE0e3N0cm9rZTojRURGMEZEO30KCQkuZDItMTAyODExODE2NyAuc3Ryb2tlLUFBNXtzdHJva2U6I0Y3RjhGRTt9CgkJLmQyLTEwMjgxMTgxNjcgLnN0cm9rZS1BQjR7c3Ryb2tlOiNFREYwRkQ7fQoJCS5kMi0xMDI4MTE4MTY3IC5zdHJva2UtQUI1e3N0cm9rZTojRjdGOEZFO30KCQkuZDItMTAyODExODE2NyAuYmFja2dyb3VuZC1jb2xvci1OMXtiYWNrZ3JvdW5kLWNvbG9yOiMwQTBGMjU7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLU4ye2JhY2tncm91bmQtY29sb3I6IzY3NkM3RTt9CgkJLmQyLTEwMjgxMTgxNjcgLmJhY2tncm91bmQtY29sb3ItTjN7YmFja2dyb3VuZC1jb2xvcjojOTQ5OUFCO30KCQkuZDItMTAyODExODE2NyAuYmFja2dyb3VuZC1jb2xvci1ONHtiYWNrZ3JvdW5kLWNvbG9yOiNDRkQyREQ7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLU41e2JhY2tncm91bmQtY29sb3I6I0RFRTFFQjt9CgkJLmQyLTEwMjgxMTgxNjcgLmJhY2tncm91bmQtY29sb3ItTjZ7YmFja2dyb3VuZC1jb2xvcjojRUVGMUY4O30KCQkuZDItMTAyODExODE2NyAuYmFja2dyb3VuZC1jb2xvci1ON3tiYWNrZ3JvdW5kLWNvbG9yOiNGRkZGRkY7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLUIxe2JhY2tncm91bmQtY29sb3I6IzBEMzJCMjt9CgkJLmQyLTEwMjgxMTgxNjcgLmJhY2tncm91bmQtY29sb3ItQjJ7YmFja2dyb3VuZC1jb2xvcjojMEQzMkIyO30KCQkuZDItMTAyODExODE2NyAuYmFja2dyb3VuZC1jb2xvci1CM3tiYWNrZ3JvdW5kLWNvbG9yOiNFM0U5RkQ7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLUI0e2JhY2tncm91bmQtY29sb3I6I0UzRTlGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLmJhY2tncm91bmQtY29sb3ItQjV7YmFja2dyb3VuZC1jb2xvcjojRURGMEZEO30KCQkuZDItMTAyODExODE2NyAuYmFja2dyb3VuZC1jb2xvci1CNntiYWNrZ3JvdW5kLWNvbG9yOiNGN0Y4RkU7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLUFBMntiYWNrZ3JvdW5kLWNvbG9yOiM0QTZGRjM7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLUFBNHtiYWNrZ3JvdW5kLWNvbG9yOiNFREYwRkQ7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLUFBNXtiYWNrZ3JvdW5kLWNvbG9yOiNGN0Y4RkU7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLUFCNHtiYWNrZ3JvdW5kLWNvbG9yOiNFREYwRkQ7fQoJCS5kMi0xMDI4MTE4MTY3IC5iYWNrZ3JvdW5kLWNvbG9yLUFCNXtiYWNrZ3JvdW5kLWNvbG9yOiNGN0Y4RkU7fQoJCS5kMi0xMDI4MTE4MTY3IC5jb2xvci1OMXtjb2xvcjojMEEwRjI1O30KCQkuZDItMTAyODExODE2NyAuY29sb3ItTjJ7Y29sb3I6IzY3NkM3RTt9CgkJLmQyLTEwMjgxMTgxNjcgLmNvbG9yLU4ze2NvbG9yOiM5NDk5QUI7fQoJCS5kMi0xMDI4MTE4MTY3IC5jb2xvci1ONHtjb2xvcjojQ0ZEMkREO30KCQkuZDItMTAyODExODE2NyAuY29sb3ItTjV7Y29sb3I6I0RFRTFFQjt9CgkJLmQyLTEwMjgxMTgxNjcgLmNvbG9yLU42e2NvbG9yOiNFRUYxRjg7fQoJCS5kMi0xMDI4MTE4MTY3IC5jb2xvci1ON3tjb2xvcjojRkZGRkZGO30KCQkuZDItMTAyODExODE2NyAuY29sb3ItQjF7Y29sb3I6IzBEMzJCMjt9CgkJLmQyLTEwMjgxMTgxNjcgLmNvbG9yLUIye2NvbG9yOiMwRDMyQjI7fQoJCS5kMi0xMDI4MTE4MTY3IC5jb2xvci1CM3tjb2xvcjojRTNFOUZEO30KCQkuZDItMTAyODExODE2NyAuY29sb3ItQjR7Y29sb3I6I0UzRTlGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLmNvbG9yLUI1e2NvbG9yOiNFREYwRkQ7fQoJCS5kMi0xMDI4MTE4MTY3IC5jb2xvci1CNntjb2xvcjojRjdGOEZFO30KCQkuZDItMTAyODExODE2NyAuY29sb3ItQUEye2NvbG9yOiM0QTZGRjM7fQoJCS5kMi0xMDI4MTE4MTY3IC5jb2xvci1BQTR7Y29sb3I6I0VERjBGRDt9CgkJLmQyLTEwMjgxMTgxNjcgLmNvbG9yLUFBNXtjb2xvcjojRjdGOEZFO30KCQkuZDItMTAyODExODE2NyAuY29sb3ItQUI0e2NvbG9yOiNFREYwRkQ7fQoJCS5kMi0xMDI4MTE4MTY3IC5jb2xvci1BQjV7Y29sb3I6I0Y3RjhGRTt9LmFwcGVuZGl4IHRleHQudGV4dHtmaWxsOiMwQTBGMjV9Lm1key0tY29sb3ItZmctZGVmYXVsdDojMEEwRjI1Oy0tY29sb3ItZmctbXV0ZWQ6IzY3NkM3RTstLWNvbG9yLWZnLXN1YnRsZTojOTQ5OUFCOy0tY29sb3ItY2FudmFzLWRlZmF1bHQ6I0ZGRkZGRjstLWNvbG9yLWNhbnZhcy1zdWJ0bGU6I0VFRjFGODstLWNvbG9yLWJvcmRlci1kZWZhdWx0OiMwRDMyQjI7LS1jb2xvci1ib3JkZXItbXV0ZWQ6IzBEMzJCMjstLWNvbG9yLW5ldXRyYWwtbXV0ZWQ6I0VFRjFGODstLWNvbG9yLWFjY2VudC1mZzojMEQzMkIyOy0tY29sb3ItYWNjZW50LWVtcGhhc2lzOiMwRDMyQjI7LS1jb2xvci1hdHRlbnRpb24tc3VidGxlOiM2NzZDN0U7LS1jb2xvci1kYW5nZXItZmc6cmVkO30uc2tldGNoLW92ZXJsYXktQjF7ZmlsbDp1cmwoI3N0cmVha3MtZGFya2VyLWQyLTEwMjgxMTgxNjcpO21peC1ibGVuZC1tb2RlOmxpZ2h0ZW59LnNrZXRjaC1vdmVybGF5LUIye2ZpbGw6dXJsKCNzdHJlYWtzLWRhcmtlci1kMi0xMDI4MTE4MTY3KTttaXgtYmxlbmQtbW9kZTpsaWdodGVufS5za2V0Y2gtb3ZlcmxheS1CM3tmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5za2V0Y2gtb3ZlcmxheS1CNHtmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5za2V0Y2gtb3ZlcmxheS1CNXtmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5za2V0Y2gtb3ZlcmxheS1CNntmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5za2V0Y2gtb3ZlcmxheS1BQTJ7ZmlsbDp1cmwoI3N0cmVha3MtZGFyay1kMi0xMDI4MTE4MTY3KTttaXgtYmxlbmQtbW9kZTpvdmVybGF5fS5za2V0Y2gtb3ZlcmxheS1BQTR7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTEwMjgxMTgxNjcpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktQUE1e2ZpbGw6dXJsKCNzdHJlYWtzLWJyaWdodC1kMi0xMDI4MTE4MTY3KTttaXgtYmxlbmQtbW9kZTpkYXJrZW59LnNrZXRjaC1vdmVybGF5LUFCNHtmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5za2V0Y2gtb3ZlcmxheS1BQjV7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTEwMjgxMTgxNjcpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktTjF7ZmlsbDp1cmwoI3N0cmVha3MtZGFya2VyLWQyLTEwMjgxMTgxNjcpO21peC1ibGVuZC1tb2RlOmxpZ2h0ZW59LnNrZXRjaC1vdmVybGF5LU4ye2ZpbGw6dXJsKCNzdHJlYWtzLWRhcmstZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6b3ZlcmxheX0uc2tldGNoLW92ZXJsYXktTjN7ZmlsbDp1cmwoI3N0cmVha3Mtbm9ybWFsLWQyLTEwMjgxMTgxNjcpO21peC1ibGVuZC1tb2RlOmNvbG9yLWJ1cm59LnNrZXRjaC1vdmVybGF5LU40e2ZpbGw6dXJsKCNzdHJlYWtzLW5vcm1hbC1kMi0xMDI4MTE4MTY3KTttaXgtYmxlbmQtbW9kZTpjb2xvci1idXJufS5za2V0Y2gtb3ZlcmxheS1ONXtmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5za2V0Y2gtb3ZlcmxheS1ONntmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5za2V0Y2gtb3ZlcmxheS1ON3tmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTAyODExODE2Nyk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5saWdodC1jb2Rle2Rpc3BsYXk6IGJsb2NrfS5kYXJrLWNvZGV7ZGlzcGxheTogbm9uZX1dXT48L3N0eWxlPjxnIGNsYXNzPSJkWE09Ij48ZyBjbGFzcz0ic2hhcGUiID48cmVjdCB4PSIwLjAwMDAwMCIgeT0iMC4wMDAwMDAiIHdpZHRoPSIxNTAuMDAwMDAwIiBoZWlnaHQ9IjU4LjAwMDAwMCIgc3Ryb2tlPSIjMEQzMkIyIiBmaWxsPSIjZGJlYWZlIiBjbGFzcz0iIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDoyOyIgLz48L2c+PHRleHQgeD0iNzUuMDAwMDAwIiB5PSIyNy4wMDAwMDAiIGZpbGw9IiMwQTBGMjUiIGNsYXNzPSJ0ZXh0LWJvbGQgZmlsbC1OMSIgc3R5bGU9InRleHQtYW5jaG9yOm1pZGRsZTtmb250LXNpemU6MTNweCI+PHRzcGFuIHg9Ijc1LjAwMDAwMCIgZHk9IjAuMDAwMDAwIj5VUyBFYXN0IENvYXN0PC90c3Bhbj48dHNwYW4geD0iNzUuMDAwMDAwIiBkeT0iMTUuMDAwMDAwIj5BdGxhbnRpYzwvdHNwYW4+PC90ZXh0PjwvZz48ZyBjbGFzcz0iZFdzPSI+PGcgY2xhc3M9InNoYXBlIiA+PHJlY3QgeD0iMjUwLjAwMDAwMCIgeT0iMC4wMDAwMDAiIHdpZHRoPSIxMzAuMDAwMDAwIiBoZWlnaHQ9IjU4LjAwMDAwMCIgc3Ryb2tlPSIjMEQzMkIyIiBmaWxsPSIjZTBlN2ZmIiBjbGFzcz0iIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDoyOyIgLz48L2c+PHRleHQgeD0iMzE1LjAwMDAwMCIgeT0iMjcuMDAwMDAwIiBmaWxsPSIjMEEwRjI1IiBjbGFzcz0idGV4dC1ib2xkIGZpbGwtTjEiIHN0eWxlPSJ0ZXh0LWFuY2hvcjptaWRkbGU7Zm9udC1zaXplOjEzcHgiPjx0c3BhbiB4PSIzMTUuMDAwMDAwIiBkeT0iMC4wMDAwMDAiPlVLPC90c3Bhbj48dHNwYW4geD0iMzE1LjAwMDAwMCIgZHk9IjE1LjAwMDAwMCI+RXVyb3BlPC90c3Bhbj48L3RleHQ+PC9nPjxnIGNsYXNzPSJaV2Q1Y0hRPSI+PGcgY2xhc3M9InNoYXBlIiA+PHJlY3QgeD0iNDgwLjAwMDAwMCIgeT0iMC4wMDAwMDAiIHdpZHRoPSIxNjAuMDAwMDAwIiBoZWlnaHQ9IjU4LjAwMDAwMCIgc3Ryb2tlPSIjMEQzMkIyIiBmaWxsPSIjZmRlNjhhIiBjbGFzcz0iIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDoyOyIgLz48L2c+PHRleHQgeD0iNTYwLjAwMDAwMCIgeT0iMjcuMDAwMDAwIiBmaWxsPSIjMEEwRjI1IiBjbGFzcz0idGV4dC1ib2xkIGZpbGwtTjEiIHN0eWxlPSJ0ZXh0LWFuY2hvcjptaWRkbGU7Zm9udC1zaXplOjEzcHgiPjx0c3BhbiB4PSI1NjAuMDAwMDAwIiBkeT0iMC4wMDAwMDAiPkVneXB0PC90c3Bhbj48dHNwYW4geD0iNTYwLjAwMDAwMCIgZHk9IjE1LjAwMDAwMCI+U3VleiAvIFJlZCBTZWE8L3RzcGFuPjwvdGV4dD48L2c+PGcgY2xhc3M9ImIyTmxZVzQ9Ij48ZyBjbGFzcz0ic2hhcGUiID48cmVjdCB4PSI3NDAuMDAwMDAwIiB5PSIwLjAwMDAwMCIgd2lkdGg9IjE2MC4wMDAwMDAiIGhlaWdodD0iNTguMDAwMDAwIiBzdHJva2U9IiMwRDMyQjIiIGZpbGw9IiNjZmZhZmUiIGNsYXNzPSIgc3Ryb2tlLUIxIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjI7IiAvPjwvZz48dGV4dCB4PSI4MjAuMDAwMDAwIiB5PSIyNy4wMDAwMDAiIGZpbGw9IiMwQTBGMjUiIGNsYXNzPSJ0ZXh0LWJvbGQgZmlsbC1OMSIgc3R5bGU9InRleHQtYW5jaG9yOm1pZGRsZTtmb250LXNpemU6MTNweCI+PHRzcGFuIHg9IjgyMC4wMDAwMDAiIGR5PSIwLjAwMDAwMCI+SW5kaWFuIE9jZWFuPC90c3Bhbj48dHNwYW4geD0iODIwLjAwMDAwMCIgZHk9IjE1LjAwMDAwMCI+Q2FibGVzPC90c3Bhbj48L3RleHQ+PC9nPjxnIGNsYXNzPSJhVzVrYVdFPSI+PGcgY2xhc3M9InNoYXBlIiA+PHJlY3QgeD0iMTAwMC4wMDAwMDAiIHk9IjAuMDAwMDAwIiB3aWR0aD0iMTQwLjAwMDAwMCIgaGVpZ2h0PSI1OC4wMDAwMDAiIHN0cm9rZT0iIzBEMzJCMiIgZmlsbD0iI2RjZmNlNyIgY2xhc3M9IiBzdHJva2UtQjEiIHN0eWxlPSJzdHJva2Utd2lkdGg6MjsiIC8+PC9nPjx0ZXh0IHg9IjEwNzAuMDAwMDAwIiB5PSIyNy4wMDAwMDAiIGZpbGw9IiMwQTBGMjUiIGNsYXNzPSJ0ZXh0LWJvbGQgZmlsbC1OMSIgc3R5bGU9InRleHQtYW5jaG9yOm1pZGRsZTtmb250LXNpemU6MTNweCI+PHRzcGFuIHg9IjEwNzAuMDAwMDAwIiBkeT0iMC4wMDAwMDAiPk11bWJhaTwvdHNwYW4+PHRzcGFuIHg9IjEwNzAuMDAwMDAwIiBkeT0iMTUuMDAwMDAwIj5vciBDaGVubmFpPC90c3Bhbj48L3RleHQ+PC9nPjxnIGNsYXNzPSJLSFZ6SUMwbVozUTdJSFZyS1Zzd1hRPT0iPjxtYXJrZXIgaWQ9Im1rLWQyLTEwMjgxMTgxNjctMzQ4ODM3ODEzNCIgbWFya2VyV2lkdGg9IjEwLjAwMDAwMCIgbWFya2VySGVpZ2h0PSIxMi4wMDAwMDAiIHJlZlg9IjcuMDAwMDAwIiByZWZZPSI2LjAwMDAwMCIgdmlld0JveD0iMC4wMDAwMDAgMC4wMDAwMDAgMTAuMDAwMDAwIDEyLjAwMDAwMCIgb3JpZW50PSJhdXRvIiBtYXJrZXJVbml0cz0idXNlclNwYWNlT25Vc2UiPiA8cG9seWdvbiBwb2ludHM9IjAuMDAwMDAwLDAuMDAwMDAwIDEwLjAwMDAwMCw2LjAwMDAwMCAwLjAwMDAwMCwxMi4wMDAwMDAiIGZpbGw9IiMwRDMyQjIiIGNsYXNzPSJjb25uZWN0aW9uIGZpbGwtQjEiIHN0cm9rZS13aWR0aD0iMiIgLz4gPC9tYXJrZXI+PHBhdGggZD0iTSAxNTIuMDAwMDAwIDI5LjAwMDAwMCBDIDE5MC4wMDAwMDAgMjkuMDAwMDAwIDIxMC4wMDAwMDAgMjkuMDAwMDAwIDI0Ni4wMDAwMDAgMjkuMDAwMDAwIiBzdHJva2U9IiMwRDMyQjIiIGZpbGw9Im5vbmUiIGNsYXNzPSJjb25uZWN0aW9uIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDoyOyIgbWFya2VyLWVuZD0idXJsKCNtay1kMi0xMDI4MTE4MTY3LTM0ODgzNzgxMzQpIiBtYXNrPSJ1cmwoI2QyLTEwMjgxMTgxNjcpIiAvPjwvZz48ZyBjbGFzcz0iS0hWcklDMG1aM1E3SUdWbmVYQjBLVnN3WFE9PSI+PHBhdGggZD0iTSAzODIuMDAwMDAwIDI5LjAwMDAwMCBDIDQyMC4wMDAwMDAgMjkuMDAwMDAwIDQ0MC4wMDAwMDAgMjkuMDAwMDAwIDQ3Ni4wMDAwMDAgMjkuMDAwMDAwIiBzdHJva2U9IiMwRDMyQjIiIGZpbGw9Im5vbmUiIGNsYXNzPSJjb25uZWN0aW9uIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDoyOyIgbWFya2VyLWVuZD0idXJsKCNtay1kMi0xMDI4MTE4MTY3LTM0ODgzNzgxMzQpIiBtYXNrPSJ1cmwoI2QyLTEwMjgxMTgxNjcpIiAvPjwvZz48ZyBjbGFzcz0iS0dWbmVYQjBJQzBtWjNRN0lHOWpaV0Z1S1Zzd1hRPT0iPjxwYXRoIGQ9Ik0gNjQyLjAwMDAwMCAyOS4wMDAwMDAgQyA2ODAuMDAwMDAwIDI5LjAwMDAwMCA3MDAuMDAwMDAwIDI5LjAwMDAwMCA3MzYuMDAwMDAwIDI5LjAwMDAwMCIgc3Ryb2tlPSIjMEQzMkIyIiBmaWxsPSJub25lIiBjbGFzcz0iY29ubmVjdGlvbiBzdHJva2UtQjEiIHN0eWxlPSJzdHJva2Utd2lkdGg6MjsiIG1hcmtlci1lbmQ9InVybCgjbWstZDItMTAyODExODE2Ny0zNDg4Mzc4MTM0KSIgbWFzaz0idXJsKCNkMi0xMDI4MTE4MTY3KSIgLz48L2c+PGcgY2xhc3M9IktHOWpaV0Z1SUMwbVozUTdJR2x1WkdsaEtWc3dYUT09Ij48cGF0aCBkPSJNIDkwMi4wMDAwMDAgMjkuMDAwMDAwIEMgOTQwLjAwMDAwMCAyOS4wMDAwMDAgOTYwLjAwMDAwMCAyOS4wMDAwMDAgOTk2LjAwMDAwMCAyOS4wMDAwMDAiIHN0cm9rZT0iIzBEMzJCMiIgZmlsbD0ibm9uZSIgY2xhc3M9ImNvbm5lY3Rpb24gc3Ryb2tlLUIxIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjI7IiBtYXJrZXItZW5kPSJ1cmwoI21rLWQyLTEwMjgxMTgxNjctMzQ4ODM3ODEzNCkiIG1hc2s9InVybCgjZDItMTAyODExODE2NykiIC8+PC9nPjxtYXNrIGlkPSJkMi0xMDI4MTE4MTY3IiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSItMTAxIiB5PSItMTAxIiB3aWR0aD0iMTM0MiIgaGVpZ2h0PSIyNjAiPgo8cmVjdCB4PSItMTAxIiB5PSItMTAxIiB3aWR0aD0iMTM0MiIgaGVpZ2h0PSIyNjAiIGZpbGw9IndoaXRlIj48L3JlY3Q+Cgo8L21hc2s+PC9zdmc+PC9zdmc+Cg==" class="img-fluid"></p>
+</div>
+<p>Inside those cables, your voice is represented as laser pulses flickering on and off billions of times per second through a glass thread thinner than a human hair.</p>
+</section>
+<section id="step-4-arriving-in-india" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-arriving-in-india">Step 4: Arriving in India</h3>
+<p>The call reaches an Indian gateway carrier, which recognizes <code>98765</code> as a prefix belonging to a mobile operator, for example Airtel. It then hands the call to Airtel’s network.</p>
+<p>Airtel’s switching center looks up subscriber <code>+91 98765 43210</code> in its database and asks:</p>
+<blockquote class="blockquote">
+<p>Which tower did this phone last check in with?</p>
+</blockquote>
+<p>Every cell phone, when powered on, registers with the nearest tower. So Airtel already knows that your friend’s phone is connected to a specific tower, for example in T. Nagar, Chennai.</p>
+</section>
+<section id="step-5-the-phone-rings" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-the-phone-rings">Step 5: The Phone Rings</h3>
+<p>Airtel’s network sends a <strong>paging message</strong> to that Chennai tower:</p>
+<blockquote class="blockquote">
+<p>Phone <code>98765 43210</code>, you have an incoming call from <code>+1 214-555-1234</code>.</p>
+</blockquote>
+<p>Your friend’s phone, which has been quietly listening for paging messages, hears its own ID. The screen lights up. The ringtone plays. Caller ID shows your number.</p>
+<p>Meanwhile, in Dallas, you hear a ringback tone. That “ring ring” is not usually the actual sound of his phone ringing. It is a tone generated by the network to tell you that the call is being attempted.</p>
+</section>
+<section id="step-6-he-picks-up" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-he-picks-up">Step 6: He Picks Up</h3>
+<p>He taps accept. His phone tells the Chennai tower the call has been accepted. That confirmation flows back across the same path in reverse:</p>
+<div class="wide-diagram">
+<p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGRhdGEtZDItdmVyc2lvbj0iMC43LjEiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAyNjMwIDMzMiI+PHN2ZyBjbGFzcz0iZDItMTQ5NDY2OTE0MyBkMi1zdmciIHdpZHRoPSIyNjMwIiBoZWlnaHQ9IjMzMiIgdmlld0JveD0iLTEwMSAtMTAxIDI2MzAgMzMyIj48cmVjdCB4PSItMTAxLjAwMDAwMCIgeT0iLTEwMS4wMDAwMDAiIHdpZHRoPSIyNjMwLjAwMDAwMCIgaGVpZ2h0PSIzMzIuMDAwMDAwIiByeD0iMC4wMDAwMDAiIGZpbGw9IiNGRkZGRkYiIGNsYXNzPSIgZmlsbC1ONyIgc3Ryb2tlLXdpZHRoPSIwIiAvPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbCi5kMi0xNDk0NjY5MTQzIC50ZXh0LWJvbGQgewoJZm9udC1mYW1pbHk6ICJkMi0xNDk0NjY5MTQzLWZvbnQtYm9sZCI7Cn0KQGZvbnQtZmFjZSB7Cglmb250LWZhbWlseTogZDItMTQ5NDY2OTE0My1mb250LWJvbGQ7CglzcmM6IHVybCgiZGF0YTphcHBsaWNhdGlvbi9mb250LXdvZmY7YmFzZTY0LGQwOUdSZ0FCQUFBQUFBeDBBQW9BQUFBQUV4Z0FBZ3VGQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFCUFV5OHlBQUFBOUFBQUFHQUFBQUJnWHhIWHJtTnRZWEFBQUFGVUFBQUFsUUFBQU1BRFB3UVVaMng1WmdBQUFld0FBQVlZQUFBSDJPUUQ1eDFvWldGa0FBQUlCQUFBQURZQUFBQTJHMzhlMUdob1pXRUFBQWc4QUFBQUpBQUFBQ1FLZndYYmFHMTBlQUFBQ0dBQUFBQndBQUFBY0RaNUJNTnNiMk5oQUFBSTBBQUFBRG9BQUFBNkhPNGJFRzFoZUhBQUFBa01BQUFBSUFBQUFDQUFOQUQzYm1GdFpRQUFDU3dBQUFNb0FBQUlLZ2p3VmtGd2IzTjBBQUFNVkFBQUFCMEFBQUFnLzlFQU1nQURBaW9DdkFBRkFBQUNpZ0pZQUFBQVN3S0tBbGdBQUFGZUFESUJLUUFBQWdzSEF3TUVBd0lDQkdBQUF2Y0FBQUFEQUFBQUFBQUFBQUJCUkVKUEFDQUFJUC8vQXU3L0JnQUFBOWdCRVNBQUFaOEFBQUFBQWZBQ2xBQUFBQ0FBQTNpY2RNMDVhZ0lCR0VEaGJ6S1RmWkpNOWdSUzVDb2hJV1c2RkpZV2dxS0lDT0o5M0xBVHhNSk9QWW9uK2NVcDdIenRWendrVWdseW1RVStGRks1VDE5Ky9QcnpyNkttb2FXanB4OUJxZDhIcmFwcmF1dnVOYmF4aVhXc1lobnptTVUwSmpHT1VReGpVSDZPbHppUnlwdzZjKzdDcFN2WGNqZHUzU25jZS9Eb3liTVhyOTY4c3dNQUFQLy9BUUFBLy8rOGp5VStBQUFBZUp4Y2xWMXNHMm4xeHMvN2V1ejV4NTE4ak1jell6ditmdU1aT3g5TzQvSE1OSWxUTjQyZGo2NmROb21hdHYvTkYxVUZDMm5TMHFZa1cxVXFFbVVGdTk0dDFLVzdiR0VYb1NJQktrZ3JicFlGSTNIUlhkRDJyaXYyQmdTc1VPaGxoQ3hVclp3eG1ySFRkSHRoalM5RzU1em5PYi96RE5qaEJBQStpMitERFZxZ0hWekFBeWhzaEkwcHNreG9YZEYxSXRwMEdiSDBDZXd5Zm5aUFRsQ0pCTlVkZml0MGRYa1pGWmZ3N2Qzekx4YlBudjN2OHZDdzhjNXZQekJlUjVjL0FNRDF6d0h3R0M1QkM3QUFISzNJa2lRVGg4UEdLUnlSQ2IzZDhWcDdhMmNyeFhnL2YvamV3eC9GUDRxalk1bk13THFTWGpPK2pVdTdHM2Z2QWdBZ1NOYXIrQ0IrQ3pvQjdGRkpVdE9hcHFRRWtaWWtFblU0ZUxlZ3BEUmRkS0RGMlZmblRyNCttejBYbWZicXBIZXFaMzR5bnZWTXp6S0ZINnlkLytHTUVsMFNBNm1sbytjdWRua1hWZ0JERVFBWGNBbWNEY1ZLU2hCNHQ4TkJaQ1dsYVdwYWtnZ3B2bi91MXN5Sm15dDkva056eWVUY0lUOHU1VzVldkhocllqTytNRDE5Sm1iTlZ3UkFqeTJkcG05OGhGZDR3aGZSWGVQSlo1L2gwclUzciszQzNudFdQODdxeG9tS0pLbXF3aEtiVEFTQjU0dHYvdklJUmJXVnpJZTlGWmVNMzM4di9jMmg3ZDBObEg5RHV6YjBiNnZHVkwyS2orT1M2YWc5S3Ftc3dscnlyVDhPTkgzOWxkdER1cDU1NDF2TW5YdG95U2l2RkFvcmFNMzQ2YjA3Z09wUEFEQ1BTOUFPb0tnMlJSUUVVZEUwWFZkc2ZPWEJPME50dmxhcXpkODYvUGFEeCtqZW5WaGVrdkt4TzhiQ1l3REEwRjJ2b2s5UURieEFBTVNvdVFUZDhwK1dyVzN3TERGM3E2YzBYYlYyOG9mY2lSdGxUQktoSTExcS8rclE4cGUzbkZSbzR2KzhNVzQ2RTJKT1phZFB0MGRrRC8rbFFOZjZKZU5maXA5Y0VybFR6cDZBUjdUNmpkYXJXTUFWY0VQSVVpb1RtckFLVDF2TnJEWEpLVTFOa3lqTkN3TEtSOFlDRkhPNVRBVnkwY3pwL3N6eWFVbWI3MDI0NDB3a3JPTEsvWUl2Y1BqcmhaTXZaN2ZHQzYvMGZleHFzN3pzcWxkUkJkWEE5enhYSkxwUGxRTjU4eGRHSjcrUlMwNzQ4eVNzWnJNSFBVbHVLRGJQakZ5Wm5kc1lDWXJMZ2NMb2tTTGZ2aEx1Qkd0MnVWNUZOVndCRHNKN1hsbUZaWFBaVDEyU21tMytzM0JoZURtZE9PUjFsTGVjbEc4Y2UyUVgxK01tV2ovejJzc3pWdzc3UFlWZjdJNE4rTWlXMi91eHEyMXNZaW9QMkpyOW42Z0ducVkvZTAxTWEraUlJQ2dwYzNhYmtqYTdvTkRFcGFOajU0Y25GdnNwYkh6cUhCOVF0UUZwNmUzZnlMMVJqVG04TVR1emtjMnU1cmhZaTZaRXp2aUNhQ2loOWplWUhUVUZXWHN3bVczNno3T0V0UXJUN0dpWjlyK1FtcGtxQjhMK3VBZFg3cC94OXF3dUdnOVJSSXQ3UmVNOXFOZEJCNEMvNFVkWU1wMEdHanJoMWFlMWc3Z0NqRldiVlhTRjVvaE04Nk0zcVIvLzVOZS9lL2RpRmxlTTlRY1BqYi8rY2VLcStYNjlpbHk0WXZJclBzTytLZlJQaGVFeTIyS25IUzRteHJ6NEFpYTduNG91aE5iczlKNEdWR3RxTUpsL1RzT1drd29YbjRwQU85bGczeGMwTlB6R05LcEIrM01wdEk5aWM1MUl5RjdJNVM1a3MrdTUzSHEyTDVuc1MvYjFOVmtaMlppYnZUS3lXVHd5V2pDUmFYQStpUVZVQXc2Q0FPTCtkR1lPUlNWWjVMbDl6TTA1QTFQeS83K1VXZGJDR1ovOXVLVE45M1M3NCsvam53LzR5SGN2bjl6S2RucVBmeDkxUFlYYzBvNXVvaHE0bnRYZWpNNkc4czZDeFB1ZG5sWnZoMy9FalhaT3BRYnM5dXNVbFVnWi93QUVmTDJLM2tVMWtDM1BaVjJ3MGlZdFNYSVNxK245WXJ4YkVJT1lkenNlRFh4Rk9ock5oaUxCUU5JWEhJNS85ZVRncWRCUlg5bzNPQ2lGUnhJdk1WSm93ZHNwY3F6QU9abXV3VVIrWHZhY2RndXl4OXQyZ0F3bXh4WWIzTEgxS2xySEd5QTJjazRscXE0clZyRHVIeVlzSE04VjJLdWJteVRBZUowaXB6TmZtLy96bXVQR2pjc2ZkY2NjMUtxRGFkVEsxS3ZvQ2RveDkvOEZidGptT2Y1bFpxb2NEUHNsb2J4MXdCWTZ4cXd1b3JUeGR6WGhDNkJKb3lNZjZ3VUVIZ0M4ZzNZZ0FxQThHNTNQaENocGZ0OW8rdmExV3djZFRnZEZ0N2JvMXcrMXROTVUzVUwzZjJmemZoL2RTbFAwQWJvWDdXekhKaVhwR05tMm5wT3hiYVBqUXpJZWo0K1REL2R1QXo1Qk8yQnIzTVpvR2UwWUhZRHF2OEtETUljZndRRUExa3FXQml5eFpESVdTeWJ4WURjaDNlWVAvZ2NBQVAvL0FRQUEvLy9JbzdDMUFBRUFBQUFDQzRVVU9ZbExYdzg4OVFBQkErZ0FBQUFBMkYyZ2hBQUFBQURkWmk4Mi9qZit4QWh0QS9FQUFRQURBQUlBQUFBQUFBQUFBUUFBQTlqKzd3QUFDSmorTi80M0NHMEFBUUFBQUFBQUFBQUFBQUFBQUFBQUFCd0NzZ0JRQU1nQUFBSTkvL29DUmdBdUFuc0FUUUlNQUUwQ21RQk5BcGtBU1FJTi8vZ0NEd0FxQWowQVFRSFRBQ1FDUFFBbkFnWUFKQUk3QUVFQkZBQTNBaVFBUVFFZUFFRUNQQUJCQWlzQUpBSTlBRUVCamdCQkFic0FGUUYvQUJFQ09BQThBd2dBR0FFVUFFRUFBUCt0QUFBQUxBQXNBRkFBZkFDZ0FMUUExZ0QwQVJJQlNnRjhBYWdCMmdJT0FqQUNQQUpVQW5BQ2tnSytBdTRERGdOS0EzQURrZ1BLQTlZRDdBQUFBQUVBQUFBY0FKQUFEQUJqQUFjQUFRQUFBQUFBQUFBQUFBQUFBQUFFQUFONG5KeVV6MjRiVlJUR2YwNXMwd3JCQWtWVnVvbnVna1dSNk5oVVNkVTJLNGZVaWtVVUI0OExRa0pJRTgvNGp6S2VHWGttRHVFSldQTVd2RVZYUEFUUGdWaWorWHpzMkFYUkpvcVNmSGZ1K2ZPZGM3NXpnUjMrWnB0SzlTSHdSejB4WEdHdmZtNTRpd2YxRThQYnRPdGJocXM4cWYxcHVFWllteHV1ODNtdFovZ2ozbFovTS95QS9lcFBoaCt5VzIwYi9waG4xUjNEbjJ3Ny9qTDhLZnU4WGVBS3ZPQlh3eFYyeVF4dnNjT1BocmQ1aE1Xc1ZIbEUwM0NOejlnelhHY1A2RE9oSUdaQ3dnakhrQWtqcnBnUmtlTVRNV1BDa0lnUVI0Y1dNWVcrSmdSQ2p0Ri9mZzN3S1pnUktPS1lBa2VNVDB4QXp0Z2kvaUt2bEhObEhPbzBzN3NXQldNQ0x1UnhTVUNDSTJWRVNrTEVwZUlVRkdTOG9rR0RuSUg0WmhUa2VPUk1pUEZJbVRHaVFaYzJwL1FaTXlISDBWYWtrcGxQeXBDQ2F3TGxkMlpSZG1aQVJFSnVySzVJQ01YVGlWOGs3dzZuT0xwa3NsMlBmTG9SNFVzYzM4bTc1SmJLOWlzOC9ibzFacHQ1bDJ3QzV1cG5ySzdFdXJuV0JNZTZMZk8yK0ZhNDRCWHVYdjNaWlBMK0hvWDZYeWp5QlZlYWY2aEpKV0tTNE53dUxYd3B5SGVQY1J6cDNNRlhSNzZuUTU4VHVyeWhyM09MSGoxYW5OR253MnY1ZHVuaCtKb3VaeHpMb3lPOHVHdExNV2Y4Z09NYk9ySXBZMGZXbjhYRUluNG1NM1huNGpoVEhWTXk5YnhrN3FuV1NCWGVmY0xsRHFVYjZzamxNOUFlbFpaTzgwdTBad0VqVTBVbWhsUDFjcW1OM1BvWG1pS21xcVdjN2UxOXVRMXoyNzNsRnQrUWFvZEx0UzQ0bFpOYk1IcmZWTDEzTkhPdEg0K0FrSlFMV1F4SW1kS2c0RWE4endtNElzWnhyTzZkYUVzS1dpdWZNcytOVkJJeEZZTU9pZUxNeVBRM01OMzR4bjJ3b1h0bmIwa28vNUxwNWFxcSsyUng2dFh0ak42b2U4czczN29jclUyZ1lWTk4xOVEwRU5mRXRCOXBwOWI1Ky9MTjlicWxQT1dJbEpqd1h5L0FNenlhN0hQQUlXTmxHT2htYnE5RFV5OUVrNWNjcXZwTElsa05wZWZJSWh6Zzhad0REbmpKODNmNnVHVGlqSXRiY1ZuUDNlS1lJN29jZmxBVkMvc3VSN3hlZmZ2L3JMK0xhVk8xT0o2dVRpL3VQY1VuZDFEckY5cXoyL2V5cDRtVms1aGJ0TnV0T0NOZ1duSnh1K3MxdWNkNC93QUFBUC8vQVFBQS8vLzB0MDlSZUp4aVlHWUFnLy9uR0l3WXNBQUFBQUFBLy84QkFBRC8veThCQWdNQUFBQT0iKTsKfQouZDItMTQ5NDY2OTE0MyAudGV4dC1pdGFsaWMgewoJZm9udC1mYW1pbHk6ICJkMi0xNDk0NjY5MTQzLWZvbnQtaXRhbGljIjsKfQpAZm9udC1mYWNlIHsKCWZvbnQtZmFtaWx5OiBkMi0xNDk0NjY5MTQzLWZvbnQtaXRhbGljOwoJc3JjOiB1cmwoImRhdGE6YXBwbGljYXRpb24vZm9udC13b2ZmO2Jhc2U2NCxkMDlHUmdBQkFBQUFBQXk0QUFvQUFBQUFFK2dBQVJoUkFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQlBVeTh5QUFBQTlBQUFBR0FBQUFCZ1cxU1ZlR050WVhBQUFBRlVBQUFBbFFBQUFNQURQd1FVWjJ4NVpnQUFBZXdBQUFaYkFBQUlvSWVvWnVab1pXRmtBQUFJU0FBQUFEWUFBQUEyRzdVcjJtaG9aV0VBQUFpQUFBQUFKQUFBQUNRTGVBakFhRzEwZUFBQUNLUUFBQUJ3QUFBQWNESG9BK3BzYjJOaEFBQUpGQUFBQURvQUFBQTZINW9ka20xaGVIQUFBQWxRQUFBQUlBQUFBQ0FBTkFEMmJtRnRaUUFBQ1hBQUFBTW1BQUFJTWdudFZ6TndiM04wQUFBTW1BQUFBQ0FBQUFBZy84WUFNZ0FEQWVFQmtBQUZBQUFDaWdKWS8vRUFTd0tLQWxnQVJBRmVBRElCSXdBQUFnc0ZBd01FQXdrQ0JDQUFBSGNBQUFBREFBQUFBQUFBQUFCQlJFSlBBQUVBSVAvL0F1Ny9CZ0FBQTlnQkVTQUFBWk1BQUFBQUFlWUNsQUFBQUNBQUEzaWNkTTA1YWdJQkdFRGhiektUZlpKTTlnUlM1Q29oSVdXNkZKWVdncUtJQ09KOTNMQVR4TUpPUFlvbitjVXA3SHp0Vnp3a1VnbHltUVUrRkZLNVQxOSsvUHJ6cjZLbW9hV2pweDlCcWQ4SHJhcHJhdXZ1TmJheGlYV3NZaG56bU1VMEpqR09VUXhqVUg2T2x6aVJ5cHc2Yys3Q3BTdlhjamR1M1NuY2UvRG95Yk1Ycjk2OHN3TUFBUC8vQVFBQS8vKzhqeVUrQUFBQWVKeDhWVzFzVzFjWmZzKzVOL2MyaVJOL1hIL0VUdXdiMzJQZm03aTJrL2pZMTBrYmZ5VE9WMk03YWJJbVZHbWNOdEIyVGJPQnhRUnJhYXVPVmhvVXRNcWdhaElJcVVnVEVtai9PdjRnd1pBQWlZaVJmd09LRUgvWUZxYVZRWW1zaVZYa0d0MXJKM0VydEQ5SFIxZFg3L00rei9zODc0RVdDQURnTCtKN3dFQXJtTUVHRGdBcStCbUdKcFBFeFZCRklUeWZWQVNCRDl4Q1c3ZSt6K1pXUHVqNzRhZGhrWjMrK2sveS96ajNKcjYzOXdKNnBYVHpwbmJtbXhjdWZPN1JJeTJFL3ZnSUFBRFgzZ0ZBZjhBVmFBVXJnTUJUUlpZVnduRUlVWUVvaEgvdjJLL2IyRGFXOVZEdDkrajhTbUhCOXVFR3Vsb3V4eThQanp5dkxlREtYbmw3R3dEQlNLMktJL2dISUFLMFNMS2NpS2N4alRsZHZDd1RxUk03N0U0bmphbEpGOGNoS1g5SkhWeTVVUmhlNkZJRlZUNTJkandnelI3dnkvV1NRTW1VdXpKWHZQZnlkRExVMzZ1a3psOFpQVjVLOUhiSHhJamVLeEFBckJxOUNyb0NOT1owMkRtT0tEU21xb200VEFpNS9iVTdyeTNkLzlMeTh0TDEzUE5mVUhIbEcxZGYvdW1GN0tuWDEwc2JPbDlrMUxBWU5YUU5lVDlQZWNLUTIraHloL1plNU44ZGowZHhaZXo5Y2UxUCsvOWV4SlVHbXVDaXFwb1VLRU1ZWFNHZUliZm5YZyt4WEdmYlpQNTI4ZDVSbGpPM1RlR0t0bnBuNkVXS1Z2Zks2STNYNk9XWWR0L0FuYTlWalZwT1E1OUUzS2pFT2V5R0xQcVZRNzd6bXh3N081ZHZ6VTRPcnpnV0Nvczl0MHdiRngwRGJsVFc3a1NrcWVMcUp2cXV0bm4zcWw3dk9RRHN3eFV3NjcweDFPVjBHdTBsS1dLK1RUZFBSbHJOcll3cjNIWDlPZTJmY1FTbzhvdkFwQnljRHZ4Y0s5Y01MWlZhRmYwSDdZSmRaK21TRGdaR2s1UWhTY0p4U2t4TkpnK205MWEyRUo1ZG8wckt5Z3JwOWN3UmxweTJ5Zk9Cc0NQV0U4Z2x4Q0hUbWFXcHE2dTB6NS9TUERQQmdXeDA0TSt5RkRwUmltVlNoczlBckZYUlk3d0ZEdDNOTGtsV0NFOEV5dk5VVlkwNWRtSWxsc2I2RkNXTzU1M09qNVNVbGJGbjdoWVZKdzZjaWhqd2lVQXU0UnZzbHhaSTFFNU5mZjRVM25yN25QZm95cklPblEyZEtORjBLaFQ4dXl3QmdtQ3RpaDZnWGVoNWlwMWhSMjVmZGhmSFBady9IeTZ1SjhLanpvZ2dld2VYMVpGanZhcFQ4aFJORjBzVEx5ME5TTzVCbDJPaW5CdWY4bGhqOWlEc2E0ZVZKaTZIMm4yMmVNZHNqRVV1VmhycXpRV2ZWVS9wUGZ2MjN2Q3o4bUdEeXkvUkxuZ2cySXludTUvM2N3ZkpZcWdSQTUzaCs4c2JrZnpxWUhMTVoyclJmdFBhbXd0NVIxdys3OEwzYXBpeDlaUEVtdW55K21SNU1SdzlHZXVoblptVFFiZVZPa1FVYk8vcTZCa1Nsd0RwT1VZUDhSYTREZThmem9sbmlLREQ2R05peEx2RlFRdmJ2eGhPSjQ2a0M2TXNPOU16RTUzRVc0OVNaR0JzV0F4b3YwTmhlMWRIUGhUVmZseXI2VFhoQ1g2QVpmQUFBQWZkTS9WTTZsZ2Y0eTB3R1ZpTWppY1FoZWZGdThWeitOUFR2L3JLWEtuc3dWdWFGNkYzdEE4Ky92STFRQkN1VmVFSjNnS2Jya2dpWG8rUXc5NlE0c1V4N2xyeEJrSldodU5SbTlPVXNicng1dDUzK0ZiR2h2QnhsajNFZlloMm9hdk84ZjlUWE0vd2JQOWk5Q21HYU9kRVlPaFpnZ2ZlUUg5QnUyQUdiL09zNmdhdnI2bTZBZCtkWHd2UHJzWG16NGJ6YTZISUFsVmorbUc2ZEdieXBhVm8vY3lPbHlmR3AzUGxpZkVwWTFkL1VxUG9NZHF0KzQ1djZyZ1RFeU5SdlBCVWh0cStsZUdZNEZMVXNGOU1IaFd3VGZ4UmM0YTI4VnRaTWRJd24zanBQa0tORU1rZkJ2MkhHbDFIdTJCcDBzakZ5L3ZhdExQZVFzVHQ2TFo0QWdVeGhYWks0VlRyeEpITWNXMGJVTzIvdFNxNmdYWkJxU2MrYVRnMUVaY1YvWDB3V204RTBtRjN1Z3c3YzI4TWxkeURycXdjU3ZVUFIwZkNKOExSMlo2b1FQM3lrTnFiamc4dW11SjlzdGdYSlI1RjlLVDdqNDRGQTc0K3V5Y2krbVNiTkJxT1RBVDFua2RyVlhRYXYzQ1FmVFVwa0F5bXhxcHZ5djdQc25FV2pVeTNGd0pqM2RkTU4wYVlIcW5UMDI2MURKZ3lFYk9uQTlsR1dsNTlOYTE5WkxQNWZHMHRTZDZzMXg2dVZkRy8wSTZlQzlmaEhtODRUMmpFLzgyVXlyTHBZb3BsWjd6VDRjbUN2akQ3VHBuR2sxWlJRS3IycnVEV0xZTk9hNTVaUXVzNlR3SGczNklkOEFQb0NXaXNjNkhweGhDbS9qYnp6QVlwV0JCQ3JMbmI4a3JlaWpGaU96Mldtek4vUGR0cGZQV2F2NHAydEw5SkU1STBJU0ZmMDgyRDJzaE1JREJEdEUvcXM0VnR0QU5NUFhmaWV2SHphRWZ6R1AxTTR6dzh3QStnSFVBd2VOWmYyeXVDajdqc1hvTHpMcWZiMytWMDkvNFBBQUQvL3dFQUFQLy95K3JNTVFBQUFRQUFBQUVZVWRQeTRzdGZEenoxQUFFRDZBQUFBQURZWGFETUFBQUFBTjFtTHpmK3ZmN2RDQjBEeVFBQ0FBTUFBZ0FBQUFBQUFBQUJBQUFEMlA3dkFBQUlRUDY5L2J3SUhRUG9BTUwvMFFBQUFBQUFBQUFBQUFBQUhBSjBBQ1FBeUFBQUFmNy95d0ltQURrQ1VBQWpBZGtBSXdKckFDTUNhQUJQQWMwQVV3SVpBQ2NDR0FBZkFiTUFKUUlYQUNjQjRRQWxBZ3NBSHdEdEFCOEIzQUFmQVBnQUxBSU5BQjhDQXdBbkFoZi85Z0ZXQUI4Qmt2LzhBVVVBUEFJUUFEZ0N3d0JHQU8wQUh3QUFBRWNBQUFBdUFDNEFVZ0NFQUtZQXZBRGlBUW9CS2dGaUFab0J5QUlBQWpvQ1pBSndBb29DckFMV0F3UURQZ05jQTVnRHhnUHlCQ3dFT2dSUUFBQUFBUUFBQUJ3QWpBQU1BR1lBQndBQkFBQUFBQUFBQUFBQUFBQUFBQVFBQTNpY25KVGJUaHRYRklZL0I5dHRlcnFvVUVSdTBMNU1wV1JNb3hBbDRjcVVvSXlLY09weGVwQ3FTb005UG9qeHpNZ3ptSkluNkhYZm9tK1JxejVHbjZMcWRiVi9MNE1kUlVFZ0JQeDc5anI4YTYxL2JXQ1QvOWlnVnI4TC9OMmNHNjZ4M2Z6WjhCMithQjRaM21DLytabmhPZzhiL3hodU1HaThOZHprUWFOcitCUGUxZjgwL0NsUDZyOFp2c3RXL2REdzV6eXVieHIrY3NQeHIrR3ZlTUs3QmE3Qk0vNHdYR09Md3ZBZE52blY4QWIzc0ppMU92ZllNZHpnYTdZTk45a0dla3lvU0ptUU1jSXhaTUtJTTJZa2xFUWt6Smd3SkdHQUk2Uk5TcVd2R2JHUVkvVEJyekVSRlROaVJSeFQ0VWlKU0lrcEdWdkV0L0xLZWEyTVE1MW1kdGVtWWt6TWlUeE9pY2x3NUl6SXlVZzRWWnlLaW9JWHRHaFIwaGZmZ29xU2dKSUpLUUU1TTBhMDZIRElFVDNHVENoeEhDcVNaeGFSTTZUaW5GajVuVm40enZSSnlDaU4xUmtaQS9GMDRwZklPK1FJUjRkQ3RxdVJqOVlpUE1UeG83dzl0MXkyM3hMbzE2MHdXOCs3WkJNelZ6OVRkU1hWemJrbU9OYXR6OXZtQitHS0Y3aGI5V2VkeWZVOUd1aC9wY2dubkduK0EwMHFFNU1NNTdab0UwbEJrYnVQWTEvbmtFZ2QrWW1RSHEvbzhJYWV6bTI2ZEdselRJK1FsL0x0ME1YeEhSMk9PWkJIS0x5NE81UmlqdmtGeC9lRXN2R3hFK3ZQWW1JSnYxT1l1a3R4bkttT0tZVjY3cGtIcWpWUmhUZWZzTitoZkUwZHBYejYyaU52NlRTL1RIc1dNekpWRkdJNFZTK1gyaWl0ZndOVHhGUzErTmxlM2Z0dG1OdnVMYmY0Z2x3NzdOVzY0T1FudDJCMDNWU0Q5elJ6cnArQW1BRTVKN0xva3pPbFJjV0ZlTDhtNW93VXg0RzY5MHBiVXRHKzlQRjVMcVNTaEtrWWhHU0tNNlBRMzloMEV4bjMvcHJ1bmIwbEEvbDdwcWVYVmQwbWkxT3ZybWIwUnQxYjNrWFc1V1JsQWkyYmFyNmlwcjY0WnFiOVJEdTF5aitTYjZuWExlY1JvZUl1ZHZ0RHI4QU96OWxsajdHeTlIVXp2N3p6cjRTMzJGTUhUa2xrTlpTbWZRMlBDZGdsNENtNzdQS2NwKy8xY3NuR0dSKzN4bWMxZjVzRDl1bXdkMjAxQzlzTys3eGNpL2J4ekgrSjdZN3FjVHk2UEQyNzlUUWYzRUMxMzJqZnJ0N05yaWJucHpHM2FGZmJjVXpNMUhOeFc2czF1ZnNFL3dNQUFQLy9BUUFBLy85eW9WRkFBQUFBQXdBQS8vVUFBUC9PQURJQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBPT0iKTsKfV1dPjwvc3R5bGU+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsuc2hhcGUgewogIHNoYXBlLXJlbmRlcmluZzogZ2VvbWV0cmljUHJlY2lzaW9uOwogIHN0cm9rZS1saW5lam9pbjogcm91bmQ7Cn0KLmNvbm5lY3Rpb24gewogIHN0cm9rZS1saW5lY2FwOiByb3VuZDsKICBzdHJva2UtbGluZWpvaW46IHJvdW5kOwp9Ci5ibGVuZCB7CiAgbWl4LWJsZW5kLW1vZGU6IG11bHRpcGx5OwogIG9wYWNpdHk6IDAuNTsKfQoKCQkuZDItMTQ5NDY2OTE0MyAuZmlsbC1OMXtmaWxsOiMwQTBGMjU7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLU4ye2ZpbGw6IzY3NkM3RTt9CgkJLmQyLTE0OTQ2NjkxNDMgLmZpbGwtTjN7ZmlsbDojOTQ5OUFCO30KCQkuZDItMTQ5NDY2OTE0MyAuZmlsbC1ONHtmaWxsOiNDRkQyREQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLU41e2ZpbGw6I0RFRTFFQjt9CgkJLmQyLTE0OTQ2NjkxNDMgLmZpbGwtTjZ7ZmlsbDojRUVGMUY4O30KCQkuZDItMTQ5NDY2OTE0MyAuZmlsbC1ON3tmaWxsOiNGRkZGRkY7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLUIxe2ZpbGw6IzBEMzJCMjt9CgkJLmQyLTE0OTQ2NjkxNDMgLmZpbGwtQjJ7ZmlsbDojMEQzMkIyO30KCQkuZDItMTQ5NDY2OTE0MyAuZmlsbC1CM3tmaWxsOiNFM0U5RkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLUI0e2ZpbGw6I0UzRTlGRDt9CgkJLmQyLTE0OTQ2NjkxNDMgLmZpbGwtQjV7ZmlsbDojRURGMEZEO30KCQkuZDItMTQ5NDY2OTE0MyAuZmlsbC1CNntmaWxsOiNGN0Y4RkU7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLUFBMntmaWxsOiM0QTZGRjM7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLUFBNHtmaWxsOiNFREYwRkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLUFBNXtmaWxsOiNGN0Y4RkU7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLUFCNHtmaWxsOiNFREYwRkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5maWxsLUFCNXtmaWxsOiNGN0Y4RkU7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtTjF7c3Ryb2tlOiMwQTBGMjU7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtTjJ7c3Ryb2tlOiM2NzZDN0U7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtTjN7c3Ryb2tlOiM5NDk5QUI7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtTjR7c3Ryb2tlOiNDRkQyREQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtTjV7c3Ryb2tlOiNERUUxRUI7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtTjZ7c3Ryb2tlOiNFRUYxRjg7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtTjd7c3Ryb2tlOiNGRkZGRkY7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtQjF7c3Ryb2tlOiMwRDMyQjI7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtQjJ7c3Ryb2tlOiMwRDMyQjI7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtQjN7c3Ryb2tlOiNFM0U5RkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtQjR7c3Ryb2tlOiNFM0U5RkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtQjV7c3Ryb2tlOiNFREYwRkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtQjZ7c3Ryb2tlOiNGN0Y4RkU7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtQUEye3N0cm9rZTojNEE2RkYzO30KCQkuZDItMTQ5NDY2OTE0MyAuc3Ryb2tlLUFBNHtzdHJva2U6I0VERjBGRDt9CgkJLmQyLTE0OTQ2NjkxNDMgLnN0cm9rZS1BQTV7c3Ryb2tlOiNGN0Y4RkU7fQoJCS5kMi0xNDk0NjY5MTQzIC5zdHJva2UtQUI0e3N0cm9rZTojRURGMEZEO30KCQkuZDItMTQ5NDY2OTE0MyAuc3Ryb2tlLUFCNXtzdHJva2U6I0Y3RjhGRTt9CgkJLmQyLTE0OTQ2NjkxNDMgLmJhY2tncm91bmQtY29sb3ItTjF7YmFja2dyb3VuZC1jb2xvcjojMEEwRjI1O30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1OMntiYWNrZ3JvdW5kLWNvbG9yOiM2NzZDN0U7fQoJCS5kMi0xNDk0NjY5MTQzIC5iYWNrZ3JvdW5kLWNvbG9yLU4ze2JhY2tncm91bmQtY29sb3I6Izk0OTlBQjt9CgkJLmQyLTE0OTQ2NjkxNDMgLmJhY2tncm91bmQtY29sb3ItTjR7YmFja2dyb3VuZC1jb2xvcjojQ0ZEMkREO30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1ONXtiYWNrZ3JvdW5kLWNvbG9yOiNERUUxRUI7fQoJCS5kMi0xNDk0NjY5MTQzIC5iYWNrZ3JvdW5kLWNvbG9yLU42e2JhY2tncm91bmQtY29sb3I6I0VFRjFGODt9CgkJLmQyLTE0OTQ2NjkxNDMgLmJhY2tncm91bmQtY29sb3ItTjd7YmFja2dyb3VuZC1jb2xvcjojRkZGRkZGO30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1CMXtiYWNrZ3JvdW5kLWNvbG9yOiMwRDMyQjI7fQoJCS5kMi0xNDk0NjY5MTQzIC5iYWNrZ3JvdW5kLWNvbG9yLUIye2JhY2tncm91bmQtY29sb3I6IzBEMzJCMjt9CgkJLmQyLTE0OTQ2NjkxNDMgLmJhY2tncm91bmQtY29sb3ItQjN7YmFja2dyb3VuZC1jb2xvcjojRTNFOUZEO30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1CNHtiYWNrZ3JvdW5kLWNvbG9yOiNFM0U5RkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5iYWNrZ3JvdW5kLWNvbG9yLUI1e2JhY2tncm91bmQtY29sb3I6I0VERjBGRDt9CgkJLmQyLTE0OTQ2NjkxNDMgLmJhY2tncm91bmQtY29sb3ItQjZ7YmFja2dyb3VuZC1jb2xvcjojRjdGOEZFO30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1BQTJ7YmFja2dyb3VuZC1jb2xvcjojNEE2RkYzO30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1BQTR7YmFja2dyb3VuZC1jb2xvcjojRURGMEZEO30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1BQTV7YmFja2dyb3VuZC1jb2xvcjojRjdGOEZFO30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1BQjR7YmFja2dyb3VuZC1jb2xvcjojRURGMEZEO30KCQkuZDItMTQ5NDY2OTE0MyAuYmFja2dyb3VuZC1jb2xvci1BQjV7YmFja2dyb3VuZC1jb2xvcjojRjdGOEZFO30KCQkuZDItMTQ5NDY2OTE0MyAuY29sb3ItTjF7Y29sb3I6IzBBMEYyNTt9CgkJLmQyLTE0OTQ2NjkxNDMgLmNvbG9yLU4ye2NvbG9yOiM2NzZDN0U7fQoJCS5kMi0xNDk0NjY5MTQzIC5jb2xvci1OM3tjb2xvcjojOTQ5OUFCO30KCQkuZDItMTQ5NDY2OTE0MyAuY29sb3ItTjR7Y29sb3I6I0NGRDJERDt9CgkJLmQyLTE0OTQ2NjkxNDMgLmNvbG9yLU41e2NvbG9yOiNERUUxRUI7fQoJCS5kMi0xNDk0NjY5MTQzIC5jb2xvci1ONntjb2xvcjojRUVGMUY4O30KCQkuZDItMTQ5NDY2OTE0MyAuY29sb3ItTjd7Y29sb3I6I0ZGRkZGRjt9CgkJLmQyLTE0OTQ2NjkxNDMgLmNvbG9yLUIxe2NvbG9yOiMwRDMyQjI7fQoJCS5kMi0xNDk0NjY5MTQzIC5jb2xvci1CMntjb2xvcjojMEQzMkIyO30KCQkuZDItMTQ5NDY2OTE0MyAuY29sb3ItQjN7Y29sb3I6I0UzRTlGRDt9CgkJLmQyLTE0OTQ2NjkxNDMgLmNvbG9yLUI0e2NvbG9yOiNFM0U5RkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5jb2xvci1CNXtjb2xvcjojRURGMEZEO30KCQkuZDItMTQ5NDY2OTE0MyAuY29sb3ItQjZ7Y29sb3I6I0Y3RjhGRTt9CgkJLmQyLTE0OTQ2NjkxNDMgLmNvbG9yLUFBMntjb2xvcjojNEE2RkYzO30KCQkuZDItMTQ5NDY2OTE0MyAuY29sb3ItQUE0e2NvbG9yOiNFREYwRkQ7fQoJCS5kMi0xNDk0NjY5MTQzIC5jb2xvci1BQTV7Y29sb3I6I0Y3RjhGRTt9CgkJLmQyLTE0OTQ2NjkxNDMgLmNvbG9yLUFCNHtjb2xvcjojRURGMEZEO30KCQkuZDItMTQ5NDY2OTE0MyAuY29sb3ItQUI1e2NvbG9yOiNGN0Y4RkU7fS5hcHBlbmRpeCB0ZXh0LnRleHR7ZmlsbDojMEEwRjI1fS5tZHstLWNvbG9yLWZnLWRlZmF1bHQ6IzBBMEYyNTstLWNvbG9yLWZnLW11dGVkOiM2NzZDN0U7LS1jb2xvci1mZy1zdWJ0bGU6Izk0OTlBQjstLWNvbG9yLWNhbnZhcy1kZWZhdWx0OiNGRkZGRkY7LS1jb2xvci1jYW52YXMtc3VidGxlOiNFRUYxRjg7LS1jb2xvci1ib3JkZXItZGVmYXVsdDojMEQzMkIyOy0tY29sb3ItYm9yZGVyLW11dGVkOiMwRDMyQjI7LS1jb2xvci1uZXV0cmFsLW11dGVkOiNFRUYxRjg7LS1jb2xvci1hY2NlbnQtZmc6IzBEMzJCMjstLWNvbG9yLWFjY2VudC1lbXBoYXNpczojMEQzMkIyOy0tY29sb3ItYXR0ZW50aW9uLXN1YnRsZTojNjc2QzdFOy0tY29sb3ItZGFuZ2VyLWZnOnJlZDt9LnNrZXRjaC1vdmVybGF5LUIxe2ZpbGw6dXJsKCNzdHJlYWtzLWRhcmtlci1kMi0xNDk0NjY5MTQzKTttaXgtYmxlbmQtbW9kZTpsaWdodGVufS5za2V0Y2gtb3ZlcmxheS1CMntmaWxsOnVybCgjc3RyZWFrcy1kYXJrZXItZDItMTQ5NDY2OTE0Myk7bWl4LWJsZW5kLW1vZGU6bGlnaHRlbn0uc2tldGNoLW92ZXJsYXktQjN7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktQjR7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktQjV7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktQjZ7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktQUEye2ZpbGw6dXJsKCNzdHJlYWtzLWRhcmstZDItMTQ5NDY2OTE0Myk7bWl4LWJsZW5kLW1vZGU6b3ZlcmxheX0uc2tldGNoLW92ZXJsYXktQUE0e2ZpbGw6dXJsKCNzdHJlYWtzLWJyaWdodC1kMi0xNDk0NjY5MTQzKTttaXgtYmxlbmQtbW9kZTpkYXJrZW59LnNrZXRjaC1vdmVybGF5LUFBNXtmaWxsOnVybCgjc3RyZWFrcy1icmlnaHQtZDItMTQ5NDY2OTE0Myk7bWl4LWJsZW5kLW1vZGU6ZGFya2VufS5za2V0Y2gtb3ZlcmxheS1BQjR7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktQUI1e2ZpbGw6dXJsKCNzdHJlYWtzLWJyaWdodC1kMi0xNDk0NjY5MTQzKTttaXgtYmxlbmQtbW9kZTpkYXJrZW59LnNrZXRjaC1vdmVybGF5LU4xe2ZpbGw6dXJsKCNzdHJlYWtzLWRhcmtlci1kMi0xNDk0NjY5MTQzKTttaXgtYmxlbmQtbW9kZTpsaWdodGVufS5za2V0Y2gtb3ZlcmxheS1OMntmaWxsOnVybCgjc3RyZWFrcy1kYXJrLWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOm92ZXJsYXl9LnNrZXRjaC1vdmVybGF5LU4ze2ZpbGw6dXJsKCNzdHJlYWtzLW5vcm1hbC1kMi0xNDk0NjY5MTQzKTttaXgtYmxlbmQtbW9kZTpjb2xvci1idXJufS5za2V0Y2gtb3ZlcmxheS1ONHtmaWxsOnVybCgjc3RyZWFrcy1ub3JtYWwtZDItMTQ5NDY2OTE0Myk7bWl4LWJsZW5kLW1vZGU6Y29sb3ItYnVybn0uc2tldGNoLW92ZXJsYXktTjV7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktTjZ7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0uc2tldGNoLW92ZXJsYXktTjd7ZmlsbDp1cmwoI3N0cmVha3MtYnJpZ2h0LWQyLTE0OTQ2NjkxNDMpO21peC1ibGVuZC1tb2RlOmRhcmtlbn0ubGlnaHQtY29kZXtkaXNwbGF5OiBibG9ja30uZGFyay1jb2Rle2Rpc3BsYXk6IG5vbmV9XV0+PC9zdHlsZT48ZyBjbGFzcz0iWm5KcFpXNWsiPjxnIGNsYXNzPSJzaGFwZSIgPjxyZWN0IHg9IjAuMDAwMDAwIiB5PSIwLjAwMDAwMCIgd2lkdGg9IjI2MC4wMDAwMDAiIGhlaWdodD0iMTMwLjAwMDAwMCIgc3Ryb2tlPSIjMEQzMkIyIiBmaWxsPSIjZmVmM2M3IiBjbGFzcz0iIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDoyOyIgLz48L2c+PHRleHQgeD0iMTMwLjAwMDAwMCIgeT0iNjEuMDAwMDAwIiBmaWxsPSIjMEEwRjI1IiBjbGFzcz0idGV4dC1ib2xkIGZpbGwtTjEiIHN0eWxlPSJ0ZXh0LWFuY2hvcjptaWRkbGU7Zm9udC1zaXplOjI4cHgiPjx0c3BhbiB4PSIxMzAuMDAwMDAwIiBkeT0iMC4wMDAwMDAiPkZyaWVuZDwvdHNwYW4+PHRzcGFuIHg9IjEzMC4wMDAwMDAiIGR5PSIzMi4wMDAwMDAiPkNoZW5uYWk8L3RzcGFuPjwvdGV4dD48L2c+PGcgY2xhc3M9IllXbHlkR1ZzIj48ZyBjbGFzcz0ic2hhcGUiID48cmVjdCB4PSI1NDIuMDAwMDAwIiB5PSIwLjAwMDAwMCIgd2lkdGg9IjI2MC4wMDAwMDAiIGhlaWdodD0iMTMwLjAwMDAwMCIgc3Ryb2tlPSIjMEQzMkIyIiBmaWxsPSIjZjhmYWZjIiBjbGFzcz0iIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDoyOyIgLz48L2c+PHRleHQgeD0iNjcyLjAwMDAwMCIgeT0iNjEuMDAwMDAwIiBmaWxsPSIjMEEwRjI1IiBjbGFzcz0idGV4dC1ib2xkIGZpbGwtTjEiIHN0eWxlPSJ0ZXh0LWFuY2hvcjptaWRkbGU7Zm9udC1zaXplOjI4cHgiPjx0c3BhbiB4PSI2NzIuMDAwMDAwIiBkeT0iMC4wMDAwMDAiPkFpcnRlbDwvdHNwYW4+PHRzcGFuIHg9IjY3Mi4wMDAwMDAiIGR5PSIzMi4wMDAwMDAiPk5ldHdvcms8L3RzcGFuPjwvdGV4dD48L2c+PGcgY2xhc3M9ImFXNTBiQT09Ij48ZyBjbGFzcz0ic2hhcGUiID48cmVjdCB4PSIxMDg0LjAwMDAwMCIgeT0iMC4wMDAwMDAiIHdpZHRoPSIyNjAuMDAwMDAwIiBoZWlnaHQ9IjEzMC4wMDAwMDAiIHN0cm9rZT0iIzBEMzJCMiIgZmlsbD0iI2UwZTdmZiIgY2xhc3M9IiBzdHJva2UtQjEiIHN0eWxlPSJzdHJva2Utd2lkdGg6MjsiIC8+PC9nPjx0ZXh0IHg9IjEyMTQuMDAwMDAwIiB5PSI2MS4wMDAwMDAiIGZpbGw9IiMwQTBGMjUiIGNsYXNzPSJ0ZXh0LWJvbGQgZmlsbC1OMSIgc3R5bGU9InRleHQtYW5jaG9yOm1pZGRsZTtmb250LXNpemU6MjhweCI+PHRzcGFuIHg9IjEyMTQuMDAwMDAwIiBkeT0iMC4wMDAwMDAiPlVuZGVyc2VhPC90c3Bhbj48dHNwYW4geD0iMTIxNC4wMDAwMDAiIGR5PSIzMi4wMDAwMDAiPkZpYmVyPC90c3Bhbj48L3RleHQ+PC9nPjxnIGNsYXNzPSJZMkZ5Y21sbGNnPT0iPjxnIGNsYXNzPSJzaGFwZSIgPjxyZWN0IHg9IjE2MjYuMDAwMDAwIiB5PSIwLjAwMDAwMCIgd2lkdGg9IjI2MC4wMDAwMDAiIGhlaWdodD0iMTMwLjAwMDAwMCIgc3Ryb2tlPSIjMEQzMkIyIiBmaWxsPSIjZjhmYWZjIiBjbGFzcz0iIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDoyOyIgLz48L2c+PHRleHQgeD0iMTc1Ni4wMDAwMDAiIHk9IjYxLjAwMDAwMCIgZmlsbD0iIzBBMEYyNSIgY2xhc3M9InRleHQtYm9sZCBmaWxsLU4xIiBzdHlsZT0idGV4dC1hbmNob3I6bWlkZGxlO2ZvbnQtc2l6ZToyOHB4Ij48dHNwYW4geD0iMTc1Ni4wMDAwMDAiIGR5PSIwLjAwMDAwMCI+WW91cjwvdHNwYW4+PHRzcGFuIHg9IjE3NTYuMDAwMDAwIiBkeT0iMzIuMDAwMDAwIj5DYXJyaWVyPC90c3Bhbj48L3RleHQ+PC9nPjxnIGNsYXNzPSJlVzkxIj48ZyBjbGFzcz0ic2hhcGUiID48cmVjdCB4PSIyMTY4LjAwMDAwMCIgeT0iMC4wMDAwMDAiIHdpZHRoPSIyNjAuMDAwMDAwIiBoZWlnaHQ9IjEzMC4wMDAwMDAiIHN0cm9rZT0iIzBEMzJCMiIgZmlsbD0iI2ZlZjNjNyIgY2xhc3M9IiBzdHJva2UtQjEiIHN0eWxlPSJzdHJva2Utd2lkdGg6MjsiIC8+PC9nPjx0ZXh0IHg9IjIyOTguMDAwMDAwIiB5PSI2MS4wMDAwMDAiIGZpbGw9IiMwQTBGMjUiIGNsYXNzPSJ0ZXh0LWJvbGQgZmlsbC1OMSIgc3R5bGU9InRleHQtYW5jaG9yOm1pZGRsZTtmb250LXNpemU6MjhweCI+PHRzcGFuIHg9IjIyOTguMDAwMDAwIiBkeT0iMC4wMDAwMDAiPllvdTwvdHNwYW4+PHRzcGFuIHg9IjIyOTguMDAwMDAwIiBkeT0iMzIuMDAwMDAwIj5EYWxsYXM8L3RzcGFuPjwvdGV4dD48L2c+PGcgY2xhc3M9IktHWnlhV1Z1WkNBdEptZDBPeUJoYVhKMFpXd3BXekJkIj48bWFya2VyIGlkPSJtay1kMi0xNDk0NjY5MTQzLTM1MTk2NjAxNzIiIG1hcmtlcldpZHRoPSIxNi4wMDAwMDAiIG1hcmtlckhlaWdodD0iMjAuMDAwMDAwIiByZWZYPSIxMC4wMDAwMDAiIHJlZlk9IjEwLjAwMDAwMCIgdmlld0JveD0iMC4wMDAwMDAgMC4wMDAwMDAgMTYuMDAwMDAwIDIwLjAwMDAwMCIgb3JpZW50PSJhdXRvIiBtYXJrZXJVbml0cz0idXNlclNwYWNlT25Vc2UiPiA8cG9seWdvbiBwb2ludHM9IjAuMDAwMDAwLDAuMDAwMDAwIDE2LjAwMDAwMCwxMC4wMDAwMDAgMC4wMDAwMDAsMjAuMDAwMDAwIiBmaWxsPSIjMEQzMkIyIiBjbGFzcz0iY29ubmVjdGlvbiBmaWxsLUIxIiBzdHJva2Utd2lkdGg9IjQiIC8+IDwvbWFya2VyPjxwYXRoIGQ9Ik0gMjYzLjAwMDAwMCA2NS4wMDAwMDAgQyAzNzIuNzk5OTg4IDY1LjAwMDAwMCA0MjkuMjAwMDEyIDY1LjAwMDAwMCA1MzUuMDAwMDAwIDY1LjAwMDAwMCIgc3Ryb2tlPSIjMEQzMkIyIiBmaWxsPSJub25lIiBjbGFzcz0iY29ubmVjdGlvbiBzdHJva2UtQjEiIHN0eWxlPSJzdHJva2Utd2lkdGg6NDsiIG1hcmtlci1lbmQ9InVybCgjbWstZDItMTQ5NDY2OTE0My0zNTE5NjYwMTcyKSIgbWFzaz0idXJsKCNkMi0xNDk0NjY5MTQzKSIgLz48dGV4dCB4PSI0MDEuNTAwMDAwIiB5PSI3My4wMDAwMDAiIGZpbGw9IiM2NzZDN0UiIGNsYXNzPSJ0ZXh0LWl0YWxpYyBmaWxsLU4yIiBzdHlsZT0idGV4dC1hbmNob3I6bWlkZGxlO2ZvbnQtc2l6ZToyMnB4Ij5jYWxsIGFjY2VwdGVkPC90ZXh0PjwvZz48ZyBjbGFzcz0iS0dGcGNuUmxiQ0F0Sm1kME95QnBiblJzS1Zzd1hRPT0iPjxwYXRoIGQ9Ik0gODA1LjAwMDAwMCA2NS4wMDAwMDAgQyA5MTQuNzk5OTg4IDY1LjAwMDAwMCA5NzEuMjAwMDEyIDY1LjAwMDAwMCAxMDc3LjAwMDAwMCA2NS4wMDAwMDAiIHN0cm9rZT0iIzBEMzJCMiIgZmlsbD0ibm9uZSIgY2xhc3M9ImNvbm5lY3Rpb24gc3Ryb2tlLUIxIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjQ7IiBtYXJrZXItZW5kPSJ1cmwoI21rLWQyLTE0OTQ2NjkxNDMtMzUxOTY2MDE3MikiIG1hc2s9InVybCgjZDItMTQ5NDY2OTE0MykiIC8+PHRleHQgeD0iOTQzLjUwMDAwMCIgeT0iNzMuMDAwMDAwIiBmaWxsPSIjNjc2QzdFIiBjbGFzcz0idGV4dC1pdGFsaWMgZmlsbC1OMiIgc3R5bGU9InRleHQtYW5jaG9yOm1pZGRsZTtmb250LXNpemU6MjJweCI+Y2FsbCBhY2NlcHRlZDwvdGV4dD48L2c+PGcgY2xhc3M9IktHbHVkR3dnTFNabmREc2dZMkZ5Y21sbGNpbGJNRjA9Ij48cGF0aCBkPSJNIDEzNDcuMDAwMDAwIDY1LjAwMDAwMCBDIDE0NTYuODAwMDQ5IDY1LjAwMDAwMCAxNTEzLjE5OTk1MSA2NS4wMDAwMDAgMTYxOS4wMDAwMDAgNjUuMDAwMDAwIiBzdHJva2U9IiMwRDMyQjIiIGZpbGw9Im5vbmUiIGNsYXNzPSJjb25uZWN0aW9uIHN0cm9rZS1CMSIgc3R5bGU9InN0cm9rZS13aWR0aDo0OyIgbWFya2VyLWVuZD0idXJsKCNtay1kMi0xNDk0NjY5MTQzLTM1MTk2NjAxNzIpIiBtYXNrPSJ1cmwoI2QyLTE0OTQ2NjkxNDMpIiAvPjx0ZXh0IHg9IjE0ODUuNTAwMDAwIiB5PSI3My4wMDAwMDAiIGZpbGw9IiM2NzZDN0UiIGNsYXNzPSJ0ZXh0LWl0YWxpYyBmaWxsLU4yIiBzdHlsZT0idGV4dC1hbmNob3I6bWlkZGxlO2ZvbnQtc2l6ZToyMnB4Ij5jYWxsIGFjY2VwdGVkPC90ZXh0PjwvZz48ZyBjbGFzcz0iS0dOaGNuSnBaWElnTFNabmREc2dlVzkxS1Zzd1hRPT0iPjxwYXRoIGQ9Ik0gMTg4OS4wMDAwMDAgNjUuMDAwMDAwIEMgMTk5OC44MDAwNDkgNjUuMDAwMDAwIDIwNTUuMTk4OTc1IDY1LjAwMDAwMCAyMTYxLjAwMDAwMCA2NS4wMDAwMDAiIHN0cm9rZT0iIzBEMzJCMiIgZmlsbD0ibm9uZSIgY2xhc3M9ImNvbm5lY3Rpb24gc3Ryb2tlLUIxIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjQ7IiBtYXJrZXItZW5kPSJ1cmwoI21rLWQyLTE0OTQ2NjkxNDMtMzUxOTY2MDE3MikiIG1hc2s9InVybCgjZDItMTQ5NDY2OTE0MykiIC8+PHRleHQgeD0iMjAyNy41MDAwMDAiIHk9IjczLjAwMDAwMCIgZmlsbD0iIzY3NkM3RSIgY2xhc3M9InRleHQtaXRhbGljIGZpbGwtTjIiIHN0eWxlPSJ0ZXh0LWFuY2hvcjptaWRkbGU7Zm9udC1zaXplOjIycHgiPmNhbGwgYWNjZXB0ZWQ8L3RleHQ+PC9nPjxtYXNrIGlkPSJkMi0xNDk0NjY5MTQzIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSItMTAxIiB5PSItMTAxIiB3aWR0aD0iMjYzMCIgaGVpZ2h0PSIzMzIiPgo8cmVjdCB4PSItMTAxIiB5PSItMTAxIiB3aWR0aD0iMjYzMCIgaGVpZ2h0PSIzMzIiIGZpbGw9IndoaXRlIj48L3JlY3Q+CjxyZWN0IHg9IjMzOS4wMDAwMDAiIHk9IjUxLjAwMDAwMCIgd2lkdGg9IjEyNSIgaGVpZ2h0PSIyOCIgZmlsbD0iYmxhY2siPjwvcmVjdD4KPHJlY3QgeD0iODgxLjAwMDAwMCIgeT0iNTEuMDAwMDAwIiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjI4IiBmaWxsPSJibGFjayI+PC9yZWN0Pgo8cmVjdCB4PSIxNDIzLjAwMDAwMCIgeT0iNTEuMDAwMDAwIiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjI4IiBmaWxsPSJibGFjayI+PC9yZWN0Pgo8cmVjdCB4PSIxOTY1LjAwMDAwMCIgeT0iNTEuMDAwMDAwIiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjI4IiBmaWxsPSJibGFjayI+PC9yZWN0Pgo8L21hc2s+PC9zdmc+PC9zdmc+Cg==" class="img-fluid"></p>
+</div>
+<p><strong>~200 ms</strong> from his tap to your phone hearing “call connected.”</p>
+</section>
+<section id="step-7-voice-transmission" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-voice-transmission">Step 7: Voice Transmission</h3>
+<p>Now the conversation flows. Each “Hello” makes the journey through several layers:</p>
+<ol type="1">
+<li>His microphone captures the sound.</li>
+<li>An ADC samples it 8,000 times per second.</li>
+<li>A voice codec compresses it to approximately 13 kbps.</li>
+<li>The signal is encrypted and error-corrected.</li>
+<li>It travels by radio to the Chennai tower.</li>
+<li>It travels by fiber to Airtel’s core network.</li>
+<li>It passes through undersea cables to the United States.</li>
+<li>It reaches your carrier and then your Dallas tower.</li>
+<li>It travels by radio to your phone.</li>
+<li>It is decoded, decrypted, and converted back to sound.</li>
+<li>Your speaker plays “Hello.”</li>
+</ol>
+<p>ADC stands for <strong>Analog-to-Digital Converter</strong>. Kbps means <strong>kilobits per second</strong>. The total delay is about <strong>150–250 milliseconds</strong> from his lips to your ear.</p>
+</section>
+<section id="why-is-this-so-fast" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-this-so-fast">Why Is This So Fast?</h3>
+<p>There are three main reasons:</p>
+<ol type="1">
+<li><strong>Light is incredibly fast.</strong> Even halfway around the planet, light through fiber takes only about 100 ms.</li>
+<li><strong>The route is pre-built.</strong> Cables, towers, and routing tables were established years ago. Your call does not find a path from scratch; it uses an existing path.</li>
+<li><strong>Both phones are already logged in.</strong> The network already knows which tower each phone is near, so connecting the call is a lookup problem, not a search problem.</li>
+</ol>
+<p>What was most surprising to me is the infrastructure, especially fiber optic cables under the ocean. Many carriers operate them, and they have peering agreements to route traffic across the world.</p>
+<p>The above discussion gives a system-level and network-level overview of how a mobile phone works. Next, we look at the phone from the bottom up, starting with the physical components and building our way up to the network.</p>
+</section>
+</section>
+<section id="a-bottom-up-view" class="level2">
+<h2 class="anchored" data-anchor-id="a-bottom-up-view">A Bottom-Up View</h2>
+<p>Now let’s flip the view. Let’s start at the very bottom, with electrons and transistors, and build our way up. This is how engineers actually think about a phone.</p>
+<p>To make this concrete, we’ll trace two examples all the way through:</p>
+<ol type="1">
+<li><strong>A Voice Call</strong> from Dallas to Chennai.</li>
+<li><strong>A Text Message</strong> to the same person.</li>
+</ol>
+<section id="example-1-calling-chennai" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-calling-chennai">Example 1: Calling Chennai</h3>
+<p>You’re in Dallas, dialing <strong>+91 98765 43210</strong> to reach your friend in Chennai. He picks up. You say “Hello.” He hears it. Let’s follow this all the way from the atoms to the cell tower, layer by layer.</p>
+<section id="layer-1-physics-your-voice-as-pressure-waves" class="level4">
+<h4 class="anchored" data-anchor-id="layer-1-physics-your-voice-as-pressure-waves">Layer 1: Physics, your voice as pressure waves</h4>
+<p>You speak the word “Hello.” Your vocal cords vibrate at roughly 100–250 Hz, pushing air molecules in tiny waves of pressure. These waves travel about 5 cm to the microphone hole on the bottom of the Nokia 3210.</p>
+<p>Inside that hole sits a <strong>MEMS microphone</strong>: a chip the size of a grain of rice with a thin silicon membrane suspended over a backplate. As pressure waves hit the membrane, it flexes inward and outward by a few nanometers. The gap between the membrane and the backplate forms a tiny capacitor whose capacitance changes with the flex. There are no bits yet. There’s just air, then a wiggling membrane, then a wiggling capacitance.</p>
+</section>
+<section id="layer-2-components-converting-wiggle-to-voltage" class="level4">
+<h4 class="anchored" data-anchor-id="layer-2-components-converting-wiggle-to-voltage">Layer 2: Components, converting wiggle to voltage</h4>
+<p>The MEMS microphone has a small built-in amplifier that converts the changing capacitance into a changing voltage. The voltage swings between about 0 and 1 volt, mirroring the pressure of the sound wave.</p>
+<p>This analog voltage flows along a PCB trace into the Unisoc T107’s audio input pin, where it meets an <strong>Analog-to-Digital Converter (ADC)</strong>.</p>
+<p>The ADC samples the voltage <strong>8,000 times per second</strong> and assigns each sample a number between 0 and 65,535 (a 16-bit value). This rate — 8 kHz, 16-bit — is the standard for telephone-grade voice. It’s enough to capture every vocal sound humans make, and not a hertz more. We’ve crossed the boundary. Sound is now numbers.</p>
+</section>
+<section id="layer-3-digital-logic-the-audio-stream" class="level4">
+<h4 class="anchored" data-anchor-id="layer-3-digital-logic-the-audio-stream">Layer 3: Digital logic, the audio stream</h4>
+<p>Eight thousand 16-bit samples per second is <strong>128 kbps</strong> of raw audio data. This is too much to transmit over a cellular channel, so the chip’s audio hardware passes the stream into a <strong>DSP</strong> (Digital Signal Processor) inside the same Unisoc T107 chip.</p>
+<p>The DSP is a special-purpose CPU built to do math on streams of numbers very fast. It runs the <strong>AMR codec</strong> (Adaptive Multi-Rate, the standard for GSM and early LTE voice). The codec analyzes the audio and:</p>
+<ul>
+<li>Models your vocal tract as a mathematical filter</li>
+<li>Throws away frequencies you don’t produce</li>
+<li>Encodes the residual as a compact stream of parameters</li>
+</ul>
+<p>After compression, the audio stream is down to about <strong>12.2 kbps</strong> — roughly a tenth of its raw size. The shape of “Hello” is now a sequence of numbers describing how to reconstruct it later.</p>
+</section>
+<section id="layer-4-cpu-and-protocol-stack" class="level4">
+<h4 class="anchored" data-anchor-id="layer-4-cpu-and-protocol-stack">Layer 4: CPU and protocol stack</h4>
+<p>The compressed audio enters the <strong>baseband processor</strong> — the same Unisoc T107, but a different functional block. The baseband runs a real-time operating system whose entire job is to speak the cellular protocol.</p>
+<p>The baseband does several things:</p>
+<ol type="1">
+<li><strong>Frames</strong> the audio into packets of the size the network expects.</li>
+<li><strong>Adds error-correction codes</strong> — extra bits that let the tower recover the data even if some bits get garbled in transit.</li>
+<li><strong>Encrypts</strong> the packets using the cipher key the SIM negotiated when the phone last authenticated.</li>
+<li><strong>Schedules</strong> the packets for transmission in your phone’s assigned time slot on the radio channel.</li>
+</ol>
+<p>Each step here is implemented in code running on a tiny CPU inside the modem block. The code was written and certified by Unisoc, locked in firmware, and never updated by the user.</p>
+</section>
+<section id="layer-5-radio-turning-bits-into-electromagnetic-waves" class="level4">
+<h4 class="anchored" data-anchor-id="layer-5-radio-turning-bits-into-electromagnetic-waves">Layer 5: Radio, turning bits into electromagnetic waves</h4>
+<p>The encrypted, error corrected packets head into the radio circuitry.</p>
+<p>A <strong>modulator</strong> takes the bit stream and maps it onto a carrier wave — a pure 1,800 MHz oscillation generated by a <strong>frequency synthesizer</strong>. The mapping is done using QAM (Quadrature Amplitude Modulation), where each combination of bits picks a specific amplitude and phase of the carrier.</p>
+<p>The modulated signal, still tiny, microvolt-level, passes through:</p>
+<ul>
+<li>A <strong>mixer</strong> that lifts it to the exact frequency of your assigned LTE band</li>
+<li>A <strong>filter</strong> that cleans out unwanted frequencies</li>
+<li>A <strong>power amplifier (PA)</strong> that boosts it from microwatts to about 200 milliwatts</li>
+<li>An <strong>antenna switch</strong> that routes it to the correct antenna for the band</li>
+<li>The <strong>antenna</strong> itself, a printed metal trace on the PCB, tuned to about 4 cm length for 1,800 MHz</li>
+</ul>
+<p>The antenna radiates the signal as electromagnetic waves into the air. About 200 milliwatts of radio power launches into all directions at the speed of light.</p>
+</section>
+<section id="layer-6-the-cell-tower" class="level4">
+<h4 class="anchored" data-anchor-id="layer-6-the-cell-tower">Layer 6: The cell tower</h4>
+<p>A few hundred meters to a few kilometers away, a cell tower’s antenna receives the wave. The tower’s electronics reverse everything your phone just did: amplify, filter, mix down, demodulate, decrypt the outer transport layer. Your audio packets are now sitting inside your carrier’s network as digital data. From here, they travel as pure information, never as sound again, until they reach Chennai.</p>
+</section>
+<section id="layer-7-the-journey-through-the-network" class="level4">
+<h4 class="anchored" data-anchor-id="layer-7-the-journey-through-the-network">Layer 7: The journey through the network</h4>
+<p>Your packets travel from the Dallas tower through your carrier’s fiber to a switching center, then to an international gateway in (say) New York, then onto an undersea fiber optic cable. In the fiber, your “Hello” is now <strong>patterns of laser light</strong> flickering through a glass thread on the ocean floor. The light pulses travel at roughly 200,000 km per second through the glass, hop through repeaters and undersea amplifiers, and arrive in Mumbai about 100–150 milliseconds after they left Dallas.</p>
+<p>From Mumbai the data flows on terrestrial fiber to Chennai, into Airtel’s switching center, then to the cell tower in T. Nagar that your friend’s phone last registered with.</p>
+</section>
+<section id="layer-8-his-phone-in-reverse" class="level4">
+<h4 class="anchored" data-anchor-id="layer-8-his-phone-in-reverse">Layer 8: His phone, in reverse</h4>
+<p>The Chennai tower transmits a radio signal to your friend’s phone. From here, every layer happens <em>in reverse</em>:</p>
+<ul>
+<li>Antenna receives the wave</li>
+<li>Low-Noise Amplifier (LNA) boosts the tiny signal without adding noise</li>
+<li>Mixer drops it back to baseband frequency</li>
+<li>Demodulator turns the wave into bits</li>
+<li>Modem decrypts and error-corrects</li>
+<li>DSP runs the AMR codec in <strong>decode</strong> mode, reconstructing audio samples</li>
+<li>DAC (Digital-to-Analog Converter) turns the samples back into a voltage waveform</li>
+<li>A small speaker amplifier drives the earpiece speaker</li>
+<li>The speaker membrane vibrates, pushing air molecules</li>
+<li>Air pressure waves hit his eardrum</li>
+<li>He hears “Hello”</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/voicelayer.png" class="img-fluid figure-img" alt="The voice call layer stack."></p>
+<figcaption>the voice call layer stack</figcaption>
+</figure>
+</div>
+<p>Total elapsed time from your lips to his ear: <strong>about 150–250 milliseconds</strong>.</p>
+<p>The remarkable thing is how <em>real-time</em> this is. Every layer must keep up with every other layer. If the codec falls behind, the audio buffers underrun and you hear gaps. If the modem misses a transmission slot, packets get lost. If the network adds too much latency, the conversation feels awkward and you start talking over each other. The whole stack runs in lockstep, continuously, for the duration of the call.</p>
+</section>
+</section>
+<section id="example-2-texting-chennai" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-texting-chennai">Example 2: Texting Chennai</h3>
+<p>Now let’s do the same trip with a text message: you type <strong>“Hello”</strong> in the Messages app and send it to <strong>+91 98765 43210</strong>. Same destination, same person. But everything below the surface is different.</p>
+<section id="layer-1-physics-your-finger-on-a-key" class="level4">
+<h4 class="anchored" data-anchor-id="layer-1-physics-your-finger-on-a-key">Layer 1: Physics, your finger on a key</h4>
+<p>You press the “4” key on the keypad to start typing. This physically closes a contact, allowing electrons to flow through the closed circuit. No sound. No microphone. Just a switch closing.</p>
+</section>
+<section id="layer-2-components-keypad-matrix-scan" class="level4">
+<h4 class="anchored" data-anchor-id="layer-2-components-keypad-matrix-scan">Layer 2: Components, keypad matrix scan</h4>
+<p>The Unisoc T107 is constantly scanning the keypad matrix, driving voltage onto rows and reading columns. When you press “4,” the chip detects voltage on the row/column intersection that corresponds to that key. A GPIO interrupt fires. The chip records: <em>key code for “4” pressed.</em></p>
+</section>
+<section id="layer-3-digital-logic-input-event" class="level4">
+<h4 class="anchored" data-anchor-id="layer-3-digital-logic-input-event">Layer 3: Digital logic, input event</h4>
+<p>The keypad driver writes the keycode (<code>0x34</code> for ASCII “4”) into a register. An interrupt handler in the firmware picks it up and places it into the kernel’s input event queue. In text-mode T9 input, the “4” key represents the letters “g, h, i.” Pressing “4” twice means “h.” A short keypress sequence (4-3-5-5-5-6) becomes the word “Hello.” The keystroke history is buffered. The Messages app maintains a string in RAM. After your final keypress, the string in memory contains the five characters: H, e, l, l, o.</p>
+</section>
+<section id="layer-4-cpu-and-the-application" class="level4">
+<h4 class="anchored" data-anchor-id="layer-4-cpu-and-the-application">Layer 4: CPU and the application</h4>
+<p>The Messages app runs on top of Series 30+ on the CPU. When you press “Send,” the app:</p>
+<ol type="1">
+<li>Reads the destination number from the input field (<code>+91 98765 43210</code>)</li>
+<li>Reads the message body from its string buffer (<code>"Hello"</code>)</li>
+<li>Packages them into an <strong>SMS PDU (Protocol Data Unit)</strong> — a structured byte sequence defined in the GSM standard (3GPP TS 23.040)</li>
+<li>Hands the PDU to the modem via an internal API</li>
+</ol>
+<p>An SMS PDU has a precise format. For “Hello” sent to +91 98765 43210, the bytes look something like:</p>
+<pre><code>07 91 21 43 65 87 09 F2 11 00 0B 91 98 76 54 32 10 F0 00 00 05 48 65 6C 6C 6F</code></pre>
+<p>That’s the entire message: protocol header, recipient number (in a packed format called <em>semi-octets</em>, where digit pairs are nibble-swapped), message length, encoding flag, and the five characters of “Hello” in their ASCII bytes (<code>48 65 6C 6C 6F</code>).</p>
+<p>The total: 26 bytes. The whole text message is <strong>208 bits</strong>.</p>
+</section>
+<section id="layer-5-the-modem-and-the-radio-path" class="level4">
+<h4 class="anchored" data-anchor-id="layer-5-the-modem-and-the-radio-path">Layer 5: The modem and the radio path</h4>
+<p>Here’s where the SMS path <em>diverges</em> from the voice path in an important way. A voice call requires a <strong>dedicated channel</strong> your phone is allocated a continuous slot of radio time for the duration of the call. SMS, by contrast, hitches a ride on the <strong>signaling channel</strong> the same low-bandwidth control channel that the network uses for paging messages, registration, and tower handoffs.</p>
+<p>The SMS PDU is small enough to fit in a few signaling messages. The modem:</p>
+<ol type="1">
+<li>Wraps the PDU in a <strong>CP-DATA</strong> message (Control Plane Data, the SMS-specific signaling protocol)</li>
+<li>Encrypts it</li>
+<li>Transmits it during the next signaling slot</li>
+</ol>
+<p>This happens in a single brief radio burst, maybe 100 milliseconds total of radio activity, and then the radio goes back to sleep. There’s no continuous stream like voice. SMS is a <em>fire and forget</em> burst. This is also why SMS works in places voice doesn’t. If signal is so weak that voice would drop out, SMS might still get through, because the signaling channel is more aggressively error-corrected and a single retry is cheap.</p>
+</section>
+<section id="layer-6-the-smsc-a-fundamental-difference-from-voice" class="level4">
+<h4 class="anchored" data-anchor-id="layer-6-the-smsc-a-fundamental-difference-from-voice">Layer 6: The SMSC, a fundamental difference from voice</h4>
+<p>Your text doesn’t go directly to your friend’s phone. It first goes to a <strong>Short Message Service Center (SMSC)</strong>, a server inside your carrier’s network whose job is to <em>store and forward</em> SMS messages.</p>
+<p>This is the most important difference between SMS and voice:</p>
+<ul>
+<li><strong>Voice</strong> is a <strong>live circuit</strong>. If your friend’s phone is off, the call fails.</li>
+<li><strong>SMS</strong> is <strong>store and forward</strong>. If your friend’s phone is off, the SMSC holds the message and tries to deliver it later.</li>
+</ul>
+<p>The SMSC accepts your “Hello,” acknowledges receipt to your phone (this is what triggers the “delivered” confirmation), and queues the message for delivery to Airtel’s network in India.</p>
+</section>
+<section id="layer-7-the-journey-across-the-world" class="level4">
+<h4 class="anchored" data-anchor-id="layer-7-the-journey-across-the-world">Layer 7: The journey across the world</h4>
+<p>The SMS travels from your carrier’s SMSC to Airtel’s SMSC via international signaling links. Historically these used a protocol called <strong>SS7</strong> (Signaling System 7), the same system that handles call setup, roaming, and number lookups across the global telephone network. Modern networks increasingly use <strong>Diameter</strong> (the IP-based replacement) and various IP-based interconnects. Either way, the payload is <em>tiny</em> compared to a voice stream. A voice call sends ~12 kbps continuously for minutes. An SMS sends 26 bytes once. The infrastructure cost of an SMS is, almost literally, nothing.</p>
+<p>The undersea cable journey is the same as before, packets flow through fiber, hop through routers, arrive in Mumbai or Chennai. Total travel time: a few hundred milliseconds.</p>
+</section>
+<section id="layer-8-delivery-to-your-friends-phone" class="level4">
+<h4 class="anchored" data-anchor-id="layer-8-delivery-to-your-friends-phone">Layer 8: Delivery to your friend’s phone</h4>
+<p>Airtel’s SMSC receives the message and looks up subscriber <code>+91 98765 43210</code>.</p>
+<p>Two cases:</p>
+<p><strong>If his phone is online:</strong> Airtel’s SMSC sends a paging message to the cell tower his phone last registered with. The tower paging message says: <em>“Phone 98765-43210, you have an SMS waiting.”</em> His phone, listening to the signaling channel during its periodic wake-ups, hears its ID and acknowledges. The SMSC then transmits the actual PDU to the phone over the same signaling channel.</p>
+<p><strong>If his phone is offline:</strong> the SMSC holds the message. When his phone next registers with the network (for example, when he turns it back on), the SMSC delivers the queued messages.</p>
+</section>
+<section id="layer-9-his-phone-reconstructs-the-text" class="level4">
+<h4 class="anchored" data-anchor-id="layer-9-his-phone-reconstructs-the-text">Layer 9: His phone reconstructs the text</h4>
+<p>His Nokia 3210 receives the PDU, decrypts it, and hands it to the SMS subsystem. The SMS subsystem:</p>
+<ol type="1">
+<li>Parses the PDU header to extract sender, timestamp, and encoding</li>
+<li>Decodes the payload bytes (<code>48 65 6C 6C 6F</code>) back into the characters H, e, l, l, o</li>
+<li>Stores the message in the phone’s SMS database (in flash memory)</li>
+<li>Triggers a notification — the screen lights up, a tone plays, the inbox icon updates</li>
+<li>The Messages app, when opened, fetches the message from the database and renders it on the LCD</li>
+</ol>
+<p>He sees “Hello” on his screen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/smslayer.png" class="img-fluid figure-img" alt="SMS layer."></p>
+<figcaption>SMS layer - How it works?</figcaption>
+</figure>
+</div>
+<p>Total time from your “send” tap to his screen lighting up: <strong>typically 1–5 seconds</strong>, sometimes longer if the SMSC is busy or his phone is briefly offline.</p>
+</section>
+</section>
+<section id="comparing-the-two-journeys" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-the-two-journeys">Comparing the two journeys</h3>
+<table class="comparison-table">
+<thead>
+<tr>
+<th class="aspect">
+Aspect
+</th>
+<th class="voice">
+Voice call
+</th>
+<th class="sms">
+SMS
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="aspect">
+Real-time?
+</td>
+<td class="voice">
+Yes, continuous
+</td>
+<td class="sms">
+No, bursty
+</td>
+</tr>
+<tr>
+<td class="aspect">
+Bandwidth
+</td>
+<td class="voice">
+~12 kbps continuous
+</td>
+<td class="sms">
+208 bits, once
+</td>
+</tr>
+<tr>
+<td class="aspect">
+Radio active
+</td>
+<td class="voice">
+For entire call
+</td>
+<td class="sms">
+~100 ms total
+</td>
+</tr>
+<tr>
+<td class="aspect">
+Network resource
+</td>
+<td class="voice">
+Dedicated voice channel
+</td>
+<td class="sms">
+Signaling channel
+</td>
+</tr>
+<tr>
+<td class="aspect">
+If recipient is offline
+</td>
+<td class="voice">
+Call fails
+</td>
+<td class="sms">
+Stored and delivered later
+</td>
+</tr>
+<tr>
+<td class="aspect">
+Latency tolerance
+</td>
+<td class="voice">
+Must be under ~300 ms
+</td>
+<td class="sms">
+Can take seconds or minutes
+</td>
+</tr>
+<tr>
+<td class="aspect">
+Encoding
+</td>
+<td class="voice">
+AMR voice codec
+</td>
+<td class="sms">
+ASCII / GSM 7-bit
+</td>
+</tr>
+<tr>
+<td class="aspect">
+Power cost on phone
+</td>
+<td class="voice">
+High — radio at full power
+</td>
+<td class="sms">
+Tiny — one short burst
+</td>
+</tr>
+<tr>
+<td class="aspect">
+Per-message cost to carrier
+</td>
+<td class="voice">
+Significant (continuous bandwidth)
+</td>
+<td class="sms">
+Nearly zero
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="protocol-stack-view" class="level2">
+<h2 class="anchored" data-anchor-id="protocol-stack-view">Protocol Stack View</h2>
+<p>So far, we saw the phone from the bottom up: sound becomes voltage, voltage becomes bits, bits become radio waves, and radio waves enter the cellular network.</p>
+<p>Now we need a second view: the <strong>protocol stack view</strong>.</p>
+<p>A protocol stack explains the rules followed by each layer. The phone is not simply throwing bits into the air. Every message is formatted, timed, corrected, encrypted, routed, and decoded.</p>
+</section>
+<section id="general-communication-flow" class="level2 stack-flow">
+<h2 class="anchored" data-anchor-id="general-communication-flow">General Communication Flow</h2>
+<div class="flow-step">
+<strong>1. Human action</strong><span>You speak, type, tap, or request something.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>2. Application request</strong><span>The dialer, messages app, or browser creates a request.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>3. Service protocol</strong><span>The phone decides whether this is voice, SMS, or internet data.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>4. Encoding</strong><span>Speech, text, or data is converted into digital form.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>5. Authentication and encryption</strong><span>The SIM and network verify identity and secure the transmission.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>6. Radio control</strong><span>The modem manages tower connection, timing, and channel use.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>7. Reliable bit transfer</strong><span>The data is framed, checked, corrected, and retransmitted if needed.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>8. Physical radio waves</strong><span>The RF hardware turns bits into electromagnetic waves.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>9. Carrier network</strong><span>The tower and carrier core route the information.</span>
+</div>
+<div class="flow-arrow">
+↓
+</div>
+<div class="flow-step">
+<strong>10. Destination device or server</strong><span>The other phone or internet server receives and responds.</span>
+</div>
+</section>
+<p>The same phone can make a voice call, send an SMS, or open a website. These feel different to the user, but all of them pass through layered systems.</p>
+<div class="three-card-grid">
+<section id="voice-call" class="level3 tech-card">
+<h3 class="anchored" data-anchor-id="voice-call">Voice Call</h3>
+<p><strong>Type:</strong> Real-time stream<br>
+<strong>Delay tolerance:</strong> Very low<br>
+<strong>Network behavior:</strong> Live connection<br>
+<strong>Main network node:</strong> Switching center or IMS<br>
+<strong>If receiver is offline:</strong> Call fails<br>
+<strong>Power use:</strong> High during call</p>
+<p>A voice call must keep moving continuously. If packets arrive too late, the conversation feels broken.</p>
+</section>
+<section id="sms" class="level3 tech-card">
+<h3 class="anchored" data-anchor-id="sms">SMS</h3>
+<p><strong>Type:</strong> Short stored message<br>
+<strong>Delay tolerance:</strong> Seconds or minutes are acceptable<br>
+<strong>Network behavior:</strong> Store and forward<br>
+<strong>Main network node:</strong> SMSC<br>
+<strong>If receiver is offline:</strong> Message waits<br>
+<strong>Power use:</strong> Low, short radio burst</p>
+<p>SMS is not a live conversation. The carrier can store the message and deliver it later.</p>
+</section>
+<section id="internet-data" class="level3 tech-card">
+<h3 class="anchored" data-anchor-id="internet-data">Internet Data</h3>
+<p><strong>Type:</strong> Packet-based data<br>
+<strong>Delay tolerance:</strong> Depends on the app<br>
+<strong>Network behavior:</strong> Request and response<br>
+<strong>Main network node:</strong> Packet core<br>
+<strong>If receiver/server is unavailable:</strong> Request fails or retries<br>
+<strong>Power use:</strong> Variable</p>
+<p>Internet data breaks information into packets. Web pages, apps, and videos all use this packet-based model.</p>
+</section>
+</div>
+<p>The important lesson is that the phone is a layered communication machine. The user sees a simple action, but underneath it the device performs encoding, authentication, radio scheduling, error correction, routing, and decoding.</p>
+<section id="viewing-the-phone-as-an-engineering-system" class="level2">
+<h2 class="anchored" data-anchor-id="viewing-the-phone-as-an-engineering-system">Viewing the Phone as an Engineering System</h2>
+<p>A mobile phone can be understood in many ways. A user sees a screen, buttons, apps, calls, messages, and battery life. But an engineer sees a system made of several interacting subsystems.</p>
+<p>The phone is not one machine doing one job. It is a computer, a radio, a modem, a timing device, a power-management system, and an identity/authentication device, all working together with the carrier network.</p>
+<p>So in this section, we will look at the phone through a few engineering views:</p>
+<ul>
+<li>the system architecture view</li>
+<li>the signal path view</li>
+<li>the control path view</li>
+<li>the RF front-end view</li>
+<li>the network generation view</li>
+<li>the timing view</li>
+<li>the power-management view</li>
+</ul>
+<p>Each view answers a different engineering question. It is a collection of specialized subsystems.</p>
+<p>At the highest level, the phone can be seen as a chain of subsystems.</p>
+<pre class="text"><code>User interface
+   ↓
+Application processor or phone firmware
+   ↓
+Baseband processor / modem
+   ↓
+RF transceiver
+   ↓
+Power amplifier, filters, antenna switch
+   ↓
+Antenna
+   ↓
+Cell tower</code></pre>
+<p><strong>Signal path:</strong> The signal path shows how information moves from the user to the network.</p>
+<pre class="text"><code>Voice / SMS / data → modem → radio → antenna → tower</code></pre>
+<p><strong>Control path:</strong> A phone is not only sending and receiving information. It is also constantly coordinating with the network. This is the control path.</p>
+<pre class="text"><code>SIM identity → authentication → tower selection → timing → power control → handover</code></pre>
+<p><strong>RF Front End View:</strong> The RF front end is the part of the phone that handles radio-frequency transmission and reception. During transmission, the path looks like this.</p>
+<pre class="text"><code>Baseband bits
+   ↓
+RF transceiver
+   ↓
+Filter
+   ↓
+Power amplifier
+   ↓
+Antenna switch
+   ↓
+Antenna
+   ↓
+Radio waves</code></pre>
+<p>The baseband processor creates the digital signal, The RF transceiver converts it into a radio-frequency signal. Filters remove unwanted frequencies. The power amplifier increases the signal strength. The antenna switch routes the signal to the correct antenna path. Then the antenna radiates the signal as electromagnetic waves.</p>
+<p>On the receiving end, the path is reversed:</p>
+<pre class="text"><code>Radio waves
+   ↓
+Antenna
+   ↓
+Antenna switch
+   ↓
+Low-noise amplifier
+   ↓
+Filter
+   ↓
+RF transceiver
+   ↓
+Baseband processor</code></pre>
+<p>The low-noise amplifier is important because the signal received from the tower can be extremely weak. The phone has to amplify it without adding too much noise. This is why a phone PCB has many small RF components near the antenna area: filters, amplifiers, switches, matching networks, and shielded RF sections.</p>
+<p><strong>Network Generation View:</strong></p>
+<p>Different mobile network generations changed what the phone had to do.</p>
+<p>2G / GSM → voice and SMS were central 3G → better data and mobile internet 4G / LTE → packet-based internet architecture VoLTE → voice becomes IP-based voice 5G → higher speed, lower latency, more flexible network design</p>
+<p>In 2G phones, voice and SMS were the main functions. In 3G, mobile internet became more important. In 4G LTE, the network became more like an all-IP data network. Voice over LTE, or VoLTE, sends voice as packet data instead of using the older circuit-switched voice model. In 5G, the network is designed for higher bandwidth, lower latency, and more flexible use cases. So when we compare phones from different generations, we are not only comparing speed. We are comparing different communication architectures.</p>
+</section>
+<section id="frequency-bands-and-duplexing" class="level2">
+<h2 class="anchored" data-anchor-id="frequency-bands-and-duplexing">Frequency Bands and Duplexing</h2>
+<p>We said the phone transmits at 1,800 MHz, but skipped a real problem: during a call, the phone transmits and receives <strong>simultaneously</strong>. If both used the same frequency, the phone’s 200 mW transmitter would drown out the microwatt signal from the tower, like hearing a whisper while shouting.</p>
+<p>Two solutions:</p>
+<table class="comparison-table">
+<thead>
+<tr>
+<th class="aspect">
+Method
+</th>
+<th class="voice">
+How it works
+</th>
+<th class="sms">
+Used in
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="aspect">
+<strong>FDD</strong> (Frequency Division Duplex)
+</td>
+<td class="voice">
+Transmit and receive on different frequencies, simultaneously. Typically 45–95 MHz apart.
+</td>
+<td class="sms">
+GSM, most LTE
+</td>
+</tr>
+<tr>
+<td class="aspect">
+<strong>TDD</strong> (Time Division Duplex)
+</td>
+<td class="voice">
+One frequency, taking turns in time slots.
+</td>
+<td class="sms">
+Many 5G bands, Wi-Fi
+</td>
+</tr>
+</tbody>
+</table>
+<p>This is why phones list paired frequencies per band. <strong>LTE Band 3</strong> uses 1,710–1,785 MHz uplink and 1,805–1,880 MHz downlink. The 95 MHz gap lets a <strong>duplexer</strong> (a sharp filter) isolate the two directions — and it’s why we’ll see separate filters per band on the PCB.</p>
+</section>
+<section id="the-clock-tcxo" class="level2">
+<h2 class="anchored" data-anchor-id="the-clock-tcxo">The Clock: TCXO</h2>
+<p>Cellular communication depends on timing. The phone and the tower must stay synchronized. If the phone transmits too early or too late, its signal may interfere with other users or miss its assigned time slot. A regular quartz crystal can drift with temperature. A phone may be used in a hot car, a cold pocket, or under heavy processor load. Temperature changes can slightly change the clock frequency. To solve this, phones use a <strong>TCXO</strong>, or <strong>Temperature-Compensated Crystal Oscillator</strong>. A TCXO is a quartz crystal combined with compensation circuitry. It adjusts for temperature changes and provides a stable reference clock for the modem and RF system. On the PCB, the TCXO is usually a small metal-cased component near the modem or RF section. Without a stable clock, the phone cannot reliably maintain synchronization with the cellular network. Timing, frequency accuracy, tower communication, and handover all depend on this reference.</p>
+</section>
+<section id="power-path-and-the-pmic" class="level2">
+<h2 class="anchored" data-anchor-id="power-path-and-the-pmic">Power Path and the PMIC</h2>
+<p>A mobile phone usually runs from one lithium-ion battery cell, around <strong>3.7 V</strong> nominal. But the circuits inside the phone need many different voltages.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Typical voltage need</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Application processor core</td>
+<td>~0.8 V</td>
+</tr>
+<tr class="even">
+<td>Modem</td>
+<td>~1.1 V</td>
+</tr>
+<tr class="odd">
+<td>Memory</td>
+<td>1.2 V or 1.8 V</td>
+</tr>
+<tr class="even">
+<td>Display backlight</td>
+<td>5–20 V</td>
+</tr>
+<tr class="odd">
+<td>RF power amplifier</td>
+<td>~3.4 V during transmit bursts</td>
+</tr>
+<tr class="even">
+<td>SIM card</td>
+<td>1.8 V or 3 V</td>
+</tr>
+</tbody>
+</table>
+<p>The chip that manages these power rails is the <strong>PMIC</strong>, or <strong>Power Management Integrated Circuit</strong>.</p>
+<p>The PMIC takes energy from the battery and generates the different voltages needed by the phone. It contains switching regulators, linear regulators, battery charging circuits, monitoring circuits, and sequencing logic.</p>
+<p>The PMIC handles several important jobs:</p>
+<ul>
+<li><p><strong>Battery charging</strong><br>
+It controls the charging current and voltage safely.</p></li>
+<li><p><strong>Battery monitoring</strong><br>
+It tracks voltage, current, and temperature to estimate battery capacity.</p></li>
+<li><p><strong>Power sequencing</strong><br>
+It turns different voltage rails on and off in the correct order during startup and shutdown.</p></li>
+<li><p><strong>Sleep states</strong><br>
+It shuts down unused circuits when the phone is idle to save power.</p></li>
+<li><p><strong>Transmit power support</strong><br>
+It helps provide short bursts of current when the RF power amplifier transmits.</p></li>
+</ul>
+<p>Good battery life is not only about having a large battery. It also depends on efficient power regulation, careful sleep-state control, and software that knows when to turn off unused parts of the phone. So the PMIC is one of the most important chips on the phone PCB. Without it, the phone cannot safely and efficiently power its processor, modem, memory, display, SIM card, and RF circuits.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>A mobile phone looks simple from the outside, but internally it is a layered communication machine. A voice call begins as pressure waves in air, becomes voltage, becomes digital samples, becomes compressed packets, becomes radio waves, becomes light pulses in fiber, and finally becomes sound again in another person’s ear. SMS follows a different path. It is not a live stream, but a short stored message that travels through signaling channels and SMS centers.</p>
+<p>The important lesson is that a phone is a combination of computing, radio engineering, signal processing, power management, software, cryptography, and telecom infrastructure.</p>
+<p>In the future post, I will move from the system-level explanation to the physical device itself. I will use a Nokia-style feature phone teardown to identify the battery, PCB, processor, modem, PMIC, RF front end, antenna, keypad, display, speaker, microphone, SIM interface, and other subsystems.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ludwigwittgenstein2\.github\.io\/Tamil\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
