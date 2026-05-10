@@ -1071,8 +1071,9 @@ This is why phones list paired frequencies per band. **LTE Band 3** uses 1,710â€
 
 ## The Clock: TCXO
 
-Cellular communication depends on timing.
-The phone and the tower must stay synchronized. If the phone transmits too early or too late, its signal may interfere with other users or miss its assigned time slot. A regular quartz crystal can drift with temperature. A phone may be used in a hot car, a cold pocket, or under heavy processor load. Temperature changes can slightly change the clock frequency. To solve this, phones use a **TCXO**, or **Temperature-Compensated Crystal Oscillator**. A TCXO is a quartz crystal combined with compensation circuitry. It adjusts for temperature changes and provides a stable reference clock for the modem and RF system. On the PCB, the TCXO is usually a small metal-cased component near the modem or RF section. Without a stable clock, the phone cannot reliably maintain synchronization with the cellular network. Timing, frequency accuracy, tower communication, and handover all depend on this reference.
+Cellular communication depends on timing.The phone and the tower must stay synchronized. If the phone transmits too early or too late, its signal may interfere with other users or miss its assigned time slot. A regular quartz crystal can drift with temperature. A phone may be used in a hot car, a cold pocket, or under heavy processor load. Temperature changes can slightly change the clock frequency. 
+
+To solve this, phones use a **TCXO**, or **Temperature-Compensated Crystal Oscillator**. A TCXO is a quartz crystal combined with compensation circuitry. It adjusts for temperature changes and provides a stable reference clock for the modem and RF system. On the PCB, the TCXO is usually a small metal-cased component near the modem or RF section. Without a stable clock, the phone cannot reliably maintain synchronization with the cellular network. Timing, frequency accuracy, tower communication, and handover all depend on this reference.
 
 
 ## Power Path and the PMIC
