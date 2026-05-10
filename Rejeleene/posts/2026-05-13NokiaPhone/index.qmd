@@ -192,7 +192,7 @@ Carrier side:  Ki + RAND → expected SRES
 
 If SRES matches expected SRES:
     accept the phone
-  ```
+```
 
 ### LTE and 5G
 
@@ -648,7 +648,7 @@ The modulated signal, still tiny, microvolt-level, passes through:
 - A **filter** that cleans out unwanted frequencies
 - A **power amplifier (PA)** that boosts it from microwatts to about 200 milliwatts
 - An **antenna switch** that routes it to the correct antenna for the band
-- The **antenna** itself — a printed metal trace on the PCB, tuned to about 4 cm length for 1,800 MHz
+- The **antenna** itself, a printed metal trace on the PCB, tuned to about 4 cm length for 1,800 MHz
 
 The antenna radiates the signal as electromagnetic waves into the air. 
 About 200 milliwatts of radio power launches into all directions at the speed of light.
@@ -681,59 +681,6 @@ From here, every layer happens *in reverse*:
 - He hears "Hello"
 
 ![the voice call layer stack](/images/mobilephone/voicelayer.png){fig-alt="The voice call layer stack."}
-
-#### The whole journey
-<table class="comparison-table">
-  <thead>
-    <tr>
-      <th class="aspect">Layer</th>
-      <th class="voice">What's moving</th>
-      <th class="sms">Form</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="aspect">1. Vocal cords</td>
-      <td class="voice">Air pressure</td>
-      <td class="sms">Sound waves in your room</td>
-    </tr>
-    <tr>
-      <td class="aspect">2. Microphone</td>
-      <td class="voice">Voltage</td>
-      <td class="sms">Analog electrical signal</td>
-    </tr>
-    <tr>
-      <td class="aspect">3. ADC</td>
-      <td class="voice">Numbers</td>
-      <td class="sms">128 kbps digital stream</td>
-    </tr>
-    <tr>
-      <td class="aspect">4. Codec</td>
-      <td class="voice">Compressed numbers</td>
-      <td class="sms">12.2 kbps encoded stream</td>
-    </tr>
-    <tr>
-      <td class="aspect">5. Modem</td>
-      <td class="voice">Packets</td>
-      <td class="sms">Encrypted, framed bits</td>
-    </tr>
-    <tr>
-      <td class="aspect">6. Radio</td>
-      <td class="voice">Electromagnetic waves</td>
-      <td class="sms">1,800 MHz signal in the air</td>
-    </tr>
-    <tr>
-      <td class="aspect">7. Fiber backbone</td>
-      <td class="voice">Photons</td>
-      <td class="sms">Light pulses in glass</td>
-    </tr>
-    <tr>
-      <td class="aspect">8. His phone</td>
-      <td class="voice">All of the above, reversed</td>
-      <td class="sms">Sound in his ear</td>
-    </tr>
-  </tbody>
-</table>
 
 Total elapsed time from your lips to his ear: **about 150–250 milliseconds**.
 
@@ -781,7 +728,7 @@ The total: 26 bytes. The whole text message is **208 bits**.
 #### Layer 5: The modem and the radio path
 
 Here's where the SMS path *diverges* from the voice path in an important way.
-A voice call requires a **dedicated channel** — your phone is allocated a continuous slot of radio time for the duration of the call. SMS, by contrast, hitches a ride on the **signaling channel** — the same low-bandwidth control channel that the network uses for paging messages, registration, and tower handoffs.
+A voice call requires a **dedicated channel** your phone is allocated a continuous slot of radio time for the duration of the call. SMS, by contrast, hitches a ride on the **signaling channel** the same low-bandwidth control channel that the network uses for paging messages, registration, and tower handoffs.
 
 The SMS PDU is small enough to fit in a few signaling messages. The modem:
 
@@ -789,7 +736,7 @@ The SMS PDU is small enough to fit in a few signaling messages. The modem:
 2. Encrypts it
 3. Transmits it during the next signaling slot
 
-This happens in a single brief radio burst — maybe 100 milliseconds total of radio activity — and then the radio goes back to sleep. 
+This happens in a single brief radio burst, maybe 100 milliseconds total of radio activity, and then the radio goes back to sleep. 
 There's no continuous stream like voice. SMS is a *fire and forget* burst. This is also why SMS works in places voice doesn't. If signal is so weak that voice would drop out, SMS might still get through, because the signaling channel is more aggressively error-corrected and a single retry is cheap.
 
 #### Layer 6: The SMSC, a fundamental difference from voice
@@ -832,66 +779,7 @@ His Nokia 3210 receives the PDU, decrypts it, and hands it to the SMS subsystem.
 
 He sees "Hello" on his screen.
 
-![Whole journey from Bottom up view](/images/mobilephone/wholejourney.png){fig-alt="The whole journey from bottom up view."}
-
-#### The whole journey
-
-<table class="comparison-table">
-  <thead>
-    <tr>
-      <th class="aspect">Layer</th>
-      <th class="voice">What's moving</th>
-      <th class="sms">Form</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="aspect">1. Finger</td>
-      <td class="voice">Mechanical force</td>
-      <td class="sms">Two metal contacts touching</td>
-    </tr>
-    <tr>
-      <td class="aspect">2. Keypad matrix</td>
-      <td class="voice">Voltage</td>
-      <td class="sms">Row/column scan</td>
-    </tr>
-    <tr>
-      <td class="aspect">3. Input event</td>
-      <td class="voice">Bits</td>
-      <td class="sms">Keycode in a register</td>
-    </tr>
-    <tr>
-      <td class="aspect">4. App + OS</td>
-      <td class="voice">String in memory</td>
-      <td class="sms">"Hello" as 5 ASCII bytes</td>
-    </tr>
-    <tr>
-      <td class="aspect">5. Modem</td>
-      <td class="voice">SMS PDU</td>
-      <td class="sms">26 bytes wrapped in signaling protocol</td>
-    </tr>
-    <tr>
-      <td class="aspect">6. Signaling channel</td>
-      <td class="voice">Radio burst</td>
-      <td class="sms">~100 ms of transmission, then silence</td>
-    </tr>
-    <tr>
-      <td class="aspect">7. SMSC</td>
-      <td class="voice">Stored message</td>
-      <td class="sms">Queued in carrier's server</td>
-    </tr>
-    <tr>
-      <td class="aspect">8. Network hop</td>
-      <td class="voice">SS7 / Diameter packets</td>
-      <td class="sms">Light pulses in undersea fiber</td>
-    </tr>
-    <tr>
-      <td class="aspect">9. His phone</td>
-      <td class="voice">All of the above, reversed</td>
-      <td class="sms">Text rendered on LCD</td>
-    </tr>
-  </tbody>
-</table>
+![SMS layer - How it works?](/images/mobilephone/smslayer.png){fig-alt="SMS layer."}
 
 Total time from your "send" tap to his screen lighting up: **typically 1–5 seconds**, sometimes longer if the SMSC is busy or his phone is briefly offline.
 
@@ -1042,12 +930,26 @@ Internet data breaks information into packets. Web pages, apps, and videos all u
 
 The important lesson is that the phone is a layered communication machine. The user sees a simple action, but underneath it the device performs encoding, authentication, radio scheduling, error correction, routing, and decoding.
 
-## Engineering Views
+## Viewing the Phone as an Engineering System
 
-We understand the phone as a system: it has hardware, software, radio, protocols, a SIM identity, and a carrier network behind it.
-But to understand a mobile phone more deeply, we need a few more engineering views.
+A mobile phone can be understood in many ways. A user sees a screen, buttons, apps, calls, messages, and battery life. But an engineer sees a system made of several interacting subsystems.
 
+The phone is not one machine doing one job. It is a computer, a radio, a modem, a timing device, a power-management system, and an identity/authentication device, all working together with the carrier network.
+
+So in this section, we will look at the phone through a few engineering views:
+
+- the system architecture view
+- the signal path view
+- the control path view
+- the RF front-end view
+- the network generation view
+- the timing view
+- the power-management view
+
+Each view answers a different engineering question.
 It is a collection of specialized subsystems.
+
+At the highest level, the phone can be seen as a chain of subsystems. 
 
 ```text
 User interface
@@ -1066,15 +968,24 @@ Cell tower
 ```
 
 **Signal path:**
+The signal path shows how information moves from the user to the network.
 
+```text
 Voice / SMS / data → modem → radio → antenna → tower
+```
 
 **Control path:**
+A phone is not only sending and receiving information. It is also constantly coordinating with the network. This is the control path.
 
+```text
 SIM identity → authentication → tower selection → timing → power control → handover
+```
 
 **RF Front End View:**
+The RF front end is the part of the phone that handles radio-frequency transmission and reception.
+During transmission, the path looks like this.
 
+```text
 Baseband bits
    ↓
 RF transceiver
@@ -1088,9 +999,13 @@ Antenna switch
 Antenna
    ↓
 Radio waves
+```
+
+The baseband processor creates the digital signal. The RF transceiver converts it into a radio-frequency signal. Filters remove unwanted frequencies. The power amplifier increases the signal strength. The antenna switch routes the signal to the correct antenna path. Then the antenna radiates the signal as electromagnetic waves.
 
 On the receiving end, the path is reversed:
 
+```text
 Radio waves
    ↓
 Antenna
@@ -1104,16 +1019,25 @@ Filter
 RF transceiver
    ↓
 Baseband processor
+```
+
+The low-noise amplifier is important because the signal received from the tower can be extremely weak. The phone has to amplify it without adding too much noise.
+This is why a phone PCB has many small RF components near the antenna area: filters, amplifiers, switches, matching networks, and shielded RF sections.
 
 
 **Network Generation View:**
 
+Different mobile network generations changed what the phone had to do.
 
+```text
 2G / GSM  → voice and SMS were central
 3G        → better data and mobile internet
 4G / LTE  → packet-based internet architecture
 VoLTE     → voice becomes IP-based voice
 5G        → higher speed, lower latency, more flexible network design
+```
+
+In 2G phones, voice and SMS were the main functions. In 3G, mobile internet became more important. In 4G LTE, the network became more like an all-IP data network. Voice over LTE, or VoLTE, sends voice as packet data instead of using the older circuit-switched voice model. In 5G, the network is designed for higher bandwidth, lower latency, and more flexible use cases. So when we compare phones from different generations, we are not only comparing speed. We are comparing different communication architectures.
 
 ## Frequency Bands and Duplexing
 
@@ -1147,31 +1071,47 @@ This is why phones list paired frequencies per band. **LTE Band 3** uses 1,710�
 
 ## The Clock: TCXO
 
-Cellular networks run on time slots. LTE requires timing accurate to about **0.1 microseconds**. A regular quartz crystal drifts with temperature, a phone in a hot car versus a cold pocket would lose its slot.
+Cellular communication depends on timing.
+The phone and the tower must stay synchronized. If the phone transmits too early or too late, its signal may interfere with other users or miss its assigned time slot. A regular quartz crystal can drift with temperature. A phone may be used in a hot car, a cold pocket, or under heavy processor load. Temperature changes can slightly change the clock frequency. To solve this, phones use a **TCXO**, or **Temperature-Compensated Crystal Oscillator**. A TCXO is a quartz crystal combined with compensation circuitry. It adjusts for temperature changes and provides a stable reference clock for the modem and RF system. On the PCB, the TCXO is usually a small metal-cased component near the modem or RF section. Without a stable clock, the phone cannot reliably maintain synchronization with the cellular network. Timing, frequency accuracy, tower communication, and handover all depend on this reference.
 
-The fix is a **TCXO** (Temperature-Compensated Crystal Oscillator): a quartz crystal with a small circuit that measures temperature and corrects frequency in real time, holding accuracy to about **0.5 parts per million**.
-
-On the PCB, the TCXO is a small metal-cased component near the modem. Without it, time-division multiplexing, the mechanism that lets millions of phones share spectrum, falls apart.
 
 ## Power Path and the PMIC
 
-A phone runs on one battery cell at **3.7 V**. But the chips inside need many voltages:
+A mobile phone usually runs from one lithium-ion battery cell, around **3.7 V** nominal. But the circuits inside the phone need many different voltages.
 
-- Application processor cores: ~**0.8 V**
-- Modem: ~**1.1 V**
-- Memory: **1.2 V** or **1.8 V**
-- Display backlight: **5–20 V**
-- RF power amplifier: ~**3.4 V** during transmit bursts
-- SIM card: **1.8 V** or **3 V**
+Examples:
 
-Generating all of these efficiently from one battery is the job of the **PMIC** (Power Management Integrated Circuit), typically the second-largest chip on the PCB after the main processor. It contains a dozen or more switching and linear regulators, and handles:
+| Component | Typical voltage need |
+|---|---|
+| Application processor core | ~0.8 V |
+| Modem | ~1.1 V |
+| Memory | 1.2 V or 1.8 V |
+| Display backlight | 5–20 V |
+| RF power amplifier | ~3.4 V during transmit bursts |
+| SIM card | 1.8 V or 3 V |
 
-- **Battery charging** managing current and voltage across charge phases
-- **Battery monitoring** tracking voltage, current, and temperature to estimate capacity
-- **Power sequencing** turning rails on and off in the right order at boot and shutdown
-- **Sleep states** shutting down rails the phone doesn't need when idle
+The chip that manages these power rails is the **PMIC**, or **Power Management Integrated Circuit**.
 
-Good battery life largely means a well-designed PMIC and software that knows when to tell it to shut things off. 
+The PMIC takes energy from the battery and generates the different voltages needed by the phone. It contains switching regulators, linear regulators, battery charging circuits, monitoring circuits, and sequencing logic.
+
+The PMIC handles several important jobs:
+
+- **Battery charging**  
+  It controls the charging current and voltage safely.
+
+- **Battery monitoring**  
+  It tracks voltage, current, and temperature to estimate battery capacity.
+
+- **Power sequencing**  
+  It turns different voltage rails on and off in the correct order during startup and shutdown.
+
+- **Sleep states**  
+  It shuts down unused circuits when the phone is idle to save power.
+
+- **Transmit power support**  
+  It helps provide short bursts of current when the RF power amplifier transmits.
+
+Good battery life is not only about having a large battery. It also depends on efficient power regulation, careful sleep-state control, and software that knows when to turn off unused parts of the phone. So the PMIC is one of the most important chips on the phone PCB. Without it, the phone cannot safely and efficiently power its processor, modem, memory, display, SIM card, and RF circuits.
 
 ## Conclusion
 
