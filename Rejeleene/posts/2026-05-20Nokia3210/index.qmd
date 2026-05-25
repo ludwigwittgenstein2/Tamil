@@ -113,7 +113,7 @@ When you press a key, it shorts a specific row to a specific column, and the pro
 This is the heart of the Nokia phone. There are lot of components that need to be explained, and how they all work together. 
 The first thing we notice is the large display panel. 
 
-<img src="/images/mobilephone/nokia/frontpcb.png" alt="Front of Nokia 3210" style="width:450px; height:auto;">
+<img src="/images/mobilephone/nokia/frontPCB.png" alt="Front of Nokia 3210" style="width:450px; height:auto;">
 
 ### The PCB as the heart of the phone
 
