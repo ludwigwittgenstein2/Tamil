@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rick Rejeleene">
+<meta name="dcterms.date" content="2026-05-25">
+
+<title>How does the Nokia 3210 4G Work? – Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Research</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="http://rickrejeleene.me/"> <i class="bi bi-house-door-fill" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://facebook.com/whitekangaroo"> <i class="bi bi-facebook" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/rick1776/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- subscribe.html -->
+<!-- Mailchimp CSS for styling -->
+<link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+  #mc_embed_signup {
+    background: #fff;
+    font: 14px Helvetica, Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+</style>
+
+<div id="mc_embed_signup">
+  <form action="https://gmail.us12.list-manage.com/subscribe/post?u=1f588641ad0b06cbeecabd12b&amp;id=ca6e7ad445&amp;f_id=0028c0e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+      <h2>Subscribe</h2>
+      <div class="indicates-required">
+        <span class="asterisk">*</span> indicates required
+      </div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">
+          Email Address <span class="asterisk">*</span>
+        </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+      </div>
+
+      <div id="mce-responses" class="clear foot">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+
+      <!-- honeypot field (bot protection) -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_1f588641ad0b06cbeecabd12b_ca6e7ad445" tabindex="-1" value="">
+      </div>
+
+      <div class="clear foot">
+        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Required Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+  (function ($) {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0] = "EMAIL";
+    ftypes[0] = "email";
+    fnames[1] = "FNAME";
+    ftypes[1] = "text";
+    fnames[2] = "LNAME";
+    ftypes[2] = "text";
+    fnames[3] = "ADDRESS";
+    ftypes[3] = "address";
+    fnames[4] = "PHONE";
+    ftypes[4] = "phone";
+    fnames[5] = "BIRTHDAY";
+    ftypes[5] = "birthday";
+    fnames[6] = "COMPANY";
+    ftypes[6] = "text";
+  })(jQuery);
+  var $mcj = jQuery.noConflict(true);
+</script>
+
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#why-do-a-teardown-of-the-nokia-3210-4g" id="toc-why-do-a-teardown-of-the-nokia-3210-4g" class="nav-link active" data-scroll-target="#why-do-a-teardown-of-the-nokia-3210-4g">Why do a teardown of the Nokia 3210 4G?</a></li>
+  <li><a href="#how-to-do-the-teardown-of-nokia-3210" id="toc-how-to-do-the-teardown-of-nokia-3210" class="nav-link" data-scroll-target="#how-to-do-the-teardown-of-nokia-3210">How to do the teardown of Nokia 3210?</a></li>
+  <li><a href="#tools-used-for-the-teardown" id="toc-tools-used-for-the-teardown" class="nav-link" data-scroll-target="#tools-used-for-the-teardown">Tools Used for the Teardown</a></li>
+  <li><a href="#physical-teardown-what-we-see-first" id="toc-physical-teardown-what-we-see-first" class="nav-link" data-scroll-target="#physical-teardown-what-we-see-first">Physical teardown: what we see first</a></li>
+  <li><a href="#user-interface-hardware" id="toc-user-interface-hardware" class="nav-link" data-scroll-target="#user-interface-hardware">User interface hardware</a></li>
+  <li><a href="#main-pcb-and-computing-system" id="toc-main-pcb-and-computing-system" class="nav-link" data-scroll-target="#main-pcb-and-computing-system">Main PCB and computing system</a></li>
+  <li><a href="#arm-cortex-a7-cpu-core" id="toc-arm-cortex-a7-cpu-core" class="nav-link" data-scroll-target="#arm-cortex-a7-cpu-core">ARM Cortex-A7 CPU Core</a></li>
+  <li><a href="#memory-flash-ram-firmware-storage" id="toc-memory-flash-ram-firmware-storage" class="nav-link" data-scroll-target="#memory-flash-ram-firmware-storage">Memory: flash, RAM, firmware, storage</a></li>
+  <li><a href="#cellular-communication-system" id="toc-cellular-communication-system" class="nav-link" data-scroll-target="#cellular-communication-system">Cellular communication system</a></li>
+  <li><a href="#sim-card-interface" id="toc-sim-card-interface" class="nav-link" data-scroll-target="#sim-card-interface">SIM Card Interface</a></li>
+  <li><a href="#audio-system" id="toc-audio-system" class="nav-link" data-scroll-target="#audio-system">Audio System</a></li>
+  <li><a href="#camera-system" id="toc-camera-system" class="nav-link" data-scroll-target="#camera-system">Camera System</a></li>
+  <li><a href="#putting-everything-together" id="toc-putting-everything-together" class="nav-link" data-scroll-target="#putting-everything-together">Putting everything together</a></li>
+  <li><a href="#sources-and-specification-notes" id="toc-sources-and-specification-notes" class="nav-link" data-scroll-target="#sources-and-specification-notes">Sources and specification notes</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How does the Nokia 3210 4G Work?</h1>
+<p class="subtitle lead">A Teardown of Networks, Radio, Embedded Systems, Audio, Camera, and Power</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Reverse Engineering</div>
+    <div class="quarto-category">Engineering</div>
+    <div class="quarto-category">Tutorial</div>
+    <div class="quarto-category">Electrical Engineering</div>
+    <div class="quarto-category">Electronics</div>
+    <div class="quarto-category">Embedded Systems</div>
+    <div class="quarto-category">Computer Science</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rick Rejeleene </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 25, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="why-do-a-teardown-of-the-nokia-3210-4g" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-a-teardown-of-the-nokia-3210-4g">Why do a teardown of the Nokia 3210 4G?</h2>
+<p>In this post, we will take a deep dive into the inner workings of the Nokia 3210 4G. The phone was relaunched in 2024 for the 25th anniversary of the original Nokia 3210. This teardown uses the device to explain the hardware components, network connectivity, embedded systems, audio system, camera pipeline, memory architecture, and power-management system that make a modern feature phone work.</p>
+<figure class="image-container figure">
+<div class="image-row">
+<p><img src="../../images/mobilephone/nokia/nokia3210front.png" alt="Nokia 3210 Front" style="width:300px; height:600px;" class="figure-img"> <img src="../../images/mobilephone/nokia/nokia3210back.png" alt="Nokia 3210 Back" style="width:300px; height:600px;" class="figure-img"></p>
+</div>
+<figcaption>
+Nokia 3210: New without being unboxed
+</figcaption>
+</figure>
+<p>If you have not yet read the earlier post on the basics of how a mobile phone works, you can read it here: <a href="https://rickrejeleene.me/Tamil/posts/2026-05-13NokiaPhone/index.html">How does a Mobile Phone Work?</a></p>
+<blockquote class="blockquote">
+<p>Few highlights and reflections from the previous posts.</p>
+</blockquote>
+<p>One of the most interesting things for me was realizing, that our voice calls are travelling through complex networks travelling at light speed. This is really fascinating that we are able to send information at light speed. Our voice is converted into digital signals, and goes through many complex infrastructures, and it reaches the other person in a matter of milliseconds.</p>
+<p>One fundamental research question you could ponder for future is: <strong>We are able to translate information into light speed, but why not humans could travel at light speed?</strong></p>
+</section>
+<section id="how-to-do-the-teardown-of-nokia-3210" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-do-the-teardown-of-nokia-3210">How to do the teardown of Nokia 3210?</h2>
+<p><img src="../../images/mobilephone/nokia/nokiaturningon.png" alt="Nokia 3210 Turning On" style="width:300px; height:450px;"></p>
+<p>In order to do a teardown, make sure you have the tools required for the teardown, such as a screwdriver, tweezers. I got myself a Hyper Tough 28 Piece Precision Screwdriver Set, which is really good for this kind of work.</p>
+</section>
+<section id="tools-used-for-the-teardown" class="level2">
+<h2 class="anchored" data-anchor-id="tools-used-for-the-teardown">Tools Used for the Teardown</h2>
+<figure class="tool-figure figure">
+<div class="image-tools">
+<p><img src="../../images/mobilephone/nokia/magneticholder.png" alt="Magnetic holder" style="width:300px; height:auto;" class="figure-img"> <img src="../../images/mobilephone/nokia/screwdriver.png" alt="Screwdriver" style="width:150px; height:300px;" class="figure-img"></p>
+</div>
+<figcaption>
+Nokia teardown tools: Magnetic holder and screwdriver
+</figcaption>
+</figure>
+<p>For organizing the screw and components, Magnetic Parts Holder is useful. It helps to keep the screws and components organized and prevents them from getting lost. A hyper touch precision screwdriver with size T5H that has magnetic tip is useful for opening the screws of the Nokia 3210.</p>
+<p>The first step in the teardown process is to remove the back cover of the phone. This can be done by using a screwdriver to remove the screws that hold the back cover in place. Once the screws are removed, you can gently pry open the back cover using a plastic opening tool or your fingers.</p>
+</section>
+<section id="physical-teardown-what-we-see-first" class="level2">
+<h2 class="anchored" data-anchor-id="physical-teardown-what-we-see-first">Physical teardown: what we see first</h2>
+<section id="external-features-screen-keypad-camera-usb-c-speaker-holes" class="level3">
+<h3 class="anchored" data-anchor-id="external-features-screen-keypad-camera-usb-c-speaker-holes">External features: screen, keypad, camera, USB-C, speaker holes</h3>
+<p>Once we unscrew the back cover, we can see the internal components of the Nokia 3210. The first thing we see is the battery, which is a removable lithium-ion battery. The battery is responsible for providing power to the phone and it can be easily replaced.</p>
+<p><img src="../../images/mobilephone/nokia/teardown.png" alt="Teardown of Nokia 3210" style="width:600px; height:auto;"></p>
+</section>
+<section id="back-cover-battery-keypad-cover-and-main-pcb" class="level3">
+<h3 class="anchored" data-anchor-id="back-cover-battery-keypad-cover-and-main-pcb">Back cover, battery, keypad cover, and main PCB</h3>
+<p>The second is the keypad cover, which is a plastic cover that protects the keypad. The keypad is responsible for allowing the user to input numbers and text. The third is the main circuit board, which is the heart of the phone. The main circuit board contains the microprocessor, memory, and other components that are responsible for the phone’s functionality. The main circuit board is responsible for processing the user’s input, managing the phone’s resources, and controlling radio communication. The fourth is the back cover of the phone with a camera, speaker and microphone outlet.</p>
+</section>
+<section id="full-component-map-of-the-phone" class="level3">
+<h3 class="anchored" data-anchor-id="full-component-map-of-the-phone">Full component map of the phone</h3>
+<p><img src="../../images/mobilephone/nokia/component.png" alt="Front Teardown of Nokia 3210" style="width:320px; height:auto;"></p>
+</section>
+</section>
+<section id="user-interface-hardware" class="level2">
+<h2 class="anchored" data-anchor-id="user-interface-hardware">User interface hardware</h2>
+<p>In this, you can see the front cover of the phone with the keypad removed, which allows us to see the internal components of the phone. The first thing we notice is the Keypad Membrane. The silver/metallic domes are called tactile metal domes or snap domes. Each one is a small, springy stainless steel disc with a slight upward curve. When you press a key on the front of the phone, the corresponding dome collapses downward with a satisfying “click.”</p>
+<section id="keypad-membrane-and-metal-domes" class="level3">
+<h3 class="anchored" data-anchor-id="keypad-membrane-and-metal-domes">Keypad membrane and metal domes</h3>
+<p><img src="../../images/mobilephone/nokia/frontremoved.png" alt="Front cover with keypad" style="width:300px; height:auto;"></p>
+<p>The orange/copper flexible strips running between the domes: These are flexible printed circuit (FPC) traces, forming the keypad matrix. They route the electrical connections from each dome back to the main PCB. The cross-shaped orange pattern at the top is particularly distinctive. We also see the five-way navigation pad. The black square pads are conductive rubber pads. The small circular component in the middle-left area, the dark cylinder is the vibration motor.</p>
+</section>
+<section id="lcd-display-and-ribbon-connector" class="level3">
+<h3 class="anchored" data-anchor-id="lcd-display-and-ribbon-connector">LCD display and ribbon connector</h3>
+<p><img src="../../images/mobilephone/nokia/back.png" alt="Back of Nokia 3210" style="width:300px; height:auto;"></p>
+<p>We have a tiny eccentric rotating mass (ERM) motor that creates haptic feedback. The phone vibrates by spinning an off-center weight rapidly. You can see it’s mounted directly on the keypad PCB. The tiny dotted patterns inside some of the dome circles are the PCB contact pads: two concentric conductive rings, an outer ring and a center dot, that the metal dome shorts together when pressed.</p>
+<p>The phone uses a matrix scanning approach. If we have one wire per key, that would require lot of GPIO pins for a keypad. We’d require more than twelve. The keys are arranged in a grid of rows and columns.</p>
+<p>The processor rapidly scans by energizing one row at a time and checking which columns show a connection. When you press a key, it shorts a specific row to a specific column, and the processor decodes which key from that intersection. This is a common technique to reduce the number of GPIO pins needed for a large keypad.</p>
+</section>
+</section>
+<section id="main-pcb-and-computing-system" class="level2">
+<h2 class="anchored" data-anchor-id="main-pcb-and-computing-system">Main PCB and computing system</h2>
+<p>This is the heart of the Nokia phone. There are lot of components that need to be explained, and how they all work together. The first thing we notice is the large display panel.</p>
+<p><img src="../../images/mobilephone/nokia/frontpcb.png" alt="Front of Nokia 3210" style="width:450px; height:auto;"></p>
+<section id="the-pcb-as-the-heart-of-the-phone" class="level3">
+<h3 class="anchored" data-anchor-id="the-pcb-as-the-heart-of-the-phone">The PCB as the heart of the phone</h3>
+<p><img src="../../images/mobilephone/nokia/diagram.png" alt="Annotated diagram of Nokia 3210" style="width:500px; height:auto;"></p>
+<p>It’s a TFT LCD, 2.4-inch QVGA (240×320 pixel) color display. So, the 2.4 is diagonal size of the display, measured corner to corner. Thin Film Transistor Liquid Crystal Display are active matrix screens.</p>
+<p>In this, each pixel on a TFT screen has its own transistor, allowing for faster response times, higher contrast, and richer colors. Quarter Video Graphics Array is the resolution, 240 pixels horizontally and 320 pixels vertically. So, this resolution is high enough to produce crisp text and detailed images. In total, the screen has 240 columns × 320 rows, which is 76,800 pixels.</p>
+</section>
+<section id="how-does-it-functionally-work" class="level3">
+<h3 class="anchored" data-anchor-id="how-does-it-functionally-work">How does it functionally work?</h3>
+<p>For example, we want to display the Snake game on the screen.</p>
+<p>On a high-level, The process involves multiple components working together:</p>
+<ol type="1">
+<li><p>Application processor / display controller says: “Put this color at pixel location x,y”</p></li>
+<li><p>Display driver converts that into: “Turn this row on, send voltage to this column”</p></li>
+<li><p>TFT transistor at pixel receives voltage: “Allow more or less backlight through red/green/blue filters”</p></li>
+<li><p>Our eye sees:Menu, numbers, Snake, icons, photos</p></li>
+</ol>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/pcbofphone.png" class="img-fluid figure-img"></p>
+<figcaption>PCB of the Phone</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/pcb.png" class="img-fluid figure-img"></p>
+<figcaption>PCB - rearview of the phone</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="unisoc-t107-system-on-chip" class="level3">
+<h3 class="anchored" data-anchor-id="unisoc-t107-system-on-chip">Unisoc T107 System-on-Chip</h3>
+<p>The main digital chip on the Nokia 3210 4G motherboard is the <strong>Unisoc T107</strong>. This chip is the phone’s central hardware platform. It is not just a CPU. It is a <strong>system-on-chip</strong>, or <strong>SoC</strong>, which means that several major phone functions are integrated into one chip.</p>
+<p>In a desktop computer, the CPU, memory controller, graphics hardware, communication hardware, and input/output controllers may exist as separate chips or modules. In a small mobile phone, space, battery life, cost, and heat are much more restricted. So these functions are combined into one compact chip.</p>
+<p>The <strong>ARM Cortex-A7</strong> is the CPU core inside the Unisoc T107. It runs the phone software: menus, contacts, dialing screen, settings, games, camera app, and other user-facing tasks. But the Cortex-A7 does not do all phone operations by itself. Around it are specialized hardware blocks for cellular communication, memory access, display output, camera input, audio, SIM communication, USB, and keypad control.</p>
+<section id="hardware-hierarchy" class="level4">
+<h4 class="anchored" data-anchor-id="hardware-hierarchy">Hardware hierarchy</h4>
+<div class="cell" data-fig-width="9" data-fig-height="4" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontSize": "20px",
+    "fontFamily": "Arial"
+  },
+  "flowchart": {
+    "nodeSpacing": 60,
+    "rankSpacing": 70
+  }
+}}%%
+
+flowchart LR
+    A["Nokia 3210 4G&lt;br&gt;complete phone"]
+    B["Main PCB&lt;br&gt;motherboard"]
+    C["Unisoc T107&lt;br&gt;system-on-chip"]
+    D["ARM Cortex-A7&lt;br&gt;CPU core"]
+    E["CPU internals&lt;br&gt;pipeline, cache, NEON,&lt;br&gt;FPU, interrupts, bus interface"]
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E
+
+    classDef device fill:#f8fafc,stroke:#334155,stroke-width:2px,color:#0f172a,font-size:20px;
+    class A,B,C,D,E device;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The <strong>phone</strong> is the complete device. The <strong>PCB</strong> is the physical board that holds the components. The <strong>Unisoc T107</strong> is the main chip mounted on the board. The <strong>ARM Cortex-A7</strong> is the CPU core inside the Unisoc T107. Inside the CPU core are smaller execution structures such as the pipeline, cache, floating-point unit, interrupt system, and bus interface.</p>
+</section>
+<section id="functional-blocks-inside-the-soc" class="level4">
+<h4 class="anchored" data-anchor-id="functional-blocks-inside-the-soc">Functional blocks inside the SoC</h4>
+<p>Instead of treating the Unisoc T107 as one mysterious black box, it is better to understand it as a compact hardware platform made of four major functional domains: <strong>compute</strong>, <strong>cellular communication</strong>, <strong>media interfaces</strong>, and <strong>external I/O control</strong>.</p>
+<div class="cell" data-fig-width="19" data-fig-height="17" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontSize": "28px",
+    "fontFamily": "Arial"
+  },
+  "flowchart": {
+    "nodeSpacing": 45,
+    "rankSpacing": 55,
+    "curve": "basis"
+  }
+}}%%
+
+flowchart TB
+
+    SOC["Unisoc T107&lt;br/&gt;System-on-Chip"]
+
+    COMPUTE["Compute subsystem"]
+    CELLULAR["Cellular subsystem"]
+    MEDIA["Media subsystem"]
+    IO["I/O and control subsystem"]
+
+    SOC --&gt; COMPUTE
+    SOC --&gt; CELLULAR
+    SOC --&gt; MEDIA
+    SOC --&gt; IO
+
+    COMPUTE --&gt; CPU["ARM Cortex-A7 CPU"]
+    COMPUTE --&gt; MEM["Memory controller"]
+    COMPUTE --&gt; SYS["System control&lt;br/&gt;clocks, interrupts, reset"]
+
+    CELLULAR --&gt; MODEM["4G LTE modem&lt;br/&gt;baseband processor"]
+    CELLULAR --&gt; SIM["SIM interface"]
+
+    MEDIA --&gt; DISP["Display controller"]
+    MEDIA --&gt; CAM["Camera interface"]
+    MEDIA --&gt; AUD["Audio interface"]
+
+    IO --&gt; USB["USB interface"]
+    IO --&gt; GPIO["GPIO / keypad control"]
+
+    classDef soc fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px,color:#0f172a,font-size:20px;
+    classDef domain fill:#ecfdf5,stroke:#047857,stroke-width:2px,color:#064e3b,font-size:18px;
+    classDef block fill:#f8fafc,stroke:#334155,stroke-width:1.5px,color:#0f172a,font-size:16px;
+
+    class SOC soc;
+    class COMPUTE,CELLULAR,MEDIA,IO domain;
+    class CPU,MEM,SYS,MODEM,SIM,DISP,CAM,AUD,USB,GPIO block;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The diagram should be read in layers. The <strong>Unisoc T107</strong> is the complete SoC. Inside it, the hardware is organized into subsystems. The <strong>compute subsystem</strong> runs software and manages memory. The <strong>cellular subsystem</strong> handles network communication and SIM authentication. The <strong>media subsystem</strong> moves image, display, and audio data. The <strong>I/O and control subsystem</strong> connects the chip to USB, buttons, and small control signals on the motherboard.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Subsystem</th>
+<th>Hardware block</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Compute subsystem</strong></td>
+<td><strong>ARM Cortex-A7 CPU</strong></td>
+<td>Runs the operating system, menus, settings, dialing screen, games, and application logic.</td>
+</tr>
+<tr class="even">
+<td><strong>Compute subsystem</strong></td>
+<td><strong>Memory controller</strong></td>
+<td>Connects the processor and internal hardware blocks to RAM and flash storage.</td>
+</tr>
+<tr class="odd">
+<td><strong>Compute subsystem</strong></td>
+<td><strong>System control</strong></td>
+<td>Coordinates clocks, interrupts, reset behavior, and internal chip control.</td>
+</tr>
+<tr class="even">
+<td><strong>Cellular subsystem</strong></td>
+<td><strong>4G LTE modem / baseband</strong></td>
+<td>Handles cellular protocol processing, voice-call signaling, network registration, and mobile data.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cellular subsystem</strong></td>
+<td><strong>SIM interface</strong></td>
+<td>Communicates with the SIM card for subscriber identity and authentication.</td>
+</tr>
+<tr class="even">
+<td><strong>Media subsystem</strong></td>
+<td><strong>Display controller</strong></td>
+<td>Sends pixel data and timing signals to the LCD screen.</td>
+</tr>
+<tr class="odd">
+<td><strong>Media subsystem</strong></td>
+<td><strong>Camera interface</strong></td>
+<td>Receives digital image data from the camera sensor.</td>
+</tr>
+<tr class="even">
+<td><strong>Media subsystem</strong></td>
+<td><strong>Audio interface</strong></td>
+<td>Routes digital audio between the microphone path, speaker path, codec, and modem.</td>
+</tr>
+<tr class="odd">
+<td><strong>I/O and control subsystem</strong></td>
+<td><strong>USB interface</strong></td>
+<td>Handles USB-C connection detection, data communication, and charger-related signaling.</td>
+</tr>
+<tr class="even">
+<td><strong>I/O and control subsystem</strong></td>
+<td><strong>GPIO / keypad control</strong></td>
+<td>Reads physical button presses and controls small electrical signals on the motherboard.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="what-does-each-block-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-each-block-do">What does each block do?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hardware block</th>
+<th>Technical role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ARM Cortex-A7 CPU core</strong></td>
+<td>Executes software instructions for the user interface, menus, dialing screen, settings, games, and applications.</td>
+</tr>
+<tr class="even">
+<td><strong>4G LTE modem / baseband</strong></td>
+<td>Handles cellular protocol processing for voice calls, network registration, signaling, and mobile data.</td>
+</tr>
+<tr class="odd">
+<td><strong>Memory controller</strong></td>
+<td>Connects the CPU and internal hardware blocks to RAM and flash storage.</td>
+</tr>
+<tr class="even">
+<td><strong>Display controller</strong></td>
+<td>Sends pixel data and timing signals to the LCD screen.</td>
+</tr>
+<tr class="odd">
+<td><strong>Camera interface</strong></td>
+<td>Receives image data from the camera sensor and passes it into the digital processing pipeline.</td>
+</tr>
+<tr class="even">
+<td><strong>Audio interface</strong></td>
+<td>Moves digital audio between the microphone path, speaker path, codec, and modem.</td>
+</tr>
+<tr class="odd">
+<td><strong>SIM interface</strong></td>
+<td>Communicates with the SIM card for subscriber identity and network authentication.</td>
+</tr>
+<tr class="even">
+<td><strong>USB interface</strong></td>
+<td>Handles USB-C connection detection, data communication, and charger-related signaling.</td>
+</tr>
+<tr class="odd">
+<td><strong>GPIO / keypad control</strong></td>
+<td>Reads physical button presses and controls small electrical signals on the motherboard.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-does-this-matter" class="level3">
+<h3 class="anchored" data-anchor-id="why-does-this-matter">Why does this matter?</h3>
+<p>The Unisoc T107 is the <strong>heart of the phone</strong> because many ordinary phone actions pass through it.</p>
+<div class="cell" data-fig-width="9" data-fig-height="5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontSize": "19px",
+    "fontFamily": "Arial"
+  },
+  "flowchart": {
+    "nodeSpacing": 55,
+    "rankSpacing": 65
+  }
+}}%%
+
+flowchart TB
+    A["You press a key"] --&gt; B["Keypad / GPIO interface detects signal"]
+    C["Screen changes"] --&gt; D["Display controller sends pixels to LCD"]
+    E["You make a call"] --&gt; F["Modem and RF system handle cellular communication"]
+    G["You open the camera"] --&gt; H["Camera interface receives image data from sensor"]
+
+    classDef event fill:#f8fafc,stroke:#334155,stroke-width:2px,color:#0f172a,font-size:18px;
+    class A,B,C,D,E,F,G,H event;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The Cortex-A7 CPU coordinates the software side of these actions. However, the specialized hardware blocks perform the lower-level work more efficiently. This division of labor is what makes a small, low-power phone possible.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Engineering summary">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Engineering summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <strong>Cortex-A7</strong> is the instruction-running CPU core.</p>
+<p>The <strong>Unisoc T107</strong> is the full SoC platform that integrates CPU, modem, memory, display, camera, audio, SIM, USB, and control interfaces.</p>
+<p>The <strong>Nokia 3210 4G</strong> behaves like a phone because the CPU and these specialized hardware blocks work together.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="arm-cortex-a7-cpu-core" class="level2">
+<h2 class="anchored" data-anchor-id="arm-cortex-a7-cpu-core">ARM Cortex-A7 CPU Core</h2>
+<p>The <strong>ARM Cortex-A7</strong> is the application processor core inside the Unisoc T107. It is the part of the chip that executes normal program instructions: menus, contacts, dialing screens, settings, games, SMS handling, camera application logic, and other user-facing software.</p>
+<p>The important distinction is that the <strong>Cortex-A7 is only the CPU core</strong>, while the <strong>Unisoc T107 is the complete system-on-chip platform</strong>. The T107 contains the Cortex-A7 CPU core along with the modem, memory controller, display interface, camera interface, audio interface, SIM interface, USB interface, and other control logic.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="CPU core vs. full chip">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+CPU core vs.&nbsp;full chip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <strong>Cortex-A7</strong> runs program instructions.</p>
+<p>The <strong>Unisoc T107</strong> is the full chip platform that surrounds the CPU with communication, media, memory, and control hardware.</p>
+</div>
+</div>
+<p>ARM designed the Cortex-A7 as a small, low-power application processor core for compact and cost-sensitive devices. Chip companies such as Unisoc can license this CPU design and integrate it into their own system-on-chip products.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Design goal</th>
+<th>Meaning in a phone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Low power</strong></td>
+<td>Helps preserve battery life during normal phone use.</td>
+</tr>
+<tr class="even">
+<td><strong>Small silicon area</strong></td>
+<td>Reduces chip size and manufacturing cost.</td>
+</tr>
+<tr class="odd">
+<td><strong>Adequate application performance</strong></td>
+<td>Good enough for menus, settings, calling, SMS, simple apps, and basic multimedia.</td>
+</tr>
+<tr class="even">
+<td><strong>Embedded-device suitability</strong></td>
+<td>Useful for feature phones, entry-level smartphones, routers, and compact connected devices.</td>
+</tr>
+</tbody>
+</table>
+<section id="where-does-the-cortex-a7-sits-in-the-phone" class="level3">
+<h3 class="anchored" data-anchor-id="where-does-the-cortex-a7-sits-in-the-phone">Where does the Cortex-A7 sits in the phone?</h3>
+<div class="cell" data-fig-width="9" data-fig-height="4" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontSize": "18px",
+    "fontFamily": "Arial"
+  },
+  "flowchart": {
+    "nodeSpacing": 45,
+    "rankSpacing": 55
+  }
+}}%%
+
+flowchart LR
+    PHONE["Nokia 3210 4G&lt;br&gt;complete device"]
+    PCB["Main PCB&lt;br&gt;motherboard"]
+    SOC["Unisoc T107&lt;br&gt;system-on-chip"]
+    CPU["ARM Cortex-A7&lt;br&gt;CPU core"]
+
+    PHONE --&gt; PCB --&gt; SOC --&gt; CPU
+
+    classDef block fill:#f8fafc,stroke:#334155,stroke-width:2px,color:#0f172a,font-size:17px;
+    classDef cpu fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px,color:#0f172a,font-size:18px;
+
+    class PHONE,PCB,SOC block;
+    class CPU cpu;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The phone is the complete device. The PCB is the physical motherboard. The Unisoc T107 is the main SoC mounted on that board. The ARM Cortex-A7 is the CPU core inside the SoC.</p>
+</section>
+<section id="arm-cortex-a7-reference-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="arm-cortex-a7-reference-architecture">ARM Cortex-A7 reference architecture</h3>
+<p>The figure below shows the internal architecture of the ARM Cortex-A7 processor design. This is not a full diagram of the Unisoc T107 chip. Instead, it shows the CPU core design that companies such as Unisoc can integrate into their own SoCs.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/ARMCortexA7.png" class="img-fluid figure-img" style="width:90.0%" alt="ARM Cortex-A7 processor architecture diagram"></p>
+<figcaption>ARM Cortex-A7 processor architecture</figcaption>
+</figure>
+</div>
+<p>The image shows the Cortex-A7 as a processor core with instruction handling, cache, execution units, NEON support, memory interface logic, and connections to the rest of the chip. Some ARM reference diagrams show Cortex-A7 in multi-core configurations. For this phone teardown, the key point is simpler: the <strong>Cortex-A7 processor is the CPU building block inside the Unisoc T107 platform</strong>.</p>
+</section>
+<section id="what-does-the-cortex-a7-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-the-cortex-a7-do">What does the Cortex-A7 do?</h3>
+<p>The Cortex-A7 is where normal program instructions run. When the phone shows a menu, opens contacts, reads SMS, responds to a key press, or launches the camera application, the Cortex-A7 is executing software instructions.</p>
+<p>At a simplified level, the CPU repeatedly performs this cycle:</p>
+<div class="cell" data-fig-width="8" data-fig-height="3.8" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontSize": "18px",
+    "fontFamily": "Arial"
+  },
+  "flowchart": {
+    "nodeSpacing": 40,
+    "rankSpacing": 45
+  }
+}}%%
+
+flowchart LR
+    A["Fetch&lt;br&gt;instruction"]
+    B["Decode&lt;br&gt;instruction"]
+    C["Read&lt;br&gt;registers"]
+    D["Execute&lt;br&gt;operation"]
+    E["Access memory&lt;br&gt;if needed"]
+    F["Write&lt;br&gt;result"]
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F
+
+    classDef step fill:#f8fafc,stroke:#334155,stroke-width:2px,color:#0f172a,font-size:17px;
+    class A,B,C,D,E,F step;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is called the <strong>fetch-decode-execute cycle</strong>. The CPU fetches an instruction from memory, decodes what the instruction means, reads the required values, performs the operation, accesses memory if necessary, and writes the result back.</p>
+</section>
+<section id="example-pressing-a-key" class="level3">
+<h3 class="anchored" data-anchor-id="example-pressing-a-key">Example: pressing a key</h3>
+<p>When a physical key is pressed, the Cortex-A7 is involved, but it is not the only hardware block doing work.</p>
+<div class="cell" data-fig-width="8" data-fig-height="4.5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontSize": "18px",
+    "fontFamily": "Arial"
+  },
+  "flowchart": {
+    "nodeSpacing": 45,
+    "rankSpacing": 55
+  }
+}}%%
+
+flowchart TB
+    A["Keypad dome&lt;br&gt;closes circuit"]
+    B["GPIO / keypad controller&lt;br&gt;detects electrical signal"]
+    C["Cortex-A7&lt;br&gt;runs software logic"]
+    D["Display controller&lt;br&gt;updates LCD screen"]
+
+    A --&gt; B --&gt; C --&gt; D
+
+    classDef hardware fill:#f8fafc,stroke:#334155,stroke-width:2px,color:#0f172a,font-size:17px;
+    classDef cpu fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px,color:#0f172a,font-size:18px;
+
+    class A,B,D hardware;
+    class C cpu;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The keypad hardware detects the electrical change. The Cortex-A7 runs the software logic that decides what the key press means. The display controller updates the LCD if the user interface changes.</p>
+</section>
+<section id="example-making-a-call" class="level3">
+<h3 class="anchored" data-anchor-id="example-making-a-call">Example: making a call</h3>
+<p>During a phone call, the Cortex-A7 mainly handles software control. It manages the dialer interface, contact selection, call status, audio routing decisions, and coordination with the modem. The specialized cellular work is handled by the baseband modem, RF front-end, and antenna system.</p>
+<div class="cell" data-fig-width="8" data-fig-height="4.8" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontSize": "18px",
+    "fontFamily": "Arial"
+  },
+  "flowchart": {
+    "nodeSpacing": 45,
+    "rankSpacing": 55
+  }
+}}%%
+
+flowchart TB
+    A["Cortex-A7&lt;br&gt;runs call UI and control software"]
+    B["Baseband / modem&lt;br&gt;handles cellular protocol"]
+    C["RF front-end&lt;br&gt;converts signal for radio transmission"]
+    D["Antenna&lt;br&gt;communicates with cell tower"]
+
+    A --&gt; B --&gt; C --&gt; D
+
+    classDef cpu fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px,color:#0f172a,font-size:18px;
+    classDef hardware fill:#f8fafc,stroke:#334155,stroke-width:2px,color:#0f172a,font-size:17px;
+
+    class A cpu;
+    class B,C,D hardware;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This division of labor is important. The Cortex-A7 does not personally perform the entire phone call. It runs the software that coordinates the call, while the modem and RF hardware perform the specialized communication work.</p>
+</section>
+<section id="internal-cpu-functions" class="level3">
+<h3 class="anchored" data-anchor-id="internal-cpu-functions">Internal CPU functions</h3>
+<p>Inside the Cortex-A7, several internal units work together to execute instructions efficiently.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>CPU component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Instruction fetch logic</strong></td>
+<td>Reads program instructions from memory or instruction cache.</td>
+</tr>
+<tr class="even">
+<td><strong>Instruction decoder</strong></td>
+<td>Interprets what each instruction asks the CPU to do.</td>
+</tr>
+<tr class="odd">
+<td><strong>Register file</strong></td>
+<td>Holds small, fast working values used by instructions.</td>
+</tr>
+<tr class="even">
+<td><strong>Integer execution unit</strong></td>
+<td>Performs arithmetic, logic, comparison, and address-calculation operations.</td>
+</tr>
+<tr class="odd">
+<td><strong>Load/store unit</strong></td>
+<td>Moves data between CPU registers, cache, and memory.</td>
+</tr>
+<tr class="even">
+<td><strong>Branch unit</strong></td>
+<td>Handles jumps, loops, function calls, and conditional program flow.</td>
+</tr>
+<tr class="odd">
+<td><strong>Interrupt handling logic</strong></td>
+<td>Allows the CPU to respond to timers, key presses, hardware signals, and other events.</td>
+</tr>
+<tr class="even">
+<td><strong>Bus interface</strong></td>
+<td>Connects the CPU core to the rest of the SoC.</td>
+</tr>
+</tbody>
+</table>
+<p>The Cortex-A7 is an <strong>in-order</strong> CPU core. This means it generally executes instructions in the order they arrive, instead of aggressively reordering them like larger high-performance processors. This makes the design smaller, cheaper, and more power-efficient, which fits a feature phone well.</p>
+</section>
+<section id="instruction-cache-and-data-cache" class="level3">
+<h3 class="anchored" data-anchor-id="instruction-cache-and-data-cache">Instruction cache and data cache</h3>
+<p>The Cortex-A7 uses caches to reduce the time spent waiting for memory. A cache is a small, fast memory located close to the CPU.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cache type</th>
+<th>What it stores</th>
+<th>Example in a phone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Instruction cache</strong></td>
+<td>Recently used program instructions</td>
+<td>Code for the menu system, dialer, SMS app, or settings screen.</td>
+</tr>
+<tr class="even">
+<td><strong>Data cache</strong></td>
+<td>Recently used data values</td>
+<td>Contact names, SMS text buffers, menu variables, battery percentage values, or display-related data.</td>
+</tr>
+</tbody>
+</table>
+<p>The CPU separates instruction and data caching because it often needs to fetch program instructions and access data at the same time. Keeping these paths separate improves efficiency.</p>
+</section>
+<section id="neon-data-engine" class="level3">
+<h3 class="anchored" data-anchor-id="neon-data-engine">NEON data engine</h3>
+<p>The Cortex-A7 also includes ARM’s <strong>NEON</strong> data engine. NEON is a <strong>SIMD</strong> unit, meaning <strong>Single Instruction, Multiple Data</strong>.</p>
+<p>Instead of applying one operation to one value at a time, SIMD allows the CPU to apply one instruction to several values together. This is useful for repeated operations over arrays of data.</p>
+<p>Examples include:</p>
+<ul>
+<li>audio processing,</li>
+<li>image processing,</li>
+<li>simple multimedia operations,</li>
+<li>signal processing,</li>
+<li>compression or decompression routines.</li>
+</ul>
+<p>For a basic feature phone, NEON is not used in the same way as in a powerful smartphone. But it gives the CPU a more efficient way to handle certain media and signal-processing tasks.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Engineering summary">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Engineering summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <strong>Cortex-A7</strong> is the CPU core that executes software instructions.</p>
+<p>It is optimized for <strong>low power, small size, and sufficient performance</strong>, not maximum speed.</p>
+<p>The <strong>Unisoc T107</strong> surrounds the Cortex-A7 with specialized hardware blocks for cellular communication, display, camera, audio, memory, SIM, USB, and keypad control.</p>
+<p>The phone works because the Cortex-A7 runs the control software while the rest of the SoC performs specialized hardware tasks.</p>
+</div>
+</div>
+</section>
+<section id="how-a-cortex-a7-soc-works-neon-scu-cache-amba-bus-and-gic" class="level3">
+<h3 class="anchored" data-anchor-id="how-a-cortex-a7-soc-works-neon-scu-cache-amba-bus-and-gic">How a Cortex-A7 SoC Works: NEON, SCU, Cache, AMBA Bus, and GIC?</h3>
+<p>In the phone, NEON helps with Audio decoding, Image processing, Camera data, Simple graphics, Signal-processing style math, Multimedia operations. So, basic multimedia and efficient data processing. A FPU or Floating-point unit, handles decimal-style math, -7.21, 0.25, Without an FPU, floating-point calculations would be emulated in software and would be much slower. Snoop Control Unit (SCU) maintains data cache coherency between cores, Arbitrates access when multiple cores want L2/memory at the same time, Handles cache-line ownership and transfer between cores more efficiently than always going to main memory. Main memory is much slower than cache. If core A writes data and core B later reads the same address, the SCU helps B get the newest value from A’s cache or invalidates old copies, instead of waiting for memory traffic to propagate slowly. The SCU is about data coherency, not instruction-cache coherency.</p>
+<p>The L2 cache with ECC is used to make the ARM processor both faster and more reliable, ECC means Error-Correcting Code. It is a method used in memory and caches to detect and often fix bit errors automatically. Imagine the L2 cache stores a number: 8, Later, one tiny bit flips by accident, and the number becomes 9 instead of 8, Without ECC: the CPU reads 9 and thinks it is correct, With ECC: the cache notices, “this stored value doesn’t match the check bits,” and fixes it back to 8 before the CPU uses it. The L2 cache is a larger shared cache. The 128-bit AMBA ACE coherent bus interface, is the internal highway connecting the Cortex-A7 CPU cluster to the rest of the SoC.</p>
+<p>The CPU core needs to communicate with:</p>
+<ol type="1">
+<li>RAM controller</li>
+<li>Flash/storage controller</li>
+<li>Display controller</li>
+<li>Camera interface</li>
+<li>USB controller</li>
+<li>SIM controller</li>
+<li>Audio controller</li>
+<li>Modem/baseband blocks</li>
+<li>Interrupt controller</li>
+<li>DMA engines</li>
+</ol>
+</section>
+<section id="amba-bus" class="level3">
+<h3 class="anchored" data-anchor-id="amba-bus">AMBA bus</h3>
+<p>AMBA bus flow in Cortex-A7 CPU is</p>
+<pre><code>Cortex-A7 CPU
+  ↓
+L1 / L2 cache
+  ↓
+AMBA bus
+  ↓
+Memory, display, camera, USB, SIM, audio, modem</code></pre>
+</section>
+<section id="generic-interrupt-controller-gic" class="level3">
+<h3 class="anchored" data-anchor-id="generic-interrupt-controller-gic">Generic Interrupt Controller (GIC)</h3>
+<p>Generic Interrupt Controller, or GIC, is the hardware block that decides which interrupt goes to which CPU core and in what priority order. It receives interrupts from peripherals like timers, UARTs, and GPIOs. It prioritizes them. It delivers them to the right core. In multi-core Cortex-A7 systems, it can send an interrupt to one core, both cores, or a specific target core. Without a GIC, every interrupt source would have to be handled in a much more ad hoc way. The GIC gives the processor a standard way to manage, Shared Peripheral Interrupts for devices used by the whole chip, Private Peripheral Interrupts for each core, Software Generated Interrupts for inter-core signaling. We can think the GIC as Traffic controller.</p>
+<p>Cortex-A7 can be less than 0.5 mm² on 28 nm. This means, the physical chip area needed for one Cortex-A7 core can be less than half a square millimeter when manufactured on a 28 nm process, 0.5 mm² is an area measurement, not performance, 28 nm refers to the manufacturing technology node, which affects how small transistors and wiring can be made.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/components3.png" class="img-fluid figure-img"></p>
+<figcaption>All Components</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="memory-flash-ram-firmware-storage" class="level2">
+<h2 class="anchored" data-anchor-id="memory-flash-ram-firmware-storage">Memory: flash, RAM, firmware, storage</h2>
+<p>The Unisoc T107 baseband processor doesn’t include the flash and RAM on the same die. However its memory controllers are built to talk to external memory chips sitting next to it on the board. The Cortex-A7 core executes instructions, and these instructions have to come from somewhere, the data it works on has to live somewhere. That somewhere is memory, and on the Nokia 3210 it comes in three tiers: 64 MB of LPDDR2 SDRAM, 128 MB of internal flash storage, and an optional microSDHC card up to 32 GB.</p>
+<p>Flash is non-volatile and keeps the data alive even when the phone turns off. In this, the phone’s firmware lives: the operating system (MOCOR with the Series 30+ interface on top), the dialer, the menus, the Snake game, the ringtones. Personal data also goes here: contacts, text messages, call history, settings, and any photos the camera takes. The T107 supports eMMC 5.1 as its mass-storage interface, essentially managed NAND flash, where raw NAND dies and a built-in controller (handling wear leveling, bad-block management, and ECC) sit together in one BGA package speaking a standardised command protocol. At 128 MB the 3210 is at the very low end of this spectrum, and may use a simpler raw NAND or NOR arrangement, but the SoC’s flash path is built around eMMC.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/memory.png" class="img-fluid figure-img"></p>
+<figcaption>Memory Hierarchy and Data Flow</figcaption>
+</figure>
+</div>
+<p>A small note on flash types, because it matters historically. <strong>NOR flash</strong> is byte-addressable and supports execute-in-place: the CPU can fetch instructions directly from it without copying to RAM first. It is slow to write and expensive per bit, but fast and reliable to read randomly. <strong>NAND flash</strong> is page-addressable, typically 2 KB or 4 KB pages, much denser and cheaper, but you cannot execute code directly from it, code must first be copied into RAM. The original 1999 Nokia 3210 used NOR and ran code straight from it. The 2024 phone, with 128 MB of storage, almost certainly uses NAND, which is why the boot sequence has to copy the OS into RAM before it can run.</p>
+<p>RAM is volatile: the moment power is lost, everything in it vanishes. Specifically, this is <strong>LPDDR2 SDRAM</strong>: Low-Power DDR2 running at 1.2 V with deep power-down states that ordinary desktop DDR doesn’t have. The T107’s memory controller can address up to 384 MB of LPDDR2 in theory; the 3210 is wired with 64 MB. When the phone boots, code is copied out of flash and into this RAM so the CPU can run it quickly.</p>
+<p>While the phone is running, RAM holds everything the software is actively using: the variables of the program currently executing, the contact entry you are scrolling through, the text buffer of the SMS you are typing, the position of the Snake on screen, and the frame buffer, the block of memory holding the exact image currently being shown on the display.</p>
+<p>The Cortex-A7 does not talk to the memory chips directly. Requests travel out of the core over an <strong>AMBA AXI</strong> interface: AXI being the high-bandwidth variant of AMBA used for memory traffic, to separate, specialised controllers sitting as AXI slaves on the interconnect. The DRAM controller and the eMMC/flash controller are physically distinct blocks on the T107 die, and they speak completely different protocols downstream.</p>
+<p>The DRAM controller issues row-activate, column-read, precharge, and refresh commands on a parallel address/data/command bus to the LPDDR2 die. The eMMC controller issues CMD/DATA packets over an 8-bit parallel bus with its own clock. The microSD card has yet a third controller, an SDIO/SD host, talking over the SD bus protocol. Each memory type speaks a different language, and the SoC has a dedicated translator for each.</p>
+<p>There is also a speed hierarchy at work here. The Cortex-A7 has an <strong>L1 instruction cache and L1 data cache</strong>: each configurable by the SoC vendor between 8 KB and 64 KB, and on a low-cost feature-phone SoC likely sitting near the smaller end. L2 cache on the Cortex-A7 is optional and may not be present at all on a single-core 1 GHz part like the T107.</p>
+<p>The system constantly tries to keep whatever the CPU needs next as close to the core as possible, so a value moves <strong>L1 cache → LPDDR2 SDRAM → internal NAND/eMMC flash → microSD card</strong> in order of increasing size and decreasing speed. It is also worth noting that the Cortex-A7 is an <strong>in-order, 8-stage pipeline</strong> core: unlike the out of order cores in modern smartphones, it executes instructions in program order. This is one reason it is so power-efficient and so small (around 0.45 mm² at 28 nm), and why it remains the workhorse of feature-phone SoCs more than a decade after its 2011 launch.</p>
+<p>When you press the power button, the PMIC brings up the voltage rails in order and releases the processor from reset. The Cortex-A7 does not begin by running the operating system, it begins by running a tiny <strong>mask ROM bootloader</strong> baked permanently into the T107 silicon during fabrication. This ROM code knows how to talk to the flash interface, validates a signature on the next-stage bootloader, copies that bootloader into on-chip <strong>SRAM</strong>: a small scratch RAM inside the SoC itself, not the external LPDDR2, and jumps to it.</p>
+<p>The second-stage bootloader then initialises the LPDDR2 controller, which is itself a non-trivial dance involving training the DRAM timings against the specific memory die on the board. Only then can it copy the OS from flash into main RAM. Control passes to the OS, the display is initialised, and the phone’s menu appears. The full chain is <strong>mask ROM → on-chip SRAM bootloader → LPDDR2 init → OS load → OS handoff</strong>, and it is also the chain that secure boot hooks into, since each stage can cryptographically verify the next before passing control.</p>
+<p>From that point on, every action you take is a conversation between these parts, the CPU executes code in RAM, reaches into flash when it needs something stored, and writes back to flash whenever you save a contact or receive a message.</p>
+</section>
+<section id="cellular-communication-system" class="level2">
+<h2 class="anchored" data-anchor-id="cellular-communication-system">Cellular communication system</h2>
+<p>A mobile phone is not only a computer, it is also a radio communication device. The cellular system connects the SIM, modem, RF transceiver, power amplifier, filters, antenna switch, TCXO, and antenna so that the phone can register on a network, make calls, send messages, and exchange mobile data.</p>
+</section>
+<section id="sim-card-interface" class="level2">
+<h2 class="anchored" data-anchor-id="sim-card-interface">SIM Card Interface</h2>
+<p>There are two SIM card slots, that we can use. The SIM, Subscriber Identity Module is a small, removable smart card, and it is what gives the phone its identity on the network. The phone hardware is just hardware; it is the SIM that says who the subscriber is. Without it, the phone can power on, run its menus, and play Snake, but it cannot register on a cellular network or make a normal call.</p>
+<section id="how-sim-authentication-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-sim-authentication-works">How SIM authentication works?</h3>
+<p>Inside that small card is actually a tiny computer of its own, a microcontroller with its own processor, its own small memory, and a secure storage area. It stores the IMSI (International Mobile Subscriber Identity, the unique number identifying the subscriber), a secret authentication key that never leaves the card, and often contacts and SMS messages. The Unisoc T107 has a built-in SIM interface, and the SIM connects to it through a small set of contact pads, power, ground, clock, reset, and a single data line.</p>
+<p>The most important idea is that the SIM is actively participating in authentication, and it does so without ever revealing its secret. When the phone tries to join a network, the tower sends a random challenge number. The phone passes that challenge to the SIM. The SIM runs the challenge together with its hidden key through a cryptographic calculation and returns a response. The network performs the same calculation independently, and if the two responses match, the phone is allowed on. Because the secret key never leaves the card and is never transmitted, the network can confirm the phone is genuine without that key ever being exposed. This is also what makes a SIM portable, move the card to another phone and your identity and number move with it, because the identity was always in the card, not the handset</p>
+</section>
+<section id="rf-and-antenna-system" class="level3">
+<h3 class="anchored" data-anchor-id="rf-and-antenna-system">RF and Antenna System</h3>
+<p>The Radio-Front end in the Baseband processor allows to bridge the gap between modem and physical antennas. RF transceiver IC is the bridge between airwaves and digital world. On the receiving path, it takes the faint antenna signal, mixes it down from gigahertz frequencies to a low frequency the converters can handle and digitizes it.</p>
+<p>On the transmit path it does the reverse, turning the baseband’s digital data into a modulated radio signal. Next to this, We’d find a Power amplifier, which boosts the transmit signal to up to a couple of watts so it can reach a distant cell tower, and the antenna switch or front-end module, which routes signals between the antenna, the PA, and the various receive filters for different frequency bands.</p>
+<p>There’s also SAW filter, Surface Acoustic Wave, which converts an electrical radio signal into a tiny mechanical vibration, filters it in that mechanical domain, then converts it back to electrical. Inside it is a slab of piezoelectric material, and at one end is interdigital transducer. It’s function is to reject everything except the wanted band. The antenna picks up every signal in the air, other cell bands, Wi-Fi, FM radio, the phone’s own powerful transmit signal leaking back. The SAW filter sits in the receive path and passes only the narrow slice of spectrum the phone is actually trying to listen to.</p>
+</section>
+<section id="rf-transceiver-power-amplifier-saw-filter-and-tcxo" class="level3">
+<h3 class="anchored" data-anchor-id="rf-transceiver-power-amplifier-saw-filter-and-tcxo">RF transceiver, power amplifier, SAW filter, and TCXO</h3>
+<p>Next, we have Temperature-Compensated Crystal Oscillator, a temperature-compensated crystal oscillator that provides the ultra stable reference frequency the whole radio is locked to. Without that stable reference, the phone literally couldn’t find or stay on a channel.</p>
+<p>Power Management IC, this is an important component. Different modules in the phone require their own voltage rails, the processor might want 1.2 v, the memory 1.8 V, the RF section 2.8 V. The battery delivers voltage that might fluctuate. The PMIC has regulators switching converters and linear LDOs (Low-Dropout regulators), generate all these rails, plus it manages battery charging, monitors battery voltage and temperature, and sequences power-up so chips turn on in the correct order</p>
+</section>
+</section>
+<section id="audio-system" class="level2">
+<h2 class="anchored" data-anchor-id="audio-system">Audio System</h2>
+<p>The baseband processor and modem inside the SoC can only work with digital numbers, but voice is an analog signal, continuous waves of sound pressure in the air. The phone needs a converter that goes both directions, which is exactly what a <strong>codec</strong> (coder/decoder) does.</p>
+<section id="three-pieces-of-the-audio-system" class="level3">
+<h3 class="anchored" data-anchor-id="three-pieces-of-the-audio-system">Three pieces of the audio system</h3>
+<ul>
+<li><strong>Transducers</strong>:Physical devices that convert between sound and electricity. The earpiece speaker sits at the top of the board, the loudspeaker at the bottom, and the microphone picks up the user’s voice.</li>
+<li><strong>Codec</strong>: The converter electronics. In this phone it’s split between the T107 SoC and the PMIC.</li>
+<li><strong>Amplifiers</strong>: Signal boosters. A quiet one drives the earpiece, a louder one drives the loudspeaker. Both are folded into the same chips as the codec.</li>
+</ul>
+</section>
+<section id="outgoing-audio-voice-to-tower" class="level3">
+<h3 class="anchored" data-anchor-id="outgoing-audio-voice-to-tower">Outgoing audio: voice to tower</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[You speak] --&gt; B[Microphone] --&gt; C["Codec&lt;br/&gt;(amplify + ADC)"]
+    C --&gt; D["DSP&lt;br/&gt;(echo, noise, AGC)"]
+    D --&gt; E[Speech codec&lt;br/&gt;compress]
+    E --&gt; F[Baseband + modem] --&gt; G[RF + antenna]
+
+    style A fill:#e1f5ff
+    style G fill:#d4edda
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The microphone produces a weak analog signal. The codec amplifies it and the ADC digitizes it into numbers. The DSP then cleans it up, cancelling echo so the far end doesn’t hear themselves bounce back, suppressing background noise, and applying automatic gain control so the volume stays even whether the user whispers or shouts. The speech codec compresses the result to a low bitrate, the baseband adds error-correction coding, and the RF stage modulates and transmits it.</p>
+</section>
+<section id="incoming-audio-tower-to-ear" class="level3">
+<h3 class="anchored" data-anchor-id="incoming-audio-tower-to-ear">Incoming audio: tower to ear</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Antenna] --&gt; B[RF demodulate] --&gt; C[Baseband decode]
+    C --&gt; D["Codec DAC&lt;br/&gt;(numbers → analog)"]
+    D --&gt; E[Amplifier] --&gt; F[Earpiece speaker] --&gt; G[Your ear]
+
+    style A fill:#e1f5ff
+    style G fill:#d4edda
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The antenna receives the radio signal, the RF transceiver demodulates it, and the baseband decodes and decompresses the audio numbers. The codec’s DAC converts them back into an analog wave, the amplifier boosts it, and the earpiece speaker turns it into sound.</p>
+</section>
+<section id="why-dsp-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-dsp-matters">Why DSP matters</h3>
+<p>Raw converted audio isn’t good enough on its own. Between the codec and the modem, digital signal processing runs, some in the codec hardware, some on the SoC’s DSP. This is where echo cancellation, noise suppression, automatic gain control, and speech compression happen. Without these steps, calls would be loud or quiet by accident, full of background hum, and too large to send efficiently over the cellular link.</p>
+</section>
+<section id="who-does-what" class="level3">
+<h3 class="anchored" data-anchor-id="who-does-what">Who does what</h3>
+<ul>
+<li><strong>Cortex-A7 CPU</strong>: The manager. It doesn’t touch sound samples directly. It decides whether audio routes to the earpiece or loudspeaker, applies the user’s volume setting, switches to speakerphone, mutes the mic, and plays the ringtone when a call arrives.</li>
+<li><strong>Codec, DSP, and modem</strong>: The workers. They do the actual conversion, cleanup, compression, and transport.</li>
+<li><strong>PMIC</strong>: Supplies the voltage rails the codec and amplifiers run on, and carries part of the codec function itself. Clean power matters here more than almost anywhere else on the board: any electrical noise on an audio amplifier’s supply rail is heard directly as buzz or hiss in the speaker. That’s why sensitive analog audio circuitry often lives inside the PMIC, which is built to deliver quiet, well-regulated power.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/audio.png" class="img-fluid figure-img"></p>
+<figcaption>Audio</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="camera-system" class="level2">
+<h2 class="anchored" data-anchor-id="camera-system">Camera System</h2>
+<p>The rear camera module is the black square component with a circular opening, the opening itself is the lens aperture. Directly below it, the small white square is most likely the LED flash. The module points outward through the back cover, so when the phone is assembled, light from the scene enters through the back camera hole and lands on this module.</p>
+<section id="inside-the-camera-module" class="level3">
+<h3 class="anchored" data-anchor-id="inside-the-camera-module">Inside the camera module</h3>
+<p>Several components work together to turn light into a digital image:</p>
+<ul>
+<li><strong>Lens</strong> :A small fixed-focus optical element at the front. It focuses light from the scene onto the image sensor. Because focus is fixed, there is no autofocus motor.</li>
+<li><strong>IR-cut filter</strong>:Image sensors are sensitive to near-infrared light in addition to visible light, which distorts colors. This filter blocks infrared and passes mostly visible light through to the sensor.</li>
+<li><strong>CMOS image sensor</strong>:The core camera chip. A 2 MP sensor has roughly 2 million photosensitive pixels arranged in a grid.</li>
+<li><strong>Bayer color filter</strong>:A bare sensor cannot distinguish red, green, and blue. Each pixel is covered by a tiny color filter in a Bayer pattern, so color can be reconstructed during processing.</li>
+<li><strong>Readout circuitry</strong>:Reads pixel charge row by row, converts it to digital values, and sends the data to the SoC.</li>
+<li><strong>LED flash</strong>:Controlled by the camera software through the SoC and PMIC, fires a brief, controlled current pulse during capture when needed.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/camera1.png" class="img-fluid figure-img"></p>
+<figcaption>Camera Module</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-full-imaging-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="the-full-imaging-pipeline">The full imaging pipeline</h3>
+<p>From light entering the lens to a photo being saved, the data passes through optics, the sensor, the SoC, and finally storage:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Scene] --&gt; B[Lens] --&gt; C[IR filter] --&gt; D[CMOS sensor] --&gt; E[Readout]
+    E --&gt; F[SoC ISP] --&gt; G{Mode?}
+    G --&gt;|Preview| H[LCD]
+    G --&gt;|Capture| I[JPEG → Storage]
+
+    style A fill:#e1f5ff
+    style H fill:#d4edda
+    style I fill:#d4edda
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="opening-the-camera-app" class="level3">
+<h3 class="anchored" data-anchor-id="opening-the-camera-app">Opening the Camera app</h3>
+<p>The camera is not always on, software has to request it, the power system has to enable it, and only then does the sensor start producing frames.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[App opens] --&gt; B[Cortex-A7] --&gt; C[PMIC powers rails]
+    C --&gt; D[Sensor configured] --&gt; E[Streaming] --&gt; F[LCD preview]
+
+    style A fill:#e1f5ff
+    style F fill:#d4edda
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The Cortex-A7 runs the UI and asks the system to power up the camera. The PMIC turns on the right voltage rails, the SoC configures the sensor, and the sensor begins streaming. Frames flow through the imaging pipeline above and land on the LCD as a live preview.</p>
+</section>
+<section id="pressing-the-capture-key" class="level3">
+<h3 class="anchored" data-anchor-id="pressing-the-capture-key">Pressing the capture key</h3>
+<p>Capture reuses the preview pipeline at full resolution, with storage as the endpoint instead of the display.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Capture key] --&gt; B[Keypad event] --&gt; C[Full-res request]
+    C --&gt; D[Sensor exposes] --&gt; E[ISP runs] --&gt; F[JPEG → microSD]
+
+    style A fill:#e1f5ff
+    style F fill:#d4edda
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The keypad matrix registers the event, the camera app requests a full-resolution frame, the sensor exposes, the SoC processes the pixel data through the same imaging pipeline used for preview, and the finished frame is compressed (typically JPEG) and written to internal storage or microSD.</p>
+</section>
+<section id="inside-image-signal-processing" class="level3">
+<h3 class="anchored" data-anchor-id="inside-image-signal-processing">Inside image signal processing</h3>
+<p>The “SoC ISP” step in the main pipeline is itself a sequence. The raw sensor output is a grid of single-color samples that needs reconstruction and correction before it looks right.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Raw Bayer] --&gt; B[Black level] --&gt; C[Demosaic] --&gt; D[White balance]
+    D --&gt; E[Color correction] --&gt; F[Denoise] --&gt; G[Sharpen]
+    G --&gt; H[Gamma] --&gt; I[JPEG]
+
+    style A fill:#e1f5ff
+    style I fill:#d4edda
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Demosaicing is the most important step: because the Bayer filter means each pixel sees only one color, the processor reconstructs a full RGB image by interpolating from neighboring pixels.</p>
+</section>
+<section id="system-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="system-architecture">System architecture</h3>
+<p>The camera module connects to the rest of the phone through a small set of well-defined interfaces — power, timing, control, and image data.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    CM["Camera modulePower, Clock, I2C, MIPI"]
+    CI[T107 camera interface]
+    IP["ISP + RAM"]
+    LCD[LCD preview]
+    ST[Storage]
+
+    CM --&gt; CI --&gt; IP
+    IP --&gt; LCD
+    IP --&gt; ST
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="who-does-what-1" class="level3">
+<h3 class="anchored" data-anchor-id="who-does-what-1">Who does what</h3>
+<ul>
+<li><strong>Cortex-A7 (application CPU)</strong> — Runs the camera app and UI, handles button events, controls settings, requests capture, manages file saving. Does <em>not</em> manually process pixels.</li>
+<li><strong>Camera sensor</strong> — Captures light and converts it into a digital signal.</li>
+<li><strong>Image pipeline / hardware blocks</strong> — Process raw data, prepare preview frames, compress the final image.</li>
+<li><strong>Storage controller</strong> — Writes the final file to internal storage or microSD.</li>
+</ul>
+</section>
+</section>
+<section id="putting-everything-together" class="level2">
+<h2 class="anchored" data-anchor-id="putting-everything-together">Putting everything together</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/howitworks.png" class="img-fluid figure-img"></p>
+<figcaption>Putting it all together</figcaption>
+</figure>
+</div>
+<section id="how-the-phone-receives-and-sends-images-to-the-display" class="level3">
+<h3 class="anchored" data-anchor-id="how-the-phone-receives-and-sends-images-to-the-display">How the phone receives and sends images to the Display?</h3>
+<p>The application processor and display controller inside the SoC prepare the screen image in memory and send display data to the LCD module. The modem/baseband side is mainly responsible for cellular communication, not for drawing the user interface.</p>
+<ol type="1">
+<li>App - Snake Game</li>
+<li>Operating System which draws the graphics</li>
+<li>Frame buffer in the RAM (SOC chip)</li>
+<li>LCD interface: SPI</li>
+<li>Display driver IC</li>
+<li>TFT pixel matrix</li>
+</ol>
+</section>
+<section id="how-a-display-driver-ic-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-a-display-driver-ic-works">How a Display Driver IC Works?</h3>
+<p>The display driver IC is very important. It converts digital image data into electrical voltages that can scan the display rows and columns. There’s also the copper colored-ribbon cable. It’s a thin, FPC ribbon cable. The ribbon is essential. It carries the following information</p>
+<ol type="1">
+<li>Power supply lines</li>
+<li>Ground</li>
+<li>Display data lines</li>
+<li>Clock/control signals</li>
+<li>Backlight LED power</li>
+<li>Reset signal</li>
+<li>Command/data control</li>
+</ol>
+<p>On the PCB, the display ribbon plugs into a small FPC connector connected to the display interface of the SoC. There’s also the PMIC, Power manager integrated circuit, which manages all the power for the entire unit. The display receives about 2.8 V logic supply.</p>
+</section>
+<section id="what-happens-when-you-make-a-call" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-when-you-make-a-call">What happens when you make a call?</h3>
+<p>During a call, Cortex-A7 is not doing everything alone</p>
+<pre><code>Microphone captures voice
+  ↓
+Audio circuit converts/processes signal
+  ↓
+Baseband/modem processes cellular voice protocol
+  ↓
+RF transceiver/front-end converts to radio signal
+  ↓
+Antenna sends signal to tower</code></pre>
+<p>The Cortex-A7 handles control, software tasks such as</p>
+<p>Call UI Contacts Dialing Network status Audio routing control Power management coordination</p>
+<p>The modem/RF hardware does the specialized cellular work. Both are inside the Unisoc T107 platform.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/call.png" class="img-fluid figure-img"></p>
+<figcaption>Call Process</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-happens-when-you-plug-in-the-charger" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-when-you-plug-in-the-charger">What happens when you plug in the charger?</h3>
+<p>The electrical socket supplies AC power. In the United States, this is usually around 120 V AC. In India and many other countries, it is usually around 230 V AC. This voltage is far too high for a mobile phone. If the phone were connected directly to wall power, it would be destroyed immediately and could be dangerous.</p>
+<p>The charger adapter converts this high-voltage AC into low-voltage DC. Inside the charger, the AC is rectified, switched at high frequency, passed through transformer-based isolation, filtered, and regulated. The output is usually a safe low-voltage DC supply, commonly 5 V for basic USB charging.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/battery3.png" class="img-fluid figure-img"></p>
+<figcaption>Charging Process of Nokia 3210</figcaption>
+</figure>
+</div>
+<p>The USB-C cable carries this low-voltage DC power to the phone. In the cable, the main power lines are called VBUS and GND. VBUS carries positive supply voltage, and GND is the return path.</p>
+<p>USB-C also has configuration pins that help the charger and device detect that a cable is connected. When the USB-C connector is inserted into the phone, power first reaches the input-protection area. This part protects the phone from electrical stress such as static discharge, voltage spikes, reverse current, or unsafe input conditions.</p>
+<p>The PMIC, or power-management integrated circuit, does not simply send charger power straight into the battery. Lithium-ion batteries must be charged carefully.</p>
+<p>The PMIC or battery-charging controller controls the charging current and voltage so the battery does not overheat, overcharge, or become damaged. In the early stage, if the battery is deeply discharged, the charger uses a small current to wake it safely. Then it enters constant-current charging, where the battery receives a controlled current. As the battery voltage approaches full charge, the charger switches to constant-voltage mode. Finally, when the current drops below a safe threshold, charging stops or slows.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/battery1.png" class="img-fluid figure-img"></p>
+<figcaption>Charging Process of Nokia 3210</figcaption>
+</figure>
+</div>
+<p>The battery itself is not just a chemical cell. A removable phone battery usually contains protection circuitry. It may include protection against overcharge, over-discharge, short circuit, and excessive current. Some battery packs also include a temperature-sensing connection so the phone can avoid charging when the battery is too hot or too cold.</p>
+<p>While the battery is charging, the phone may also be running. That means the incoming USB power has two jobs: charge the battery and power the active phone system. The PMIC manages this power distribution. The phone cannot use raw battery voltage directly for every component.</p>
+<p>The battery voltage changes as it discharges. A lithium-ion battery may be around 4.2 V when full and around 3.7 V nominal during normal use. But different parts of the phone need different voltages. The PMIC creates stable voltage rails using switching regulators and LDO regulators. Switching regulators are efficient and useful for larger power conversion. LDO regulators are often used where cleaner, lower-noise power is needed, such as analog audio or sensitive RF circuits. So charging a phone is a controlled power-management process.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/battery2.png" class="img-fluid figure-img"></p>
+<figcaption>Charging Process of Nokia 3210</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-happens-when-you-take-a-picture-using-your-phone" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-when-you-take-a-picture-using-your-phone">What happens when you take a picture using your Phone?</h3>
+<p>When the capture key is pressed, the keypad matrix closes a specific row-column contact, and the GPIO/keypad controller reports this interrupt to the Cortex-A7 CPU inside the Unisoc T107. The camera application then sends control commands to the camera interface and requests the PMIC to enable the required voltage rails for the camera sensor, clock, ISP, RAM, and storage path.</p>
+<p>Light from the scene enters the fixed-focus lens, passes through the IR-cut filter, and reaches the CMOS sensor, where each photosite converts incoming photons into electrical charge. The sensor readout circuitry scans the pixel array row by row and sends raw Bayer-pattern image data to the SoC through the camera interface.</p>
+<p>Inside the Unisoc T107, the image signal processor converts this raw sensor data into a usable image by applying black-level correction, demosaicing, white balance, color correction, denoising, sharpening, and gamma correction. The processed frame is temporarily stored in RAM as a frame buffer, then compressed into a JPEG file and written through the storage controller to internal flash or the microSD card.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/mobilephone/nokia/photoclick.png" class="img-fluid figure-img"></p>
+<figcaption>Clicking a Picture in the Phone</figcaption>
+</figure>
+</div>
+<p>At the same time, the display controller sends the final image or preview frame through the LCD ribbon connector so the captured photo appears on the screen.</p>
+</section>
+</section>
+<section id="sources-and-specification-notes" class="level2">
+<h2 class="anchored" data-anchor-id="sources-and-specification-notes">Sources and specification notes</h2>
+<p>The information in this teardown is based on a combination of public specifications, engineering knowledge of mobile-phone architecture, and direct observation of the Nokia 3210 4G hardware. The public specifications used in this teardown were cross-checked against HMD’s official Nokia 3210 specification page, including the Unisoc T107 platform, 64 MB RAM, 128 MB internal storage, S30+ operating system, USB-C charging, removable battery, and microSD support up to 32 GB.</p>
+<p>Some internal explanations, such as the camera pipeline, PMIC behavior, audio codec path, keypad matrix scanning, and SoC subsystem organization, are engineering-level explanations based on standard mobile-phone architecture rather than a full public schematic of the Nokia 3210 4G motherboard.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><p>Arm Ltd.&nbsp;<em>ARM Cortex-A7 MPCore Processor Technical Reference Manual, DDI0464F</em>.<br>
+<a href="https://developer.arm.com/documentation/ddi0464/f/" class="uri">https://developer.arm.com/documentation/ddi0464/f/</a></p></li>
+<li><p>HMD Global. <em>Nokia 3210 specifications</em>. Official Nokia/HMD product specification page.<br>
+<a href="https://www.hmd.com/en_int/nokia-3210/specs" class="uri">https://www.hmd.com/en_int/nokia-3210/specs</a></p></li>
+<li><p>HMD Global. <em>Nokia 3210 User Guide</em>. Official user guide PDF.<br>
+<a href="https://www.hmd.com/en_gb/support/api/pdf/icon-user-guide?locale=en-GB" class="uri">https://www.hmd.com/en_gb/support/api/pdf/icon-user-guide?locale=en-GB</a></p></li>
+<li><p>Rejeleene, Rick. <em>How does a Mobile Phone Work?</em> Research and Writing, 2026.<br>
+<a href="https://rickrejeleene.me/Tamil/posts/2026-05-13NokiaPhone/index.html" class="uri">https://rickrejeleene.me/Tamil/posts/2026-05-13NokiaPhone/index.html</a></p></li>
+<li><p>UNISOC. <em>T107: Cat.1 Multimode Chipset for Mainstream Feature Phones</em>.<br>
+<a href="https://www.unisoc.com/en/product/FeaturePhoneUS/T107" class="uri">https://www.unisoc.com/en/product/FeaturePhoneUS/T107</a></p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ludwigwittgenstein2\.github\.io\/Tamil\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
