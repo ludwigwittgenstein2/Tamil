@@ -1,0 +1,36 @@
+/* Figure wrapper: stack image-row above caption */
+.image-container,
+.tool-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5em 0;
+}
+
+/* The horizontal image row */
+.image-row,
+.image-tools {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Caption below */
+.image-container figcaption,
+.tool-figure figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Keep images responsive */
+.image-row img,
+.image-tools img {
+  max-width: 100%;
+  height: auto;
+}
