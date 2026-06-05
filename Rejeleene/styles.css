@@ -1,3 +1,6 @@
+/* Load the same fonts the contact page uses */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Raleway:wght@400;600&family=Oxygen&display=swap');
+
 /* remove gradient */
 .listing-banner {
   background: none !important;
@@ -16,4 +19,88 @@ figcaption {
 
 .math-left .math.display {
   text-align: left !important;
+}
+
+/* ===== Header: match contact page exactly (dark bar, light text) ===== */
+.navbar {
+  background-color: #626262 !important;
+  border-bottom: 1px solid #0a304e !important;
+}
+
+/* Site title — "Marcellus SC", small-caps, like the contact page brand */
+.navbar .navbar-brand,
+.navbar .navbar-title {
+  color: #e1e1e1 !important;
+  font-family: "Marcellus SC", serif !important;
+  font-variant: small-caps;
+  font-size: 150%;
+}
+
+/* Nav links — Raleway small-caps, light text */
+.navbar .nav-link {
+  color: #e1e1e1 !important;
+  font-family: "Raleway", sans-serif !important;
+  font-variant: small-caps;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #c9c9c9 !important;
+}
+
+/* Home / Facebook / LinkedIn icons are also nav links — keep them light */
+.navbar .navbar-nav .nav-link i,
+.navbar .quarto-navbar-tools .nav-link,
+.navbar .navbar-nav .nav-link {
+  color: #e1e1e1 !important;
+}
+
+body {
+  background-color: #f0efe7 !important;
+  font-family: Oxygen, "Lucida Grande", Helvetica, Arial, sans-serif !important;
+}
+
+/* ===== Pagination: match the dark theme ===== */
+.pagination .page-link {
+  color: #626262 !important;            /* number color on white boxes */
+  border-color: #d9d9d9 !important;
+}
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+  color: #000000 !important;
+  background-color: #f0efe7 !important; /* matches your cream body bg */
+}
+
+/* the current/active page box */
+.pagination .active .page-link,
+.pagination .page-item.active .page-link {
+  background-color: #626262 !important; /* dark fill, same as navbar */
+  border-color: #626262 !important;
+  color: #ffffff !important;            /* white number */
+}
+
+/* ===== Mailchimp subscribe form: match the theme ===== */
+#mc_embed_signup,
+.mc_embed_signup {
+  background: #f0efe7 !important;   /* cream, same as body — kills the white card */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* the email input box (the inner white field) */
+#mc_embed_signup input.email,
+.mc_embed_signup input.email {
+  background-color: #ffffff !important;  /* keep white so people can read what they type */
+  border: 1px solid #626262 !important;  /* dark border to tie it in */
+  color: #333 !important;
+}
+
+/* the Subscribe button — match the dark navbar */
+#mc_embed_signup .button,
+.mc_embed_signup input.button {
+  background-color: #626262 !important;
+  color: #e1e1e1 !important;
+}
+#mc_embed_signup .button:hover,
+.mc_embed_signup input.button:hover {
+  background-color: #000000 !important;
 }

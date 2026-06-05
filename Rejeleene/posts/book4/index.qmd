@@ -1,29 +1,30 @@
 ---
-title: 'Book Summary: How Asia Works by Joe Studwell'
-author: Rick Rejeleene
-date: '2022-12-01'
+title: "Book Summary: How Asia Works by Joe Studwell"
+author: "Rick Rejeleene"
+date-format: "MMMM D, YYYY"
+date: "2022-12-01"
+
 categories:
-  - Economics 
+  - Economics
   - Tamil Nadu
   - Asia
+
 draft: false
-description: 'How Free-Market is not the way to go for Developing Countries'
-image: ""
-archives:
-  - 2022/12
-toc: true
-toc-depth: 2
-toc-location: left
-toc-title: Contents
-echo: false 
-  
-format: 
-  html: 
+description: "How Free-Market is not the way to go for Developing Countries"
+
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    toc-title: "Contents"
     code-fold: show
     code-tools: false
     code-link: false
----
 
+execute:
+  echo: false
+---
 
 ```{python}
 
@@ -41,11 +42,14 @@ Image(url= "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.go
 
 
 A Superb work to further my understanding on Political Economy. 
-I came to this book, seeking answers for questions in, How can Tamil Nadu modernize itself?
+I came to this book, seeking answers for question of modernization.
+
+1. How can Tamil Nadu modernize itself?
 
 Ask an average Tamil, he might give answers like, wearing western clothes, jeans, speaking english, buying toys [iPhones, Cars, T.V, Laptop, Internet] is considered to be modern.
 
-Perhaps, I am one of the few Tamils around the Globe, and within Tamil Nadu to have taken serious interest in the question, 
+Perhaps, I am one of the few Tamils around the Globe, and within Tamil Nadu to have taken serious interest in the question.
+
 
 **"How can Tamil Nadu move towards High-Income State?""**
 
@@ -59,27 +63,27 @@ Recall, Meiji Era lead towards fast paced modernization of Japan. During process
 This work filled few own gaps of my understanding in Political History. English East India Company followed economic policy of mercantilism, meaning maximize exports, minimize imports. This had serious consequences such as introducing poppy into China and imperialism, where England could maintain more exports.
 Although, Many Writers have stated, Mercantilism lead British to Global Superpower at one point in History. It is not clear to me, exactly what happened? Britain only embraced, Free Trade around late 1800s, started promoting Free-trade to other nations.
 
-Majority of Economic Historians have agreed that it was due to EIC and British in India, India lost their wealth. Even though majority might state this view, I tried to look into alternative views and evidence. A minority of Economic Historians state, India was already on the path of poverty, the British happen to accelerate it. From this work -- it seems Historically, Nations have protected their industries, it is not clear, what combination or how much it is to be protected?
+Majority of Economic Historians have agreed that it was due to EIC and British in India, India lost their wealth. Even though majority might state this view, I tried to look into alternative views and evidence. A minority of Economic Historians state, India was already on the path of poverty, the British happen to accelerate it. From this work, it seems Historically, Nations have protected their industries, it is not clear, what combination or how much it is to be protected?
 
 ## What is the meat of this work?
 
 Joe shares how Asian Economics pursued policies leading the path towards becoming Rich. 
 
-Answer lies in On Page 189:
+**Answer lies in On Page 189:**
 
 Joe lays out as one, two, three steps based on Historical Review of Asia.
 
-> a. Household Farming — land redistribution (small farmers work on small plots, increasing productivity)
-  b. Export Discipline — focusing on leading exports at global scale, giving subsidies contingent upon future
+> a. Household Farming: land redistribution (small farmers work on small plots, increasing productivity)
+  b. Export Discipline: focusing on leading exports at global scale, giving subsidies contingent upon future
   c. Finance which supports the above two, Household farming and Export Discipline 
 
- Bouke van der Bijl says the following, Studwell distills his extensive research into the economies of nine countries—Japan, South Korea, Taiwan, Indonesia, Malaysia, Thailand, the Philippines, Vietnam, and China—into an accessible, readable narrative that debunks Western misconceptions, shows what really happened in Asia and why, and for once makes clear why some countries have boomed while others have languished.
+ Bouke van der Bijl says the following, Studwell distills his extensive research into the economies of nine countries. The countries are Japan, South Korea, Taiwan, Indonesia, Malaysia, Thailand, the Philippines, Vietnam, and China. It's condensed into an accessible, readable narrative that debunks Western misconceptions, shows what really happened in Asia and why, and for once makes clear why some countries have boomed while others have languished.
 
 If Studwell is right, much of the debate over free markets vs. govt. intervention, or mercantilism vs. free trade, or financial discipline vs. profligacy, is a useless distraction for poor countries. The winning strategy is something that economists don't even have a name for.
 
 ## Here's How: 
 
-1. Agricultural development -- When a country is underdeveloped and labor is cheap, it should redistribute farmland to small household farms, and make sure that this is done in a sound way such that the land can’t just be accumulated under one landlord again. 
+1. Agricultural development, When a country is underdeveloped and labor is cheap, it should redistribute farmland to small household farms, and make sure that this is done in a sound way such that the land can’t just be accumulated under one landlord again. 
 
 The reason is that ‘gardening’-style farming as done on such farms, while labor-intensive is much more productive per hectare than large-scale mechanized farming. This will lead to a surplus in yields, which will lead to profits for the families, which they can then re-invest in their farms or use to improve their own living conditions. 
 
@@ -104,6 +108,7 @@ My own thoughts after reading this work:
   b. I am reminded of Edmund Burke
   c. Burke stated politics was concrete policies managing interest groups desires and not resorting to abstract theories
 
+My future Essays would try to answer this question. 
 
 ---
 

@@ -5,10 +5,12 @@ project:
     - images/**
 
 website:
-  title: "Research"
+  title: "Notebook of Rick Rejeleene"
   description: "AI, economics, history, and machine-learning insights by Rick Rejeleene."
   navbar:
     search: true
+    background: "#626262"
+    foreground: "#e1e1e1"
     right:
       - icon: house-door-fill
         href: http://rickrejeleene.me/

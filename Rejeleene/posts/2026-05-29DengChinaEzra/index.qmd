@@ -121,7 +121,7 @@ Ezra Vogel’s *Deng Xiaoping and the Transformation of China* is a political, e
 
 ### Map: China in the 1980s {#map-china-in-the-1980s}
 
-![Chinese People in 1980](/images/japan/ezra/china/china1980.png){#fig-twopaths fig-alt="Chinese People in 1980" width="65%"}
+![China in 1980](/images/japan/ezra/china/china1980.png){#fig-twopaths fig-alt="China in 1980" width="65%"}
 
 ### Preface: In Search of Deng {#preface-in-search-of-deng}
 
@@ -591,7 +591,7 @@ For example, a Civic Sense issue, Infrastructure issue's solution can be tested 
 
 The reason why India [@kapur2020india] has stroke of pen schemes such as free LPG connections, free bicycles, free laptops, free smartphones, free education, free healthcare, and so on is because these are easy to announce and easy to deliver. But the outcomes of these schemes are often not measured or secured, validate. Matt Andrews, Lant Pritchett and Michael Woolcock [@andrews2017building] are Public Policy experts and Social Scientists, who call Indian state as isomorphic mimicry, which means the state has documents, agencies, rules, and procedures, but without the underlying function, that makes those institutions work. 
 
-![India's current challenge](/images/japan/ezra/china/india.png){#fig-twopaths fig-alt="India's challenges" width="65%"}
+![India's current challenge](/images/japan/ezra/china/India.png){#fig-twopaths fig-alt="India's challenges" width="65%"}
 
 ## Lesson 3: Rebuild Human Capital and Learn from the World
 
