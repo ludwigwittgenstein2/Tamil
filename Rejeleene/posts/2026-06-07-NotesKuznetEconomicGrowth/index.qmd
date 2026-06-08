@@ -27,7 +27,7 @@ This means population, production, technology, agriculture, industry, cities, ca
 
 ### Structure of the Book
 
-![Kuznet's Theory of Economic Growth](/images/economics/Kuznets/bookcover.png){#fig-kuznets-bookcover fig-alt="Kuznet's Theory of Economic Growth" width="45%"}
+![Kuznet's Theory of Economic Growth](/images/economics/Kuznets/BookCover.png){#fig-kuznets-bookcover fig-alt="Kuznet's Theory of Economic Growth" width="45%"}
 
 This book contains two essays, Kuznets says the first essay gives a broad quantitative view of economic growth, while the second essay reflects more on non-quantitative aspects: institutions, values, politics, and social organization. This matters because he is not treating growth as a narrow GDP problem. 
 He is saying that measured output is central, but measured output itself depends on deeper changes in society. 
