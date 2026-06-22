@@ -9,6 +9,9 @@ toc: true
 categories:
   - Urban Planning
   - Netherlands
+  - Tamil Nadu 
+  - Finance
+  - Engineering
 bibliography: references.bib
 link-citations: true
 format: 
