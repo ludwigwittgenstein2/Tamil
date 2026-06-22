@@ -370,7 +370,7 @@ Acts as a tiny secure computer. It holds your network identity and a secret cryp
 <p>Instead, the network sends the SIM a random challenge. The SIM uses its secret key to calculate an answer. The carrier does the same calculation on its side. If both answers match, the network accepts the phone.</p>
 <p>This is called <strong>challenge-response authentication</strong>.</p>
 <p>A simplified version looks like this:</p>
-<div id="0766e3a9" class="cell" data-execution_count="1">
+<div id="cf08d441" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hmac</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hashlib</span>
@@ -424,9 +424,9 @@ Acts as a tiny secure computer. It holds your network identity and a secret cryp
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Authentication failed: SIM is rejected."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Network challenge: 33a8dfbf1da7b058c75181cb3f9ab48f
-SIM answer: 0b08fdd0a380299f18da72aed732bd61ba0b0a43d5fddd7184fea781583284ac
-Carrier expected answer: 0b08fdd0a380299f18da72aed732bd61ba0b0a43d5fddd7184fea781583284ac
+<pre><code>Network challenge: dd7b4c5c6deecb329e527567a8e7eff3
+SIM answer: b1c7fe89354eb9f7070c36ea37f5a77521ab64d8cc67f8f399d68de124292610
+Carrier expected answer: b1c7fe89354eb9f7070c36ea37f5a77521ab64d8cc67f8f399d68de124292610
 Authentication successful: SIM is accepted.</code></pre>
 </div>
 </div>
@@ -1182,7 +1182,7 @@ Antenna switch
 Antenna
    ↓
 Radio waves</code></pre>
-<p>The baseband processor creates the digital signal, The RF transceiver converts it into a radio-frequency signal. Filters remove unwanted frequencies. The power amplifier increases the signal strength. The antenna switch routes the signal to the correct antenna path. Then the antenna radiates the signal as electromagnetic waves.</p>
+<p>The baseband processor creates the digital signal. The RF transceiver converts it into a radio-frequency signal. Filters remove unwanted frequencies. The power amplifier increases the signal strength. The antenna switch routes the signal to the correct antenna path. Then the antenna radiates the signal as electromagnetic waves.</p>
 <p>On the receiving end, the path is reversed:</p>
 <pre class="text"><code>Radio waves
    ↓
@@ -1200,7 +1200,11 @@ Baseband processor</code></pre>
 <p>The low-noise amplifier is important because the signal received from the tower can be extremely weak. The phone has to amplify it without adding too much noise. This is why a phone PCB has many small RF components near the antenna area: filters, amplifiers, switches, matching networks, and shielded RF sections.</p>
 <p><strong>Network Generation View:</strong></p>
 <p>Different mobile network generations changed what the phone had to do.</p>
-<p>2G / GSM → voice and SMS were central 3G → better data and mobile internet 4G / LTE → packet-based internet architecture VoLTE → voice becomes IP-based voice 5G → higher speed, lower latency, more flexible network design</p>
+<pre class="text"><code>2G / GSM  → voice and SMS were central
+3G        → better data and mobile internet
+4G / LTE  → packet-based internet architecture
+VoLTE     → voice becomes IP-based voice
+5G        → higher speed, lower latency, more flexible network design</code></pre>
 <p>In 2G phones, voice and SMS were the main functions. In 3G, mobile internet became more important. In 4G LTE, the network became more like an all-IP data network. Voice over LTE, or VoLTE, sends voice as packet data instead of using the older circuit-switched voice model. In 5G, the network is designed for higher bandwidth, lower latency, and more flexible use cases. So when we compare phones from different generations, we are not only comparing speed. We are comparing different communication architectures.</p>
 </section>
 <section id="frequency-bands-and-duplexing" class="level2">
@@ -1250,7 +1254,8 @@ Many 5G bands, Wi-Fi
 </section>
 <section id="the-clock-tcxo" class="level2">
 <h2 class="anchored" data-anchor-id="the-clock-tcxo">The Clock: TCXO</h2>
-<p>Cellular communication depends on timing. The phone and the tower must stay synchronized. If the phone transmits too early or too late, its signal may interfere with other users or miss its assigned time slot. A regular quartz crystal can drift with temperature. A phone may be used in a hot car, a cold pocket, or under heavy processor load. Temperature changes can slightly change the clock frequency. To solve this, phones use a <strong>TCXO</strong>, or <strong>Temperature-Compensated Crystal Oscillator</strong>. A TCXO is a quartz crystal combined with compensation circuitry. It adjusts for temperature changes and provides a stable reference clock for the modem and RF system. On the PCB, the TCXO is usually a small metal-cased component near the modem or RF section. Without a stable clock, the phone cannot reliably maintain synchronization with the cellular network. Timing, frequency accuracy, tower communication, and handover all depend on this reference.</p>
+<p>Cellular communication depends on timing.The phone and the tower must stay synchronized. If the phone transmits too early or too late, its signal may interfere with other users or miss its assigned time slot. A regular quartz crystal can drift with temperature. A phone may be used in a hot car, a cold pocket, or under heavy processor load. Temperature changes can slightly change the clock frequency.</p>
+<p>To solve this, phones use a <strong>TCXO</strong>, or <strong>Temperature-Compensated Crystal Oscillator</strong>. A TCXO is a quartz crystal combined with compensation circuitry. It adjusts for temperature changes and provides a stable reference clock for the modem and RF system. On the PCB, the TCXO is usually a small metal-cased component near the modem or RF section. Without a stable clock, the phone cannot reliably maintain synchronization with the cellular network. Timing, frequency accuracy, tower communication, and handover all depend on this reference.</p>
 </section>
 <section id="power-path-and-the-pmic" class="level2">
 <h2 class="anchored" data-anchor-id="power-path-and-the-pmic">Power Path and the PMIC</h2>

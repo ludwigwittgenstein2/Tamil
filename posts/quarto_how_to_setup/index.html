@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Rick Rejeleene">
 <meta name="description" content="A review of Quarto, the potenial successor to R Markdown">
-
 <title>Quarto: How to setup your Blog – Notebook of Rick Rejeleene</title>
 <style>
 code{white-space: pre-wrap;}
@@ -79,7 +76,6 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -96,8 +92,7 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -123,18 +118,12 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="../../styles.css">
+}</script><link rel="stylesheet" href="../../styles.css">
 </head>
-
 <body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Notebook of Rick Rejeleene</span>
@@ -146,7 +135,7 @@ div.csl-indent {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="http://rickrejeleene.me/"> <i class="bi bi-house-door-fill" role="img">
 </i> 
 <span class="menu-text"></span></a>
@@ -162,21 +151,16 @@ div.csl-indent {
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Contents</h2>
    
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+<li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#code-chunk-options" id="toc-code-chunk-options" class="nav-link" data-scroll-target="#code-chunk-options">Code Chunk Options</a></li>
   <li><a href="#code-folding" id="toc-code-folding" class="nav-link" data-scroll-target="#code-folding">Code-folding</a></li>
@@ -185,10 +169,8 @@ div.csl-indent {
   <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of contents</a></li>
   <li><a href="#quarto-vs-blogdown" id="toc-quarto-vs-blogdown" class="nav-link" data-scroll-target="#quarto-vs-blogdown">Quarto vs Blogdown</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+  </ul></nav>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <!-- subscribe.html — simplified, no-JS Mailchimp form -->
@@ -198,25 +180,22 @@ div.csl-indent {
     <div class="mc-field-group">
       <label for="mce-EMAIL">Email Address</label>
       <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
-    </div>
+</div>
 
     <!-- honeypot — DO NOT remove, Mailchimp needs it for bot protection -->
     <div style="position: absolute; left: -5000px;" aria-hidden="true">
       <input type="text" name="b_1f588641ad0b06cbeecabd12b_ca6e7ad445" tabindex="-1" value="">
-    </div>
+</div>
 
     <div>
       <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-    </div>
+</div>
   </form>
 </div>
 </div></div>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Quarto: How to setup your Blog</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
   <div class="quarto-categories">
     <div class="quarto-category">Tutorial</div>
@@ -256,35 +235,23 @@ div.csl-indent {
   
 
 
-</header>
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+</header><section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>RMarkdown has been a staple for any Data Scientist that programs in <code>R</code>. <code>Quarto</code> builds on that, with multiple language support and additional features. Because of its language independent design, <code>Quarto</code> requires an independent installation. <span class="citation" data-cites="quarto">(<a href="#ref-quarto" role="doc-biblioref"><span>“Quarto,”</span> n.d.</a>)</span></p>
 <p>I have spent the past week moving my blog from <code>blogdown</code> to <code>quarto</code>. There have been some challenges, but I am pretty happy with the new look. Let’s start with the setup, it’s a little more work than a regular package or module.</p>
-</section>
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+</section><section id="setup" class="level2"><h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>The setup for Quarto is pretty simple. You will need to visit the quarto website to <a href="https://quarto.org/docs/get-started/">download</a> the Quarto Command Line Interface (CLI). There are step-by-step instructions for your selected text editor. I am most familiar with RStudio for <code>R</code> and VSCode for <code>Python</code>.</p>
 <p>For Rstudio, it’s pretty much just plug and play now. I did install the <code>Quarto</code> package, but all the commands can be done by the command line interface. Switching from <code>RMarkdown</code> is as simple as saving them as <code>qmd</code> file. The process for Quarto for RStudio can be described by the following process flow:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/rstudio-qmd-how-it-works.png" class="img-fluid figure-img"></p>
-<figcaption>Render qmd in RStudio</figcaption>
-</figure>
+<figure class="figure"><p><img src="images/rstudio-qmd-how-it-works.png" class="img-fluid figure-img"></p>
+<figcaption>Render qmd in RStudio</figcaption></figure>
 </div>
 <p>It is not much more difficult for VSCode, all you need to do is download the Quarto extension. The process flow is similar to RStudio but uses Jupyter instead of knitr.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/qmd-how-it-works.png" class="img-fluid figure-img"></p>
-<figcaption>Render qmd for VSCode</figcaption>
-</figure>
+<figure class="figure"><p><img src="images/qmd-how-it-works.png" class="img-fluid figure-img"></p>
+<figcaption>Render qmd for VSCode</figcaption></figure>
 </div>
 <p>With the setup complete, there should be no differences between text editors.</p>
-</section>
-<section id="code-chunk-options" class="level2">
-<h2 class="anchored" data-anchor-id="code-chunk-options">Code Chunk Options</h2>
+</section><section id="code-chunk-options" class="level2"><h2 class="anchored" data-anchor-id="code-chunk-options">Code Chunk Options</h2>
 <p>The first new feature to explore the support for code chuck options within the code chunks. These options would usually live within the code chunk title line. Any supported option can be added with the <code>#|</code> tag. This feature is useful for situations with many options, as it does increase readability.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load</span></span>
@@ -294,30 +261,22 @@ div.csl-indent {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"msleep"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="code-folding" class="level2">
-<h2 class="anchored" data-anchor-id="code-folding">Code-folding</h2>
+</section><section id="code-folding" class="level2"><h2 class="anchored" data-anchor-id="code-folding">Code-folding</h2>
 <p>One of the neat new features is code-folding. When this feature is enabled in the qmd YAML, the person viewing the document can hide/unhide code chunks. This can make it easier for them to read the document. Only the code will be hidden, and not the results.</p>
 <div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(msleep)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">msleep</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>This feature is enabled by making the following addition to the YAML. You would change the format from HTML to your required format, such as PDF.</p>
 <div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  html<span class="sc">:</span> </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    code<span class="sc">-</span>fold<span class="sc">:</span> true</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    code<span class="sc">-</span>tools<span class="sc">:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">format</span><span class="op">:</span> </span>
+<span>  <span class="va">html</span><span class="op">:</span> </span>
+<span>    <span class="va">code</span><span class="op">-</span><span class="va">fold</span><span class="op">:</span> <span class="va">true</span></span>
+<span>    <span class="va">code</span><span class="op">-</span><span class="va">tools</span><span class="op">:</span> <span class="va">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>With the addition of the <code>code-tools: true</code> parameter, the reader can decide to hide all code chunks from the top of the document.</p>
-</section>
-<section id="figures" class="level2">
-<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+</section><section id="figures" class="level2"><h2 class="anchored" data-anchor-id="figures">Figures</h2>
 <p>Quarto provides a bunch of additional tools for displaying figures. You can assign values for captions, sub-captions, width and height. You can even create a figure with multiple plots with separate sub-captions.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-sleep</span></span>
@@ -341,98 +300,75 @@ div.csl-indent {
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="fig-sleep" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sleep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-sleep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sleep" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div id="fig-sleep-1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-sleep-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-sleep-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-sleep-1.png" class="img-fluid figure-img" data-ref-parent="fig-sleep" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sleep-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Scatter plot of body weight by total sleep
-</figcaption>
-</figure>
+</figcaption></figure>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-sleep" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div id="fig-sleep-2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-sleep-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-sleep-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-sleep-2.png" class="img-fluid figure-img" data-ref-parent="fig-sleep" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sleep-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Violin plot of REM sleep by vore
-</figcaption>
-</figure>
+</figcaption></figure>
 </div>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sleep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Sleeping habits of animals
-</figcaption>
-</figure>
+</figcaption></figure>
 </div>
 <p>You can now use cross-referencing for the figure by referencing the figure. This means that in your text, you can refer to the figure number and link to the figure. This will automatically update your figure numbers and is achieved by typing the ‘@’ symbol followed by the figure label. As an example, ‘@fig-sleep’ turns into <a href="#fig-sleep" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <p>There is an additional option to let the figures take up the width of the entire page, but I would not recommend using it as it extends beyond the width of the body of your page. It requires the following code:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: page</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="code-linking" class="level2">
-<h2 class="anchored" data-anchor-id="code-linking">Code Linking</h2>
+</section><section id="code-linking" class="level2"><h2 class="anchored" data-anchor-id="code-linking">Code Linking</h2>
 <p>A reader may not be familiar with all the functions that you use in your document, so it may be useful to enable code linking. With code linking, a function in a code chunk will have a hyperlink to the documentation for that function. To work in <code>R</code>, this feature requires the <code>xml2</code> and <code>downlit</code> packages.</p>
 <div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="fu">as.factor</span>(order) <span class="sc">~</span> sleep_total, <span class="at">data =</span> msleep[<span class="fu">complete.cases</span>(msleep),] )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">order</span><span class="op">)</span> <span class="op">~</span> <span class="va">sleep_total</span>, data <span class="op">=</span> <span class="va">msleep</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/stats/complete.cases.html">complete.cases</a></span><span class="op">(</span><span class="va">msleep</span><span class="op">)</span>,<span class="op">]</span> <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="table-of-contents" class="level2">
-<h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
+</section><section id="table-of-contents" class="level2"><h2 class="anchored" data-anchor-id="table-of-contents">Table of contents</h2>
 <p>I think the best feature for <code>Quarto</code> is the floating table of contents. I can’t describe how much time and effort I’ve spent trying to get a floating table of contents in a <code>Blogdown</code> blog. It didn’t work for me, it would require getting deep into the weeds changing the CSS layout for my HUGO theme. It was not worth the effort.</p>
 <p>Adding a floating table of contents in <code>Quarto</code> is simple. Just use the following code in the document YAML:</p>
 <div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">:</span> <span class="cn">TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">toc</span><span class="op">:</span> <span class="cn">TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>One simple line of code in the YAML and your document has a floating table of contents. There is some additional customization such as the level of headers, location and title.</p>
 <div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">:</span> true</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">-</span>depth<span class="sc">:</span> <span class="dv">2</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">-</span>location<span class="sc">:</span> left</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">-</span>title<span class="sc">:</span> Contents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">toc</span><span class="op">:</span> <span class="va">true</span></span>
+<span><span class="va">toc</span><span class="op">-</span><span class="va">depth</span><span class="op">:</span> <span class="fl">2</span></span>
+<span><span class="va">toc</span><span class="op">-</span><span class="va">location</span><span class="op">:</span> <span class="va">left</span></span>
+<span><span class="va">toc</span><span class="op">-</span><span class="va">title</span><span class="op">:</span> <span class="va">Contents</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="quarto-vs-blogdown" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-vs-blogdown">Quarto vs Blogdown</h2>
+</section><section id="quarto-vs-blogdown" class="level2"><h2 class="anchored" data-anchor-id="quarto-vs-blogdown">Quarto vs Blogdown</h2>
 <p>With my experimentation with Quarto, I decided to move my <code>blogdown</code> blog to <code>Quarto</code>. In theory, this should be a simple switch, with just copying all post from folder to another. <code>Quarto</code> can use rmd files, but they can easily be changed over to qmd files. I decided to switch all my post to the qmd format and include some additional features. The Quarto site has extensive reference information for creating a blog. <span class="citation" data-cites="quarto">(<a href="#ref-quarto" role="doc-biblioref"><span>“Quarto,”</span> n.d.</a>-)</span></p>
 <p>I did have an issue with one of my post not rendering correctly. This maybe an issue with compatibility with the <code>stargazer</code> package. In the end, I decided to just remove the post altogether as I could get it to render correctly, and I prefer the <code>gt</code> over the <code>stargazer</code> package for creating good-looking tables.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+</section><section id="conclusion" class="level2"><h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>It is easy to create great looking documents using <code>quarto</code>, whether that be with code in <code>python</code> or <code>R</code>. <code>Quarto</code> supports most of the features in <code>RMarkdown</code> with some fancy new ones. My personal favourite is the floating table of contents. I have also found that rendering a <code>Quarto</code> blog is a much smoother experience than rendering a <code>blogdown</code> blog.</p>
 
 
 <!-- -->
 
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-quarto" class="csl-entry" role="listitem">
 <span>“Quarto.”</span> n.d. <a href="https://quarto.org/">https://quarto.org/</a>.
 </div>
-</div></section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1076,7 +1012,6 @@ Figure&nbsp;1: Sleeping habits of animals
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-
 
 
 
