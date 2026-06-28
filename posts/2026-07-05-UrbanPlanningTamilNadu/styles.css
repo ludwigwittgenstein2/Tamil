@@ -1,0 +1,31 @@
+.callout.callout-inversion {
+  border-left-color: #2e7d32;
+}
+
+.callout.callout-inversion .callout-header {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.callout.callout-inversion .callout-body {
+  background-color: #f6fbf6;
+}
+
+/* Leaflet map controls and labels */
+.leaflet-control-layers {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  padding: 10px 14px !important;
+  background: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+.leaflet-control-layers label {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 4px !important;
+}
+.leaflet-control-layers-overlays { line-height: 1.8 !important; }
+.leaflet-popup-content,
+.leaflet-container { font-size: 15px !important; }
