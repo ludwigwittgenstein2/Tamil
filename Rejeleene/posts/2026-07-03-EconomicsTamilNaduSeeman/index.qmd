@@ -1,0 +1,158 @@
+---
+title: "Why an Agriculture-Centric Economic Model Is Unworkable?"
+author: "Rick Rejeleene"
+date: 2026-07-04
+date-format: "MMMM D, YYYY"
+toc: true
+format:
+  html:
+    css: styles.css
+bibliography: references.bib
+csl: ieee.csl
+link-citations: true
+description: |
+  A review of Thiru Seeman's agriculture-centric economic model for Tamil Nadu, highlighting its impracticality in modern economic development.
+categories: [Tamil Nadu, Economics, Agriculture, Development]
+---
+
+# Introduction
+
+In this post, I respond and answer a popular question on Agriculture centered economy, and belief among many Tamil People. 
+I decided to write this post after discussions, engaging with many Tamils and their belief of Agriculture as economic engine. 
+
+Many have experienced lakes, ponds being encroached, number of farmers being reduced, water scarcity and agriculture being in decline. 
+This has led to nostalgia and romanticization of agriculture. We also notice, the rise of Tamil Nadu's economy, and the growth of middle class, and the rise of services and industry.
+
+This post focuses only on the agriculture-centered economic claim, not on every policy position of Thiru Seeman.
+Thiru Seeman is a popular Tamil politician who leads Naam Tamilar Katchi (NTK), a Tamil nationalist political party.
+
+For Tamil people, farming carries deep emotional and cultural meaning. I understand that feeling, because many of us grew up hearing that farming is the foundation of life, dignity, food security, and Tamil identity. Certainly, Agriculture deserves respect. Farmers deserve higher income, water security, market access, insurance, storage, technology, and fair prices.
+
+But respect for agriculture is not the same as making agriculture the central engine of a modern economy, especially for Tamil Nadu. 
+I gently disagree with Thiru Seeman's vision of an agriculture-centric economy for the state.
+
+His model sounds emotionally attractive because it speaks of farmers, land, water, native cattle, natural farming, village self-reliance, and dignity of labour. Public reports from his campaign have also described proposals such as making agriculture and cattle-rearing government employment [[1]](#ref-1).
+
+These ideas may appeal emotionally, romantically and culturally. But as a state-level economic model for Tamil Nadu, they raise serious, unworkable practical problems.
+
+# From History: No Society Grew Rich by Staying Agrarian
+
+Agriculture usually produces lower income per worker than manufacturing and services. This has been the broad trajectory of economic development since the Industrial Revolution. Regions and countries that wanted to escape poverty did not ask most people to remain in agriculture forever. They industrialized, built infrastructure, developed manufacturing, improved finance, expanded education, and moved surplus labour into higher-productivity sectors [[2]](#ref-2).
+
+A good historical example is Sergei Witte, the Russian Finance Minister from 1892 to 1903. Nineteenth-century Russia was still largely agrarian, backward in infrastructure, and dependent on agriculture. Witte understood that a great country could not remain trapped in a peasant agricultural economy. He pushed for railways, foreign capital, banking reform, industrial investment, protective tariffs, technical education, and the Trans-Siberian Railway. His goal was not merely to protect Russian agriculture, but to build the productive capacity of the Russian state [[9]](#ref-9).
+
+I have written separately about this in my essay on Russian industrialization, where I argued that Russia's modernization began by breaking from a forced agricultural order and then using state-led industrial policy to mobilize capital, railways, tariffs, and heavy industry [[10]](#ref-10).
+
+The lesson for Tamil Nadu is clear: societies that want to become powerful do not romanticize agrarian backwardness. They modernize agriculture while also building industry, infrastructure, science, technology, and human capital.
+
+Across successful economies, development has meant improving agriculture while moving surplus labour into higher-productivity sectors such as manufacturing, construction, logistics, healthcare, education, finance, technology, tourism, and professional services [[2]](#ref-2). The goal is to leave fewer people trapped in low-income farming, while those who remain in agriculture become more productive and better paid.
+
+Tamil Nadu should learn from Japan, Taiwan, the Netherlands, and other successful economies. These societies did not become prosperous by keeping most people in agriculture. They invested in human capital, industrial capability, infrastructure, technology, exports, and institutional capacity. Agriculture remained important, but it was never treated as the sole foundation of national prosperity.
+
+# Tamil Nadu's Economy Today: Services and Industry Lead
+
+Tamil Nadu's economy is driven by services and industry, which is why the state has a large middle class able to consume goods and services.
+
+In 2024–25, Tamil Nadu's primary sector contributed only about 13.4% of Gross State Value Added, while the secondary sector contributed about 33.1% and services about 53.6% [[3]](#ref-3). Agriculture alone was reported at about 6.6% of GSVA, while manufacturing, services, exports, urban enterprise, education, healthcare, logistics, automobiles, electronics, textiles, and IT are central to Tamil Nadu's growth [[4]](#ref-4).
+
+Tamil Nadu's higher living standards are linked to this structural transformation. A civil engineer, software engineer, nurse, doctor, teacher, technician, logistics worker, factory worker, accountant, architect, or entrepreneur does not return to farming, because their income and career mobility are usually higher outside agriculture. That is not being against farmers. That is how modern economies have grown since the industrial age.
+
+# Engel's Law: Why Food Cannot Be the Engine of a Rich Economy
+
+Engel's Law explains why agriculture cannot be the main engine of a high-income society. As people become richer, they may spend more on food in absolute terms, but food becomes a smaller share of total household spending [[8]](#ref-8). Higher-income societies spend more on housing, education, healthcare, transport, recreation, technology, finance, and services.
+
+Therefore, an economy cannot become rich simply by asking most people to produce food. Food is essential, but food demand does not grow fast enough to employ a large, educated population at high wages.
+
+This is why Thiru Seeman's "return to agriculture" model is risky for Tamil Nadu. If large numbers of young Tamils are pushed back into small-scale farming, many will face low income, climate risk, water stress, price volatility, fragmented landholdings, debt, and limited upward mobility.
+
+# Advanced Agriculture vs. Romantic Agriculture
+
+Tamil Nadu certainly needs strong, advanced agriculture. 
+However, Advanced agriculture is different from romantic agriculture.
+
+Consider Nature Fresh Farms in Leamington, Ontario, which uses greenhouse technology, closed-loop water systems, data-driven monitoring, sensors, and AI-supported decision-making. The company says its closed-loop system can be up to ten times more water-efficient than field growing, and reports that its greenhouse production footprint is equivalent to far larger traditional field acreage [[5]](#ref-5). Intel has also described how Nature Fresh Farms uses sensors, cameras, computer vision, and AI to monitor crops, improve irrigation decisions, reduce waste, and speed farm-to-store logistics [[6]](#ref-6).
+
+This is the type of agriculture Tamil Nadu should study: scientific, high-productivity, water-efficient, technology-driven farming.
+
+The Netherlands offers another important lesson. Dutch agriculture is globally respected not because most Dutch people are traditional farmers, but because agriculture is linked to science, greenhouse technology, logistics, ports, exports, food processing, research institutions, finance, universities, and advanced industry. OECD reports describe the Dutch food, agriculture, and horticulture sector as efficient, productive, export-oriented, and supported by a strong agricultural knowledge and innovation system [[7]](#ref-7).
+
+That is different from asking society to return to village-based farming.
+
+# What Tamil Nadu Is Missing: Higher Education and R&D
+
+At present, I see large gaps in Tamil Nadu's development strategy. Higher education is not being treated seriously enough as an engine of productivity. Research and development are not receiving the level of public attention, funding, and institutional seriousness needed to improve industrial processes, agricultural productivity, manufacturing quality, technological innovation, and global competitiveness.
+
+A state cannot become advanced merely by celebrating land, cattle, and village life. It must build universities that produce research, laboratories that solve practical problems, industries that absorb skilled labour, and institutions that convert knowledge into productivity. Agriculture can and must be improved, but through science, engineering, irrigation technology, biotechnology, data systems, storage, logistics, and market access.
+
+Seeman's economic model speaks emotionally about land, cattle, traditional crops, and village self-reliance, but it does not explain how Tamil Nadu will create high-income jobs for engineers, nurses, doctors, teachers, factory workers, software developers, logistics workers, researchers, entrepreneurs, and young graduates.
+
+# Conclusion
+
+Agriculture certainly matters. However, can agriculture be the central employment and income engine for a modern Tamil society? 
+The evidence suggests it cannot, and attempting it would repeat mistakes seen throughout global economic history.
+
+A serious economic vision for Tamil Nadu would apply the blueprint found in the industrialization of Japan and Taiwan, which I have written about in my related posts below. That is why an agriculture-centric economic model, however emotionally and romantically attractive is unworkable for Tamil Nadu's future. 
+
+> "எண்ணித் துணிக கருமம்; துணிந்தபின்
+> எண்ணுவம் என்பது இழுக்கு." : திருக்குறள் 467
+>
+> "Deliberate well before undertaking a task; to reflect upon it after having committed to it is a blunder.": Thirukkural 467
+
+
+## References:
+
+1. <span id="ref-1"></span>Times of India: Report on Seeman’s campaign proposal, including agriculture and cattle-rearing as government employment  
+   <https://timesofindia.indiatimes.com/city/trichy/seeman-slams-delimitation-timing-of-debate-in-parliament/articleshow/130290968.cms>
+
+2. <span id="ref-2"></span>Structural transformation and productivity: McMillan and Rodrik, “Globalization, Structural Change and Productivity Growth”  
+   <https://www.wto.org/english/res_e/booksp_e/glob_soc_sus_e_chap2_e.pdf>
+
+3. <span id="ref-3"></span>Tamil Nadu Economic Survey 2025–26 Highlights: sectoral shares: primary, secondary, services  
+   <https://spc.tn.gov.in/wp-content/uploads/Economic-Survey-Highlights-Eng.pdf>
+
+4. <span id="ref-4"></span>The Federal: Tamil Nadu Economic Survey report, agriculture share, manufacturing, services, exports, per-capita income  
+   <https://thefederal.com/category/states/south/tamil-nadu/tamil-nadu-economic-survey-decade-high-growth-2024-256-230255>
+
+5. <span id="ref-5"></span>Nature Fresh Farms: Greenhouse farming and water-efficient controlled-environment agriculture  
+   <https://naturefreshfarms.com/how-we-grow/>
+
+6. <span id="ref-6"></span>Intel:Nature Fresh Farms, sensors, computer vision, AI, and sustainable greenhouse farming  
+   <https://newsroom.intel.com/artificial-intelligence/sustainable-farming-with-nature-fresh-farms-intel>
+
+7. <span id="ref-7"></span>OECD: Policies for the Future of Farming and Food in the Netherlands  
+   <https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/06/policies-for-the-future-of-farming-and-food-in-the-netherlands_c632ba3d/bb16dea4-en.pdf>
+
+8. <span id="ref-8"></span>Engel’s Law: Our World in Data  
+   <https://ourworldindata.org/engels-law-food-spending>
+
+9. <span id="ref-9"></span>Encyclopaedia Britannica: Sergei Witte and Russian industrialization  
+   <https://www.britannica.com/biography/Sergey-Yulyevich-Graf-Witte>
+
+10. <span id="ref-10"></span>Rick Rejeleene: How Russia’s industrialization started in 19th century?  
+   <https://rickrejeleene.me/Tamil/posts/2025-11-29-RussianHistory/>
+
+## My related writings on industrialization, development, and Tamil Nadu
+
+11. East Asia’s Industrialization: What it means for India?  
+   <https://rickrejeleene.me/Tamil/posts/2026-04-13-EastAsiaIndustrialization/index.html>
+
+12. MITI Japan: Industrial Policy of Japan: 1925–1975  
+   <https://rickrejeleene.me/Tamil/posts/2026-03-16-MITIJapan/index.html>
+
+13. How Deng Xiaoping transformed China?  
+   <https://rickrejeleene.me/Tamil/posts/2026-05-29DengChinaEzra/index.html>
+
+14. Modern History of China  
+   <https://rickrejeleene.me/Tamil/posts/2026-04-25-HistoryChina/index.pdf>
+
+15. Tamil Nadu’s Economy is growing & Who is benefitting?  
+   <https://rickrejeleene.me/Tamil/posts/2025-08-10-Tamil-Economy25/index.html>
+
+16. Why Overpopulation Isn’t India’s Main Problem  
+   <https://rickrejeleene.me/Tamil/posts/2025-10-24-Population/index.html>
+
+17. India Needs a Professional Political Class / East Asia Industrialization Slides  
+   <https://rickrejeleene.me/Tamil/posts/2026-04-19-SlidesEastAsia/index.html>
+
+18. Joe Studwell, How Asia Works: Success and Failure in the World’s Most Dynamic Region (Development stories)  
+   <https://rickrejeleene.me/Tamil/posts/book4/index.html#how-asia-works-by-joe-studwell>

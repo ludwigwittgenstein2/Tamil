@@ -1,0 +1,77 @@
+/* Make Quarto bibliography match page background */
+section#references,
+#refs,
+.references,
+.csl-bib-body {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* ---- Branches table: Chettinad heritage palette ---- */
+.family-table {
+  border: 1px solid rgba(92, 68, 51, 0.20);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(92, 68, 51, 0.08);
+}
+
+.family-table table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  background: transparent;
+}
+
+/* Header: warm brown bar with cream text */
+.family-table thead th {
+  background: #5c4433;
+  color: #f3f2e8;
+  font-weight: 600;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 0.85rem 1.1rem;
+  border: none;
+}
+
+/* Body cells: top-aligned so long text reads cleanly */
+.family-table tbody td {
+  vertical-align: top;
+  padding: 0.8rem 1.1rem;
+  border-top: 1px solid rgba(92, 68, 51, 0.15);
+  color: #2e2a25;
+}
+
+/* Subtle zebra striping in a warm tint */
+.family-table tbody tr:nth-child(even) {
+  background: rgba(92, 68, 51, 0.045);
+}
+.family-table tbody tr:hover {
+  background: rgba(122, 59, 46, 0.08);
+}
+
+/* Emphasise the name column */
+.family-table tbody td:first-child {
+  font-weight: 600;
+  color: #5c4433;
+}
+
+/* Citation / reference links in a complementary rust */
+.family-table a {
+  color: #a8512f;
+  text-decoration: none;
+}
+.family-table a:hover { text-decoration: underline; }
+
+/* Caption sits below, quiet and muted */
+.family-table caption {
+  caption-side: bottom;
+  text-align: left;
+  font-size: 0.8rem;
+  color: #6b6256;
+  padding-top: 0.6rem;
+}
+
