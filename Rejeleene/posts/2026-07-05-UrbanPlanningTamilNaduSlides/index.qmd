@@ -1,6 +1,6 @@
 ---
 title: "Why are South Indian towns are underperforming?"
-subtitle: "Theories, Tirunelveli Case Study, and a Repair Agenda"
+subtitle: "Theories, Tirunelveli Case Study, and a Repair Sequence"
 author: "Rick Rejeleene"
 date: "2026-07-05"
 date-format: "MMMM D, YYYY"
@@ -69,7 +69,7 @@ The post moves from **master plan as map** to **master plan as delivery system**
 
 ---
 
-## Three families of failure
+## Three families of underperformance
 
 | Family | What it means | What it produces |
 |---|---|---|
@@ -127,7 +127,7 @@ In South India, heat, humidity, glare, monsoon rain, ventilation, and shade deci
 ::: {.visual-focus}
 
 ::: {.visual-img}
-![](../../images/urbanplanning/TamilNadu/janejacobs.png)
+![](../../images/urbanplanning/TamilNadu/JaneJacobs.png)
 :::
 
 ::: {.visual-text}
@@ -523,8 +523,7 @@ short ride of every home. Through-traffic never enters living streets.
 
 <h3>Bay Village, Ohio, USA (~16,000)</h3>
 
-An ordinary suburb that works through unglamorous consistency: a stable
-property-tax base, maintained parks and streets, walkable schools, and a
+An ordinary suburb that has a stable property-tax base, maintained parks and streets, walkable schools, and a
 local government residents can hold accountable.
 :::
 
