@@ -370,7 +370,7 @@ Acts as a tiny secure computer. It holds your network identity and a secret cryp
 <p>Instead, the network sends the SIM a random challenge. The SIM uses its secret key to calculate an answer. The carrier does the same calculation on its side. If both answers match, the network accepts the phone.</p>
 <p>This is called <strong>challenge-response authentication</strong>.</p>
 <p>A simplified version looks like this:</p>
-<div id="cf08d441" class="cell" data-execution_count="1">
+<div id="b746467a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hmac</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hashlib</span>
@@ -424,9 +424,9 @@ Acts as a tiny secure computer. It holds your network identity and a secret cryp
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Authentication failed: SIM is rejected."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Network challenge: dd7b4c5c6deecb329e527567a8e7eff3
-SIM answer: b1c7fe89354eb9f7070c36ea37f5a77521ab64d8cc67f8f399d68de124292610
-Carrier expected answer: b1c7fe89354eb9f7070c36ea37f5a77521ab64d8cc67f8f399d68de124292610
+<pre><code>Network challenge: 1fd808692f9d0811607b4c490e689b2e
+SIM answer: 8234a2f2512af55e644a039892d8f5173fe31131e0dbaf8fd1c87fc5315f4903
+Carrier expected answer: 8234a2f2512af55e644a039892d8f5173fe31131e0dbaf8fd1c87fc5315f4903
 Authentication successful: SIM is accepted.</code></pre>
 </div>
 </div>
