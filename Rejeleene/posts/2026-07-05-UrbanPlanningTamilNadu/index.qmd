@@ -685,7 +685,7 @@ The map shows residential, commercial, institutional, industrial, agricultural, 
 
 At present, the existing land-use map helps us see Tirunelveli as a city-region divided into land-use categories. But a city is not made functional simply by assigning colours to land.
 
-**A City is made function, organized, when land use, roads, public transport, drainage, water bodies, schools, markets, parks, employment, public space, and infrastructure are planned together.**
+**A City is made functional, organized, when land use, roads, public transport, drainage, water bodies, schools, markets, parks, employment, public space, and infrastructure are planned together.**
 
 
 ### 1. Land use is shown: Urban Performance needs to be included

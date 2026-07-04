@@ -12,7 +12,7 @@ csl: ieee.csl
 link-citations: true
 description: |
   A review of Thiru Seeman's agriculture-centric economic model for Tamil Nadu, highlighting its impracticality in modern economic development.
-categories: [Tamil Nadu, Economics, Agriculture, Development]
+categories: [Tamil Nadu, Economics, Agriculture, Development, Industrialization]
 ---
 
 # Introduction
@@ -43,7 +43,7 @@ A good historical example is Sergei Witte, the Russian Finance Minister from 189
 
 I have written separately about this in my essay on Russian industrialization, where I argued that Russia's modernization began by breaking from a forced agricultural order and then using state-led industrial policy to mobilize capital, railways, tariffs, and heavy industry [[10]](#ref-10).
 
-The lesson for Tamil Nadu is clear: societies that want to become powerful do not romanticize agrarian backwardness. They modernize agriculture while also building industry, infrastructure, science, technology, and human capital.
+The lesson for Tamil Nadu is to modernize agriculture while also building industry, infrastructure, science, technology, and human capital.
 
 Across successful economies, development has meant improving agriculture while moving surplus labour into higher-productivity sectors such as manufacturing, construction, logistics, healthcare, education, finance, technology, tourism, and professional services [[2]](#ref-2). The goal is to leave fewer people trapped in low-income farming, while those who remain in agriculture become more productive and better paid.
 
@@ -72,9 +72,9 @@ However, Advanced agriculture is different from romantic agriculture.
 
 Consider Nature Fresh Farms in Leamington, Ontario, which uses greenhouse technology, closed-loop water systems, data-driven monitoring, sensors, and AI-supported decision-making. The company says its closed-loop system can be up to ten times more water-efficient than field growing, and reports that its greenhouse production footprint is equivalent to far larger traditional field acreage [[5]](#ref-5). Intel has also described how Nature Fresh Farms uses sensors, cameras, computer vision, and AI to monitor crops, improve irrigation decisions, reduce waste, and speed farm-to-store logistics [[6]](#ref-6).
 
-This is the type of agriculture Tamil Nadu should study: scientific, high-productivity, water-efficient, technology-driven farming.
+This is the type of agriculture Tamil Nadu should study, scientific, high-productivity, water-efficient, technology-driven farming.
 
-The Netherlands offers another important lesson. Dutch agriculture is globally respected not because most Dutch people are traditional farmers, but because agriculture is linked to science, greenhouse technology, logistics, ports, exports, food processing, research institutions, finance, universities, and advanced industry. OECD reports describe the Dutch food, agriculture, and horticulture sector as efficient, productive, export-oriented, and supported by a strong agricultural knowledge and innovation system [[7]](#ref-7).
+The Netherlands offers another important lesson. Dutch agriculture is globally respected because agriculture is linked to science, greenhouse technology, logistics, ports, exports, food processing, research institutions, finance, universities, and advanced industry. OECD reports describe the Dutch food, agriculture, and horticulture sector as efficient, productive, export-oriented, and supported by a strong agricultural knowledge and innovation system [[7]](#ref-7).
 
 That is different from asking society to return to village-based farming.
 
