@@ -1,0 +1,462 @@
+/* Blog-matched Reveal.js slides */
+
+:root {
+  --blog-bg: #f0eee6;
+  --blog-card: #eeeae2;
+  --blog-header: #656565;
+  --blog-header-dark: #565656;
+  --blog-text: #343a40;
+  --blog-muted: #61686f;
+  --blog-rule: #d8d5cc;
+  --blog-link: #0d6efd;
+}
+
+/* Base */
+.reveal-viewport,
+.reveal {
+  background: var(--blog-bg) !important;
+  color: var(--blog-text);
+}
+
+.reveal {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 34px;
+}
+
+.reveal .slides section {
+  text-align: left;
+  padding-top: 82px;
+  box-sizing: border-box;
+}
+
+/* Top blog bar */
+.reveal .slides section::before {
+  content: "Notebook of Rick Rejeleene";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 58px;
+  background: var(--blog-header);
+  color: var(--blog-bg);
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  font-size: 25px;
+  z-index: 2;
+  border-bottom: 1px solid #3f3f3f;
+}
+
+/* Headings */
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--blog-text);
+  text-transform: none;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+}
+
+.reveal h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-variant: small-caps;
+  font-size: 72px;
+  font-weight: 500;
+}
+
+.reveal h2 {
+  font-size: 50px;
+  border-bottom: 1px solid var(--blog-rule);
+  padding-bottom: 0.22em;
+  margin-bottom: 0.55em;
+}
+
+.reveal h3 {
+  font-size: 32px;
+  margin-bottom: 0.35em;
+}
+
+/* Text */
+.reveal p,
+.reveal li,
+.reveal td,
+.reveal th {
+  color: var(--blog-text);
+}
+
+.reveal a {
+  color: var(--blog-link);
+}
+
+.reveal ul,
+.reveal ol {
+  margin-left: 1.05em;
+}
+
+.reveal li {
+  margin: 0.23em 0;
+}
+
+/* Section divider */
+.reveal .section-title {
+  background: var(--blog-header) !important;
+  color: var(--blog-bg) !important;
+  padding-top: 130px !important;
+}
+
+.reveal .section-title::before {
+  background: var(--blog-header-dark);
+  color: var(--blog-bg);
+}
+
+.reveal .section-title h1,
+.reveal .section-title h2,
+.reveal .section-title h3,
+.reveal .section-title p,
+.reveal .section-title blockquote,
+.reveal .section-title blockquote p {
+  color: var(--blog-bg) !important;
+  border-color: rgba(240, 238, 230, 0.35);
+}
+
+/* Lead / boxes */
+.reveal .lead {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.28em;
+  line-height: 1.25;
+  margin: 0.35em 0 0.7em 0;
+}
+
+.reveal .note-box,
+.reveal .takeaway {
+  background: var(--blog-card);
+  border-left: 7px solid var(--blog-header);
+  padding: 0.65em 0.85em;
+  margin-top: 0.7em;
+  font-size: 0.86em;
+}
+
+/* Pills */
+.reveal .pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 0.7em;
+}
+
+.reveal .pill-grid span {
+  background: var(--blog-card);
+  border: 1px solid var(--blog-rule);
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-size: 0.62em;
+}
+
+/* Tables */
+.reveal table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.58em;
+  margin-top: 0.45em;
+}
+
+.reveal th {
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid #9c9a94;
+  padding: 0.42em 0.5em;
+}
+
+.reveal td {
+  border-bottom: 1px solid var(--blog-rule);
+  padding: 0.42em 0.5em;
+  vertical-align: top;
+}
+
+.reveal tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* General images */
+.reveal img {
+  max-height: 640px;
+  object-fit: contain;
+}
+
+/* Big visual slides */
+.visual-focus {
+  display: grid;
+  grid-template-columns: 68% 32%;
+  gap: 30px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.visual-img img {
+  width: 100%;
+  max-height: 660px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--blog-rule);
+}
+
+.visual-text {
+  background: var(--blog-card);
+  border-left: 7px solid var(--blog-header);
+  padding: 24px 28px;
+  font-size: 0.78em;
+}
+
+.visual-text h3 {
+  font-size: 0.9em;
+  margin-top: 0;
+}
+
+.visual-text p {
+  font-size: 0.72em;
+  line-height: 1.25;
+}
+
+/* Two-image visual slides */
+.visual-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 18px;
+}
+
+.visual-card-large {
+  background: var(--blog-card);
+  border-top: 5px solid var(--blog-header);
+  padding: 16px 18px 18px 18px;
+}
+
+.visual-card-large img {
+  width: 100%;
+  height: 430px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--blog-rule);
+}
+
+.visual-card-large h3 {
+  font-size: 0.72em;
+  margin: 12px 0 5px 0;
+}
+
+.visual-card-large p {
+  font-size: 0.5em;
+  line-height: 1.22;
+  margin: 0;
+}
+
+/* Three-card grid only for text, not important images */
+.theory-grid,
+.visual-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.theory-card {
+  background: var(--blog-card);
+  border-top: 5px solid var(--blog-header);
+  padding: 18px;
+}
+
+.theory-card h3 {
+  font-size: 0.78em;
+  margin: 0 0 8px 0;
+}
+
+.theory-card p {
+  font-size: 0.55em;
+  line-height: 1.25;
+}
+
+/* Metrics */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.metric {
+  background: var(--blog-card);
+  border-top: 5px solid var(--blog-header);
+  padding: 22px;
+  min-height: 120px;
+}
+
+.metric .number {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15em;
+}
+
+.metric .label {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.58em;
+  color: var(--blog-muted);
+}
+
+/* Two-column list */
+.two-col-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.two-col-list .left,
+.two-col-list .right {
+  background: var(--blog-card);
+  padding: 18px 24px;
+  border-top: 5px solid var(--blog-header);
+}
+
+/* Repair sequence */
+.sequence-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 22px;
+}
+
+.sequence-left,
+.sequence-right {
+  background: var(--blog-card);
+  border-top: 5px solid var(--blog-header);
+  padding: 18px 22px;
+}
+
+.sequence-left h3,
+.sequence-right h3 {
+  margin-top: 0;
+  font-size: 0.9em;
+}
+
+.sequence-layout table {
+  font-size: 0.56em;
+}
+
+.sequence-layout th:first-child,
+.sequence-layout td:first-child {
+  width: 52px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Checklist */
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.check-grid span {
+  background: var(--blog-card);
+  border: 1px solid var(--blog-rule);
+  padding: 12px 14px;
+  font-size: 0.58em;
+}
+
+/* Swatches */
+.swatch {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  vertical-align: -0.08em;
+  margin-right: 0.25em;
+}
+
+.swatch.yellow { background: #f4d03f; }
+.swatch.blue { background: #2471a3; }
+.swatch.purple { background: #8e44ad; }
+.swatch.red { background: #c0392b; }
+.swatch.cyan { background: #48c9b0; }
+.swatch.grey { background: #7f8c8d; }
+.swatch.green { background: #00b050; }
+.swatch.palegreen { background: #a9dfbf; }
+.swatch.lightblue { background: #5dade2; }
+.swatch.darkgreen { background: #145a32; }
+.swatch.pink { background: #ff69b4; }
+
+/* TOC */
+.reveal #TOC h2 {
+  font-size: 1.35em;
+  margin-bottom: 0.35em;
+}
+
+.reveal #TOC ul {
+  font-size: 0.56em;
+  line-height: 1.12;
+  margin-top: 0.2em;
+}
+
+.reveal #TOC li {
+  margin-bottom: 0.12em;
+}
+
+.reveal #TOC ul ul {
+  display: none;
+}
+
+.reveal #TOC a {
+  color: var(--blog-link);
+}
+
+/* Footer / slide number */
+.reveal .footer {
+  color: var(--blog-muted) !important;
+  font-size: 0.36em !important;
+}
+
+.reveal .slide-number {
+  background: var(--blog-header) !important;
+  color: var(--blog-bg) !important;
+  font-size: 0.45em !important;
+}
+
+.reveal .progress span {
+  background: var(--blog-header) !important;
+}
+
+/* Narrow preview */
+@media (max-width: 900px) {
+  .reveal {
+    font-size: 26px;
+  }
+
+  .reveal h1 {
+    font-size: 52px;
+  }
+
+  .reveal h2 {
+    font-size: 38px;
+  }
+
+  .visual-focus,
+  .visual-grid-2,
+  .theory-grid,
+  .visual-grid-3,
+  .metric-grid,
+  .two-col-list,
+  .sequence-layout,
+  .check-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-card-large img {
+    height: 300px;
+  }
+}
+

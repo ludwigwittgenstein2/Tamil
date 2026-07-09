@@ -1,0 +1,274 @@
+/* Neighbourhood audit table */
+
+.neighbourhood-test-table {
+  margin: 1.5rem 0 2rem 0;
+  padding: 0.75rem;
+  background: #f4f1e6;
+  border: 1px solid #d8d0bd;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.neighbourhood-test-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fbfaf4;
+  color: #33383d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.neighbourhood-test-table caption {
+  caption-side: top;
+  color: #6f7c86;
+  font-size: 0.9rem;
+  padding: 0.4rem 0 0.8rem 0;
+}
+
+.neighbourhood-test-table thead th {
+  background: #5f5f5c;
+  color: #f7f4e8;
+  font-weight: 700;
+  border-bottom: 3px solid #b8a15f;
+  padding: 0.8rem 0.7rem;
+}
+
+.neighbourhood-test-table tbody td {
+  padding: 0.85rem 0.7rem;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd6c7;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(odd) {
+  background: #fbfaf4;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(even) {
+  background: #f1eee3;
+}
+
+.neighbourhood-test-table tbody td:first-child {
+  font-weight: 700;
+  color: #2f3a3d;
+  border-left: 5px solid #8fa878;
+  background: rgba(143, 168, 120, 0.12);
+}
+
+/* Soft color accents by row */
+.neighbourhood-test-table tbody tr:nth-child(1) td:first-child {
+  border-left-color: #8fa878;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(2) td:first-child {
+  border-left-color: #8aa0b8;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(3) td:first-child {
+  border-left-color: #c2a85d;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(4) td:first-child {
+  border-left-color: #6f9db2;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(5) td:first-child {
+  border-left-color: #9b7a65;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(6) td:first-child {
+  border-left-color: #7d9b70;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(7) td:first-child {
+  border-left-color: #b98b5d;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(8) td:first-child {
+  border-left-color: #8b8b8b;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(9) td:first-child {
+  border-left-color: #9d8bb0;
+}
+
+.neighbourhood-test-table tbody tr:nth-child(10) td:first-child {
+  border-left-color: #b06f6f;
+}
+
+.neighbourhood-test-table tbody tr:hover {
+  background: #ece7d8;
+}
+
+/* Reliability standard box */
+
+.reliability-standard {
+  margin: 1.8rem 0 2.2rem 0;
+  padding: 1.25rem 1.4rem;
+  background: linear-gradient(135deg, #fbfaf4 0%, #efe8d7 100%);
+  border-left: 8px solid #b8a15f;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(60, 60, 55, 0.10);
+  color: #30363a;
+}
+
+.reliability-standard p {
+  margin-bottom: 0;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.reliability-standard strong {
+  color: #2f3a3d;
+  font-weight: 800;
+}
+
+.standard-label {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  padding: 0.22rem 0.65rem;
+  background: #5f5f5c;
+  color: #f8f4e8;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+## Add this to `styles.css`
+
+```css
+/* Urban planning slideshow — bold and readable captions */
+
+.urban-slideshow {
+  margin: 2rem 0 2.5rem 0;
+  padding: 0.8rem;
+  background: #f1eee3;
+  border: 1px solid #d6ccb8;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(50, 50, 45, 0.14);
+}
+
+.urban-slideshow .carousel {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.urban-slideshow .carousel-item {
+  position: relative;
+}
+
+.urban-slideshow img {
+  height: 540px;
+  width: 100%;
+  object-fit: cover;
+  background: #ddd6c7;
+}
+
+.urban-slideshow .carousel-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 48%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.94),
+    rgba(0, 0, 0, 0.72),
+    rgba(0, 0, 0, 0.18),
+    rgba(0, 0, 0, 0)
+  );
+  z-index: 1;
+}
+
+.urban-slideshow .carousel-caption {
+  position: absolute;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2;
+  padding: 1.4rem 1.6rem 1.6rem 1.6rem;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.urban-slideshow .carousel-caption h5 {
+  color: #ffffff !important;
+  font-size: 1.65rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.urban-slideshow .carousel-caption p {
+  color: #ffffff !important;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.45;
+  margin-bottom: 0;
+  max-width: 900px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.urban-slideshow .carousel-indicators {
+  z-index: 3;
+  margin-bottom: 0.45rem;
+}
+
+.urban-slideshow .carousel-indicators button {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.7;
+}
+
+.urban-slideshow .carousel-indicators .active {
+  background-color: #d6b85a;
+  opacity: 1;
+}
+
+.urban-slideshow .carousel-control-prev,
+.urban-slideshow .carousel-control-next {
+  z-index: 4;
+}
+
+.urban-slideshow .carousel-control-prev-icon,
+.urban-slideshow .carousel-control-next-icon {
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.95));
+}
+
+@media (max-width: 768px) {
+  .urban-slideshow img {
+    height: 340px;
+  }
+
+  .urban-slideshow .carousel-item::after {
+    height: 62%;
+  }
+
+  .urban-slideshow .carousel-caption {
+    padding: 1rem 1rem 1.15rem 1rem;
+  }
+
+  .urban-slideshow .carousel-caption h5 {
+    font-size: 1.15rem;
+  }
+
+  .urban-slideshow .carousel-caption p {
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+}
+
+.policy-font {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}

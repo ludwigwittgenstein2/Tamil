@@ -1,0 +1,809 @@
+---
+title: "Slide Version of Urban Planning in Chennai"
+subtitle: "Issues, Challenges, and a Repair Sequence"
+author: "Rick Rejeleene"
+date: "2026-07-09"
+date-format: "MMMM D, YYYY"
+bibliography: references.bib
+link-citations: true
+csl: ieee.csl
+format:
+  revealjs:
+    theme: simple
+    toc: false
+    slide-number: true
+    controls: true
+    progress: true
+    hash: true
+    transition: fade
+    background-transition: fade
+    center: false
+    width: 1600
+    height: 900
+    margin: 0.08
+    footer: "Notebook of Rick Rejeleene · Urban Planning in Chennai"
+execute:
+  freeze: auto
+  keep-md: false
+---
+```{=html}
+<style>
+:root {
+  --slide-bg: #f1eee6;
+  --ink: #303842;
+  --muted: #606873;
+  --bar: #676767;
+  --accent: #3f5f7f;
+  --soft: #e3ded2;
+}
+
+.reveal {
+  background: var(--slide-bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  box-sizing: border-box;
+  padding: 92px 90px 58px 90px;
+}
+
+.reveal .slides section::before {
+  content: "Notebook of Rick Rejeleene";
+  position: absolute;
+  top: 28px;
+  left: 60px;
+  right: 60px;
+  height: 48px;
+  background: var(--bar);
+  color: #f7f4ed;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.58em;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  line-height: 48px;
+  padding-left: 24px;
+  z-index: 0;
+}
+
+/* Level-1 headings create nested section stacks in reveal;
+   render the bar only on the outer stack so it doesn't double up */
+.reveal .slides section > section::before {
+  display: none;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Level-1 headings act as section dividers */
+.reveal h1 {
+  font-size: 1.9em;
+  font-variant: small-caps;
+  text-align: center;
+  margin-top: 2.4em;
+}
+
+.reveal h2 {
+  font-size: 1.45em;
+  margin-bottom: 0.45em;
+}
+
+.reveal h3 {
+  font-size: 0.95em;
+  margin-bottom: 0.35em;
+}
+
+.reveal p,
+.reveal li {
+  font-size: 0.58em;
+  line-height: 1.45;
+}
+
+.reveal strong {
+  color: #1f2730;
+}
+
+.reveal .title-slide {
+  text-align: center;
+  padding-top: 140px;
+}
+
+.reveal .title-slide h1 {
+  font-size: 2.2em;
+  font-variant: small-caps;
+  margin-top: 0;
+  margin-bottom: 0.35em;
+}
+
+.reveal .title-slide .subtitle {
+  font-size: 0.95em;
+  color: var(--ink);
+  margin-bottom: 1.4em;
+}
+
+.reveal .title-slide .author,
+.reveal .title-slide .date {
+  font-size: 0.78em;
+  color: var(--ink);
+  margin-top: 0.35em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.big-claim {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.28em;
+  line-height: 1.25;
+  text-align: center;
+  margin: 1.2em auto 0.45em auto;
+  max-width: 1050px;
+}
+
+.reveal .slide-sub {
+  text-align: center;
+  font-size: 0.72em;        /* was 0.62em — bigger */
+  color: var(--ink);        /* was var(--muted) — no more grey */
+  background: none !important;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Four-cases slide: equal-height image cells + compact panel row */
+.four-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.four-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid #c9c2b3;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.four-grid .slide-cap {
+  margin-top: 0.4em;
+}
+
+.panel-tight {
+  border-left: 8px solid var(--accent);
+  padding: 12px 18px;
+  background: rgba(255,255,255,0.35);
+}
+
+.panel-tight p {
+  font-size: 0.46em;
+  margin: 0;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.panel {
+  border-left: 8px solid var(--accent);
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.35);
+}
+
+.panel p,
+.panel li {
+  font-size: 0.5em;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.42em;
+  margin-bottom: 0.5em;
+}
+
+.reveal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.47em;
+}
+
+.reveal th {
+  background: var(--bar);
+  color: #fff;
+  font-weight: 700;
+}
+
+.reveal td,
+.reveal th {
+  border: 1px solid #c9c2b3;
+  padding: 0.48em 0.58em;
+  vertical-align: top;
+}
+
+.compact table {
+  font-size: 0.4em;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.image-grid img,
+.full-image img,
+.figure img {
+  max-width: 100%;
+  border: 1px solid #c9c2b3;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.image-grid img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.full-image img {
+  max-height: 480px;
+  display: block;
+  margin: 0 auto;
+}
+
+.reveal .slide-cap {
+  font-size: 0.62em;
+  line-height: 1.4;
+  color: var(--ink);
+  background: none !important;
+  padding: 0;
+  margin-top: 0.5em;
+}
+
+.check-list li {
+  margin-bottom: 0.35em;
+}
+
+blockquote {
+  border-left: 8px solid var(--accent) !important;
+  padding-left: 24px !important;
+  color: var(--ink) !important;
+  background: rgba(255,255,255,0.25);
+}
+
+.small {
+  font-size: 0.82em;
+}
+
+.lesson {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95em;
+  text-align: center;
+  margin-top: 0.9em;
+  color: var(--accent);
+}
+</style>
+```
+
+## Roadmap
+
+- [The question](#/the-question)
+- [The main finding](#/the-main-finding)
+- [Foundations: theory, climate, agencies, history](#/foundations)
+- [Chennai's flooding problem](#/chennais-flooding-problem)
+- [The benchmark: Houten, Vauban, Barcelona](#/the-benchmark)
+- [Four neighbourhoods as tests: Boat Club, Anna Nagar, T. Nagar, Velachery](#/four-neighbourhoods-as-tests)
+- [The repair sequence](#/the-repair)
+
+# The Question
+
+## The question
+
+<div class="big-claim">
+Does Chennai work as a living system for ordinary people?
+</div>
+
+<div class="slide-sub">
+This slide essay tests Chennai across six functions: planning, finance, engineering, maintenance, enforcement, and democratic accountability, through four of its most celebrated neighbourhoods.
+</div>
+
+## The main finding
+
+<div class="big-claim">
+Chennai's urban planning falls short, not because of population growth or lack of money.
+</div>
+
+<div class="slide-sub">
+It falls short because land-use planning, infrastructure finance, engineering delivery, maintenance, enforcement, and accountability are not joined under one answerable metropolitan operating system [@nitiUrbanPlanningCapacity2021].
+</div>
+
+## Why Chennai matters
+
+::: {.columns}
+
+::: {.panel}
+<div class="kicker">My story with Chennai</div>
+
+Madras was the first city I stayed in after finishing high school, in 2009. I lived in Chrompet, shared a room with college students and working bachelors, and took the suburban train all the way to Chennai Beach. The city gave me freedom before it gave me anything else: bus stands, colleges, jobs, migrants, students, vendors, families.
+:::
+
+::: {.panel}
+<div class="kicker">Who is the city for?</div>
+
+A world-class Chennai is not for only the wealthy, the car-owning, or the politically connected. It is for the student with a black-and-white phone, the vendor on Ranganathan Street, the elder crossing Second Avenue, and the family in Velachery raising its plinth one more time.
+:::
+
+:::
+
+# Foundations
+
+## The theory frame
+
+| Thinker | What the idea asks Chennai to do |
+|:---|:---|
+| **Patrick Geddes** | Survey before plan: study place, work, and folk before drawing schemes [@geddes1915]. |
+| **Otto Koenigsberger** | Plan from climate outward: heat, shade, rain, ventilation, and materials are not decoration. |
+| **Jane Jacobs** | Judge streets by mixed use, active edges, short blocks, and everyday public life [@jacobs1961]. |
+| **Jan Gehl** | Ask whether streets invite people to stay, sit, meet, and watch, not only to pass through [@gehl2010]. |
+| **Christopher Alexander** | Protect living patterns: shade, corners, verandas, local shops, and daily routines [@alexander1977]. |
+| **Ananya Roy** | Recognize how the state manufactures informality through exceptions and selective enforcement, for the rich as much as the poor [@roy2005]. |
+| **NITI Aayog** | Fix fragmented authority, weak capacity, missing master plans, and poor coordination [@nitiUrbanPlanningCapacity2021]. |
+
+## Climate is the first constraint
+
+::: {.columns}
+
+::: {.panel}
+<div class="kicker">Chennai's environmental reality</div>
+
+- Hot, humid, coastal, monsoon-dependent city
+- May–June average daily maximum near **37°C**; extreme days cross 40°C [@imdChennaiNungambakkamClimate]
+- Annual rainfall near **1,377 mm**, concentrated in the Northeast Monsoon: October–December alone bring roughly 856 mm [@imdChennaiNungambakkamClimate]
+- Cyclone and storm-surge exposure on the Bay of Bengal [@imdCycloneHazardClimatology]
+- Moderate seismic risk: **Zone III** [@bmtpcZoneIII]
+:::
+
+::: {.panel}
+<div class="kicker">Planning implication</div>
+
+Rain, drainage, coastal flooding, heat, and emergency infrastructure cannot be planned as separate subjects. A climate-resilient Chennai designs streets, drains, wetlands, buildings, transport, parks, trees, power systems, and emergency infrastructure as **one system**, with enforcement and accountability attached.
+:::
+
+:::
+
+## The agency problem
+
+::: {.compact}
+
+| Function | Main agency | The planning problem |
+|:---|:---|:---|
+| Land use, zoning, permissions | CMDA | Plans the city, but does not operate every system [@cmdaPlanningPermission]. |
+| Streets, drains, parks, solid waste | GCC | Maintains local civic systems, but depends on other agencies. |
+| Water and sewerage | CMWSSB | Sewerage failures show up as drainage and river problems. |
+| Transport coordination | CUMTA, MTC, CMRL, Southern Railway | Mobility is split across buses, metro, rail, roads, and walking. |
+| Rivers, tanks, reservoirs | WRD / PWD | Water follows basins, not departmental boundaries. |
+| Major roads and highways | TN Highways Department | Roads can become flood barriers when built without cross-drainage. |
+| Pollution, land records | TNPCB, Revenue, local bodies | Enforcement is fragmented and often selective. |
+
+:::
+
+**Result:** one Chennai neighbourhood depends on ten or more agencies to function, and no single authority is answerable for whether the neighbourhood works as a whole.
+
+## Planning history: many plans, weak delivery
+
+::: {.compact}
+
+| Period | Planning record | What it reveals |
+|:---|:---|:---|
+| 1957 | General Town Planning Scheme for Madras City | Early physical planning, too limited for a metropolitan region. |
+| 1967 | Madras Interim Plan | Recognition of metropolitan scale. |
+| 1971–1991 | Madras Metropolitan Plan | Land use, utilities, transport, slums, health, education, finance, institutions; growth outpaced delivery. |
+| 1975/76 | First Master Plan | Statutory land-use control; the city expanded beyond its assumptions. |
+| 2008–2026 | Second Master Plan | Metropolitan land use and compact growth; implementation and enforcement stayed weak [@cmdaSecondMasterPlanVol1]. |
+| 2017 | CAG flood-management audit | Weak planning, poor enforcement, encroachment, and poor coordination worsened flooding [@cagChennaiFloodAudit2017]. |
+| 2026–2046 | Third Master Plan process | The key test: a delivery system, or another land-use map? [@cmdaThirdMasterPlanTOR] |
+
+:::
+
+**The statutory failure:** the Tamil Nadu Town and Country Planning Act, 1971 requires a five-yearly review of the Master Plan. It has never once been performed on schedule [@citizenmattersTMP2023].
+
+# Chennai's Flooding Problem
+
+## Flooding: the wrong frame and the right one
+
+::: {.columns}
+
+::: {.panel}
+<div class="kicker">The common mistake</div>
+
+Chennai treats flooding as a drainage **construction** problem. But major floods have recurred in 1943, 1976, 1985, 1996, 2005, 2015, 2021, and 2023 [@cagChennaiFloodAudit2017]. Stormwater drains alone cannot solve a basin-level problem while canals are choked, wetlands shrink, river mouths block, sewage enters drains, and floodplains keep urbanizing.
+:::
+
+::: {.panel}
+<div class="kicker">The correct frame</div>
+
+Flooding is a **watershed-governance** problem. A world-class response connects land-use zoning, tank restoration, marsh protection, sewerage enforcement, canal maintenance, culvert hydraulics, pumping capacity, flood shelters, and transparent real-time reservoir operation into one system.
+:::
+
+:::
+
+## 2015: flooding as system failure
+
+::: {.full-image}
+![](/images/urbanplanning/chennai/ChennaiFlood.png){fig-alt="Flooded street in Chennai during monsoon flooding"}
+:::
+
+<div class="slide-cap">
+The 2015 floods combined extreme rainfall, reservoir operations, urbanization, wetland loss, weak drainage, blocked waterways, and fragmented governance into a citywide disaster [@cagChennaiFloodAudit2017]. Floodplain encroachment alone raised the Adyar's 2015 flood peak at the river mouth by **188%** compared with the 1991 floodplain, and cut time-to-peak by 48 hours [@reshmaKuiryAdyar2023].
+</div>
+
+# The Benchmark
+
+## Three working models
+
+::: {.columns-3}
+
+::: {.panel}
+<div class="kicker">Houten, Netherlands</div>
+A child can cycle safely across the whole town, because mobility, schools, streets, and neighbourhood structure were planned together, and kept planned as the town grew.
+:::
+
+::: {.panel}
+<div class="kicker">Vauban, Freiburg</div>
+Tram, trees, housing, cycling, and streets designed as one everyday living system. Density arrived *with* its infrastructure, not ahead of it.
+:::
+
+::: {.panel}
+<div class="kicker">Sant Antoni Superblock, Barcelona</div>
+A 3×3 grid converted from car throughput into civic space: NO₂ down 25%, noise down 2.5–4 dB, local retail up 30%, and over 60% of residents reporting improved well-being.
+:::
+
+:::
+
+<div class="slide-sub">
+None of these is a miracle. Each is an administrative decision, made once and then maintained as permanent civic discipline.
+</div>
+
+## Visual benchmark: Houten
+
+::: {.image-grid}
+
+<div>
+![](/images/urbanplanning/chennai/cyclinghouten.png){fig-alt="Cycling street in Houten"}
+<div class="slide-cap">Cycling routes are direct, safe, and central to everyday neighbourhood life.</div>
+</div>
+
+<div>
+![](/images/urbanplanning/chennai/houtenchildrencycling.png){fig-alt="Children cycling in Houten"}
+<div class="slide-cap">A strong neighbourhood lets children move safely without depending on adults driving them.</div>
+</div>
+
+:::
+
+## Visual benchmark: Freiburg / Vauban
+
+::: {.image-grid}
+
+<div>
+![](/images/urbanplanning/chennai/FreiburgCycling.png){fig-alt="Cycling infrastructure in Freiburg"}
+<div class="slide-cap">Car-light living requires continuous, visible, connected cycling infrastructure.</div>
+</div>
+
+<div>
+![](/images/urbanplanning/chennai/FreiburgVaubanTrain.png){fig-alt="Vauban tram in Freiburg"}
+<div class="slide-cap">Public transport is built into the neighbourhood, not added as an afterthought.</div>
+</div>
+
+:::
+
+## Visual benchmark: Barcelona Superblock
+
+::: {.image-grid}
+
+<div>
+![](/images/urbanplanning/chennai/superblock.png){fig-alt="Barcelona superblock public space"}
+<div class="slide-cap">Reduced through-traffic converts streets into public space.</div>
+</div>
+
+<div>
+![](/images/urbanplanning/chennai/superillasantantonichildren.png){fig-alt="Children in Sant Antoni superblock"}
+<div class="slide-cap">A world-class street is safe enough for children, elders, families, and everyday public life.</div>
+</div>
+
+:::
+
+# Four Neighbourhoods as Tests
+
+## The four cases
+
+::: {.four-grid}
+
+<div>
+![](/images/urbanplanning/chennai/boatclubboard.png){fig-alt="Boat Club Road board in Chennai"}
+<div class="slide-cap"><strong>Boat Club:</strong> Chennai's most expensive address, an elite river-adjacent landscape on the Adyar.</div>
+</div>
+
+<div>
+![](/images/urbanplanning/chennai/annanagar.png){fig-alt="Anna Nagar street-name board in Chennai"}
+<div class="slide-cap"><strong>Anna Nagar:</strong> the state's clearest planned township at scale — grid, parks, schools.</div>
+</div>
+
+:::
+
+::: {.columns}
+
+::: {.panel-tight}
+<div class="kicker">T. Nagar</div>
+Chennai's first planned township (1923–25), built on the drained Long Tank, now India's largest shopping district by revenue [@madrasMusingsTNagar2015].
+:::
+
+::: {.panel-tight}
+<div class="kicker">Velachery</div>
+A village urbanized by the IT corridor, built inside the Pallikaranai drainage system, south Chennai's flood-storage basin [@tnswaPallikaranaiRamsar].
+:::
+
+:::
+
+## Case 1: Boat Club
+
+::: {.columns}
+
+::: {.panel}
+<div class="kicker">What works</div>
+
+- Old canopy, continuous shade
+- Quiet streets and footpaths
+- Low-rise garden plots
+- Walking comfort good enough that people cross the city to walk here
+- Strong neighbourhood identity
+:::
+
+::: {.panel}
+<div class="kicker">What fails</div>
+
+- Excellence is **inherited, not designed or protected**: no conservation regime guards the canopy or pervious ground [@geddes1915]
+- Public life is thin behind compound walls; streets are walkable but socially closed [@jacobs1961; @gehl2010]
+- Residents once sought gates to keep the public off public streets; GCC refused [@tnmBoatClubDropGateRejected2020]
+- The Adyar floodplain risk is externalized: encroachment raised the 2015 flood peak 188% at the river mouth [@reshmaKuiryAdyar2023]
+:::
+
+:::
+
+## Boat Club: repair sequence
+
+1. Notify the Adyar floodplain and flood-risk overlays into the Third Master Plan.
+2. Restore the Adyar as infrastructure, published cross-sections before and after desilting.
+3. Publish transparent Chembarambakkam operation rules tied to forecasts [@tnmChembarambakkam2015].
+4. Intercept sewage before it reaches the river; publish monthly water quality.
+5. Protect canopy and pervious ground during every redevelopment.
+6. Keep public streets permanently public, codify the principle GCC already defended.
+
+<div class="lesson">
+Lesson: **wealth is not a public system.**
+</div>
+
+## Case 2: Anna Nagar
+
+::: {.columns}
+
+::: {.panel}
+<div class="kicker">What works</div>
+
+- State-planned TNHB township at scale, laid out from the 1960s [@madrasmusingsNaduvakkarai2016]
+- Hierarchical grid, blocks, parks, schools, bus terminus
+- Cross-class integrated housing from the start
+- Green cover above 20% against a city average near 15%
+:::
+
+::: {.panel}
+<div class="kicker">What fails</div>
+
+- Density tripled through individually legal approvals while drains, water, and parking stayed at 1968 capacity
+- The five-yearly statutory review has never been performed [@citizenmattersTMP2023]
+- The plot-level sponge, gardens, wells, unpaved margins, was paved over, converting a sponge into a funnel [@dtnextAnnaNagar2024]
+- Drainage is contracts, not a system: only ~15% of the city's network is even mapped [@mongabayDrainage2026]; the outfall, the Otteri Nullah, is encroached and silted [@foaraDemands2024]
+:::
+
+:::
+
+## Anna Nagar: repair sequence
+
+1. Prepare a statutory Local Area Plan, and keep the five-year statutory clock for the first time.
+2. Map, then model, the Korattur–Padi–Anna Nagar–Otteri Nullah–Cooum sub-basin as one hydraulic system.
+3. Rebuild the sponge, permeable paving, protected soil, verified recharge wells per approval.
+4. Enforce the mill-and-relay road rules that already exist, with published pre/post street levels.
+5. Count the downstream: score every approval on the peak flow it adds to the Otteri Nullah.
+6. Give the plan a custodian: an empowered ward committee with a published maintenance budget.
+
+<div class="lesson">
+Lesson: **a plan is not a fully planning operating system with accountability and enforcement.**
+</div>
+
+## Case 3: T. Nagar
+
+::: {.columns}
+
+::: {.panel}
+<div class="kicker">What works</div>
+
+- Chennai's first planned township (1923–25), and its most powerful commercial street life [@madrasMusingsTNagar2015]
+- The Pondy Bazaar Pedestrian Plaza (2019) showed what people-first street design can do [@itdpPondyBazaarPedestrianPlaza]
+- Walkable retail intensity; strong transit and citywide accessibility
+:::
+
+::: {.panel}
+<div class="kicker">What fails</div>
+
+- A residential 1920s street grid carries the retail load of a national shopping centre; the 2013 redevelopment plan was never delivered [@townlandTNagar2013]
+- The most valuable streets have the weakest enforcement: fire-safety and building violations recur on Ranganathan Street and Usman Road [@toiTNagarFireSafety2011]
+- Built on the drained Long Tank; the Mambalam canal outfall stays fragile [@citizenMattersTNagarFlood2021]
+- The plaza was inaugurated, then poorly operated: vehicles and parking returned [@toiPondyBazaarUpkeep2026]
+:::
+
+:::
+
+## T. Nagar: repair sequence
+
+1. Re-plan it as what it is: a managed metropolitan retail district, with capacity calculated for actual footfall.
+2. Create a permanent plaza operator with daily cleaning, enforcement, vending, loading, and maintenance powers.
+3. Publish building-safety, fire-access, parking, and encroachment audits, starting with Ranganathan Street.
+4. Legalize vendors into the plan under the Street Vendors Act, pitches, not eviction cycles [@streetVendorsAct2014].
+5. Fix the water as one system: model Ashok Nagar–West Mambalam–T. Nagar through the Mambalam canal to the Adyar.
+6. Price curb space and loading time; convert commercial success into public-realm funding.
+
+<div class="lesson">
+Lesson: **a law is not enforcement, and a project is not an operation.**
+</div>
+
+## Case 4: Velachery
+
+::: {.columns}
+
+::: {.panel}
+<div class="kicker">What works</div>
+
+- Jobs and housing supply; the address of arrival for many migrants
+- IT-corridor connectivity, MRTS, and arterial access
+- Strong middle-class urban demand
+:::
+
+::: {.panel}
+<div class="kicker">What fails</div>
+
+- Built inside the Pallikaranai drainage system, which drains ~250 km² of south Chennai [@tnswaPallikaranaiRamsar]
+- The marsh shrank from ~5,000 ha (1975) to ~695 ha (2016), largely through **state-approved** IT-corridor construction [@cagChennaiFloodAudit2017]
+- Velachery Lake shrank from ~265 acres to ~55 acres [@toiVelacheryDisaster2025]
+- Households privately buy flood protection, raised plinths, pumps, rebuilt ground floors, paying instalments on a public decision
+:::
+
+:::
+
+## Velachery: repair sequence
+
+1. Legally demarcate the Pallikaranai marsh, lake chains, channels, buffers, and floodplain in the Third Master Plan.
+2. Restore Velachery Lake and its surplus channels as infrastructure, housing-first resettlement, then restoration.
+3. Build one public basin model: lake → Veerangal Odai → marsh → Okkiyam Madavu → Kovalam Creek → sea.
+4. Audit every road, rail line, and culvert that interrupts natural drainage; redesign with cross-drainage.
+5. Complete Perungudi dumpyard closure with biomining, leachate control, and ecological restoration [@toiPerungudiDumpyard2026].
+6. Create a Pallikaranai watershed authority with budget, enforcement power, and an annual public report.
+
+<div class="lesson">
+Lesson: **hydrology is the first master plan.**
+</div>
+
+## What the four cases teach together
+
+::: {.compact}
+
+| Question | Boat Club | Anna Nagar | T. Nagar | Velachery |
+|:---|:---|:---|:---|:---|
+| Origin | Colonial estate, privately consolidated | State-planned TNHB township | First planned township (1923–25), on the drained Long Tank | Village urbanized by the IT corridor, on the Pallikaranai floodplain |
+| What works | Shade, calm, street quality | Grid, parks, schools, green cover | Economic vitality, the plaza's design | Jobs, housing, transit access |
+| What failed | Public systems around private perfection | Plan never renewed as density tripled | Enforcement and operation | Hydrology zoned away as real estate |
+| Flood type | Riverine: the Adyar in spate | Pluvial: concretisation | Pluvial on a drained lakebed; overloaded canal outfall | Basin: the sump of south Chennai |
+| First step | Adyar basin authority | Local Area Plan with a custodian | Plaza operator + building audit | Demarcate the marsh; restore the lake |
+
+:::
+
+# The Repair
+
+## The six missing connections
+
+<div class="big-claim">
+planning + finance + engineering + maintenance + enforcement + accountability
+</div>
+
+<div class="slide-sub">
+Chennai's problem is not that nobody plans, builds, or spends. It is that these six functions do not stay connected through one answerable delivery system after approval, tender, construction, and inauguration. Four neighbourhoods, four origins — the same six connections missing every time.
+</div>
+
+## The neighbourhood test
+
+::: {.compact}
+
+| System | World-class means | Simple test |
+|:---|:---|:---|
+| Walking | People walk without entering traffic | Can a child walk 500 m safely? |
+| Crossings | Frequent, placed where people cross | Do people cross safely, or dart through traffic? |
+| Shade | Continuous public shade | Is the street walkable at 1 pm? |
+| Stormwater | Road → inlet → drain → canal/tank works | Does water disappear after rain? |
+| Sewage | Fully separate from stormwater | Does the drain smell in dry weather? |
+| Parks | Lit, maintained, used by all ages | Do women and elders use it after dark? |
+| Daily needs | Milk, medicine, school, bus stop nearby | Can you buy milk without a two-wheeler? |
+| Parking | Never captures footpaths or corners | Can an ambulance pass? |
+| Homes | Verandas and shade facing the street | Does the house improve the street or turn its back on it? |
+| Maintenance | Budgets, schedules, complaint timelines | Who last desilted the drain, and who is answerable? |
+
+:::
+
+## What the Third Master Plan must become
+
+::: {.check-list}
+
+- Not another land-use map, but a **delivery system** [@cmdaThirdMasterPlanTOR].
+- Floodplain, marsh, tanks, canals, drains, and outfalls governed by **basin logic**, with basin authorities that match the water map instead of the department map.
+- The statutory **five-year review** kept for the first time in fifty years.
+- Public reporting of drain dimensions, desilting schedules, tree canopy, flood registers, water quality, and project status — so lapses become attributable.
+- Statutory **Local Area Plans** for high-pressure neighbourhoods.
+- One answerable mechanism coordinating CMDA, GCC, WRD, CMWSSB, Highways, CUMTA, TNPCB, Revenue, and ward committees.
+
+:::
+
+## Repair sequence for Chennai
+
+1. Treat watersheds as planning units.
+2. Create neighbourhood-level operating plans with named custodians.
+3. Tie approvals to delivered infrastructure capacity.
+4. Publish maintenance schedules and failure metrics.
+5. Fund the public realm from local land-value gains.
+6. Make enforcement predictable, public, and non-selective.
+7. Measure success through everyday tests: walking, shade, drains, sewage, parks, crossings, and safety.
+
+## Conclusion
+
+<div class="big-claim">
+Chennai already has the plans, the engineers, the money, the institutions, and the memory of every flood.
+</div>
+
+<div class="slide-sub">
+Copenhagen mapped its flow paths after one cloudburst and rebuilt its streets as drainage [@copenhagenCloudburstPlan2012]. Barcelona gave a 3×3 grid back to its people. Houten planned for the child on a cycle, and kept planning. These are administrative decisions, not miracles. What Chennai needs is one answerable system connecting planning, finance, engineering, maintenance, enforcement, and accountability under authorities that match its watersheds and neighbourhoods.
+</div>
+
+## Final line
+
+<div class="big-claim">
+Chennai/Madras is transformable into World Class Urban Planning System.
+</div>
+
+<div class="slide-sub">
+What's required is maintainence and enforcement and accountability under one Urban delivery system.
+</div>
+
+## References {.smaller}
+
+::: {#refs}
+:::
