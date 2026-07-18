@@ -26,12 +26,13 @@ execute:
 
 # Related works
 
-Before writing specifically about Chennai, I wrote two companion works on urban planning in South India:
+Before writing specifically about Chennai, I wrote three companion works on urban planning in South India:
 
 1. [Urban Planning in South India](https://rickrejeleene.me/Tamil/posts/2026-07-05-UrbanPlanningTamilNadu/index.html)  
 2. [Why are South Indian towns underperforming?](https://rickrejeleene.me/Tamil/posts/2026-07-05-UrbanPlanningTamilNaduSlides/index.html#/title-slide)
+3. [How did Houten Build a World Class Planned Town?](https://rickrejeleene.me/Tamil/posts/2026-06-20-UrbanPlanningHouten/index.html)
 
-The first work is a long-form essay. The second work is a slide-based summary of the same argument. Together, they helped me develop a basic framework for thinking about South Indian urban planning.
+The first work is a long-form essay. The second work is a slide-based summary of the same argument. The Third is how a dutch town planned green first, cars last, and maintenance permanently. Together, they helped me develop a basic framework for thinking about South Indian urban planning.
 
 The main finding, **Urban Planning in South Indian towns is not falling short because of population growth or lack of money.** 
 They are underperforming because planning, finance, engineering, maintenance, enforcement, and democratic accountability are not properly connected together with a single accountable metropolitan delivery mechanism with legal authority, budget control, public reporting, and inter-agency enforcement power. 

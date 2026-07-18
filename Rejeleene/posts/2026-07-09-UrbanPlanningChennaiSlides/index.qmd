@@ -334,11 +334,7 @@ This slide essay tests Chennai across six functions: planning, finance, engineer
 ## The main finding
 
 <div class="big-claim">
-Chennai's urban planning falls short, not because of population growth or lack of money.
-</div>
-
-<div class="slide-sub">
-It falls short because land-use planning, infrastructure finance, engineering delivery, maintenance, enforcement, and accountability are not joined under one answerable metropolitan operating system [@nitiUrbanPlanningCapacity2021].
+Chennai’s urban planning falls short not only because of population growth or lack of money, but because land-use planning, infrastructure finance, engineering delivery, maintenance, enforcement, and accountability are not joined into one answerable metropolitan operating system
 </div>
 
 ## Why Chennai matters
@@ -800,7 +796,7 @@ Chennai/Madras is transformable into World Class Urban Planning System.
 </div>
 
 <div class="slide-sub">
-What's required is maintainence and enforcement and accountability under one Urban delivery system.
+What's required is maintenance and enforcement and accountability under one Urban delivery system.
 </div>
 
 ## References {.smaller}

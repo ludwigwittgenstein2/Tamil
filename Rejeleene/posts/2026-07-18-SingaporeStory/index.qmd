@@ -1,0 +1,743 @@
+---
+title: "Modernization of Singapore: Behind Its Transformation"
+author: "Rick Rejeleene"
+date: 2026-07-19
+date-format: "MMMM D, YYYY"
+toc: true
+format:
+  html:
+    css: styles.css
+bibliography: references.bib
+csl: ieee.csl
+link-citations: true
+toc-title: Table of Contents
+toc-location: right-body
+toc-depth: 2
+description: |
+  Development of Singapore and Memoir, Observations from Lee Kuan Yew on Countries
+categories: [Singapore, Developmental Economics, Tamil Nadu, India, Book Review, History]
+---
+
+# Preface 
+
+In discussions about economic development and places that transformed themselves, Singapore is one of the most striking examples. 
+I am thankful to Thiru Muthu Palaniappan, who is from Madurai, India. In our conversations about development and governance, Singapore kept coming up. 
+Regarding economic transformation, I was moved by his explanation and his urgency to look at Singapore.
+
+So, before we look into Singapore, it's important to ask questions. 
+
+**1. How did Singapore become prosperous and capable?**
+
+**2. What can another society realistically reproduce?**
+
+Singapore modernized through a system of mutually reinforcing institutions.
+
+In my previous posts, I have surveyed developmental economics across countries:
+
+# Related posts
+
+**Japan**
+
+1. [Modernization of Japan](https://rickrejeleene.me/Tamil/posts/2026-03-07-BookReviewJapan/index.html)
+2. [MITI Japan: Industrial Policy of Japan, 1925–1975](https://rickrejeleene.me/Tamil/posts/2026-03-16-MITIJapan/index.html)
+3. [Japan as No.1 by Ezra Vogel](https://rickrejeleene.me/Tamil/posts/2026-03-26-JapanNo1/index.html)
+
+**China**
+
+1. [Modern History of China](https://rickrejeleene.me/Tamil/posts/2026-04-25-HistoryChina/index.pdf)
+2. [How Deng Xiaoping Transformed China](https://rickrejeleene.me/Tamil/posts/2026-05-29DengChinaEzra/index.html)
+3. [What Can We Learn from Wang Chuanfu, the Orphan Who Built BYD?](https://rickrejeleene.me/Tamil/posts/2025-07-13-BYD/index.html)
+
+**East Asia and Taiwan**
+
+1. [East Asia's Industrialization: What It Means for India](https://rickrejeleene.me/Tamil/posts/2026-04-13-EastAsiaIndustrialization/index.html)
+2. [How Asia Works by Joe Studwell](https://rickrejeleene.me/Tamil/posts/book4/index.html)
+
+**Russia**
+
+1. [How Russia's Industrialization Started in the 19th Century](https://rickrejeleene.me/Tamil/posts/2025-11-29-RussianHistory/index.html)
+
+**Theory of Economic Growth**
+
+1. [Notes from Simon Kuznets on Economic Growth](https://rickrejeleene.me/Tamil/posts/2026-06-07-NotesKuznetEconomicGrowth/index.html)
+2. [Economic Transitions: From Feudalism to Economic Prosperity](https://rickrejeleene.me/Tamil/posts/2025-08-20-Feudalism-Economy/index.html)
+
+So I decided to look into the missing country, Singapore, and how it executed its transformation.
+
+# Brief ties of Tamils and Singapore
+
+I grew up in a small town in Southern India, Tirunelveli.
+Tirunelveli is located in Tamil Nadu. And so, I am curious about the connections of Tamils with Singapore, especially in modern age. 
+I grew up in early 2000s, the perception of Singapore among people in Tamil Nadu was highly positive. While we were aware of Singapore as a country in middle and high school, I never learned what actually happened, its institutions, its economic transformation.
+
+A substantial Tamil community lives in Singapore. The history of Tamil Nadu with Singapore goes as far back as the Chola era. 
+Earlier in the 10th-13th century, Tamil Seafarers, traders from the coast of South India had established trade links with Singapore.
+The Singapore Stone is the earliest surviving stone, a fragment of ancient Indic text.
+While historians are still contesting the interpretation of this.
+
+<figure style="text-align:center; margin:0;">
+<img src="/images/singapore/TamilSingapore.png"
+     alt="Timeline of Tamil people in Singapore"
+     style="width:100%; max-width:700px; height:auto; display:block; margin:0 auto;">
+<figcaption style="text-align:center; font-size:0.85em; color:#555; margin:0.5em auto 0; max-width:700px;">
+Timeline of Tamils in Singapore
+</figcaption>
+</figure>
+
+The earliest recorded Tamil in Singapore was Naraina Pillai. 
+He set up a brick kiln. He also built the original Sri Mariamman Temple in 1827. 
+Sir Stamford Raffles arrived in May 1819 to establish a British trading post. Tamils were already among the earliest non-Malay settlers.
+Tamil Muslim traders, commonly called Chulias, began settling in Singapore during the early colonial period. The term was associated with migrants from the Coromandel Coast. Singapore received its first recorded group of transported Indian convicts on 18 April 1825. About 79 men and one woman sent from Madras, Serangoon Road, around which Little India later developed, was laid using convict labour. Some former convicts remained in Singapore after completing their sentences and became shopkeepers, public-works employees, cattle keepers, milk sellers and cart owners.
+
+The Nattukottai Chettiars or Nagarathars came from Chettinad in Tamil Nadu, they kept their economic base developed around Market Street and Chulia Street, close to trading houses and government offices. I have written in detail about this Tamil community, their history, banking networks and social organization, in my
+earlier post, [Nagarathar Chettiar: Social Group of Tamil Nadu](https://rickrejeleene.me/Tamil/posts/2026-06-25-NagaratharCaste/index.html).
+
+E.V. Ramasamy, popularly known as Periyar, visited Malaya and Singapore in December 1929.
+He addressed an audience at Singapore’s Town Hall on 27 December. His visit helped catalyse the formation of the Tamils Reform Association in Singapore. G. Sarangapany migrated to Singapore from Thiruvarur in 1924. In 1935, the Tamils Reform Association launched Tamil Murasu. Sarangapany later took control of the newspaper and turned it into an enduring Tamil daily.
+
+Population of early Singapore:  The 1824 census identified 756 people as Indians in a total population of 10,683, although it did not separately count Tamils. By 1860, Singapore had approximately 13,000 Indians, most of whom were South Indians. And by 2026,  roughly 650,000 individuals are Indians. Out of this, Tamils account for about 200,000 to 244,000 residents. 
+
+# From Third World to First
+
+<figure style="display: inline-block; margin: 1.5rem 0; padding: 0;">
+  <img
+    src="/images/singapore/book.png"
+    alt="From Third World to First by Lee Kuan Yew"
+    style="display: block; width: 400px; height: auto; margin: 0;"
+  >
+  <figcaption style="margin-top: 0.5rem; padding: 0; text-align: left;">
+    Lee Kuan Yew
+  </figcaption>
+</figure>
+
+In the following sections, I share the memoir and perspective from From Third World to First by Lee Kuan Yew. 
+In my view, it is highly engaging, concise and informative. It is one of the best books that I have read this year. 
+Majority of the work is Lee's observation, his memories, meetings with global leaders, challenges and how he approached them.
+
+# Modernization through Nine Institutional Pillars
+
+Singapore's transformation came from a connected system of **capable government, employment creation, world-class infrastructure, human capital, social stability, national security, ownership, labor cooperation, and global trade**.
+
+
+<figure style="display: inline-block; width: 500px; max-width: 100%; margin: 1.5rem 0; padding: 0;">
+  <img
+    src="/images/singapore/ninepillars.png"
+    alt="Nine Pillars"
+    style="display: block; width: 100%; height: auto; margin: 0;"
+  >
+  <figcaption style="margin-top: 0.5rem; margin-left: 6%; padding: 0; text-align: left;">
+    Nine Pillars
+  </figcaption>
+</figure>
+
+<details>
+<summary><strong>1. Establish a Clean and Capable Government</strong></summary>
+
+<p>
+Lee argued that development begins with a government capable of making decisions, implementing policies, controlling corruption, and enforcing laws consistently.
+</p>
+
+<p>
+Development plans have little value when public institutions are weak, contracts are unreliable, or government agencies cannot carry out their responsibilities.
+</p>
+
+</details>
+
+<details>
+<summary><strong>2. Create Employment Before Debating Economic Ideology</strong></summary>
+
+<p>
+Singapore treated employment as an immediate national priority. The goal was to create productive jobs and raise living standards.
+</p>
+
+<p>
+The Economic Development Board functioned as a one-stop agency that helped investors obtain land, electricity, water, permits, infrastructure, and workers.
+</p>
+
+<p>
+Singapore understood that investors would not come merely because the country needed assistance. They would come only when they could operate securely, efficiently, and profitably.
+</p>
+
+</details>
+
+<details>
+<summary><strong>3. Build First World Standards</strong></summary>
+
+<p>
+Singapore sought First World standards in public safety, cleanliness, transportation, telecommunications, education, healthcare, ports, utilities, and government services.
+</p>
+
+<p>
+These standards allowed international companies to use Singapore as a secure, reliable, and efficient base for conducting business throughout Asia.
+</p>
+
+</details>
+
+<details>
+<summary><strong>4. Invest in Human Capital</strong></summary>
+
+<p>
+Because Singapore possessed few natural resources, its people had to become its primary resource.
+</p>
+
+<p>
+The government invested in education, technical training, English for international commerce, bilingualism for cultural continuity, and the recruitment of foreign professionals when local expertise was insufficient.
+</p>
+
+<p>
+Lee argued that Singapore could not reach the highest international standards without attracting capable immigrants, professionals, managers, scientists, and entrepreneurs.
+</p>
+
+</details>
+
+<details>
+<summary><strong>5. Create Racial Harmony</strong></summary>
+
+<p>
+Violence between Malays and Chinese strongly influenced Lee’s political thinking.
+</p>
+
+<p>
+He believed Singapore could survive only by treating people primarily as Singaporean citizens rather than organizing the state around ethnic dominance.
+</p>
+
+<p>
+Racial harmony was necessary for national survival, political stability, and economic confidence.
+</p>
+
+</details>
+
+<details>
+<summary><strong>6. Build National Defense</strong></summary>
+
+<p>
+At independence, Singapore possessed almost no independent military capacity.
+</p>
+
+<p>
+Lee regarded national service as both a defense policy and a nation-building institution. Chinese, Malays, Indians, rich citizens, and poor citizens trained together.
+</p>
+
+<p>
+National service provided military preparedness while cultivating discipline, shared responsibility, and a common national identity.
+</p>
+
+</details>
+
+<details>
+<summary><strong>7. Promote Ownership and Responsibility</strong></summary>
+
+<p>
+Lee preferred what he described as a “fair, not welfare, society.”
+</p>
+
+<p>
+The government promoted compulsory savings through the Central Provident Fund, public housing, widespread homeownership, education, and employment rather than relying primarily on a large welfare system.
+</p>
+
+<p>
+Lee argued that people behave differently when they own homes, possess savings, and feel that they have a direct stake in their country’s stability and future.
+</p>
+
+</details>
+
+<details>
+<summary><strong>8. Maintain Labor Peace</strong></summary>
+
+<p>
+Singapore transformed militant labor unions into partners in economic development.
+</p>
+
+<p>
+Lee believed that recurring strikes, industrial conflict, and political confrontation would discourage investors, interrupt production, and destroy employment.
+</p>
+
+<p>
+The government therefore developed institutions through which unions, employers, and the state could negotiate wages, productivity, and working conditions without continuous disruption.
+</p>
+
+</details>
+
+<details>
+<summary><strong>9. Build Singapore into a Global Trade Hub</strong></summary>
+
+<p>
+Singapore could not prosper through self-sufficiency. Its domestic market was small, and it possessed few natural resources. Its survival therefore depended on connecting itself to the global economy.
+</p>
+
+<p>
+The government developed Singapore as a center for international trade, shipping, manufacturing, finance, technology, and foreign investment.
+</p>
+
+<p>
+This required efficient ports, reliable infrastructure, enforceable contracts, political stability, skilled workers, and strong relationships with major economic powers.
+</p>
+
+<p>
+Singapore also used its geographical location and time zone strategically. Its financial sector could operate between the closing of American markets and the opening of European markets, contributing to continuous global financial activity.
+</p>
+
+<p>
+Global trade was not separate from the other pillars. Clean government, labor peace, national security, human capital, and First World infrastructure made Singapore attractive to international companies.
+</p>
+
+<p>
+Access to global markets then brought employment, capital, technology, managerial knowledge, and opportunities that Singapore could not generate from its domestic economy alone.
+</p>
+
+</details>
+
+## Why Did the Nine Pillars Reinforce One Another?
+
+1. Clean government made contracts credible. National security reduced political risk
+
+2. Infrastructure and skilled workers attracted international companies 
+
+3. Foreign investment created employment and transferred technology
+
+4. Savings and homeownership gave citizens a stake in national stability
+
+5. Labor peace protected production, while global trade gave Singapore access to markets far larger than its own
+
+::: {.callout-important appearance="simple"}
+
+## Central Takeaway
+
+Singapore modernized by constructing a system in which **state capacity, employment, infrastructure, human capital, racial harmony, national defense, ownership, labor peace, and global trade reinforced one another**.
+:::
+
+# Foundations of Singapore
+
+Treaty of Singapore on 6 February 1819 is officially recognised as the founding of modern-day Singapore. 
+The Treaty allowed the British East India Company to open up a trading post in Singapore, marking the beginning of a British settlement. 
+In this context, We need to remember across the globe, the British East India company had significant presence in India. 
+And by this time, Napoleonic wars concluded and Napoleon had been defeated and Britain emerged as a Global power.
+
+Sir Stamford Raffles, representing the British East India Company, signed the Treaty of Friendship and Alliance with Sultan Hussein Shah of Johor and Temenggong Abdul Rahman for opening a British Trading Post. At this time, there were only 1000 inhabitants in the Island of Singapore.
+
+<figure>
+<img src="/images/singapore/timeline.png" alt="Book" style="width:600px; height=600px; float:center;">
+<figcaption> Timeline of events in Singapore</figcaption> </figure>
+
+# Early Years of Singapore: 1819 and 1867
+
+The Dutch had already established trading posts in Indonesia, with spice trade being lucrative. The British by this time, wanted to establish a trading post, that could challenge the Dutch, and Singapore was strategic in access to India and China, and South-East Asia.
+
+While the Dutch imposed tariffs in their ports, Major William Farquhar who lived in Malacca, (Malaysia) and Singapore from 1803-1821, who actively championed for the harbour and free-trade policy. And by this time, Singapore had become the place where goods were brought from one country, stored, financed, sorted and then re-exported to another country. In modern world, Dubai also implements this strategy. So, Singapore earned income from shipping, warehousing, moneylending, brokerage, retailing, ship repair, food supply and the movement of goods. Around this time, Raffles attempted to reorganise Singapore through the Jackson or Raffles Town Plan, separating commercial, governmental and residential areas and assigning districts to Europeans, Chinese, Indians, Arabs, Bugis. For financing the government, Raffles opposed gambling and opium while Farquhar supported them. As the settlement could not collect ordinary port tariffs because it was supposed to remain a free port, they raised money by auctioning monopolies or licences for opium, alcohol, gambling and other activities. And after Singapore joined Penang and Malacca in the Straits Settlements in 1826, its position became more secure. Singapore became prosperous as a port while remaining overcrowded, unhealthy and poorly policed for many ordinary residents. The economy expanded much faster than its institutions.
+
+In Madras Presidency (Tamil Nadu): By approximately 1800, the East India Company had acquired most of the territories that eventually constituted the presidency. Tamil districts such as Tirunelveli, Madurai, Trichy, Salem, Coimbatore, Vellore, Cuddalore were predominantly agricultural. Thomas Munro, governor of Madras from 1820 to 1827, became closely associated with the ryotwari system. Under this arrangement, the colonial government assessed and collected land revenue directly from individual cultivators rather than relying entirely on large zamindars. Roads, canals, postal systems, courts, schools and military cantonments expanded gradually. Southern India’s first railway opened in 1856, connecting the Madras area with Walajah Road near Arcot. The University of Madras was established in 1857, creating an institution that later educated administrators, lawyers, teachers and professionals throughout southern India. These institutions created a small English-educated class.
+
+# 1867–1900: Singapore to Crown Colony and Global Port
+
+In India, after the 1857 Indian revolt, India came under direct rule of British Crown and EIC (East India Company) rule was abolished.
+
+In 1867, Singapore, Penang and Malacca were taken over by the British Crown as Crown Colony of the Straits Settlements. Merchants found it difficult to curb piracy, currency issues, justice, port administration and security. Suez Canal opened in 1869, which shortened the sea route between Europe and Asia, making steamship travel much more practical. Even at this time, Singapore did not produce much. It earned money from shipping, warehousing, banking, brokerage, insurance, retailing and processing, even when the original commodity came from Malaya, Sumatra, Borneo or elsewhere. The population also grew from 97,111 in 1871 to 940,824 in 1947.
+
+Many migrants came due to poverty pressure facing in South China, warfare, disorder and political instability in China and employment opportunities in Malaya’s mines, plantations and the demand for dockworkers, construction labourers, domestic servants, clerks and merchants. At this point in history, many worked temporarily in Singapore. Chinese migrants often hoped to earn money and return to China, while Indian labourers, soldiers and clerks moved within British imperial networks. The Chinese were already the majority in 1901, with 71.8% Chinese, 5.8% Malay, 7.8% Indian, 3.5% European and Eurasian, with smaller Arab, Armenian, Jewish and other communities. Among Chinese, there were internal divisions, Hokkiens became influential in shipping, banking and large-scale commerce, Teochews were prominent in gambier, pepper and agricultural trade, Cantonese worked in crafts, construction and commerce, Hakkas were associated with mining and trades, Hainanese, who arrived later, often worked in hotels, restaurants and domestic service. Chinese people ranged from impoverished coolies to extremely wealthy merchants and plantation owners.
+
+In Madras Presidency (Tamil Nadu): During the same period, the Tamil-speaking districts of the Madras Presidency experienced a very different form of colonial development. Most people remained dependent on agriculture, weaving and low-paid rural labour. The Great Famine of 1876–1878 devastated southern India, while indebtedness, low wages and unstable employment encouraged people to seek work overseas, Most Tamil labourers worked in plantations and public works, while Tamil Muslim merchants operated textile, cattle, shipping and provision businesses. Nattukottai Chettiars from Chettinad became important moneylenders and financiers, providing credit to traders, plantation owners and smaller businesses.
+
+# Singapore 1900-1929: Tin, Rubber Boom
+
+As industrialization occurred, it created high demand for tin. Tin connected Singapore to Malaya, particularly, tinplate, machinery and manufactured goods.
+Malaya became one of the world’s leading tin-producing regions. Even though the mines were outside Singapore; it handled financing, purchasing and selling, shipping, insurance, machinery imports and the export of processed tin. Moreover, the biggest demand came from rubber. Demand rose because bicycles and automobiles required pneumatic tyres. Malaya rapidly converted land into rubber plantations. British, European and Asian companies managed estates in Malaya, Johor, Sumatra and elsewhere, but many used Singapore as their commercial headquarters. By 1921, British Malaya exported more than 200 million pounds of rubber, about half of which went to the United States.
+
+Rubber and tin encouraged growth of banks, commodity exchanges, insurance companies, shipping firms, insurance companies, accountancy and legal services, warehouses and processing plants. This also created the region’s wealthy Asian business families. While prosperity entered Singapore, there was also inequality as much of the population was poor. The ordinary laborers experienced overcrowded shophouses, lodging houses, inadequate sanitation, infectious diseases, dangerous employment, low unstable wages, debt to labour recruiters, opium addiction and no government support.
+
+From 1929- 1939, Singapore experienced effects of Great Depression, as commodity prices were affected. So Singapore prospered when international commodity trade expanded, but suffered severely when global demand collapsed. And by 1940, Singapore recovered from the effects of Great Depression through trade and military expenditure increased. As Britain was looking to build a military base, It constructed a major naval base at Sembawang in 1938. In Britain, which led the way toward industrialization globally, it experienced massive creation of new wealth. However, there was a large segment of english people who lived in poverty as well, the wealth disparity and inequality spread in England. 
+
+The Tamil districts did not experience a rubber-and-tin boom comparable to Malaya. Most people continued to depend on agriculture, agricultural labour and traditional occupations. Dry districts faced irregular rainfall, weak demand for labour, indebtedness and very low village wages. These conditions created a large population willing to migrate. Colonial employers found that labour could be recruited relatively cheaply from southern India because employment was scarce, living standards were low and droughts and periodic food shortages made rural life insecure. Recruiting firms operated from Madras and Nagapattinam, moving workers across the Bay of Bengal to Penang, Singapore and the rubber-growing regions of Malaya. 
+
+Until 1910, some travelled under indenture contracts that restricted their ability to change employers. The kangani system subsequently became dominant: an established Tamil overseer returned to his village, recruited relatives, neighbours and people from his caste or locality, and accompanied them to a plantation. Tamil workers planted trees, cleared land, removed weeds and tapped rubber. They also worked on roads, railways, ports, municipal services and construction projects. By 1918, Indians constituted approximately 57 percent of Malaya’s estate workforce, and Tamils formed the overwhelming majority of Indian plantation labour
+
+# World War II and Effects of WW2
+
+The Major Naval Base could not protect Singapore from Japanese. Their defence strategy failed, and Japanese forces advanced down the Malay Peninsula and captured Singapore on 15 February 1942. This shocked and changed the perception of British invincibility among locals. The British force of 60,000 troops surrendered. Under Japanese rule, Singapore was renamed Syonan-to. Economic System of Singapore was disrupted. Rice became scarce, and people substituted tapioca, sweet potatoes, millet. The occupation was also marked by imprisonment, forced labour and violence. The Chinese community was especially targeted during the Sook Ching massacres, partly because of Chinese resistance to Japan and support for China during the Sino-Japanese War. Japanese rule therefore damaged not only the economy but also the legitimacy of British. Britain had claimed that its empire supplied protection and order, yet it had been defeated rapidly.
+
+During World War Two, much of the Madras Presidency was affected as well. Following the fall of Singapore, panic swept the region in 1942. Fearing an imminent Japanese invasion, the British administration ordered mass evacuations, causing many residents to flee the city and sell their properties at throwaway prices. 
+
+# Post WW2 and Foundation of Progressive Party
+
+Singapore Progressive Party was the only party that contested in election of 1948. However, Chinese communists had strong ties to trade unions, schools and created unrest in society. David Marshall, a lawyer became the first Chief Minister, from April 1955 to June 1956. He led a delegation for full self-rule to London, however he was unsuccessful. He resigned later, and Britain granted self-rule except for defense and foreign affairs in 1959. On May 30, the PAP party won on a landslide with Lee Kuan Yew being their leader. 
+
+Singapore joined the Federation of Malaysia on 16 September 1963. Lee Kuan Yew and the People’s Action Party believed merger would give Singapore access to a larger common market, reduce unemployment and reconnect the island with its economic hinterland in Malaya. Malayan and British leaders also supported merger partly because they feared that Singapore’s powerful left-wing movement might become communist-controlled.
+
+The partnership ended in conflict, with disagreements intensifying communal tensions. It contributed to deadly racial riots in Singapore in 1964.
+By August 1965, Malaysian and Singaporean leaders concluded that separation was safer than continued conflict. Singapore therefore became an independent republic on 9 August 1965. Independence left Singapore without a natural-resource base, a large domestic market or guaranteed access to Malaysia.
+
+<figure>
+<img src="/images/singapore/singapore.png" alt="Pillars" style="width:500px; height=500px; float:center;">
+<figcaption> Singapore </figcaption> </figure>
+
+# From Third World to First World: Lee Kuan Yew’s View of the World
+
+In 1965, Lee believed Singapore faced possible economic collapse. As Singapore had no natural resources, no large domestic market or hinterland, high unemployment, serious racial tensions, no credible military, and uncertain relations with Malaysia and Indonesia.
+
+<figure style="text-align:center;">
+<img src="/images/singapore/gdp.png"
+     alt="Line chart of GDP per capita from 1960 to 2025 on a log scale. Singapore rises from $428 to nearly $99,000, overtaking Britain and Australia around 2010, with South Korea, Malaysia, Tamil Nadu, and India below."
+     style="width:100%; max-width:700px; height:auto; display:block; margin:0 auto;">
+<figcaption style="font-size:0.85em; color:#555; margin-top:0.5em;">
+GDP per capita, current US$, log scale, 1960–2025. In 1960 Britain was
+three times richer than Singapore and ruled it within living memory; by 2010
+Singapore had passed both Britain and Australia. Tamil Nadu (dashed) shown as
+GSDP per capita, estimated from MOSPI/RBI state accounts. Source: World Bank
+WDI; 2025 values are latest estimates.
+</figcaption>
+</figure>
+
+GDP per capita is just total economic output divided by population, so Singapore's number comes from generating enormous output with only about 6 million people.
+Singapore positioned itself as a hub economy. It sits on the Strait of Malacca, one of the world's busiest shipping lanes, and built one of the largest ports and oil-refining/trading centers on earth. Then it layered on finance, it's now a top-tier global financial center rivaling Hong Kong. Plus electronics and semiconductor manufacturing, pharmaceuticals, and regional headquarters for thousands of multinationals. These are all extremely high value-per-worker industries.
+
+Tanmil Nadu is a state of ~77 million people, most of whom historically worked in agriculture and low-productivity services. 
+Its manufacturing strengths, textiles, auto assembly, leather, electronics assembly, sit at lower rungs of the value chain than Singapore's chip fabs and investment banks. A garment worker and a derivatives trader both count as one person in the denominator, but produce wildly different dollar output.
+
+The following sections examine Lee Kuan Yew’s interpretation of Singapore’s development and his views of other countries and political leaders. 
+In each of the section, It's Lee's observation on country and it's issues. I found them engrossing and accurate. I highly recommmend going through them. 
+
+# On Malaysia
+
+Lee Kuan Yew describes Singapore–Malaysia relations as a mixture of deep interdependence, political rivalry and recurring mistrust. The two countries shared geography, families, trade, water systems and a common colonial history, yet they followed very different ideas of nationhood after separation in 1965. Singapore emphasized equal citizenship and merit regardless of race, while Malaysia retained a political system centred on Malay primacy and affirmative action for the Bumiputera population.
+
+Lee’s relationship with Mahathir Mohamad had begun with hostility. During Singapore’s brief period inside Malaysia, Mahathir viewed Lee’s call for a “Malaysian Malaysia” as a threat to Malay political dominance. Lee believed Mahathir wanted him to understand that, as a Chinese political leader, he did not know his “proper place” within Malaysia. Once Singapore became independent, however, Lee concluded that continuing their personal feud would damage both countries.
+
+Lee therefore invited Mahathir to Singapore in 1978, expecting that he would eventually become Malaysia’s prime minister. Their discussions were unusually direct. Mahathir asked why Singapore was building a strong military. Lee answered that Singapore feared that Malaysia might one day threaten or interrupt its water supply. Because water was essential to Singapore’s survival, Lee said the country had to prepare for every possibility, even though he did not believe Mahathir personally intended such an action.
+
+Mahathir was equally candid about his resentment toward Singapore. He remembered being treated disrespectfully by a Chinese taxi driver while studying there and believed many Singapore Chinese looked down on Malays. He also wanted Lee to avoid involvement with Chinese opposition leaders in Malaysia. Lee agreed that both governments should refrain from interfering in each other’s domestic politics. This understanding created the basis for a practical relationship between two independent states.
+
+Lee respected Mahathir’s willingness to learn from Singapore. Mahathir encouraged Malaysian officials to study Singapore’s airport, urban planning, productivity and economic management. He also supported greater cooperation in aviation, trade and tourism. Lee considered this openness unusual because earlier Malaysian leaders had often been reluctant to admit that their country could learn anything from Singapore.
+
+Despite these improvements, relations repeatedly deteriorated. Malaysia imposed transport levies, encouraged trade to bypass Singapore’s port and adopted policies that reduced Singapore’s economic role. Disputes also emerged over water, railway land, immigration checkpoints, airspace, territorial boundaries and Singapore’s relations with Israel. Lee believed Malaysian politicians sometimes criticized Singapore to gain support among Malay voters, especially when Singapore’s prosperity generated envy.
+
+The two governments also disagreed over the expected relationship between them. Lee believed some Malaysian leaders wanted an abang-adik, or big brother–little brother, arrangement in which Singapore would defer to Malaysia. Singapore was willing to compromise on symbolic or minor matters, but insisted on equality when legal rights, sovereignty or national survival were involved. Lee argued that a small country could not afford to depend only on goodwill; agreements had to be written, enforceable and respected.
+
+Water represented Singapore’s greatest vulnerability. Malaysia supplied a significant proportion of the island’s water, and Malaysian politicians periodically threatened to use this dependence as leverage. Singapore responded by strengthening its military, expanding reservoirs and investing in desalination and recycled water. In Lee’s account, reducing dependence on Malaysia was essential to preserving Singapore’s freedom of action.
+
+The same principle shaped Singapore’s economic strategy. Malaysia attempted to limit Singapore’s access to its economy and reduce the use of Singapore’s ports, airports and financial services. Instead of remaining dependent on its immediate hinterland, Singapore connected directly with multinational corporations and the industrial economies of Japan, Europe and the United States. Lee described this as “leapfrogging” the region. External pressure forced Singapore to become more competitive and globally connected.
+
+Lee nevertheless credited Mahathir with transforming Malaysia. Mahathir promoted privatization, foreign investment, manufacturing, modern infrastructure, science and technology. He wanted Malaysia to develop better ports, airports, industries and a major technology corridor. Singapore viewed these ambitions both as competition and as pressure to improve its own productivity and infrastructure.
+
+The deepest disagreement concerned race and citizenship. Malaysia’s New Economic Policy sought to raise Malay participation in education, business and professional employment. Lee accepted the need to assist disadvantaged communities but believed permanent racial preferences could weaken meritocracy and create dependency if opportunities were given without sufficient attention to preparation and capability. Mahathir, however, feared that removing affirmative-action policies would return Malays to a disadvantaged position in their own country
+
+# Managing the Media
+
+Lee Kuan Yew argues that Singapore could not simply adopt the Western idea of an adversarial press. In his view, the media in a small, young and multiracial country had the power either to support national development or to inflame racial conflict, weaken public confidence and allow private or foreign interests to shape domestic politics. He therefore believed press freedom had to operate within limits established by the elected government. His distrust of newspapers developed during the colonial period. The English-language Straits Times largely reflected British commercial and political interests, while Chinese, Malay and Tamil newspapers often represented particular linguistic, ethnic or ideological communities. Lee concluded that newspapers were not neutral defenders of truth. Their owners, editors and financial backers used them to advance their own political, commercial or communal interests.
+
+When the PAP contested the 1959 election, the Straits Times strongly opposed it. Lee regarded this not simply as criticism from an independent newspaper, but as intervention by a British-controlled institution whose senior leaders could leave Singapore if their political campaign failed. After the PAP won, the newspaper moved much of its operation to Kuala Lumpur, reinforcing Lee’s belief that its commitment was to British interests rather than to Singapore. Lee was especially concerned about foreign financing of local newspapers. The government closed the Eastern Sun after discovering that it had received secret financial support connected to China. It also withdrew the licence of the Singapore Herald, whose foreign ownership and unusual financial backing led the government to suspect that outside interests were attempting to influence Singapore’s politics.
+
+His broader principle was that foreigners should not control institutions capable of shaping Singaporean public opinion. In 1977, the government limited individual ownership of newspaper shares and created special management shares placed with major Singapore banks. Lee believed this prevented wealthy proprietors or foreign financiers from using newspapers as personal political instruments. Lee also justified media controls by referring to Singapore’s racial and religious vulnerability. He remembered how sensational reporting and inflammatory images had contributed to the Maria Hertogh riots of 1950 and the racial violence of 1964. From these experiences, he concluded that irresponsible journalism could cause real deaths, not merely vigorous debate. The media therefore had a responsibility to avoid stirring communal fear and hostility.
+
+His position was stated clearly at an international press conference in 1971: the media should reinforce the knowledge, discipline and social attitudes needed for development rather than undermine them. He argued that newspaper proprietors and journalists were not elected and therefore could not claim the same authority as a government chosen by voters. In his words, press freedom had to be subordinate to Singapore’s overriding national needs. Lee applied similar principles to foreign publications such as Time, the Asian Wall Street Journal, Asiaweek, the Far Eastern Economic Review and The Economist. When the government believed that these publications had reported Singapore inaccurately, it demanded an unedited right of reply. When they refused, Singapore did not completely ban them but sharply restricted their circulation.
+
+Lee defended this policy by arguing that foreign newspapers had no automatic right to distribute freely within Singapore while refusing the government an opportunity to correct factual errors. Reducing circulation also damaged their advertising revenue, giving them a commercial incentive to publish Singapore’s response. He saw this as a way for a small country to defend itself against powerful international media organizations. His critics viewed these actions as censorship and an attempt to suppress scrutiny. Lee responded that Western newspapers also pursued commercial interests and were capable of bias, selective reporting and refusing corrections. He rejected the idea that the Western media model was universally appropriate, especially for societies with different histories, institutions and communal risks.
+
+He was particularly opposed to allowing foreign journalists to become domestic political actors. They were welcome to report Singapore to audiences abroad, but he did not accept that they should function inside Singapore as permanent adversaries or investigators of the government in the American tradition. Domestic political debate, he argued, should remain primarily a matter for Singaporeans. At the same time, Lee believed the government had to answer criticism rather than merely suppress it. He challenged foreign commentators to public debates, wrote rebuttals, purchased advertising space when newspapers refused to publish his replies and pursued libel cases where he believed false allegations had been made. He thought leaders who failed to defend themselves would appear weak to their own citizens. Lee recognized that satellite television, computers and the Internet would eventually make complete information control impossible.
+
+# Making English without abandoning the culture
+
+Lee Kuan Yew presents language policy as one of Singapore’s most difficult nation-building problems. The country inherited separate English, Chinese, Malay and Tamil school systems, and each community was deeply attached to its own language. Without a common language, however, Singapore’s communities could remain socially divided and unable to work together effectively. Lee believed English was the only practical common language. Choosing Mandarin would have favoured the Chinese majority, while choosing Malay or Tamil would have disadvantaged other communities. English was therefore politically neutral within Singapore and economically useful outside it. It connected Singapore to international business, science, technology, diplomacy and multinational companies.
+
+The government nevertheless retained Malay, Mandarin, Tamil and English as official languages. Students in English-medium schools learned a designated mother tongue, while students in Chinese-, Malay- and Tamil-medium schools learned English. This bilingual model attempted to combine economic usefulness with cultural continuity. The change was politically sensitive because Chinese-language education had become connected to communal identity and anti-colonial politics. Many Chinese parents feared that replacing Chinese as the principal medium of instruction would weaken their culture. Chinese newspapers, teachers’ organizations, clan associations and students resisted the increasing dominance of English.
+
+Lee understood some of their concerns. Although he had been educated in English, he felt culturally disconnected from ordinary Chinese-speaking people. He therefore sent his own children to Chinese-language schools while ensuring that they learned English at home. This allowed him to argue that he respected Chinese education but still believed English was necessary for university study and employment. Nanyang University became the centre of this conflict. It had been established through contributions from the Chinese community and symbolized pride in Chinese language and culture. However, its graduates increasingly struggled to find employment because business, government and higher education were shifting toward English. Declining demand also weakened the university’s academic standards and reputation. Lee eventually converted Nanyang University to English and later merged it with the University of Singapore to form the National University of Singapore. The old Nanyang campus subsequently developed into Nanyang Technological University. Lee regarded the transition as painful but necessary because continuing Chinese-only university education would have limited the opportunities available to its graduates.
+
+After the merger, all schools adopted English as the main language of instruction. Lee feared, however, that English education could produce students who were economically successful but culturally detached. He admired the discipline, confidence, community spirit and respect for education that he associated with traditional Chinese schools. To preserve these qualities, the government created Special Assistance Plan schools. These institutions used English as the main instructional language while maintaining a strong Chinese-language and cultural environment. Lee hoped they would produce students who could participate in the international economy without losing their cultural identity.
+
+The government also encouraged Chinese Singaporeans to replace the many southern Chinese dialects with Mandarin. Lee believed that children who spoke dialect at home while studying Mandarin and English at school faced an excessive language burden. The Speak Mandarin Campaign, together with the removal of most dialect programming from television and radio, gradually increased the use of Mandarin. This policy created its own cultural loss. For many older Chinese Singaporeans, Hokkien, Cantonese, Teochew or another dialect, not Mandarin, was their true mother tongue. The move toward Mandarin weakened intergenerational transmission of these dialects even as it created a common language among Chinese Singaporeans. Lee acknowledged that bilingualism placed a heavy educational burden on children. English and the three official mother tongues came from completely different linguistic traditions, and not every student mastered both equally well. Yet he believed the alternatives were worse. A society divided into separate language systems would remain fragmented, while a completely English-speaking population could lose its cultural foundations. The broader objective was to create Singaporeans who could communicate with one another, participate in the global economy and remain connected to their respective traditions. English provided common access to employment and international knowledge, while Mandarin, Malay and Tamil were intended to preserve identity, family bonds and cultural confidence.
+
+# Britain Pulls Out
+
+Lee Kuan Yew describes Britain’s military withdrawal as one of the most dangerous moments in Singapore’s early independence. British forces provided more than defence. Their presence reassured citizens, investors and neighbouring countries that Singapore would remain secure. Without that confidence, Lee feared investment would collapse, unemployment would rise and the new state might not survive. Britain’s military bases also supported a large part of the economy. British spending accounted for about 20 percent of Singapore’s GDP and directly or indirectly sustained tens of thousands of jobs. A sudden withdrawal therefore threatened both national security and economic stability.
+
+At first, British leaders reassured Lee that their forces would remain. But Britain was experiencing serious financial difficulties, pressure on the pound and growing political opposition to overseas military commitments. Many Labour politicians wanted resources redirected toward domestic pensions, housing and public services. Britain’s strategic retreat was therefore driven mainly by economic weakness rather than by conditions in Singapore. Lee repeatedly travelled to London to persuade Prime Minister Harold Wilson, Defence Secretary Denis Healey and other ministers to delay the withdrawal. His argument was not that Britain should remain indefinitely, but that Singapore needed enough time to build its armed forces, attract industry and convert the military bases to civilian use.
+
+The 1967 devaluation of the British pound accelerated the crisis. Singapore lost a significant portion of the value of its sterling reserves because it had continued supporting the British currency. Soon afterward, Britain announced that all major forces east of Suez would leave by the end of 1971, earlier than Singapore had expected. Lee was deeply disappointed but avoided an angry public break with Britain. He believed Singapore still needed British cooperation to transfer military property, equipment and technical knowledge. Hostility might have caused the British to remove or destroy valuable assets instead of leaving them for Singapore’s use.
+
+The withdrawal forced Singapore to create a defence capability rapidly. Britain had previously discouraged Singapore from purchasing fighter aircraft because the Royal Air Force was expected to provide protection. Once withdrawal became certain, Britain agreed to sell Hawker Hunter aircraft and assist in training Singapore personnel. Singapore also sought a wider regional security arrangement. The old Anglo-Malayan Defence Agreement was eventually replaced by the Five Power Defence Arrangements involving Britain, Australia, New Zealand, Malaysia and Singapore. The new arrangement did not guarantee automatic military intervention, but required consultation if Malaysia or Singapore faced an externally organized attack.
+
+Lee regarded this as weaker than the old British guarantee, but better than complete abandonment. It also encouraged Malaysia and Singapore to acknowledge that their security was closely connected. Despite political tensions between them, an attack on either country could threaten the other.The government simultaneously prepared to replace the economic activity generated by the bases. Airfields, dockyards, barracks and military land had to be converted into civilian assets. Changi later became an international airport, Sembawang developed as a commercial shipyard, and other military properties became industrial, educational and recreational facilities. The British withdrawal ultimately accelerated Singapore’s shift toward self-reliance. It forced the government to build its own armed forces, diversify the economy and reduce dependence on any single foreign power. The fear of abandonment became a powerful motivation to create institutions capable of surviving without external protection.
+
+# Going Alone: Singapore’s crisis of Independence
+
+Lee Kuan Yew describes Singapore’s independence in 1965 as an unexpected national emergency. 
+Singapore had been expelled from Malaysia and suddenly had to survive as a small island with no natural resources, no independent military and no secure economic hinterland.
+
+Singapore had been created by the British as a trading and military centre for a much larger regional economy. 
+Its prosperity depended on processing and exporting goods from Malaysia and Indonesia. Once Malaysia sought to bypass Singapore and Indonesia restricted trade during Confrontation, the island’s traditional economic role appeared to be disappearing. Foreign observers widely predicted failure. British military bases supported a large share of Singapore’s economy, and many believed their eventual withdrawal would produce mass unemployment and economic collapse. Lee shared these fears privately, but believed that publicly expressing despair would destroy confidence and worsen the crisis.
+
+Security was the first problem. Singapore’s two infantry battalions remained under Malaysian command, while both the police and military were composed largely of Malays recruited during the colonial period. Lee feared that racial tensions or political pressure from Kuala Lumpur could lead to disorder or even an attempt to reverse Singapore’s independence. He appointed Goh Keng Swee to lead a combined Ministry of Interior and Defence. Singapore needed to build an army, preserve internal order and reassure citizens that the government could protect them. The use of neutral Gurkha guards around Lee’s home reflected how sensitive the racial situation was: Chinese or Malay police confronting members of another community could have produced wider unrest.
+
+Singapore also urgently sought international recognition. S. Rajaratnam became foreign minister and helped secure membership in the United Nations. Recognition was essential because Singapore needed other countries to accept that its independence was legitimate and permanent, rather than a temporary separation that Malaysia might reverse. The largest problem was unemployment. About 14 percent of the workforce was unemployed, and the traditional entrepôt economy could no longer provide enough jobs. Singapore had to invent a different economic model without knowing whether it would succeed. Lee admits that there was no established textbook for creating a viable economy under such unusual conditions.
+
+He concluded that Singapore could not afford to be ordinary. It had to become more efficient, disciplined, adaptable and reliable than its neighbours. Businesses would have no reason to use Singapore if the island provided the same services at the same quality and cost as larger surrounding countries. Singapore’s greatest economic asset was its strategic port, but Lee regarded its people as even more important. They were hardworking, thrifty and willing to learn. The government’s task was to develop their abilities, maintain racial peace and ensure that the burdens and benefits of development were distributed fairly. Public trust was another crucial resource. The PAP had gained credibility by resisting both communist pressure and Malay communalism. Lee believed that this trust could easily be destroyed by corruption, administrative failure or policies favouring one community. Clean and even-handed government therefore became a condition for national survival.
+
+# Building an Army
+
+Lee Kuan Yew describes Singapore’s military position after independence as dangerously weak. Its two infantry regiments remained partly under Malaysian control, many soldiers were Malaysian rather than Singaporean, and a Malaysian brigade was still stationed on the island. Singapore had sovereignty on paper but lacked the armed force needed to guarantee it. The government feared that political tensions with Malaysia, racial conflict or regional instability could threaten the new state. Lee recalls behaving cautiously toward Malaysian military commanders because Singapore did not yet possess the strength to confront them. This vulnerability convinced him and Defence Minister Goh Keng Swee that an independent national army had to be built urgently.
+
+Race made the problem especially sensitive. The colonial police and military had recruited disproportionately from the Malay community, while most Chinese had avoided soldiering. A Chinese-majority Singapore could not rely on security forces that might feel stronger communal loyalties during a racial crisis. The government therefore sought to create a force that reflected Singapore’s population while insisting that all citizens be treated equally. A mistaken dismissal of Malay recruits in 1966 nearly produced a wider communal conflict. Lee personally addressed the recruits in Malay, explained that the order had been misunderstood and allowed most of them to resume training. The episode reinforced his belief that defence policies had to be implemented with great care because administrative errors could quickly become racial confrontations.
+
+Singapore first sought military assistance from India and Egypt, but neither country responded to its requests. It then secretly turned to Israel, whose circumstances appeared similar: a small country surrounded by larger and potentially hostile neighbours. Israeli advisers arrived in 1965 and were discreetly described as “Mexicans” to avoid provoking Muslim opinion in Singapore and Malaysia. The Israelis helped design a system based on a small professional military supported by large numbers of trained citizen soldiers. Rather than creating a huge permanent army, Singapore introduced compulsory national service and built reserves that could be mobilized rapidly. This was less expensive and allowed defence to involve a large part of society.
+
+Lee also believed national service could help build a shared Singaporean identity. Young men from different races, religions and social classes would train, live and work together. Their military status would depend on performance rather than family wealth or social position. National service therefore became both a security institution and an instrument of social integration. Public attitudes toward military service had to be changed. Many Chinese families traditionally regarded soldiering as a low-status or dangerous occupation. The government introduced military and police cadet organizations in schools, organized public ceremonies for recruits and used National Day parades to present soldiers as protectors of the population rather than agents of colonial repression.
+
+Singapore rapidly acquired tanks, armoured vehicles, aircraft and patrol boats. The appearance of AMX-13 tanks in the 1969 National Day parade had psychological and diplomatic importance. It showed Singaporeans and neighbouring governments that the island was no longer completely defenceless, even though its forces were still developing. The British withdrawal made the military programme even more urgent. Singapore had hoped British forces would provide several years of protection, but their departure was brought forward to 1971. Singapore therefore had to create an operational air force and coastal navy within a few years while also addressing unemployment, housing and industrial development.
+
+Israeli training methods emphasized speed and local responsibility. Every foreign adviser was paired with a Singaporean who was expected to take over the role as soon as possible. This allowed Singapore to build its own instructors and commanders rather than remain permanently dependent on a large foreign military mission.
+The government also ensured civilian control of the armed forces. Important matters such as finance and manpower remained under civilian officials, reducing the possibility that the military could become an independent political force. Lee regarded subordination to elected political leadership as essential in a region where military coups were common. Singapore later sent its soldiers and pilots abroad for large-scale training because the island lacked sufficient land and airspace. Agreements with Taiwan, Australia, the United States, Thailand and Brunei allowed the armed forces to conduct exercises that would have been impossible within Singapore itself. The government also recruited academically strong officers through overseas scholarships. These officers studied at leading universities, received advanced military education and could later move into the civil service or private sector. Lee believed a modern military needed intellectual and technical capability as much as physical courage.
+
+# How Singapore Found a New Economic Base
+
+When Singapore separated from Malaysia in 1965, its economic future looked bleak. It had lost access to the Malaysian common market, trade with Indonesia had been disrupted, and Britain was preparing to withdraw its military forces. Singapore could no longer depend on being the commercial and military centre of a colonial empire. It needed a new economic hinterland. Tourism and small local factories created some employment, but they could not solve mass unemployment. Early industrial projects included textiles, toys, food products, shipbuilding and consumer-goods assembly. Several failed because Singapore lacked technology, experience, natural resources and a sufficiently large domestic market.
+
+The withdrawal of British forces was especially dangerous because military spending represented about one-fifth of Singapore’s economy and supported tens of thousands of jobs. Lee rejected permanent foreign aid, arguing that Singapore should convert British military assets into productive civilian uses. Naval bases became shipyards, Changi became an international airport, military land became university campuses and Sentosa was developed as a tourist destination.
+
+Singapore’s decisive strategy was to “leapfrog” its immediate neighbours and connect directly with the advanced economies of the United States, Europe and Japan. Rather than wait for Malaysia and Indonesia to become reliable markets, Singapore invited multinational corporations to manufacture goods on the island and export them worldwide. This went against the prevailing view that multinational corporations were merely instruments of Western exploitation. Lee and Goh Keng Swee took a pragmatic position: Singapore had no oil, minerals or large domestic market for foreign companies to exploit. What it needed were jobs, technology, management knowledge, international markets and industrial training.
+
+The Economic Development Board became the central institution for attracting investors. It acted as a one-stop agency, helping companies obtain land, power, water, permits, trained workers and tax incentives. Its officers travelled internationally, approached dozens of companies and personally guided investors through the process of establishing factories. Jurong Industrial Estate initially appeared to be an expensive failure. Its roads, utilities and factory sites stood largely empty. The breakthrough came when companies such as Texas Instruments, National Semiconductor and Hewlett-Packard established electronics factories. Their successful experiences encouraged other American companies to follow.
+
+The government’s second strategy was to create a “First World oasis in a Third World region.” Singapore invested in reliable infrastructure, clean streets, efficient ports, education, labour stability, personal security and honest administration. These were not merely social improvements; they were intended to convince international companies that Singapore was a safe and dependable place to operate. Confidence became Singapore’s greatest economic asset. During the 1973 oil crisis, the government refused to seize or restrict oil owned by foreign companies, even though doing so could have protected Singapore’s domestic supply. Lee believed that honouring commercial commitments during a crisis would produce greater long-term benefits. This decision helped Singapore become a major oil-refining and petrochemical centre.
+
+Singapore also converted its unions from confrontational organizations into partners in industrial development. Training centres established with foreign governments and companies prepared workers for modern manufacturing. As wages rose, Singapore moved away from low-cost assembly toward electronics, precision engineering, chemicals and other higher-value industries.The state sometimes created companies where private Singaporean entrepreneurs lacked the capital or experience to act. Singapore Airlines, Neptune Orient Lines, DBS Bank, Keppel and other government-linked enterprises were expected to operate commercially. Lee insisted that they had to become efficient and profitable rather than survive through permanent subsidies.
+
+Not every investment succeeded. Rollei’s camera factory failed because technology and consumer demand shifted toward Japanese electronic cameras. Yet its workers had acquired precision-engineering skills that later supported Singapore’s disk-drive and electronics industries. Even failed projects could leave behind useful human capabilities
+
+# Creating a Financial Centre
+
+Lee Kuan Yew explains that Singapore became a financial centre by identifying a gap in the global banking day. European markets opened first, followed by New York and San Francisco. Singapore’s time zone allowed it to receive financial business as American markets closed and pass it back to Europe the next morning, helping create continuous 24-hour global trading. Geography alone was not enough. In 1968, Singapore relaxed foreign-exchange controls and established the Asian dollar market, an offshore market where international banks could borrow, lend and trade foreign currencies. Tax incentives and exemptions attracted banks, but the market expanded mainly because Asian trade and investment were growing rapidly.
+
+Singapore first had to overcome its reputation as a newly independent developing country. Foreign banks needed confidence that the government was stable, the currency reliable, contracts enforceable and financial institutions properly supervised. Lee therefore presents credibility, rather than low taxes alone, as the foundation of the financial centre.The government retained a currency-board system instead of allowing an ordinary central bank to create money freely. Singapore dollars were issued only when supported by foreign reserves. Lee believed this discipline protected the currency from inflation and devaluation and demonstrated that the government would not finance its spending by printing money.
+
+The Monetary Authority of Singapore became the principal regulator. It developed strict rules for banks, securities firms and other financial institutions. Lee believed that one major financial scandal or bank failure could destroy the reputation that Singapore was trying to build, so the authorities initially preferred caution over rapid expansion. This approach was tested when famous or politically connected institutions sought access to Singapore. The government rejected repeated applications from the Bank of Credit and Commerce International because regulators doubted its capitalization and reputation. BCCI later collapsed with enormous losses elsewhere, while Singapore escaped because it had refused to compromise its standards.
+
+The government also acted against financial misconduct even when prominent British businessmen were involved. Investigations into the Haw Par company uncovered asset stripping connected to the Slater Walker group. Lee believed that failing to act because the individuals were influential in London would have shown that Singapore’s stock market could not protect investors.When the Pan-Electric collapse threatened Singapore’s stockbrokers in 1985, the authorities temporarily closed the stock exchange and arranged an emergency rescue fund. They then strengthened capital and prudential requirements. The objective was not simply to rescue individual firms, but to prevent the failure of several brokers from bringing down the wider financial system.
+
+Singapore expanded into futures trading through SIMEX, which linked with the Chicago Mercantile Exchange. Investors could open a position in Chicago and close it in Singapore. This strengthened Singapore’s role in round-the-clock international trading. Even the collapse of Barings Bank after Nick Leeson’s losses did not destroy SIMEX because the exchange’s protections prevented the losses from spreading to other members.
+
+As public savings and government reserves increased, Singapore created the Government of Singapore Investment Corporation in 1981. Its purpose was to invest reserves professionally across bonds, equities and other assets. Lee says its priority was not to chase the highest possible return, but to preserve the real value of national savings while earning a reasonable return. For many years, Singapore’s financial system was more tightly regulated than Hong Kong’s. Lee accepted this criticism because Singapore lacked Hong Kong’s historic connection to London and the protection of the Bank of England. It first had to establish a record of stability before allowing banks more freedom to create new products and take greater risks.
+
+By the 1990s, however, Lee concluded that excessive caution was limiting growth. Local banks had become protected, inward-looking and slow to adapt to global finance. Singapore began recruiting international banking talent, opening the domestic market to more foreign competition and allowing stronger financial institutions greater freedom. The regulatory philosophy gradually changed from protecting every investor and preventing every loss to protecting the stability of the system as a whole. Strong banks could take more risks, while regulators focused on capital strength, management quality, transparency and the possibility that one failure could spread across the financial sector. The Asian financial crisis of 1997 tested this model. Singapore’s banks remained solvent because they were not excessively indebted or overexposed to speculative property markets. The government required greater disclosure of bad loans and regional exposures, encouraging banks to recognize possible losses early rather than conceal them.
+
+# Strikes to Partnership
+
+Lee Kuan Yew explains that Singapore could not attract investment or create jobs while strikes, political agitation and confrontational union practices dominated industrial relations. In the early 1960s, communist-led unions had significant influence, and Singapore experienced frequent strikes, slowdowns and riots. By 1969, however, the country recorded no strikes or work stoppages. Lee had begun his political career as a lawyer and negotiator for trade unions. He later concluded that some of the demands he had once supported had become economically damaging. Benefits such as excessive overtime payments and restrictions on management increased business costs and encouraged companies to replace workers with machines. At a time of high unemployment, he believed preserving jobs and attracting new factories were more important than maximizing benefits for those already employed.
+
+The government confronted unions that ignored arbitration and organized illegal strikes. The decisive episode came in 1967, when cleansing workers led by K. Suppiah went on strike despite the dispute being referred to the Industrial Arbitration Court. The government arrested union leaders, deregistered the organizations and required striking workers to reapply for their jobs. Most returned immediately. Lee describes this as the turning point from militant confrontation to regulated negotiation. In 1968, the government passed new employment and industrial-relations laws. These established minimum working conditions but restored management’s authority to hire, dismiss, promote and transfer employees. Strikes required secret ballots, reducing the ability of union leaders to intimidate workers through public voting. The laws also limited certain benefits and prohibited strikes in essential services.
+
+Lee argues that strict laws alone would not have created lasting industrial peace. Employers also had to treat workers fairly, while workers needed to understand that companies could pay higher wages only if productivity and profits increased. The government’s role was to create a system in which businesses remained competitive and workers shared in the benefits through wages, housing, healthcare, education and social services. The National Wages Council, established in 1972, institutionalized this partnership. Representatives of government, employers and unions jointly recommended wage increases based on economic growth, inflation and productivity. The central principle was that wages should not rise faster than productivity. This tripartite system reduced uncertainty for businesses while giving unions a formal voice in national economic policy.
+
+The National Trades Union Congress also changed its purpose. Instead of concentrating mainly on strikes and collective bargaining, it began providing practical benefits to workers. NTUC established a taxi cooperative, supermarkets, insurance services, childcare centres, healthcare services, holiday resorts and housing projects. NTUC FairPrice helped restrain the cost of basic goods, while NTUC Income provided affordable insurance. These enterprises also taught union leaders how businesses worked. By sitting on company boards and supervising professional managers, they learned that good intentions could not replace efficiency, sound finances and competent administration. Union leaders increasingly understood the pressures faced by employers competing in international markets.
+
+Lee encouraged unions to adopt Japanese ideas such as company-level unions, quality-control circles and cooperation between workers and management. Employees were asked to identify ways to reduce waste, improve quality and increase productivity. Progress was uneven, but the broader objective was to replace the division between labour and management with a shared interest in the company’s survival. The relationship between the PAP government and the NTUC became unusually close. Senior union leaders served as cabinet ministers, while MPs worked with or advised unions. This gave workers direct access to policymakers and allowed labour concerns to influence government decisions. It also meant that the governing party and the main union federation became closely interconnected.
+
+Supporters view this arrangement as the foundation of Singapore’s industrial stability and rapid job creation. Critics argue that it weakened independent unionism and limited workers’ ability to challenge government or employers. Lee’s justification was that confrontational unionism would have driven away investment and harmed the unemployed more than it helped existing workers. The results were substantial. Foreign factories expanded, unemployment declined and real wages rose over several decades. During economic crises, unions accepted wage restraint and cost reductions to preserve jobs and restore competitiveness. In return, workers expected the government and employers to distribute the gains of recovery fairly.
+
+# Singapore’s Social Model
+
+Lee Kuan Yew explains that Singapore did not reject social support, but tried to design it differently from the Western welfare state. The government accepted that a free-market economy would produce unequal outcomes, yet it feared that excessive redistribution would weaken work, savings and personal responsibility. Its goal was to balance economic competition with social stability. The centre of this model was home ownership. Lee believed families would care more about their neighbourhoods and the country if they owned their homes rather than rented them. Ownership also gave ordinary citizens a tangible stake in Singapore and made national service appear less like defending the property of the wealthy.
+
+The government expanded the Central Provident Fund, originally a retirement savings programme, so workers could use compulsory savings to buy public housing. Monthly contributions from workers and employers paid down home loans, accumulated retirement savings and later supported healthcare. Instead of financing welfare mainly through taxes, Singapore required individuals to build assets during their working lives. Public housing was also connected to employment. New towns included factories near residential areas, allowing women and other family members to work close to home. This increased household incomes while linking housing, industrial policy and social development. Lee presents this coordination as one reason home ownership expanded so rapidly.
+
+The transition was often difficult. Families moved from villages and informal settlements into high-rise apartments, where they faced rent, utility bills and unfamiliar living conditions. Farmers lost land and traditional livelihoods, while rapid construction sometimes produced poor-quality housing. Lee admits that the government occasionally built too quickly in response to public pressure and later had to repair the consequences.
+
+Healthcare followed the same principle of shared responsibility. The government subsidized hospital care but required patients to pay part of the cost. Lee believed completely free care encouraged waste, while American-style insurance encouraged unnecessary tests because someone else paid the bill. Medisave allowed workers to save for family medical expenses, MediShield covered major illnesses, and Medifund supported those who had exhausted their resources. The system was designed so that no one would be denied essential care, but patients would remain conscious of cost. Different hospital wards received different levels of subsidy, allowing people to choose according to their means and desired comfort. Lee regarded this as a practical alternative to both a fully state-funded system and an expensive private insurance model.
+
+The CPF was later expanded to include investments and retirement savings. Citizens could use part of their funds to buy shares, property and other assets, while the government distributed discounted shares in major public companies such as Singapore Telecom. Lee wanted workers to benefit directly from national economic growth rather than depend mainly on government payments. His broader philosophy was to redistribute wealth through ownership and asset appreciation rather than through permanent consumption subsidies. A family that owned a home, savings and shares possessed security and something to pass to its children. Lee believed such citizens would be more independent, politically stable and willing to protect the country’s institutions.
+
+This model also required monetary discipline. Compulsory savings would lose public trust if inflation or currency depreciation destroyed their value. Singapore therefore maintained balanced budgets, low inflation, strong reserves and relatively low taxes. Government spending focused heavily on infrastructure, education, housing and other investments intended to increase productivity. Lee contrasted this approach with European welfare systems, which he believed transferred excessive costs to future taxpayers and weakened family responsibility. His criticism was that welfare could become an entitlement disconnected from work or savings. However, Singapore still provided extensive public housing, education subsidies, healthcare support and assistance for those unable to support themselves.
+
+The chapter’s central idea is that Singapore created a social state based on compulsory saving, subsidized ownership and personal co-payment. It was neither a pure free-market system nor a conventional welfare state. The government intervened extensively, but usually tried to help people acquire assets and earning capacity rather than provide unlimited free services. Lee describes this balance through the idea of yin and yang. Too much competition would create inequality and weaken solidarity, while too much redistribution would reduce effort and productivity. Singapore’s model attempted to preserve both: strong incentives for achievement and a shared sense that ordinary citizens benefited from national development.
+
+# Political Dominance of PAP
+
+Lee Kuan Yew argues that the People’s Action Party remained in power not simply because it was tough on opponents, but because it earned public trust by producing employment, housing, education, security and rapid economic growth. The generation that experienced Singapore’s early crises associated the PAP with survival and national progress. The PAP also learned from its communist opponents that elections were won through long-term organization, not only speeches during campaigns. The government created community centres, residents’ committees and citizens’ consultative committees that connected ministers and MPs with local leaders. These organizations arranged educational programmes, welfare assistance and neighbourhood improvements while giving the government continuous information about public concerns.
+
+This grassroots structure created a direct chain between residents, community leaders, MPs and the central government. Roads, drains, lighting and other local problems could be identified and addressed between elections. Lee believed opposition candidates who appeared only during campaigns could not easily compete with a political organization that had worked continuously in the neighbourhood. The PAP’s early electoral strength also came from tangible results. Despite the withdrawal of British military forces and the loss of thousands of jobs, Singapore attracted multinational companies and reduced unemployment. Rising incomes allowed families to leave squatter settlements, purchase public housing and educate their children. During this period, many voters saw little reason to risk replacing a government that appeared to be delivering broad improvements.
+
+As Singapore became more prosperous, however, voters increasingly wanted an opposition presence in Parliament. The sense of national emergency faded, and younger citizens had no personal memory of the struggles against communism, communal conflict and unemployment. They wanted the PAP to remain in government but also wanted opposition MPs to question it and prevent complacency. Lee describes opposition politicians differently according to whether he considered them credible, constructive or potentially connected to communist and foreign interests. He respected Chiam See Tong more than J. B. Jeyaretnam because Chiam accepted that the PAP had governed reasonably well while arguing that it should listen more carefully. Lee hoped that a responsible opposition could provide a legitimate outlet for disagreement without threatening national stability.
+
+Lee also defended his frequent use of defamation lawsuits. He believed accusations of corruption or nepotism had to be challenged immediately because silence would cause people to assume they were true. He argued that bringing cases to court placed his own conduct under examination and established a political culture in which both government and opposition politicians were expected to prove serious allegations. Critics, however, have argued that expensive lawsuits and strict security laws placed opposition politicians at a disadvantage. Lee rejected this interpretation and maintained that he acted to protect public confidence, prevent foreign interference and stop false accusations from becoming accepted political facts. This tension between accountability and political control is central to understanding Singapore’s system.
+
+The PAP also created limited channels for alternative opinions. Nominated Members of Parliament allowed independent individuals to participate without contesting elections, while the Feedback Unit collected public responses to government policies. Lee saw these arrangements as ways to improve policy and widen discussion without abandoning the stability created by a strong governing party. Public housing became part of electoral politics as well. The PAP gave priority in upgrading programmes to constituencies that strongly supported it. Lee defended this as a legitimate political reward, while critics viewed it as using public resources to influence voting. The episode shows how closely Singapore’s governing institutions, community organizations and party politics had become connected.
+
+Lee’s broader political strategy was to occupy the middle ground. The PAP rejected revolutionary communism on one side and what it saw as irresponsible populism on the other. It combined economic growth, social programmes, strict government, grassroots organization and selective public consultation. By controlling the main political agenda, it tried to prevent opponents from presenting themselves as either more competent or more responsive
+
+# Talent as Singapore’s Most Important Resource
+
+Lee Kuan Yew argues that talent was Singapore’s most important resource. A small country without oil, minerals or a large population could succeed only by developing capable citizens and attracting skilled people from abroad. He believed that the quality of ministers, civil servants, professionals, entrepreneurs and technical workers directly affected how well the country’s institutions and economy performed.
+
+The most controversial part was Lee’s 1983 “Great Marriage Debate.” He observed that many university-educated women remained unmarried because educated men often preferred wives with less education. He feared that this pattern, combined with lower birth rates among educated women, would reduce the number of highly capable people in future generations. Lee publicly encouraged graduate men to marry women with similar educational backgrounds and urged educated women to have more children. His remarks caused widespread anger. Graduate women felt that the government was treating them primarily as producers of talented children, while women without degrees felt insulted and devalued. The controversy also contributed to a decline in support for the PAP in the following election.
+
+Lee based his argument heavily on the belief that intelligence was substantially inherited. He used parents’ educational backgrounds and children’s examination results as evidence. However, educational attainment is not a simple measure of inherited intelligence. It is also shaped by family income, nutrition, school quality, parental support, social expectations and access to opportunity. His genetic claims and generalizations about ethnic groups remain among the most scientifically disputed and troubling parts of his political thinking. The government established the Social Development Unit to help graduates meet potential partners and later created a similar organization for people with secondary education. These programmes organized social events, courses and holidays. Although they were widely mocked as government matchmaking, Lee believed that education and modern employment had weakened traditional family-based matchmaking without creating an adequate replacement.
+
+Singapore also attempted to influence fertility through incentives. Graduate mothers were briefly given priority in school admission for a third child, but the policy was withdrawn after strong opposition. Tax benefits were later offered to a broader group of educated mothers who had third and fourth children. Lee acknowledged that the earlier “Stop at Two” campaign had successfully reduced population growth but had also contributed to unexpectedly low fertility among more educated families. The more enduring part of the chapter concerns immigration. As countries such as the United States, Canada and Australia began accepting more skilled Asian migrants, Singapore lost some of its most highly educated citizens and potential immigrants. Because Singaporeans were educated in English, they could move relatively easily to Western countries and establish successful careers there.
+
+Singapore responded by actively recruiting students, professionals, engineers, managers and entrepreneurs from around the world. Government representatives approached promising Asian students at overseas universities, sometimes offering employment before they graduated. Scholarships were also provided to students from China, India and neighbouring countries in the hope that some would remain and contribute to Singapore. Lee believed foreign talent complemented rather than simply displaced local workers. Skilled immigrants could start companies, manage industries, introduce expertise and help create additional employment. He pointed out that many of Singapore’s own early ministers, judges and senior officials had been born outside the island. In his view, Singapore had already been built partly by migrants and had to remain open to new arrivals. This openness nevertheless created tension. Singaporeans feared competition for jobs, housing and professional opportunities. Lee recognized that people supported foreign talent in theory but often opposed it when the competition appeared in their own occupation. His answer was that a small domestic population could not supply all the capabilities required by an expanding international economy
+
+# Keeping a Clean Government
+
+Lee Kuan Yew argues that Singapore’s development depended on creating a government that citizens, officials and investors could trust. When the PAP took office in 1959, its leaders wore white to symbolize honesty and promised that public money would reach its intended purpose without being diverted through bribery, commissions or political patronage. Lee had watched nationalist leaders elsewhere in Asia begin as freedom fighters and later use power to enrich themselves. He believed corruption damaged more than government finances. It weakened public institutions, rewarded political connections instead of competence and encouraged ordinary officials to demand bribes from citizens seeking permits, police assistance, medical treatment or other essential services.
+
+Singapore strengthened the Corrupt Practices Investigation Bureau and placed it under the Prime Minister’s Office. Investigators were empowered to examine bank accounts, property and the finances of suspects and their families. Evidence that an official possessed wealth that could not be explained by legitimate income could support a corruption case. The government also simplified procedures and reduced unnecessary discretionary powers, because complicated licensing systems gave officials more opportunities to demand payment. Lee emphasizes that anticorruption rules had to apply to senior officials and political allies, not only junior civil servants. Ministers, trade-union leaders and other PAP associates were investigated, removed from office or prosecuted when evidence emerged against them. Some of these individuals had worked with Lee during Singapore’s political struggles, but he believed protecting old colleagues would destroy the credibility of the entire system.
+
+The most dramatic case involved National Development Minister Teh Cheang Wan, who was investigated for accepting large payments from property developers. Teh denied the allegations but later took his own life. Lee presents the case as proof that Singapore had created a political culture in which corruption brought deep public disgrace. It also showed the personal cost of enforcing rules against someone who had been an able minister and colleague. Lee believed anticorruption efforts would fail if elections required enormous amounts of private money. Politicians who spent heavily to win office would need to repay supporters, recover campaign expenses and prepare funds for the next election. This could produce a cycle in which businesses financed politicians and later received contracts, licences, land or monopolies in return.
+
+Singapore tried to avoid this cycle by keeping election spending relatively low, making voting compulsory and preventing political parties from using gifts and transportation to purchase support. The PAP sought votes by providing public goods such as employment, housing, schools, healthcare and infrastructure rather than distributing private rewards to individual voters. Another controversial part of Lee’s strategy was paying ministers and senior officials high salaries. He argued that capable professionals should not have to sacrifice most of their income to enter public service. If ministers were paid far less than leading lawyers, bankers and corporate executives, government would struggle to recruit experienced people and might create temptations for hidden benefits or corruption.
+
+Singapore eventually linked ministerial, judicial and senior civil-service salaries to private-sector earnings. Lee acknowledged that this angered many citizens, who believed public office should involve personal sacrifice. His response was that symbolic modesty could conceal unofficial privileges, corruption or private wealth. He preferred high salaries to be openly declared, taxed and adjusted according to a public formula. High salaries alone, however, were not Lee’s complete explanation. Singapore also relied on strong investigations, clear laws, low-cost elections, professional administration, severe penalties and leaders willing to act against colleagues. Adequate pay reduced temptation, but credible enforcement created the expectation that corruption would be discovered and punished.
+
+Lee also supported creating an elected presidency with powers to protect Singapore’s financial reserves and prevent a future government from blocking corruption investigations or making unsuitable appointments to major offices. He feared that even a previously honest system could be captured if an irresponsible government unexpectedly won power. The chapter also describes an investigation involving property discounts received by Lee and his son, Lee Hsien Loong. Although the authorities concluded that the discounts were normal commercial practice, Lee requested public disclosure and parliamentary debate. The value of the discounts was eventually given to charity. He presents the episode as evidence that even the country’s most powerful family could be investigated.
+
+The broader lesson is that clean government does not emerge from moral speeches alone. It requires institutions that reduce opportunities for corruption, reveal unexplained wealth, protect investigators and punish offenders regardless of status. It also requires political financing arrangements that do not make elected leaders dependent on wealthy donors. Lee’s account should still be read as the government’s interpretation of its own record. Critics may question Singapore’s high ministerial salaries, concentrated executive power and the independence of institutions located close to the government. Nevertheless, the chapter explains an important part of Singapore’s development: public institutions gained credibility because officials generally expected rules to be enforced and government resources to be used for their stated purposes.
+
+# Greening Singapore
+
+Lee Kuan Yew presents Singapore’s greening as part of economic development and nation-building. After independence, Singapore was crowded, dirty and poorly regulated. Street hawkers blocked roads, illegal taxis disrupted transport, drains smelled, rivers were polluted and many neighbourhoods lacked proper sanitation. Lee believed that a small country without natural resources had to distinguish itself through order, cleanliness and reliability.
+
+His goal was to create a “clean and green” oasis with standards noticeably higher than those of the surrounding region. A well-maintained city would improve daily life, raise public morale and signal to investors and tourists that Singapore was competently governed. Clean streets, functioning toilets, landscaped roads and well-maintained buildings became visible evidence that the administration could also manage factories, ports, contracts and public services. The government could not immediately remove illegal hawkers and taxi drivers because thousands depended on them for survival. Enforcement became practical only after Singapore had created alternative employment and reorganized transport. Hawkers were licensed and relocated into centres with clean water, sanitation and waste disposal. This reduced disease and obstruction while preserving small entrepreneurship. Some hawkers later built successful and profitable businesses.
+
+Lee also wanted greenery to be distributed across the whole country, not reserved for wealthy districts. Trees, grass and shrubs were planted in working-class housing estates, industrial areas and public spaces as well as prestigious neighbourhoods. Schools taught children to plant and protect trees, carrying new habits into their homes. The annual Tree Planting Day turned greening into a permanent national practice rather than a temporary campaign.
+
+Singapore’s greenery required scientific planning and continuous maintenance. Heavy tropical rainfall washed nutrients from the soil, so officials experimented with fertilizers, compost and lime. Botanists collected thousands of plant varieties from other tropical regions and selected those that could survive Singapore’s climate. Lee emphasizes that planting was only the beginning; trained officers had to care for the trees, replace failed species and maintain the landscape for decades. The cleaning of the Singapore River and Kallang Basin was far more difficult. For generations, factories, workshops, farms, boats, hawkers and households had discharged waste into the waterways. The government constructed sewers, moved cottage industries, relocated boatyards and street vendors, and phased out pig farms that polluted streams. Thousands of people lost familiar workplaces and ways of life, and many resented being moved even when compensation and new housing were provided.
+
+The clean-up nevertheless produced major economic and environmental benefits. Polluted rivers became reservoirs and recreational spaces. Fish returned, waterfront land rose in value, old warehouses were converted into restaurants and hotels, and formerly unpleasant areas became attractive residential and tourist districts. Environmental improvement therefore created new economic value rather than merely imposing additional costs.
+
+Water security was another reason for Singapore’s environmental policies. Because the country depended heavily on imported water, it needed to capture as much rainfall as possible. Open drains and rivers could serve as part of the water-supply system only if sewage and industrial waste were kept out of them. Cleanliness, drainage, pollution control and national security were therefore closely connected. Lee also treated air and noise pollution as threats to urban life. Vehicles were inspected, factory emissions were controlled and industries in Jurong were required to landscape their premises. The government restricted excessive noise, banned dangerous firecrackers and progressively prohibited smoking in public places. Chewing gum was eventually banned after discarded gum damaged public property and disrupted the doors of MRT trains.
+
+These policies caused Singapore to be criticized as a “nanny state.” Lee accepted the description with pride. His method was first to educate and persuade the public, then regulate the minority who continued harmful behaviour. He believed that habits such as littering, spitting and vandalism would not disappear through economic growth alone; institutions had to create incentives and enforce standards.
+
+There were also real costs. Farmers, street vendors, boat workers and cottage industries were displaced. Traditional practices were restricted, and the government acquired extensive power over public behaviour and urban space. Singapore’s transformation therefore involved both environmental improvement and forceful social reorganization. Lee’s central argument was that a clean environment is productive infrastructure. It improves health, morale, tourism, investment, land values, water security and national reputation. Singapore’s greenery was created before the country became rich and then helped make greater prosperity possible.
+
+# On Management Style
+
+Lee Kuan Yew compares governing a country to conducting an orchestra. A prime minister does not need to be the best performer in every field, but must understand each part of government well enough to select capable ministers, set clear objectives and ensure that their work fits together. Lee says Singapore’s early leaders were bound by years of struggle against colonial rule, communist influence and communal conflict. They debated privately, reached a collective decision and then defended it publicly as one government. His leadership style was “management by objectives.” He placed his strongest colleagues in the ministries most important at that moment and gave them room to act. Goh Keng Swee, for example, was entrusted with finance during economic development and defence when national security became urgent. Lee generally avoided micromanaging ministries, but intervened when an issue had long-term national consequences. He also accepted that the prime minister remained ultimately responsible when government policy failed. Singapore Airlines illustrates this approach. When the joint Malaysia–Singapore airline was divided in 1972, Malaysia kept most domestic routes while Singapore received the international routes. Singapore therefore had no choice but to build a globally competitive airline. Lee told its managers and unions that the airline could not survive merely as a national symbol. It had to remain commercially successful and would not be permanently supported if it lost money.
+
+Singapore Airlines expanded by obtaining landing rights in major international cities and developing profitable long-distance routes. Management and labour understood that their jobs depended on efficiency, service and commercial performance. Lee presents the airline as an example of state involvement without accepting permanent inefficiency: the government nurtured a strategically important company, but required it to compete internationally.
+
+The decision to build Changi Airport followed the same logic. Consultants initially recommended expanding Paya Lebar Airport because it appeared cheaper and easier. Lee worried that aircraft would fly over heavily populated areas and produce permanent noise and congestion. He repeatedly ordered the alternatives to be reconsidered and finally chose Changi despite its enormous cost and engineering difficulty.
+
+The government demolished buildings, relocated residents, exhumed graves, drained swamps and reclaimed land from the sea. Changi was completed much faster than such projects normally required. Lee believed it became one of Singapore’s best investments because it improved the experience of visitors, supported Singapore Airlines and strengthened Singapore’s role as a regional transport and business centre. He stresses that building impressive infrastructure is not enough. Many countries can hire foreign companies to construct airports, roads and public buildings. The more difficult task is operating them effectively. Changi succeeded because officials organized customs, immigration, baggage handling, maintenance, transport and passenger services into one coordinated system. Singapore’s advantage lay as much in management as in construction.
+
+Traffic congestion produced another example of pragmatic experimentation. Singapore introduced charges for vehicles entering the central business district, later restricted vehicle growth through the Certificate of Entitlement system and eventually adopted electronic road pricing. Lee believed that continuously building more roads would not solve congestion because additional cars would eventually fill them.
+
+His method was to introduce ideas gradually. He first discussed proposals with ministers and civil servants, then consulted the people responsible for implementation and finally opened major questions to public discussion. The government publicly debated whether Singapore should rely on buses or construct a mass rapid transit system. After examining evidence and consulting specialists, it chose the MRT.
+
+<figure>
+<img src="/images/singapore/southeastasia.png" alt="Book" style="width:600px; height=600px; float:center;">
+<figcaption> Singapore among South East Asia</figcaption> </figure>
+
+# On Indonesia
+
+Lee Kuan Yew presents Singapore’s relationship with Indonesia as a story of survival, mistrust and gradual reconciliation. In the early 1960s, Indonesia under President Sukarno viewed Singapore with suspicion and later launched Konfrontasi against Malaysia and Singapore. Sukarno was a charismatic nationalist and powerful speaker, but Lee believed that revolutionary politics, nationalization and weak economic management had left Indonesia poor despite its vast population, fertile land and natural resources. The relationship changed after General Suharto gradually replaced Sukarno following the failed coup of 1965. Suharto ended Konfrontasi and concentrated on political stability and economic development. Unlike Sukarno, he was quiet, cautious and willing to appoint capable economists who opened Indonesia to trade and foreign investment. Lee believed this shift benefited not only Indonesia but the whole of Southeast Asia.
+
+Reconciliation was nevertheless difficult. In 1968, Singapore executed two Indonesian commandos convicted of carrying out a bombing that killed three civilians. Indonesia regarded them as national heroes, and the executions caused violent protests. Singapore refused to compromise its laws, but during Lee’s official visit to Jakarta in 1973, he placed flowers on their graves. The gesture did not reverse Singapore’s decision; it acknowledged Indonesian emotions and allowed both countries to move forward.
+
+Lee’s diplomacy combined respect with firmness. He insisted that Singapore must be treated as an equal sovereign country, not as Indonesia’s dependent “little brother.” Singapore could offer friendship and economic cooperation, but it would not surrender essential interests such as freedom of navigation through the Straits of Malacca. Open sea routes were vital because Singapore’s survival depended on trade with Japan, Europe and the United States. Lee also understood that Singapore first had to prove it could survive without living entirely from the economies of Indonesia and Malaysia. By attracting multinational companies, developing manufacturing and connecting itself directly to world markets, Singapore “changed the survival equation.” Economic strength gave the small country greater diplomatic independence and allowed it to negotiate with its much larger neighbour from a position of confidence.
+
+Personal trust between Lee and Suharto became central to the relationship. Their private meetings allowed them to discuss sensitive subjects openly and resolve disagreements without public confrontation. Singapore reassured Indonesia that its Chinese-majority population would not make it an instrument of communist China. In return, Suharto accepted Singapore as a legitimate Southeast Asian state and increasingly saw it as a partner in Indonesia’s development. This trust eventually produced practical economic cooperation. Singapore helped connect Batam and nearby Indonesian islands to international investment, technology and export markets. Indonesia supplied land and labour, while Singapore contributed finance, logistics, management and access to multinational companies. The relationship demonstrated that neighbouring countries could benefit from their different strengths rather than compete over the same activities.
+
+Lee’s account of Suharto ends tragically. He credits Suharto with restoring stability, building infrastructure and enabling decades of economic growth. But the privileges granted to Suharto’s children and associates weakened banks, distorted investment and damaged public confidence. During the Asian financial crisis, the government’s reluctance to end these privileges deepened the collapse of the rupiah and contributed to Suharto’s fall in 1998
+
+# On Australia, New Zealand
+
+Lee Kuan Yew portrays Australia and New Zealand as dependable security partners whose histories, geography, and economic choices gradually drew them away from Britain and toward Asia. Australia’s connection with Singapore was shaped by the trauma of World War II: about 18,000 Australian troops fought in the defense of Singapore, approximately 2,000 were killed, and around 15,000 were captured, many later dying from disease, starvation, forced labor, and abuse. Because Singapore’s fall remained one of Australia’s greatest military disasters, Australia returned after the war to support Britain against communist insurgencies in Malaya. 
+
+When Britain announced its withdrawal from east of Suez, Lee worked to keep Australia and New Zealand militarily involved through the Five-Power Defence Arrangements. Although some Australian leaders feared being drawn into conflicts between Malaysia, Singapore, and Indonesia, Lee believed their continued presence provided the stability necessary for economic development. He regarded Prime Minister Malcolm Fraser as particularly reliable on security, while criticizing Gough Whitlam as impulsive, confrontational, and too eager to present Australia as a progressive Afro-Asian partner without accepting the economic or strategic responsibilities this implied. Lee clashed with Whitlam over trade restrictions, immigration policies that attracted skilled Asians while depriving poorer countries of talent, Vietnamese refugees, and Australia’s withdrawal of troops. He was relieved when Fraser replaced him and maintained Australian aircraft at Butterworth. Lee considered Bob Hawke more moderate and practical than Whitlam, and persuaded him to preserve rotational Australian military deployments even as permanent forces were reduced.
+
+Economically, Lee believed Australia had long lived too comfortably as a “lucky country with an embarrassment of riches.” Its minerals, agricultural exports, and vast land allowed high consumption without sufficient savings, competitiveness, manufacturing efficiency, or economic reform. He repeatedly urged Australian leaders to abandon tariffs, quotas, protected industries, and union-backed economic insulation. Australia criticized European protectionism against its agricultural exports while protecting its own inefficient manufacturers from Asian competition. Lee warned that this contradiction would make Australia increasingly irrelevant to ASEAN. He respected Paul Keating’s economic knowledge and determination to integrate Australia with Asia, and Gareth Evans’s effort to cultivate close relations with ASEAN leaders. By the 1990s, Lee concluded that Australia had finally recognized that its economic future was tied more closely to Japan, China, South Korea, Taiwan, and Southeast Asia than to Britain or continental Europe. These Asian economies needed Australian minerals, food, land, education, and tourism, while the United States, although vital as a strategic ally, was also Australia’s agricultural competitor.
+
+Lee was particularly critical of sections of the Australian media for portraying East Asia merely as a region of sweatshops, authoritarian governments, and exploitation while failing to explain its rapid transformation into an industrial, scientific, and technological center. He argued that ordinary Australians were poorly informed about the millions of engineers and scientists being trained in Asia, Japan’s technological accomplishments, and Taiwan’s development of advanced industries through returning graduates educated in America. This lack of understanding made it harder for Australian governments to win public support for reforms, Asian engagement, and immigration.
+
+The 1999 East Timor crisis became, for Lee, the decisive demonstration that Australia’s destiny was inseparable from Asia. Australian encouragement helped persuade Indonesian President B. J. Habibie to offer East Timor a choice between autonomy and independence. After nearly 80 percent voted for independence, pro integration militias armed and tolerated by elements of the Indonesian military devastated the territory, displaced hundreds of thousands, and terrorized the population. 
+
+Australia then led the multinational InterFET peacekeeping force, with logistical and personnel support from Singapore and other countries. Lee believed Australia was right to act, even though its intervention damaged relations with Indonesia and generated resentment from some Southeast Asian leaders. No other regional country was willing or able to undertake the operation. He thought Prime Minister John Howard had underestimated the Indonesian military, nationalist sentiment, the sacrifices of Indonesian soldiers, and the danger of dealing with a weak transitional president. Nevertheless, when the crisis reached its defining moment, Howard acted as an Australian prime minister should. Major-General Peter Cosgrove’s restrained and professional conduct earned Australia quiet regional respect. Lee concluded that East Timor was Australia’s “baptism of fire” as an Asian power and confirmed that its strategic future lay in the region rather than in sentimental ties to Britain.
+
+Lee viewed New Zealand as culturally gentler, less anxious about Asia, and more dependable in honoring commitments. In the 1960s, it still resembled Britain in its manners, institutions, hotels, accents, and agricultural way of life. Its welfare system and agricultural exports had produced a high standard of living, but the country remained dependent on farming for too long and lost many talented young people to Australia, Britain, and America. New Zealand eventually responded by liberalizing its economy, reducing farm subsidies, developing tourism, and admitting educated Asian immigrants. Lee admired Keith Holyoake as steady, modest, practical, and trustworthy, and Norman Kirk as sincere and clear-minded. Kirk memorably described New Zealand as the “odd man out”—a wealthy, white democracy in the South Pacific—and Singapore as the “odd man in”—a Western-oriented, democratic, Chinese-majority city situated in Southeast Asia whose very success created vulnerability.
+
+Lee also respected New Zealand’s willingness to remain militarily engaged after Australia initially decided to withdraw troops, calling New Zealanders the “Gurkhas of the South Pacific.” However, he strongly disagreed with Prime Minister David Lange’s antinuclear policy, which barred nuclear-powered or nuclear-armed American ships and effectively weakened the ANZUS alliance. Lee argued that small countries such as Singapore and New Zealand enjoyed strategic room for independence and economic progress only because American power maintained the global and regional balance. Lange believed that rejecting nuclear weapons was morally necessary; Lee considered it an unrealistic withdrawal from the dangers of the world. He nevertheless credited Lange and Finance Minister Roger Douglas with beginning painful free-market reforms by reducing subsidies and exposing protected sectors to competition. He also praised Jim Bolger for continuing those reforms despite political pressure.
+
+Lee’s overall judgment was that Australia and New Zealand were trustworthy partners, but both had to abandon the comfortable assumptions inherited from their British past. Australia needed to reduce protectionism, reform its economy, understand Asian development more accurately, and accept that regional crises could impose difficult responsibilities. New Zealand needed to modernize its agriculture-dependent economy and recognize the security benefits of American power. Geography and economics, Lee believed, would eventually overcome racial, cultural, and historical prejudices: Australia and New Zealand might be European in origin, but their prosperity, security, and long-term destiny were increasingly tied to Asia.
+
+# On India, Pakistan, Sri Lanka
+
+Lee Kuan Yew portrays South Asia as a region of exceptional human ability whose development was repeatedly frustrated by weak institutions, ideological economic policies, identity politics, corruption, and conflict. He began with considerable admiration for India. As a young anti-colonial nationalist, he read Jawaharlal Nehru’s books and letters from prison and was attracted to Nehru’s vision of a democratic, secular, multiracial society. In the 1950s, Lee hoped that India rather than communist China would become the model for developing nations. He respected Nehru as an elegant writer and serious thinker concerned with secularism, multiculturalism, industrialization, and national unity. When Lee met him in 1962, Nehru listened carefully to Singapore’s demographic and communist problems and understood Lee’s argument that Singapore needed merger with Malaya rather than isolation or domination by Beijing. However, when Lee saw Nehru again in 1964, the Indian leader appeared physically and emotionally broken after China’s attack across the Himalayas had shattered his hopes for Asian solidarity. Lee’s larger disappointment was that, despite achievements such as the Green Revolution, India’s rapid population growth and poorly designed economic system kept living standards low.
+
+Lee’s early visits also convinced him that India was gradually deteriorating materially and administratively. He noticed the declining condition of the Rashtrapati Bhavan, ineffective Indian-made air conditioners, poor crockery and cutlery, shortages of imported goods, and the contradiction between public displays of austerity and the private accumulation of wealth by political leaders. To him, this hypocritical egalitarianism damaged the morale of senior civil servants and military officers. By the late 1970s, he believed India would become an important military power because of its size, but not an economically dynamic power because of its suffocating bureaucracy. Its foreign policy of nonalignment was, in his view, heavily tilted toward the Soviet Union because India depended on Moscow for weapons and military technology.
+
+Lee regarded Indira Gandhi as one of the toughest political leaders he had encountered. He found her more determined and ruthless than Margaret Thatcher, Sirimavo Bandaranaike, or Benazir Bhutto. Unlike Nehru, whom he saw as a man of ideas, Indira was primarily concerned with the acquisition, management, and preservation of power. She was elegant and personally charming, but possessed what Lee called a steel-like quality in political argument. He admired her determination to preserve India’s unity, yet criticized several of her choices. India’s recognition of the Vietnamese-backed regime in Cambodia placed it directly against Singapore on a question Lee considered essential to international order: whether powerful countries could invade smaller states and install governments without consequences. He also believed Indira gradually weakened her father’s secular legacy by appealing to Hindu sentiment for political support. In his interpretation, this helped legitimize Hindu chauvinism, contributed to renewed Hindu-Muslim conflict, and created conditions in which the BJP eventually emerged as a major national force. Her decision to send troops into the Golden Temple at Amritsar demonstrated her willingness to use state power against threats to national unity, but also inflamed Sikh anger and ultimately contributed to her assassination by her Sikh bodyguards.
+
+Lee viewed Rajiv Gandhi more sympathetically but as politically inexperienced. He described him as a decent, straightforward former airline pilot unexpectedly placed in the middle of a political minefield. Rajiv often depended on experienced advisers and, in Lee’s judgment, lacked his mother’s instinct for power. Lee considered India’s intervention in Sri Lanka an example of Rajiv’s good intentions producing tragic consequences. Indian troops were sent to control the Tamil insurgency, suffered casualties, and eventually withdrew without resolving the conflict. Rajiv was later assassinated by a Tamil suicide bomber. Lee considered his death particularly unfair because he believed Rajiv had acted from sincere, if politically naïve, motives.
+
+The economic reforms initiated after India’s 1991 balance-of-payments crisis gave Lee new hope. He believed Prime Minister P. V. Narasimha Rao, Finance Minister Manmohan Singh, and Commerce Minister P. Chidambaram understood what India needed: liberalization, foreign investment, private enterprise, and reduced state control. However, Lee argued that the greatest obstacle was not simply legislation but the mindset of India’s civil service. Officials had been trained to suspect foreigners, regulate businesses, and prevent exploitation; they now had to see their duty as facilitating investment and enterprise. Rao acknowledged to Lee that reforms were politically difficult because many Indians feared that markets would create inequality or allow foreigners to control the country. Lee respected Rao for beginning radical reforms, but thought he lacked the energy and political conviction to mobilize public support against an obstructive opposition. He credited much of the reform momentum to Manmohan Singh.
+
+Lee’s broader judgment of India was severe but not dismissive. He repeatedly emphasized that India possessed outstanding scholars, scientists, professionals, and administrators. Its problem was not a lack of talent but a system that prevented talent from being fully used. He lamented the declining standards of universities, examinations, and the civil service. He admired the old Indian Civil Service as a highly selective institution that had recruited the best candidates through demanding examinations. In his view, populist pressures, political quotas, cheating, patronage, and declining meritocratic standards weakened its successor, the Indian Administrative Service. He was especially critical of caste-based demands for quotas in universities and government employment, arguing that they undermined meritocracy. He also blamed centralized planning for preventing the rise of multiple prosperous centers like Bombay and Bangalore, and considered the continuing struggle with Pakistan a destructive drain on both countries.
+
+Lee’s observations of ordinary material conditions reinforced his judgment. Senior officers and civil servants struggled to acquire imported golf balls because of import restrictions; caddies reused broken tees; Delhi became increasingly polluted, congested, crowded with squatters, and burdened by poor infrastructure. For Lee, these were not trivial anecdotes but visible evidence of an economic system that created shortages, too many low-productivity jobs, and declining standards. He concluded that India had wasted decades under state planning, controls, inefficient public enterprises, limited foreign investment, and bureaucratic obstruction. He therefore called India “a nation of unfulfilled greatness”—a civilization with enormous capabilities whose potential remained underused.
+
+His account of Sri Lanka is even more tragic. At independence, Ceylon appeared to possess nearly every advantage required for success: good infrastructure, high educational standards, English-language universities, an experienced local civil service, representative institutions, and a relatively small population. Lee considered it one of Britain’s best-prepared former colonies. Yet he believed its leaders destroyed this inheritance by mobilizing ethnic and religious majoritarianism. S. W. R. D. Bandaranaike, though English-educated and originally Christian, embraced Sinhala nationalism, converted to Buddhism, made Sinhala the national language, and elevated Buddhism in order to win the support of the Sinhalese majority. Lee thought Bandaranaike behaved as though politics were still an Oxford Union debate and failed to understand the fear and alienation these policies produced among Tamils, Muslims, Christians, and Burghers. His assassination by a Buddhist monk illustrated the dangerous forces he had helped release.
+
+Sirimavo Bandaranaike, in Lee’s view, was less articulate but tougher and strongly committed to nonalignment. Lee disagreed sharply with her demands for the removal of Western military forces from Asia. Singapore, he argued, could not afford high-minded neutrality when communist victories in Vietnam, Cambodia, Laos, Thailand, and Malaysia could directly threaten its survival. He also regarded Sri Lankan confidence in its peaceful geography as dangerously naïve. The country once spent little on defense, but later had to devote enormous resources to fighting the Tamil rebellion. Lee believed the central failure of Sri Lankan democracy was that majority rule became ethnic domination. The Sinhalese majority could permanently outvote the Tamil minority, while language and religious policies deprived Tamils of equal status. Replacing English with Sinhala required costly translations, separated universities and professionals by language, and reduced access to up-to-date knowledge. He recalled asking how engineers educated separately in Sinhala, Tamil, and English could efficiently work together. Textbooks were translated so slowly that students received editions several years out of date. He also observed deterioration in plantations, public facilities, transportation, and administrative discipline. In his account, nationalization and the replacement of experienced managers were not accompanied by equally competent local management.
+
+J. R. Jayewardene impressed Lee as practical and interested in reversing Sri Lanka’s failed socialist policies, but Lee thought he pursued the wrong priorities and lacked the courage to solve the ethnic problem. Jayewardene wanted Sri Lanka to copy Singapore’s visible achievements, including an airline, housing programs, traffic restrictions, and free-trade zones. Lee warned that an airline was a prestige project requiring scarce managerial talent that Sri Lanka needed for agriculture, irrigation, housing, and industrialization. Singapore helped establish Air Lanka, but withdrew after its managers ignored advice, purchased unsuitable aircraft, expanded too quickly, and created financial and operational problems. Lee’s point was that governments could not reproduce Singapore simply by copying individual projects; they needed competent management, financing, discipline, security, and institutions.
+
+In Lee’s interpretation, Jayewardene’s most consequential mistake was distributing newly irrigated land in traditionally Tamil areas to Sinhalese settlers. This deepened Tamil fears of dispossession and helped generate support for the Tamil Tigers. He believed later Sri Lankan leaders made the same fundamental mistake of trying to defeat Tamil militancy solely by military force. Lee advised President Ranasinghe Premadasa to offer meaningful autonomy and democratic self-government so that moderate Tamil leaders could compete with the militants and deprive the Tigers of popular support. Premadasa instead believed he could destroy them militarily and was later killed by a suicide bomber. Chandrika Kumaratunga alternated between negotiations and war but also failed to end the conflict. Lee saw Sri Lanka as a heartbreaking example of a promising nation ruined by ethnic majoritarianism, poor political judgment, and an unwillingness to create a fair constitutional settlement. Lee’s view of Pakistan was also mixed. He considered Pakistanis hardy, capable, and sufficiently talented to build a modern state. He respected President Zia-ul-Haq for supporting the Afghan resistance against the Soviet occupation, believing that Pakistan had accepted considerable risks to prevent Soviet expansion. Yet Pakistan’s relations with Singapore remained limited, and Zia’s death in a suspicious plane crash prevented deeper cooperation.
+
+Lee found Nawaz Sharif energetic, optimistic, and more knowledgeable about business than Benazir Bhutto. Coming from an industrial family rather than the landed elite, Sharif believed in privatization and private enterprise and wanted to use Singapore as a development model. However, Lee’s detailed examination of Pakistan’s economy revealed severe structural problems: a tiny income-tax base, widespread undocumented property transactions, tax evasion, subsidies to inefficient state enterprises, enormous defense expenditure, heavy debt-servicing costs, persistent fiscal deficits, inflation, electricity theft, corruption, and a legislature dominated by landowners who controlled the votes of poorly educated tenant farmers. Because those elites benefited from the existing system, meaningful land and tax reform was extremely difficult.
+
+Lee appreciated Nawaz Sharif’s desire to act, but thought he frequently made decisions without adequate study and allowed political connections to influence privatization. State companies were not always sold transparently to the best bidders; patronage determined who received valuable assets. Although Sharif implemented some reforms and attracted foreign investment, many of Lee’s recommendations were not carried out before renewed political conflict removed him from office. Lee was less impressed by Benazir Bhutto’s practical judgment. He found her intelligent and energetic but consumed by hostility toward political opponents. Her proposals to Singapore—including a route through unstable Afghanistan, the takeover of failing Pakistani enterprises, and an artificial island with a free port and casinos—appeared poorly considered. Lee thought Benazir and her husband assumed that because Singapore was successful and had capital, it could simply invest in Pakistan and reproduce Singaporean prosperity. He reminded her that foreign investors would hesitate when television continually showed sectarian killings, bombs, and heavy weapons in Karachi. Political insecurity, corruption allegations, and personal rivalry between Pakistan’s principal leaders prevented consistent economic policy.
+
+Lee concluded that Pakistan’s greatest structural burden was its permanent confrontation with India. Defense absorbed resources that should have gone toward education, infrastructure, development, and administration. The nuclear tests conducted by India and Pakistan in 1998 demonstrated national power but placed further strain on two economically weak countries. Although Nawaz Sharif hoped nuclear deterrence would prevent total war, Lee viewed that outcome as something to be hoped for rather than confidently assumed. Across India, Sri Lanka, and Pakistan, Lee’s central argument is that human talent alone does not guarantee national development. India had intellectual depth and scale but was held back by bureaucracy, planning, caste politics, corruption, population growth, and conflict with Pakistan. Sri Lanka inherited strong institutions but destroyed social cohesion through linguistic, religious, and ethnic majoritarianism. Pakistan had energetic and capable people but remained trapped by feudal politics, weak taxation, corruption, military expenditure, instability, and rivalry with India. Lee’s overall view was that South Asia’s underperformance resulted not from cultural or intellectual inferiority, but from political choices and institutional systems that placed ideology, communal identity, patronage, prestige, and power above meritocracy, economic openness, administrative competence, social inclusion, and long-term national development.
+
+Lee Kuan Yew describes Europe as economically powerful and intellectually sophisticated, but less unified, less commercially agile, and more protectionist than the United States or Japan.
+
+# On Russia and the United States
+
+On Russia, Lee had visited Moscow in September 1962, Singapore established full diplomatic relations with Russia in 1968, but contacts were minimal. Lee’s impression on Russians as people were positive. Lee observed early signs of disintegration through practical failures: Soviet fishing captains sold their catches privately to pay crews and repair costs, while Aeroflot sometimes lacked even the foreign currency needed to buy aviation fuel. Russian travelers came to Singapore to purchase electronics for resale at home, revealing how shortages, black markets, and personal survival had replaced confidence in the official economy. Lee contrasts this chaos with the Soviet leadership he encountered in 1970, when they appeared strong, confident, and convinced that communism represented the future. Watching the empire become ungovernable and break into separate republics showed him how quickly a tightly controlled state could collapse once central authority, economic discipline, and public confidence disappeared. However, he warns against assuming that Russia itself was permanently defeated. The communist economic system had failed, but the Russian people still possessed exceptional scientific, military, intellectual, and cultural abilities, demonstrated by their achievements in nuclear technology, space exploration, chess, and sports. His main conclusion is that the Soviet system belonged to history, but Russia remained a potentially powerful nation because its human talent, national resilience, and nuclear capabilities survived the collapse.
+
+Lee says, United States was essential to Singapore’s security and Asia’s economic development, even though American foreign policy could be moralistic, inconsistent, and difficult for smaller countries to follow. During the Cold War, Singapore and America shared a common interest in resisting Soviet and Chinese communism and maintaining a strong U.S. military presence in Asia. After the Soviet Union collapsed, however, Washington placed greater emphasis on exporting democracy, human rights, and Western liberal values. Lee believed this approach ignored differences in history, culture, education, economic development, and social institutions. He argued that stable democracy usually requires literacy, a substantial middle class, civic organizations, tolerance, and an established culture of peaceful political competition, it could not simply be imposed through elections or foreign pressure.
+
+He defended Singapore’s emphasis on public order, family responsibility, discipline, thrift, education, and community interests, while rejecting the idea that every successful society must eventually resemble America. He also warned that treating China as an inevitable enemy or trying to force instant political transformation could make China more hostile, whereas trade, education, and international engagement might gradually moderate it. Despite these disagreements, Lee regarded the United States as the most benign major power in Asia. American military power contained communism, protected regional shipping and security, rebuilt Japan, supported South Korea and Taiwan, opened American markets to Asian exports, and helped launch Southeast Asia’s industrialization through investment and manufacturing. He also admired America’s universities, innovation, entrepreneurship, information technology, flexible corporations, and exceptional ability to attract talented immigrants from countries such as India and China. His overall view was that America’s openness and creativity made it the world’s leading power, but its tendency to treat its own political and moral system as universally applicable could create unnecessary conflict. Singapore therefore had to disagree with America when necessary while continuing to support a strong American presence as the foundation of peace, stability, and prosperity in Asia
+
+Lee Kuan Yew shares about Japan in Chapter 31, as a country of miracles. He describes it as a country of extraordinary discipline, industrial ability, and national resilience, but also as a nation burdened by its refusal to fully confront its wartime crimes. His own view of Japan changed dramatically over his lifetime, before World War II, he knew Japanese people as polite, orderly, hardworking, and self-contained; during the occupation of Singapore, however, he experienced the brutality of Japanese military rule, including the Sook Ching massacres, forced labor, hunger, and widespread suffering.
+
+# On Japan, South Korea and China
+
+After Japan’s defeat in 1945, he watched the same society rebuild itself methodically from devastated cities into Asia’s leading industrial power, producing high-quality electronics, cameras, watches, petrochemicals, precision instruments, robotics, and automobiles. Although Lee never forgot the occupation, he believed Singapore could not remain trapped in resentment. He negotiated a $50 million settlement for Japan’s “blood debt,” established relations with successive Japanese prime ministers, and actively encouraged Japanese companies such as Seiko and Sumitomo Chemical to invest in Singapore.
+
+These investments brought not only capital but also technology, management practices, worker training, precision manufacturing, and downstream industrial development. Lee admired Japan’s careful corporate planning, skilled bureaucracy, competent political leadership, commitment to education, and determination to perfect whatever it undertook.
+
+At the same time, he criticized Japanese leaders for describing wartime atrocities with words such as “regret,” “remorse,” and “unhappy incidents” rather than offering clear admissions and apologies. In his view, Germany rebuilt international trust by acknowledging its crimes, compensating victims, and teaching younger generations about the past, while Japan’s evasiveness over Nanjing, comfort women, biological experiments, and other atrocities continued to create suspicion across Asia. His overall judgment was therefore mixed: Japan was Asia’s first great postwar economic miracle and an indispensable partner in Singapore’s industrialization, but it could not become a fully trusted regional and global power until it honestly faced, apologized for, and educated its people about its wartime history.
+
+Lee visited Korea in October 1979. President Park Chung Hee received him in his official residence, the Blue House. Park was an ascetic-looking man, small and wiry with a sharp face and a narrow nose. He had been chosen and trained as a military officer by the Japanese. He must have been among the best of his generation. His prime minister, Choi Kyu Hah, was an able man, Japanese educated. Choi's wife was equally intelligent and well-educated in Japanese. The Koreans are a fearsome people. When they riot, they are as organized and nearly as disciplined as the riot police who confront them, policemen who resemble gladiators in their helmets with plastic visors and plastic shields. He argues that South Korea’s rapid rise was built on discipline, export-led growth, and strong leadership, but its later troubles came from rushed democratization, weak institutional controls, corruption, and chaebol overexpansion. He believes Korea must now adapt to a global economy by improving transparency, focusing businesses on core strengths, rebuilding public trust, and managing North Korea through careful engagement rather than sudden political change.
+
+In Chapter 34, Lee describes his visits to Hong Kong.
+With Hong Kong, Lee states that, after 1949, refugees from mainland China like entrepreneurs, professionals, intellectuals flooded Hong Kong. The injection of talent transformed it into a dynamic city. In Hong Kong, the environment provided minimal welfare, little government support, people rely on themselves and family, high risk-taking, strong entrepreneurial drive, Flexible economy, where prices and wages adjust faster.
+
+On Taiwan, Lee shared that Singapore’s position was pragmatic. They co-operated with Taiwan, conducted military exercises, yet refused diplomatic recognition. He insists that there is One China. Taiwan and China is an internal issue between them. Like Hong Kong, Taiwan’s economy moved from agriculture and textiles, and then manufacturing, then finally advancing to manufacture high-tech such as chips, PCs and electronics. There was talent moving from mainland China, and return of US-trained scientists who joined to work in Science Parks, with minimum welfare. Democracy changed Taiwan, although Lee is skeptical of democratization.
+
+China has an immensely complex government. After two centuries of decline that began with the Qing dynasty, China's leaders face the formidable
+task of installing modern management systems and changing the mindsets and habits of officials steeped in the traditions of the imperial mandarinate. 
+China under Deng was more open and willing to learn from the world than it had been for centuries. Deng was courageous and strong enough in
+the party and the nation to admit openly that China had lost many years in pursuit of a revolutionary utopia. It was a refreshing time of open
+minds and enthusiastic progress, a radical change from the years of wild slogans and disastrous campaigns. Deng initiated the fundamental
+changes that laid the foundations for China to catch up with the rest of the world.
+
+Over the last 40 years, Lee saw how Koreans, Taiwanese, and Japanese officials and business executives have changed. From a reserved, inward looking,and nationalistic elite, they are now self-confident and at ease with American and Western ideas. Many of them have been educated in the United States and are not ill-disposed toward its people. This is not to say that Chinese on the mainland, conscious of their potential big-power status, will evolve just like the Taiwanese. America has a choice, to have them neutral or friendly instead of becoming hostile. When dealing with an old civilization, it is wise not to expect swift changes. The biggest problem between America and China will be Taiwan.
+
+# What does it mean for Tamil Nadu? 
+
+I began this post with the long history between Tamil Nadu and Singapore. 
+Roughly 200,000 Tamils live in Singapore today, and Tamil is one of its four official languages.
+
+Among the millions of Tamils alive today, many must wonder: how did Singapore do it? 
+And how do we help our own state industrialize and compete at global levels?
+
+Tamil Nadu cannot simply copy the Singaporean model. The two places differ fundamentally in political authority, territorial scale, population, economic structure and administrative responsibilities. A useful comparison must therefore distinguish between transferable institutional principles and policies that depended on Singapore's unusual position as a small, sovereign city-state.
+
+The first difference is sovereignty. Singapore is an independent country, and its national government can align economic policy, urban planning, education, housing, infrastructure, taxation, immigration, defence and foreign relations within a single political system. Tamil Nadu is a state within the Indian Union. Important responsibilities are divided among the Union government, the state government, local bodies and independent or shared institutions. Tamil Nadu cannot set its own currency policy, negotiate sovereign trade agreements, determine national immigration rules, operate a military or conduct a separate foreign policy. Its development strategy must work within India's legal, fiscal and constitutional framework, and major projects often require cooperation with Union ministries, national regulators and neighbouring states.
+
+But look again at Lee's nine pillars, and notice how many fall squarely within a state government's powers. Clean administration is a state subject: the officials who issue permits, register land, inspect factories and staff police stations answer to Chennai, not Delhi. So are school quality, technical education and the industrial training that turns a large population into a workforce. 
+
+Land acquisition, industrial estates, single-window clearances, power distribution and water supply, the everyday things that decide whether an investor's factory opens in eighteen months or five years, are all substantially in state hands. Tamil Nadu's own investment-promotion agency, Guidance, is explicitly modelled on Singapore's Economic Development Board, proof that the EDB idea travels. Urban cleanliness, functioning drains and safe streets, which Lee treated as advertisements of governmental competence, are municipal and state work. Even the discipline Lee demanded of government-linked companies has a state parallel in how Tamil Nadu runs its own public-sector undertakings. Tamil Nadu already has one of India's strongest industrial and educational bases; the question is not whether the raw material exists, but whether the administrative machinery around it reaches Singaporean standards.
+
+So take from Lee the things that made Singapore work beneath the surface, incorruptible administration, meritocratic recruitment, savings and ownership over consumption subsidies, pragmatism over ideology, and the refusal to accept that a place without resources must remain poor. Leave behind the political controls, which were a choice, not a requirement. Taiwan and Korea, which I surveyed earlier, proved that East Asian growth and democracy could coexist. Tamils helped build Singapore with their labour for two hundred years. The useful repayment now would be to bring Singapore's methods of governing home.
