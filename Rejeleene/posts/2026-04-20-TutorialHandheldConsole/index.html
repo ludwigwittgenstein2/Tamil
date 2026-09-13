@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rick Rejeleene">
+<meta name="dcterms.date" content="2026-04-20">
+<meta name="description" content="In this tutorial, We go through basics of Handeld consoles">
+
+<title>How to Build a Handheld Game Console?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap-391a28e5a3402d99a43e8e04c5757892.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="index_files/libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="index_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#brick-game-9999-in-1" id="toc-brick-game-9999-in-1" class="nav-link" data-scroll-target="#brick-game-9999-in-1">Brick Game: 9999 in 1</a></li>
+  <li><a href="#building-the-handheld-console" id="toc-building-the-handheld-console" class="nav-link" data-scroll-target="#building-the-handheld-console">Building the Handheld Console</a></li>
+  <li><a href="#components" id="toc-components" class="nav-link" data-scroll-target="#components">Components</a></li>
+  <li><a href="#how-to-design" id="toc-how-to-design" class="nav-link" data-scroll-target="#how-to-design">How to design?</a></li>
+  <li><a href="#system-design" id="toc-system-design" class="nav-link" data-scroll-target="#system-design">System Design</a>
+  <ul class="collapse">
+  <li><a href="#define-the-requirements" id="toc-define-the-requirements" class="nav-link" data-scroll-target="#define-the-requirements">1. Define the Requirements</a></li>
+  <li><a href="#choose-the-microcontroller" id="toc-choose-the-microcontroller" class="nav-link" data-scroll-target="#choose-the-microcontroller">2. Choose the Microcontroller</a></li>
+  <li><a href="#design-the-power-supply" id="toc-design-the-power-supply" class="nav-link" data-scroll-target="#design-the-power-supply">3. Design the Power Supply</a></li>
+  <li><a href="#design-the-display-subsystem" id="toc-design-the-display-subsystem" class="nav-link" data-scroll-target="#design-the-display-subsystem">4. Design the Display Subsystem</a></li>
+  <li><a href="#design-the-buzzer-circuit" id="toc-design-the-buzzer-circuit" class="nav-link" data-scroll-target="#design-the-buzzer-circuit">5. Design the Buzzer Circuit</a></li>
+  <li><a href="#design-the-button-inputs" id="toc-design-the-button-inputs" class="nav-link" data-scroll-target="#design-the-button-inputs">6. Design the Button Inputs</a></li>
+  <li><a href="#draw-the-schematic" id="toc-draw-the-schematic" class="nav-link" data-scroll-target="#draw-the-schematic">7. Draw the Schematic</a></li>
+  <li><a href="#design-the-pcb" id="toc-design-the-pcb" class="nav-link" data-scroll-target="#design-the-pcb">8. Design the PCB</a></li>
+  <li><a href="#fabricate-and-assemble-the-hardware" id="toc-fabricate-and-assemble-the-hardware" class="nav-link" data-scroll-target="#fabricate-and-assemble-the-hardware">9. Fabricate and Assemble the Hardware</a></li>
+  <li><a href="#write-the-firmware" id="toc-write-the-firmware" class="nav-link" data-scroll-target="#write-the-firmware">10. Write the Firmware</a></li>
+  </ul></li>
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
+  <li><a href="#how-to-build-the-handheld-console" id="toc-how-to-build-the-handheld-console" class="nav-link" data-scroll-target="#how-to-build-the-handheld-console">How to Build the Handheld Console</a></li>
+  <li><a href="#hardware" id="toc-hardware" class="nav-link" data-scroll-target="#hardware">Hardware</a>
+  <ul class="collapse">
+  <li><a href="#step-1-inspect-the-bare-pcb" id="toc-step-1-inspect-the-bare-pcb" class="nav-link" data-scroll-target="#step-1-inspect-the-bare-pcb">Step 1: Inspect the Bare PCB</a></li>
+  <li><a href="#step-2-solder-the-small-passive-components" id="toc-step-2-solder-the-small-passive-components" class="nav-link" data-scroll-target="#step-2-solder-the-small-passive-components">Step 2: Solder the Small Passive Components</a></li>
+  <li><a href="#step-3-solder-the-dot-matrix-led-modules" id="toc-step-3-solder-the-dot-matrix-led-modules" class="nav-link" data-scroll-target="#step-3-solder-the-dot-matrix-led-modules">Step 3: Solder the Dot-Matrix LED Modules</a></li>
+  <li><a href="#step-4-attach-the-7-segment-display-and-buttons" id="toc-step-4-attach-the-7-segment-display-and-buttons" class="nav-link" data-scroll-target="#step-4-attach-the-7-segment-display-and-buttons">Step 4: Attach the 7-Segment Display and Buttons</a></li>
+  <li><a href="#step-5-insert-the-microcontroller" id="toc-step-5-insert-the-microcontroller" class="nav-link" data-scroll-target="#step-5-insert-the-microcontroller">Step 5: Insert the Microcontroller</a></li>
+  <li><a href="#step-6-prepare-the-acrylic-case" id="toc-step-6-prepare-the-acrylic-case" class="nav-link" data-scroll-target="#step-6-prepare-the-acrylic-case">Step 6: Prepare the Acrylic Case</a></li>
+  <li><a href="#step-7-fit-the-button-caps" id="toc-step-7-fit-the-button-caps" class="nav-link" data-scroll-target="#step-7-fit-the-button-caps">Step 7: Fit the Button Caps</a></li>
+  <li><a href="#step-8-first-power-on-test" id="toc-step-8-first-power-on-test" class="nav-link" data-scroll-target="#step-8-first-power-on-test">Step 8: First Power-On Test</a></li>
+  <li><a href="#step-9-install-the-batteries-and-check-the-back" id="toc-step-9-install-the-batteries-and-check-the-back" class="nav-link" data-scroll-target="#step-9-install-the-batteries-and-check-the-back">Step 9: Install the Batteries and Check the Back</a></li>
+  <li><a href="#step-10-final-assembly" id="toc-step-10-final-assembly" class="nav-link" data-scroll-target="#step-10-final-assembly">Step 10: Final Assembly</a></li>
+  <li><a href="#step-11-power-on-and-navigate-the-menu" id="toc-step-11-power-on-and-navigate-the-menu" class="nav-link" data-scroll-target="#step-11-power-on-and-navigate-the-menu">Step 11: Power On and Navigate the Menu</a></li>
+  <li><a href="#step-12-play" id="toc-step-12-play" class="nav-link" data-scroll-target="#step-12-play">Step 12: Play!</a></li>
+  </ul></li>
+  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a>
+  <ul class="collapse">
+  <li><a href="#firmware-software" id="toc-firmware-software" class="nav-link" data-scroll-target="#firmware-software">Firmware &amp; Software</a>
+  <ul class="collapse">
+  <li><a href="#flashing-the-chip" id="toc-flashing-the-chip" class="nav-link" data-scroll-target="#flashing-the-chip">Flashing the Chip</a></li>
+  </ul></li>
+  <li><a href="#game-code" id="toc-game-code" class="nav-link" data-scroll-target="#game-code">Game Code</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How to Build a Handheld Game Console?</h1>
+<p class="subtitle lead">Handheld Consoles, Embedded System, Soldering</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Engineering</div>
+    <div class="quarto-category">Tutorial</div>
+    <div class="quarto-category">Electrical Engineering</div>
+    <div class="quarto-category">Electronics</div>
+    <div class="quarto-category">Embedded Systems</div>
+    <div class="quarto-category">Computer Science</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    In this tutorial, We go through basics of Handeld consoles
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rick Rejeleene </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Handheld game consoles have existed since the 1970s. Over time, they evolved from simple black-and-white games into advanced devices with color displays, powerful processors, and large game libraries. In my childhood, I owned a few handheld consoles. I also spent a lot of time playing games on the PlayStation, PC, and Game Boy. At that time, I did not think much about the hardware and software behind those systems. Later, I became more curious about how these devices were actually built.</p>
+<p>In this tutorial, we will go through the basics of building a simple 8051-handheld game console.</p>
+</section>
+<section id="brick-game-9999-in-1" class="level2">
+<h2 class="anchored" data-anchor-id="brick-game-9999-in-1">Brick Game: 9999 in 1</h2>
+<p>The Brick Game was an iconic 1990s handheld LCD console, primarily known for playing Tetris on a 10x20 grid, along with variations like snake, racing, and shooter games.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/brick1.png" class="img-fluid figure-img" style="width:20.0%"></p>
+<figcaption>Handheld brick image</figcaption>
+</figure>
+</div>
+<p>It was around 1998 when I got introduced to Brick Game on my train journey. For a Middle schooler, it was engaging, exciting, and genuinely fun. For Parents, it was an affordable, easy way to distract and keep the attention of their children.</p>
+<p>The architecture itself is conceptually simple, even though the original devices used custom integrated chips.</p>
+<p><strong>Build Order Summary:</strong></p>
+<ol type="1">
+<li>Custom IC (microcontroller)</li>
+<li>A Monochrome 10x20 LCD grid display,</li>
+<li>A Single-sided PCB</li>
+<li>Rubber membrane keypad</li>
+<li>Piezo speaker</li>
+<li>Two AA batteries</li>
+<li>Plastic injection-molded shell</li>
+<li>SPDT slide (On/Off)</li>
+</ol>
+<p>It was extremely popular among developing countries and post-Soviet Union countries. I think the sales numbers are around 100-300 million, where total revenues might be around $250-$500 million. Reason for high sales were lower cost, fun, portable, and long battery life.</p>
+</section>
+<section id="building-the-handheld-console" class="level2">
+<h2 class="anchored" data-anchor-id="building-the-handheld-console">Building the Handheld Console</h2>
+<p>The construction of the handheld console involves three stages: component selection, hardware assembly, and firmware programming. After collecting the required components, they are soldered onto the PCB following the circuit layout. The system is then completed by programming the microcontroller using C-based firmware to implement display control, input handling, and game execution</p>
+</section>
+<section id="components" class="level2">
+<h2 class="anchored" data-anchor-id="components">Components</h2>
+<p>The handheld console is built from a small set of electronic and mechanical components. Each part plays a specific role in power delivery, input handling, display control, sound generation, or structural assembly.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Image</th>
+<th style="text-align: left;">Component</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/battery_connectors.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Battery Connectors</strong> <br> Spring-loaded metal contacts that hold the AA batteries and maintain reliable electrical contact.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/button.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Tactile Buttons</strong> <br> Momentary switches used for gameplay input. They register a signal only while pressed.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/buzzer.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Buzzer</strong> <br> A passive buzzer used to generate sound effects and simple tones during gameplay.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/Ceramic-capacitor.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Ceramic Capacitor (100nF)</strong> <br> A decoupling capacitor that filters high-frequency noise and stabilizes the MCU power supply.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/IMG_6756.jpg" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>PCB</strong> <br> The printed circuit board that connects all components and provides the physical layout of the console.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/IMG_6759.jpg" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>LED Dot Matrix Displays</strong> <br> Two 8×8 LED matrix modules that form the main game display. The MCU controls them to render shapes, movement, and animations.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/IMG_6760.jpg" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>STC Microcontroller</strong> <br> The STC15F2K60S2 is the main controller of the console, responsible for display output, button input, sound, and game logic.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/leddisplay.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>7-Segment Display</strong> <br> A 3-digit display used to show scores, counters, or other game information.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/microusb.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Micro USB Connector</strong> <br> Supplies 5V power and also allows the microcontroller to be programmed through STC-ISP.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/redblackwire.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Power Wires</strong> <br> Red and black wires that connect the battery terminals to the PCB power rails.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/redbutton.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Button Caps</strong> <br> Plastic caps fitted over the tactile switches to make the controls easier and more comfortable to press.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/resistor.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Resistor (10KΩ)</strong> <br> Helps maintain a defined logic level and prevents unstable or floating input signals.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/DIPICsocket.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>DIP IC Socket (40-pin)</strong> <br> Holds the microcontroller and allows it to be inserted or removed without direct soldering to the PCB.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/10ufcapacitor.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>Electrolytic Capacitor (10µF)</strong> <br> Smooths power fluctuations and helps stabilize the system during rapid switching.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../images/tutorials/handheld/transistor8550.png" class="img-fluid" style="width:45.0%"></td>
+<td style="text-align: left;"><strong>S8550 PNP Transistor</strong> <br> Acts as a switch that allows the MCU to control the buzzer without supplying the full current directly.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-to-design" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-design">How to design?</h2>
+<p>Here’s the full end-to-end design process:</p>
+</section>
+<section id="system-design" class="level2">
+<h2 class="anchored" data-anchor-id="system-design">System Design</h2>
+<p>Designing a handheld game console begins with defining what the system must do and then selecting the hardware and software needed to support those functions. For this project, the goal is to build a simple handheld device that can display game graphics, respond to button presses, generate sound, and run from a compact power source. Once those requirements are clear, the design can be broken into several subsystems: the microcontroller, power supply, display, input, audio, PCB layout, and firmware.</p>
+<section id="define-the-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="define-the-requirements">1. Define the Requirements</h3>
+<p>Before drawing the schematic, the first step is to define the core requirements of the device. This handheld console must:</p>
+<ul>
+<li>display numbers and game patterns on LED-based displays</li>
+<li>generate sound through a buzzer</li>
+<li>detect user input through push buttons</li>
+<li>operate from USB power or batteries</li>
+<li>run simple game logic on an embedded microcontroller</li>
+</ul>
+<p>These requirements determine the overall architecture of the system and the categories of components needed.</p>
+</section>
+<section id="choose-the-microcontroller" class="level3">
+<h3 class="anchored" data-anchor-id="choose-the-microcontroller">2. Choose the Microcontroller</h3>
+<p>The microcontroller is the central controller of the system, so it must provide enough input/output pins, support simple embedded development, and remain inexpensive. For this design, the <strong>STC15F2K60S2</strong> is a practical choice because it offers:</p>
+<ul>
+<li>a large number of GPIO pins for displays and buttons</li>
+<li>5V operation, which matches USB power directly</li>
+<li>an internal oscillator, reducing external parts</li>
+<li>low cost and strong availability in hobbyist kits</li>
+</ul>
+<p>Because the console uses multiplexed displays, button inputs, and a buzzer, the MCU must coordinate several tasks at once while remaining simple enough for a small embedded system.</p>
+</section>
+<section id="design-the-power-supply" class="level3">
+<h3 class="anchored" data-anchor-id="design-the-power-supply">3. Design the Power Supply</h3>
+<p>The console must receive stable power for reliable operation. USB provides <strong>5V</strong>, which is sufficient for the microcontroller and display system used in this project. A proper power design includes:</p>
+<ul>
+<li>a USB input connector</li>
+<li>a power switch</li>
+<li>a <strong>100nF ceramic capacitor</strong> for high-frequency decoupling</li>
+<li>a <strong>10µF electrolytic capacitor</strong> for smoothing lower-frequency ripple</li>
+</ul>
+<p>These capacitors are placed close to the MCU power pins to prevent voltage instability, noise, and erratic behavior during switching.</p>
+</section>
+<section id="design-the-display-subsystem" class="level3">
+<h3 class="anchored" data-anchor-id="design-the-display-subsystem">4. Design the Display Subsystem</h3>
+<p>The display system in this console uses both a <strong>7-segment display</strong> and <strong>8×8 LED dot-matrix modules</strong>. Since the number of available MCU pins is limited, the LEDs are driven using <strong>multiplexing</strong>.</p>
+<section id="segment-display" class="level4">
+<h4 class="anchored" data-anchor-id="segment-display">7-Segment Display</h4>
+<p>Each digit in a 7-segment display contains 7 LED segments plus a decimal point. Driving multiple digits directly would consume too many pins, so the design activates one digit at a time in rapid succession. Because this switching happens very quickly, the human eye perceives all digits as continuously lit.</p>
+<p>In this arrangement, the MCU typically controls:</p>
+<ul>
+<li>segment lines</li>
+<li>digit-select lines</li>
+</ul>
+<p>This approach significantly reduces the number of pins required.</p>
+</section>
+<section id="dot-matrix-display" class="level4">
+<h4 class="anchored" data-anchor-id="dot-matrix-display">Dot-Matrix Display</h4>
+<p>The dot-matrix display follows the same principle. An 8×8 matrix contains 64 LEDs, but it is not driven with 64 separate control lines. Instead, the MCU scans rows and columns one at a time, rapidly refreshing the display to create the appearance of a stable image.</p>
+<p>This method allows the console to display patterns, characters, and game blocks while using far fewer I/O pins than direct control would require.</p>
+</section>
+</section>
+<section id="design-the-buzzer-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="design-the-buzzer-circuit">5. Design the Buzzer Circuit</h3>
+<p>A passive buzzer typically draws more current than a microcontroller pin can safely supply. For that reason, the buzzer is not driven directly from the MCU. Instead, the circuit uses an <strong>S8550 PNP transistor</strong> as a switching element.</p>
+<p>In this design:</p>
+<ul>
+<li>the MCU provides the control signal</li>
+<li>the transistor handles the higher current path</li>
+<li>a resistor limits base current and protects the control side of the circuit</li>
+</ul>
+<p>This allows the system to generate tones safely and reliably without overloading the microcontroller.</p>
+</section>
+<section id="design-the-button-inputs" class="level3">
+<h3 class="anchored" data-anchor-id="design-the-button-inputs">6. Design the Button Inputs</h3>
+<p>The tactile buttons are used as digital inputs to the MCU. Each button is connected between an MCU input pin and ground. The input is held at a default high state using a pull-up resistor, either internal or external. When the button is pressed, the signal is pulled low.</p>
+<p>This is known as an <strong>active-low</strong> input configuration. It is widely used in embedded design because it is simple, reliable, and easy to interface with firmware.</p>
+</section>
+<section id="draw-the-schematic" class="level3">
+<h3 class="anchored" data-anchor-id="draw-the-schematic">7. Draw the Schematic</h3>
+<p>Once the subsystems are defined, the next step is to capture the complete circuit in schematic form. A tool such as <strong>KiCad</strong> or <strong>EasyEDA</strong> can be used to place components, label nets, and verify connectivity.</p>
+<p>At this stage, the designer defines:</p>
+<ul>
+<li>the electrical relationships between all components</li>
+<li>power and ground distribution</li>
+<li>signal paths between the MCU, displays, buttons, and buzzer</li>
+<li>connector placement and programming access</li>
+</ul>
+<p>The schematic is the logical blueprint of the system and must be correct before PCB design begins.</p>
+</section>
+<section id="design-the-pcb" class="level3">
+<h3 class="anchored" data-anchor-id="design-the-pcb">8. Design the PCB</h3>
+<p>After the schematic is complete, the circuit is translated into a physical PCB layout. In this stage, the designer places components in practical positions and routes copper traces between them.</p>
+<p>Important layout decisions include:</p>
+<ul>
+<li>placing the MCU near the center of the logic section</li>
+<li>keeping the USB connector at the board edge</li>
+<li>positioning displays and buttons for user access</li>
+<li>using wider traces for power</li>
+<li>using narrower traces for signal routing</li>
+<li>adding a ground plane to improve electrical stability</li>
+</ul>
+<p>The final PCB layout is exported as <strong>Gerber files</strong> for fabrication.</p>
+</section>
+<section id="fabricate-and-assemble-the-hardware" class="level3">
+<h3 class="anchored" data-anchor-id="fabricate-and-assemble-the-hardware">9. Fabricate and Assemble the Hardware</h3>
+<p>With the PCB files complete, the board can be manufactured by a PCB fabrication service such as <strong>JLCPCB</strong> or <strong>PCBWay</strong>. Once the board is delivered, the components are soldered in a practical order:</p>
+<ol type="1">
+<li>resistors and capacitors</li>
+<li>IC sockets and transistors</li>
+<li>connectors</li>
+<li>displays</li>
+<li>buttons and larger through-hole parts</li>
+</ol>
+<p>This order helps keep the board flat during assembly and makes soldering easier.</p>
+</section>
+<section id="write-the-firmware" class="level3">
+<h3 class="anchored" data-anchor-id="write-the-firmware">10. Write the Firmware</h3>
+<p>The final stage is firmware development. The microcontroller is programmed in <strong>C</strong> using tools such as <strong>SDCC</strong> or <strong>Keil C51</strong>. The firmware is responsible for coordinating the entire console.</p>
+<p>Its main functions include:</p>
+<ul>
+<li>scanning button inputs</li>
+<li>updating the display buffer</li>
+<li>multiplexing the LED displays</li>
+<li>generating buzzer tones</li>
+<li>executing the game logic</li>
+</ul>
+<p>The hardware provides the physical platform, but the firmware turns it into a working handheld console.</p>
+</section>
+</section>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/architecture.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Architecture of the Handheld Console</figcaption>
+</figure>
+</div>
+<p>At the center of this handheld console is the <strong>STC15F2K60S2</strong>, an 8051-compatible microcontroller that acts as the main controller for the entire system. It is responsible for scanning button inputs, driving the LED displays, generating buzzer output, and executing the game logic. Although the 8051 architecture is old, this chip is a modern and much faster implementation, making it well suited for small embedded systems like this one.</p>
+<p>One of the main reasons this microcontroller fits the project is that it combines <strong>enough memory, a high pin count, integrated timing features, and direct 5V operation</strong> in a single low-cost package. The chip provides up to <strong>63.5 KB of Flash program memory</strong>, <strong>2 KB of SRAM</strong>, and on-chip EEPROM, which is more than enough for a compact game such as Tetris and the supporting display logic.</p>
+<p>A major advantage of the STC15F2K60S2 is its <strong>1T 8051 architecture</strong>. Traditional 8051 microcontrollers typically require 12 clock cycles per instruction, but this chip executes instructions much more efficiently. In practice, that makes it significantly faster than a classic 8051 while preserving compatibility with the same instruction set. For a project like this, that extra speed is valuable because the microcontroller must handle display refresh, button input, and game execution at the same time.</p>
+<p>Another practical benefit is the <strong>integrated internal oscillator</strong>. Because the chip does not require an external crystal for basic operation, the hardware becomes simpler and cheaper. Fewer external parts are needed, PCB routing is easier, and the overall design is more compact.</p>
+<p>The voltage range of the microcontroller also makes it convenient for this console. Since it can operate directly from approximately <strong>5V</strong>, it works naturally with USB power and avoids the need for a dedicated regulator in this design. That simplifies both the schematic and the PCB layout.</p>
+<p>The chip also provides a large number of <strong>general-purpose I/O pins</strong>, which is critical in a handheld console. These pins are needed to interface with the 7-segment display, the dot-matrix LED modules, the push buttons, and the buzzer circuit. Because the display system is multiplexed, the MCU must rapidly switch and coordinate multiple outputs while still reading user input reliably.</p>
+<p>Its built-in <strong>timers</strong> are especially important for this project. A timer interrupt can be used to refresh the display at a fixed interval, which allows the LEDs to appear continuously lit even though they are actually being scanned one row or digit at a time. Without this timing control, the display would flicker or behave inconsistently.</p>
+<p>The STC15F2K60S2 also includes additional features such as <strong>ADC channels, UART communication, SPI support, and ISP/IAP programming capability</strong>. Not all of these are heavily used in this specific build, but they make the chip flexible for future extensions and simplify development. In particular, <strong>In-System Programming (ISP)</strong> allows the firmware to be uploaded without requiring a specialized external programmer.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/architecture2.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Closer look at Microcontroller</figcaption>
+</figure>
+</div>
+<p>Overall, the architecture of this handheld console is built around a simple but effective idea: a single microcontroller coordinates input, display scanning, sound generation, and game execution. The STC15F2K60S2 is a strong fit because it is inexpensive, fast enough for real-time control, easy to integrate into a 5V design, and capable of driving the full system with relatively few supporting components.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why this MCU works well here
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The STC15F2K60S2 is a good fit for this console because it offers:</p>
+<ul>
+<li>enough GPIO for displays, buttons, and buzzer</li>
+<li>direct 5V operation</li>
+<li>timer support for display multiplexing</li>
+<li>sufficient Flash and RAM for simple game firmware</li>
+<li>easy in-system programming</li>
+</ul>
+</div>
+</div>
+<p>With the design decisions mapped out, it’s time to move from paper to workbench. The following steps walk through the full physical assembly, from inspecting the bare PCB to powering on the completed console.</p>
+</section>
+<section id="how-to-build-the-handheld-console" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-build-the-handheld-console">How to Build the Handheld Console</h2>
+<p>This section walks through the complete assembly of a handheld game console, from bare PCB to a fully working device running Tetris. The build involves soldering through-hole and surface-mount components onto a custom PCB driven by an <strong>STC15F2K60S2</strong> 8051-compatible microcontroller.</p>
+</section>
+<section id="hardware" class="level2">
+<h2 class="anchored" data-anchor-id="hardware">Hardware</h2>
+<section id="step-1-inspect-the-bare-pcb" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-inspect-the-bare-pcb">Step 1: Inspect the Bare PCB</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/1.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Bare PCB front — all component footprints visible</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Start by examining the front of the bare blue PCB. You can identify all the major footprints before soldering anything:</p>
+<ul>
+<li><strong>LED1 / LED2</strong> — two 8×8 dot-matrix LED module sockets (left half of board)</li>
+<li><strong>LED3</strong> — 3-digit 7-segment display socket (top right)</li>
+<li><strong>U1 STC15F2K60S2</strong> — 40-pin DIP IC socket (center right)</li>
+<li><strong>C1 10µF / C2 104</strong> — decoupling capacitors</li>
+<li><strong>R1 10K</strong> — pull-up resistor</li>
+<li><strong>Q1 8550</strong> — PNP transistor footprint for the buzzer driver</li>
+<li><strong>LS1</strong> — passive buzzer</li>
+<li><strong>S1–S6</strong> — six tactile push-button footprints</li>
+<li><strong>MICRO USB</strong> — programming port</li>
+<li><strong>USB / Battery / SL</strong> — power selection header</li>
+</ul>
+<p>Take a moment to cross-reference each silkscreen label before picking up a soldering iron.</p>
+</section>
+<section id="step-2-solder-the-small-passive-components" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-solder-the-small-passive-components">Step 2: Solder the Small Passive Components</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/2.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Board with IC socket, capacitors, resistor, and USB connectors soldered</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Solder the smallest components first so they sit flat before bulkier parts crowd the workspace:</p>
+<ol type="1">
+<li><strong>IC socket (U1)</strong> — Place the 40-pin DIP socket, ensuring the notch faces up (toward LED3). Tack two opposite corners, confirm alignment, then solder all 40 pins.</li>
+<li><strong>C1 (10µF electrolytic)</strong> — Mind polarity; the longer leg goes in the <code>+</code> hole.</li>
+<li><strong>C2 (104 ceramic disc)</strong> — Non-polarized; orientation does not matter.</li>
+<li><strong>R1 (10KΩ resistor)</strong> — Bend legs, insert, and trim flush after soldering.</li>
+<li><strong>Q1 (8550 transistor)</strong> — Match the flat face to the silkscreen outline.</li>
+<li><strong>Micro USB (programming port)</strong> — Flux the pads well before soldering; the connector must sit flush.</li>
+<li><strong>USB / Battery power connector</strong> — Solder the 5-pin header flat to the board.</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Tip:</strong> Solder in order of component height — flat components first, tall components last — so the board lies stable on your work surface.</p>
+</blockquote>
+</section>
+<section id="step-3-solder-the-dot-matrix-led-modules" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-solder-the-dot-matrix-led-modules">Step 3: Solder the Dot-Matrix LED Modules</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/3.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Board flipped — two 8×8 LED matrix modules inserted from the front</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>The two 8×8 dot-matrix modules (LED1 and LED2) insert from the <strong>front</strong> of the board and are soldered from the <strong>back</strong>. This photo shows the board flipped over after the modules have been pressed into their footprints.</p>
+<ul>
+<li>Each module has <strong>16 pins</strong> (8 per side). Confirm each pin is seated before soldering.</li>
+<li>Do <strong>not</strong> mix up LED1 and LED2 — the modules are identical, but the top matrix (LED1) and bottom matrix (LED2) are addressed separately by the firmware.</li>
+<li>After soldering, inspect from the front to confirm the LED dot faces are flush and straight.</li>
+</ul>
+</section>
+<section id="step-4-attach-the-7-segment-display-and-buttons" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-attach-the-7-segment-display-and-buttons">Step 4: Attach the 7-Segment Display and Buttons</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/4.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Front view — 7-segment display and tactile button switches installed</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>With the matrices in place, add the remaining display and input components:</p>
+<ul>
+<li><strong>LED3 (3-digit 7-segment display)</strong> — Insert into the top-right socket. The decimal-point side faces right.</li>
+<li><strong>S1–S6 push buttons</strong> — The six tactile switches snap into their footprints. Apply light pressure until you hear a click, then solder all four legs of each switch.</li>
+<li><strong>LS1 (passive buzzer)</strong> — The <code>+</code> marking on the buzzer aligns with the <code>+</code> pad on the silkscreen.</li>
+</ul>
+<p>At this stage the board is populated but the IC and button caps are not yet fitted.</p>
+</section>
+<section id="step-5-insert-the-microcontroller" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-insert-the-microcontroller">Step 5: Insert the Microcontroller</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/5.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>STC15F2K60S2 40-pin DIP IC seated in the socket</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Insert the <strong>STC15F2K60S2</strong> into the 40-pin socket soldered in Step 2:</p>
+<ul>
+<li>Locate <strong>pin 1</strong> (marked with a dot or notch on the IC body) and align it with pin 1 of the socket.</li>
+<li>Gently bend all 40 legs to 90° by pressing the IC against a flat surface, then seat it evenly — do not force it.</li>
+<li>Confirm the IC sits flush and no legs are bent or bridging before applying any power.</li>
+</ul>
+<p>The chip is marked <code>STC15F2K60S2 / 2836RBS / A98XD</code> on the label visible in this photo.</p>
+</section>
+<section id="step-6-prepare-the-acrylic-case" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-prepare-the-acrylic-case">Step 6: Prepare the Acrylic Case</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/6.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Clear acrylic case with AA battery holder attached to the bottom panel</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>The kit includes a two-piece <strong>clear acrylic enclosure</strong>. The bottom panel has a <strong>3×AA battery holder</strong> (4.5 V) riveted to it with a JST-style connector that plugs into the <code>Battery</code> header on the PCB.</p>
+<ul>
+<li>Peel the protective film from both acrylic panels.</li>
+<li>Verify the battery-holder wires are long enough to reach the PCB connector once assembled.</li>
+<li>The standoff posts in the corners are press-fit; they can be gently tapped with a fingertip to seat fully.</li>
+</ul>
+<hr>
+</section>
+<section id="step-7-fit-the-button-caps" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-fit-the-button-caps">Step 7: Fit the Button Caps</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/7.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Red button caps fitted over all six tactile switches</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Press the six <strong>red dome button caps</strong> over each tactile switch:</p>
+<ul>
+<li>Four caps cover <strong>S2, S3, S4, S6</strong> (the directional cluster on the left).</li>
+<li>One cap covers <strong>S1</strong> (center of the cluster).</li>
+<li>One cap covers <strong>S5</strong> (the action button on the right).</li>
+</ul>
+<p>The caps are friction-fit and simply push straight down. They should click lightly and spring back when pressed.</p>
+</section>
+<section id="step-8-first-power-on-test" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-first-power-on-test">Step 8: First Power-On Test</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/9.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Completed board held in hand — 7-segment display turned off</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Before closing the case, power the board over <strong>Micro USB</strong> or batteries and verify:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Expected behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7-segment display (LED3)</td>
+<td>Shows <code>8.8.</code> test pattern</td>
+</tr>
+<tr class="even">
+<td>Dot-matrix modules (LED1/2)</td>
+<td>All LEDs illuminate</td>
+</tr>
+<tr class="odd">
+<td>Buzzer (LS1)</td>
+<td>Short startup tone</td>
+</tr>
+<tr class="even">
+<td>Buttons S1–S6</td>
+<td>Each responds to press</td>
+</tr>
+</tbody>
+</table>
+<p>If any LED matrix is dark, check for lifted pins at that module’s footprint. If the display is absent, verify the IC is seated correctly and that C1 polarity is correct.</p>
+</section>
+<section id="step-9-install-the-batteries-and-check-the-back" class="level3">
+<h3 class="anchored" data-anchor-id="step-9-install-the-batteries-and-check-the-back">Step 9: Install the Batteries and Check the Back</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/8.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Back of the case showing three AA batteries installed and PCB solder side visible</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Flip the device over to load batteries:</p>
+<ol type="1">
+<li>Insert three <strong>AA batteries</strong> into the holder, observing polarity (spring = negative).</li>
+<li>Route the battery connector wire to avoid pinching against the PCB.</li>
+<li>The back panel is also your view of the <strong>PCB solder side</strong> — inspect the solder joints from this angle for any cold or bridged joints before closing.</li>
+</ol>
+<p>The board label <code>4.5V</code> near the battery pads is a useful reminder that the device runs on three cells in series, not a Li-ion cell.</p>
+</section>
+<section id="step-10-final-assembly" class="level3">
+<h3 class="anchored" data-anchor-id="step-10-final-assembly">Step 10: Final Assembly</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/10.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Fully assembled console held in hand — front and bottom visible</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Sandwich the PCB between the two acrylic panels:</p>
+<ol type="1">
+<li>Place the PCB on the bottom panel, lining up the four corner holes with the standoffs.</li>
+<li>Thread the four <strong>M2 screws</strong> through the top panel, through the PCB, and into the bottom standoffs.</li>
+<li>Tighten finger-tight — over-tightening can crack the acrylic.</li>
+<li>Confirm the Micro USB port, USB connector, and battery slide-switch (SL) are all accessible through their respective cutouts.</li>
+</ol>
+<p>The assembled unit is compact enough to fit in one hand, as shown above.</p>
+</section>
+<section id="step-11-power-on-and-navigate-the-menu" class="level3">
+<h3 class="anchored" data-anchor-id="step-11-power-on-and-navigate-the-menu">Step 11: Power On and Navigate the Menu</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/11.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Device running — Tetris piece visible on the dot-matrix display, score shown on 7-segment</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Slide <strong>SL</strong> to the <code>ON</code> position. The 7-segment display shows <code>000</code> (score) and the dot-matrix matrices light up with the game menu. Use the button cluster to navigate:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Button</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S2 (up)</td>
+<td>Move piece up / menu up</td>
+</tr>
+<tr class="even">
+<td>S6 (down)</td>
+<td>Move piece down / menu down</td>
+</tr>
+<tr class="odd">
+<td>S3 (left)</td>
+<td>Move piece left</td>
+</tr>
+<tr class="even">
+<td>S1 (right)</td>
+<td>Move piece right</td>
+</tr>
+<tr class="odd">
+<td>S4</td>
+<td>Rotate piece</td>
+</tr>
+<tr class="even">
+<td>S5</td>
+<td>Pause / select</td>
+</tr>
+</tbody>
+</table>
+<p>Select <strong>Tetris</strong> from the menu and the falling-block game begins immediately.</p>
+</section>
+<section id="step-12-play" class="level3">
+<h3 class="anchored" data-anchor-id="step-12-play">Step 12: Play!</h3>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tutorials/handheld/12.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Tetris gameplay — cyan pieces visible on LED matrix, score on 7-segment display</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>The firmware pre-loaded on the STC15F2K60S2 includes Tetris as its primary game. Pieces fall from the top of the 8×16 display area (spanning both LED matrices), and complete horizontal lines are cleared for points shown on the 7-segment display.</p>
+<p>The buzzer sounds on line clears, level-ups, and game-over events. Speed increases automatically as your score rises.</p>
+<hr>
+</section>
+</section>
+<section id="demo" class="level1">
+<h1>Demo</h1>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../../images/tutorials/handheld/demo.mp4"></video></div>
+<blockquote class="blockquote">
+<p>The video above shows the completed console running Tetris at speed, demonstrating the LED matrix gameplay, 7-segment scoring, and buzzer audio feedback.</p>
+</blockquote>
+<section id="firmware-software" class="level2">
+<h2 class="anchored" data-anchor-id="firmware-software">Firmware &amp; Software</h2>
+<p>Once the hardware is assembled, the handheld console becomes functional through firmware running on the <strong>STC15F2K60S2</strong> microcontroller. The firmware is written in <strong>C</strong> using <strong>SDCC</strong> or <strong>Keil C51</strong>, and the compiled <code>.hex</code> file is uploaded using <strong>STC-ISP</strong>.</p>
+<p>At a high level, the firmware performs three tasks:</p>
+<ul>
+<li>refreshes the LED displays</li>
+<li>reads button inputs</li>
+<li>runs the game logic</li>
+</ul>
+<p>Display refreshing is handled through timer-driven multiplexing, while the main loop continuously updates gameplay.</p>
+<p>The timer interrupt fires every ~1ms. Each time it fires, it activates one row of the LED matrix and moves to the next. Because this cycles through all 16 rows faster than the eye can detect, the display appears fully lit.</p>
+<section id="flashing-the-chip" class="level3">
+<h3 class="anchored" data-anchor-id="flashing-the-chip">Flashing the Chip</h3>
+<p>STC microcontrollers enter programming mode at power-on. To flash the firmware:</p>
+<ol type="1">
+<li>Open <strong>STC-ISP</strong></li>
+<li>Select <code>STC15F2K60S2</code></li>
+<li>Choose the correct COM port</li>
+<li>Click <strong>Download/Program</strong></li>
+<li>Power-cycle the board</li>
+</ol>
+<p>When the board restarts, the bootloader detects the programmer and uploads the firmware automatically.</p>
+</section>
+</section>
+<section id="game-code" class="level2">
+<h2 class="anchored" data-anchor-id="game-code">Game Code</h2>
+<p>The following code implements the Tetris firmware for the handheld console. It defines the board state, tetromino data, display multiplexing, button handling, collision logic, scoring, audio feedback, rendering, and the main game loop.</p>
+<p>```c #include &lt;STC15.H&gt; #include &lt;stdint.h&gt;</p>
+<p>/* ───────────────────────────────────────────── PORT DEFINITIONS Adjust these to match your PCB’s routing. ───────────────────────────────────────────── */ #define ROW_PORT P0 #define COL_PORT P2 #define SEG_PORT P1 #define DIGIT_PORT P3</p>
+<p>#define BTN_LEFT P4_0 #define BTN_RIGHT P4_1 #define BTN_DOWN P4_2 #define BTN_ROT P4_3 #define BTN_PAUSE P4_4 #define BUZZER P4_5</p>
+<p>#define BOARD_WIDTH 8 #define BOARD_HEIGHT 16</p>
+<p>uint8_t board[BOARD_HEIGHT] = {0}; uint8_t framebuffer[BOARD_HEIGHT] = {0};</p>
+<p>const uint16_t PIECES[7][4] = { { 0x0F00, 0x2222, 0x00F0, 0x4444 }, { 0x6600, 0x6600, 0x6600, 0x6600 }, { 0x0E40, 0x4C40, 0x4E00, 0x4640 }, { 0x06C0, 0x4620, 0x06C0, 0x4620 }, { 0x0C60, 0x2640, 0x0C60, 0x2640 }, { 0x0E20, 0x4C00, 0x8E00, 0x6400 }, { 0x0E80, 0xC400, 0x2E00, 0x4600 } };</p>
+<p>typedef struct { int8_t x; int8_t y; uint8_t type; uint8_t rotation; } Piece;</p>
+<p>Piece current; Piece next;</p>
+<p>uint8_t rng_state = 42; uint8_t current_row = 0; uint8_t seg_digits[3] = {0, 0, 0}; uint8_t prev_rot = 1; uint8_t prev_pause = 1; uint8_t score = 0; uint8_t tick_counter = 0; uint8_t drop_interval = 40; uint8_t first_spawn = 1;</p>
+<p>const uint8_t SEG7[10] = { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F };</p>
+<p>void board_clear() { uint8_t i; for (i = 0; i &lt; BOARD_HEIGHT; i++) board[i] = 0; }</p>
+<p>uint8_t board_get(int8_t x, int8_t y) { if (x &lt; 0 || x &gt;= BOARD_WIDTH || y &lt; 0 || y &gt;= BOARD_HEIGHT) return 1; return (board[y] &gt;&gt; (7 - x)) &amp; 1; }</p>
+<p>void board_set(int8_t x, int8_t y, uint8_t val) { if (x &lt; 0 || x &gt;= BOARD_WIDTH || y &lt; 0 || y &gt;= BOARD_HEIGHT) return; if (val) board[y] |= (1 &lt;&lt; (7 - x)); else board[y] &amp;= ~(1 &lt;&lt; (7 - x)); }</p>
+<p>uint8_t piece_get(uint16_t mask, uint8_t x, uint8_t y) { return (mask &gt;&gt; (15 - (y * 4 + x))) &amp; 1; }</p>
+<p>uint16_t current_mask() { return PIECES[current.type][current.rotation]; }</p>
+<p>void delay_ms(uint8_t ms) { uint8_t i, j; while (ms–) { for (i = 0; i &lt; 114; i++) for (j = 0; j &lt; 1; j++); } }</p>
+<p>uint8_t rand8() { rng_state = rng_state * 109 + 89; return rng_state; }</p>
+<p>void timer0_isr() interrupt 1 { TH0 = 0xFC; TL0 = 0x66;</p>
+<pre><code>if (current_row &lt; 16) {
+    ROW_PORT = 0xFF;
+    COL_PORT = ~framebuffer[current_row];
+    ROW_PORT = ~(1 &lt;&lt; (current_row % 8));
+} else {
+    uint8_t digit = current_row - 16;
+    DIGIT_PORT = 0x00;
+    SEG_PORT   = SEG7[seg_digits[digit]];
+    DIGIT_PORT = (1 &lt;&lt; digit);
+}
+
+current_row = (current_row + 1) % 19;</code></pre>
+<p>}</p>
+<p>void timer0_init() { TMOD &amp;= 0xF0; TH0 = 0xFC; TL0 = 0x66; ET0 = 1; TR0 = 1; EA = 1; }</p>
+<p>uint8_t button_pressed(bit btn_pin) { if (btn_pin == 0) { delay_ms(15); if (btn_pin == 0) return 1; } return 0; }</p>
+<p>uint8_t button_edge(bit btn_pin, uint8_t <em>prev) { uint8_t cur = (btn_pin == 0) ? 0 : 1; uint8_t pressed = (</em>prev == 1 &amp;&amp; cur == 0); *prev = cur; return pressed; }</p>
+<p>uint8_t collision(int8_t dx, int8_t dy, uint8_t new_rotation) { uint8_t x, y; uint16_t mask = PIECES[current.type][new_rotation];</p>
+<pre><code>for (y = 0; y &lt; 4; y++) {
+    for (x = 0; x &lt; 4; x++) {
+        if (!piece_get(mask, x, y))
+            continue;
+        if (board_get(current.x + x + dx,
+                      current.y + y + dy))
+            return 1;
+    }
+}
+return 0;</code></pre>
+<p>}</p>
+<p>void move_piece(int8_t dx, int8_t dy) { if (!collision(dx, dy, current.rotation)) { current.x += dx; current.y += dy; } }</p>
+<p>void rotate_piece() { uint8_t new_rot = (current.rotation + 1) % 4;</p>
+<pre><code>if (!collision(0, 0, new_rot)) {
+    current.rotation = new_rot;
+} else if (!collision(-1, 0, new_rot)) {
+    current.rotation = new_rot;
+    current.x -= 1;
+} else if (!collision(1, 0, new_rot)) {
+    current.rotation = new_rot;
+    current.x += 1;
+}</code></pre>
+<p>}</p>
+<p>void lock_piece() { uint8_t x, y; uint16_t mask = current_mask();</p>
+<pre><code>for (y = 0; y &lt; 4; y++) {
+    for (x = 0; x &lt; 4; x++) {
+        if (piece_get(mask, x, y))
+            board_set(current.x + x, current.y + y, 1);
+    }
+}</code></pre>
+<p>}</p>
+<p>void update_7seg(uint8_t val) { seg_digits[0] = val / 100; seg_digits[1] = (val / 10) % 10; seg_digits[2] = val % 10; }</p>
+<p>void clear_lines() { int8_t y; uint8_t lines = 0;</p>
+<pre><code>for (y = BOARD_HEIGHT - 1; y &gt;= 0; y--) {
+    if (board[y] == 0xFF) {
+        int8_t yy;
+        for (yy = y; yy &gt; 0; yy--)
+            board[yy] = board[yy - 1];
+        board[0] = 0x00;
+        lines++;
+        y++;
+    }
+}
+
+const uint8_t points[5] = {0, 1, 3, 5, 8};
+if (lines &gt; 0 &amp;&amp; lines &lt;= 4)
+    score += points[lines];
+if (score &gt; 99) score = 99;
+
+update_7seg(score);</code></pre>
+<p>}</p>
+<p>void buzzer_tone(uint16_t freq_hz, uint16_t duration_ms) { uint16_t half_period_us = 500000UL / freq_hz; uint16_t cycles = (uint32_t)duration_ms * freq_hz / 1000; uint16_t i;</p>
+<pre><code>for (i = 0; i &lt; cycles; i++) {
+    BUZZER = 0;
+    uint16_t d = half_period_us / 10;
+    while (d--);
+    BUZZER = 1;
+    d = half_period_us / 10;
+    while (d--);
+}
+BUZZER = 1;</code></pre>
+<p>}</p>
+<p>void buzzer_click() { buzzer_tone(1000, 20); } void buzzer_line() { buzzer_tone(880, 80); } void buzzer_tetris() { buzzer_tone(1320, 200); } void buzzer_gameover() { buzzer_tone(220, 800); }</p>
+<p>void spawn_piece() { if (first_spawn) { rng_state ^= TL0; first_spawn = 0; }</p>
+<pre><code>current       = next;
+current.x     = 2;
+current.y     = 0;
+
+next.type     = rand8() % 7;
+next.rotation = 0;</code></pre>
+<p>}</p>
+<p>void render() { uint8_t x, y; uint16_t mask = current_mask();</p>
+<pre><code>for (y = 0; y &lt; BOARD_HEIGHT; y++)
+    framebuffer[y] = board[y];
+
+for (y = 0; y &lt; 4; y++) {
+    for (x = 0; x &lt; 4; x++) {
+        if (piece_get(mask, x, y)) {
+            int8_t bx = current.x + x;
+            int8_t by = current.y + y;
+            if (by &gt;= 0 &amp;&amp; by &lt; BOARD_HEIGHT &amp;&amp;
+                bx &gt;= 0 &amp;&amp; bx &lt; BOARD_WIDTH)
+                framebuffer[by] |= (1 &lt;&lt; (7 - bx));
+        }
+    }
+}</code></pre>
+<p>}</p>
+<p>void update_speed() { if (score &gt;= 50) drop_interval = 4; else if (score &gt;= 30) drop_interval = 8; else if (score &gt;= 20) drop_interval = 16; else if (score &gt;= 10) drop_interval = 24; else drop_interval = 40; }</p>
+<p>void pause_game() { while (button_edge(BTN_PAUSE, &amp;prev_pause) == 0) { delay_ms(16); } }</p>
+<p>void game_over() { board_clear(); score = 0; first_spawn = 1; update_7seg(0); delay_ms(1000);</p>
+<pre><code>next.type = rand8() % 7;
+next.rotation = 0;
+spawn_piece();</code></pre>
+<p>}</p>
+<p>void game_init() { board_clear(); score = 0; tick_counter = 0; drop_interval = 40; first_spawn = 1; prev_rot = 1; prev_pause = 1; rng_state = 73;</p>
+<pre><code>next.type     = rand8() % 7;
+next.rotation = 0;
+spawn_piece();
+update_7seg(0);</code></pre>
+<p>}</p>
+<p>void main() { timer0_init(); game_init();</p>
+<pre><code>while (1) {
+    if (button_pressed(BTN_LEFT))
+        move_piece(-1, 0);
+
+    if (button_pressed(BTN_RIGHT))
+        move_piece( 1, 0);
+
+    if (button_pressed(BTN_DOWN))
+        move_piece( 0, 1);
+
+    if (button_edge(BTN_ROT, &amp;prev_rot))
+        rotate_piece();
+
+    if (button_edge(BTN_PAUSE, &amp;prev_pause))
+        pause_game();
+
+    if (tick_counter &gt;= drop_interval) {
+        tick_counter = 0;
+
+        if (!collision(0, 1, current.rotation)) {
+            current.y++;
+        } else {
+            lock_piece();
+            buzzer_click();
+            clear_lines();
+            update_speed();
+            spawn_piece();
+
+            if (collision(0, 0, current.rotation))
+                game_over();
+        }
+    }
+
+    render();
+    delay_ms(16);
+    tick_counter++;
+}</code></pre>
+<p>}</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>videojs(video_shortcode_videojs_video1);</script>
+
+
+
+
+</body></html>
