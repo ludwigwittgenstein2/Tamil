@@ -1,0 +1,343 @@
+/* =========================================================
+   High-Speed Rail Component Table
+   ========================================================= */
+
+.hsr-table-wrap {
+  margin: 1.8rem 0 2.2rem 0;
+  overflow-x: auto;
+  border: 1px solid #d9e1e8;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  background: #ffffff;
+}
+
+.hsr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.hsr-table thead {
+  background: linear-gradient(135deg, #17324d, #24577a);
+  color: #ffffff;
+}
+
+.hsr-table th {
+  padding: 13px 14px;
+  text-align: left;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  border: none;
+  white-space: nowrap;
+}
+
+.hsr-table td {
+  padding: 12px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid #e8edf2;
+}
+
+.hsr-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.hsr-table tbody tr:hover {
+  background: #eef5fa;
+}
+
+.hsr-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Component name */
+.component-name {
+  font-weight: 700;
+  color: #18354f;
+}
+
+/* Manufacturer / model */
+.reference-model {
+  font-weight: 600;
+  color: #314b60;
+}
+
+.reference-model small {
+  display: block;
+  font-weight: 400;
+  color: #6b7785;
+  margin-top: 3px;
+}
+
+/* Colored subsystem badges */
+.hsr-tag {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tag-structure {
+  background: #eee7fb;
+  color: #563d7c;
+}
+
+.tag-running {
+  background: #e2f0ff;
+  color: #12558a;
+}
+
+.tag-power {
+  background: #fff0d9;
+  color: #925600;
+}
+
+.tag-brake {
+  background: #fde7e7;
+  color: #9b2929;
+}
+
+.tag-control {
+  background: #e3f5e9;
+  color: #23663a;
+}
+
+.tag-aux {
+  background: #eef0f3;
+  color: #4a5560;
+}
+
+.tag-aero {
+  background: #e0f5f3;
+  color: #176760;
+}
+
+.tag-test {
+  background: #f5e5f1;
+  color: #83366c;
+}
+
+/* Small explanatory note underneath table */
+.hsr-table-note {
+  margin-top: 0.65rem;
+  padding: 10px 14px;
+  border-left: 4px solid #24577a;
+  background: #f4f8fb;
+  font-size: 0.86rem;
+  color: #475569;
+}
+
+
+
+
+/* ==========================================================
+   TN-HSR SYSTEM ARCHITECTURE
+   ========================================================== */
+
+.hsr-system {
+  margin: 2rem 0 2.5rem 0;
+  padding: 1.6rem;
+  border: 1px solid #d7e0e8;
+  border-radius: 16px;
+  background: #fbfcfd;
+  box-shadow: 0 6px 24px rgba(20, 45, 70, 0.08);
+  overflow-x: auto;
+}
+
+.system-title {
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: #17324d;
+  margin-bottom: 0.25rem;
+}
+
+.system-subtitle {
+  color: #64748b;
+  font-size: 0.88rem;
+  margin-bottom: 1.8rem;
+}
+
+.flow-label {
+  margin-top: 1.4rem;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid #d6e0e8;
+  color: #34516b;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+/* Main horizontal flows */
+
+.hsr-flow,
+.brake-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0.45rem;
+  min-width: 1050px;
+}
+
+.system-block {
+  position: relative;
+  min-width: 125px;
+  flex: 1;
+  padding: 0.85rem 0.85rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid;
+  background: white;
+}
+
+.system-block strong {
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 0.28rem;
+}
+
+.system-block small {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.32;
+  opacity: 0.82;
+}
+
+.block-number {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.system-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #74889b;
+}
+
+/* Subsystem colors */
+
+.infrastructure {
+  border-color: #b5c3ce;
+  background: #f3f6f8;
+  color: #31485a;
+}
+
+.power {
+  border-color: #e6bd75;
+  background: #fff7e8;
+  color: #82520c;
+}
+
+.electronics {
+  border-color: #dbb16c;
+  background: #fff4de;
+  color: #76500e;
+}
+
+.mechanical {
+  border-color: #82b3dc;
+  background: #eef7ff;
+  color: #1d5d91;
+}
+
+.motion {
+  border-color: #71ad8a;
+  background: #edf8f1;
+  color: #236844;
+}
+
+/* Vehicle dynamics */
+
+.secondary-label {
+  margin-top: 2rem;
+}
+
+.dynamics-flow {
+  min-width: 900px;
+}
+
+.dynamics {
+  border-color: #9fb3c7;
+  background: #f4f7fa;
+  color: #3c566e;
+}
+
+/* Control layer */
+
+.control-label {
+  margin-top: 2rem;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 0.7rem;
+}
+
+.control-block {
+  border-left: 4px solid #37845a;
+  border-radius: 8px;
+  background: #eef8f2;
+  padding: 0.8rem 0.9rem;
+}
+
+.control-block strong {
+  display: block;
+  color: #215d3d;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.control-block span {
+  display: block;
+  color: #56665d;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Braking */
+
+.brake-label {
+  margin-top: 2rem;
+}
+
+.brake {
+  border-color: #dd9292;
+  background: #fff1f1;
+  color: #8a3030;
+}
+
+.brake-friction {
+  border-color: #d18d8d;
+  background: #fceaea;
+  color: #812929;
+}
+
+.brake-plus {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #9b5252;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .control-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hsr-key dl { margin: 1.25rem 0; font-size: 0.82rem; }
+.hsr-key dt { font-weight: 600; color: var(--hsr-ink); margin-top: 0.4rem; }
+.hsr-key dd { margin: 0.1rem 0 0 1.1rem; color: var(--hsr-steel); }
