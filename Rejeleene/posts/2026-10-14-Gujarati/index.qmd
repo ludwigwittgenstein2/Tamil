@@ -110,7 +110,7 @@ Lastly, Gujaratis have historically established extensive commercial networks ac
 
 Coming from Tamil Nadu, I cannot help, comparing these achievements with the priorities I observe in my own state. I believe many Tamil people are distracted by cinema, spending considerable amounts of their time, attention, and money on films and film personalities rather than developing a stronger culture of scientific inquiry, industrial ambition, entrepreneurship, and intellectual achievement. 
 
-In my view, promoting hands-on engineering, entrepreneurship, industrial development, and scientific research should be a higher priority for Tamil Nadu. I believe that the state has the potential to become a hub of industrial innovation, technological advancement, and global commerce. However, this requires a cultural shift towards valuing education, research, and enterprise over entertainment and celebrity culture. Recently, I was struck by the fact that China has been promoting it's scientists and engineers to inspire their Youth towards full filling their potential. I think Tamil Nadu should do the same.
+In my view, promoting hands-on engineering, entrepreneurship, industrial development, and scientific research should be a higher priority for Tamil Nadu. I believe that the state has the potential to become a hub of industrial innovation, technological advancement, and global commerce. However, this requires a cultural shift towards valuing education, research, and enterprise over entertainment and celebrity culture. Recently, I was struck by the fact that China has been promoting it's scientists and engineers to inspire their Youth towards their true potential. I think Tamil Nadu should do the same.
 
 ## Part I: Who We Are
 
@@ -143,20 +143,34 @@ The anecdote humorously conveys the stereotype of Gujarati commercial pragmatism
 ### Education and Language Policy
 
 The author shares, consequences of language policy in Gujarat.
-He argues that political decisions to prioritize Gujarati-medium education, without providing adequate opportunities to learn English, disadvantaged sections of the population. Students from wealthier families could often access English-medium education, whereas students from economically disadvantaged backgrounds had fewer opportunities.
+He argues that political decisions to prioritize Gujarati-medium education, without providing adequate opportunities to learn English, disadvantaged sections of the population. Students from wealthier families could often access English-medium education, whereas students from economically disadvantaged backgrounds had fewer opportunities. This contributed to inequalities in access to higher education, professional occupations, and international opportunities. Preserving one's mother tongue and learning English need not be mutually exclusive objectives.
 
-This contributed to inequalities in access to higher education, professional occupations, and international opportunities. Preserving one's mother tongue and learning English need not be mutually exclusive objectives.
+Gujarat's Higher-secondary (Class 12) completion rate is 50.82%% in 2026.
+In higher education, Gujarat recorded approximately 17.98 lakh students in 2021–22, compared with 33.09 lakh in Tamil Nadu. For engineering education, tentative estimates suggest around 1–2 lakh B.E. students in Gujarat and 2–3 lakh in Tamil Nadu, although these ranges have not been validated against state-level programme-specific data. M.E. enrolment is also uncertain and should be distinguished from the more widely offered M.Tech qualification. In doctoral education, official AISHE 2021–22 data recorded 8,533 Ph.D. students in Gujarat and 28,867 in Tamil Nadu, approximately 3.38 times as many in Tamil Nadu.
+
+In Modern India, South India has more technology companies, software engineers, and IT professionals than Gujarat. 
+To put it in perspective, In FY 2023–24, software exports from STPI-registered units amounted to approximately ₹8,703 crore in Gujarat, compared with ₹80,677 crore in Tamil Nadu, demonstrating the considerable difference in the scale of their software-export industries.
+It could be because of language policy in Gujarat, which did not promote English as a medium of instruction, Gujaratis could not compete in Global IT industry or lost first mover advantage in IT industry. Another reason could be cultural. South Indian families promote education, getting a stable job. 
 
 ### Gujarati Asmita: Collective Identity, Dignity, and Pride
 
-One of the most important discussions in Part I concerns *asmita*, a concept associated with identity, dignity, and collective pride. The author traces its development through competing intellectual and political traditions.
+One of the most important discussions in Part I concerns *asmita*, a concept associated with identity, dignity, and collective pride. The author traces its development through competing intellectual and political traditions. Mahatma Gandhi advanced a philosophy emphasizing nonviolence, religious coexistence, social responsibility, and service to the weakest members of society. This was a vision of Gujarat that got lost among people. 
 
-Mahatma Gandhi advanced a philosophy emphasizing nonviolence, religious coexistence, social responsibility, and service to the weakest members of society. This was a vision of Gujarat that got lost among people. 
+<figure style="display: inline-block; width: 350px; max-width: 100%; margin: 1.5rem 0; padding: 0;">
+  <img src="../../images/gujarat/jai.png" alt="Novel." style="display: block; width: 100%; height: auto; margin: 0;">
+  <figcaption style="margin-top: 0.5rem; margin-left: 6%; padding: 0; text-align: left;">
+    Jaya Somanath is a historical romance written by Kanhaiyalal Maniklal Munshi. The story tells of the mortal crisis which Gujarat passed through when Sultan Mahmud of Ghazni attacked and destroyed the sacred temple of Somanath. It is a moving and fascinating story of Gujarat’s fight to save its honour and dignity.
+  </figcaption>
+</figure>
 
-In contrast, K. M. Munshi popularized a romanticized vision of Gujarat's Hindu-Jain past, particularly through his historical novels set during the Chaulukya period. The author points Munshi’s writing to be the popularizer of communal polarization, myth-making in Gujarati History. In this, Muslims were considered as invaders. This explains much of the current political ideology of India. 
+In contrast, K. M. Munshi popularized a romanticized vision of Gujarat's Hindu-Jain past, particularly through his historical novels set during the Chaulukya period. The author points Munshi’s writing to be the popularizer of communal polarization, myth-making in Gujarati History. In this, Muslims were considered as invaders. This explains much of the current political ideology of India. The author says contemporary Gujarat increasingly embraced aspects of Munshi's cultural nationalism rather than Gandhi's inclusive ethical vision. He associates this development partly with the political rise of Hindu nationalism and the BJP's prolonged dominance in Gujarat.
 
-The author says contemporary Gujarat increasingly embraced aspects of Munshi's cultural nationalism rather than Gandhi's inclusive ethical vision.
-He associates this development partly with the political rise of Hindu nationalism and the BJP's prolonged dominance in Gujarat.
+<figure style="display: inline-block; width: 550px; max-width: 110%; margin: 1.5rem 0; padding: 0;">
+  <img src="../../images/gujarat/munshi.png" alt="Munshi." style="display: block; width: 100%; height: auto; margin: 0;">
+  <figcaption style="margin-top: 0.5rem; margin-left: 6%; padding: 0; text-align: left;">
+    K.M. Munshi is one of Gujarat's most well-known literary writers. Munshi's cultural nationalism promoted communal polarization, myth-making in Gujarati History. In this, Muslims were considered as invaders. This explains origins for the current religious polarization ideology of India.
+  </figcaption>
+</figure>
 
 ## Part II: The Way We Are
 
@@ -175,6 +189,28 @@ During these journeys, strangers frequently asked him *tame keva?*, meaning some
 Although the question appeared innocent, its underlying purpose was often to determine his caste or religion. 
 His first name, Salil, was sometimes mistaken for the Muslim name Salim. Meanwhile, his surname, Tripathi, led others to assume that he originated from Uttar Pradesh. As a child, he misunderstood these questions. As an adult, he came to recognize their social significance.
 
+<figure style="display: inline-block; width: 450px; max-width: 100%; margin: 1.5rem 0; padding: 0;">
+  <img src="../../images/gujarat/castecomposition.png" alt="caste composition." style="display: block; width: 100%; height: auto; margin: 0;">
+  <figcaption style="margin-top: 0.5rem; margin-left: 6%; padding: 0; text-align: left;">
+    Population Composition of Gujarat from 1931. Current composition will be different.
+  </figcaption>
+</figure>
+
+In famous work of Division and Hierarchy: An Overview of Caste in Gujarat (1982) by sociologist A. M. Shah[@Shah1982DivisionHierarchy], He shares caste and social classification in Gujarat. Gujarati society consists of numerous castes and subcastes organized through marriage networks, kinship relationships, religious affiliations, and regional identities. Major communities such as Brahmins, Vanias, Patidars, Rajputs, and Kolis contain internal subdivisions with distinct marriage practices and social boundaries. Gujaratis practice hypergamy, endogamy. Castes in Gujarat's hierarchy is not always a simple ladder.
+
+<figure style="display: inline-block; width: 450px; max-width: 100%; margin: 1.5rem 0; padding: 0;">
+  <img src="../../images/gujarat/castegujarat.png" alt="caste gujarat." style="display: block; width: 100%; height: auto; margin: 0;">
+  <figcaption style="margin-top: 0.5rem; margin-left: 6%; padding: 0; text-align: left;">
+    Castes of Gujarat
+  </figcaption>
+</figure>
+
+India is hierarchial in social structure. People are curious about your social standing, caste, religion, and occupation.
+In Tamil Nadu, in my life journey, many times, people want to figure out your social standing. 
+But the issue is that, there is no inherient sense of dignity for labor. 
+So, if I were to answer to a Tamil person, I clean the streets for a living, they would look down on me.
+This is problmatic, we need to treat all jobs with dignity. 
+
 This type of question is popular in Tamil society, where people frequently ask, *un paer ena?*, meaning what's your name? 
 If I were to answer the question, Rick. The next assumption might be, "Rick, you are a Christian, right?"
 Usually, name infers religion, caste. People also ask, What does your father do? Another way to uncover their social standing in Tamil Society. 
@@ -184,10 +220,7 @@ Castes are still important in Tamil society, while people might not have caste s
 
 The author describes the Bhatias, Kapols, Lohanas, Jains, Parsis, and Patidars.
 Many developed influential commercial networks across India and overseas.
-Their commercial achievements were supported by family enterprises, access to capital, established trading relationships. The Jain community occupies a particularly important position because of its influence on commerce, philanthropy, religious traditions, and vegetarianism. 
-
-The Parsi community also made significant contributions to industry, education, commerce, and cultural institutions, particularly in Bombay. 
-The Patidar or Patel communities illustrate how groups historically associated with agriculture developed substantial influence in business, politics, and migration. Regardless of their social standing, the author shares complexity of requiring affirmative action or reservations. 
+Their commercial achievements were supported by family enterprises, access to capital, established trading relationships. The Jain community occupies a particularly important position because of its influence on commerce, philanthropy, religious traditions, and vegetarianism. The Parsi community also made significant contributions to industry, education, commerce, and cultural institutions, particularly in Bombay. The Patidar or Patel communities illustrate how groups historically associated with agriculture developed substantial influence in business, politics, and migration. Regardless of their social standing, the author shares complexity of requiring affirmative action or reservations. 
 
 ###  Dalits, Adivasis, and Marginalized Communities
 
@@ -381,9 +414,13 @@ Failing in a new venture is considered to be shameful. During the ages of 20-35 
 Majority of the Tamil Middle Class families are risk-averse, prefer Government jobs. 
 Unfortunately, many suffer from middle class morality and live their lives pleasing others or pleasing society. 
 
-In Tamil society, Middle-class morality is a set of social expectations that prioritizes economic stability, respectable employment, educational credentials, marriageability, family reputation, and conformity to established norms, sometimes at the expense of entrepreneurial risk-taking, experimentation, individual ambition, and unconventional career choices
+In Tamil society, Middle-class morality is a set of social expectations that prioritizes economic stability, respectable employment, educational credentials, marriageability, family reputation, and conformity to established norms, sometimes at the expense of entrepreneurial risk-taking, experimentation, individual ambition, and unconventional career choices. Many families encourage to prepare for central government jobs, state government jobs, that takes up few years of preparation. The skills of operating business, marketing, sales are not considered honorable. 
+In my experience growing up in Tamil Nadu, Sales is considered to be a lowly profession, and many people look down on salesmen.
 
-A lot of Tamil industrialists stay in tight-knit social circle[@rejeleene2026economy]. They do not publicly promote others to join ventures. There are initiatives like StartupTamil Nadu, that has been trying to change, shape the culture. In Tirunelveli, the old money, industrialists continue to build their businesses, they prefer to marry among another old-money or a newly minted nouveau rich Tamil family. They are active in Chamber of commerce meetings, which is present in all major towns of Tamil Nadu. 
+While salesmen are often undervalued, they play a crucial role in driving business growth, customer engagement, and revenue generation. 
+They make a killing in American market and companies. 
+
+A lot of Tamil industrialists stay in tight-knit social circle[@rejeleene2026economy]. They do not publicly promote others to create new ventures, take risks. However, recently, there are initiatives like StartupTamil Nadu, that has been trying to change, shape the culture. In Tirunelveli, the old money, industrialists continue to build their businesses, they prefer to marry among another old-money or a newly minted nouveau rich Tamil family. They are active in Chamber of commerce meetings, which is present in all major towns of Tamil Nadu. 
 
 ### Older Tamil Industrialists: 
 
@@ -416,9 +453,7 @@ His entrepreneurial journey involved years of experimentation, financial uncerta
 
 Girish Mathrubootham, who had established a successful professional career at Zoho, resigned from his senior management position in 2010 to establish Freshdesk, subsequently renamed Freshworks. He had a family, children, and a housing mortgage, making the decision financially consequential. His opportunity emerged after observing customer dissatisfaction with competing helpdesk software, particularly Zendesk's pricing changes. Drawing upon his experience in software product management, he developed a competing SaaS product with co-founder Shan Krishnasamy. Freshworks eventually became a publicly traded company on Nasdaq in 2021[@freshworksIPO2021]. 
 
-And finally, there is Sridhar Vembu, the Tamil billionaire who helped build the bootstrapped software company Zoho[@zohoStory]. In my view, Sridhar Vembu may well be the wealthiest entrepreneur to have established a significant business base in the Tirunelveli region over the past 200–300 years. His family's wealth is estimated in the billions of dollars. Sridhar Vembu is likely the wealthiest person in the last 200-300 years, who put his base in the region. In my view, he is the wealthiest person ever to be living in Tirunelveli district from the last 200-300 years.
-
-Sridhar Vembu, Meanwhile, came from a modest middle-class Tamil family, his father worked as a stenographer at the Madras High Court, and neither parents attended college. 
+And finally, there is Sridhar Vembu, the Tamil billionaire who helped build the bootstrapped software company Zoho[@zohoStory]. In my view, Sridhar Vembu may well be the wealthiest entrepreneur to have established a significant business base in the Tirunelveli region over the past 200–300 years. His family's wealth is estimated in the billions of dollars. Sridhar Vembu is likely the wealthiest person in the last 200-300 years, who put his base in the region. In my view, he is the wealthiest person ever to be living in Tirunelveli district from the last 200-300 years. Sridhar Vembu, Meanwhile, came from a modest middle-class Tamil family, his father worked as a stenographer at the Madras High Court, and neither parents attended college[@rejeleene2025brahmins]. 
 
 # My Related Writings on Tamil Society
 

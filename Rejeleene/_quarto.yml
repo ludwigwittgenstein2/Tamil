@@ -6,7 +6,7 @@ project:
 
 website:
   title: "Notebook of Rick Rejeleene"
-  description: "AI, economics, history, and machine-learning insights by Rick Rejeleene."
+  description: "Science · Engineering · Economic History · Society by Rick Rejeleene."
   navbar:
     search: true
     background: "#626262"
