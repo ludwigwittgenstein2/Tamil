@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rick Rejeleene">
+<meta name="dcterms.date" content="2026-11-18">
+<meta name="description" content="The Question Nobody Asked: Casio and the Gap Between Using and Building Electronics">
+
+<title>Casio Calculator: How it works? – Notebook of Rick Rejeleene</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5d4d40b207192aa1b68a9430a7284735.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Notebook of Rick Rejeleene</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="http://rickrejeleene.me/"> <i class="bi bi-house-door-fill" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://facebook.com/whitekangaroo"> <i class="bi bi-facebook" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/rick1776/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- subscribe.html — simplified, no-JS Mailchimp form -->
+<div id="mc_embed_signup">
+  <form action="https://gmail.us12.list-manage.com/subscribe/post?u=1f588641ad0b06cbeecabd12b&amp;id=ca6e7ad445&amp;f_id=0028c0e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+    <h2>Subscribe</h2>
+    <div class="mc-field-group">
+      <label for="mce-EMAIL">Email Address</label>
+      <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+    </div>
+
+    <!-- honeypot — DO NOT remove, Mailchimp needs it for bot protection -->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_1f588641ad0b06cbeecabd12b_ca6e7ad445" tabindex="-1" value="">
+    </div>
+
+    <div>
+      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+    </div>
+  </form>
+</div>
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#the-question-nobody-asked-how-does-a-casio-calculator-work" id="toc-the-question-nobody-asked-how-does-a-casio-calculator-work" class="nav-link active" data-scroll-target="#the-question-nobody-asked-how-does-a-casio-calculator-work">The Question nobody asked: How does a Casio Calculator work?</a>
+  <ul class="collapse">
+  <li><a href="#a-casio-first-encounter" id="toc-a-casio-first-encounter" class="nav-link" data-scroll-target="#a-casio-first-encounter">A) Casio &amp; first encounter:</a></li>
+  <li><a href="#b-the-companys-product-story" id="toc-b-the-companys-product-story" class="nav-link" data-scroll-target="#b-the-companys-product-story">B) The Company’s Product Story:</a></li>
+  <li><a href="#c-sales-figures" id="toc-c-sales-figures" class="nav-link" data-scroll-target="#c-sales-figures">C) SALES FIGURES:</a></li>
+  </ul></li>
+  <li><a href="#casio-calculator" id="toc-casio-calculator" class="nav-link" data-scroll-target="#casio-calculator">Casio Calculator</a>
+  <ul class="collapse">
+  <li><a href="#what-is-inside-the-casio-fx-115es-plus-b" id="toc-what-is-inside-the-casio-fx-115es-plus-b" class="nav-link" data-scroll-target="#what-is-inside-the-casio-fx-115es-plus-b">1. What Is Inside the Casio fx-115ES PLUS B?</a></li>
+  <li><a href="#how-does-the-calculator-perform-mathematics" id="toc-how-does-the-calculator-perform-mathematics" class="nav-link" data-scroll-target="#how-does-the-calculator-perform-mathematics">2. How Does the Calculator Perform Mathematics?</a></li>
+  <li><a href="#experimental-investigation" id="toc-experimental-investigation" class="nav-link" data-scroll-target="#experimental-investigation">3. Experimental Investigation</a></li>
+  <li><a href="#can-we-build-our-own-scientific-calculator" id="toc-can-we-build-our-own-scientific-calculator" class="nav-link" data-scroll-target="#can-we-build-our-own-scientific-calculator">4. Can We Build Our Own Scientific Calculator?</a></li>
+  <li><a href="#what-should-engineering-education-teach-us" id="toc-what-should-engineering-education-teach-us" class="nav-link" data-scroll-target="#what-should-engineering-education-teach-us">5. What Should Engineering Education Teach Us?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Casio Calculator: How it works?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Engineering</div>
+    <div class="quarto-category">Electrical Engineering</div>
+    <div class="quarto-category">Electronics</div>
+    <div class="quarto-category">Computer Science</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    The Question Nobody Asked: Casio and the Gap Between Using and Building Electronics
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rick Rejeleene </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 18, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-question-nobody-asked-how-does-a-casio-calculator-work" class="level1">
+<h1>The Question nobody asked: How does a Casio Calculator work?</h1>
+<section id="a-casio-first-encounter" class="level2">
+<h2 class="anchored" data-anchor-id="a-casio-first-encounter">A) Casio &amp; first encounter:</h2>
+<p>In this post, We pick a Casio fx-115ES PLUS B.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/casio/casio1.png" class="img-fluid figure-img" style="width:50.0%" alt="Casio Calculator"></p>
+<figcaption>Casio Calculator</figcaption>
+</figure>
+</div>
+<p>Since middle school, I have fond memories of using Casio Calculator and The Casio Watch.</p>
+<p>Both impressed me and other middle schoolers in my school located in Tirunelveli.</p>
+<p>In the Casio watch model which I owned, you could look at different time-zones. I would frequently share the time in different countries with my friends. It was a fun way to learn about different countries and their time zones. Morever, In some casio watches, you had a calculator within the Watch.</p>
+<p>One of my favorite physical activity in Middle school was swimming. I had a small bicycle, and I would ride all the way to Anna Stadium, Tirunelveli. I was about 13 years old. At school, I enjoyed swimming by middle school. My swimming classes were held usually on afternoon by 4 p.m. In late middle school, my classmates and I would all find Swimming class as our favorite class.</p>
+<p>My classmates at that age were Muthu Saranji, Praveen, Charanjith Raja, Shah Rukh and girls like Indira, her sister Abirami, Subitha, Aarthy. It was one of the happiest times of my life, and as well for my classmates. We would all jump inside the swimming pool, and after swimming, we would all go to the nearby shop to eat some Samosa and drink some cold drinks.Even in the midst of such happiness, fun and joy, the Casio Watch would remain firmly on our wrists and not break, stop working.</p>
+<p>At times, the many of my classmates watches got water internally and stopped working. There were many instances, A watchmaker would open it up and repair it. Throughout late middle school and high school, Some of my friends in class loved the calculator so much; That they would create their own games and play by guessing numbers.</p>
+<p>However, it never occurred to me or rest of my classmates, what might it take to build the same one? We were all happy to use it, and we never thought about how it was built. Everyone loved both the Casio Watches &amp; the Calculator.</p>
+<p>The Tamil middle–high-school curriculum focused on creating repeating skills like a parrot, rather than technical product building skills? Twelve years of school in Tirunelveli, being forced to memorize pointless esoteric facts, and regurgitate into final exams. The top regurgitators get to make it in the Education-System, and are called Doctors in Tamil Nadu.</p>
+<p>I discussed this problem earlier in my <a href="https://rickrejeleene.me/Tamil/posts/2026-10-18-LedClock/#education-of-tamils">Digital LED Clock article — Education of Tamils</a></p>
+<p>And not one throughout my middle school and high school classes, asked two important questions, which is highly relevant to modern world:</p>
+<ol type="a">
+<li>How is this calculator built?</li>
+<li>How does the theory gets deployed into a Consumer Application?</li>
+</ol>
+</section>
+<section id="b-the-companys-product-story" class="level2">
+<h2 class="anchored" data-anchor-id="b-the-companys-product-story">B) The Company’s Product Story:</h2>
+<p>Well, It never occurred to me or my friends to ask what it would take to build one living in Tirunelveli.</p>
+<p>However, It occurred to Tadao Kashio, one of the founders of Casio. Casio was established as Kashio Seisakujo in April 1946 by Tadao Kashio (1917–1993), an engineer specializing in fabrication technology.</p>
+<p>His first major product was the yubiwa pipe, a finger ring holding a cigarette so the wearer’s hands stayed free, a hit in impoverished postwar Japan.</p>
+<p>In a country rebuilding from rubble, practical ingenuity had a market. Slowly profits were ploughed back into the company, In 1974, Casio released the CASIOTRON, the first wristwatch in the world with an automatic calendar function marking their entry into watches. The F-91W followed in 1989 and became the most sold wristwatch in the world, with annual production of 3 million units.</p>
+</section>
+<section id="c-sales-figures" class="level2">
+<h2 class="anchored" data-anchor-id="c-sales-figures">C) SALES FIGURES:</h2>
+<p>And what happens, When we see engineering mastered into a beautiful consumer application? Dollars, Numbers.</p>
+<p>The Casio F-91W has sold over 100 million units lifetime since 1989, with ~3 million produced annually. The G-Shock line that is popular in North America has sold over 100 million units by 2017. Casio reported a lifetime total of 1.8 billion calculator units sold across all models over 60 years, as of January 2025. Aggregating from available public data from 2009-2023, the annual revenues roughly come around $50 billion USD. Somewhere in Tamil Nadu, one of those 1.8 billion calculators sat on a desk. Nobody with intention asked how it was made.</p>
+</section>
+</section>
+<section id="casio-calculator" class="level1">
+<h1>Casio Calculator</h1>
+<p>Every modern electrical device has a printed circuit board (PCB), which mechanically supports and electrically connects electronic components using etched copper pathways. The PCB does electrical routing, gives mechanical support and allows for scalable assembly.</p>
+<section id="what-is-inside-the-casio-fx-115es-plus-b" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-inside-the-casio-fx-115es-plus-b">1. What Is Inside the Casio fx-115ES PLUS B?</h2>
+<section id="the-electronic-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="the-electronic-architecture">1.1 The Electronic Architecture</h3>
+</section>
+<section id="the-microcontroller" class="level3">
+<h3 class="anchored" data-anchor-id="the-microcontroller">1.2 The Microcontroller</h3>
+</section>
+<section id="the-liquid-crystal-display" class="level3">
+<h3 class="anchored" data-anchor-id="the-liquid-crystal-display">1.3 The Liquid Crystal Display</h3>
+</section>
+<section id="the-keypad-and-input-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="the-keypad-and-input-circuit">1.4 The Keypad and Input Circuit</h3>
+</section>
+<section id="memory-and-power-management" class="level3">
+<h3 class="anchored" data-anchor-id="memory-and-power-management">1.5 Memory and Power Management</h3>
+</section>
+</section>
+<section id="how-does-the-calculator-perform-mathematics" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-the-calculator-perform-mathematics">2. How Does the Calculator Perform Mathematics?</h2>
+<section id="number-representation-and-precision" class="level3">
+<h3 class="anchored" data-anchor-id="number-representation-and-precision">2.1 Number Representation and Precision</h3>
+</section>
+<section id="arithmetic-operations" class="level3">
+<h3 class="anchored" data-anchor-id="arithmetic-operations">2.2 Arithmetic Operations</h3>
+</section>
+<section id="trigonometric-and-logarithmic-functions" class="level3">
+<h3 class="anchored" data-anchor-id="trigonometric-and-logarithmic-functions">2.3 Trigonometric and Logarithmic Functions</h3>
+</section>
+<section id="numerical-differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-differentiation">2.4 Numerical Differentiation</h3>
+</section>
+<section id="numerical-integration" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-integration">2.5 Numerical Integration</h3>
+</section>
+<section id="equation-solving" class="level3">
+<h3 class="anchored" data-anchor-id="equation-solving">2.6 Equation Solving</h3>
+</section>
+</section>
+<section id="experimental-investigation" class="level2">
+<h2 class="anchored" data-anchor-id="experimental-investigation">3. Experimental Investigation</h2>
+<section id="measuring-computational-response-times" class="level3">
+<h3 class="anchored" data-anchor-id="measuring-computational-response-times">3.1 Measuring Computational Response Times</h3>
+</section>
+<section id="testing-numerical-precision" class="level3">
+<h3 class="anchored" data-anchor-id="testing-numerical-precision">3.2 Testing Numerical Precision</h3>
+</section>
+<section id="investigating-numerical-integration-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="investigating-numerical-integration-algorithms">3.3 Investigating Numerical Integration Algorithms</h3>
+</section>
+<section id="investigating-differentiation-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="investigating-differentiation-algorithms">3.4 Investigating Differentiation Algorithms</h3>
+</section>
+<section id="identifying-computational-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="identifying-computational-limitations">3.5 Identifying Computational Limitations</h3>
+</section>
+</section>
+<section id="can-we-build-our-own-scientific-calculator" class="level2">
+<h2 class="anchored" data-anchor-id="can-we-build-our-own-scientific-calculator">4. Can We Build Our Own Scientific Calculator?</h2>
+<section id="required-electronic-components" class="level3">
+<h3 class="anchored" data-anchor-id="required-electronic-components">4.1 Required Electronic Components</h3>
+</section>
+<section id="implementing-mathematical-functions" class="level3">
+<h3 class="anchored" data-anchor-id="implementing-mathematical-functions">4.2 Implementing Mathematical Functions</h3>
+</section>
+<section id="building-a-working-prototype" class="level3">
+<h3 class="anchored" data-anchor-id="building-a-working-prototype">4.3 Building a Working Prototype</h3>
+</section>
+<section id="manufacturing-costs-and-commercialization" class="level3">
+<h3 class="anchored" data-anchor-id="manufacturing-costs-and-commercialization">4.4 Manufacturing Costs and Commercialization</h3>
+</section>
+</section>
+<section id="what-should-engineering-education-teach-us" class="level2">
+<h2 class="anchored" data-anchor-id="what-should-engineering-education-teach-us">5. What Should Engineering Education Teach Us?</h2>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
