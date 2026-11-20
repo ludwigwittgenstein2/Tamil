@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Rick Rejeleene">
-<meta name="dcterms.date" content="2026-11-18">
-<meta name="description" content="The Question Nobody Asked: Casio and the Gap Between Using and Building Electronics">
+<meta name="dcterms.date" content="2026-11-20">
+<meta name="description" content="School Memories: Casio and the Gap Between Using and Building Electronics">
 
 <title>Casio Calculator: How it works? – Notebook of Rick Rejeleene</title>
 <style>
@@ -23,7 +23,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -71,6 +126,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -143,20 +227,51 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#the-question-nobody-asked-how-does-a-casio-calculator-work" id="toc-the-question-nobody-asked-how-does-a-casio-calculator-work" class="nav-link active" data-scroll-target="#the-question-nobody-asked-how-does-a-casio-calculator-work">The Question nobody asked: How does a Casio Calculator work?</a>
+  <li><a href="#school-memories-of-casio" id="toc-school-memories-of-casio" class="nav-link active" data-scroll-target="#school-memories-of-casio">1 School Memories of Casio</a></li>
+  <li><a href="#casios-product-story" id="toc-casios-product-story" class="nav-link" data-scroll-target="#casios-product-story">2 Casio’s Product Story</a></li>
+  <li><a href="#sales-figures-engineering-into-commercial-success" id="toc-sales-figures-engineering-into-commercial-success" class="nav-link" data-scroll-target="#sales-figures-engineering-into-commercial-success">3 Sales Figures: Engineering into Commercial Success</a></li>
+  <li><a href="#inside-the-casio-calculator" id="toc-inside-the-casio-calculator" class="nav-link" data-scroll-target="#inside-the-casio-calculator">4 Inside the Casio Calculator</a>
   <ul class="collapse">
-  <li><a href="#a-casio-first-encounter" id="toc-a-casio-first-encounter" class="nav-link" data-scroll-target="#a-casio-first-encounter">A) Casio &amp; first encounter:</a></li>
-  <li><a href="#b-the-companys-product-story" id="toc-b-the-companys-product-story" class="nav-link" data-scroll-target="#b-the-companys-product-story">B) The Company’s Product Story:</a></li>
-  <li><a href="#c-sales-figures" id="toc-c-sales-figures" class="nav-link" data-scroll-target="#c-sales-figures">C) SALES FIGURES:</a></li>
+  <li><a href="#the-electronic-architecture" id="toc-the-electronic-architecture" class="nav-link" data-scroll-target="#the-electronic-architecture">4.1 The Electronic Architecture</a></li>
+  <li><a href="#the-microcontroller" id="toc-the-microcontroller" class="nav-link" data-scroll-target="#the-microcontroller">4.2 The Microcontroller</a></li>
+  <li><a href="#the-liquid-crystal-display" id="toc-the-liquid-crystal-display" class="nav-link" data-scroll-target="#the-liquid-crystal-display">4.3 The Liquid Crystal Display</a></li>
+  <li><a href="#the-keypad-and-input-circuit" id="toc-the-keypad-and-input-circuit" class="nav-link" data-scroll-target="#the-keypad-and-input-circuit">4.4 The Keypad and Input Circuit</a></li>
+  <li><a href="#memory-and-power-management" id="toc-memory-and-power-management" class="nav-link" data-scroll-target="#memory-and-power-management">4.5 Memory and Power Management</a></li>
   </ul></li>
-  <li><a href="#casio-calculator" id="toc-casio-calculator" class="nav-link" data-scroll-target="#casio-calculator">Casio Calculator</a>
+  <li><a href="#how-does-the-calculator-perform-mathematics" id="toc-how-does-the-calculator-perform-mathematics" class="nav-link" data-scroll-target="#how-does-the-calculator-perform-mathematics">5 How Does the Calculator Perform Mathematics?</a>
   <ul class="collapse">
-  <li><a href="#what-is-inside-the-casio-fx-115es-plus-b" id="toc-what-is-inside-the-casio-fx-115es-plus-b" class="nav-link" data-scroll-target="#what-is-inside-the-casio-fx-115es-plus-b">1. What Is Inside the Casio fx-115ES PLUS B?</a></li>
-  <li><a href="#how-does-the-calculator-perform-mathematics" id="toc-how-does-the-calculator-perform-mathematics" class="nav-link" data-scroll-target="#how-does-the-calculator-perform-mathematics">2. How Does the Calculator Perform Mathematics?</a></li>
-  <li><a href="#experimental-investigation" id="toc-experimental-investigation" class="nav-link" data-scroll-target="#experimental-investigation">3. Experimental Investigation</a></li>
-  <li><a href="#can-we-build-our-own-scientific-calculator" id="toc-can-we-build-our-own-scientific-calculator" class="nav-link" data-scroll-target="#can-we-build-our-own-scientific-calculator">4. Can We Build Our Own Scientific Calculator?</a></li>
-  <li><a href="#what-should-engineering-education-teach-us" id="toc-what-should-engineering-education-teach-us" class="nav-link" data-scroll-target="#what-should-engineering-education-teach-us">5. What Should Engineering Education Teach Us?</a></li>
+  <li><a href="#number-representation-and-precision" id="toc-number-representation-and-precision" class="nav-link" data-scroll-target="#number-representation-and-precision">5.1 Number Representation and Precision</a></li>
+  <li><a href="#arithmetic-operations" id="toc-arithmetic-operations" class="nav-link" data-scroll-target="#arithmetic-operations">5.2 Arithmetic Operations</a></li>
+  <li><a href="#trigonometric-and-logarithmic-functions" id="toc-trigonometric-and-logarithmic-functions" class="nav-link" data-scroll-target="#trigonometric-and-logarithmic-functions">5.3 Trigonometric and Logarithmic Functions</a></li>
+  <li><a href="#numerical-differentiation" id="toc-numerical-differentiation" class="nav-link" data-scroll-target="#numerical-differentiation">5.5 Numerical Differentiation</a></li>
+  <li><a href="#numerical-integration" id="toc-numerical-integration" class="nav-link" data-scroll-target="#numerical-integration">5.6 Numerical Integration</a></li>
+  <li><a href="#equation-solving" id="toc-equation-solving" class="nav-link" data-scroll-target="#equation-solving">5.7 Equation Solving</a></li>
+  <li><a href="#required-electronic-components" id="toc-required-electronic-components" class="nav-link" data-scroll-target="#required-electronic-components">5.8 Required Electronic Components</a></li>
+  <li><a href="#implementing-mathematical-functions" id="toc-implementing-mathematical-functions" class="nav-link" data-scroll-target="#implementing-mathematical-functions">5.9 Implementing Mathematical Functions</a></li>
+  <li><a href="#building-a-working-prototype" id="toc-building-a-working-prototype" class="nav-link" data-scroll-target="#building-a-working-prototype">5.10 Building a Working Prototype</a></li>
+  <li><a href="#manufacturing-costs-and-commercialization" id="toc-manufacturing-costs-and-commercialization" class="nav-link" data-scroll-target="#manufacturing-costs-and-commercialization">5.12 Manufacturing Costs and Commercialization</a></li>
   </ul></li>
+  <li><a href="#what-should-engineering-education-teach-us" id="toc-what-should-engineering-education-teach-us" class="nav-link" data-scroll-target="#what-should-engineering-education-teach-us">6 What Should Engineering Education Teach Us?</a>
+  <ul class="collapse">
+  <li><a href="#from-learning-mathematics-to-implementing-mathematics" id="toc-from-learning-mathematics-to-implementing-mathematics" class="nav-link" data-scroll-target="#from-learning-mathematics-to-implementing-mathematics">6.1 From Learning Mathematics to Implementing Mathematics</a></li>
+  <li><a href="#from-understanding-electronics-to-building-electronics" id="toc-from-understanding-electronics-to-building-electronics" class="nav-link" data-scroll-target="#from-understanding-electronics-to-building-electronics">6.2 From Understanding Electronics to Building Electronics</a></li>
+  <li><a href="#from-examinations-to-engineering-projects" id="toc-from-examinations-to-engineering-projects" class="nav-link" data-scroll-target="#from-examinations-to-engineering-projects">6.3 From Examinations to Engineering Projects</a></li>
+  <li><a href="#engineering-also-requires-understanding-manufacturing-and-markets" id="toc-engineering-also-requires-understanding-manufacturing-and-markets" class="nav-link" data-scroll-target="#engineering-also-requires-understanding-manufacturing-and-markets">6.4 Engineering Also Requires Understanding Manufacturing and Markets</a></li>
+  <li><a href="#engineering-education-in-tamil-nadu" id="toc-engineering-education-in-tamil-nadu" class="nav-link" data-scroll-target="#engineering-education-in-tamil-nadu">6.5 Engineering Education in Tamil Nadu</a></li>
+  </ul></li>
+  <li><a href="#experiments" id="toc-experiments" class="nav-link" data-scroll-target="#experiments">7 Experiments</a>
+  <ul class="collapse">
+  <li><a href="#numerical-differentiation-1" id="toc-numerical-differentiation-1" class="nav-link" data-scroll-target="#numerical-differentiation-1">7.1 Numerical Differentiation</a></li>
+  </ul></li>
+  <li><a href="#final-reflection" id="toc-final-reflection" class="nav-link" data-scroll-target="#final-reflection">8 Final Reflection</a></li>
+  <li><a href="#related-posts" id="toc-related-posts" class="nav-link" data-scroll-target="#related-posts">Related Posts</a>
+  <ul class="collapse">
+  <li><a href="#electronics-embedded-systems-and-practical-engineering" id="toc-electronics-embedded-systems-and-practical-engineering" class="nav-link" data-scroll-target="#electronics-embedded-systems-and-practical-engineering">Electronics, Embedded Systems, and Practical Engineering</a></li>
+  <li><a href="#understanding-and-reverse-engineering-consumer-products" id="toc-understanding-and-reverse-engineering-consumer-products" class="nav-link" data-scroll-target="#understanding-and-reverse-engineering-consumer-products">Understanding and Reverse-Engineering Consumer Products</a></li>
+  <li><a href="#engineering-design-transportation-and-product-development" id="toc-engineering-design-transportation-and-product-development" class="nav-link" data-scroll-target="#engineering-design-transportation-and-product-development">Engineering Design, Transportation, and Product Development</a></li>
+  <li><a href="#manufacturing-industrialization-and-technological-capability" id="toc-manufacturing-industrialization-and-technological-capability" class="nav-link" data-scroll-target="#manufacturing-industrialization-and-technological-capability">Manufacturing, Industrialization, and Technological Capability</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -176,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    The Question Nobody Asked: Casio and the Gap Between Using and Building Electronics
+    School Memories: Casio and the Gap Between Using and Building Electronics
   </div>
 </div>
 
@@ -193,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 18, 2026</p>
+      <p class="date">November 20, 2026</p>
     </div>
   </div>
   
@@ -205,23 +320,369 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="the-question-nobody-asked-how-does-a-casio-calculator-work" class="level1">
-<h1>The Question nobody asked: How does a Casio Calculator work?</h1>
-<section id="a-casio-first-encounter" class="level2">
-<h2 class="anchored" data-anchor-id="a-casio-first-encounter">A) Casio &amp; first encounter:</h2>
-<p>In this post, We pick a Casio fx-115ES PLUS B.</p>
+<style>
+/* Share section — Notebook of Rick Rejeleene */
+
+.rr-share {
+  --rr-bg: #f0efe7;
+  --rr-text: #363c42;
+  --rr-muted: #666b70;
+  --rr-accent: #a46c61;
+  --rr-border: #d3d0c7;
+
+  max-width: 100%;
+  margin: 1.8rem 0;
+  padding: 22px 24px;
+  background: var(--rr-bg);
+  border: 1px solid var(--rr-border);
+  border-radius: 14px;
+  font-family: system-ui, sans-serif;
+}
+
+.rr-share h3 {
+  font-size: 1.12rem;
+  font-weight: 750;
+  color: var(--rr-text);
+  margin: 0 0 6px;
+}
+
+.rr-share p {
+  font-size: .86rem;
+  color: var(--rr-muted);
+  margin: 0 0 16px;
+}
+
+.rr-share-buttons {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.rr-share-buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #e9e7df;
+  border: 1px solid #d3d0c7;
+  border-radius: 9px;
+  padding: 10px 15px;
+  color: #363c42;
+  font-size: .84rem;
+  font-weight: 650;
+  line-height: 1.3;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background .2s, color .2s;
+}
+
+.rr-share-buttons button:hover {
+  background: #a46c61;
+  border-color: #a46c61;
+  color: white;
+}
+
+.rr-share-buttons button:focus-visible {
+  outline: 2px solid #a46c61;
+  outline-offset: 3px;
+}
+
+.rr-share-status {
+  margin: 12px 0 0 !important;
+  font-size: .78rem !important;
+  overflow-wrap: anywhere;
+}
+
+/* Dark mode */
+
+[data-bs-theme="dark"] .rr-share {
+  --rr-bg: #292c30;
+  --rr-text: #f3f4f6;
+  --rr-muted: #b9bec5;
+  --rr-border: #484b50;
+}
+
+[data-bs-theme="dark"] .rr-share-buttons button {
+  background: #373b40;
+  color: #f3f4f6;
+  border-color: #555b61;
+}
+
+[data-bs-theme="dark"] .rr-share-buttons button:hover {
+  background: #a46c61;
+  border-color: #a46c61;
+}
+
+@media (max-width: 600px) {
+  .rr-share {
+    padding: 17px;
+  }
+
+  .rr-share-buttons {
+    gap: 8px;
+  }
+
+  .rr-share-buttons button {
+    padding: 9px 12px;
+    font-size: .8rem;
+  }
+}
+</style>
+
+<section class="rr-share" aria-label="Share this article">
+
+  <h3 class="anchored">Share this article</h3>
+
+  <p>
+    Interested in how scientific calculators work?
+    Share this article with students, engineers,
+    educators, and anyone curious about technology.
+  </p>
+
+  <div class="rr-share-buttons">
+
+    <button type="button" data-rr-platform="whatsapp">
+      WhatsApp
+    </button>
+
+    <button type="button" data-rr-platform="facebook">
+      Facebook
+    </button>
+
+    <button type="button" data-rr-platform="linkedin">
+      LinkedIn
+    </button>
+
+    <button type="button" data-rr-platform="x">
+      X
+    </button>
+
+    <button type="button" data-rr-platform="reddit">
+      Reddit
+    </button>
+
+    <button type="button" data-rr-platform="telegram">
+      Telegram
+    </button>
+
+    <button type="button" data-rr-platform="email">
+      Email
+    </button>
+
+    <button type="button" data-rr-platform="copy">
+      Copy Link
+    </button>
+
+  </div>
+
+  <p id="rr-share-status" class="rr-share-status" role="status" aria-live="polite">
+  </p>
+
+</section>
+
+<script>
+(function () {
+  "use strict";
+
+  /* 
+   * Notebook of Rick Rejeleene
+   * Casio Calculator: How It Works?
+   */
+
+  const ARTICLE_TITLE =
+    "Casio Calculator: How It Works?";
+
+  const ARTICLE_URL =
+    "https://rickrejeleene.me/Tamil/posts/2026-11-05-CasioCalculator/index.html";
+
+  const section = document.querySelector(".rr-share");
+
+  if (!section) return;
+
+  const status = section.querySelector("#rr-share-status");
+
+  function setStatus(message) {
+    if (status) {
+      status.textContent = message;
+    }
+  }
+
+  /*
+   * Copy only the article URL.
+   * Never copy HTML, CSS, or page contents.
+   */
+
+  function fallbackCopy(text) {
+    const textarea = document.createElement("textarea");
+
+    textarea.value = text;
+    textarea.readOnly = true;
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    textarea.style.top = "0";
+
+    document.body.appendChild(textarea);
+
+    textarea.focus();
+    textarea.select();
+    textarea.setSelectionRange(0, text.length);
+
+    let successful = false;
+
+    try {
+      successful = document.execCommand("copy");
+    } catch (error) {
+      successful = false;
+    }
+
+    textarea.remove();
+
+    return successful;
+  }
+
+  async function copyArticleLink() {
+    let successful = false;
+
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(ARTICLE_URL);
+        successful = true;
+      } catch (error) {
+        successful = fallbackCopy(ARTICLE_URL);
+      }
+    } else {
+      successful = fallbackCopy(ARTICLE_URL);
+    }
+
+    if (successful) {
+      setStatus("✓ Article link copied successfully!");
+    } else {
+      setStatus(
+        "Unable to copy automatically. Link: " + ARTICLE_URL
+      );
+    }
+  }
+
+  /*
+   * Sharing destinations
+   */
+
+  const encodedURL = encodeURIComponent(ARTICLE_URL);
+  const encodedTitle = encodeURIComponent(ARTICLE_TITLE);
+  const encodedMessage = encodeURIComponent(
+    ARTICLE_TITLE + "\n" + ARTICLE_URL
+  );
+
+  const shareUrls = {
+    whatsapp:
+      "https://api.whatsapp.com/send?text=" +
+      encodedMessage,
+
+    facebook:
+      "https://www.facebook.com/sharer/sharer.php?u=" +
+      encodedURL,
+
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=" +
+      encodedURL,
+
+    x:
+      "https://twitter.com/intent/tweet?text=" +
+      encodedTitle + "&url=" + encodedURL,
+
+    reddit:
+      "https://www.reddit.com/submit?url=" +
+      encodedURL + "&title=" + encodedTitle,
+
+    telegram:
+      "https://t.me/share/url?url=" +
+      encodedURL + "&text=" + encodedTitle,
+
+    email:
+      "mailto:?subject=" +
+      encodedTitle + "&body=" + encodedMessage
+  };
+
+  /*
+   * Handle button clicks
+   */
+
+  section.querySelectorAll("[data-rr-platform]")
+    .forEach(function (button) {
+
+      button.addEventListener("click", function () {
+
+        const platform = button.dataset.rrPlatform;
+
+        if (platform === "copy") {
+          copyArticleLink();
+          return;
+        }
+
+        if (platform === "email") {
+          window.location.href = shareUrls.email;
+          return;
+        }
+
+        const destination = shareUrls[platform];
+
+        if (!destination) {
+          setStatus("Unsupported sharing platform.");
+          return;
+        }
+
+        window.open(
+          destination,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+      });
+
+    });
+
+})();
+</script>
+<section id="school-memories-of-casio" class="level1">
+<h1>1 School Memories of Casio</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../images/casio/casio1.png" class="img-fluid figure-img" style="width:50.0%" alt="Casio Calculator"></p>
 <figcaption>Casio Calculator</figcaption>
 </figure>
 </div>
-<p>Since middle school, I have fond memories of using Casio Calculator and The Casio Watch.</p>
-<p>Both impressed me and other middle schoolers in my school located in Tirunelveli.</p>
+<p>In this post, We pick a Casio fx-115ES PLUS B, as a case study. It’s because its a compact, affordable scientific calculator that performs surprisingly sophisticated mathematical operations using limited computing resources. Since my middle school days, I have fond memories of using Casio Calculators and Casio Watches. Both impressed deeply positive memoires in me and other middle schoolers at my school in Tirunelveli.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/casio/casiowatch.jpeg" class="img-fluid figure-img" style="width:50.0%" alt="Casio Watch"></p>
+<figcaption>Casio Watch with World Time Zone</figcaption>
+</figure>
+</div>
 <p>In the Casio watch model which I owned, you could look at different time-zones. I would frequently share the time in different countries with my friends. It was a fun way to learn about different countries and their time zones. Morever, In some casio watches, you had a calculator within the Watch.</p>
 <p>One of my favorite physical activity in Middle school was swimming. I had a small bicycle, and I would ride all the way to Anna Stadium, Tirunelveli. I was about 13 years old. At school, I enjoyed swimming by middle school. My swimming classes were held usually on afternoon by 4 p.m. In late middle school, my classmates and I would all find Swimming class as our favorite class.</p>
-<p>My classmates at that age were Muthu Saranji, Praveen, Charanjith Raja, Shah Rukh and girls like Indira, her sister Abirami, Subitha, Aarthy. It was one of the happiest times of my life, and as well for my classmates. We would all jump inside the swimming pool, and after swimming, we would all go to the nearby shop to eat some Samosa and drink some cold drinks.Even in the midst of such happiness, fun and joy, the Casio Watch would remain firmly on our wrists and not break, stop working.</p>
-<p>At times, the many of my classmates watches got water internally and stopped working. There were many instances, A watchmaker would open it up and repair it. Throughout late middle school and high school, Some of my friends in class loved the calculator so much; That they would create their own games and play by guessing numbers.</p>
+<div id="fig-anna-stadium" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Swimming pool at Anna Stadium in Tirunelveli">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anna-stadium-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/annastadium.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="Swimming pool at Anna Stadium in Tirunelveli">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anna-stadium-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Anna Stadium Swimming Pool in Palayamkottai, Tirunelveli, where I attended swimming classes during my middle-school years. Photo source: Lentlo.
+</figcaption>
+</figure>
+</div>
+<p>My classmates at that age were Muthu Saranji, Praveen, Charanjith Raja, Shah Rukh and Girls like Indira, her sister Abirami, Subitha, Aarthy. It was one of the happiest times of my life, and as well for my classmates. We all would jump inside the swimming pool, and after swimming, we would all go to the nearby shop to eat some Samosa and drink some cold drinks.</p>
+<div id="fig-childhood-swimming" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-childhood-swimming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/happymemories.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-childhood-swimming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Children enjoying swimming, illustrating my middle-school memories in Tirunelveli. Photograph: Thiyagu Ganesh, Wikimedia Commons, CC BY-SA 4.0.
+</figcaption>
+</figure>
+</div>
+<p>Even in the midst of such happiness, fun and joy, the Casio Watch would remain firmly on our wrists and not break, stop working. At times, the many of my classmates watches got water internally and stopped working. There were many instances, A watchmaker would open it up and repair it. Throughout late middle school and high school, Some of my friends in class loved the calculator so much; That they would create their own games and play by guessing numbers.</p>
 <p>However, it never occurred to me or rest of my classmates, what might it take to build the same one? We were all happy to use it, and we never thought about how it was built. Everyone loved both the Casio Watches &amp; the Calculator.</p>
 <p>The Tamil middle–high-school curriculum focused on creating repeating skills like a parrot, rather than technical product building skills? Twelve years of school in Tirunelveli, being forced to memorize pointless esoteric facts, and regurgitate into final exams. The top regurgitators get to make it in the Education-System, and are called Doctors in Tamil Nadu.</p>
 <p>I discussed this problem earlier in my <a href="https://rickrejeleene.me/Tamil/posts/2026-10-18-LedClock/#education-of-tamils">Digital LED Clock article — Education of Tamils</a></p>
@@ -230,100 +691,1582 @@ ul.task-list li input[type="checkbox"] {
 <li>How is this calculator built?</li>
 <li>How does the theory gets deployed into a Consumer Application?</li>
 </ol>
+<p>Rote-Learning Examination in India. It is a test of rote memorization. This education system, which I and millions of other students in India have gone through has wasted our time and energy, and has not taught us how to build things. It has not taught us how to think critically, how to solve problems, how to innovate, how to create. It has not taught us how to be engineers, scientists, or entrepreneurs. It has not taught us how to be human.</p>
+<p>An Exam hall from Indian School. <img src="../../images/casio/examoriented.jpeg" id="fig-examination" class="img-fluid quarto-figure quarto-figure-center anchored" style="width:75.0%" alt="Examination-based rote learning in India"></p>
+<p>A Middle School in America learning how to solder, a practical skill. <img src="../../images/casio/middleschool.jpeg" id="fig-school-electronics" class="img-fluid quarto-figure quarto-figure-center anchored" style="width:85.0%" alt="Middle-school students in the United States learning to solder electronic components through hands-on practical education"></p>
 </section>
-<section id="b-the-companys-product-story" class="level2">
-<h2 class="anchored" data-anchor-id="b-the-companys-product-story">B) The Company’s Product Story:</h2>
+<section id="casios-product-story" class="level1">
+<h1>2 Casio’s Product Story</h1>
 <p>Well, It never occurred to me or my friends to ask what it would take to build one living in Tirunelveli.</p>
-<p>However, It occurred to Tadao Kashio, one of the founders of Casio. Casio was established as Kashio Seisakujo in April 1946 by Tadao Kashio (1917–1993), an engineer specializing in fabrication technology.</p>
-<p>His first major product was the yubiwa pipe, a finger ring holding a cigarette so the wearer’s hands stayed free, a hit in impoverished postwar Japan.</p>
-<p>In a country rebuilding from rubble, practical ingenuity had a market. Slowly profits were ploughed back into the company, In 1974, Casio released the CASIOTRON, the first wristwatch in the world with an automatic calendar function marking their entry into watches. The F-91W followed in 1989 and became the most sold wristwatch in the world, with annual production of 3 million units.</p>
+<p>However, It occurred to Tadao Kashio, one of the founders of Casio. Casio was established as Kashio Seisakujo in April 1946 by Tadao Kashio (1917–1993), an engineer specializing in fabrication technology. His first major product was the yubiwa pipe, a finger ring holding a cigarette so the wearer’s hands stayed free, a hit in impoverished postwar Japan.</p>
+<p>In a country rebuilding from the devastation of World War II, practical ingenuity found a market. The success of the Yubiwa Pipe helped finance the Kashio brothers’ ambitions, eventually leading to the development of the Casio 14A, an innovative relay-based electric calculator introduced in 1957. Over the following decades, Casio continued advancing electronic miniaturization, making calculators smaller, more affordable, and accessible to ordinary consumers.</p>
+<p>Having mastered the engineering required to fit complex calculations into increasingly compact electronic devices, Casio recognized another opportunity: bringing the same expertise in miniaturized electronics to something people carried every day, the wristwatch. In 1974, Casio introduced the CASIOTRON, the world’s first digital wristwatch with an automatic calendar function, marking its entry into the watch industry. The iconic F-91W<span class="citation" data-cites="gearpatrol_f91w_2024">(<a href="#ref-gearpatrol_f91w_2024" role="doc-biblioref">Gear Patrol 2024</a>)</span> followed in 1989, becoming one of the world’s most popular and enduring digital wristwatches, with widely cited estimates of approximately three million units produced annually<span class="citation" data-cites="casio_integrated_report_2025">(<a href="#ref-casio_integrated_report_2025" role="doc-biblioref">Casio Computer Co., Ltd. 2025b</a>)</span>.</p>
 </section>
-<section id="c-sales-figures" class="level2">
-<h2 class="anchored" data-anchor-id="c-sales-figures">C) SALES FIGURES:</h2>
-<p>And what happens, When we see engineering mastered into a beautiful consumer application? Dollars, Numbers.</p>
-<p>The Casio F-91W has sold over 100 million units lifetime since 1989, with ~3 million produced annually. The G-Shock line that is popular in North America has sold over 100 million units by 2017. Casio reported a lifetime total of 1.8 billion calculator units sold across all models over 60 years, as of January 2025. Aggregating from available public data from 2009-2023, the annual revenues roughly come around $50 billion USD. Somewhere in Tamil Nadu, one of those 1.8 billion calculators sat on a desk. Nobody with intention asked how it was made.</p>
+<section id="sales-figures-engineering-into-commercial-success" class="level1">
+<h1>3 Sales Figures: Engineering into Commercial Success</h1>
+<p>And what happens, When we see engineering ingenuity mastered into a beautiful, affordable consumer products?</p>
+<p>Dollars. Numbers. Billions of units sold<span class="citation" data-cites="casio_revenue_history">(<a href="#ref-casio_revenue_history" role="doc-biblioref">CompaniesMarketCap n.d.</a>)</span>.</p>
+<p>The iconic Casio F-91W, introduced in 1989, is estimated to have sold over 100 million units, with approximately 3 million watches produced annually, although Casio has not publicly confirmed these figures<span class="citation" data-cites="casio_calculator_sales_2025">(<a href="#ref-casio_calculator_sales_2025" role="doc-biblioref">Casio Computer Co., Ltd. 2025a</a>)</span>.</p>
+<p>The G-SHOCK line<span class="citation" data-cites="casio_gshock_2017">(<a href="#ref-casio_gshock_2017" role="doc-biblioref">Casio Computer Co., Ltd. n.d.</a>)</span> achieved a verified milestone of 100 million units shipped worldwide by August 2017<span class="citation" data-cites="casio_gshock_2023">(<a href="#ref-casio_gshock_2023" role="doc-biblioref">Casio Computer Co., Ltd. 2023</a>)</span>, subsequently exceeding 140 million units by 2023<span class="citation" data-cites="esquire_f91w_2025">(<a href="#ref-esquire_f91w_2025" role="doc-biblioref">Esquire 2025</a>)</span>. Casio’s calculator business achieved an even more remarkable scale. As of January 2025, the company reported 1.8 billion calculators sold worldwide across its product lines over approximately 60 years. Aggregating from available public data from 2009-2023, the annual revenues roughly come around, approximately close to $50 billion USD.</p>
+<p>Somewhere in Tamil Nadu, one of those 1.8 billion Casio calculators sat on a school desk. We learned to use it, admired its capabilities, and relied on it for years. Yet, how many of us ever seriously wondered what it would take to build one ourselves?</p>
+</section>
+<section id="inside-the-casio-calculator" class="level1">
+<h1>4 Inside the Casio Calculator</h1>
+<p>I opened a Casio fx-115ES PLUS B (2nd edition), to examine its internal construction and understand how its electronic components support mathematical computation.</p>
+<p>Inside the calculator, we can identify three major components: a single AAA battery, a liquid crystal display (LCD) assembly, and a printed circuit board (PCB).</p>
+<p>The opened calculator reveals several additional features, including battery terminals, the LCD connection region, small electronic components, and a black epoxy-covered region near the center of the PCB. This black region likely protects the calculator’s main integrated circuit, which is responsible for processing user inputs and executing mathematical operations.</p>
+<div id="fig-casio-opened" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-opened-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/casio4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:45.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-opened-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Internal construction of the Casio fx-115ES PLUS B (2nd Edition), showing the AAA battery, LCD assembly, PCB, and epoxy-covered integrated circuit.
+</figcaption>
+</figure>
+</div>
+<p>As in earlier tutorials, We have seen PCB. The PCB is the green board that mechanically supports and electrically connects the components. Fine copper pathways, called traces, carry electrical signals between different parts of the circuit.</p>
+<div id="fig-casio-pcb" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-pcb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/pcbdiagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-pcb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Illustration of the printed circuit board (PCB) in a Casio scientific calculator, showing copper traces, keypad contacts, LCD connections, and the epoxy-covered integrated circuit. Conceptual illustration.
+</figcaption>
+</figure>
+</div>
+<p>At the center of the PCB is a circular black protective covering, consistent with a chip-on-board integrated circuit. Beneath this covering is the semiconductor circuitry responsible for executing the calculator’s firmware and mathematical operations.</p>
+<p>Along the upper edge of the PCB, numerous closely spaced conductive connections provide an electrical interface to the LCD. Across the rest of the board, contact locations connect the physical keypad to the calculator’s electronic circuitry. The device performs hundreds of mathematical functions, its visible internal construction is remarkably compact.</p>
+<section id="the-electronic-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="the-electronic-architecture">4.1 The Electronic Architecture</h2>
+<p>At the center of our Casio fx-115ES PLUS B’s PCB is a black epoxy-covered region, likely protecting a semiconductor chip mounted directly onto the board. This construction is known as Chip-on-Board (COB) packaging. Beneath the protective epoxy, the silicon chip contains microscopic transistors organized into circuits that process inputs, execute instructions, perform mathematical calculations, and control the display.</p>
+<p>Research on related Casio scientific calculators identifies the OKI/LAPIS ML610901 microcontroller, based on the 8-bit nX-U8/100 RISC (Reduced Instruction Set Computer) architecture. RISC architectures employ relatively simple machine instructions designed for efficient execution. The nX-U8/100 processor uses a three-stage instruction pipeline and incorporates an Arithmetic Logic Unit (ALU), registers, an instruction decoder, a Program Counter (PC), and a Stack Pointer (SP).</p>
+<p>The ML610901 integrates this processor with 96 KB of Read-Only Memory (ROM) for program storage, 3,584 bytes of Random Access Memory (RAM) for temporary calculations, keypad input/output circuitry, timers, clock-generation circuitry, and an LCD controller. These components communicate through internal buses, enabling the microcontroller to function as a compact, low-power computing system.</p>
+<p>The following diagram illustrates the documented ML610901 architecture, providing a reference for understanding the computing circuitry that may exist beneath the black epoxy covering in our calculator. However, the exact microcontroller used in the Casio fx-115ES PLUS B (2nd edition) has not been independently verified.</p>
+<div id="fig-casio-architecture" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-architecture-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/CasioArchitecture.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-architecture-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Reference architecture of the OKI/LAPIS ML610901 microcontroller, illustrating the CPU, ALU, registers, ROM, RAM, keypad interface, LCD controller, and power-management circuitry. The exact processor in the Casio fx-115ES PLUS B remains unverified.
+</figcaption>
+</figure>
+</div>
+<p>The basic architecture is, Battery gives Power distribution, that is then, transferred to Main IC, which controls or receives input from Keypad and results are displayed in LCD. More precisely, the battery powers the circuit, the keypad sends input signals to the IC, and the IC processes these inputs and controls the LCD.</p>
+</section>
+<section id="the-microcontroller" class="level2">
+<h2 class="anchored" data-anchor-id="the-microcontroller">4.2 The Microcontroller</h2>
+<p>The microcontroller executes a program stored in ROM, commonly called firmware. In related Casio scientific calculators using the nX-U8/100 architecture, this firmware can be implemented using C and assembly language, which are translated into machine instructions understood by the processor.</p>
+<p>For example, the assembly instructions MOV R0, #25, MOV R1, #12, and ADD R0, R1 load two values into CPU registers and instruct the Arithmetic Logic Unit (ALU) to add them, producing 37. Each instruction is represented by a binary encoding that the CPU retrieves from memory, decodes, and executes.</p>
+<p>The calculator’s firmware combines such elementary instructions into more complex algorithms for arithmetic, trigonometry, logarithms, and numerical calculations. The exact firmware of our fx-115ES PLUS B has not been recovered or examined here, so this example illustrates the documented processor architecture rather than its verified internal program.</p>
+</section>
+<section id="the-liquid-crystal-display" class="level2">
+<h2 class="anchored" data-anchor-id="the-liquid-crystal-display">4.3 The Liquid Crystal Display</h2>
+<p>The Liquid Crystal Display (LCD) presents numbers, mathematical expressions, and calculation results.</p>
+<div id="fig-casio-lcd" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-lcd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/lcdtogether.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-lcd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: LCD Display of the Calculator
+</figcaption>
+</figure>
+</div>
+<p>Unlike Light Emitting Diodes (LEDs), which generate light, the calculator’s reflective LCD uses ambient light to make information visible. The display consists of liquid crystal material positioned between transparent electrodes and polarizing layers. Applying an electric field changes the optical behavior of the liquid crystals, allowing selected pixels to appear dark or light.</p>
+<p>The microcontroller’s LCD controller generates electrical signals that activate the required pixels. These signals travel through conductive traces on the PCB and through the closely spaced connections between the circuit board and LCD assembly. The LCD is driven using alternating voltage waveforms, which help prevent damage to the liquid crystal material.</p>
+<p>For example, when the processor calculates (25 + 12 = 37), the display controller activates the pixels forming the characters 3 and 7. Thus, the LCD converts electrical control signals into visible mathematical information</p>
+</section>
+<section id="the-keypad-and-input-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="the-keypad-and-input-circuit">4.4 The Keypad and Input Circuit</h2>
+<p>The calculator’s buttons operate electrical contacts on the PCB. Pressing a button allows a conductive rubber pad to bridge corresponding contacts, creating an electrical connection.</p>
+<div id="fig-casio-keypad" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-keypad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/keypad1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-keypad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Keypad of the Casio fx-115ES PLUS B (2nd edition), showing the numerical, mathematical, and function keys.
+</figcaption>
+</figure>
+</div>
+<p>Calculator keypads commonly use a matrix architecture, organizing buttons into rows and columns to minimize the number of electrical connections.</p>
+<div id="fig-casio-keypad-matrix" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-keypad-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/keypad2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-keypad-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Illustration of a 3 × 3 keypad matrix, showing how each button connects a row to a column when pressed.
+</figcaption>
+</figure>
+</div>
+<p>The processing circuitry scans these connections to determine which key was pressed. For example, in the illustrated matrix, pressing <code>2</code> connects row R3 to column C2. The microcontroller identifies the pressed key by detecting this electrical connection.</p>
+<p>For example, pressing <code>2 + 3 =</code> produces a sequence of electrical inputs. The firmware interprets the expression, calculates the result, and instructs the LCD to display <code>5</code>.</p>
+</section>
+<section id="memory-and-power-management" class="level2">
+<h2 class="anchored" data-anchor-id="memory-and-power-management">4.5 Memory and Power Management</h2>
+<p>The Casio fx-115ES PLUS B requires memory to store numerical inputs, mathematical expressions, intermediate calculations, variables, and results. Its memory system can be understood in terms of <strong>program memory</strong>, which holds the calculator’s firmware, and <strong>working memory</strong>, which stores information needed during calculations.</p>
+<p>The firmware contains instructions for interpreting keyboard inputs, evaluating mathematical expressions, performing arithmetic operations, and executing numerical algorithms. Working memory holds temporary values and computational state while these instructions are executed. Although these functions require internal storage, Casio does not publicly specify the exact ROM and RAM capacities or memory technologies used in this model.</p>
+<p>Casio documents several user-accessible memory functions:</p>
+<ul>
+<li><strong>Answer Memory (Ans):</strong> Stores the most recent calculation result.</li>
+<li><strong>Previous Answer Memory (PreAns):</strong> Stores the result preceding the most recent calculation. It is available in COMP mode.</li>
+<li><strong>Variable Memory:</strong> Provides nine predefined variables: A, B, C, D, E, F, M, X, and Y.</li>
+<li><strong>Independent Memory (M):</strong> Allows calculation results to be added to or subtracted from a stored value.</li>
+</ul>
+<p>These are logical memory functions exposed to the user, rather than evidence of separate physical memory chips.</p>
+<p>According to Casio’s documentation, Ans, independent memory, and variable values are retained when the calculator is turned off normally. PreAns is also retained when turning off the calculator without leaving COMP mode. However, removing or replacing the battery clears the calculator’s stored memory contents.</p>
+<p>The Casio fx-115ES PLUS B is powered by a single <strong>1.5 V AAA battery (R03/UM-4)</strong>. The battery supplies electrical energy through terminals labeled BT+ and BT− on the printed circuit board.</p>
+<p>According to Casio’s specifications, the calculator’s rated power consumption is approximately <strong>0.0002 W (0.2 mW)</strong>, with an estimated battery life of <strong>two years</strong>, assuming one hour of operation per day.</p>
+<p>Electrical power is expressed as:</p>
+<p><span class="math display">\[
+P = VI
+\]</span></p>
+<p>where <span class="math inline">\(P\)</span> is power in watts, <span class="math inline">\(V\)</span> is voltage in volts, and <span class="math inline">\(I\)</span> is current in amperes.</p>
+<p>Using the rated power consumption and nominal battery voltage, we can estimate the corresponding current:</p>
+<p><span class="math display">\[
+I = \frac{P}{V}
+  = \frac{0.0002}{1.5}
+  \approx 0.000133\ \text{A}
+\]</span></p>
+<p>This corresponds to approximately <strong>133 µA</strong> under the assumed operating conditions. It is a calculated estimate, not a direct measurement of the calculator’s current consumption.</p>
+<p>The calculator also provides an automatic power-off function to limit unnecessary battery consumption.</p>
+<p>Low-power integrated-circuit design and power management allow the calculator to operate for extended periods using a single battery. However, the specific internal clock-management and power-saving mechanisms implemented in its semiconductor chip have not been independently verified.</p>
+<p>Together, these components form a compact embedded computing system. The PCB provides electrical connections, the integrated circuit executes calculations and controls peripherals, memory maintains program and calculation state, the keypad provides user input, and the LCD displays mathematical expressions and results.</p>
 </section>
 </section>
-<section id="casio-calculator" class="level1">
-<h1>Casio Calculator</h1>
-<p>Every modern electrical device has a printed circuit board (PCB), which mechanically supports and electrically connects electronic components using etched copper pathways. The PCB does electrical routing, gives mechanical support and allows for scalable assembly.</p>
-<section id="what-is-inside-the-casio-fx-115es-plus-b" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-inside-the-casio-fx-115es-plus-b">1. What Is Inside the Casio fx-115ES PLUS B?</h2>
-<section id="the-electronic-architecture" class="level3">
-<h3 class="anchored" data-anchor-id="the-electronic-architecture">1.1 The Electronic Architecture</h3>
+<section id="how-does-the-calculator-perform-mathematics" class="level1">
+<h1>5 How Does the Calculator Perform Mathematics?</h1>
+<p>It’s important to realize, the Calculator does not understand Mathematics. It does not understand concepts such as logarithms, trigonometry, derivatives, or integrals. What the calculator does is that it executes machine translated code instructions that implement numerical algorithms stored in firmware.</p>
+<section id="number-representation-and-precision" class="level2">
+<h2 class="anchored" data-anchor-id="number-representation-and-precision">5.1 Number Representation and Precision</h2>
+<p>The Casio fx-115ES PLUS B performs numerical calculations using up to 15 significant decimal digits internally. The displayed results generally has only approximately 10-digit precision.</p>
+<p>For example, consider:</p>
+<p><span class="math display">\[
+\frac{10}{3}=3.33333333333333\ldots
+\]</span></p>
+<p>According to Casio’s documentation, the calculator retains the approximate value</p>
+<p><span class="math display">\[
+3.33333333333333
+\]</span></p>
+<p>internally, even when the display is configured to show only three decimal places:</p>
+<p><span class="math display">\[
+3.333
+\]</span></p>
+<p>This distinction between internal precision and displayed precision allows the calculator to retain additional digits during successive calculations, reducing the accumulation of rounding errors.</p>
+<p>The calculator supports numerical values ranging approximately from</p>
+<p><span class="math display">\[
+\pm 1\times10^{-99}
+\quad\text{to}\quad
+\pm 9.999999999\times10^{99}
+\]</span></p>
+<p>as well as zero.</p>
+<p>Casio calculators identifies an 8-bit RISC processor, this does not restrict calculations to 8-bit numerical values. The firmware can store and manipulate larger numbers across multiple bytes of memory. Casio’s documentation establishes the numerical precision and calculation range, but does not disclose the exact internal encoding used to store these numbers.</p>
 </section>
-<section id="the-microcontroller" class="level3">
-<h3 class="anchored" data-anchor-id="the-microcontroller">1.2 The Microcontroller</h3>
+<section id="arithmetic-operations" class="level2">
+<h2 class="anchored" data-anchor-id="arithmetic-operations">5.2 Arithmetic Operations</h2>
+<p>The Casio fx-115ES PLUS B performs arithmetic using numerical routines executed by its processor. Research on related Casio fx-ES PLUS firmware indicates that numerical values can be represented using Binary-Coded Decimal (BCD), where each decimal digit is encoded using four bits.</p>
+<p>Consider:</p>
+<p><span class="math display">\[
+25 + 12 \times 3 = 61
+\]</span></p>
+<p>A plausible execution sequence is:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Operation</th>
+<th>What happens internally</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Read input</td>
+<td>Store <code>25</code>, <code>12</code>, <code>3</code>, and their operators</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Parse expression</td>
+<td>Identify multiplication as having higher precedence</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Load operands</td>
+<td>Retrieve the internal representations of 12 and 3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Multiply</td>
+<td>Apply digit-wise multiplication, accumulate partial products, and handle carries</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Intermediate result</td>
+<td>Store 36 in a register or working memory</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Add</td>
+<td>Align the numerical representations, add 25 and 36, and propagate carries</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Format</td>
+<td>Convert the numerical result into display characters</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Output</td>
+<td>LCD displays <code>61</code></td>
+</tr>
+</tbody>
+</table>
+<p>For example, in BCD, the number 25 is represented as:</p>
+<p><span class="math display">\[
+25_{\mathrm{BCD}} = 0010\ 0101
+\]</span></p>
+<p>Unlike ordinary binary representation, each four-bit group represents one decimal digit.</p>
+<p>The actual processor may execute several machine instructions for each arithmetic operation, particularly when the operands exceed the capacity of an individual 8-bit register.</p>
+<p>This digit-wise BCD implementation is a plausible reconstruction based on related Casio firmware, rather than a verified instruction trace from our B-model calculator.</p>
 </section>
-<section id="the-liquid-crystal-display" class="level3">
-<h3 class="anchored" data-anchor-id="the-liquid-crystal-display">1.3 The Liquid Crystal Display</h3>
+<section id="trigonometric-and-logarithmic-functions" class="level2">
+<h2 class="anchored" data-anchor-id="trigonometric-and-logarithmic-functions">5.3 Trigonometric and Logarithmic Functions</h2>
+<p>Trigonometric and logarithmic functions require more elaborate numerical algorithms. The calculator approximates these functions using combinations of arithmetic operations.</p>
+<section id="trigonometric-functions" class="level3">
+<h3 class="anchored" data-anchor-id="trigonometric-functions">Trigonometric Functions</h3>
+<p>Consider:</p>
+<p><span class="math display">\[
+\sin(30^\circ) = 0.5
+\]</span></p>
+<p>One possible implementation is to convert the input into radians, reduce the angle to a convenient interval, and evaluate a polynomial approximation.</p>
+<p>For example, the Taylor series for sine is:</p>
+<p><span class="math display">\[
+\sin(x) =
+x-\frac{x^3}{3!}+\frac{x^5}{5!}
+-\frac{x^7}{7!}+\cdots
+\]</span></p>
+<p>A possible computational sequence is:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Operation</th>
+<th>What happens internally</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Input</td>
+<td>Read <code>sin(30)</code></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Check angle mode</td>
+<td>Determine that the angle is in degrees</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Convert</td>
+<td>Calculate <span class="math inline">\(x=30\pi/180=\pi/6\)</span></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Reduce angle</td>
+<td>Transform the argument into a convenient interval, if necessary</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Approximate</td>
+<td>Evaluate a polynomial or another numerical approximation</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Round</td>
+<td>Format the result according to calculator precision</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Display</td>
+<td>Show <code>0.5</code></td>
+</tr>
+</tbody>
+</table>
+<p>Evaluating the first four nonzero Taylor terms at <span class="math inline">\(x=\pi/6\)</span> gives approximately <span class="math inline">\(0.4999999919\)</span>. Additional terms improve the approximation.</p>
+<p>The Taylor series illustrates how the computation could be performed. It does not establish that Casio uses this particular approximation.</p>
 </section>
-<section id="the-keypad-and-input-circuit" class="level3">
-<h3 class="anchored" data-anchor-id="the-keypad-and-input-circuit">1.4 The Keypad and Input Circuit</h3>
+<section id="logarithmic-functions" class="level3">
+<h3 class="anchored" data-anchor-id="logarithmic-functions">Logarithmic Functions</h3>
+<p>Consider:</p>
+<p><span class="math display">\[
+\log_{10}(200)=2.30102999566\ldots
+\]</span></p>
+<p>A possible implementation separates the power of ten and approximates the remaining logarithm.</p>
+<p><span class="math display">\[
+200=2\times10^2
+\]</span></p>
+<p>Therefore:</p>
+<p><span class="math display">\[
+\log_{10}(200)
+=2+\frac{\ln(2)}{\ln(10)}
+\]</span></p>
+<p>A convergent series for the natural logarithm is:</p>
+<p><span class="math display">\[
+\ln(x)=2\sum_{n=0}^{\infty}
+\frac{z^{2n+1}}{2n+1},
+\qquad
+z=\frac{x-1}{x+1}
+\]</span></p>
+<p>For <span class="math inline">\(x=2\)</span>, we obtain <span class="math inline">\(z=1/3\)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Operation</th>
+<th>What happens internally</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Input</td>
+<td>Read <code>log(200)</code></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Normalize</td>
+<td>Express 200 as <span class="math inline">\(2\times10^2\)</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Approximate</td>
+<td>Compute <span class="math inline">\(\ln(2)\)</span> using a numerical approximation</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Scale</td>
+<td>Divide by the constant <span class="math inline">\(\ln(10)\)</span></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Adjust exponent</td>
+<td>Add 2</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Output</td>
+<td>Display approximately <code>2.301029996</code></td>
+</tr>
+</tbody>
+</table>
+<p>This is one mathematically valid implementation. Casio may instead use a different polynomial, lookup-table technique, or digit-oriented algorithm. The exact implementation has not been established.</p>
 </section>
-<section id="memory-and-power-management" class="level3">
-<h3 class="anchored" data-anchor-id="memory-and-power-management">1.5 Memory and Power Management</h3>
+</section>
+<section id="numerical-differentiation" class="level2">
+<h2 class="anchored" data-anchor-id="numerical-differentiation">5.5 Numerical Differentiation</h2>
+<p>Casio documents the central difference method for numerical differentiation.</p>
+<p><span class="math display">\[
+f'(x)\approx\frac{f(x+h)-f(x-h)}{2h}
+\]</span></p>
+<p>Consider differentiating <span class="math inline">\(f(x)=x^2\)</span> at <span class="math inline">\(x=3\)</span>. We choose <span class="math inline">\(h=0.01\)</span> for illustration.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Operation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Read expression</td>
+<td><span class="math inline">\(f(x)=x^2\)</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Read point</td>
+<td><span class="math inline">\(x=3\)</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Choose step</td>
+<td><span class="math inline">\(h=0.01\)</span>, illustrative</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Evaluate first point</td>
+<td><span class="math inline">\(f(3.01)=9.0601\)</span></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Evaluate second point</td>
+<td><span class="math inline">\(f(2.99)=8.9401\)</span></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Subtract</td>
+<td><span class="math inline">\(9.0601-8.9401=0.12\)</span></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Divide</td>
+<td><span class="math inline">\(0.12/0.02=6\)</span></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Display</td>
+<td><code>6</code></td>
+</tr>
+</tbody>
+</table>
+<p>The firmware can evaluate the mathematical expression at two nearby values without symbolically differentiating it.</p>
+<p>The precise step-selection procedure in our calculator has not been verified.</p>
+</section>
+<section id="numerical-integration" class="level2">
+<h2 class="anchored" data-anchor-id="numerical-integration">5.6 Numerical Integration</h2>
+<p>Casio documents the Gauss–Kronrod method for numerical integration.</p>
+<p>Consider:</p>
+<p><span class="math display">\[
+\int_0^1 x^2\,dx=\frac{1}{3}
+\]</span></p>
+<p>The method approximates an integral using carefully selected points and numerical weights:</p>
+<p><span class="math display">\[
+I\approx\sum_{i=1}^{n}w_i f(x_i)
+\]</span></p>
+<p>An embedded Gauss–Kronrod pair produces two estimates that can be compared to assess numerical error.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Operation</th>
+<th>What happens internally</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Read function</td>
+<td><span class="math inline">\(f(x)=x^2\)</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Read limits</td>
+<td><span class="math inline">\(a=0,\ b=1\)</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Select nodes</td>
+<td>Obtain quadrature points and weights</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Evaluate</td>
+<td>Compute <span class="math inline">\(f(x_i)\)</span> at selected points</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Weighted sum</td>
+<td>Multiply function values by their weights and accumulate</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Error estimate</td>
+<td>Compare Gauss and Kronrod approximations</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Refine</td>
+<td>If needed, subdivide the interval and repeat</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Output</td>
+<td>Approximately <code>0.3333333333</code></td>
+</tr>
+</tbody>
+</table>
+<p>For this simple polynomial, an appropriate Gauss–Kronrod rule can integrate the function exactly in ideal arithmetic. Actual calculator results remain subject to finite precision and formatting.</p>
+<p>The adaptive refinement step is a plausible implementation, but Casio does not disclose the precise quadrature pair or subdivision procedure used in this model.</p>
+</section>
+<section id="equation-solving" class="level2">
+<h2 class="anchored" data-anchor-id="equation-solving">5.7 Equation Solving</h2>
+<p>Casio documents Newton’s method for its SOLVE function.</p>
+<p><span class="math display">\[
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}
+\]</span></p>
+<p>Consider solving:</p>
+<p><span class="math display">\[
+x^2-2=0
+\]</span></p>
+<p>Starting with <span class="math inline">\(x_0=1.5\)</span>, the mathematical iteration becomes:</p>
+<p><span class="math display">\[
+x_{n+1}=\frac12\left(x_n+\frac{2}{x_n}\right)
+\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Iteration</th>
+<th style="text-align: right;">Current estimate</th>
+<th style="text-align: right;">Next estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td style="text-align: right;">1.500000000</td>
+<td style="text-align: right;">1.416666667</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td style="text-align: right;">1.416666667</td>
+<td style="text-align: right;">1.414215686</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td style="text-align: right;">1.414215686</td>
+<td style="text-align: right;">1.414213562</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td style="text-align: right;">1.414213562</td>
+<td style="text-align: right;">1.414213562</td>
+</tr>
+</tbody>
+</table>
+<p>A plausible firmware implementation repeatedly evaluates the equation, estimates or calculates the derivative, computes the Newton correction, updates the current estimate, and checks whether the solution has converged.</p>
+<p>The table demonstrates Newton’s method using the analytically known derivative <span class="math inline">\(f'(x)=2x\)</span>. It does not establish that Casio symbolically differentiates the expression or follows these exact intermediate values.</p>
+<p>The calculator may use numerical derivative estimates and additional convergence safeguards, but those implementation details remain unverified.</p>
+</section>
+<section id="required-electronic-components" class="level2">
+<h2 class="anchored" data-anchor-id="required-electronic-components">5.8 Required Electronic Components</h2>
+<p>A scientific calculator can be constructed using commercially available electronic components. There is no need to manufacture the microprocessor, display, or individual electronic components. Instead, the primary engineering challenge is to integrate these components into a functional device and develop firmware capable of performing mathematical operations.</p>
+<p>For an initial prototype, we can use the <strong>Raspberry Pi Pico 2</strong>, a low-cost microcontroller development board. It provides processing capabilities, memory, and general-purpose input/output (GPIO) connections for interfacing with a display and keyboard.</p>
+<section id="bill-of-materials" class="level3">
+<h3 class="anchored" data-anchor-id="bill-of-materials">5.8.1 Bill of Materials</h3>
+<p>The following table presents an illustrative bill of materials (BOM) for a basic calculator prototype.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 21%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th style="text-align: right;">Quantity</th>
+<th>Function</th>
+<th style="text-align: right;">Estimated Cost (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raspberry Pi Pico 2</td>
+<td style="text-align: right;">1</td>
+<td>Executes the calculator firmware</td>
+<td style="text-align: right;">$5–$8</td>
+</tr>
+<tr class="even">
+<td>4 × 4 matrix keypad</td>
+<td style="text-align: right;">1</td>
+<td>Provides 16 physical input keys</td>
+<td style="text-align: right;">$3–$10</td>
+</tr>
+<tr class="odd">
+<td>128 × 64 OLED display</td>
+<td style="text-align: right;">1</td>
+<td>Displays mathematical expressions and results</td>
+<td style="text-align: right;">$5–$20</td>
+</tr>
+<tr class="even">
+<td>Breadboard</td>
+<td style="text-align: right;">1</td>
+<td>Supports temporary electrical connections</td>
+<td style="text-align: right;">$5–$10</td>
+</tr>
+<tr class="odd">
+<td>Jumper wires</td>
+<td style="text-align: right;">1 set</td>
+<td>Connects electronic components</td>
+<td style="text-align: right;">$3–$8</td>
+</tr>
+<tr class="even">
+<td>USB cable</td>
+<td style="text-align: right;">1</td>
+<td>Supplies power and supports programming</td>
+<td style="text-align: right;">$3–$7</td>
+</tr>
+<tr class="odd">
+<td>Resistors and capacitors</td>
+<td style="text-align: right;">1 assortment</td>
+<td>Supports circuit development</td>
+<td style="text-align: right;">$3–$10</td>
+</tr>
+<tr class="even">
+<td>Battery holder and power circuitry</td>
+<td style="text-align: right;">1 set</td>
+<td>Enables portable operation in a later revision</td>
+<td style="text-align: right;">$5–$15</td>
+</tr>
+<tr class="odd">
+<td><strong>Estimated total</strong></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td style="text-align: right;"><strong>$32–$88</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: These are approximate retail estimates for planning purposes, not supplier quotations. The initial prototype can operate over USB without a separate battery supply. A practical beginner’s budget is approximately $40–$100, allowing for miscellaneous supplies.</em></p>
+<p>A 16-key matrix keypad is sufficient for a basic calculator. However, a scientific calculator requires additional functionality, including trigonometric functions, logarithms, powers, square roots, and numerical methods.</p>
+<p>These functions can be accessed using a shift key or by designing a larger keyboard.</p>
+</section>
+<section id="component-suppliers" class="level3">
+<h3 class="anchored" data-anchor-id="component-suppliers">5.8.2 Component Suppliers</h3>
+<p>Several established distributors provide electronic components suitable for prototyping:</p>
+<ul>
+<li><a href="https://www.raspberrypi.com/products/raspberry-pi-pico-2/">Raspberry Pi — Pico 2</a></li>
+<li><a href="https://www.digikey.com/">DigiKey Electronics</a></li>
+<li><a href="https://www.mouser.com/">Mouser Electronics</a></li>
+<li><a href="https://www.adafruit.com/">Adafruit Industries</a></li>
+</ul>
+<p>The availability of standardized electronic components significantly reduces the cost and technical complexity of hardware development.</p>
+<p>The primary tasks are component selection, circuit integration, firmware development, and testing.</p>
 </section>
 </section>
-<section id="how-does-the-calculator-perform-mathematics" class="level2">
-<h2 class="anchored" data-anchor-id="how-does-the-calculator-perform-mathematics">2. How Does the Calculator Perform Mathematics?</h2>
-<section id="number-representation-and-precision" class="level3">
-<h3 class="anchored" data-anchor-id="number-representation-and-precision">2.1 Number Representation and Precision</h3>
+<section id="implementing-mathematical-functions" class="level2">
+<h2 class="anchored" data-anchor-id="implementing-mathematical-functions">5.9 Implementing Mathematical Functions</h2>
+<p>The microcontroller executes instructions stored in its firmware. To function as a scientific calculator, the firmware must interpret keyboard inputs, evaluate mathematical expressions, and display results.</p>
+<p>A simplified calculator software architecture consists of five components:</p>
+<ol type="1">
+<li><strong>Input processing:</strong> Detecting keyboard inputs and identifying selected operations.</li>
+<li><strong>Expression parsing:</strong> Interpreting mathematical expressions, parentheses, operators, and functions.</li>
+<li><strong>Numerical computation:</strong> Executing arithmetic and mathematical algorithms.</li>
+<li><strong>Result formatting:</strong> Converting numerical outputs into readable decimal or scientific notation.</li>
+<li><strong>Display management:</strong> Presenting expressions, results, and error messages.</li>
+</ol>
+<p>For example, consider:</p>
+<p><span class="math display">\[
+\sin(30^\circ)+\sqrt{16}=4.5
+\]</span></p>
+<p>The firmware must identify the mathematical operations, convert the angle into radians when required, evaluate the functions, and format the numerical result.</p>
+<section id="implementing-mathematical-operations-in-c" class="level3">
+<h3 class="anchored" data-anchor-id="implementing-mathematical-operations-in-c">5.9.1 Implementing Mathematical Operations in C</h3>
+<p>The C standard library provides mathematical functions such as <code>sin()</code>, <code>cos()</code>, <code>log()</code>, <code>pow()</code>, and <code>sqrt()</code>.</p>
+<p>The following example demonstrates a basic mathematical computation:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;math.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#define PI </span><span class="fl">3.14159265358979323846</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> angle <span class="op">=</span> <span class="fl">30.0</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> radians <span class="op">=</span> angle <span class="op">*</span> PI <span class="op">/</span> <span class="fl">180.0</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> result <span class="op">=</span> sin<span class="op">(</span>radians<span class="op">)</span> <span class="op">+</span> sqrt<span class="op">(</span><span class="fl">16.0</span><span class="op">);</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">"Result: </span><span class="sc">%.10f\n</span><span class="st">"</span><span class="op">,</span> result<span class="op">);</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Expected output:</p>
+<pre class="text"><code>Result: 4.5000000000</code></pre>
+<p>This program demonstrates mathematical computation on a general-purpose computer. To execute the same calculation on a microcontroller, the software must be adapted to its development environment and connected to keypad and display drivers.</p>
+<p>A fully functioning scientific calculator must also evaluate nested expressions, such as:</p>
+<p><span class="math display">\[
+\frac{\sqrt{25}+\log_{10}(100)}{\sin(30^\circ)}
+\]</span></p>
+<p>An expression parser is required to preserve operator precedence, process parentheses, and evaluate mathematical functions in the correct sequence.</p>
 </section>
-<section id="arithmetic-operations" class="level3">
-<h3 class="anchored" data-anchor-id="arithmetic-operations">2.2 Arithmetic Operations</h3>
-</section>
-<section id="trigonometric-and-logarithmic-functions" class="level3">
-<h3 class="anchored" data-anchor-id="trigonometric-and-logarithmic-functions">2.3 Trigonometric and Logarithmic Functions</h3>
-</section>
-<section id="numerical-differentiation" class="level3">
-<h3 class="anchored" data-anchor-id="numerical-differentiation">2.4 Numerical Differentiation</h3>
-</section>
-<section id="numerical-integration" class="level3">
-<h3 class="anchored" data-anchor-id="numerical-integration">2.5 Numerical Integration</h3>
-</section>
-<section id="equation-solving" class="level3">
-<h3 class="anchored" data-anchor-id="equation-solving">2.6 Equation Solving</h3>
-</section>
-</section>
-<section id="experimental-investigation" class="level2">
-<h2 class="anchored" data-anchor-id="experimental-investigation">3. Experimental Investigation</h2>
-<section id="measuring-computational-response-times" class="level3">
-<h3 class="anchored" data-anchor-id="measuring-computational-response-times">3.1 Measuring Computational Response Times</h3>
-</section>
-<section id="testing-numerical-precision" class="level3">
-<h3 class="anchored" data-anchor-id="testing-numerical-precision">3.2 Testing Numerical Precision</h3>
-</section>
-<section id="investigating-numerical-integration-algorithms" class="level3">
-<h3 class="anchored" data-anchor-id="investigating-numerical-integration-algorithms">3.3 Investigating Numerical Integration Algorithms</h3>
-</section>
-<section id="investigating-differentiation-algorithms" class="level3">
-<h3 class="anchored" data-anchor-id="investigating-differentiation-algorithms">3.4 Investigating Differentiation Algorithms</h3>
-</section>
-<section id="identifying-computational-limitations" class="level3">
-<h3 class="anchored" data-anchor-id="identifying-computational-limitations">3.5 Identifying Computational Limitations</h3>
+<section id="numerical-accuracy-and-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-accuracy-and-limitations">5.9.2 Numerical Accuracy and Limitations</h3>
+<p>Implementing mathematical functions is only part of the problem. A scientific calculator must also produce sufficiently accurate and reproducible results.</p>
+<p>Important considerations include:</p>
+<ul>
+<li>Floating-point representation and rounding.</li>
+<li>Overflow and underflow.</li>
+<li>Division by zero and mathematical domain errors.</li>
+<li>Trigonometric function accuracy.</li>
+<li>Numerical differentiation and integration.</li>
+<li>Equation solving and root-finding algorithms.</li>
+</ul>
+<p>For example:</p>
+<p><span class="math display">\[
+0.1+0.2
+\]</span></p>
+<p>cannot generally be represented exactly using binary floating-point arithmetic.</p>
+<p>This occurs because many decimal fractions do not have finite binary representations.</p>
+<p>Commercial scientific calculators may employ different numerical representations, precision-management strategies, and mathematical algorithms.</p>
+<p>Therefore, using a standard mathematical library does not necessarily reproduce the behavior of a commercial Casio calculator.</p>
+<p>An interesting experiment would be to implement identical mathematical functions on a custom calculator and compare the numerical results against those produced by the Casio fx-115ES PLUS B.</p>
 </section>
 </section>
-<section id="can-we-build-our-own-scientific-calculator" class="level2">
-<h2 class="anchored" data-anchor-id="can-we-build-our-own-scientific-calculator">4. Can We Build Our Own Scientific Calculator?</h2>
-<section id="required-electronic-components" class="level3">
-<h3 class="anchored" data-anchor-id="required-electronic-components">4.1 Required Electronic Components</h3>
+<section id="building-a-working-prototype" class="level2">
+<h2 class="anchored" data-anchor-id="building-a-working-prototype">5.10 Building a Working Prototype</h2>
+<p>A working calculator prototype can be developed using inexpensive components and commonly available engineering tools.</p>
+<p>The initial objective should not be to reproduce every feature of a commercial scientific calculator. Instead, it should be to construct a functioning device that accepts mathematical inputs, evaluates expressions, and displays results.</p>
+<section id="existing-projects-and-tutorials" class="level3">
+<h3 class="anchored" data-anchor-id="existing-projects-and-tutorials">5.10.1 Existing Projects and Tutorials</h3>
+<p>Several publicly documented calculator projects provide useful starting points.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Project</th>
+<th>Main Learning Objective</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://docs.sunfounder.com/projects/summary-of-fun-projects/en/latest/arduino/calculator.html">SunFounder Arduino Calculator</a></td>
+<td>Keypad interfacing, display control, basic arithmetic</td>
+<td>Beginner</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.allaboutcircuits.com/projects/simple-arduino-based-calculator/">All About Circuits — Arduino Calculator</a></td>
+<td>Circuit assembly and calculator programming</td>
+<td>Beginner</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.instructables.com/PiCalc-Raspberry-Pi-Pico-Based-Pocked-Calculator/">PiCalc — Raspberry Pi Pico Calculator</a></td>
+<td>Handheld calculator construction using a Pico</td>
+<td>Intermediate</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/AaronC81/delta-pico">Delta Pico</a></td>
+<td>Scientific calculator firmware and design</td>
+<td>Intermediate–Advanced</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/apoluekt/OpenRPNCalc">OpenRPNCalc</a></td>
+<td>Open-source scientific calculator hardware and software</td>
+<td>Advanced</td>
+</tr>
+<tr class="even">
+<td><a href="https://docs.kicad.org/master/en/getting_started_in_kicad/getting_started_in_kicad.html">KiCad Documentation</a></td>
+<td>PCB schematic capture and layout</td>
+<td>Intermediate</td>
+</tr>
+</tbody>
+</table>
+<p>These projects demonstrate different levels of engineering complexity.</p>
+<p>The Arduino examples are suitable for understanding basic electronic interfaces and arithmetic functions, while more advanced open-source calculators are useful references for scientific functionality and custom hardware design. Project documentation, code, and licensing terms should be examined before adapting an existing design for commercial applications.</p>
 </section>
-<section id="implementing-mathematical-functions" class="level3">
-<h3 class="anchored" data-anchor-id="implementing-mathematical-functions">4.2 Implementing Mathematical Functions</h3>
+<section id="prototype-development-process" class="level3">
+<h3 class="anchored" data-anchor-id="prototype-development-process">5.10.2 Prototype Development Process</h3>
+<p>The development process can be divided into five stages.</p>
+<p><strong>Stage 1: Construct the circuit</strong></p>
+<p>Connect the microcontroller, keypad, and display using a breadboard. The keypad interfaces with GPIO pins, while the display may use a serial communication interface such as I²C.</p>
+<p>Initially, the circuit can be powered through USB. The first objective is to verify that the microcontroller correctly identifies key presses and displays the corresponding characters.</p>
+<p><strong>Stage 2: Develop calculator firmware</strong></p>
+<p>Implement basic arithmetic operations:</p>
+<p><span class="math display">\[
++, \quad -, \quad \times, \quad \div
+\]</span></p>
+<p>Then extend the firmware to support decimal numbers, negative values, parentheses, and operator precedence.</p>
+<p>For example:</p>
+<p><span class="math display">\[
+25+12\times3=61
+\]</span></p>
+<p>This stage also requires implementing input validation and error handling.</p>
+<p><strong>Stage 3: Implement scientific functions</strong></p>
+<p>Introduce trigonometric functions, logarithms, powers, roots, and other mathematical operations. Develop test cases to verify numerical accuracy and identify computational limitations.</p>
+<p><strong>Stage 4: Design and manufacture a custom PCB</strong></p>
+<p>Once the breadboard prototype functions reliably, the circuit can be transferred to a printed circuit board. Using KiCad, the engineer creates the schematic, selects component footprints, arranges components, and routes electrical connections.</p>
+<p>The resulting manufacturing files can be submitted to a PCB supplier.</p>
+<p>Examples include:</p>
+<ul>
+<li><a href="https://jlcpcb.com/">JLCPCB</a></li>
+<li><a href="https://www.pcbway.com/">PCBWay</a></li>
+</ul>
+<p>PCB fabrication produces the bare circuit board. PCB assembly involves installing and soldering the electronic components.</p>
+<p>Both services may be outsourced.</p>
+<p><strong>Stage 5: Design and assemble the enclosure</strong></p>
+<p>A mechanical enclosure can be designed using computer-aided design (CAD) software. For prototypes, 3D printing provides an accessible manufacturing method.</p>
+<p>The enclosure must accommodate the PCB, display, keyboard, and battery compartment while maintaining suitable mechanical tolerances.</p>
 </section>
-<section id="building-a-working-prototype" class="level3">
-<h3 class="anchored" data-anchor-id="building-a-working-prototype">4.3 Building a Working Prototype</h3>
+<section id="required-engineering-skills" class="level3">
+<h3 class="anchored" data-anchor-id="required-engineering-skills">5.10.4 Required Engineering Skills</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Engineering Area</th>
+<th>Required Skills</th>
+<th>Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Programming</td>
+<td>C/C++, debugging, data structures</td>
+<td>Essential</td>
+</tr>
+<tr class="even">
+<td>Electronics</td>
+<td>Voltage, current, GPIO, circuit fundamentals</td>
+<td>Essential</td>
+</tr>
+<tr class="odd">
+<td>Embedded systems</td>
+<td>Microcontroller programming, display and keypad interfaces</td>
+<td>Essential</td>
+</tr>
+<tr class="even">
+<td>Numerical computing</td>
+<td>Floating-point arithmetic and numerical algorithms</td>
+<td>Essential for scientific functionality</td>
+</tr>
+<tr class="odd">
+<td>PCB engineering</td>
+<td>Circuit schematics, PCB layout, fabrication files</td>
+<td>Required for custom PCB</td>
+</tr>
+<tr class="even">
+<td>Soldering</td>
+<td>Component installation and electrical connections</td>
+<td>Required for manual assembly</td>
+</tr>
+<tr class="odd">
+<td>Mechanical engineering</td>
+<td>CAD, dimensions, tolerances, enclosure design</td>
+<td>Required for finished product</td>
+</tr>
+<tr class="even">
+<td>Manufacturing</td>
+<td>Supplier selection, BOM management, quality control</td>
+<td>Required for commercial production</td>
+</tr>
+</tbody>
+</table>
+<p>An individual with programming experience can construct a basic calculator while learning electronics and embedded systems.</p>
+<p>A commercially reliable product, however, may require additional engineering expertise and manufacturing support.</p>
 </section>
-<section id="manufacturing-costs-and-commercialization" class="level3">
-<h3 class="anchored" data-anchor-id="manufacturing-costs-and-commercialization">4.4 Manufacturing Costs and Commercialization</h3>
+<section id="required-equipment" class="level3">
+<h3 class="anchored" data-anchor-id="required-equipment">5.11.1 Required Equipment</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 21%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Equipment</th>
+<th style="text-align: right;">Quantity</th>
+<th>Purpose</th>
+<th style="text-align: right;">Estimated Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Computer</td>
+<td style="text-align: right;">1</td>
+<td>Firmware, CAD, and PCB design</td>
+<td style="text-align: right;">Existing</td>
+</tr>
+<tr class="even">
+<td>Digital multimeter</td>
+<td style="text-align: right;">1</td>
+<td>Electrical measurements</td>
+<td style="text-align: right;">$15–$40</td>
+</tr>
+<tr class="odd">
+<td>Soldering iron and accessories</td>
+<td style="text-align: right;">1 set</td>
+<td>Component assembly</td>
+<td style="text-align: right;">$25–$80</td>
+</tr>
+<tr class="even">
+<td>Wire cutters and tweezers</td>
+<td style="text-align: right;">1 set</td>
+<td>General assembly</td>
+<td style="text-align: right;">$10–$30</td>
+</tr>
+<tr class="odd">
+<td>USB logic analyzer</td>
+<td style="text-align: right;">1</td>
+<td>Digital signal debugging</td>
+<td style="text-align: right;">$10–$30</td>
+</tr>
+<tr class="even">
+<td>Oscilloscope</td>
+<td style="text-align: right;">Optional</td>
+<td>Advanced electronic debugging</td>
+<td style="text-align: right;">Varies</td>
+</tr>
+<tr class="odd">
+<td>3D printer</td>
+<td style="text-align: right;">Optional</td>
+<td>Enclosure prototyping</td>
+<td style="text-align: right;">Varies</td>
+</tr>
+</tbody>
+</table>
+<p>For an initial breadboard prototype, a soldering iron and oscilloscope are not strictly necessary.</p>
+<p>A practical starting equipment budget is approximately <strong>$50–$150</strong>, excluding the computer and electronic components.</p>
+<p>Many public libraries, universities, and makerspaces also provide access to electronic tools and 3D printers.</p>
+</section>
+<section id="estimated-development-effort" class="level3">
+<h3 class="anchored" data-anchor-id="estimated-development-effort">5.11.2 Estimated Development Effort</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Development Activity</th>
+<th style="text-align: right;">Estimated Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Learn basic electronics and embedded programming</td>
+<td style="text-align: right;">10–25 hours</td>
+</tr>
+<tr class="even">
+<td>Connect keypad and display</td>
+<td style="text-align: right;">4–8 hours</td>
+</tr>
+<tr class="odd">
+<td>Implement expression parsing and arithmetic</td>
+<td style="text-align: right;">10–25 hours</td>
+</tr>
+<tr class="even">
+<td>Implement and test scientific functions</td>
+<td style="text-align: right;">15–40 hours</td>
+</tr>
+<tr class="odd">
+<td>Design the PCB</td>
+<td style="text-align: right;">10–25 hours</td>
+</tr>
+<tr class="even">
+<td>Design and assemble an enclosure</td>
+<td style="text-align: right;">8–20 hours</td>
+</tr>
+<tr class="odd">
+<td><strong>Total estimated effort</strong></td>
+<td style="text-align: right;"><strong>57–133 hours</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: These are illustrative estimates for a relatively simple project, not empirically measured development times. They exclude supplier lead times and depend strongly on the developer’s experience.</em></p>
+<p>A basic calculator can potentially be constructed over several weekends, while a polished scientific calculator with robust numerical algorithms and custom hardware requires substantially greater effort.</p>
 </section>
 </section>
-<section id="what-should-engineering-education-teach-us" class="level2">
-<h2 class="anchored" data-anchor-id="what-should-engineering-education-teach-us">5. What Should Engineering Education Teach Us?</h2>
+<section id="manufacturing-costs-and-commercialization" class="level2">
+<h2 class="anchored" data-anchor-id="manufacturing-costs-and-commercialization">5.12 Manufacturing Costs and Commercialization</h2>
+<p>Constructing a single working prototype is fundamentally different from manufacturing a commercial electronic product.</p>
+<p>Prototype development focuses on functionality and feasibility. Commercial manufacturing additionally requires reproducible assembly, component availability, quality assurance, regulatory compliance where applicable, and sustainable economics.</p>
+<section id="manufacturing-cost-structure" class="level3">
+<h3 class="anchored" data-anchor-id="manufacturing-cost-structure">5.12.1 Manufacturing Cost Structure</h3>
+<p>A simplified cost model is:</p>
+<p><span class="math display">\[
+C_{\text{unit}} =
+C_{\text{components}}
++
+C_{\text{PCB}}
++
+C_{\text{assembly}}
++
+C_{\text{enclosure}}
++
+C_{\text{testing}}
++
+C_{\text{packaging}}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(C_{\text{components}}\)</span>: Electronic component costs.</li>
+<li><span class="math inline">\(C_{\text{PCB}}\)</span>: PCB fabrication costs.</li>
+<li><span class="math inline">\(C_{\text{assembly}}\)</span>: Component soldering and installation.</li>
+<li><span class="math inline">\(C_{\text{enclosure}}\)</span>: Mechanical housing and keypad manufacturing.</li>
+<li><span class="math inline">\(C_{\text{testing}}\)</span>: Functional testing and quality assurance.</li>
+<li><span class="math inline">\(C_{\text{packaging}}\)</span>: Packaging materials and preparation.</li>
+</ul>
+<p>This model excludes fixed engineering and tooling expenses, shipping, certification, distribution, warranty, and other commercial costs.</p>
+</section>
+<section id="illustrative-production-costs" class="level3">
+<h3 class="anchored" data-anchor-id="illustrative-production-costs">5.12.2 Illustrative Production Costs</h3>
+<p>The following hypothetical scenario demonstrates how manufacturing cost may change with production volume.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Cost Category</th>
+<th style="text-align: right;">100 Units</th>
+<th style="text-align: right;">1,000 Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Electronic components</td>
+<td style="text-align: right;">$12.00</td>
+<td style="text-align: right;">$8.00</td>
+</tr>
+<tr class="even">
+<td>PCB fabrication</td>
+<td style="text-align: right;">$3.00</td>
+<td style="text-align: right;">$1.50</td>
+</tr>
+<tr class="odd">
+<td>PCB assembly</td>
+<td style="text-align: right;">$6.00</td>
+<td style="text-align: right;">$3.00</td>
+</tr>
+<tr class="even">
+<td>Enclosure and keypad</td>
+<td style="text-align: right;">$8.00</td>
+<td style="text-align: right;">$4.00</td>
+</tr>
+<tr class="odd">
+<td>Testing and final assembly</td>
+<td style="text-align: right;">$5.00</td>
+<td style="text-align: right;">$2.50</td>
+</tr>
+<tr class="even">
+<td>Packaging</td>
+<td style="text-align: right;">$2.00</td>
+<td style="text-align: right;">$1.00</td>
+</tr>
+<tr class="odd">
+<td><strong>Variable cost per unit</strong></td>
+<td style="text-align: right;"><strong>$36.00</strong></td>
+<td style="text-align: right;"><strong>$20.00</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Total variable production cost</strong></td>
+<td style="text-align: right;"><strong>$3,600</strong></td>
+<td style="text-align: right;"><strong>$20,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: These figures are hypothetical assumptions for illustrating manufacturing economics, not verified factory quotations. Actual costs require a completed engineering design and supplier quotations.</em></p>
+<p>The reduction in unit costs at larger volumes is partly explained by purchasing economies, more efficient assembly, and spreading certain setup expenses across additional units.</p>
+<p>However, fixed expenses must also be considered separately.</p>
+</section>
+<section id="enclosure-manufacturing-3d-printing-vs.-injection-molding" class="level3">
+<h3 class="anchored" data-anchor-id="enclosure-manufacturing-3d-printing-vs.-injection-molding">5.12.3 Enclosure Manufacturing: 3D Printing vs.&nbsp;Injection Molding</h3>
+<p>For low-volume prototypes, 3D printing is a convenient manufacturing method. For larger volumes, injection molding may reduce the unit cost but introduces an upfront tooling expense.</p>
+<p>The cost of 3D printing can be represented as:</p>
+<p><span class="math display">\[
+C_{\text{3D}} = N c_{\text{3D}}
+\]</span></p>
+<p>Injection molding can be modeled as:</p>
+<p><span class="math display">\[
+C_{\text{molding}} = F + N c_{\text{molding}}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(N\)</span>: Number of enclosures produced.</li>
+<li><span class="math inline">\(F\)</span>: Fixed tooling expense.</li>
+<li><span class="math inline">\(c_{\text{3D}}\)</span>: Cost per 3D-printed enclosure.</li>
+<li><span class="math inline">\(c_{\text{molding}}\)</span>: Variable cost per molded enclosure.</li>
+</ul>
+<p>Assume the following illustrative values:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th style="text-align: right;">Hypothetical Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3D printing per enclosure</td>
+<td style="text-align: right;">$12</td>
+</tr>
+<tr class="even">
+<td>Injection mold tooling</td>
+<td style="text-align: right;">$5,000</td>
+</tr>
+<tr class="odd">
+<td>Injection molding per enclosure</td>
+<td style="text-align: right;">$2</td>
+</tr>
+</tbody>
+</table>
+<p>The break-even production quantity is:</p>
+<p><span class="math display">\[
+N =
+\frac{F}{c_{\text{3D}}-c_{\text{molding}}}
+\]</span></p>
+<p><span class="math display">\[
+N =
+\frac{5000}{12-2}
+=
+500
+\]</span></p>
+<p>Under these assumptions, injection molding becomes less expensive than 3D printing above approximately 500 units.</p>
+<p>Actual break-even quantities depend on component geometry, materials, mold design, production yield, and supplier pricing.</p>
+</section>
+<section id="commercial-feasibility" class="level3">
+<h3 class="anchored" data-anchor-id="commercial-feasibility">5.12.4 Commercial Feasibility</h3>
+<p>Manufacturing a calculator is technically feasible, but building a profitable calculator business is a separate challenge.</p>
+<p>A product must provide sufficient value to customers while covering development, manufacturing, and distribution expenses.</p>
+<p>Consider a hypothetical calculator with:</p>
+<ul>
+<li>Selling price: $50.</li>
+<li>Variable cost per unit: $20.</li>
+<li>Fixed development and tooling expenses: $15,000.</li>
+</ul>
+<p>The contribution margin per unit is:</p>
+<p><span class="math display">\[
+M = P - C
+\]</span></p>
+<p><span class="math display">\[
+M = 50 - 20 = \$30
+\]</span></p>
+<p>The break-even production volume is:</p>
+<p><span class="math display">\[
+N_{\text{break-even}} =
+\frac{C_{\text{fixed}}}{M}
+\]</span></p>
+<p><span class="math display">\[
+N_{\text{break-even}} =
+\frac{15000}{30}
+=
+500 \text{ units}
+\]</span></p>
+<p>Under these simplified assumptions, selling 500 units would recover the fixed development and tooling expenses.</p>
+<p>However, this calculation excludes additional selling expenses, payment processing fees, taxes, distribution costs, returns, and warranty support.</p>
+</section>
+<section id="opportunities-for-differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="opportunities-for-differentiation">5.12.5 Opportunities for Differentiation</h3>
+<p>Commercial scientific calculators are already widely available, and established manufacturers benefit from mature engineering designs, production scale, and distribution networks.</p>
+<p>A new manufacturer would therefore need to identify a meaningful product advantage.</p>
+<p>Potential directions include:</p>
+<ol type="1">
+<li><strong>Open-source scientific calculator:</strong> A programmable device with openly documented hardware and mathematical algorithms.</li>
+<li><strong>Educational calculator:</strong> A calculator that reveals intermediate computational steps and explains numerical methods.</li>
+<li><strong>Research-oriented calculator:</strong> A portable device for experimenting with numerical algorithms and precision.</li>
+<li><strong>Specialized technical calculator:</strong> A device designed around the mathematical requirements of a particular engineering or scientific application.</li>
+</ol>
+<p>These are potential product concepts, not evidence of established market demand.</p>
+<p>Their commercial feasibility would require customer research, prototype evaluation, and willingness-to-pay studies.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">5.12.6 Conclusion</h3>
+<p>Building a scientific calculator illustrates how multiple engineering disciplines contribute to the development of an electronic product. A functional prototype can be constructed with inexpensive electronic components, openly available software, and basic laboratory equipment.</p>
+<p>However, producing a reliable commercial product requires additional expertise in electronics, embedded software, mechanical design, manufacturing, quality assurance, and business economics. The most useful next step would be to construct a working prototype, document its actual development costs, evaluate its numerical performance, and investigate the feasibility of manufacturing the design at larger volumes.</p>
+</section>
+</section>
+</section>
+<section id="what-should-engineering-education-teach-us" class="level1">
+<h1>6 What Should Engineering Education Teach Us?</h1>
+<p>When I was in middle school in Tirunelveli, my classmates and I enjoyed using Casio calculators and watches. We admired their capabilities, but rarely asked how these devices were designed, manufactured, or brought to market.</p>
+<p>Years later, opening a Casio fx-115ES PLUS B and examining its internal construction raises a question: What should a student learn from a scientific calculator beyond how to operate it?</p>
+<p>A scientific calculator is the result of several disciplines working together: mathematics, computer science, electronics, mechanical engineering, manufacturing, and business.</p>
+<p>Throughout this investigation, we have seen how mathematical algorithms become machine instructions, how a microcontroller executes computations, how a keypad communicates with the processor, and how an LCD displays results.</p>
+<p>We have also considered what would be required to build a working prototype and eventually manufacture a commercial product.</p>
+<section id="from-learning-mathematics-to-implementing-mathematics" class="level2">
+<h2 class="anchored" data-anchor-id="from-learning-mathematics-to-implementing-mathematics">6.1 From Learning Mathematics to Implementing Mathematics</h2>
+<p>In school, we learn arithmetic, trigonometry, differentiation, and integration. These subjects are essential, but learning mathematical procedures is different from implementing them in a computing device.</p>
+<p>For example, a student might learn that:</p>
+<p><span class="math display">\[
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+\]</span></p>
+<p>But how does a calculator approximate this limiting process using finite memory and computation time?</p>
+<p>Studying the central difference method allows students to connect the mathematical definition of a derivative to a numerical algorithm.</p>
+<p>Similarly, implementing a numerical integration algorithm requires understanding approximation error, precision, computational cost, and convergence.</p>
+<p>These questions help connect theoretical mathematics to practical computational engineering.</p>
+</section>
+<section id="from-understanding-electronics-to-building-electronics" class="level2">
+<h2 class="anchored" data-anchor-id="from-understanding-electronics-to-building-electronics">6.2 From Understanding Electronics to Building Electronics</h2>
+<p>Learning about transistors, resistors, microcontrollers, and digital circuits is valuable. However, for real world success, what we need is learn how to design a complete electronic product.</p>
+<p>Consider what students would need to build a scientific calculator:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Engineering discipline</th>
+<th>What students could learn</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mathematics</td>
+<td>Numerical methods, approximation, and error analysis</td>
+</tr>
+<tr class="even">
+<td>Computer Science</td>
+<td>Algorithms, programming, data representation, and testing</td>
+</tr>
+<tr class="odd">
+<td>Digital Electronics</td>
+<td>Logic gates, registers, processors, and memory</td>
+</tr>
+<tr class="even">
+<td>Embedded Systems</td>
+<td>Microcontroller programming and peripheral interfaces</td>
+</tr>
+<tr class="odd">
+<td>Electrical Engineering</td>
+<td>Circuit design, voltage, current, power consumption, and PCB design</td>
+</tr>
+<tr class="even">
+<td>Mechanical Engineering</td>
+<td>Enclosure design, assembly, durability, and ergonomics</td>
+</tr>
+<tr class="odd">
+<td>Manufacturing</td>
+<td>Component sourcing, fabrication, assembly, and quality control</td>
+</tr>
+<tr class="even">
+<td>Economics and Business</td>
+<td>Production costs, pricing, demand, and commercialization</td>
+</tr>
+</tbody>
+</table>
+<p>A multidisciplinary project would help students understand how individual subjects contribute to the development of a functioning product.</p>
+</section>
+<section id="from-examinations-to-engineering-projects" class="level2">
+<h2 class="anchored" data-anchor-id="from-examinations-to-engineering-projects">6.3 From Examinations to Engineering Projects</h2>
+<p>An examination can assess whether a student understands mathematical formulas or theoretical concepts. However, constructing a working device requires skills which are difficult to evaluate through written examinations alone. Students must identify requirements, select components, implement software, troubleshoot failures, measure performance, and revise their designs.</p>
+<p>A useful early high school or entry-level engineering curriculum could therefore combine theoretical instruction with practical projects.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Traditional learning activity</th>
+<th>Complementary practical activity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Learn arithmetic and algebra</td>
+<td>Program arithmetic operations on a microcontroller</td>
+</tr>
+<tr class="even">
+<td>Study derivatives</td>
+<td>Implement and test numerical differentiation</td>
+</tr>
+<tr class="odd">
+<td>Study numerical integration</td>
+<td>Compare numerical integration algorithms</td>
+</tr>
+<tr class="even">
+<td>Learn digital logic</td>
+<td>Build and test a small digital circuit</td>
+</tr>
+<tr class="odd">
+<td>Study electronic components</td>
+<td>Assemble and debug a working PCB</td>
+</tr>
+<tr class="even">
+<td>Learn computer architecture</td>
+<td>Program a microcontroller and inspect its memory usage</td>
+</tr>
+<tr class="odd">
+<td>Study engineering economics</td>
+<td>Estimate manufacturing costs and selling prices</td>
+</tr>
+<tr class="even">
+<td>Complete a written examination</td>
+<td>Demonstrate a functioning prototype and document its limitations</td>
+</tr>
+</tbody>
+</table>
+<p>The objective is students learn how to apply theoretical knowledge to real engineering problems.</p>
+</section>
+<section id="engineering-also-requires-understanding-manufacturing-and-markets" class="level2">
+<h2 class="anchored" data-anchor-id="engineering-also-requires-understanding-manufacturing-and-markets">6.4 Engineering Also Requires Understanding Manufacturing and Markets</h2>
+<p>Designing a working prototype is an important achievement, but it does not automatically create a commercially successful product.</p>
+<p>A manufacturer must consider component availability, production volume, assembly costs, reliability, quality assurance, distribution, pricing, and customer demand. Casio’s history illustrates how engineering innovation can be transformed into products manufactured at enormous scale.</p>
+<p>A student who builds a working calculator may gain an understanding of electronics and software. A student who also investigates manufacturing costs, suppliers, quality testing, and market requirements begins to understand the larger industrial process. These capabilities are important for developing independent engineering expertise and entrepreneurship.</p>
+</section>
+<section id="engineering-education-in-tamil-nadu" class="level2">
+<h2 class="anchored" data-anchor-id="engineering-education-in-tamil-nadu">6.5 Engineering Education in Tamil Nadu</h2>
+<p>My grievances about the education I experienced in Tamil Nadu is not that mathematics, physics, or examinations are unnecessary. They are important foundations. Rather, I believe there should be more opportunities for students to connect their theoretical knowledge to the design and construction of useful products.</p>
+<p>I would have benefited from learning how to solder a circuit, program a microcontroller, design a PCB, investigate manufacturing costs, and build a working electronic device during my school years.</p>
+<p>A scientific calculator provides a useful example because it connects so many areas of engineering within a relatively small and affordable product.</p>
+<p>Instead of asking students only to calculate an answer, we could also ask:</p>
+<ol type="1">
+<li>How does the calculator represent that number?</li>
+<li>What algorithm does it use to compute the result?</li>
+<li>How is that algorithm executed by its processor?</li>
+<li>Could we design and build a device that performs the same operation?</li>
+<li>What would it cost to manufacture, and would anyone purchase it?</li>
+</ol>
+<p>These questions encourage students to investigate how scientific knowledge becomes functioning technology.</p>
+</section>
+</section>
+<section id="experiments" class="level1">
+<h1>7 Experiments</h1>
+<section id="numerical-differentiation-1" class="level2">
+<h2 class="anchored" data-anchor-id="numerical-differentiation-1">7.1 Numerical Differentiation</h2>
+<p>Using the Casio fx-115ES PLUS B (2nd edition), I performed three numerical differentiation experiments to compare the calculator’s displayed results with analytically determined derivatives and investigate potential limitations.</p>
+<section id="experiment-1-quadratic-function" class="level3">
+<h3 class="anchored" data-anchor-id="experiment-1-quadratic-function">Experiment 1: Quadratic Function</h3>
+<p>The first experiment evaluated the numerical derivative of:</p>
+<p><span class="math display">\[
+f(x)=x^2
+\]</span></p>
+<p>at <span class="math inline">\(x=3\)</span> using the calculator’s <code>d/dx</code> function.</p>
+<div id="fig-casio-experiment1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-experiment1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/CasioExperiment1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:40.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-experiment1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Numerical differentiation of <span class="math inline">\(f(x)=x^2\)</span> at <span class="math inline">\(x=3\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>The analytical derivative is:</p>
+<p><span class="math display">\[
+f'(x)=2x
+\]</span></p>
+<p>Therefore:</p>
+<p><span class="math display">\[
+f'(3)=2(3)=6
+\]</span></p>
+<p>The calculator displayed <code>6</code>, matching the analytical result.</p>
+</section>
+<section id="experiment-2-cubic-function" class="level3">
+<h3 class="anchored" data-anchor-id="experiment-2-cubic-function">Experiment 2: Cubic Function</h3>
+<p>The second experiment evaluated the numerical derivative of:</p>
+<p><span class="math display">\[
+f(x)=x^3
+\]</span></p>
+<p>at <span class="math inline">\(x=2\)</span> using the calculator’s <code>d/dx</code> function.</p>
+<div id="fig-casio-experiment2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-experiment2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/CasioExperiment2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:40.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-experiment2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Numerical differentiation of <span class="math inline">\(f(x)=x^3\)</span> at <span class="math inline">\(x=2\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>The analytical derivative is:</p>
+<p><span class="math display">\[
+f'(x)=3x^2
+\]</span></p>
+<p>Therefore:</p>
+<p><span class="math display">\[
+f'(2)=3(2)^2=12
+\]</span></p>
+<p>The calculator displayed <code>12</code>, matching the analytical result.</p>
+</section>
+<section id="experiment-3-nondifferentiable-function" class="level3">
+<h3 class="anchored" data-anchor-id="experiment-3-nondifferentiable-function">Experiment 3: Nondifferentiable Function</h3>
+<p>The third experiment investigated how the calculator handles a function that is not differentiable at a particular point.</p>
+<p>Consider the absolute-value function:</p>
+<p><span class="math display">\[
+f(x)=|x|
+\]</span></p>
+<p>I evaluated its numerical derivative at <span class="math inline">\(x=0\)</span> using the calculator’s <code>d/dx</code> function.</p>
+<div id="fig-casio-experiment3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-casio-experiment3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../images/casio/CasioExperiment3.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:40.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-casio-experiment3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Numerical differentiation of <span class="math inline">\(f(x)=|x|\)</span> at <span class="math inline">\(x=0\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>The left-hand derivative at zero is:</p>
+<p><span class="math display">\[
+f'_-(0)=-1
+\]</span></p>
+<p>The right-hand derivative is:</p>
+<p><span class="math display">\[
+f'_+(0)=1
+\]</span></p>
+<p>Since the left-hand and right-hand derivatives are unequal, the derivative at <span class="math inline">\(x=0\)</span> does not exist.</p>
+<p>However, the calculator displayed:</p>
+<p><span class="math display">\[
+D_{\text{calculator}}=0
+\]</span></p>
+<p>This result can be explained by the central-difference approximation:</p>
+<p><span class="math display">\[
+f'(x)\approx\frac{f(x+h)-f(x-h)}{2h}
+\]</span></p>
+<p>At <span class="math inline">\(x=0\)</span>, for any nonzero <span class="math inline">\(h\)</span>:</p>
+<p><span class="math display">\[
+\frac{|h|-|-h|}{2h}=0
+\]</span></p>
+<p>Thus, the symmetric numerical difference produces zero even though the mathematical derivative does not exist.</p>
+<p>The observed result is consistent with the calculator’s documented central-difference method, but it does not establish the precise internal sequence of operations.</p>
+</section>
+<section id="experimental-results" class="level3">
+<h3 class="anchored" data-anchor-id="experimental-results">Experimental Results</h3>
+<p>For functions with an analytically defined derivative, the displayed absolute error is calculated as:</p>
+<p><span class="math display">\[
+E_{\text{display}}=
+\left|D_{\text{observed}}-D_{\text{analytical}}\right|
+\]</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th style="text-align: right;">Evaluation Point</th>
+<th style="text-align: right;">Analytical Derivative</th>
+<th style="text-align: right;">Observed Calculator Result</th>
+<th style="text-align: right;">Displayed Absolute Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x^2\)</span></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x^3\)</span></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\lvert x\rvert\)</span></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">Undefined</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">N/A</td>
+</tr>
+</tbody>
+</table>
+<p>The absolute error is not applicable to Experiment 3 because the analytical derivative does not exist at the evaluation point.</p>
+</section>
+<section id="interpretation-and-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation-and-limitations">Interpretation and Limitations</h3>
+<p>The first two experiments produced results matching the analytical derivatives at the displayed precision.</p>
+<p>For a quadratic function, the central-difference approximation is mathematically exact in ideal arithmetic for any nonzero step size:</p>
+<p><span class="math display">\[
+\frac{(x+h)^2-(x-h)^2}{2h}=2x
+\]</span></p>
+<p>For a cubic function, the same approximation gives:</p>
+<p><span class="math display">\[
+\frac{(x+h)^3-(x-h)^3}{2h}=3x^2+h^2
+\]</span></p>
+<p>The cubic function therefore has a theoretical truncation error of <span class="math inline">\(h^2\)</span> for a nonzero differentiation step size.</p>
+<p>Although the calculator displayed the analytical results in both experiments, this does not establish that its internal calculations were error-free.</p>
+<p>The third experiment revealed a more significant mathematical limitation. The calculator returned <code>0</code> for the derivative of <span class="math inline">\(|x|\)</span> at <span class="math inline">\(x=0\)</span>, even though the derivative is undefined.</p>
+<p>This illustrates an important distinction between numerical approximation and mathematical validity. A numerical differentiation algorithm can produce a finite result without determining whether a derivative exists at the evaluation point.</p>
+<p><strong>Overall, these experiments demonstrate that correct-looking numerical results do not necessarily establish mathematical correctness.</strong> The calculator successfully reproduced the analytical results in two differentiable cases but returned a misleading numerical value at a nondifferentiable point.</p>
+<p>The experiments do not independently establish the calculator’s internal precision, differentiation step size, or exact implementation details.</p>
+</section>
+</section>
+</section>
+<section id="final-reflection" class="level1">
+<h1>8 Final Reflection</h1>
+<p>As a middle-school student in Tirunelveli, I admired my Casio watch and calculator because of what they could do.</p>
+<p>Today, I find myself more interested in how they were built, how the underlying technologies work, and how engineers transformed those technologies into commercially successful products. How beautiful would our lives might have changed earlier, if we were introduced to rigorous practical based engineering-application?</p>
+<p>The transition from using technology to understanding and building technology is an important educational step. Certainly, We do not need every student to manufacture a scientific calculator. But students should have opportunities to design, construct, and test real products using the scientific principles they learn. I believe, they ought to learn, The fundamental principles that underline all engineering products.</p>
+<p>To conclude, engineering education should teach students more than, how to solve problems presented in textbooks, but also how to identify problems in the world and develop practical, reliable solutions. That is the kind of engineering, practical-education I wish I had experienced more often in school.</p>
+</section>
+<section id="related-posts" class="level1">
+<h1>Related Posts</h1>
+<p>I have written several other articles exploring electrical engineering, electronics, embedded systems, reverse engineering, product development, manufacturing, and the application of scientific knowledge to practical engineering problems.</p>
+<section id="electronics-embedded-systems-and-practical-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="electronics-embedded-systems-and-practical-engineering">Electronics, Embedded Systems, and Practical Engineering</h2>
+<ul>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-10-18-LedClock/"><strong>How to Build a Digital LED Clock?</strong></a>: Explore digital electronics, microcontrollers, electrical circuits, and the construction of a working digital clock.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-03-29-TutorialSoldering/"><strong>How to Solder and Build a Simple Alarm Clock?</strong></a>: Learn electronic assembly, soldering techniques, circuit components, and the construction of a functioning alarm clock.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-04-20-TutorialHandheldConsole/"><strong>How to Build a Handheld Game Console?</strong></a>: Investigate microcontrollers, electronic displays, PCB assembly, firmware, and the construction of a handheld gaming device.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-02-19-TutorialBreadboard/"><strong>How to Build a Microcontroller Relay Control with Temperature Sensor?</strong></a>: Learn how microcontrollers interface with temperature sensors and control electrical devices through relays.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-03-07-TutorialLED/"><strong>How to Build a Weather Station with Temperature Display?</strong></a>: Construct a weather-monitoring device using environmental sensors, microcontrollers, and electronic displays.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-03-14-BasicsLogging/"><strong>How to Store and Build Weather Data Logging Using ESP32?</strong></a>: Develop an ESP32-based environmental monitoring system with sensor measurements, OLED displays, and persistent data logging.</p></li>
+</ul>
+</section>
+<section id="understanding-and-reverse-engineering-consumer-products" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-and-reverse-engineering-consumer-products">Understanding and Reverse-Engineering Consumer Products</h2>
+<ul>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-05-13NokiaPhone/"><strong>How Do Mobile Phones Work?</strong></a>: Understand mobile-phone architecture, processors, communication systems, electronic components, and the engineering behind modern telecommunications.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-05-20Nokia3210/"><strong>How Does the Nokia 3210 4G Work?</strong></a>: Examine how processors, memory, displays, batteries, and communication subsystems interact inside a consumer mobile phone.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2025-07-15-Airconditioners/"><strong>How Airconditioners Work?</strong></a>: Explore the thermodynamics, refrigeration cycle, compressors, heat exchangers, and engineering principles underlying modern inverter air-conditioning systems.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2025-08-21-Window_AC/"><strong>Reverse-Engineering Window AC: A Teardown and Cost Analysis</strong></a>: Examine an air-conditioner’s internal components, electrical and mechanical engineering, assembly, manufacturing, and cost structure.</p></li>
+</ul>
+</section>
+<section id="engineering-design-transportation-and-product-development" class="level2">
+<h2 class="anchored" data-anchor-id="engineering-design-transportation-and-product-development">Engineering Design, Transportation, and Product Development</h2>
+<ul>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2025-06-22-theory-to-practice-medical-maglev/"><strong>How Theory Informs Practical Application: Medical Devices and Maglev Trains</strong></a>: Explore how scientific theories and engineering principles are translated into medical technology and advanced transportation systems.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-08-21-BulleTrainsTamilNadu/"><strong>Bullet Trains in Tamil Nadu</strong></a>: Investigate high-speed railway engineering, vehicle dynamics, traction, braking, infrastructure, manufacturing capabilities, and technological development.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2024-10-14-Product-Design/"><strong>Notes from Guide to Product Design and Development</strong></a>: Explore product development, engineering design processes, and the transformation of ideas into manufacturable products.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2025-06-28-Why-Tamil-Engineers/"><strong>Visvesvaraya’s Legacy: How Engineering Colleges Can Improve</strong></a>: Examine engineering education, practical technical capabilities, and the relationship between engineering institutions and industrial development.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-07-05-UrbanPlanningChennai/"><strong>Urban Planning in Chennai</strong></a>: Explore urban infrastructure, transportation, public spaces, and the challenges of designing functional cities.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-07-05-UrbanPlanningTamilNadu/"><strong>Urban Planning in South India</strong></a>: Examine the engineering, infrastructure, and institutional challenges involved in improving South Indian cities.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-06-20-UrbanPlanningHouten/"><strong>How Did Houten Build a World-Class Planned Town?</strong></a>: Study the design principles, transportation systems, and urban-planning decisions behind a planned Dutch town.</p></li>
+</ul>
+</section>
+<section id="manufacturing-industrialization-and-technological-capability" class="level2">
+<h2 class="anchored" data-anchor-id="manufacturing-industrialization-and-technological-capability">Manufacturing, Industrialization, and Technological Capability</h2>
+<ul>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-09-06-GermanIndustrialization/"><strong>How Germany Became an Industrial-Scientific Powerhouse?</strong></a>: Investigate the relationship between scientific research, technical education, industrial institutions, and manufacturing capabilities.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-08-10-SouthKorea/"><strong>How Did South Korea Industrialize?</strong></a>: Understand how industrial policy, engineering capabilities, manufacturing firms, and exports contributed to South Korea’s industrial development.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-04-13-EastAsiaIndustrialization/"><strong>East Asia’s Industrialization: What It Means for India?</strong></a>: Explore industrial development, technological learning, manufacturing competitiveness, and lessons for India’s economic transformation.</p></li>
+<li><p><a href="https://rickrejeleene.me/Tamil/posts/2026-11-12-IndianIndustrialists/"><strong>How Are Industrialists Made in Indian Society?</strong></a>: Examine entrepreneurship, industrial leadership, business capabilities, and the social conditions that contribute to the emergence of successful industrialists.</p></li>
+</ul>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-casio_gshock_2023" class="csl-entry" role="listitem">
+Casio Computer Co., Ltd. 2023. <span>“Casio to Release g-SHOCK Watches in See-Through Materials Showing Internal Componentry.”</span> June 15, 2023. <a href="https://www.casio.com/intl/news/2023/0615-clearremix/">https://www.casio.com/intl/news/2023/0615-clearremix/</a>.
+</div>
+<div id="ref-casio_calculator_sales_2025" class="csl-entry" role="listitem">
+———. 2025a. <span>“Casio’s Calculator Business by the Numbers.”</span> 2025. <a href="https://www.casio.com/us/calculators/story/numbers/">https://www.casio.com/us/calculators/story/numbers/</a>.
+</div>
+<div id="ref-casio_integrated_report_2025" class="csl-entry" role="listitem">
+———. 2025b. <span>“Integrated Report 2025.”</span> 2025. <a href="https://world.casio.com/content/dam/casio/global/corporate/en/ir/library/annual/2025/integrated-2025-8-en.pdf">https://world.casio.com/content/dam/casio/global/corporate/en/ir/library/annual/2025/integrated-2025-8-en.pdf</a>.
+</div>
+<div id="ref-casio_gshock_2017" class="csl-entry" role="listitem">
+———. n.d. <span>“CASIO Watches Through the Years: The 2010s and 2020s.”</span> Accessed November 20, 2026. <a href="https://www.casio.com/us/watches/50th/Heritage/2010s-20s/">https://www.casio.com/us/watches/50th/Heritage/2010s-20s/</a>.
+</div>
+<div id="ref-casio_revenue_history" class="csl-entry" role="listitem">
+CompaniesMarketCap. n.d. <span>“Casio Revenue.”</span> Accessed November 20, 2026. <a href="https://companiesmarketcap.com/casio/revenue/">https://companiesmarketcap.com/casio/revenue/</a>.
+</div>
+<div id="ref-esquire_f91w_2025" class="csl-entry" role="listitem">
+Esquire. 2025. <span>“The 7 Best-Selling Watches of All-Time.”</span> 2025. <a href="https://www.esquire.com/uk/watches/a63616665/best-selling-watches-of-all-time/">https://www.esquire.com/uk/watches/a63616665/best-selling-watches-of-all-time/</a>.
+</div>
+<div id="ref-gearpatrol_f91w_2024" class="csl-entry" role="listitem">
+Gear Patrol. 2024. 2024. <a href="https://www.gearpatrol.com/watches/casio-f-91w-review/">https://www.gearpatrol.com/watches/casio-f-91w-review/</a>.
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -399,7 +2342,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ludwigwittgenstein2\.github\.io\/Tamil\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
